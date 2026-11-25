@@ -172,7 +172,24 @@ A.mergeProgress = (local, server) => {
   }
   const mock = Object.assign({ taken: 0, passed: 0, best: 0 }, l.mock || {});
   for (const k of ["taken", "passed", "best"]) mock[k] = Math.max(mock[k] || 0, ((s.mock || {})[k]) || 0);
+  // curriculum fields: les per-key field max; bm latest |ts| wins (sign = on/off);
+  // days/hz/lab/rq per-key max; rec local order first; secs max
+  const les = Object.assign({}, s.les || {});
+  for (const k in (l.les || {})) {
+    const a = l.les[k] || {}, b = les[k] || {};
+    les[k] = { d: Math.max(a.d || 0, b.d || 0), s: Math.max(a.s || 0, b.s || 0), n: Math.max(a.n || 0, b.n || 0) };
+  }
+  const bm = Object.assign({}, s.bm || {});
+  for (const k in (l.bm || {})) if (Math.abs(l.bm[k]) >= Math.abs(bm[k] || 0)) bm[k] = l.bm[k];
+  const lab = Object.assign({}, s.lab || {}, l.lab || {});
+  if ((s.lab || {}).rt && (l.lab || {}).rt) lab.rt = Math.min(s.lab.rt, l.lab.rt);
+  const rec = [...new Set([...(l.rec || []), ...(s.rec || [])])].slice(0, 8);
   return {
+    les, bm, lab, rec,
+    days: union(s.days, l.days),
+    hz: maxMap(l.hz, s.hz),
+    rq: maxMap(l.rq, s.rq),
+    secs: Math.max(l.secs || 0, s.secs || 0),
     seen: union(s.seen, l.seen),
     box: maxMap(l.box, s.box),
     wrong: maxMap(l.wrong, s.wrong),
@@ -235,7 +252,8 @@ A.resetServer = async () => {
 
 /* progress blob to send — P minus nothing (same shape as source) */
 function blobOf(p) {
-  return { seen: p.seen || {}, box: p.box || {}, wrong: p.wrong || {}, best: p.best || 0, played: p.played || 0, lang: p.lang || "both", mock: p.mock || { taken: 0, passed: 0, best: 0 }, tq: p.tq || {}, v: p.v || 1 };
+  return { seen: p.seen || {}, box: p.box || {}, wrong: p.wrong || {}, best: p.best || 0, played: p.played || 0, lang: p.lang || "both", mock: p.mock || { taken: 0, passed: 0, best: 0 }, tq: p.tq || {},
+    les: p.les || {}, bm: p.bm || {}, rec: p.rec || [], days: p.days || {}, rq: p.rq || {}, hz: p.hz || {}, lab: p.lab || {}, secs: p.secs || 0, v: p.v || 1 };
 }
 
 window.Auth = A;

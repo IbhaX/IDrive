@@ -1,0 +1,181 @@
+{
+  "id": "m10",
+  "n": 10,
+  "title": "Vehicle dynamics and driving science",
+  "summary": "Friction, inertia, stopping distance, weight transfer, grip, understeer and gearing — with labs you can experiment in.",
+  "accent": "#a3e635",
+  "icon": "atom",
+  "level": "advanced",
+  "chapters": [
+    {
+      "id": "m10c1",
+      "title": "Stopping",
+      "items": ["lesson:stopping-distance-physics", "lab:stopping", "lab:reaction"]
+    },
+    {
+      "id": "m10c2",
+      "title": "Grip and balance",
+      "items": ["lesson:grip-weight-transfer"]
+    },
+    {
+      "id": "m10c3",
+      "title": "Power",
+      "items": ["lesson:torque-power-gearing", "lab:engine"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "stopping-distance-physics",
+      "title": "The physics of stopping distance",
+      "level": "advanced",
+      "minutes": 12,
+      "lab": "stopping",
+      "objectives": [
+        "Split total stopping distance into reaction and braking distance.",
+        "Explain why braking distance grows with the square of speed.",
+        "Use the lab to see how speed, reaction time and road surface interact."
+      ],
+      "intro": "Stopping distance is the single most useful piece of physics a driver can know. It explains why speed limits near schools are low, why gaps must grow in the rain, and why a few km/h make such a difference to whether a crash happens at all.",
+      "sections": [
+        {
+          "h": "Two distances",
+          "p": [
+            "Reaction distance is how far you travel between seeing a hazard and starting to brake. It equals speed × reaction time. At 50 km/h (about 13.9 m/s) with a 1.5-second reaction, you cover about 21 m before the brakes even start working.",
+            "Braking distance is how far the vehicle travels once the brakes are applied. In a simple model it equals v² ÷ (2 × μ × g), where v is speed in m/s, μ is the coefficient of friction between tyre and road, and g is 9.81 m/s²."
+          ]
+        },
+        {
+          "h": "The square law",
+          "p": [
+            "Because speed is squared, doubling speed makes braking distance four times longer. Going from 50 to 60 km/h — just 20% faster — makes braking distance 44% longer. And the energy that must be absorbed in a crash also grows with the square of speed."
+          ],
+          "note": { "kind": "model", "text": "The lab uses this simplified model with typical friction values (dry asphalt ≈ 0.7, wet ≈ 0.4, gravel ≈ 0.35). Real vehicles vary with tyres, brakes, load and slope. It is an educational model, not a performance guarantee." }
+        },
+        {
+          "h": "What a few km/h means",
+          "p": [
+            "Suppose a child steps out 30 m ahead. At 40 km/h with a 1.5 s reaction on a dry road, you need about 16.7 m to react plus about 9 m to brake — you stop with room to spare. At 60 km/h you need 25 m to react and about 20 m to brake: you are still travelling at close to your original speed when you reach the child. That is the difference between a near miss and a fatal crash."
+          ]
+        },
+        {
+          "h": "Reaction time",
+          "p": [
+            "An alert driver who is expecting a hazard might react in under a second. Surprise, distraction, fatigue or alcohol easily push it beyond two seconds. Reaction distance grows in direct proportion — so a phone glance at 80 km/h can mean 40 m travelled blind."
+          ]
+        }
+      ],
+      "terms": [["Reaction distance", "Distance travelled during reaction time."], ["Braking distance", "Distance travelled while the brakes slow the vehicle to a stop."], ["Coefficient of friction (μ)", "A number describing how much grip two surfaces have."], ["Kinetic energy", "Energy of motion, ½mv², which brakes must turn into heat."]],
+      "examples": ["Use the lab: set 50 km/h, 1.5 s, dry. Then change only the surface to wet. Notice that the reaction distance does not change but the braking distance almost doubles."],
+      "mistakes": ["Believing good brakes make speed safe.", "Forgetting that reaction distance is covered at full speed."],
+      "safety": ["Near schools and crowded streets, slow enough that you could stop within half the distance you can see."],
+      "check": [
+        { "q": "If you double your speed, braking distance becomes about:", "o": ["The same", "Twice as long", "Four times as long", "Half as long"], "a": 2, "r": "Braking distance depends on speed squared: (2v)² = 4v²." },
+        { "q": "Which part of stopping distance does a wet road mainly increase?", "o": ["Reaction distance", "Braking distance", "Neither", "Both equally"], "a": 1, "r": "Lower friction lengthens braking distance; reaction distance depends on speed and reaction time." },
+        { "q": "At about 14 m/s (50 km/h) with a 2 s reaction, how far do you travel before braking?", "o": ["7 m", "14 m", "28 m", "50 m"], "a": 2, "r": "Reaction distance = speed × time = 14 × 2 = 28 m." }
+      ],
+      "related": ["lab:stopping", "lesson:following-distance", "lesson:attention-fatigue"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "grip-weight-transfer",
+      "title": "Friction, inertia, weight transfer and the limits of grip",
+      "level": "advanced",
+      "minutes": 11,
+      "objectives": [
+        "Explain inertia and centripetal force in a bend.",
+        "Describe weight transfer under braking, acceleration and cornering.",
+        "Understand the friction circle and why combining braking and steering is risky."
+      ],
+      "intro": "Every movement you ask of a vehicle — slowing, speeding up or turning — is a force the tyres must produce through friction. Each tyre has only so much grip to share.",
+      "sections": [
+        {
+          "h": "Inertia and momentum",
+          "p": [
+            "Newton's first law: a moving object keeps moving in a straight line unless a force acts on it. That is inertia. Momentum (mass × velocity) is how hard it is to stop. A loaded lorry has enormous momentum at modest speeds; that is why it needs far longer to stop. Unbelted occupants and loose objects also keep moving when the vehicle stops — a 1 kg phone in a 50 km/h crash hits with many times its weight."
+          ]
+        },
+        {
+          "h": "Cornering",
+          "p": [
+            "To follow a curve, the vehicle needs a sideways (centripetal) force towards the centre of the bend, provided by tyre friction. The force needed equals mv²/r: it grows with the square of speed and is larger for tighter bends (smaller r). If the required force exceeds what the tyres can provide, the car slides outward."
+          ]
+        },
+        {
+          "h": "Weight transfer and centre of gravity",
+          "p": [
+            "Braking shifts weight forward: front tyres press down harder and gain grip, rears lose grip. Acceleration shifts weight back. Cornering shifts weight to the outside wheels. A high centre of gravity — SUVs, loaded vans — means more weight transfer and more body roll, and in extreme cases a rollover risk."
+          ]
+        },
+        {
+          "h": "The friction circle",
+          "p": [
+            "Picture each tyre's grip as a circle. It can use all of it for braking, all of it for turning, or a combination — but not more than the circle. Braking hard while turning sharply asks for more than the tyre has. This is why you should brake in a straight line before a bend and then turn, and why smooth inputs keep you inside the circle."
+          ],
+          "note": { "kind": "tip", "text": "Slow in, smooth through: finish braking before you turn in to a bend." }
+        },
+        {
+          "h": "Understeer and oversteer",
+          "p": [
+            "Understeer: the front tyres reach their limit first and the car runs wide. Oversteer: the rear tyres reach their limit and the back swings out. Lifting off the throttle suddenly in a bend transfers weight forward and can turn understeer into oversteer. ESC detects both and brakes individual wheels to help."
+          ]
+        }
+      ],
+      "terms": [["Inertia", "Resistance of an object to changes in its motion."], ["Centripetal force", "The force towards the centre needed to travel in a curve."], ["Centre of gravity", "The point where the vehicle's weight acts."], ["Friction circle", "Model showing that a tyre's grip is shared between braking/acceleration and cornering."]],
+      "examples": ["Taking a hairpin at 30 km/h needs four times the sideways grip of taking it at 15 km/h."],
+      "mistakes": ["Braking hard in the middle of a bend.", "Carrying heavy luggage on the roof, raising the centre of gravity."],
+      "safety": ["Secure loose objects in the cabin; in a crash they become projectiles."],
+      "check": [
+        { "q": "Under hard braking, weight shifts:", "o": ["Backwards", "Forwards", "To the left", "Nowhere"], "a": 1, "r": "Deceleration pushes weight onto the front tyres." },
+        { "q": "Why is it risky to brake hard and turn sharply at the same time?", "o": ["It uses more fuel", "The tyres can be asked for more grip than they have", "It wears the steering", "It is illegal"], "a": 1, "r": "Grip is shared between braking and cornering; asking for both at the limit causes a slide." },
+        { "q": "Doubling speed through a bend requires how much more sideways force?", "o": ["Same", "Double", "Four times", "Eight times"], "a": 2, "r": "Centripetal force is proportional to v²." }
+      ],
+      "related": ["lesson:drivetrain-layouts", "lesson:skids-water", "lesson:safety-systems"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "torque-power-gearing",
+      "title": "Torque, horsepower, gear ratios and aerodynamics",
+      "level": "advanced",
+      "minutes": 9,
+      "objectives": [
+        "Distinguish torque from power.",
+        "Explain how gear ratios multiply torque.",
+        "Describe how aerodynamic drag affects fuel use at speed."
+      ],
+      "intro": "Spec sheets quote torque and power. Knowing what they mean helps you choose the right gear, understand why diesels pull well uphill, and see why highway speed costs so much fuel.",
+      "sections": [
+        {
+          "h": "Torque and power",
+          "p": [
+            "Torque is twisting force, measured in newton-metres (Nm). Power is how fast that work is done: power = torque × rotational speed. An engine with strong low-rpm torque feels relaxed and pulls from low speed; an engine with high peak power is fast at high rpm. One metric horsepower (PS) is about 0.735 kW."
+          ]
+        },
+        {
+          "h": "Gear ratios",
+          "p": [
+            "A gear ratio of 3.5:1 means the engine turns 3.5 times for each turn of the gearbox output, multiplying torque about 3.5 times (minus losses) while reducing speed. The final drive in the differential multiplies it again. First gear gives the most force at the wheels for pulling away and climbing; top gear lets the engine run slowly at highway speed."
+          ]
+        },
+        {
+          "h": "Aerodynamics",
+          "p": [
+            "Air resistance grows with the square of speed, and the power to overcome it with the cube. Above about 80 km/h, drag becomes the largest force the engine fights. Driving at 100 km/h instead of 120 km/h saves a noticeable amount of fuel. Roof boxes, open windows and racks add drag."
+          ]
+        }
+      ],
+      "terms": [["Torque", "Twisting force (Nm)."], ["Power", "Rate of doing work (kW or PS)."], ["Final drive", "The fixed gear reduction in the differential."], ["Drag", "Air resistance against the moving vehicle."]],
+      "examples": ["On a steep ghat climb a diesel pulls comfortably in third because of its strong low-rpm torque; a petrol of similar power may need second and higher revs."],
+      "mistakes": ["Labouring the engine in a high gear at low speed uphill.", "Driving with a roof box fitted when not needed."],
+      "safety": ["Choose a gear that gives you power in reserve before you overtake."],
+      "check": [
+        { "q": "Power equals:", "o": ["Torque + speed", "Torque × rotational speed", "Weight × speed", "Fuel ÷ distance"], "a": 1, "r": "Power is the rate of doing work: torque multiplied by angular speed." },
+        { "q": "Why does fuel use rise sharply at high speed?", "o": ["Tyres heat up", "Aerodynamic drag grows rapidly with speed", "The engine idles more", "Brakes drag"], "a": 1, "r": "Drag grows with speed squared, and the power to beat it with speed cubed." }
+      ],
+      "related": ["lesson:transmissions", "lesson:engine-basics"],
+      "refs": [],
+      "verified": "2026-11-25"
+    }
+  ]
+}

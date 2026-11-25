@@ -1,0 +1,195 @@
+{
+  "id": "m09",
+  "n": 9,
+  "title": "Emergency situations and first response",
+  "summary": "Step-by-step responses to brake failure, blowouts, stuck throttles, skids, fire, flooding and crashes — and your legal duties at an accident.",
+  "accent": "#fb7185",
+  "icon": "alert",
+  "level": "advanced",
+  "chapters": [
+    {
+      "id": "m09c1",
+      "title": "When the vehicle fails",
+      "items": ["lesson:emergency-failures", "lesson:skids-water"]
+    },
+    {
+      "id": "m09c2",
+      "title": "At a crash",
+      "items": ["lesson:accident-scene", "article:emerg", "practice:emerg"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "emergency-failures",
+      "title": "Brake failure, tyre blowout, stuck accelerator and steering failure",
+      "level": "advanced",
+      "minutes": 12,
+      "objectives": [
+        "Follow a calm, ordered response to each major mechanical failure.",
+        "Use gears and the parking brake safely when the main brakes fail.",
+        "Keep control after a tyre blowout."
+      ],
+      "intro": "Mechanical emergencies are rare, which is exactly why people freeze when they happen. Reading the steps beforehand gives your brain a plan to follow. In every case: stay calm, keep looking where you want to go, warn others, and get off the road.",
+      "sections": [
+        {
+          "h": "Brake failure",
+          "p": ["If the pedal goes soft or to the floor:"],
+          "steps": [
+            "Pump the brake pedal quickly several times — it may build pressure in a partly failed system.",
+            "Switch on hazard lights and sound the horn to warn others.",
+            "Change down through the gears one at a time (or select L/manual low in an automatic) to use engine braking. Do not jump to first gear at speed.",
+            "Apply the parking brake gradually and firmly — not with a yank, which can lock the rear wheels and cause a spin. Keep the release button pressed so you can ease off if the rear starts to slide.",
+            "Steer towards a safe run-off: an uphill road, a wide shoulder, or rubbing along a kerb or soft verge as a last resort.",
+            "Once stopped, do not drive again until the vehicle is repaired."
+          ]
+        },
+        {
+          "h": "Tyre blowout",
+          "p": ["A blowout feels like a bang followed by a pull to one side (front tyre) or a wobbling rear (rear tyre). The instinct is to brake hard — that is the most dangerous response."],
+          "steps": [
+            "Grip the wheel firmly with both hands and keep the car straight.",
+            "Do not brake hard. Ease off the accelerator gently.",
+            "If you must brake, do so gently once speed has dropped.",
+            "Signal and steer gradually to the shoulder when slow enough.",
+            "Switch on hazards, stop well clear of traffic, get passengers out on the side away from traffic."
+          ],
+          "note": { "kind": "tip", "text": "A brief, gentle squeeze of the accelerator straight after a blowout can help keep the car stable while you regain control; then ease off." }
+        },
+        {
+          "h": "Stuck accelerator",
+          "steps": [
+            "Press the clutch (manual) or shift to N (automatic). The engine will rev hard but the car will lose drive.",
+            "Brake firmly and steer to a safe place.",
+            "Once stopped, switch off the engine. On push-button cars you usually need to press and hold the start button for a few seconds while moving — check your manual.",
+            "Check for a floor mat trapping the pedal before driving again."
+          ],
+          "p": ["Do not switch off the ignition while moving unless there is no other way: steering lock may engage on key-type cars, and power steering and brake assist are lost."]
+        },
+        {
+          "h": "Steering failure",
+          "p": ["Loss of power steering makes steering very heavy but not impossible: grip with both hands, slow down and stop. A complete mechanical steering failure is extremely rare: brake firmly in a straight line, switch on hazards and sound the horn."]
+        }
+      ],
+      "terms": [["Run-off", "A safe area to steer into when you cannot stop normally."], ["Engine braking", "Slowing using the engine's resistance by selecting lower gears."]],
+      "examples": ["Descending a ghat, the brakes fade after continuous use. You change down a gear, ease on the parking brake, and pull onto a wide shoulder. Next time, a low gear from the top would have prevented it."],
+      "mistakes": ["Braking hard after a blowout.", "Yanking the parking brake at high speed.", "Turning the ignition off at speed in a car with a key-operated steering lock."],
+      "safety": ["After any emergency stop on a highway, get everyone out and behind the barrier, away from traffic. Call 112."],
+      "check": [
+        { "q": "Immediately after a front-tyre blowout, you should:", "o": ["Brake hard", "Hold the wheel firmly, keep straight, ease off the accelerator", "Steer sharply to the shoulder", "Switch off the engine"], "a": 1, "r": "Hard braking or sharp steering causes loss of control; keep it straight and slow gradually." },
+        { "q": "The accelerator is stuck open in a manual car. First action?", "o": ["Switch off the ignition", "Press the clutch, then brake and steer to safety", "Pull the parking brake hard", "Open the door"], "a": 1, "r": "Disconnecting the engine with the clutch removes drive while keeping steering and brakes working." }
+      ],
+      "related": ["lesson:skids-water", "lesson:accident-scene", "lesson:adverse-conditions"],
+      "refs": ["erss112"],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "skids-water",
+      "title": "Skids, aquaplaning, fire and vehicle submersion",
+      "level": "advanced",
+      "minutes": 10,
+      "objectives": [
+        "Recover from understeer and oversteer.",
+        "Respond correctly to an engine fire.",
+        "Escape a vehicle entering water."
+      ],
+      "intro": "Some emergencies give you seconds to act. Knowing the sequence in advance is the difference between acting and freezing.",
+      "sections": [
+        {
+          "h": "Skids",
+          "p": [
+            "Front-wheel skid (understeer): the car goes straight on despite steering. Ease off the accelerator, unwind the steering slightly so the tyres can grip again, then steer gently. Rear-wheel skid (oversteer): the rear swings out. Look and steer in the direction you want to go — this is what 'steer into the skid' means — and ease off the accelerator. Be ready to correct the other way as the rear comes back.",
+            "The best skid response is prevention: brake before the bend, not in it, and drive slower on wet or loose surfaces."
+          ]
+        },
+        {
+          "h": "Engine fire",
+          "steps": [
+            "Signal, pull over, switch off the engine.",
+            "Get everyone out and at least 30 m away, upwind, away from traffic.",
+            "Call 112.",
+            "Do not open the bonnet fully. If the fire is small and you have an extinguisher, aim it through the gap at the base of the bonnet or the grille.",
+            "Never go back for belongings."
+          ]
+        },
+        {
+          "h": "Vehicle entering water",
+          "p": ["Remember: Seat belt – Window – Children – Out."],
+          "steps": [
+            "Unfasten your seat belt.",
+            "Open or break a side window immediately, while the car is still floating and electrics may work. Doors are very hard to open against water pressure.",
+            "Release children, oldest first so they can help, and push them out through the window.",
+            "Get out and swim away from the vehicle.",
+            "Do not wait for the car to fill to open a door except as a last resort."
+          ],
+          "note": { "kind": "safety", "text": "Keep a window-breaker and belt-cutter tool within reach of the driver's seat, especially if you drive near rivers, canals or backwaters." }
+        }
+      ],
+      "terms": [["Understeer", "Front tyres lose grip; car runs wide."], ["Oversteer", "Rear tyres lose grip; rear swings out."]],
+      "examples": ["On a wet roundabout the rear starts to slide right. You look where you want to go, steer gently left, ease off, and the car settles."],
+      "mistakes": ["Slamming the brakes in a skid without ABS.", "Opening the bonnet on an engine fire.", "Waiting for help inside a sinking car."],
+      "safety": ["Never drive into floodwater you cannot see the bottom of."],
+      "check": [
+        { "q": "In a rear-wheel skid, you should:", "o": ["Brake hard", "Look and steer where you want the car to go, easing off the accelerator", "Steer the opposite way to the slide", "Accelerate hard"], "a": 1, "r": "Steering in the direction you want to go and easing off lets the rear tyres regain grip." },
+        { "q": "A car is entering water. What is the first step?", "o": ["Call 112", "Unfasten the seat belt", "Open the door", "Turn off the engine"], "a": 1, "r": "Seat belt – Window – Children – Out. Escape quickly while the car still floats." }
+      ],
+      "related": ["lesson:grip-weight-transfer", "lesson:adverse-conditions"],
+      "refs": ["erss112"],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "accident-scene",
+      "title": "At a crash: safety, first aid awareness and your legal duties",
+      "level": "advanced",
+      "minutes": 11,
+      "objectives": [
+        "Make a crash scene safe before helping.",
+        "Call emergency services with the right information.",
+        "State a driver's duties under s. 134 and a helper's protection under s. 134A."
+      ],
+      "intro": "The first few minutes after a crash matter enormously for the injured. Your job is to prevent a second crash, get professional help on the way, and give basic support without making injuries worse.",
+      "sections": [
+        {
+          "h": "Make it safe",
+          "steps": [
+            "Stop safely, switch on hazards, and park so your vehicle does not become another hazard.",
+            "Switch off the engines of vehicles involved if you can do so safely; no smoking.",
+            "Place a warning triangle well behind the scene if you have one.",
+            "Move uninjured people to a safe place off the road."
+          ]
+        },
+        {
+          "h": "Call for help",
+          "p": [
+            "Dial 112, India's single emergency number, which connects police, fire and ambulance services. Give the exact location (landmark, road name, kilometre stone), the number of vehicles and injured people, whether anyone is trapped, and any fire or fuel leak. Stay on the line if asked."
+          ]
+        },
+        {
+          "h": "First-aid awareness",
+          "p": [
+            "Check whether injured people are conscious and breathing. Do not move someone who may have a spinal injury unless there is immediate danger such as fire. Apply firm pressure with a clean cloth to severe bleeding. Keep casualties warm and talk to them calmly. Do not give them food or drink. Do not remove a motorcyclist's helmet unless they are not breathing and you are trained to do so. A first-aid course teaches these skills properly and is worth taking."
+          ]
+        },
+        {
+          "h": "Your legal duties and protection",
+          "p": [
+            "Section 134 requires the driver of a vehicle involved in an accident causing injury to take reasonable steps to secure medical attention for the injured — including taking them to the nearest medical practitioner or hospital, unless it is not practicable — and to give information to the police and the insurer as required.",
+            "Section 134A, added in 2019, protects a Good Samaritan — a person who in good faith, voluntarily and without expecting reward gives emergency care or takes a victim to hospital — from civil or criminal liability for injury or death resulting from their negligence in acting or failing to act while helping. The Central Government has made rules on how such helpers may be questioned and their personal information protected."
+          ],
+          "note": { "kind": "law", "text": "MV Act ss. 134 and 134A; Good Samaritan rules notified in CMVR in 2020. Hospitals should not detain a Good Samaritan or demand payment from them. Verified 2026-11-25." }
+        }
+      ],
+      "terms": [["Good Samaritan", "A bystander who in good faith helps an accident victim without expecting reward."], ["Golden hour", "The period soon after serious injury when treatment most improves survival."]],
+      "examples": ["You come across a motorcycle crash at night. You park ahead with hazards on, ask another person to warn traffic with a torch, call 112 with the kilometre stone number, and keep the rider still and talking until the ambulance arrives."],
+      "mistakes": ["Crowding the road to look or take photos.", "Pulling an injured person out of a vehicle when there is no fire or immediate danger.", "Leaving the scene of a crash you were involved in."],
+      "safety": ["Your own safety comes first. An injured rescuer cannot help anyone."],
+      "check": [
+        { "q": "What number should you call for police, fire and ambulance in India?", "o": ["100 only", "112", "1098", "1800"], "a": 1, "r": "112 is the single emergency number under the Emergency Response Support System." },
+        { "q": "Section 134A of the MV Act protects:", "o": ["Drivers who leave the scene", "Good Samaritans who help accident victims in good faith", "Insurance companies", "Hospitals that refuse treatment"], "a": 1, "r": "A Good Samaritan is not liable for civil or criminal action for negligence while helping in good faith." },
+        { "q": "A crash victim may have a neck injury but is breathing and there is no fire. You should:", "o": ["Move them to your car", "Keep them still and wait for help", "Sit them up", "Remove their helmet"], "a": 1, "r": "Moving a possible spinal injury can cause paralysis; only move them if there is immediate danger." }
+      ],
+      "related": ["article:emerg", "lesson:emergency-failures"],
+      "refs": ["mvact", "goodsam", "erss112"],
+      "verified": "2026-11-25"
+    }
+  ]
+}

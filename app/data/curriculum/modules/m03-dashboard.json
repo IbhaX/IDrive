@@ -1,0 +1,82 @@
+{
+  "id": "m03",
+  "n": 3,
+  "title": "Understanding the dashboard",
+  "summary": "A warning-light encyclopedia: which lights mean stop now, which mean get it checked, and what happens if you ignore them.",
+  "accent": "#fbbf24",
+  "icon": "gauge",
+  "level": "foundation",
+  "chapters": [
+    {
+      "id": "m03c1",
+      "title": "Reading warning lights",
+      "items": ["lesson:warning-light-system", "library:lights", "signs:dash"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "warning-light-system",
+      "title": "The colour code of warning lights",
+      "level": "foundation",
+      "minutes": 7,
+      "objectives": [
+        "Use colour to judge how urgent a warning light is.",
+        "Know the lights that mean stop as soon as it is safe.",
+        "Tell a bulb check at start-up from a real warning."
+      ],
+      "intro": "A dashboard can show dozens of symbols, but you do not need to memorise them all at once. Start with the colour: it tells you how urgent the message is. Then learn the handful of red lights that mean stop now.",
+      "sections": [
+        {
+          "h": "Red, amber, green and blue",
+          "p": [
+            "Red: a serious fault or a dangerous condition. Stop as soon as it is safe and switch off, or do not drive until it is sorted. Amber (yellow or orange): something needs attention soon. You can usually continue carefully to a workshop, but find out what it means first. Green or blue: a system is working as intended — headlights on, indicator flashing, cruise control active."
+          ]
+        },
+        {
+          "h": "The stop-now lights",
+          "p": [
+            "Oil pressure, coolant temperature, brake system, charging (battery), and power steering on some cars are the lights that most often mean stop. A flashing check-engine light also means stop or slow right down: it usually signals a misfire that can overheat and destroy the catalytic converter."
+          ],
+          "note": { "kind": "safety", "text": "Stopping safely means signalling, moving off the carriageway, and switching on hazards — not braking hard in a live lane." }
+        },
+        {
+          "h": "The start-up check",
+          "p": [
+            "When you turn the key to ignition (or press start without your foot on the brake), most lights come on for a moment to show the bulbs and systems work. They should go out within a few seconds of the engine starting. A light that does not come on at all during this check may be a fault too — for example, an airbag light that never shows."
+          ]
+        }
+      ],
+      "terms": [
+        ["Bulb check", "The brief self-test when ignition is switched on, during which most warnings light up."],
+        ["MIL", "Malfunction indicator lamp — the check-engine light."]
+      ],
+      "examples": [
+        "The amber TPMS light comes on during a highway drive. Slow down, stop at the next safe place, look at all four tyres, and check pressures at the next fuel station."
+      ],
+      "mistakes": [
+        "Covering a persistent amber light with tape or ignoring it for weeks.",
+        "Stopping on the carriageway itself when a red light appears."
+      ],
+      "safety": [
+        "When in doubt about a red light, do not keep driving. Call roadside assistance."
+      ],
+      "check": [
+        {
+          "q": "An amber warning light usually means:",
+          "o": ["A system is active", "Stop immediately", "A fault that needs attention soon", "The car is in eco mode"],
+          "a": 2,
+          "r": "Amber means check it soon. Red means stop safely; green or blue means a system is on."
+        },
+        {
+          "q": "The check-engine light is flashing, not steady. What does that usually indicate?",
+          "o": ["Service due", "A severe misfire — slow down and stop safely", "Fuel cap loose", "Nothing — it is a bulb test"],
+          "a": 1,
+          "r": "A flashing MIL usually means a misfire that can overheat the catalytic converter. Reduce load and get it checked immediately."
+        }
+      ],
+      "related": ["library:lights", "lesson:troubleshooting-symptoms", "lesson:engine-basics"],
+      "refs": [],
+      "verified": "2026-11-25"
+    }
+  ]
+}

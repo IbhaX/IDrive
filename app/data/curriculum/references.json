@@ -1,0 +1,101 @@
+{
+  "mvact": {
+    "title": "The Motor Vehicles Act, 1988 (as amended)",
+    "publisher": "India Code, Ministry of Law and Justice",
+    "url": "https://indiacode.nic.in/bitstream/123456789/1798/1/A1988-59.pdf",
+    "kind": "law",
+    "scope": "national",
+    "verified": "2026-11-25"
+  },
+  "mvact2019": {
+    "title": "The Motor Vehicles (Amendment) Act, 2019 (No. 32 of 2019)",
+    "publisher": "Ministry of Road Transport and Highways",
+    "url": "https://morth.gov.in/sites/default/files/notifications_document/Motor%20Vehicles%20(Amendment)%20Act%202019.pdf",
+    "kind": "law",
+    "scope": "national",
+    "verified": "2026-11-25"
+  },
+  "mvact-ch2": {
+    "title": "MV Act, 1988 — Chapter II: Licensing of drivers (ss. 3–28)",
+    "publisher": "Ministry of Road Transport and Highways",
+    "url": "https://morth.nic.in/sites/default/files/MV-Act-1988-Chapter-2.pdf",
+    "kind": "law",
+    "scope": "national",
+    "verified": "2026-11-25"
+  },
+  "cmvr": {
+    "title": "Central Motor Vehicles Rules, 1989",
+    "publisher": "Ministry of Road Transport and Highways",
+    "url": "https://morth.nic.in/central-motor-vehicles-rules-1989",
+    "kind": "law",
+    "scope": "national",
+    "verified": "2026-11-25"
+  },
+  "goodsam": {
+    "title": "Protection of Good Samaritans — CMVR amendment notified (s. 134A)",
+    "publisher": "Press Information Bureau, Government of India",
+    "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1660551",
+    "kind": "official",
+    "scope": "national",
+    "verified": "2026-11-25"
+  },
+  "sarathi": {
+    "title": "Sarathi — driving licence services (learner's licence, DL, renewal)",
+    "publisher": "Parivahan, Ministry of Road Transport and Highways",
+    "url": "https://sarathi.parivahan.gov.in/",
+    "kind": "service",
+    "scope": "national",
+    "verified": "2026-11-25"
+  },
+  "parivahan": {
+    "title": "Parivahan Sewa — vehicle and licence services",
+    "publisher": "Ministry of Road Transport and Highways",
+    "url": "https://parivahan.gov.in/",
+    "kind": "service",
+    "scope": "national",
+    "verified": "2026-11-25"
+  },
+  "keralamvd": {
+    "title": "Motor Vehicles Department, Government of Kerala",
+    "publisher": "Government of Kerala",
+    "url": "https://mvd.kerala.gov.in/",
+    "kind": "service",
+    "scope": "kerala",
+    "verified": "2026-11-25"
+  },
+  "erss112": {
+    "title": "Emergency Response Support System — single emergency number 112",
+    "publisher": "Ministry of Home Affairs",
+    "url": "https://112.gov.in/about",
+    "kind": "official",
+    "scope": "national",
+    "verified": "2026-11-25"
+  },
+  "irc67": {
+    "title": "IRC:67 — Code of Practice for Road Signs",
+    "publisher": "Indian Roads Congress",
+    "url": "https://www.irc.nic.in/",
+    "kind": "standard",
+    "scope": "national",
+    "verified": "2026-11-25",
+    "note": "The code itself is a paid publication; the link is the publisher's home page."
+  },
+  "kl-test-2024": {
+    "title": "Kerala revises LMV driving-test format (angular, parallel, zig-zag, gradient)",
+    "publisher": "Onmanorama (news report)",
+    "url": "https://onmanorama.com/news/kerala/2024/02/22/driving-test-revised-norms-to-come-into-effect-from-may.html",
+    "kind": "news",
+    "scope": "kerala",
+    "verified": "2026-11-25",
+    "note": "Secondary source. Confirm the current format with your RTO or the Kerala MVD."
+  },
+  "kl-hc-2025": {
+    "title": "Kerala High Court: automatic and electric cars allowed for driving tests (Circular 4/2024 partly quashed)",
+    "publisher": "Onmanorama (news report)",
+    "url": "https://www.onmanorama.com/news/kerala/2025/07/17/kerala-automatic-electric-vehicles-allowed-driving-tests.html",
+    "kind": "news",
+    "scope": "kerala",
+    "verified": "2026-11-25",
+    "note": "Secondary source reporting a court ruling. Confirm current practice with your RTO."
+  }
+}

@@ -64,6 +64,15 @@ with TestClient(app) as c:
     put = c.put("/api/progress", json={"data": {"seen": {"stop": 1}}, "version": 0}, headers=h)
     check("progress write", put.status_code == 200)
 
+    cur = c.get("/api/curriculum").json()
+    check("curriculum outline", cur["counts"]["modules"] == 12 and cur["lessonOrder"])
+    les = c.get(f"/api/curriculum/lessons/{cur['lessonOrder'][0]}")
+    check("lesson payload", les.status_code == 200 and les.json()["lesson"]["check"])
+    check("search", bool(c.get("/api/curriculum/search", params={"q": "oil pressure"}).json()["results"]))
+    check("warning lights", len(c.get("/api/library/lights").json()["lights"]) >= 17)
+    ask = c.post("/api/instructor/ask", json={"question": "what does ABS do"}, headers=h)
+    check("instructor answers", ask.status_code == 200 and ask.json()["sources"])
+
     check("index page", c.get("/").status_code == 200)
 
 print("\n".join(CHECKS))

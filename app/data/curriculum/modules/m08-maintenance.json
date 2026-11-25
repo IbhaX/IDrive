@@ -1,0 +1,173 @@
+{
+  "id": "m08",
+  "n": 8,
+  "title": "Vehicle maintenance and troubleshooting",
+  "summary": "Fluids, tyres, brakes, filters and service schedules — plus a symptom-based guide that tells you when to stop driving.",
+  "accent": "#22d3ee",
+  "icon": "wrench",
+  "level": "intermediate",
+  "chapters": [
+    {
+      "id": "m08c1",
+      "title": "Routine checks",
+      "items": ["lesson:routine-checks", "lesson:tyres-brakes", "article:veh"]
+    },
+    {
+      "id": "m08c2",
+      "title": "Troubleshooting",
+      "items": ["lesson:troubleshooting-symptoms", "library:lights", "practice:veh"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "routine-checks",
+      "title": "Fluids, battery, filters and the service schedule",
+      "level": "intermediate",
+      "minutes": 11,
+      "objectives": [
+        "Check engine oil, coolant, brake fluid, washer fluid and the battery.",
+        "Explain what each filter and belt does and why it has a service interval.",
+        "Read and follow the manufacturer's service schedule."
+      ],
+      "intro": "You do not need to be a mechanic to keep a vehicle healthy. Ten minutes of checks every couple of weeks, and following the service book, prevent most breakdowns.",
+      "sections": [
+        {
+          "h": "Under the bonnet",
+          "p": [
+            "Engine oil: with the car on level ground and the engine cold or off for a few minutes, pull the dipstick, wipe it, push it back, pull it again and read the level between the MIN and MAX marks. Top up with the grade in the manual. Coolant: check the level in the translucent expansion tank only when cold. Brake fluid: the reservoir level drops slowly as pads wear; a sudden drop means a leak. Power-steering fluid (hydraulic systems only) and washer fluid: keep between the marks. Automatic-transmission fluid is usually checked by the service centre."
+          ],
+          "note": { "kind": "safety", "text": "Keep hands, ties and hair away from the fan — electric radiator fans can start even with the engine off." }
+        },
+        {
+          "h": "Battery",
+          "p": [
+            "Keep terminals clean and tight; white or green crust on a terminal reduces current. Slow cranking on a cool morning, dim lights at idle, or a battery older than about three to five years are warnings. Most modern batteries are sealed; never smoke near a battery — it can give off hydrogen."
+          ]
+        },
+        {
+          "h": "Filters, plugs and belts",
+          "p": [
+            "Air filter: cleans the air entering the engine; a clogged filter wastes fuel, especially on dusty roads. Cabin filter: cleans the air you breathe and helps the AC demist. Fuel filter: critical on diesels, where water or dirt in the fuel can damage injectors. Spark plugs (petrol): worn plugs cause misfires and hard starting. Drive belts and the timing belt: cracks, glazing or squealing mean replacement — a broken timing belt can wreck the engine. Hoses: soft, swollen or cracked hoses can burst."
+          ]
+        },
+        {
+          "h": "The service schedule",
+          "p": [
+            "The owner's manual lists what to replace and when, by distance or time, whichever comes first. Short trips, dusty roads, heavy traffic and hill driving count as severe conditions and often call for shorter intervals. Keep receipts — they prove the car was maintained when you sell it or claim on a warranty."
+          ]
+        }
+      ],
+      "terms": [["Dipstick", "A metal blade used to measure the engine-oil level."], ["Expansion tank", "A reservoir that holds coolant as it expands with heat."], ["Severe service", "Driving conditions that wear parts faster and shorten service intervals."]],
+      "examples": ["After a monsoon month of short, flooded city trips, the air filter is caked with mud. Replacing it restores fuel economy and pulling power."],
+      "mistakes": ["Overfilling oil above MAX, which can damage seals.", "Mixing coolant types.", "Skipping services because the car 'feels fine'."],
+      "safety": ["Never work under a car supported only by a jack."],
+      "check": [
+        { "q": "When should you check the coolant level?", "o": ["With the engine hot", "When the engine is cold", "While driving", "Only at service time"], "a": 1, "r": "The system is pressurised when hot; opening it can spray scalding coolant." },
+        { "q": "Brake-fluid level drops suddenly. What does this suggest?", "o": ["Normal pad wear", "A leak — have it checked before driving", "Cold weather", "Nothing"], "a": 1, "r": "A slow drop matches pad wear; a sudden drop suggests a leak in the braking system." }
+      ],
+      "related": ["lesson:engine-basics", "lesson:tyres-brakes", "lesson:troubleshooting-symptoms"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "tyres-brakes",
+      "title": "Tyres, alignment, brakes and suspension",
+      "level": "intermediate",
+      "minutes": 10,
+      "objectives": [
+        "Check tyre pressure, tread depth and sidewall condition.",
+        "Know the difference between wheel alignment and balancing.",
+        "Recognise worn brake pads, discs and suspension parts."
+      ],
+      "intro": "Four patches of rubber, each about the size of your palm, are all that connect the vehicle to the road. Every bit of steering, braking and grip passes through them.",
+      "sections": [
+        {
+          "h": "Pressure and tread",
+          "p": [
+            "Check pressures when tyres are cold, at least every two weeks, using the figures on the door-pillar sticker or in the manual — not the maximum printed on the tyre. Under-inflation makes tyres overheat, wear at the edges and handle poorly; over-inflation reduces grip and wears the centre. Tread channels water away; most tyres have tread-wear indicators — small raised bars in the grooves — that show when the tread has worn to its limit. Replace tyres well before then for monsoon driving. Look for cuts, bulges and cracks in the sidewall; a bulge means the tyre's structure is damaged."
+          ]
+        },
+        {
+          "h": "Alignment and balancing",
+          "p": [
+            "Wheel alignment sets the angles of the wheels relative to each other and the car. Bad alignment pulls the car to one side and wears tyres unevenly; potholes and kerb strikes knock it out. Wheel balancing adds small weights so a wheel spins without wobbling; an unbalanced wheel causes vibration in the steering at certain speeds."
+          ]
+        },
+        {
+          "h": "Brakes",
+          "p": [
+            "Brake pads press on discs (or shoes inside drums) to slow the wheels. Pads wear and must be replaced; many have a metal tab that squeals when they are low. Grinding means the pad is gone and metal is scraping the disc. A pulsing pedal under normal braking usually means warped discs. A pull to one side can mean a sticking caliper."
+          ]
+        },
+        {
+          "h": "Suspension and steering",
+          "p": [
+            "Springs carry the weight; dampers (shock absorbers) control the bounce. Worn dampers make the car keep bouncing after a bump, lengthen braking distances and reduce grip on rough roads. Clunks over bumps can mean worn bushes, links or ball joints. Play or knocking in the steering needs immediate inspection."
+          ]
+        }
+      ],
+      "terms": [["Tread-wear indicator", "Raised bars in tyre grooves that show the minimum tread depth."], ["Alignment", "Adjusting wheel angles so they point correctly."], ["Damper", "Shock absorber; controls spring movement."]],
+      "examples": ["After hitting a deep pothole, the steering wheel is now slightly off-centre on a straight road. That is an alignment change — get it checked and look at the tyre for a bulge."],
+      "mistakes": ["Inflating to the maximum pressure on the sidewall.", "Ignoring a squeal from the brakes for weeks.", "Mixing very different tyres on the same axle."],
+      "safety": ["Do not drive on a tyre with a sidewall bulge — it can burst."],
+      "check": [
+        { "q": "Where do you find the correct tyre pressure for your car?", "o": ["The maximum on the tyre sidewall", "The door-pillar sticker or owner's manual", "Any fuel station chart", "The tyre shop's advice only"], "a": 1, "r": "The vehicle maker's figure accounts for the car's weight and design." },
+        { "q": "The steering vibrates only at certain speeds. A likely cause is:", "o": ["Unbalanced wheels", "Low fuel", "A dirty air filter", "Weak headlights"], "a": 0, "r": "Wheel imbalance causes vibration that appears in a particular speed range." }
+      ],
+      "related": ["lesson:grip-weight-transfer", "lesson:emergency-failures", "library:lights"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "troubleshooting-symptoms",
+      "title": "Symptom guide: what it might be and whether to keep driving",
+      "level": "intermediate",
+      "minutes": 12,
+      "objectives": [
+        "Match common symptoms to likely causes.",
+        "Decide when a symptom means stop now.",
+        "Describe a problem clearly to a mechanic."
+      ],
+      "intro": "Cars rarely fail without warning. A new noise, smell, vibration or light is the vehicle telling you something. This guide gives the likely causes and — most importantly — whether it is safe to carry on.",
+      "sections": [
+        {
+          "h": "Stop now",
+          "p": [
+            "Overheating (gauge high, steam, temperature light): stop and switch off; see the coolant light entry. Oil-pressure light: stop and switch off. Soft, sinking or very long brake pedal: stop; do not drive. Smoke from under the bonnet or a burning smell with smoke: stop, switch off, get everyone out and away. Heavy steering with a warning light: stop safely. A loud knocking from the engine: stop."
+          ],
+          "note": { "kind": "safety", "text": "If there is fire or heavy smoke, get everyone out and well away from the vehicle and call 112. Do not open the bonnet — the rush of air can feed the fire." }
+        },
+        {
+          "h": "Get it checked soon",
+          "p": [
+            "Engine will not start: a clicking sound usually means a flat battery or bad connection; cranking without firing can mean fuel or ignition problems, or an immobiliser fault. Battery not charging: the battery light comes on and electrics dim — usually the alternator or its belt. Brake squeal: pads near their limit. Steering vibration at speed: wheel balance or warped discs. Pulling to one side: alignment, tyre pressure or a sticking brake. Poor fuel economy: tyre pressure, a clogged air filter, sensor faults, or driving style."
+          ]
+        },
+        {
+          "h": "Smoke colours",
+          "p": [
+            "White smoke that disappears quickly on a cold morning is just condensation. Thick white smoke that continues, with a sweet smell, can mean coolant is burning — a possible head-gasket failure. Blue smoke means oil is burning. Black smoke, especially from a diesel under load, means too much fuel — often an injector, turbo or air-filter problem."
+          ]
+        },
+        {
+          "h": "Leaks",
+          "p": [
+            "Clear water under the AC area is normal condensation. Green, pink or orange with a sweet smell: coolant. Brown or black: engine oil. Red: transmission or power-steering fluid. Clear to yellow and slippery near a wheel: brake fluid — do not drive."
+          ]
+        }
+      ],
+      "terms": [["Head gasket", "The seal between cylinder block and head; failure lets coolant and oil mix or burn."], ["Limp mode", "A reduced-power mode the ECU uses to protect the engine when it detects a fault."]],
+      "examples": ["Your diesel suddenly loses power and the check-engine light comes on. It may be in limp mode. Drive gently to a safe place and have it scanned."],
+      "mistakes": ["Topping up a leak repeatedly instead of fixing it.", "Describing a noise as 'a sound' — note when it happens: speed, braking, turning, cold or hot."],
+      "safety": ["When unsure, treat the symptom as serious and get professional help."],
+      "check": [
+        { "q": "Clear to yellowish slippery fluid near a wheel suggests:", "o": ["AC condensation", "A brake-fluid leak — do not drive", "Washer fluid", "Rain water"], "a": 1, "r": "Brake fluid leaking at a wheel means the braking system is compromised." },
+        { "q": "Thick blue smoke from the exhaust usually means:", "o": ["Condensation", "Oil is being burned", "Too much fuel", "Coolant is burning"], "a": 1, "r": "Blue smoke is the signature of burning oil, often from worn rings or valve seals." },
+        { "q": "The engine clicks but will not crank. The most likely cause is:", "o": ["Empty fuel tank", "A flat battery or poor battery connection", "Bad tyres", "A blown headlight"], "a": 1, "r": "The starter needs a lot of current; a click means it is not getting enough." }
+      ],
+      "related": ["library:lights", "lesson:routine-checks", "lesson:emergency-failures"],
+      "refs": ["erss112"],
+      "verified": "2026-11-25"
+    }
+  ]
+}

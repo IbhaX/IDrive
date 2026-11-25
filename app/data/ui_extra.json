@@ -90,5 +90,1073 @@
  "or": [
   "or",
   "അല്ലെങ്കിൽ"
+ ],
+ "tHome": [
+  "Home",
+  "ഹോം"
+ ],
+ "tCourse": [
+  "Learn",
+  "പഠിക്കാം"
+ ],
+ "tSigns": [
+  "Signs",
+  "ചിഹ്നങ്ങൾ"
+ ],
+ "tVehicle": [
+  "Vehicle",
+  "വാഹനം"
+ ],
+ "tScience": [
+  "Science",
+  "ശാസ്ത്രം"
+ ],
+ "tHazard": [
+  "Hazards",
+  "അപകടസൂചന"
+ ],
+ "tTests": [
+  "Tests",
+  "ടെസ്റ്റുകൾ"
+ ],
+ "tAsk": [
+  "Instructor",
+  "ഇൻസ്ട്രക്ടർ"
+ ],
+ "more": [
+  "More",
+  "കൂടുതൽ"
+ ],
+ "home": [
+  "Home",
+  "ഹോം"
+ ],
+ "search": [
+  "Search",
+  "തിരയുക"
+ ],
+ "searchAll": [
+  "Search everything",
+  "എല്ലാം തിരയുക"
+ ],
+ "searchHint": [
+  "Lessons, signs, warning lights, parts, rules… Try “oil light” or “hill start”.",
+  "പാഠങ്ങൾ, ചിഹ്നങ്ങൾ, മുന്നറിയിപ്പ് ലൈറ്റുകൾ, ഭാഗങ്ങൾ, നിയമങ്ങൾ… “oil light” അല്ലെങ്കിൽ “hill start” തിരഞ്ഞുനോക്കൂ."
+ ],
+ "sub2": [
+  "The interactive driving school",
+  "ഇന്ററാക്ടീവ് ഡ്രൈവിങ് സ്കൂൾ"
+ ],
+ "breadcrumb": [
+  "Breadcrumb",
+  "വഴികാട്ടി"
+ ],
+ "heroEyebrow": [
+  "Driving theory, properly explained",
+  "ഡ്രൈവിങ് തിയറി, ശരിയായി വിശദീകരിച്ച്"
+ ],
+ "heroTitle": [
+  "Understand the road before you drive on it.",
+  "റോഡിൽ ഇറങ്ങും മുമ്പ് റോഡിനെ മനസ്സിലാക്കൂ."
+ ],
+ "heroLede": [
+  "{m} modules and {l} lessons on how vehicles work, what the law says, how to read signs and how to stay safe — with labs, scenarios and mock tests.",
+  "വാഹനങ്ങൾ എങ്ങനെ പ്രവർത്തിക്കുന്നു, നിയമം എന്തു പറയുന്നു, ചിഹ്നങ്ങൾ എങ്ങനെ വായിക്കാം, എങ്ങനെ സുരക്ഷിതരാകാം — {m} മൊഡ്യൂളുകൾ, {l} പാഠങ്ങൾ, ലാബുകൾ, സാഹചര്യങ്ങൾ, മോക്ക് ടെസ്റ്റുകൾ."
+ ],
+ "startLearning": [
+  "Start learning",
+  "പഠനം തുടങ്ങൂ"
+ ],
+ "continue": [
+  "Continue learning",
+  "പഠനം തുടരൂ"
+ ],
+ "seeCurriculum": [
+  "See the curriculum",
+  "പാഠ്യപദ്ധതി കാണുക"
+ ],
+ "curriculumDone": [
+  "of the curriculum",
+  "പാഠ്യപദ്ധതി പൂർത്തിയായി"
+ ],
+ "dayStreak": [
+  "Day streak",
+  "തുടർച്ചയായ ദിവസങ്ങൾ"
+ ],
+ "streakSub": [
+  "Learn something each day",
+  "ഓരോ ദിവസവും എന്തെങ്കിലും പഠിക്കൂ"
+ ],
+ "levelSub": [
+  "Your current level",
+  "നിങ്ങളുടെ ഇപ്പോഴത്തെ നില"
+ ],
+ "upNext": [
+  "Up next",
+  "അടുത്തത്"
+ ],
+ "startHere": [
+  "Start here",
+  "ഇവിടെ തുടങ്ങൂ"
+ ],
+ "moduleN": [
+  "Module {n}",
+  "മൊഡ്യൂൾ {n}"
+ ],
+ "recent": [
+  "Recently viewed",
+  "അടുത്തിടെ കണ്ടത്"
+ ],
+ "explore": [
+  "Explore",
+  "പര്യവേക്ഷണം"
+ ],
+ "curriculum": [
+  "Curriculum",
+  "പാഠ്യപദ്ധതി"
+ ],
+ "fVehicle": [
+  "Vehicle explorer",
+  "വാഹന പര്യവേക്ഷണം"
+ ],
+ "fVehicleSub": [
+  "Tap any part to see how it works and fails",
+  "ഏതു ഭാഗവും തൊട്ട് അത് എങ്ങനെ പ്രവർത്തിക്കുന്നു, തകരാറിലാകുന്നു എന്ന് കാണൂ"
+ ],
+ "fLights": [
+  "Warning lights",
+  "മുന്നറിയിപ്പ് ലൈറ്റുകൾ"
+ ],
+ "fLightsSub": [
+  "Which lights mean stop now",
+  "ഏതു ലൈറ്റ് കണ്ടാൽ ഉടൻ നിർത്തണം"
+ ],
+ "fLab": [
+  "Science lab",
+  "ശാസ്ത്ര ലാബ്"
+ ],
+ "fLabSub": [
+  "See how speed changes stopping distance",
+  "വേഗം നിർത്താനുള്ള ദൂരത്തെ എങ്ങനെ മാറ്റുന്നു എന്ന് കാണൂ"
+ ],
+ "fHazard": [
+  "Hazard perception",
+  "അപകടം തിരിച്ചറിയൽ"
+ ],
+ "fHazardSub": [
+  "Spot the hazard, choose the safest response",
+  "അപകടം കണ്ടെത്തൂ, സുരക്ഷിതമായ പ്രതികരണം തിരഞ്ഞെടുക്കൂ"
+ ],
+ "fExam": [
+  "Mock tests",
+  "മോക്ക് ടെസ്റ്റുകൾ"
+ ],
+ "fExamSub": [
+  "Timed, randomised, explained",
+  "സമയബന്ധിതം, ക്രമരഹിതം, വിശദീകരണത്തോടെ"
+ ],
+ "fAsk": [
+  "AI instructor",
+  "AI ഇൻസ്ട്രക്ടർ"
+ ],
+ "fAskSub": [
+  "Ask anything, with sources",
+  "എന്തും ചോദിക്കൂ, ഉറവിടങ്ങളോടെ"
+ ],
+ "courseLede": [
+  "Twelve modules from absolute beginner to advanced. Each lesson has objectives, explanations, worked examples, safety notes, a knowledge check and sources. A lesson counts as complete when you score 70% or more.",
+  "തുടക്കക്കാരൻ മുതൽ വിദഗ്ധൻ വരെ പന്ത്രണ്ട് മൊഡ്യൂളുകൾ. ഓരോ പാഠത്തിലും ലക്ഷ്യങ്ങൾ, വിശദീകരണം, ഉദാഹരണങ്ങൾ, സുരക്ഷാ കുറിപ്പുകൾ, അറിവ് പരിശോധന, ഉറവിടങ്ങൾ എന്നിവയുണ്ട്. 70% അല്ലെങ്കിൽ കൂടുതൽ നേടുമ്പോൾ പാഠം പൂർത്തിയാകും."
+ ],
+ "lessonsL": [
+  "lessons",
+  "പാഠങ്ങൾ"
+ ],
+ "min": [
+  "min",
+  "മിനിറ്റ്"
+ ],
+ "beginner": [
+  "Beginner",
+  "തുടക്കക്കാർ"
+ ],
+ "foundation": [
+  "Foundation",
+  "അടിസ്ഥാനം"
+ ],
+ "intermediate": [
+  "Intermediate",
+  "ഇടത്തരം"
+ ],
+ "advanced": [
+  "Advanced",
+  "ഉന്നതം"
+ ],
+ "lvBeginner": [
+  "Beginner",
+  "തുടക്കക്കാരൻ"
+ ],
+ "lvFoundation": [
+  "Foundation",
+  "അടിസ്ഥാനം"
+ ],
+ "lvIntermediate": [
+  "Intermediate",
+  "ഇടത്തരം"
+ ],
+ "lvAdvanced": [
+  "Advanced",
+  "ഉന്നതം"
+ ],
+ "lvMastery": [
+  "Theory mastery",
+  "തിയറി പ്രാവീണ്യം"
+ ],
+ "itLesson": [
+  "Lesson",
+  "പാഠം"
+ ],
+ "itArticle": [
+  "Theory article",
+  "തിയറി ലേഖനം"
+ ],
+ "itLab": [
+  "Interactive lab",
+  "ഇന്ററാക്ടീവ് ലാബ്"
+ ],
+ "itScenario": [
+  "Hazard scenario",
+  "അപകട സാഹചര്യം"
+ ],
+ "itLibrary": [
+  "Reference library",
+  "റഫറൻസ് ലൈബ്രറി"
+ ],
+ "itSigns": [
+  "Sign library",
+  "ചിഹ്ന ലൈബ്രറി"
+ ],
+ "itPractice": [
+  "Practice questions",
+  "പരിശീലന ചോദ്യങ്ങൾ"
+ ],
+ "itExam": [
+  "Mock exam",
+  "മോക്ക് പരീക്ഷ"
+ ],
+ "completed": [
+  "Completed",
+  "പൂർത്തിയായി"
+ ],
+ "notFound": [
+  "We could not find that page.",
+  "ആ പേജ് കണ്ടെത്താനായില്ല."
+ ],
+ "onThisPage": [
+  "On this page",
+  "ഈ പേജിൽ"
+ ],
+ "objectives": [
+  "You will learn to",
+  "നിങ്ങൾ പഠിക്കുന്നത്"
+ ],
+ "terms": [
+  "Key terms",
+  "പ്രധാന പദങ്ങൾ"
+ ],
+ "examples": [
+  "Examples",
+  "ഉദാഹരണങ്ങൾ"
+ ],
+ "mistakes": [
+  "Common mistakes",
+  "സാധാരണ തെറ്റുകൾ"
+ ],
+ "safetyH": [
+  "Safety",
+  "സുരക്ഷ"
+ ],
+ "deepDive": [
+  "Technical deep dive",
+  "സാങ്കേതിക വിശദാംശം"
+ ],
+ "knowledgeCheck": [
+  "Knowledge check",
+  "അറിവ് പരിശോധന"
+ ],
+ "kcLede": [
+  "Answer to complete the lesson. Missed questions go to your revision queue.",
+  "പാഠം പൂർത്തിയാക്കാൻ ഉത്തരം നൽകൂ. തെറ്റിയ ചോദ്യങ്ങൾ റിവിഷൻ പട്ടികയിലേക്ക് പോകും."
+ ],
+ "related": [
+  "Related",
+  "ബന്ധപ്പെട്ടവ"
+ ],
+ "references": [
+  "Sources and references",
+  "ഉറവിടങ്ങളും റഫറൻസുകളും"
+ ],
+ "scopeKerala": [
+  "Kerala",
+  "കേരളം"
+ ],
+ "scopeNational": [
+  "National",
+  "ദേശീയം"
+ ],
+ "verifiedOn": [
+  "verified {d}",
+  "{d}-ന് പരിശോധിച്ചു"
+ ],
+ "lessonVerified": [
+  "Content last checked {d}.",
+  "ഉള്ളടക്കം അവസാനം പരിശോധിച്ചത് {d}."
+ ],
+ "backToModule": [
+  "Back to module",
+  "മൊഡ്യൂളിലേക്ക് മടങ്ങുക"
+ ],
+ "noteSafety": [
+  "Safety",
+  "സുരക്ഷ"
+ ],
+ "noteLaw": [
+  "The law",
+  "നിയമം"
+ ],
+ "noteTip": [
+  "Tip",
+  "നുറുങ്ങ്"
+ ],
+ "noteModel": [
+  "Educational model",
+  "പഠന മാതൃക"
+ ],
+ "tryLab": [
+  "Try it in the lab",
+  "ലാബിൽ പരീക്ഷിക്കൂ"
+ ],
+ "tryScenario": [
+  "Try the scenario",
+  "സാഹചര്യം പരീക്ഷിക്കൂ"
+ ],
+ "bookmark": [
+  "Bookmark lesson",
+  "പാഠം ബുക്ക്മാർക്ക് ചെയ്യുക"
+ ],
+ "unbookmark": [
+  "Remove bookmark",
+  "ബുക്ക്മാർക്ക് നീക്കുക"
+ ],
+ "bookmarked": [
+  "Bookmarked",
+  "ബുക്ക്മാർക്ക് ചെയ്തു"
+ ],
+ "unbookmarked": [
+  "Bookmark removed",
+  "ബുക്ക്മാർക്ക് നീക്കി"
+ ],
+ "qOf": [
+  "Question {i} of {n}",
+  "ചോദ്യം {i} / {n}"
+ ],
+ "notQuite": [
+  "Not quite.",
+  "ശരിയല്ല."
+ ],
+ "addedReview": [
+  "Added to your revision queue.",
+  "റിവിഷൻ പട്ടികയിൽ ചേർത്തു."
+ ],
+ "seeScore": [
+  "See score",
+  "സ്കോർ കാണുക"
+ ],
+ "kcPass": [
+  "Lesson complete",
+  "പാഠം പൂർത്തിയായി"
+ ],
+ "kcPassSub": [
+  "Well done. Move on, or retry to strengthen the idea.",
+  "നന്നായി. അടുത്തതിലേക്ക് പോകാം, അല്ലെങ്കിൽ വീണ്ടും ശ്രമിക്കാം."
+ ],
+ "kcRetry": [
+  "Not yet",
+  "ഇനിയും ആയില്ല"
+ ],
+ "kcRetrySub": [
+  "Re-read the sections above and try again — you need 70% to complete the lesson.",
+  "മുകളിലെ ഭാഗങ്ങൾ വീണ്ടും വായിച്ച് ശ്രമിക്കൂ — പാഠം പൂർത്തിയാക്കാൻ 70% വേണം."
+ ],
+ "tryAgain": [
+  "Try again",
+  "വീണ്ടും ശ്രമിക്കുക"
+ ],
+ "review": [
+  "Revision",
+  "റിവിഷൻ"
+ ],
+ "reviewN": [
+  "Review {n} missed questions",
+  "തെറ്റിയ {n} ചോദ്യങ്ങൾ വീണ്ടും നോക്കുക"
+ ],
+ "reviewEmpty": [
+  "Nothing to revise yet. Questions you miss in knowledge checks appear here.",
+  "ഇപ്പോൾ റിവൈസ് ചെയ്യാൻ ഒന്നുമില്ല. അറിവ് പരിശോധനയിൽ തെറ്റുന്ന ചോദ്യങ്ങൾ ഇവിടെ വരും."
+ ],
+ "reviewLede": [
+  "Questions you have missed, most-missed first. Answer correctly to clear them.",
+  "നിങ്ങൾ തെറ്റിച്ച ചോദ്യങ്ങൾ, ഏറ്റവും കൂടുതൽ തെറ്റിയവ ആദ്യം. ശരിയായി ഉത്തരം നൽകി മായ്ക്കൂ."
+ ],
+ "scienceTitle": [
+  "Driving science laboratory",
+  "ഡ്രൈവിങ് ശാസ്ത്ര ലാബ്"
+ ],
+ "scienceLede": [
+  "Change the numbers and watch the physics. Every lab is a simplified educational model, not a prediction of a real vehicle.",
+  "സംഖ്യകൾ മാറ്റി ഭൗതികശാസ്ത്രം കാണൂ. ഓരോ ലാബും ലളിതമാക്കിയ പഠന മാതൃകയാണ്, യഥാർഥ വാഹനത്തിന്റെ പ്രവചനമല്ല."
+ ],
+ "lab_stopping": [
+  "Stopping distance",
+  "നിർത്താനുള്ള ദൂരം"
+ ],
+ "lab_reaction": [
+  "Reaction time",
+  "പ്രതികരണ സമയം"
+ ],
+ "lab_engine": [
+  "Four-stroke engine",
+  "ഫോർ-സ്ട്രോക്ക് എൻജിൻ"
+ ],
+ "labSub_stopping": [
+  "Speed, reaction time and road surface",
+  "വേഗം, പ്രതികരണ സമയം, റോഡ് പ്രതലം"
+ ],
+ "labSub_reaction": [
+  "Measure how fast you react",
+  "നിങ്ങൾ എത്ര വേഗം പ്രതികരിക്കുന്നു എന്ന് അളക്കൂ"
+ ],
+ "labSub_engine": [
+  "Watch the cycle stroke by stroke",
+  "ഓരോ സ്ട്രോക്കായി ചക്രം കാണൂ"
+ ],
+ "speed": [
+  "Speed",
+  "വേഗം"
+ ],
+ "reactionTime": [
+  "Reaction time",
+  "പ്രതികരണ സമയം"
+ ],
+ "compareSurface": [
+  "Compare dry road with",
+  "ഉണങ്ങിയ റോഡിനെ താരതമ്യം ചെയ്യുക"
+ ],
+ "hazardAt": [
+  "Hazard appears at",
+  "അപകടം കാണുന്ന ദൂരം"
+ ],
+ "runTest": [
+  "Run the stop",
+  "നിർത്തൽ പരീക്ഷിക്കുക"
+ ],
+ "surf_dry": [
+  "Dry asphalt",
+  "ഉണങ്ങിയ ടാർ"
+ ],
+ "surf_wet": [
+  "Wet asphalt",
+  "നനഞ്ഞ ടാർ"
+ ],
+ "surf_gravel": [
+  "Loose gravel",
+  "ഇളകിയ ചരൽ"
+ ],
+ "surf_worn": [
+  "Wet road, worn tyres",
+  "നനഞ്ഞ റോഡ്, തേഞ്ഞ ടയർ"
+ ],
+ "reactionDist": [
+  "Reaction",
+  "പ്രതികരണം"
+ ],
+ "brakingDist": [
+  "Braking",
+  "ബ്രേക്കിങ്"
+ ],
+ "totalDist": [
+  "Total",
+  "ആകെ"
+ ],
+ "impactAt": [
+  "Reaches the hazard at about {v} km/h",
+  "ഏകദേശം {v} km/h വേഗത്തിൽ അപകടസ്ഥലത്ത് എത്തുന്നു"
+ ],
+ "stopsInTime": [
+  "Stops {m} m short of the hazard",
+  "അപകടത്തിന് {m} മീ. മുമ്പേ നിൽക്കുന്നു"
+ ],
+ "squareLaw": [
+  "Braking distance grows with the square of speed: double the speed, four times the distance.",
+  "ബ്രേക്കിങ് ദൂരം വേഗത്തിന്റെ വർഗത്തിനനുസരിച്ച് കൂടുന്നു: വേഗം ഇരട്ടിയായാൽ ദൂരം നാലിരട്ടി."
+ ],
+ "stopModelNote": [
+  "Total = speed × reaction time + v² ÷ (2μg). Friction values are typical, not measured; real stops depend on tyres, brakes, load, slope and ABS.",
+  "ആകെ = വേഗം × പ്രതികരണ സമയം + v² ÷ (2μg). ഘർഷണ മൂല്യങ്ങൾ സാധാരണ കണക്കുകളാണ്; യഥാർഥ നിർത്തൽ ടയർ, ബ്രേക്ക്, ഭാരം, ചരിവ്, ABS എന്നിവയെ ആശ്രയിക്കുന്നു."
+ ],
+ "rtLede": [
+  "Tap the pad (or press Space) to start. When it turns green, tap as fast as you can. Do it five times for a fair average.",
+  "തുടങ്ങാൻ പാഡിൽ തൊടുക (അല്ലെങ്കിൽ Space അമർത്തുക). പച്ചയാകുമ്പോൾ എത്രയും വേഗം തൊടുക. ശരാശരിക്കായി അഞ്ചു തവണ ചെയ്യൂ."
+ ],
+ "rtStart": [
+  "Tap to start",
+  "തുടങ്ങാൻ തൊടുക"
+ ],
+ "rtWait": [
+  "Wait for green…",
+  "പച്ചയ്ക്കായി കാത്തിരിക്കുക…"
+ ],
+ "rtGo": [
+  "TAP!",
+  "തൊടുക!"
+ ],
+ "rtEarly": [
+  "Too early — tap to try again",
+  "വളരെ നേരത്തേ — വീണ്ടും ശ്രമിക്കാൻ തൊടുക"
+ ],
+ "rtResult": [
+  "{ms} ms — tap to go again",
+  "{ms} ms — വീണ്ടും ചെയ്യാൻ തൊടുക"
+ ],
+ "rtAvg": [
+  "Average of {n}",
+  "{n} എണ്ണത്തിന്റെ ശരാശരി"
+ ],
+ "rtAt": [
+  "Travelled at {v} km/h",
+  "{v} km/h-ൽ സഞ്ചരിച്ച ദൂരം"
+ ],
+ "rtBest": [
+  "Your best so far: {ms} ms",
+  "ഇതുവരെയുള്ള മികച്ചത്: {ms} ms"
+ ],
+ "rtReal": [
+  "On the road you also have to notice and decide, so real reactions are usually 1–2 seconds — longer when tired or distracted.",
+  "റോഡിൽ ശ്രദ്ധിക്കാനും തീരുമാനിക്കാനും വേണം, അതിനാൽ യഥാർഥ പ്രതികരണം സാധാരണ 1–2 സെക്കൻഡാണ് — ക്ഷീണമോ ശ്രദ്ധക്കുറവോ ഉണ്ടെങ്കിൽ കൂടുതൽ."
+ ],
+ "rtNote": [
+  "A tap test measures simple reaction to an expected signal. Driving hazards are unexpected and need recognition, so this is a best case.",
+  "പ്രതീക്ഷിക്കുന്ന സിഗ്നലിനോടുള്ള ലളിത പ്രതികരണമാണ് ഇത് അളക്കുന്നത്. റോഡിലെ അപകടങ്ങൾ അപ്രതീക്ഷിതമാണ്; ഇത് ഏറ്റവും മികച്ച സാഹചര്യം മാത്രം."
+ ],
+ "valveIn": [
+  "Intake",
+  "ഇൻടേക്ക്"
+ ],
+ "valveEx": [
+  "Exhaust",
+  "എക്സോസ്റ്റ്"
+ ],
+ "st_intake": [
+  "Intake",
+  "ഇൻടേക്ക്"
+ ],
+ "st_compression": [
+  "Compression",
+  "കംപ്രഷൻ"
+ ],
+ "st_power": [
+  "Power",
+  "പവർ"
+ ],
+ "st_exhaust": [
+  "Exhaust",
+  "എക്സോസ്റ്റ്"
+ ],
+ "stD_intake": [
+  "Piston moves down, intake valve open — air and fuel drawn in.",
+  "പിസ്റ്റൺ താഴേക്ക്, ഇൻടേക്ക് വാൽവ് തുറന്ന് — വായുവും ഇന്ധനവും ഉള്ളിലേക്ക്."
+ ],
+ "stD_compression": [
+  "Both valves shut, piston rises and squeezes the mixture.",
+  "രണ്ട് വാൽവും അടച്ച്, പിസ്റ്റൺ ഉയർന്ന് മിശ്രിതം ഞെരുക്കുന്നു."
+ ],
+ "stD_power": [
+  "Spark (petrol) or heat (diesel) ignites it — gas forces the piston down.",
+  "സ്പാർക്ക് (പെട്രോൾ) അല്ലെങ്കിൽ ചൂട് (ഡീസൽ) കത്തിക്കുന്നു — വാതകം പിസ്റ്റണിനെ താഴേക്ക് തള്ളുന്നു."
+ ],
+ "stD_exhaust": [
+  "Exhaust valve opens, piston rises and pushes burnt gas out.",
+  "എക്സോസ്റ്റ് വാൽവ് തുറന്ന്, പിസ്റ്റൺ ഉയർന്ന് കത്തിയ വാതകം പുറത്താക്കുന്നു."
+ ],
+ "play": [
+  "Play",
+  "പ്ലേ"
+ ],
+ "pause": [
+  "Pause",
+  "നിർത്തുക"
+ ],
+ "nextStroke": [
+  "Next stroke",
+  "അടുത്ത സ്ട്രോക്ക്"
+ ],
+ "engSpeed": [
+  "Animation speed",
+  "ആനിമേഷൻ വേഗം"
+ ],
+ "engNote": [
+  "Two full crank turns make one cycle; only one stroke in four produces power.",
+  "ക്രാങ്കിന്റെ രണ്ടു പൂർണ കറക്കം ഒരു ചക്രം; നാലിൽ ഒരു സ്ട്രോക്ക് മാത്രം ശക്തി നൽകുന്നു."
+ ],
+ "engModel": [
+  "Proportions and timing are simplified; real valves overlap and ignition happens slightly before the top.",
+  "അനുപാതങ്ങളും സമയവും ലളിതമാക്കിയിരിക്കുന്നു; യഥാർഥ എൻജിനിൽ വാൽവുകൾ ഓവർലാപ് ചെയ്യുകയും ജ്വലനം മുകളിലെത്തും മുമ്പ് നടക്കുകയും ചെയ്യുന്നു."
+ ],
+ "readLesson": [
+  "Read the lesson",
+  "പാഠം വായിക്കുക"
+ ],
+ "explorerLede": [
+  "Tap a glowing point, or pick a part from the list, to see what it does, how it works and what failure feels like.",
+  "തിളങ്ങുന്ന ഒരു ബിന്ദുവിൽ തൊടുക, അല്ലെങ്കിൽ പട്ടികയിൽ നിന്ന് ഒരു ഭാഗം തിരഞ്ഞെടുക്കുക — അത് എന്തു ചെയ്യുന്നു, എങ്ങനെ പ്രവർത്തിക്കുന്നു, തകരാർ എങ്ങനെ അനുഭവപ്പെടും."
+ ],
+ "pickPart": [
+  "Choose a part to begin.",
+  "തുടങ്ങാൻ ഒരു ഭാഗം തിരഞ്ഞെടുക്കുക."
+ ],
+ "grp_all": [
+  "All systems",
+  "എല്ലാ സംവിധാനങ്ങളും"
+ ],
+ "grp_powertrain": [
+  "Powertrain",
+  "പവർട്രെയിൻ"
+ ],
+ "grp_transmission": [
+  "Transmission",
+  "ട്രാൻസ്മിഷൻ"
+ ],
+ "grp_chassis": [
+  "Chassis",
+  "ഷാസി"
+ ],
+ "grp_electrical": [
+  "Electrical",
+  "ഇലക്ട്രിക്കൽ"
+ ],
+ "grp_safety": [
+  "Safety",
+  "സുരക്ഷ"
+ ],
+ "pWhat": [
+  "What it does",
+  "എന്തു ചെയ്യുന്നു"
+ ],
+ "pHow": [
+  "How it works",
+  "എങ്ങനെ പ്രവർത്തിക്കുന്നു"
+ ],
+ "pWhen": [
+  "When it works",
+  "എപ്പോൾ പ്രവർത്തിക്കുന്നു"
+ ],
+ "pFails": [
+  "When it fails",
+  "തകരാറിലാകുമ്പോൾ"
+ ],
+ "relatedParts": [
+  "Related parts",
+  "ബന്ധപ്പെട്ട ഭാഗങ്ങൾ"
+ ],
+ "relatedLessons": [
+  "Related lessons",
+  "ബന്ധപ്പെട്ട പാഠങ്ങൾ"
+ ],
+ "lightsLede": [
+  "Colour first: red means stop safely now, amber means get it checked soon, green or blue means a system is on. Tap any light for the full seven-point guide.",
+  "ആദ്യം നിറം: ചുവപ്പ് — ഇപ്പോൾ സുരക്ഷിതമായി നിർത്തുക, മഞ്ഞ — ഉടൻ പരിശോധിക്കുക, പച്ച/നീല — ഒരു സംവിധാനം പ്രവർത്തിക്കുന്നു. പൂർണ വിവരത്തിന് ഏതു ലൈറ്റിലും തൊടുക."
+ ],
+ "sev_stop": [
+  "Stop safely now",
+  "ഇപ്പോൾ സുരക്ഷിതമായി നിർത്തുക"
+ ],
+ "sev_soon": [
+  "Get it checked soon",
+  "ഉടൻ പരിശോധിപ്പിക്കുക"
+ ],
+ "sev_info": [
+  "Information",
+  "വിവരം"
+ ],
+ "sevf_all": [
+  "All lights",
+  "എല്ലാ ലൈറ്റുകളും"
+ ],
+ "sevf_stop": [
+  "Stop now",
+  "ഉടൻ നിർത്തുക"
+ ],
+ "sevf_soon": [
+  "Check soon",
+  "ഉടൻ പരിശോധിക്കുക"
+ ],
+ "sevf_info": [
+  "Information",
+  "വിവരം"
+ ],
+ "lMeans": [
+  "What the symbol means",
+  "ചിഹ്നം അർഥമാക്കുന്നത്"
+ ],
+ "lWhy": [
+  "Why it appears",
+  "എന്തുകൊണ്ട് തെളിയുന്നു"
+ ],
+ "lDrive": [
+  "Is it safe to keep driving?",
+  "തുടർന്ന് ഓടിക്കുന്നത് സുരക്ഷിതമാണോ?"
+ ],
+ "lAction": [
+  "What to do",
+  "എന്തു ചെയ്യണം"
+ ],
+ "lIgnored": [
+  "If you ignore it",
+  "അവഗണിച്ചാൽ"
+ ],
+ "lCauses": [
+  "Possible causes",
+  "സാധ്യമായ കാരണങ്ങൾ"
+ ],
+ "lPro": [
+  "When to call a mechanic",
+  "മെക്കാനിക്കിനെ എപ്പോൾ വിളിക്കണം"
+ ],
+ "hazTitle": [
+  "Hazard perception",
+  "അപകടം തിരിച്ചറിയൽ"
+ ],
+ "hazLede": [
+  "Watch the scene. When it pauses, tap the hazard, then choose the safest response. You will see why the other options are dangerous.",
+  "ദൃശ്യം നോക്കൂ. നിൽക്കുമ്പോൾ അപകടം തൊട്ട് കാണിക്കുക, എന്നിട്ട് സുരക്ഷിതമായ പ്രതികരണം തിരഞ്ഞെടുക്കുക. മറ്റു വഴികൾ എന്തുകൊണ്ട് അപകടകരം എന്നും കാണാം."
+ ],
+ "hazScore": [
+  "{n} of {t} scenarios passed",
+  "{t}-ൽ {n} സാഹചര്യങ്ങൾ വിജയിച്ചു"
+ ],
+ "hzNew": [
+  "Not tried",
+  "ശ്രമിച്ചിട്ടില്ല"
+ ],
+ "hzPassed": [
+  "Passed",
+  "വിജയിച്ചു"
+ ],
+ "hzPerfect": [
+  "Perfect — hazard spotted",
+  "മികച്ചത് — അപകടം കണ്ടെത്തി"
+ ],
+ "hzStep1": [
+  "Watch the road",
+  "റോഡ് ശ്രദ്ധിക്കുക"
+ ],
+ "hzStep2": [
+  "Tap the hazard when the scene pauses",
+  "ദൃശ്യം നിൽക്കുമ്പോൾ അപകടം തൊടുക"
+ ],
+ "hzStep3": [
+  "Choose the safest response",
+  "സുരക്ഷിതമായ പ്രതികരണം തിരഞ്ഞെടുക്കുക"
+ ],
+ "hzStart": [
+  "Start scenario",
+  "സാഹചര്യം തുടങ്ങുക"
+ ],
+ "hzWatch": [
+  "Watch carefully…",
+  "ശ്രദ്ധിച്ചു നോക്കൂ…"
+ ],
+ "hzSpot": [
+  "Where is the hazard?",
+  "അപകടം എവിടെ?"
+ ],
+ "hzSpotSub": [
+  "Tap it in the scene, or choose below.",
+  "ദൃശ്യത്തിൽ തൊടുക, അല്ലെങ്കിൽ താഴെ നിന്ന് തിരഞ്ഞെടുക്കുക."
+ ],
+ "hzSpotRight": [
+  "Correct — the {k} is the developing hazard.",
+  "ശരി — {k} ആണ് വികസിക്കുന്ന അപകടം."
+ ],
+ "hzSpotWrong": [
+  "Look again — the {k} is the developing hazard.",
+  "വീണ്ടും നോക്കൂ — {k} ആണ് വികസിക്കുന്ന അപകടം."
+ ],
+ "hzSafest": [
+  "The safest response",
+  "ഏറ്റവും സുരക്ഷിതമായ പ്രതികരണം"
+ ],
+ "hzWhyOthers": [
+  "Why the other choices are dangerous",
+  "മറ്റു തിരഞ്ഞെടുപ്പുകൾ എന്തുകൊണ്ട് അപകടകരം"
+ ],
+ "allScenarios": [
+  "All scenarios",
+  "എല്ലാ സാഹചര്യങ്ങളും"
+ ],
+ "kind_car": [
+  "Car",
+  "കാർ"
+ ],
+ "kind_bike": [
+  "Motorcycle",
+  "മോട്ടോർസൈക്കിൾ"
+ ],
+ "kind_ped": [
+  "Pedestrian",
+  "കാൽനടയാത്രക്കാരൻ"
+ ],
+ "kind_truck": [
+  "Lorry",
+  "ലോറി"
+ ],
+ "kind_bus": [
+  "Bus",
+  "ബസ്"
+ ],
+ "kind_cow": [
+  "Cow",
+  "പശു"
+ ],
+ "kind_dog": [
+  "Dog",
+  "നായ"
+ ],
+ "askTitle": [
+  "Your driving instructor",
+  "നിങ്ങളുടെ ഡ്രൈവിങ് ഇൻസ്ട്രക്ടർ"
+ ],
+ "askLedeAi": [
+  "Ask about any driving concept, rule, sign or warning light. Answers are built from iDrive's own lessons and cite them.",
+  "ഏതു ഡ്രൈവിങ് ആശയം, നിയമം, ചിഹ്നം, മുന്നറിയിപ്പ് ലൈറ്റ് എന്നിവയെക്കുറിച്ചും ചോദിക്കൂ. ഉത്തരങ്ങൾ iDrive-ന്റെ പാഠങ്ങളിൽ നിന്ന്, ഉറവിടങ്ങളോടെ."
+ ],
+ "askLedeSearch": [
+  "Ask a question and we'll find the lessons and references that answer it.",
+  "ഒരു ചോദ്യം ചോദിക്കൂ; ഉത്തരം നൽകുന്ന പാഠങ്ങളും റഫറൻസുകളും ഞങ്ങൾ കണ്ടെത്തും."
+ ],
+ "askSignin": [
+  "to get written answers from the AI instructor.",
+  "AI ഇൻസ്ട്രക്ടറിൽ നിന്ന് എഴുതിയ ഉത്തരങ്ങൾ ലഭിക്കാൻ."
+ ],
+ "askDisabled": [
+  "The AI instructor is not configured on this server, so you'll get sourced search results.",
+  "ഈ സെർവറിൽ AI ഇൻസ്ട്രക്ടർ സജ്ജമാക്കിയിട്ടില്ല; ഉറവിടങ്ങളുള്ള തിരയൽ ഫലങ്ങൾ ലഭിക്കും."
+ ],
+ "askS1": [
+  "What should I do if the oil-pressure light comes on?",
+  "ഓയിൽ പ്രഷർ ലൈറ്റ് തെളിഞ്ഞാൽ എന്തു ചെയ്യണം?"
+ ],
+ "askS2": [
+  "Explain why braking distance quadruples when speed doubles.",
+  "വേഗം ഇരട്ടിയാകുമ്പോൾ ബ്രേക്കിങ് ദൂരം നാലിരട്ടിയാകുന്നത് എന്തുകൊണ്ട്?"
+ ],
+ "askS3": [
+  "How long is a learner's licence valid?",
+  "ലേണേഴ്സ് ലൈസൻസിന് എത്ര കാലാവധിയുണ്ട്?"
+ ],
+ "askS4": [
+  "How do I do a hill start without rolling back?",
+  "പിന്നോട്ട് ഉരുളാതെ കയറ്റത്തിൽ എങ്ങനെ സ്റ്റാർട്ട് ചെയ്യാം?"
+ ],
+ "askS5": [
+  "Quiz me on safety systems.",
+  "സുരക്ഷാ സംവിധാനങ്ങളെക്കുറിച്ച് എന്നോട് ക്വിസ് ചോദിക്കൂ."
+ ],
+ "askPlaceholder": [
+  "Ask about driving…",
+  "ഡ്രൈവിങ്ങിനെക്കുറിച്ച് ചോദിക്കൂ…"
+ ],
+ "send": [
+  "Ask",
+  "ചോദിക്കുക"
+ ],
+ "askSafety": [
+  "The instructor explains theory. It never replaces official rules, your RTO, or professional help in an emergency — call 112.",
+  "ഇൻസ്ട്രക്ടർ തിയറി വിശദീകരിക്കുന്നു. ഔദ്യോഗിക നിയമങ്ങൾക്കോ RTO-യ്ക്കോ അടിയന്തര സഹായത്തിനോ പകരമല്ല — 112 വിളിക്കുക."
+ ],
+ "askFound": [
+  "Here's what iDrive's lessons say about that:",
+  "ഇതിനെക്കുറിച്ച് iDrive പാഠങ്ങൾ പറയുന്നത്:"
+ ],
+ "askNothing": [
+  "I couldn't find that in iDrive's lessons. Try other words, or check Parivahan or your RTO.",
+  "iDrive പാഠങ്ങളിൽ അത് കണ്ടെത്താനായില്ല. മറ്റു വാക്കുകൾ ശ്രമിക്കൂ, അല്ലെങ്കിൽ പരിവാഹൻ/RTO പരിശോധിക്കൂ."
+ ],
+ "sources": [
+  "Sources",
+  "ഉറവിടങ്ങൾ"
+ ],
+ "askAbout": [
+  "Ask the instructor: “{q}”",
+  "ഇൻസ്ട്രക്ടറോട് ചോദിക്കൂ: “{q}”"
+ ],
+ "k_lesson": [
+  "Lesson",
+  "പാഠം"
+ ],
+ "k_article": [
+  "Article",
+  "ലേഖനം"
+ ],
+ "k_sign": [
+  "Sign",
+  "ചിഹ്നം"
+ ],
+ "k_term": [
+  "Term",
+  "പദം"
+ ],
+ "k_light": [
+  "Light",
+  "ലൈറ്റ്"
+ ],
+ "k_part": [
+  "Part",
+  "ഭാഗം"
+ ],
+ "pSigns": [
+  "Road signs",
+  "റോഡ് ചിഹ്നങ്ങൾ"
+ ],
+ "lessonsDone": [
+  "Lessons complete",
+  "പൂർത്തിയായ പാഠങ്ങൾ"
+ ],
+ "minutesLearning": [
+  "Minutes learning",
+  "പഠിച്ച മിനിറ്റുകൾ"
+ ],
+ "examReady": [
+  "Exam readiness",
+  "പരീക്ഷാ തയ്യാറെടുപ്പ്"
+ ],
+ "levelHow": [
+  "Levels rise with completed lessons (70%+ on the check), passed mock exams and hazard scenarios — not time spent.",
+  "പൂർത്തിയാക്കിയ പാഠങ്ങൾ (70%+), വിജയിച്ച മോക്ക് പരീക്ഷകൾ, അപകട സാഹചര്യങ്ങൾ എന്നിവയാൽ നില ഉയരുന്നു — ചെലവിട്ട സമയം കൊണ്ടല്ല."
+ ],
+ "byModule": [
+  "By module",
+  "മൊഡ്യൂൾ തിരിച്ച്"
+ ],
+ "strongest": [
+  "Strongest subjects",
+  "ശക്തമായ വിഷയങ്ങൾ"
+ ],
+ "weakest": [
+  "Needs work",
+  "ശ്രദ്ധ വേണ്ടത്"
+ ],
+ "needData": [
+  "Complete a few knowledge checks to see this.",
+  "ഇത് കാണാൻ ചില അറിവ് പരിശോധനകൾ പൂർത്തിയാക്കൂ."
+ ],
+ "recommended": [
+  "Recommended next",
+  "അടുത്തതായി നിർദേശിക്കുന്നത്"
+ ],
+ "allDone": [
+  "Every lesson complete — try a mock exam.",
+  "എല്ലാ പാഠങ്ങളും പൂർത്തിയായി — ഒരു മോക്ക് പരീക്ഷ ചെയ്യൂ."
+ ],
+ "bookmarks": [
+  "Bookmarks",
+  "ബുക്ക്മാർക്കുകൾ"
+ ],
+ "achievements": [
+  "Milestones",
+  "നാഴികക്കല്ലുകൾ"
+ ],
+ "achFirst": [
+  "First lesson",
+  "ആദ്യ പാഠം"
+ ],
+ "achFirstSub": [
+  "Complete one lesson",
+  "ഒരു പാഠം പൂർത്തിയാക്കുക"
+ ],
+ "achFive": [
+  "Five lessons",
+  "അഞ്ചു പാഠങ്ങൾ"
+ ],
+ "achFiveSub": [
+  "Complete five lessons",
+  "അഞ്ചു പാഠങ്ങൾ പൂർത്തിയാക്കുക"
+ ],
+ "achModule": [
+  "Module complete",
+  "മൊഡ്യൂൾ പൂർത്തിയായി"
+ ],
+ "achModuleSub": [
+  "Finish every lesson in a module",
+  "ഒരു മൊഡ്യൂളിലെ എല്ലാ പാഠങ്ങളും പൂർത്തിയാക്കുക"
+ ],
+ "achHalf": [
+  "Halfway",
+  "പകുതി വഴി"
+ ],
+ "achHalfSub": [
+  "Complete half the curriculum",
+  "പാഠ്യപദ്ധതിയുടെ പകുതി പൂർത്തിയാക്കുക"
+ ],
+ "achStreak3": [
+  "3-day streak",
+  "3 ദിവസം തുടർച്ച"
+ ],
+ "achStreak3Sub": [
+  "Learn three days in a row",
+  "മൂന്നു ദിവസം തുടർച്ചയായി പഠിക്കുക"
+ ],
+ "achStreak7": [
+  "7-day streak",
+  "7 ദിവസം തുടർച്ച"
+ ],
+ "achStreak7Sub": [
+  "Learn seven days in a row",
+  "ഏഴു ദിവസം തുടർച്ചയായി പഠിക്കുക"
+ ],
+ "achMock": [
+  "Mock passed",
+  "മോക്ക് വിജയിച്ചു"
+ ],
+ "achMockSub": [
+  "Pass a full mock exam",
+  "ഒരു മുഴുവൻ മോക്ക് പരീക്ഷ വിജയിക്കുക"
+ ],
+ "achHazard": [
+  "Sharp eyes",
+  "സൂക്ഷ്മ ദൃഷ്ടി"
+ ],
+ "achHazardSub": [
+  "Spot the hazard and choose safely in a scenario",
+  "ഒരു സാഹചര്യത്തിൽ അപകടം കണ്ടെത്തി സുരക്ഷിതമായി തിരഞ്ഞെടുക്കുക"
+ ],
+ "achSigns": [
+  "Sign reader",
+  "ചിഹ്ന വായനക്കാരൻ"
+ ],
+ "achSignsSub": [
+  "Learn 50 road signs",
+  "50 റോഡ് ചിഹ്നങ്ങൾ പഠിക്കുക"
+ ],
+ "achReflex": [
+  "Quick reflexes",
+  "വേഗത്തിലുള്ള പ്രതികരണം"
+ ],
+ "achReflexSub": [
+  "React in under 300 ms in the lab",
+  "ലാബിൽ 300 ms-ൽ താഴെ പ്രതികരിക്കുക"
+ ],
+ "searchPh2": [
+  "Search lessons, signs, lights, parts, rules…",
+  "പാഠങ്ങൾ, ചിഹ്നങ്ങൾ, ലൈറ്റുകൾ, ഭാഗങ്ങൾ, നിയമങ്ങൾ തിരയുക…"
  ]
 }

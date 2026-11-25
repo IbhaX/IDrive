@@ -1,0 +1,106 @@
+{
+  "id": "m04",
+  "n": 4,
+  "title": "Road signs and traffic signals",
+  "summary": "The visual language of the road: sign shapes and colours, markings, signals and hand signals — 255 signs with an identification game.",
+  "accent": "#d4202c",
+  "icon": "sign",
+  "level": "beginner",
+  "chapters": [
+    {
+      "id": "m04c1",
+      "title": "How to read any sign",
+      "items": ["lesson:sign-families", "signs:all"]
+    },
+    {
+      "id": "m04c2",
+      "title": "Sign families",
+      "items": ["signs:mand", "signs:caut", "signs:info"]
+    },
+    {
+      "id": "m04c3",
+      "title": "Markings, signals and hand signals",
+      "items": ["article:marks", "signs:mark", "signs:sig", "signs:hand", "practice:signs"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "sign-families",
+      "title": "Shapes, colours and the three sign families",
+      "level": "beginner",
+      "minutes": 8,
+      "objectives": [
+        "Classify any Indian road sign as mandatory, cautionary or informatory from its shape and colour.",
+        "Know the two signs with unique shapes: Stop and Give way.",
+        "Explain why markings and signals belong to the same system."
+      ],
+      "intro": "India's road signs follow a code of practice from the Indian Roads Congress (IRC:67). The code uses a small set of shapes and colours so you can understand a sign's type from a distance, long before you can read its symbol.",
+      "sections": [
+        {
+          "h": "Mandatory (regulatory) signs — circles",
+          "p": [
+            "Mandatory signs are orders. Breaking one is an offence. A red ring tells you what you must not do: no entry, no overtaking, no U-turn, speed limits, weight limits. A blue circle tells you what you must do: turn left, keep left, compulsory cycle track. Two mandatory signs have their own shapes so they can be recognised even from behind or when covered in dirt: the red octagon STOP and the inverted triangle GIVE WAY."
+          ]
+        },
+        {
+          "h": "Cautionary (warning) signs — triangles",
+          "p": [
+            "A triangle with a red border pointing upwards warns of a hazard ahead: a bend, a school, a narrow bridge, a hump, a railway crossing, falling rocks. A warning sign does not order you to do something specific, but it does tell you to slow down and prepare."
+          ]
+        },
+        {
+          "h": "Informatory signs — rectangles",
+          "p": [
+            "Rectangular signs give information: directions, distances, facilities such as fuel, hospitals and parking. On national highways and expressways, direction signs are often green; on other roads, blue or white. Brown is used for tourist destinations."
+          ]
+        },
+        {
+          "h": "Markings and signals",
+          "p": [
+            "Road markings are signs painted on the road. A solid centre line means do not cross; a broken line means you may cross when safe. A stop line marks where you must stop at a signal or STOP sign. Traffic signals control the order of movement; a flashing amber means proceed with caution, a flashing red means stop and go only when clear."
+          ],
+          "note": { "kind": "tip", "text": "If a sign is hidden by a tree or covered in dust, its shape still tells you whether it is an order, a warning or information." }
+        }
+      ],
+      "terms": [
+        ["Mandatory sign", "A sign that gives an order; disobeying it is an offence."],
+        ["Cautionary sign", "A triangular sign warning of a hazard ahead."],
+        ["Informatory sign", "A rectangular sign giving directions or information."],
+        ["IRC:67", "The Indian Roads Congress code of practice for road signs."]
+      ],
+      "examples": [
+        "A red ring with a number 40 is a mandatory speed limit. A triangle showing a children symbol warns of a school; slow down even if no speed limit is posted."
+      ],
+      "mistakes": [
+        "Treating warning triangles as optional because they do not show a rule.",
+        "Mixing up GIVE WAY (slow, be ready to stop) with STOP (always stop fully)."
+      ],
+      "safety": [
+        "Slow down at every warning triangle until you can see the hazard it refers to."
+      ],
+      "check": [
+        {
+          "q": "A circular sign with a red border is:",
+          "o": ["A warning", "A prohibition — an order not to do something", "Information", "A tourist sign"],
+          "a": 1,
+          "r": "Red-ringed circles are mandatory prohibitions. Blue circles are mandatory positive instructions."
+        },
+        {
+          "q": "Why do STOP and GIVE WAY have unique shapes?",
+          "o": ["To look modern", "So they can be recognised even from behind or when the face is unreadable", "Because they are older signs", "To save metal"],
+          "a": 1,
+          "r": "The octagon and inverted triangle are unmistakable from any angle, which matters at junctions."
+        },
+        {
+          "q": "A triangular sign with a red border warns you of:",
+          "o": ["A rule you must obey", "A hazard ahead", "A fuel station", "A city boundary"],
+          "a": 1,
+          "r": "Upward-pointing red-bordered triangles are cautionary signs."
+        }
+      ],
+      "related": ["signs:all", "article:marks", "lesson:road-system"],
+      "refs": ["irc67"],
+      "verified": "2026-11-25"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "id": "m07",
+  "n": 7,
+  "title": "Road situations and defensive driving",
+  "summary": "How experienced drivers see trouble coming: hazard perception, gaps, blind spots, night, rain, fog, ghats and highways — with interactive scenarios.",
+  "accent": "#e879f9",
+  "icon": "eye",
+  "level": "intermediate",
+  "chapters": [
+    {
+      "id": "m07c1",
+      "title": "Seeing and predicting",
+      "items": ["lesson:hazard-perception-basics", "scenario:ped-crossing", "scenario:bike-blindspot", "scenario:side-road", "article:defensive"]
+    },
+    {
+      "id": "m07c2",
+      "title": "Space and time",
+      "items": ["lesson:following-distance", "lab:stopping", "scenario:sudden-brake", "scenario:lane-cut"]
+    },
+    {
+      "id": "m07c3",
+      "title": "Conditions",
+      "items": ["lesson:adverse-conditions", "scenario:animal", "article:night", "article:ghat"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "hazard-perception-basics",
+      "title": "Hazard perception and situational awareness",
+      "level": "intermediate",
+      "minutes": 10,
+      "scenario": "ped-crossing",
+      "objectives": [
+        "Scan the road in a systematic pattern.",
+        "Spot clues that a hazard is about to develop.",
+        "Respond early with speed and position rather than late with brakes."
+      ],
+      "intro": "A hazard you see five seconds early is an easy problem. The same hazard seen one second late is a crash. Hazard perception is the skill of seeing those early clues.",
+      "sections": [
+        {
+          "h": "Scanning",
+          "p": ["Look far ahead — 12 to 15 seconds of travel — to plan. Bring your eyes back to the middle distance, then the near road, then the mirrors, every few seconds. At junctions and crossings look left and right. Avoid fixing your gaze on any one thing for long."]
+        },
+        {
+          "h": "Clues",
+          "p": ["Static hazards stay put: bends, junctions, parked vehicles, road works. Developing hazards change: a pedestrian looking to cross, a car's wheels turning out of a side road, brake lights two vehicles ahead, a ball in the road, a bus with its indicator on. The best drivers notice the clue before the hazard fully develops.", "Ask 'what if?' What if that child steps out? What if that auto stops suddenly? What if the car at the junction does not see me?"]
+        },
+        {
+          "h": "Responding early",
+          "p": ["An early response is usually small: ease off the accelerator, cover the brake, move slightly away from the hazard, sound a short horn if it will help. A late response is large: hard braking or swerving — which create new dangers."],
+          "note": { "kind": "model", "text": "Try the hazard-perception scenarios. They pause at the moment a hazard develops and ask you for the safest response." }
+        }
+      ],
+      "terms": [["Static hazard", "A fixed feature that needs care, such as a bend or junction."], ["Developing hazard", "A hazard that changes and needs you to react, such as a pedestrian stepping out."], ["Covering the brake", "Resting your foot over the brake pedal, ready to press, without braking."]],
+      "examples": ["Parked cars on a residential street with a gap between two of them: a child could step out of the gap. Ease off and move a little away from the parked cars if it is safe."],
+      "mistakes": ["Watching only the car in front.", "Reacting to brake lights only when they are directly ahead of you."],
+      "safety": ["Treat every pedestrian near the road as someone who might step out."],
+      "check": [
+        { "q": "Which is a developing hazard?", "o": ["A sharp bend", "A pedestrian at the kerb looking at the road", "A speed-limit sign", "A roundabout"], "a": 1, "r": "The pedestrian may move into your path, so the situation can change and you may need to react." },
+        { "q": "How far ahead should your planning look extend?", "o": ["One car length", "About 12–15 seconds of travel", "Only to the next signal", "As far as the bonnet"], "a": 1, "r": "Looking far ahead gives you time to respond early and gently." }
+      ],
+      "related": ["scenario:ped-crossing", "lesson:following-distance", "lesson:attention-fatigue"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "following-distance",
+      "title": "Following distance, blind spots and mirrors",
+      "level": "intermediate",
+      "minutes": 9,
+      "lab": "stopping",
+      "objectives": [
+        "Use the time-gap method to keep a safe following distance.",
+        "Explain why the gap must grow in rain and at speed.",
+        "Locate the blind spots of your own vehicle and of large vehicles."
+      ],
+      "intro": "The space in front of you is the only thing that buys you time when the vehicle ahead stops suddenly. Measured in seconds, it automatically grows as your speed grows.",
+      "sections": [
+        {
+          "h": "The time-gap method",
+          "p": ["When the vehicle ahead passes a fixed point — a pole, a tree, a shadow — start counting 'one thousand and one, one thousand and two, one thousand and three'. If you reach the point before you finish, you are too close. Three seconds is a sensible minimum on a dry road; double it in rain, and leave more for heavy vehicles, motorcycles and poor visibility."]
+        },
+        {
+          "h": "Why time works better than distance",
+          "p": ["At higher speed you cover more metres every second, so a fixed distance shrinks as a safety margin. A time gap scales with speed. Braking distance grows with the square of speed, so at high speed even a three-second gap is only just enough."]
+        },
+        {
+          "h": "Mirrors and blind spots",
+          "p": ["Check your mirrors every 5–8 seconds and always before slowing, signalling or changing direction. Mirrors leave blind spots beside and behind the car's pillars. Before changing lane or pulling out, glance over your shoulder. Remember that buses and lorries have large blind spots along their sides and directly in front and behind: if you cannot see the driver's mirrors, the driver cannot see you."]
+        }
+      ],
+      "terms": [["Time gap", "The time between the vehicle ahead passing a point and you passing it."], ["A-pillar", "The windscreen pillar, which can hide pedestrians and two-wheelers at junctions."]],
+      "examples": ["At 90 km/h you travel 25 m every second. A one-second gap is 25 m — far shorter than the distance you need to react and stop."],
+      "mistakes": ["Tailgating to stop others cutting in.", "Leaving a big gap in the dry but not increasing it in rain."],
+      "safety": ["If someone tailgates you, increase the gap in front so that you can brake more gently."],
+      "check": [
+        { "q": "What is a sensible minimum following gap on a dry road?", "o": ["One second", "Three seconds", "One car length", "Ten metres"], "a": 1, "r": "Three seconds gives time to perceive, react and brake; increase it in poor conditions." },
+        { "q": "You cannot see a lorry driver's mirrors. What does that mean?", "o": ["You are safely hidden", "The driver probably cannot see you", "The lorry is parked", "Nothing"], "a": 1, "r": "If you cannot see their mirrors, you are in their blind spot." }
+      ],
+      "related": ["lab:stopping", "lesson:stopping-distance-physics", "scenario:sudden-brake"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "adverse-conditions",
+      "title": "Night, rain, fog, hydroplaning and ghat roads",
+      "level": "intermediate",
+      "minutes": 12,
+      "objectives": [
+        "Adjust lights, speed and gap for night and poor visibility.",
+        "Recognise and handle hydroplaning.",
+        "Drive safely on ghat roads and in heavy monsoon rain."
+      ],
+      "intro": "Conditions change what is safe. A speed that is fine on a dry sunny afternoon can be lethal at night in the rain. The rule is simple: you must always be able to stop within the distance you can see to be clear.",
+      "sections": [
+        {
+          "h": "At night",
+          "p": ["Use low beam in towns and whenever there is oncoming traffic or a vehicle ahead. Use high beam only on empty unlit roads and dip early. If dazzled, slow down and look towards the left edge of the road. Pedestrians, cyclists and animals are much harder to see; slow down near villages and in unlit stretches."]
+        },
+        {
+          "h": "Rain and hydroplaning",
+          "p": ["The first rain after a dry spell is the most slippery: oil and dust on the road form a greasy film. Double your following gap. Hydroplaning (aquaplaning) happens when a layer of water builds up between tyre and road and the tyre loses contact. The steering suddenly feels light and engine revs may rise.", "If you hydroplane: do not brake hard or steer sharply. Ease off the accelerator, hold the steering straight, and let the car slow until the tyres regain grip. Worn tyres and high speed make hydroplaning much more likely."]
+        },
+        {
+          "h": "Fog and mist",
+          "p": ["Use low beam and fog lamps if fitted; high beam reflects off the fog and blinds you. Slow down so you can stop within the distance you can see. Do not follow tail-lights closely — if that vehicle stops, you will hit it. Do not use hazard lights while moving."]
+        },
+        {
+          "h": "Ghat roads",
+          "p": ["Select a low gear before descending and let engine braking control your speed; use the brakes in firm bursts rather than continuously, or they will overheat and fade. Uphill traffic generally has priority on narrow stretches. Sound a short horn before blind hairpins and keep left. Watch for fallen rocks, mud and water flowing across the road during the monsoon."]
+        }
+      ],
+      "terms": [["Hydroplaning / aquaplaning", "Loss of tyre contact with the road due to a layer of water."], ["Brake fade", "Loss of braking power when brakes overheat."], ["Dazzle", "Temporary blinding by bright lights."]],
+      "examples": ["In heavy rain on a highway the steering suddenly goes light. You lift off the accelerator gently, keep the wheel straight, and feel the tyres bite again a moment later."],
+      "mistakes": ["Driving through deep water at speed.", "Using hazard lights in rain while moving.", "Riding the brakes all the way down a ghat."],
+      "safety": ["Do not drive into flowing or deep floodwater. A small car can be carried away by water only about 30 cm deep."],
+      "check": [
+        { "q": "If your car starts hydroplaning, you should:", "o": ["Brake hard", "Steer sharply to the edge", "Ease off the accelerator and keep the wheel straight", "Accelerate through it"], "a": 2, "r": "Sudden inputs make a skid worse; easing off lets the tyres regain contact." },
+        { "q": "Why choose a low gear before going down a long ghat?", "o": ["To save fuel", "So engine braking limits speed and the brakes do not overheat", "To keep the AC working", "It is quieter"], "a": 1, "r": "Continuous braking on long descents causes brake fade; engine braking shares the work." },
+        { "q": "In fog you should use:", "o": ["High beam", "Low beam and fog lamps if fitted", "Hazard lights while moving", "No lights"], "a": 1, "r": "High beam reflects off the fog. Low beam and fog lamps light the road without dazzling you." }
+      ],
+      "related": ["article:night", "article:ghat", "lesson:grip-weight-transfer", "lab:stopping"],
+      "refs": [],
+      "verified": "2026-11-25"
+    }
+  ]
+}

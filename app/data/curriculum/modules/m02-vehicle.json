@@ -1,0 +1,504 @@
+{
+  "id": "m02",
+  "n": 2,
+  "title": "Understanding the vehicle",
+  "summary": "How engines, gearboxes, drivetrains, controls and safety systems work — and what it feels like when they fail.",
+  "accent": "#7c6cff",
+  "icon": "engine",
+  "level": "foundation",
+  "chapters": [
+    {
+      "id": "m02c1",
+      "title": "Engine and powertrain",
+      "items": ["lesson:engine-basics", "lab:engine", "lesson:electric-hybrid"]
+    },
+    {
+      "id": "m02c2",
+      "title": "Transmission and drivetrain",
+      "items": ["lesson:transmissions", "lesson:drivetrain-layouts"]
+    },
+    {
+      "id": "m02c3",
+      "title": "Controls and safety systems",
+      "items": ["lesson:vehicle-controls", "lesson:safety-systems", "library:vehicle", "signs:ctrl", "article:vehicle"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "engine-basics",
+      "title": "How a combustion engine works",
+      "level": "foundation",
+      "minutes": 12,
+      "lab": "engine",
+      "objectives": [
+        "Describe the four strokes of a four-stroke engine.",
+        "Name the main engine parts and what each does.",
+        "Explain the difference between petrol and diesel ignition.",
+        "Understand why cooling and lubrication failures are emergencies."
+      ],
+      "intro": "A petrol or diesel engine turns the chemical energy in fuel into rotation. It does this by burning small amounts of fuel and air inside sealed cylinders, thousands of times a minute. Understanding the cycle helps you make sense of warning lights, strange noises and why you must never ignore an overheating gauge.",
+      "sections": [
+        {
+          "h": "The four-stroke cycle",
+          "p": [
+            "Each cylinder holds a piston that slides up and down. The piston is linked by a connecting rod to the crankshaft, which turns the up-and-down motion into rotation — like your legs pushing bicycle pedals.",
+            "The cycle takes two full turns of the crankshaft and four movements (strokes) of the piston. Only one of the four strokes produces power; the heavy flywheel and the other cylinders keep the engine turning through the rest."
+          ],
+          "steps": [
+            "Intake: the piston moves down, the intake valve opens, and air (with fuel, in most petrol engines) is drawn in.",
+            "Compression: both valves close and the piston moves up, squeezing the mixture into a small space.",
+            "Power: the mixture burns — lit by a spark plug in petrol engines, or by the heat of compression in diesels — and the expanding gas forces the piston down.",
+            "Exhaust: the exhaust valve opens and the piston moves up, pushing the burnt gases out to the exhaust system."
+          ],
+          "note": { "kind": "model", "text": "Open the engine lab to watch the cycle step by step. The animation is a simplified educational model." }
+        },
+        {
+          "h": "The main parts",
+          "p": [
+            "Cylinder block: the main casting that holds the cylinders. Cylinder head: sits on top and carries the valves, and in petrol engines the spark plugs. Camshaft: a shaft with egg-shaped lobes that opens each valve at the right moment; it is driven by a timing belt or chain from the crankshaft. Fuel injectors: spray precisely measured fuel, controlled by the engine computer (ECU).",
+            "If a timing belt breaks, the valves stop moving in step with the pistons. In many engines this causes the pistons to hit open valves, wrecking the engine. That is why the belt has a replacement interval in the service schedule."
+          ]
+        },
+        {
+          "h": "Petrol versus diesel",
+          "p": [
+            "A petrol engine compresses the mixture moderately and ignites it with a spark. A diesel compresses air much more strongly — enough to make it very hot — then injects fuel, which ignites by itself. This is why diesels need glow plugs to help cold starts, are more efficient, produce more pulling force (torque) at low speed, and need a particulate filter (DPF) to trap soot."
+          ]
+        },
+        {
+          "h": "Cooling and lubrication",
+          "p": [
+            "Burning fuel creates far more heat than useful work. Coolant (water mixed with antifreeze and corrosion inhibitors) circulates through passages in the engine, picks up heat, and gives it off in the radiator at the front of the car, helped by a fan. A thermostat keeps the engine at its best temperature.",
+            "Oil is pumped through the engine to keep metal surfaces from touching. If oil pressure drops, parts begin grinding against each other within seconds. If coolant is lost, the engine overheats, the head can warp and the gasket can fail. Both warnings mean: stop safely and switch off."
+          ],
+          "note": { "kind": "safety", "text": "Never open a hot radiator or coolant cap. The system is pressurised and can spray scalding coolant." }
+        },
+        {
+          "h": "Exhaust and emissions",
+          "p": [
+            "The exhaust manifold collects gases from each cylinder. A catalytic converter turns the most harmful gases into less harmful ones. Diesels add a particulate filter. The silencer reduces noise. A leaking exhaust can let carbon monoxide into the cabin — a colourless, odourless and deadly gas."
+          ]
+        }
+      ],
+      "terms": [
+        ["Piston", "A plug that slides inside a cylinder and is pushed down by burning gas."],
+        ["Crankshaft", "Turns the pistons' up-and-down motion into rotation."],
+        ["Camshaft", "Opens and closes the valves in time with the pistons."],
+        ["Compression ratio", "How much the mixture is squeezed before it burns; higher in diesels."],
+        ["ECU", "Engine control unit — the computer that controls fuel, ignition and many sensors."],
+        ["Torque", "Twisting force at the crankshaft — what you feel as pulling power."]
+      ],
+      "examples": [
+        "A diesel car that starts reluctantly on a cold morning, with the glow-plug light staying on for a long time, may have a failing glow plug.",
+        "A rhythmic knocking that rises with engine speed and gets worse when the oil light flickers is a sign of low oil pressure — stop and switch off."
+      ],
+      "mistakes": [
+        "Topping up coolant with plain water for months, losing corrosion protection.",
+        "Ignoring the timing-belt interval to save money.",
+        "Revving a cold engine hard before oil has reached every part."
+      ],
+      "safety": [
+        "Stop as soon as it is safe if the oil-pressure or temperature warning comes on. Driving on can destroy the engine within minutes.",
+        "Never run an engine in a closed garage."
+      ],
+      "deep": "Real engines use variable valve timing, turbochargers and direct injection to squeeze out more power with less fuel. A turbo uses exhaust gas to spin a compressor that pushes more air into the cylinders. More air allows more fuel, so more power from a smaller engine. Turbo engines dislike being switched off immediately after hard driving; a short idle lets the turbo cool.",
+      "check": [
+        {
+          "q": "On which stroke does the engine produce power?",
+          "o": ["Intake", "Compression", "Power (combustion)", "Exhaust"],
+          "a": 2,
+          "r": "Only the power stroke pushes the piston down with expanding gas. The other three strokes are kept going by momentum and the other cylinders."
+        },
+        {
+          "q": "How is fuel ignited in a diesel engine?",
+          "o": ["A spark plug", "Heat from strongly compressed air", "The glow plug, all the time", "The exhaust"],
+          "a": 1,
+          "r": "Diesels compress air until it is hot enough to ignite the injected fuel. Glow plugs only help when starting cold."
+        },
+        {
+          "q": "The oil-pressure warning lights up while you drive. What should you do?",
+          "o": ["Drive to the next service centre", "Stop safely and switch the engine off", "Rev the engine to raise pressure", "Ignore it if the engine sounds normal"],
+          "a": 1,
+          "r": "Without oil pressure, metal parts grind against each other. Continuing to drive can wreck the engine in minutes."
+        }
+      ],
+      "related": ["lesson:transmissions", "lesson:warning-light-system", "library:vehicle", "lab:engine"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "transmissions",
+      "title": "Gearboxes: manual, AMT, CVT, DCT and automatic",
+      "level": "foundation",
+      "minutes": 11,
+      "objectives": [
+        "Explain why vehicles need gears.",
+        "Describe how a clutch works and what the biting point is.",
+        "Compare manual, AMT, CVT, DCT and torque-converter automatics."
+      ],
+      "intro": "An engine only works well within a narrow band of speeds, but the wheels need to turn anywhere from a crawl to highway speed. The gearbox bridges that gap, trading speed for pulling force and back again.",
+      "sections": [
+        {
+          "h": "Why gears exist",
+          "p": [
+            "A low gear makes the wheels turn slowly for each engine revolution, multiplying torque so you can pull away or climb. A high gear makes the wheels turn faster for each revolution, so the engine can cruise calmly at speed. The ratio between engine speed and wheel speed is the gear ratio."
+          ]
+        },
+        {
+          "h": "The clutch",
+          "p": [
+            "In a manual car, the clutch connects and disconnects the engine from the gearbox. Pressing the pedal separates a friction plate from the spinning flywheel. Releasing it lets them grip again. The biting point is where they first begin to grip and the car starts to creep.",
+            "Holding the clutch at the biting point for long, or resting your foot on the pedal, wears the friction plate. A worn clutch slips: engine revs rise but the car does not speed up properly, especially in high gears or uphill."
+          ]
+        },
+        {
+          "h": "The automatic family",
+          "p": [
+            "AMT (automated manual): a normal manual gearbox and clutch operated by actuators. Cheap and efficient, but shifts can feel like a pause or nod. CVT (continuously variable): uses a belt between two cone-shaped pulleys to give endless ratios, so it never really shifts. Smooth and efficient; engine noise can drone under hard acceleration. DCT (dual-clutch): two clutches, one for odd and one for even gears, pre-selecting the next gear for very quick shifts. Can dislike long crawling in hot traffic. Torque-converter automatic: a fluid coupling and planetary gear sets. Smooth and durable, traditionally slightly less efficient."
+          ],
+          "note": { "kind": "tip", "text": "In any automatic, use P only when stopped, and apply the parking brake on slopes so the gearbox's parking pawl is not holding the full weight." }
+        },
+        {
+          "h": "Using an automatic well",
+          "p": [
+            "Keep your left foot off the pedals; use the right foot for both accelerator and brake. Most automatics creep forward in D when you lift off the brake — use that for gentle manoeuvres. On long descents, select a lower gear (L, 2, or manual mode) so engine braking helps and the brakes do not overheat."
+          ]
+        }
+      ],
+      "terms": [
+        ["Gear ratio", "How many times the engine turns for each turn of the output shaft."],
+        ["Biting point", "The clutch position where engine and gearbox first start to connect."],
+        ["Clutch slip", "When the clutch cannot transmit the engine's torque and revs rise without matching speed."],
+        ["Engine braking", "Slowing effect from the engine when you lift off the accelerator in gear."]
+      ],
+      "examples": [
+        "Climbing a ghat road in an AMT car, the gearbox may shift up too early. Using manual mode to hold a lower gear keeps pulling power and engine braking."
+      ],
+      "mistakes": [
+        "Coasting downhill in neutral — you lose engine braking and control.",
+        "Resting your foot on the clutch pedal while driving.",
+        "Shifting an automatic into R or P while still rolling."
+      ],
+      "safety": [
+        "On long or steep descents, choose a low gear before you start down, not halfway.",
+        "Never leave an automatic in D with your foot off the brake when you step out."
+      ],
+      "check": [
+        {
+          "q": "Why does a car need a low gear to pull away?",
+          "o": ["To save fuel", "To multiply torque at the wheels", "To make the engine quieter", "To charge the battery"],
+          "a": 1,
+          "r": "A low ratio trades wheel speed for pulling force, letting the engine move a heavy vehicle from rest."
+        },
+        {
+          "q": "Which gearbox uses two clutches to pre-select the next gear?",
+          "o": ["AMT", "CVT", "DCT", "Torque converter"],
+          "a": 2,
+          "r": "A dual-clutch transmission keeps odd and even gears on separate clutches so it can shift almost instantly."
+        },
+        {
+          "q": "Engine revs rise but the car barely speeds up, especially uphill. What is the likely cause?",
+          "o": ["Low tyre pressure", "A slipping clutch", "A blown fuse", "Weak headlights"],
+          "a": 1,
+          "r": "A worn clutch cannot transmit full torque, so revs climb without matching road speed."
+        }
+      ],
+      "related": ["lesson:drivetrain-layouts", "lesson:clutch-hill-start", "lesson:torque-power-gearing"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "drivetrain-layouts",
+      "title": "Differential and drive layouts: FWD, RWD, AWD and 4WD",
+      "level": "foundation",
+      "minutes": 8,
+      "objectives": [
+        "Explain what a differential does in a turn.",
+        "Compare front-, rear-, all- and four-wheel drive.",
+        "Recognise the limits of AWD and 4WD on slippery roads."
+      ],
+      "intro": "After the gearbox, power has to reach the wheels. How it gets there changes how a vehicle behaves in corners, on wet roads and off the tarmac.",
+      "sections": [
+        {
+          "h": "The differential",
+          "p": [
+            "In a turn, the outer wheel travels further than the inner wheel, so it must spin faster. A differential splits the engine's torque between the two wheels on an axle while letting them turn at different speeds. Without it, one tyre would scrub and the car would fight every corner.",
+            "An open differential sends power to the wheel that turns most easily. If one wheel is on mud, it spins and the other gets almost nothing. Limited-slip and locking differentials reduce this."
+          ]
+        },
+        {
+          "h": "The four layouts",
+          "p": [
+            "Front-wheel drive (most small cars): engine and gearbox sit over the front wheels, which both steer and drive. Compact and efficient; when pushed too hard in a bend it tends to run wide (understeer). Rear-wheel drive: the front wheels steer, the rears push. Better balance; on slippery roads too much throttle can make the rear slide (oversteer). All-wheel drive: power goes to all four wheels automatically, improving traction. Four-wheel drive: a selectable system with a transfer case and often a low-range gear for off-road crawling."
+          ]
+        },
+        {
+          "h": "What AWD cannot do",
+          "p": [
+            "Driving all four wheels helps you accelerate on a slippery surface. It does nothing to help you stop or to grip more in a bend once you are braking. Every vehicle stops with four tyres and the friction they have. Many SUV drivers learn this the hard way in the monsoon."
+          ],
+          "note": { "kind": "safety", "text": "4WD helps you get going; it does not help you stop. Drive to the grip of the road, not the badge on the tailgate." }
+        }
+      ],
+      "terms": [
+        ["Differential", "Gear set that lets the wheels on one axle turn at different speeds."],
+        ["Transfer case", "Gearbox in a 4WD that splits power between front and rear axles."],
+        ["Understeer", "The front tyres lose grip and the car runs wide of the turn."],
+        ["Oversteer", "The rear tyres lose grip and the back of the car swings out."]
+      ],
+      "examples": [
+        "A FWD car entering a wet bend too fast pushes straight on. Easing off the accelerator — not steering harder — helps the front tyres regain grip."
+      ],
+      "mistakes": [
+        "Driving faster in rain because the vehicle is 4WD.",
+        "Using 4WD high-range on dry tarmac in a part-time system, which strains the drivetrain."
+      ],
+      "safety": [
+        "On slippery roads every vehicle needs lower speeds and bigger gaps, whatever its drive layout."
+      ],
+      "check": [
+        {
+          "q": "What does a differential allow?",
+          "o": ["The engine to idle", "Wheels on one axle to turn at different speeds", "The gearbox to shift", "The brakes to cool"],
+          "a": 1,
+          "r": "In a turn the outer wheel must turn faster than the inner. The differential allows this while still delivering torque."
+        },
+        {
+          "q": "Does all-wheel drive shorten your braking distance on a wet road?",
+          "o": ["Yes, a lot", "Yes, a little", "No — braking depends on tyre grip, not drive layout", "Only above 80 km/h"],
+          "a": 2,
+          "r": "All vehicles brake with all four wheels. Driving all four wheels helps acceleration, not stopping."
+        }
+      ],
+      "related": ["lesson:grip-weight-transfer", "lesson:transmissions"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "electric-hybrid",
+      "title": "Electric and hybrid vehicles",
+      "level": "foundation",
+      "minutes": 8,
+      "objectives": [
+        "Explain how an electric vehicle's motor, battery and inverter work together.",
+        "Describe regenerative braking.",
+        "Compare mild, full and plug-in hybrids."
+      ],
+      "intro": "Electric vehicles replace the engine, gearbox and fuel tank with a battery, an inverter and one or more electric motors. They drive differently, need different care, and bring new safety points.",
+      "sections": [
+        {
+          "h": "How an EV works",
+          "p": [
+            "The high-voltage battery stores energy as direct current. The inverter converts it into alternating current to drive the motor, and controls how much power the motor gets based on your accelerator. Most EVs use a single fixed gear because electric motors give strong torque from zero speed. A separate 12-volt battery runs lights, locks and computers."
+          ]
+        },
+        {
+          "h": "Regenerative braking",
+          "p": [
+            "When you lift off the accelerator or press the brake gently, the motor works as a generator, slowing the car and sending energy back to the battery. Some EVs allow one-pedal driving: lifting off slows the car almost to a stop. The friction brakes still do the hard stopping, so they still need checks — and they can corrode if they are rarely used."
+          ]
+        },
+        {
+          "h": "Hybrids",
+          "p": [
+            "A mild hybrid uses a small motor to assist the engine and restart it smoothly; it cannot drive on electricity alone for long. A full hybrid can move short distances on electric power and switches between engine and motor automatically. A plug-in hybrid has a larger battery you charge from the mains, giving a useful electric range before the engine takes over."
+          ]
+        },
+        {
+          "h": "EV safety points",
+          "p": [
+            "EVs are nearly silent at low speed, so pedestrians may not hear you; many have an acoustic warning, but you must still watch for people stepping out. Quick acceleration can surprise new drivers. High-voltage cables are orange — never touch damaged ones. After a crash, a battery can overheat hours later; tell responders the vehicle is electric."
+          ],
+          "note": { "kind": "safety", "text": "Do not drive through deep water in any vehicle. Follow the owner's manual for an EV's wading limit and charging precautions." }
+        }
+      ],
+      "terms": [
+        ["Inverter", "Converts the battery's direct current into alternating current for the motor."],
+        ["Regenerative braking", "Using the motor as a generator to slow the car and recharge the battery."],
+        ["State of charge", "How full the battery is, shown as a percentage."]
+      ],
+      "examples": [
+        "Driving down a long ghat in an EV, strong regeneration holds your speed and adds range — but plan for a full battery not accepting much regeneration."
+      ],
+      "mistakes": [
+        "Assuming pedestrians can hear you coming.",
+        "Pressing hard on the accelerator from a stop in a crowded area."
+      ],
+      "safety": [
+        "Treat orange cables and a damaged battery pack as dangerous. Keep clear and call for help."
+      ],
+      "check": [
+        {
+          "q": "What does regenerative braking do?",
+          "o": ["Cools the brakes with air", "Uses the motor as a generator to slow the car and recharge the battery", "Locks the wheels", "Charges the 12 V battery only"],
+          "a": 1,
+          "r": "The motor works in reverse as a generator, turning motion back into stored electrical energy."
+        },
+        {
+          "q": "Why must EV drivers take extra care around pedestrians at low speed?",
+          "o": ["EVs are heavier", "EVs are very quiet", "EVs cannot brake hard", "EVs have no horn"],
+          "a": 1,
+          "r": "Without engine noise, people may not hear the vehicle coming."
+        }
+      ],
+      "related": ["lesson:engine-basics", "lesson:safety-systems"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "vehicle-controls",
+      "title": "Vehicle controls and the instrument cluster",
+      "level": "beginner",
+      "minutes": 9,
+      "objectives": [
+        "Identify every primary and secondary control in a car.",
+        "Use pedals, handbrake, indicators, lights, wipers and horn correctly.",
+        "Read the instrument cluster at a glance."
+      ],
+      "intro": "Before you move off, you should be able to find and use every control without looking down. Your eyes belong on the road; your hands and feet should know where everything is.",
+      "sections": [
+        {
+          "h": "Primary controls",
+          "p": [
+            "Steering wheel: hold it at 'quarter to three' or 'ten to two' with both hands, thumbs resting on the rim, not hooked inside. Accelerator (right pedal): controls engine power. Brake (middle pedal in a manual, left of the accelerator in an automatic): slows the car; use the right foot. Clutch (left pedal, manual only): use the left foot. Gear lever: selects gears. Parking brake: holds the car when parked — a hand lever, a button (electronic parking brake), or a foot pedal in some vehicles."
+          ]
+        },
+        {
+          "h": "Secondary controls",
+          "p": [
+            "Indicators: on the stalk beside the steering wheel; signal in good time and cancel after use. Headlights: off, parking lamps, low beam, high beam; flash with the stalk. Hazard lights: the red triangle button, for when your vehicle is stopped and a danger to others — not for parking illegally. Wipers and washers: usually on the opposite stalk. Horn: to warn others of your presence, not to express frustration. Demisters and AC: to keep glass clear in the rain."
+          ],
+          "note": { "kind": "tip", "text": "Before your first drive in any car, sit for two minutes and find each control by touch. Do it again in the dark." }
+        },
+        {
+          "h": "Instrument cluster",
+          "p": [
+            "Speedometer: road speed. Tachometer: engine speed in thousands of rpm. Fuel gauge and temperature gauge. Odometer and trip meter. Warning lights: red means stop safely, amber means get it checked soon, green or blue means a system is on. The next module covers each light in detail."
+          ]
+        }
+      ],
+      "terms": [
+        ["Tachometer", "Shows engine speed in revolutions per minute (rpm)."],
+        ["Electronic parking brake", "A parking brake applied by a switch and electric motors instead of a lever."]
+      ],
+      "examples": [
+        "In heavy rain at night, the AC with fresh air and the front demister clears fogged glass far faster than wiping it with a cloth."
+      ],
+      "mistakes": [
+        "Using hazard lights while driving in rain or fog — it hides your indicators.",
+        "Leaving the indicator on after a turn, misleading others.",
+        "Using high beam towards oncoming traffic."
+      ],
+      "safety": [
+        "Adjust seat, head restraint and mirrors before you start the engine, never while moving."
+      ],
+      "check": [
+        {
+          "q": "When should you use hazard warning lights?",
+          "o": ["When driving in heavy rain", "When your vehicle is stopped and is a danger to others", "When parking briefly in a no-parking zone", "When going straight at a junction"],
+          "a": 1,
+          "r": "Hazards warn others that your stationary vehicle is an obstruction. Using them while moving hides your indicators."
+        },
+        {
+          "q": "A red warning light on the cluster usually means:",
+          "o": ["A system is switched on", "Service due in the next month", "A serious problem — stop safely as soon as you can", "Nothing important"],
+          "a": 2,
+          "r": "Red warnings indicate safety-critical faults or conditions. Amber means get it checked; green/blue means a system is active."
+        }
+      ],
+      "related": ["lesson:warning-light-system", "signs:ctrl", "signs:dash"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "safety-systems",
+      "title": "Safety systems: ABS, EBD, ESC, airbags and ADAS",
+      "level": "foundation",
+      "minutes": 11,
+      "objectives": [
+        "Explain how ABS keeps you able to steer while braking hard.",
+        "Describe EBD, traction control, ESC and hill-hold assist.",
+        "Use seat belts and airbags correctly together.",
+        "Understand what ADAS features do — and their limits."
+      ],
+      "intro": "Modern vehicles carry electronic systems that help in an emergency. They are remarkable, but they work within the laws of physics. Knowing what each one does helps you use it properly and not lean on it too much.",
+      "sections": [
+        {
+          "h": "ABS — anti-lock braking",
+          "p": [
+            "If you brake so hard that a wheel stops turning, the tyre skids. A skidding tyre has less grip and cannot steer the car. ABS watches each wheel's speed. When it sees a wheel about to lock, it briefly releases and reapplies the brake on that wheel many times a second.",
+            "In an emergency with ABS: press the brake firmly and keep pressing, even when you feel the pedal pulse and hear grinding. Steer around the hazard. Do not pump the pedal — the system is doing that for you."
+          ],
+          "note": { "kind": "safety", "text": "ABS keeps you able to steer. It does not always shorten stopping distance, especially on gravel or loose surfaces." }
+        },
+        {
+          "h": "EBD, traction control and ESC",
+          "p": [
+            "EBD (electronic brakeforce distribution) shares braking force between front and rear wheels depending on load, so a loaded car brakes evenly. Traction control cuts engine power or brakes a spinning wheel when you accelerate on a slippery surface. ESC (electronic stability control, also called ESP) compares where you are steering with where the car is going. If the car begins to skid, ESC brakes individual wheels to bring it back in line."
+          ]
+        },
+        {
+          "h": "Hill-hold assist",
+          "p": [
+            "On a slope, hill-hold keeps the brakes applied for a second or two after you release the brake pedal, giving you time to move your foot to the accelerator without rolling back. It is a help, not a parking brake."
+          ]
+        },
+        {
+          "h": "Seat belts, pretensioners and airbags",
+          "p": [
+            "In a crash, the seat belt holds you against the seat so your body slows down with the car. A pretensioner fires a small charge to pull the belt tight in the first milliseconds. A load limiter lets the belt give slightly to reduce chest injury. Airbags inflate in a fraction of a second to cushion your head and chest — they are designed to work with a belt, not instead of one.",
+            "An airbag inflates with great force. Sit at least about 25 cm from the steering wheel, never put a rear-facing child seat in front of an active passenger airbag, and keep feet off the dashboard."
+          ],
+          "note": { "kind": "law", "text": "CMVR rule 138(3) requires the driver, front passenger and occupants of front-facing rear seats to wear seat belts where they are fitted; MV Act s. 194B makes not wearing one an offence. Verified 2026-11-25." }
+        },
+        {
+          "h": "ADAS and parking aids",
+          "p": [
+            "Advanced driver-assistance systems include automatic emergency braking, adaptive cruise control, lane-keep assist, blind-spot monitoring, parking sensors and rear cameras. They rely on cameras and radar that can be blinded by rain, dirt or glare, and they can misread Indian road markings, animals and two-wheelers. You remain the driver; the system is an extra pair of eyes."
+          ]
+        }
+      ],
+      "terms": [
+        ["ABS", "Anti-lock braking system — prevents wheels locking under hard braking."],
+        ["EBD", "Electronic brakeforce distribution — balances braking between axles."],
+        ["ESC / ESP", "Electronic stability control — brakes individual wheels to stop a skid."],
+        ["Pretensioner", "Device that tightens the seat belt at the start of a crash."],
+        ["ADAS", "Advanced driver-assistance systems such as automatic braking and lane-keep."]
+      ],
+      "examples": [
+        "A dog runs out on a wet road. With ABS you brake hard and steer around it while braking. Without ABS, locked front wheels would carry the car straight on."
+      ],
+      "mistakes": [
+        "Pumping the brake in a car with ABS.",
+        "Wearing the seat belt under the arm or behind the back.",
+        "Trusting lane-keep or blind-spot warnings instead of looking."
+      ],
+      "safety": [
+        "Children under the height the vehicle maker specifies should travel in a suitable child restraint in the rear seat."
+      ],
+      "check": [
+        {
+          "q": "In an emergency stop in a car with ABS, you should:",
+          "o": ["Pump the brake rapidly", "Press firmly and hold, and steer around the hazard", "Pull the handbrake", "Brake lightly to avoid the pulsing"],
+          "a": 1,
+          "r": "ABS modulates the pressure for you. Keep firm pressure and use the steering it preserves."
+        },
+        {
+          "q": "Which system brakes individual wheels to correct a skid?",
+          "o": ["EBD", "ESC", "Hill-hold", "Parking sensors"],
+          "a": 1,
+          "r": "Electronic stability control compares steering input with the car's actual rotation and brakes wheels to correct it."
+        },
+        {
+          "q": "Who must wear a seat belt under CMVR rule 138(3)?",
+          "o": ["Only the driver", "Driver and front passenger only", "Driver, front passenger and front-facing rear-seat occupants", "Nobody below 40 km/h"],
+          "a": 2,
+          "r": "The rule covers the driver, the front-seat occupant and persons occupying front-facing rear seats where belts are provided."
+        }
+      ],
+      "related": ["lesson:stopping-distance-physics", "lesson:grip-weight-transfer", "library:lights"],
+      "refs": ["cmvr", "mvact"],
+      "verified": "2026-11-25"
+    }
+  ]
+}

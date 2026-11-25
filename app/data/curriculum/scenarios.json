@@ -1,0 +1,119 @@
+[
+  {
+    "id": "ped-crossing",
+    "title": "A pedestrian approaches the zebra crossing",
+    "layout": "crossing",
+    "brief": "Town road, 40 km/h, light traffic. A zebra crossing is ahead.",
+    "duration": 3.6,
+    "actors": [
+      { "id": "ped", "kind": "ped", "x": 70, "y": 236, "tx": 118, "ty": 236, "then": [330, 236] },
+      { "id": "onc", "kind": "car", "color": "#64748b", "x": 250, "y": -60, "tx": 250, "ty": 110, "then": [250, 110], "rot": 180 }
+    ],
+    "hazard": "ped",
+    "question": "What is the safest response?",
+    "choices": [
+      { "t": "Slow down and stop before the crossing to let them cross.", "ok": true, "why": "A pedestrian stepping onto a zebra crossing has priority. Slowing early lets you stop smoothly before the stop line." },
+      { "t": "Sound the horn and continue — they will wait.", "ok": false, "why": "The horn is a warning, not a right of way. The pedestrian may step out anyway, and you are legally required to give way at a zebra crossing." },
+      { "t": "Speed up to pass before they reach your lane.", "ok": false, "why": "Accelerating towards a crossing removes your margin. If they keep walking, you hit them at a higher speed." },
+      { "t": "Swerve into the right lane to go around them.", "ok": false, "why": "Swerving puts you into oncoming traffic and still crosses the pedestrian's path." }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "sudden-brake",
+    "title": "The car ahead brakes hard",
+    "layout": "straight",
+    "brief": "Two-lane road, 60 km/h. You are following a car.",
+    "duration": 3.2,
+    "actors": [
+      { "id": "lead", "kind": "car", "color": "#ef4444", "x": 150, "y": 250, "tx": 150, "ty": 330, "then": [150, 340], "brake": true },
+      { "id": "onc", "kind": "truck", "color": "#a16207", "x": 250, "y": -80, "tx": 250, "ty": 160, "then": [250, 640], "rot": 180 }
+    ],
+    "hazard": "lead",
+    "question": "The brake lights come on suddenly. What do you do?",
+    "choices": [
+      { "t": "Brake firmly and progressively, keeping straight in your lane.", "ok": true, "why": "Braking in a straight line uses all your tyres' grip for stopping. With a three-second gap you have room to do it smoothly." },
+      { "t": "Swerve right to go past.", "ok": false, "why": "A lorry is coming the other way. Swerving into the oncoming lane turns a rear-end risk into a head-on one." },
+      { "t": "Sound the horn and keep your speed.", "ok": false, "why": "The horn does not stop you. You will close the gap at full speed." },
+      { "t": "Pull the parking brake hard.", "ok": false, "why": "The foot brake is far more powerful and stable; yanking the parking brake can lock the rear wheels and spin the car." }
+    ],
+    "lesson": "following-distance"
+  },
+  {
+    "id": "bike-blindspot",
+    "title": "A motorcycle in your blind spot",
+    "layout": "dual",
+    "brief": "Divided city road, two lanes your way. You want to move to the right lane.",
+    "duration": 3.4,
+    "actors": [
+      { "id": "bike", "kind": "bike", "color": "#22c55e", "x": 250, "y": 640, "tx": 250, "ty": 470, "then": [250, 120] },
+      { "id": "lead", "kind": "bus", "color": "#0ea5e9", "x": 150, "y": 160, "tx": 150, "ty": 200, "then": [150, 200] }
+    ],
+    "hazard": "bike",
+    "question": "You have checked your mirror and signalled right. What next?",
+    "choices": [
+      { "t": "Look over your right shoulder, see the motorcycle, and wait until it has passed.", "ok": true, "why": "Two-wheelers easily hide in the blind spot beside your rear pillar. The shoulder check is what finds them." },
+      { "t": "Move across — your indicator is on.", "ok": false, "why": "A signal is information, not permission. The rider may not have seen it, and you would cut across their path." },
+      { "t": "Brake hard and stay where you are.", "ok": false, "why": "Hard braking without need risks a rear-end crash. Hold your speed and simply wait for the gap." },
+      { "t": "Accelerate hard and change lanes ahead of it.", "ok": false, "why": "Racing a vehicle you have not properly seen is guesswork, and it closes up on the bus ahead." }
+    ],
+    "lesson": "following-distance"
+  },
+  {
+    "id": "animal",
+    "title": "Cattle near the road at dusk",
+    "layout": "straight",
+    "brief": "Rural road at dusk, 50 km/h. A cow is grazing at the right edge.",
+    "duration": 3.6,
+    "actors": [
+      { "id": "cow", "kind": "cow", "x": 335, "y": 210, "tx": 262, "ty": 228, "then": [150, 240] }
+    ],
+    "hazard": "cow",
+    "question": "The cow starts drifting towards the road. What do you do?",
+    "choices": [
+      { "t": "Ease off, brake gently and be ready to stop; do not swerve sharply.", "ok": true, "why": "Animals move unpredictably. Slowing early keeps every option open; a sharp swerve can roll a car or send it into a ditch or oncoming traffic." },
+      { "t": "Sound the horn and keep going — it will move away.", "ok": false, "why": "A frightened animal may run in any direction, including into your path." },
+      { "t": "Swerve hard left onto the shoulder.", "ok": false, "why": "Violent steering at speed can cause a loss of control, especially on a rough shoulder." },
+      { "t": "Flash high beam to scare it.", "ok": false, "why": "Bright light can freeze or confuse animals rather than move them." }
+    ],
+    "lesson": "adverse-conditions"
+  },
+  {
+    "id": "side-road",
+    "title": "A car edges out of a side road",
+    "layout": "junction",
+    "brief": "Main road, 50 km/h. A side road joins from the left.",
+    "duration": 3.4,
+    "actors": [
+      { "id": "side", "kind": "car", "color": "#f59e0b", "x": 20, "y": 228, "tx": 82, "ty": 228, "then": [150, 228], "rot": 90 }
+    ],
+    "hazard": "side",
+    "question": "The car's nose creeps past the give-way line. What do you do?",
+    "choices": [
+      { "t": "Ease off, cover the brake and be ready to stop — assume they may pull out.", "ok": true, "why": "A car creeping forward may not have seen you. Being ready to stop costs a second; being wrong costs a crash." },
+      { "t": "Continue — you have priority on the main road.", "ok": false, "why": "Priority is given, not taken. Plenty of side-impact crashes involve a driver who was legally in the right." },
+      { "t": "Speed up to get past before they move.", "ok": false, "why": "If they pull out, you will hit them harder and have less time to brake." },
+      { "t": "Move into the oncoming lane to give them space.", "ok": false, "why": "You cannot see what is coming the other way, and a sudden lane change surprises everyone." }
+    ],
+    "lesson": "junctions-roundabouts"
+  },
+  {
+    "id": "lane-cut",
+    "title": "A car suddenly changes lanes in front of you",
+    "layout": "dual",
+    "brief": "Divided highway, 80 km/h. A car is in the right lane slightly ahead.",
+    "duration": 3.0,
+    "actors": [
+      { "id": "cut", "kind": "car", "color": "#a855f7", "x": 250, "y": 380, "tx": 172, "ty": 330, "then": [150, 260] }
+    ],
+    "hazard": "cut",
+    "question": "It swings into your lane without signalling. What do you do?",
+    "choices": [
+      { "t": "Ease off and brake gently to rebuild a safe gap.", "ok": true, "why": "Opening the gap restores your stopping margin. Their mistake does not need to become your crash." },
+      { "t": "Sound the horn and hold your speed to make a point.", "ok": false, "why": "Holding speed keeps you too close. Showing them their mistake does not make you any safer." },
+      { "t": "Accelerate and overtake them on the left.", "ok": false, "why": "Overtaking on the left is unsafe and illegal, and angry overtakes are how road rage starts." },
+      { "t": "Swerve onto the shoulder.", "ok": false, "why": "A sudden swerve at 80 km/h is more dangerous than braking, and the shoulder may hold stopped vehicles or people." }
+    ],
+    "lesson": "lane-change-overtake"
+  }
+]

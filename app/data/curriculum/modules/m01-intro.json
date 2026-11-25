@@ -1,0 +1,320 @@
+{
+  "id": "m01",
+  "n": 1,
+  "title": "Introduction to driving",
+  "summary": "What driving really asks of you: the task, the responsibility, the vehicles and the road system you are joining.",
+  "accent": "#38bdf8",
+  "icon": "key",
+  "level": "beginner",
+  "chapters": [
+    {
+      "id": "m01c1",
+      "title": "The driving task",
+      "items": ["lesson:what-driving-involves", "lesson:road-system", "article:rules"]
+    },
+    {
+      "id": "m01c2",
+      "title": "Vehicles and the people around you",
+      "items": ["lesson:vehicle-categories", "article:sharing", "article:twowheeler"]
+    },
+    {
+      "id": "m01c3",
+      "title": "Thinking like a driver",
+      "items": ["lesson:beginner-mindset", "lab:reaction", "practice:rules"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "what-driving-involves",
+      "title": "What driving actually involves",
+      "level": "beginner",
+      "minutes": 9,
+      "objectives": [
+        "Describe driving as a repeating loop of seeing, predicting, deciding and acting.",
+        "Explain why vehicle control is only a small part of driving well.",
+        "List the legal and moral responsibilities that come with a licence."
+      ],
+      "intro": "Most people think driving means steering, pressing pedals and changing gear. Those are the hands-and-feet skills, and you can learn them in a few weeks. The real work of driving happens in your head: reading the road, working out what other people are about to do, and choosing a speed and position that keeps everyone safe.",
+      "sections": [
+        {
+          "h": "The driving loop",
+          "p": [
+            "Every second at the wheel you run the same loop. You search the scene (mirrors, the road far ahead, the sides), you identify anything that matters (a child near the kerb, a bus pulling out, a red light), you predict what could happen next, you decide what to do, and you act smoothly. Then you start again.",
+            "Experienced drivers run this loop so often it feels automatic. Learners have to do it on purpose. That is why the first weeks feel tiring: your brain is doing work it will later do in the background."
+          ],
+          "steps": [
+            "Search: look far ahead, check mirrors every few seconds, glance to the sides at junctions.",
+            "Identify: pick out the things that could affect your path.",
+            "Predict: ask what each of them might do in the next few seconds.",
+            "Decide: choose speed, position and signals that leave you a way out.",
+            "Act: brake, steer or accelerate smoothly, then search again."
+          ]
+        },
+        {
+          "h": "Control, observation and judgement",
+          "p": [
+            "Driving skill has three layers. Vehicle control is moving the car where you mean it to go. Observation is seeing what matters. Judgement is choosing well with what you have seen.",
+            "Crashes are rarely caused by a driver who could not physically stop or steer. They are usually caused by a driver who did not look, looked but did not understand, or understood but chose badly — going too fast for the view, following too closely, or overtaking without enough room."
+          ],
+          "note": { "kind": "tip", "text": "When you review a near miss, ask which layer failed: control, observation or judgement. It is almost always the last two." }
+        },
+        {
+          "h": "What a licence makes you responsible for",
+          "p": [
+            "A driving licence is permission to operate a heavy, fast machine among people who cannot protect themselves from it. With it come duties: drive only vehicles your licence covers, keep the vehicle roadworthy and its papers valid, obey signs and signals, never drive impaired, and help at a crash you are involved in.",
+            "The law sets the minimum. Good drivers go further: they slow down for people walking, give cyclists space, and accept that arriving a few minutes later is always better than not arriving."
+          ],
+          "note": { "kind": "law", "text": "Under the Motor Vehicles Act, 1988 you may not drive in a public place without a valid licence for that class of vehicle (s. 3), and the owner must not allow an unlicensed person to drive (s. 5)." }
+        }
+      ],
+      "terms": [
+        ["Hazard", "Anything that could make you change speed or direction — a person, a vehicle, the road surface, or the weather."],
+        ["Vehicle control", "The physical skills of steering, braking, accelerating and changing gear."],
+        ["Judgement", "Choosing a safe speed, position and action from what you observe."],
+        ["Public place", "In the MV Act, any road, street or place the public has a right of access to — including many parking areas."]
+      ],
+      "examples": [
+        "You see a ball roll into the road between parked cars. Control lets you brake; observation spotted the ball; judgement tells you a child may follow it, so you slow right down even after the ball has passed.",
+        "On a clear highway, the skill load is low but the speed is high. Judgement — gap, speed, fatigue — matters more than control."
+      ],
+      "mistakes": [
+        "Looking only a car-length ahead instead of 10–15 seconds up the road.",
+        "Treating the speed limit as a target instead of a ceiling.",
+        "Believing that being in the right makes you safe. Right of way is given, not taken."
+      ],
+      "safety": [
+        "Never let a passenger, phone or argument take your eyes off the road.",
+        "If you feel tired, stressed or unwell, the safest decision is not to drive."
+      ],
+      "check": [
+        {
+          "q": "Which part of driving causes most crashes?",
+          "o": ["Weak steering technique", "Poor observation and judgement", "Old vehicles", "Bad luck"],
+          "a": 1,
+          "r": "Most crashes follow a failure to see a hazard or a poor choice about speed, gap or overtaking — not an inability to physically control the vehicle."
+        },
+        {
+          "q": "What should you do right after you act on a hazard?",
+          "o": ["Relax — the danger has passed", "Speed up to make up time", "Search the scene again", "Turn on the hazard lights"],
+          "a": 2,
+          "r": "Driving is a continuous loop. Acting is followed by searching again, because a new hazard can appear at any time."
+        },
+        {
+          "q": "Under the MV Act, who is responsible if an unlicensed person drives your vehicle with your permission?",
+          "o": ["Only the driver", "Only the owner", "The owner as well as the driver", "Nobody, if no crash happens"],
+          "a": 2,
+          "r": "Section 5 makes it an owner's responsibility not to allow a person who does not meet ss. 3 and 4 to drive the vehicle."
+        }
+      ],
+      "related": ["lesson:beginner-mindset", "lesson:hazard-perception-basics", "article:rules"],
+      "refs": ["mvact", "mvact-ch2"],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "road-system",
+      "title": "Understanding roads and traffic systems",
+      "level": "beginner",
+      "minutes": 8,
+      "objectives": [
+        "Name the main parts of a road: carriageway, lane, shoulder, median, footpath, kerb.",
+        "Explain how different road types in India change the risks you face.",
+        "Describe how signals, signs and markings work together as one system."
+      ],
+      "intro": "A road is not just tarmac. It is a designed system of spaces, each meant for a particular use, plus a language of signs, markings and signals that tells everyone what to expect. Once you can read that system, roads stop feeling random.",
+      "sections": [
+        {
+          "h": "Parts of a road",
+          "p": [
+            "The carriageway is the part used by moving vehicles. It is divided into lanes by markings. The shoulder is the strip at the edge, meant for emergencies and slow vehicles, not for overtaking. A median or divider separates the two directions on a divided road. The footpath is for people walking, and the kerb is the raised edge that separates it from the carriageway."
+          ]
+        },
+        {
+          "h": "Road types and their risks",
+          "p": [
+            "Expressways and national highways carry fast traffic, so the main risks are speed, fatigue, overtaking and vehicles stopped on the shoulder. State highways and district roads are often two-lane and undivided, so head-on crashes during overtaking are a serious danger. City roads mix every kind of user at low speed: pedestrians, cycles, autos, buses and parked vehicles. Village roads may be narrow, unlit and shared with animals.",
+            "Each type asks for a different speed, following gap and level of attention. The same 60 km/h can be calm on an empty divided highway and reckless past a school."
+          ]
+        },
+        {
+          "h": "One system, three languages",
+          "p": [
+            "Traffic signals give the order of movement at junctions. Signs give orders, warnings and information. Road markings guide where you place the vehicle. When they disagree, follow this order: a police officer's directions first, then traffic signals, then signs, then markings.",
+            "The system only works if everyone follows it. When you drive predictably — in lane, signalling, stopping where expected — you make everyone else's job easier."
+          ],
+          "note": { "kind": "tip", "text": "At a junction with a working signal and a police officer giving different directions, follow the officer." }
+        }
+      ],
+      "terms": [
+        ["Carriageway", "The part of the road used by moving vehicles."],
+        ["Shoulder", "The edge strip beside the carriageway, for emergencies and slow-moving traffic."],
+        ["Median", "A raised or painted divider between opposite directions of traffic."],
+        ["Undivided road", "A road with no median, where opposing traffic is separated only by markings or nothing at all."]
+      ],
+      "examples": [
+        "On an undivided two-lane state highway, a bus overtaking a lorry towards you is in your lane. Slow down and move left early to give it room."
+      ],
+      "mistakes": [
+        "Overtaking on the left using the shoulder.",
+        "Assuming a divided highway has no pedestrians — people cross medians, especially near villages and bus stops."
+      ],
+      "safety": [
+        "Expect pedestrians, animals and stopped vehicles on any road, at any hour."
+      ],
+      "check": [
+        {
+          "q": "The shoulder of a highway is meant for:",
+          "o": ["Overtaking slower traffic", "Emergencies and slow-moving vehicles", "Parking overnight", "Two-wheelers only"],
+          "a": 1,
+          "r": "The shoulder is not a lane. Use it to stop in an emergency, not to pass traffic."
+        },
+        {
+          "q": "A traffic signal shows green, but a police officer signals you to stop. What do you do?",
+          "o": ["Go — the signal is green", "Stop — follow the officer", "Sound the horn and go slowly", "Turn left instead"],
+          "a": 1,
+          "r": "Directions from a police officer controlling traffic override signals, signs and markings."
+        }
+      ],
+      "related": ["article:marks", "article:junc", "signs:mark"],
+      "refs": ["irc67"],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "vehicle-categories",
+      "title": "Types and categories of vehicles",
+      "level": "beginner",
+      "minutes": 7,
+      "objectives": [
+        "Recognise the main licence classes used in India.",
+        "Explain the difference between transport and non-transport vehicles.",
+        "State the minimum ages to drive each class under the MV Act."
+      ],
+      "intro": "Your licence lists the classes of vehicle you may drive. Knowing these classes matters: driving a vehicle your licence does not cover is the same, in law, as driving without a licence.",
+      "sections": [
+        {
+          "h": "Common licence classes",
+          "p": [
+            "MCWOG — motorcycle without gear (scooters and mopeds). MCWG — motorcycle with gear. LMV — light motor vehicle, which covers cars, jeeps and small vans. Transport vehicles — taxis, autorickshaws, buses and goods carriers used for hire or reward — need a transport endorsement. Heavier classes cover medium and heavy goods and passenger vehicles."
+          ]
+        },
+        {
+          "h": "Minimum ages",
+          "p": [
+            "Section 4 of the MV Act sets the minimum ages. Nobody under 18 may drive a motor vehicle in a public place, except that a motorcycle with an engine capacity not exceeding 50 cc may be driven after the age of 16. To drive a transport vehicle you must be at least 20."
+          ],
+          "note": { "kind": "law", "text": "MV Act s. 4(1): 18 years generally; 16 years for a motorcycle up to 50 cc. s. 4(2): 20 years for a transport vehicle. Verified 2026-11-25." }
+        },
+        {
+          "h": "Transport and non-transport",
+          "p": [
+            "A vehicle registered as transport (yellow plate with black letters) carries passengers or goods for money. It needs extra papers such as a permit and a fitness certificate, and its driver needs the right licence class. A private car (white plate) cannot legally be used as a taxi."
+          ]
+        }
+      ],
+      "terms": [
+        ["MCWOG", "Motorcycle without gear."],
+        ["MCWG", "Motorcycle with gear."],
+        ["LMV", "Light motor vehicle — most private cars, jeeps and small vans."],
+        ["Transport vehicle", "A vehicle used to carry passengers or goods for hire or reward."]
+      ],
+      "examples": [
+        "A 17-year-old riding a 110 cc scooter is breaking s. 4, even with a parent's permission, because the engine is over 50 cc."
+      ],
+      "mistakes": [
+        "Assuming an LMV licence lets you ride a geared motorcycle.",
+        "Lending your vehicle to a friend whose licence does not cover it."
+      ],
+      "safety": [
+        "Heavier vehicles need much longer to stop and have large blind spots. Never cut in front of a bus or lorry."
+      ],
+      "check": [
+        {
+          "q": "What is the minimum age to drive a car (LMV) in a public place in India?",
+          "o": ["16", "17", "18", "20"],
+          "a": 2,
+          "r": "MV Act s. 4(1) sets 18 as the minimum age for motor vehicles other than motorcycles up to 50 cc."
+        },
+        {
+          "q": "From what age may a person drive a transport vehicle?",
+          "o": ["18", "20", "21", "25"],
+          "a": 1,
+          "r": "MV Act s. 4(2) sets 20 years as the minimum age for driving a transport vehicle."
+        },
+        {
+          "q": "A 16-year-old may ride which of these?",
+          "o": ["Any scooter", "A motorcycle with an engine up to 50 cc", "A 100 cc geared motorcycle", "Nothing at all"],
+          "a": 1,
+          "r": "The only exception to the age-18 rule is a motorcycle whose engine capacity does not exceed 50 cc."
+        }
+      ],
+      "related": ["lesson:licence-pathway", "article:docs"],
+      "refs": ["mvact-ch2", "mvact"],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "beginner-mindset",
+      "title": "Driver psychology and common beginner mistakes",
+      "level": "beginner",
+      "minutes": 8,
+      "objectives": [
+        "Explain why new drivers are over-represented in crashes.",
+        "Recognise overconfidence, tunnel vision and peer pressure.",
+        "Adopt habits that keep a margin for error."
+      ],
+      "intro": "New drivers do not crash because they are careless people. They crash because their brain has not yet learned where to look and how fast things change on the road. Knowing this is the first step to staying safe while you build experience.",
+      "sections": [
+        {
+          "h": "Why the first year is the riskiest",
+          "p": [
+            "When you are new, controlling the vehicle takes most of your attention, leaving little for watching the road. You also have no library of past situations to recognise danger early. Ironically, the risk often rises after the first few months: control becomes easy, confidence grows, but hazard-spotting skill has not caught up."
+          ]
+        },
+        {
+          "h": "Traps to know about",
+          "p": [
+            "Tunnel vision: staring at the vehicle in front and missing what happens at the sides. Overconfidence: feeling skilled after a few smooth drives. Peer pressure: speeding or overtaking because friends in the car expect it. Target fixation: looking at the thing you want to avoid and steering into it."
+          ]
+        },
+        {
+          "h": "Habits that buy you time",
+          "p": [
+            "Keep at least a three-second gap. Look where you want to go, not at the obstacle. Slow down before bends and junctions, not in them. Drive the first months with no passengers who distract you. Plan routes so you are never rushing."
+          ],
+          "note": { "kind": "safety", "text": "Space and time are your safety margin. Every habit above exists to give you more of them." }
+        }
+      ],
+      "terms": [
+        ["Tunnel vision", "Narrowing your attention to one point and missing the wider scene."],
+        ["Target fixation", "Steering towards whatever you stare at, often the hazard itself."]
+      ],
+      "examples": [
+        "A learner turning right at a junction watches the oncoming car and misses the pedestrian crossing the side road. Scanning the whole junction before turning would have caught it."
+      ],
+      "mistakes": [
+        "Riding the clutch or brake out of nervousness.",
+        "Not checking mirrors before slowing or changing lanes.",
+        "Braking hard in a bend instead of before it.",
+        "Following the vehicle ahead too closely in slow traffic."
+      ],
+      "safety": [
+        "If friends push you to drive faster, stop the car. Your licence and their lives are worth more than the argument."
+      ],
+      "check": [
+        {
+          "q": "Why do crash rates for new drivers often rise a few months after they start?",
+          "o": ["Vehicles wear out", "Confidence grows faster than hazard-spotting skill", "Roads get busier", "They stop wearing seat belts"],
+          "a": 1,
+          "r": "Control becomes easy quickly, which builds confidence, but recognising hazards early takes much longer to learn."
+        },
+        {
+          "q": "To avoid a pothole while swerving, where should you look?",
+          "o": ["At the pothole", "At the path you want to take", "In the mirror", "At the speedometer"],
+          "a": 1,
+          "r": "You tend to steer where you look. Look at the gap you want to drive through."
+        }
+      ],
+      "related": ["lesson:attention-fatigue", "lesson:hazard-perception-basics", "lab:reaction"],
+      "refs": [],
+      "verified": "2026-11-25"
+    }
+  ]
+}

@@ -11,6 +11,9 @@ Status tracker for learning content shipped in `app/data/`. **Required before pu
 | MCQ bank (471) | ⚠ Answers sampled but not formally reviewed | unassigned |
 | Glossary (83) | ⚠ Unreviewed | unassigned |
 | Malayalam text (all) | ⚠ **Not reviewed by a native speaker** | unassigned |
+| Curriculum lessons (38, `app/data/curriculum`) | ◐ Legal facts web-verified 2026-11-25 (see below); technical/safety content needs expert review | unassigned |
+| Curriculum Malayalam | ⚠ Lessons are English-only for now; new UI strings in `ui_extra.json` need native review | unassigned |
+| Warning lights (17), vehicle parts (15), scenarios (6) | ⚠ Needs review by a qualified automotive instructor | unassigned |
 
 ## Built-in safeguards already in place
 
@@ -33,6 +36,22 @@ These were flagged during the port as needing verification against current offic
 8. **Mobile-phone / distracted-driving rules** — penalties amended; keep fine amounts out, verify the prohibition wording.
 9. **Glossary translations** — several Malayalam renderings are informal; have a native speaker review register and tone.
 10. **Sign artwork** — procedurally generated SVGs are approximations of official shapes; check a sample against IRC:67 plates.
+
+## Curriculum facts verified on 2026-11-25
+
+Checked against the Act text (India Code / MoRTH) or official notices, and cited in the lessons:
+
+- s. 4 minimum ages (16 for ≤50 cc motorcycle, 18 general, 20 transport).
+- s. 14(1) learner's licence valid six months; s. 14(2) DL validity by age (≤30 → until 40; 30–50 → 10 years; 50–55 → until 60; >55 → 5 years; transport → 5 years) as amended in 2019; 2019 removal of the 30-day post-expiry grace period.
+- CMVR: 30 days on a learner's licence before the driving test.
+- s. 129 helmets for every person above four years on a motorcycle (2019 substitution).
+- CMVR r. 138(3) seat belts for driver, front and front-facing rear occupants; s. 194B offence.
+- s. 185 threshold: alcohol exceeding 30 mg per 100 ml of blood.
+- s. 134 driver's duties; s. 134A Good Samaritan protection (2019) and the 2020 CMVR rules.
+- 112 as the national emergency number (ERSS).
+- Kerala: Circular 4/2024 test format (angular/parallel/zig-zag/gradient) and the July 2025 Kerala High Court ruling partly quashing it (automatic/EV cars allowed; angular, parallel, gradient upheld) — **secondary (news) sources; confirm with the MVD**.
+
+Still to verify: s. 184's specific wording on hand-held devices; renewal window "up to one year before expiry"; the exact CMVR rule numbers for the 30-day LL wait and PUC.
 
 ## How to update
 

@@ -176,7 +176,7 @@ M.bindTilt = () => {
   let cur = null;
   const clear = () => { if (cur) { cur.style.setProperty("--rx", "0deg"); cur.style.setProperty("--ry", "0deg"); cur = null; } };
   document.addEventListener("pointermove", (e) => {
-    const t = e.target.closest && e.target.closest(".tile");
+    const t = e.target.closest && e.target.closest(".tile,.tiltc");
     if (t !== cur) { clear(); if (!t) return; cur = t; }
     if (!cur) return;
     cur.classList.add("tilt");
@@ -235,6 +235,79 @@ M.roadScene = (host) => {
   G.fromTo(car, { x: -140 }, { x: 820, duration: 8, ease: "none", repeat: -1, repeatDelay: 2.2 });
   G.to(stars2, { opacity: .3, duration: 1.6, ease: "sine.inOut", repeat: -1, yoyo: true, stagger: { each: .3, from: "random" } });
 };
+
+/* ---------- view-scoped animation (ScrollTriggers, timelines) ----------
+   Everything created through M.scoped() lives in the current view context
+   and is reverted by M.resetView() on every route change — no leaks. */
+M.resetView = () => {
+  if (ctx) { ctx.revert(); ctx = null; }
+  if (G) ctx = G.context(() => {});
+};
+M.scoped = (fn) => { if (ctx) ctx.add(fn); else fn(); };
+
+/* staggered scroll reveals for `.rv` blocks in a scope */
+M.reveal = (scope) => {
+  if (!scope) return;
+  const els = [...scope.querySelectorAll(".rvl")];
+  if (!els.length) return;
+  if (M.reduced() || !G || !window.ScrollTrigger) { els.forEach(el => el.classList.add("in")); return; }
+  M.scoped(() => {
+    G.set(els, { y: 18, opacity: 0 });
+    window.ScrollTrigger.batch(els, {
+      start: "top 92%",
+      once: true,
+      onEnter: (batch) => G.to(batch, { y: 0, opacity: 1, duration: .55, ease: "power3.out", stagger: .06, overwrite: true, onComplete: () => batch.forEach(b => b.classList.add("in")) }),
+    });
+    window.ScrollTrigger.refresh();
+  });
+};
+
+/* progress rings fill from empty */
+M.rings = (scope) => {
+  if (!scope) return;
+  const rings = scope.querySelectorAll(".ringfg[data-c]");
+  if (M.reduced() || !G) return;
+  M.scoped(() => {
+    rings.forEach(r => {
+      const c = +r.dataset.c, pct = +r.dataset.pct;
+      G.fromTo(r, { strokeDashoffset: c }, { strokeDashoffset: c * (1 - pct / 100), duration: 1.1, ease: "power3.out", delay: .15 });
+    });
+  });
+};
+
+/* table-of-contents scroll spy for the lesson reader */
+M.tocSpy = (scope) => {
+  const links = scope ? [...scope.querySelectorAll("[data-toc]")] : [];
+  if (!links.length) return;
+  const set = (id) => links.forEach(a => a.classList.toggle("on", a.dataset.toc === id));
+  if (!G || !window.ScrollTrigger) return;
+  M.scoped(() => {
+    links.forEach(a => {
+      const target = document.getElementById(a.dataset.toc);
+      if (!target) return;
+      window.ScrollTrigger.create({ trigger: target, start: "top 45%", end: "bottom 45%", onToggle: (self) => { if (self.isActive) set(a.dataset.toc); } });
+    });
+  });
+};
+
+/* magnetic hover on primary calls to action (fine pointers only) */
+let magBound = false;
+M.bindMagnetic = () => {
+  if (magBound || M.reduced() || !G || !window.matchMedia("(pointer:fine)").matches) return;
+  magBound = true;
+  let cur = null;
+  document.addEventListener("pointermove", (e) => {
+    const m = e.target.closest && e.target.closest(".mag");
+    if (cur && m !== cur) { G.to(cur, { x: 0, y: 0, duration: .5, ease: "elastic.out(1,.5)" }); cur = null; }
+    if (!m) return;
+    cur = m;
+    const r = m.getBoundingClientRect();
+    G.to(m, { x: (e.clientX - r.left - r.width / 2) * .18, y: (e.clientY - r.top - r.height / 2) * .28, duration: .3, ease: "power2.out" });
+  });
+};
+
+/* timeline helper that respects reduced motion (returns null when reduced) */
+M.timeline = (opts) => (G && !M.reduced() ? G.timeline(opts) : null);
 
 window.Motion = M;
 })();

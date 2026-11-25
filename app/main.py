@@ -15,13 +15,14 @@ from slowapi.util import get_remote_address
 
 from app.api.auth_routes import router as auth_router
 from app.api.content_routes import router as content_router
+from app.api.curriculum_routes import router as curriculum_router
 from app.api.exam_routes import router as exam_router
 from app.api.progress_routes import router as progress_router
 from app.api.quiz_routes import router as quiz_router
 from app.config import BASE_DIR, get_settings
 from app.db import close_db, get_session_factory, init_db
 from app.logging_config import setup_logging
-from app.services import content
+from app.services import content, curriculum
 from app.services.auth import cleanup_expired
 from app.web.pages import VersionedStaticFiles, render_page
 
@@ -46,6 +47,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         if removed:
             log.info("cleaned up %d expired rows", removed)
     content.warm()
+    curriculum.warm()
     log.info("IDrive ready — content version %s", content.version())
     yield
     await close_db()
@@ -53,7 +55,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
 
 app = FastAPI(
     title="IDrive",
-    version="0.1.0",
+    version="2.0.0",
     description="Indian road signs, markings, signals and driving theory — learn, quiz, mock-test.",
     lifespan=lifespan,
 )
@@ -96,6 +98,7 @@ app.include_router(content_router)
 app.include_router(quiz_router)
 app.include_router(exam_router)
 app.include_router(progress_router)
+app.include_router(curriculum_router)
 
 limiter = Limiter(
     key_func=get_remote_address,
@@ -133,7 +136,7 @@ async def spa() -> Response:
 
 
 # Hash-routed SPA: every app path serves the shell.
-for _path in ("learn", "theory", "exam", "quiz", "cards", "progress"):
+for _path in ("home", "course", "lesson", "learn", "vehicle", "science", "hazard", "theory", "exam", "quiz", "cards", "ask", "progress"):
     app.get("/" + _path, include_in_schema=False)(
         lambda: render_page(static_dir=static_dir, name="index.html")
     )

@@ -1,0 +1,317 @@
+{
+  "id": "m05",
+  "n": 5,
+  "title": "Traffic rules and road regulations",
+  "summary": "The Motor Vehicles Act, the Central Motor Vehicles Rules and Kerala-specific practice — with sections cited and dates verified.",
+  "accent": "#34d399",
+  "icon": "law",
+  "level": "foundation",
+  "chapters": [
+    {
+      "id": "m05c1",
+      "title": "The legal framework",
+      "items": ["lesson:mv-act-overview", "article:law"]
+    },
+    {
+      "id": "m05c2",
+      "title": "Safety laws you must know",
+      "items": ["lesson:safety-laws", "article:safe", "practice:safe"]
+    },
+    {
+      "id": "m05c3",
+      "title": "Papers and documents",
+      "items": ["lesson:vehicle-documents", "article:docs", "practice:docs"]
+    },
+    {
+      "id": "m05c4",
+      "title": "Kerala",
+      "items": ["lesson:kerala-rules"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "mv-act-overview",
+      "title": "How Indian traffic law is organised",
+      "level": "foundation",
+      "minutes": 9,
+      "objectives": [
+        "Explain the roles of the MV Act, the Central Motor Vehicles Rules and state rules.",
+        "Know which matters are national and which are decided by states.",
+        "Find the official text when you need it."
+      ],
+      "intro": "Traffic law in India has layers. Parliament passes the Motor Vehicles Act. The Central Government makes detailed rules and regulations under it. States make their own rules for matters the Act leaves to them and enforce the law on their roads.",
+      "sections": [
+        {
+          "h": "The Motor Vehicles Act, 1988",
+          "p": [
+            "The Act covers licensing of drivers (Chapter II), registration of vehicles (Chapter IV), control of traffic (Chapter VIII), insurance (Chapter XI) and offences and penalties (Chapter XIII). It was substantially amended by the Motor Vehicles (Amendment) Act, 2019, which raised penalties, added protection for Good Samaritans (s. 134A), and changed licence validity periods."
+          ]
+        },
+        {
+          "h": "Central rules and regulations",
+          "p": [
+            "The Central Motor Vehicles Rules, 1989 (CMVR) fill in the detail: licence tests, vehicle safety equipment, seat belts, pollution certificates and more. Driving regulations — how to keep left, overtake, and behave at junctions — are made by the Central Government under s. 118 of the Act."
+          ]
+        },
+        {
+          "h": "What states decide",
+          "p": [
+            "States frame their own motor vehicles rules (Kerala has the Kerala Motor Vehicles Rules, 1989), notify speed limits for roads in the state, set up test tracks, decide how tests are run within central rules, collect road tax, and enforce traffic law through their police and Motor Vehicles Departments. Compounding amounts for some offences can also differ by state."
+          ],
+          "note": { "kind": "law", "text": "iDrive does not list fine amounts. Penalties are revised often and some vary by state. Check the current amounts on Parivahan or your state MVD before relying on any figure." }
+        }
+      ],
+      "terms": [
+        ["Act", "A law passed by Parliament — here, the Motor Vehicles Act, 1988."],
+        ["Rules", "Detailed provisions made by government under the powers an Act gives it."],
+        ["Compounding", "Settling certain offences by paying an amount instead of going to court."],
+        ["Notification", "An official publication in the Gazette that brings a rule or limit into force."]
+      ],
+      "examples": [
+        "The 30 mg per 100 ml blood-alcohol threshold is in the Act itself (s. 185), so it is the same in every state."
+      ],
+      "mistakes": [
+        "Trusting a forwarded message about a 'new fine' without checking an official source."
+      ],
+      "safety": [
+        "The law is the minimum. A legal speed can still be unsafe for the conditions."
+      ],
+      "check": [
+        {
+          "q": "Which law is the main national law on driving and vehicles in India?",
+          "o": ["Indian Penal Code", "Motor Vehicles Act, 1988", "Kerala Police Act", "Road Transport Corporation Act"],
+          "a": 1,
+          "r": "The Motor Vehicles Act, 1988, amended in 2019, is the principal law; the CMVR and state rules are made under it."
+        },
+        {
+          "q": "Who notifies speed limits on most roads in Kerala?",
+          "o": ["Only Parliament", "The state government, under powers in the MV Act", "Car manufacturers", "Insurance companies"],
+          "a": 1,
+          "r": "States notify speed limits for roads within their territory, within the framework the Act and central notifications set."
+        }
+      ],
+      "related": ["lesson:safety-laws", "lesson:kerala-rules", "article:law"],
+      "refs": ["mvact", "mvact2019", "cmvr"],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "safety-laws",
+      "title": "Helmets, seat belts, phones and drink-driving",
+      "level": "foundation",
+      "minutes": 10,
+      "objectives": [
+        "State who must wear a helmet and who must wear a seat belt.",
+        "Explain the legal blood-alcohol threshold and why any alcohol is unsafe.",
+        "Understand why hand-held phone use while driving is treated as dangerous driving."
+      ],
+      "intro": "A few laws prevent most deaths on Indian roads: helmets, seat belts, sober driving, and keeping your hands off the phone. Each one exists because of how the human body and brain behave in a crash or at speed.",
+      "sections": [
+        {
+          "h": "Helmets",
+          "p": [
+            "Section 129 of the MV Act, as substituted in 2019, requires every person above four years of age driving, riding or being carried on a motorcycle to wear protective headgear that meets the standards set, securely fastened with its straps. That includes the pillion rider. The Act exempts a person who is a Sikh wearing a turban."
+          ],
+          "note": { "kind": "law", "text": "MV Act s. 129 (substituted by the 2019 amendment): helmets for everyone above four years on a motorcycle. Verified 2026-11-25." }
+        },
+        {
+          "h": "Seat belts",
+          "p": [
+            "CMVR rule 138(3) requires the driver, the front-seat occupant and persons occupying front-facing rear seats to wear seat belts while the vehicle is in motion, in vehicles where belts are fitted. Section 194B of the Act makes driving without a belt, or carrying passengers not wearing belts, an offence, and covers the safety of children too."
+          ]
+        },
+        {
+          "h": "Alcohol and drugs",
+          "p": [
+            "Section 185 makes it an offence to drive, or attempt to drive, with alcohol exceeding 30 mg per 100 ml of blood detected in a breath-analyser or other test, including a laboratory test, or while under the influence of a drug to such an extent that you cannot exercise proper control of the vehicle.",
+            "The threshold is a legal line, not a safe amount. Alcohol slows reaction time and impairs judgement well before that level, and it makes you feel more confident while making you less capable."
+          ],
+          "note": { "kind": "safety", "text": "The only safe amount of alcohol before driving is none. Plan a sober driver, a cab or a bus before you start drinking." }
+        },
+        {
+          "h": "Mobile phones",
+          "p": [
+            "Since the 2019 amendment, s. 184 (driving dangerously) specifically includes the use of hand-held communication devices while driving. A phone call — even hands-free — divides attention; texting takes your eyes off the road for seconds at a time."
+          ]
+        },
+        {
+          "h": "Lane discipline, overtaking and right of way",
+          "p": [
+            "Keep to the left of the road and let faster traffic pass on your right. Overtake only on the right, and only when you can see that the road ahead is clear for the whole manoeuvre. Do not overtake near junctions, bends, pedestrian crossings, at the brow of a hill, or where a solid line or a no-overtaking sign forbids it. Give way to pedestrians on a zebra crossing, to traffic already on a roundabout, and to emergency vehicles sounding a siren or showing flashing lights."
+          ]
+        }
+      ],
+      "terms": [
+        ["Protective headgear", "A helmet meeting the standard specified under the Act, worn with straps fastened."],
+        ["Breath analyser", "Device that estimates blood-alcohol content from a breath sample."],
+        ["Dangerous driving", "Driving at a speed or in a manner dangerous to the public, an offence under s. 184."]
+      ],
+      "examples": [
+        "A parent riding with a six-year-old child on the pillion: both must wear helmets under s. 129.",
+        "Answering a call with the phone held to your ear while waiting at a red signal is still using a hand-held device while driving."
+      ],
+      "mistakes": [
+        "Wearing a helmet with the strap undone — it can fly off on impact.",
+        "Believing rear passengers do not need belts.",
+        "Thinking 'just one drink' is safe because it is probably under the limit."
+      ],
+      "safety": [
+        "A helmet that has taken a hard impact should be replaced even if it looks fine."
+      ],
+      "check": [
+        {
+          "q": "Under s. 129, who must wear a helmet on a motorcycle?",
+          "o": ["Only the rider", "Rider and pillion above 18", "Every person above four years of age on the motorcycle", "Only on highways"],
+          "a": 2,
+          "r": "The 2019 substitution covers every person above four years driving, riding or being carried, with limited exemptions."
+        },
+        {
+          "q": "What is the blood-alcohol threshold in s. 185?",
+          "o": ["Any detectable alcohol", "Exceeding 30 mg per 100 ml of blood", "Exceeding 80 mg per 100 ml", "There is no number"],
+          "a": 1,
+          "r": "The Act sets the threshold at alcohol exceeding 30 mg per 100 ml of blood, detected by breath analyser or other test."
+        },
+        {
+          "q": "Rear-seat passengers in a car with belts fitted:",
+          "o": ["Need not wear belts", "Must wear belts if in front-facing seats", "Must wear belts only on highways", "Only children must wear belts"],
+          "a": 1,
+          "r": "CMVR rule 138(3) covers persons occupying front-facing rear seats."
+        }
+      ],
+      "related": ["lesson:alcohol-impairment", "lesson:safety-systems", "article:safe", "article:law"],
+      "refs": ["mvact", "mvact2019", "cmvr"],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "vehicle-documents",
+      "title": "Licence, RC, insurance, PUC and fitness",
+      "level": "foundation",
+      "minutes": 8,
+      "objectives": [
+        "List the documents every driver and vehicle must have.",
+        "Explain third-party insurance and why it is compulsory.",
+        "Know which papers transport vehicles need in addition."
+      ],
+      "intro": "Every time you drive, two sets of papers matter: yours (the licence) and the vehicle's (registration, insurance, pollution certificate, and for transport vehicles a permit and fitness certificate).",
+      "sections": [
+        {
+          "h": "The driver: licence",
+          "p": [
+            "You need a valid driving licence for the class of vehicle you drive (s. 3). A learner's licence lets you drive only under the conditions attached to it, including an instructor or licensed driver with you and an 'L' sign displayed."
+          ]
+        },
+        {
+          "h": "The vehicle",
+          "p": [
+            "Registration certificate (RC): every vehicle used in a public place must be registered (s. 39). Insurance: s. 146 makes at least third-party insurance compulsory — it pays for injury, death or property damage you cause to others. Pollution Under Control (PUC) certificate: required under the CMVR and renewed at intervals. Fitness certificate: transport vehicles need one to be deemed validly registered (s. 56), and older private vehicles need fitness renewal when their registration is renewed. Permit: transport vehicles carrying passengers or goods for hire need one."
+          ]
+        },
+        {
+          "h": "Digital documents",
+          "p": [
+            "Documents stored in DigiLocker or mParivahan are recognised by the authorities. Keep the app logged in and the phone charged — but never handle the phone while driving."
+          ],
+          "note": { "kind": "tip", "text": "Set calendar reminders for insurance and PUC expiry dates the day you renew them." }
+        }
+      ],
+      "terms": [
+        ["RC", "Registration certificate — proof the vehicle is registered."],
+        ["Third-party insurance", "Insurance covering your liability to other people for injury, death or damage."],
+        ["PUC", "Pollution Under Control certificate, showing emissions are within limits."],
+        ["Permit", "Authorisation for a transport vehicle to carry passengers or goods for hire."]
+      ],
+      "examples": [
+        "If your insurance has lapsed and you injure a pedestrian, you may personally have to pay the compensation a tribunal awards — which can run to many times the vehicle's value."
+      ],
+      "mistakes": [
+        "Letting insurance lapse 'for a week' until the next salary.",
+        "Assuming a comprehensive policy is optional — only the own-damage part is; third-party cover is compulsory."
+      ],
+      "safety": [
+        "Valid insurance is what lets a victim of a crash you cause get compensation quickly."
+      ],
+      "check": [
+        {
+          "q": "What insurance is compulsory for every motor vehicle used in a public place?",
+          "o": ["Comprehensive", "At least third-party", "Own-damage only", "Engine protection"],
+          "a": 1,
+          "r": "MV Act s. 146 requires a policy covering third-party risks."
+        },
+        {
+          "q": "Which document is required for a transport vehicle to be deemed validly registered?",
+          "o": ["A fitness certificate", "A FASTag", "A service record", "An extended warranty"],
+          "a": 0,
+          "r": "Section 56 ties the validity of a transport vehicle's registration to a current certificate of fitness."
+        }
+      ],
+      "related": ["article:docs", "lesson:licence-pathway"],
+      "refs": ["mvact", "cmvr", "parivahan"],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "kerala-rules",
+      "title": "Driving in Kerala: what is state-specific",
+      "level": "foundation",
+      "minutes": 7,
+      "objectives": [
+        "Know which authority runs licensing and enforcement in Kerala.",
+        "Understand the revised Kerala driving-test format and its legal status.",
+        "Recognise Kerala road conditions that need extra care."
+      ],
+      "intro": "National law applies in Kerala, but the state runs it: the Kerala Motor Vehicles Department issues licences and registrations, conducts tests, and enforces the law with the police. Some practices here differ from other states.",
+      "sections": [
+        {
+          "h": "Who does what",
+          "p": [
+            "The Motor Vehicles Department (MVD), headed by the Transport Commissioner, runs Regional and Sub-Regional Transport Offices across the state. Applications for learner's licences, driving licences and many vehicle services go through the Parivahan Sarathi and Vahan portals with Kerala selected as the state."
+          ]
+        },
+        {
+          "h": "The revised driving test",
+          "p": [
+            "In 2024 the Kerala Transport Commissionerate issued Circular 4/2024, revising the light-motor-vehicle driving test to include angular parking, parallel parking, zig-zag driving and a gradient test, in addition to a road test. The rollout met protests and venue shortages. In July 2025 the Kerala High Court partly quashed the circular — holding, among other things, that the state cannot bar automatic or electric cars from the test — while upholding the angular, parallel and gradient elements and daily caps on tests.",
+            "Exactly how your test is run can depend on your RTO and its test ground. Ask your RTO or driving school what the current format is before you prepare."
+          ],
+          "note": { "kind": "law", "text": "State-level practice; sources are news reports of the circular and the court ruling. Verified 2026-11-25 — confirm current practice with your RTO." }
+        },
+        {
+          "h": "Kerala road conditions",
+          "p": [
+            "Kerala's roads are densely used and often narrow, with houses and shops right at the edge. Expect pedestrians, school children, two-wheelers and private buses stopping anywhere. The south-west and north-east monsoons bring heavy rain, waterlogging and slippery roads; ghat roads to Wayanad, Idukki and the Western Ghats have hairpin bends, mist and landslide risk."
+          ]
+        }
+      ],
+      "terms": [
+        ["MVD", "Motor Vehicles Department — the state body for licensing, registration and enforcement."],
+        ["RTO / SRTO", "Regional / Sub-Regional Transport Office."],
+        ["Gradient test", "A test of starting and controlling the vehicle on a slope without rolling back."]
+      ],
+      "examples": [
+        "Approaching a private bus stopped at the left in town, expect passengers stepping out from in front of it and the bus pulling out without much warning."
+      ],
+      "mistakes": [
+        "Preparing only for the 'H' test when the test ground also uses parallel and angular parking.",
+        "Driving at the same speed in monsoon rain as on a dry day."
+      ],
+      "safety": [
+        "On ghat roads, use low gears downhill, sound the horn before blind hairpins, and never stop on a bend."
+      ],
+      "check": [
+        {
+          "q": "Which body issues driving licences in Kerala?",
+          "o": ["Kerala Police", "Kerala Motor Vehicles Department", "KSRTC", "The local panchayat"],
+          "a": 1,
+          "r": "The MVD, through its RTOs and SRTOs, handles licensing, registration and testing."
+        },
+        {
+          "q": "According to the 2025 Kerala High Court ruling, can automatic cars be used for the LMV driving test?",
+          "o": ["No, never", "Yes — the state cannot bar them", "Only for women", "Only electric cars"],
+          "a": 1,
+          "r": "The court held that the state could not restrict the use of automatic or electric vehicles for the test."
+        }
+      ],
+      "related": ["lesson:licence-pathway", "lesson:driving-test-prep", "article:ghat"],
+      "refs": ["keralamvd", "kl-test-2024", "kl-hc-2025", "sarathi"],
+      "verified": "2026-11-25"
+    }
+  ]
+}

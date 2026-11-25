@@ -1,6 +1,14 @@
-# IDrive
+# iDrive
 
-Learn Indian road signs, markings, signals, hand signals and driving theory — bilingual in English and Malayalam. IDrive is a FastAPI port of the single-file **Sadak Saathi** app, following the FreeLLMChat project layout, with user accounts, server-scored mock exams, synced progress, and a spring-physics (bencho.dev-inspired) frontend with no build step.
+The interactive driving-theory school for India, with extra depth for Kerala — bilingual UI in English and Malayalam.
+
+- **Curriculum:** 12 modules from absolute beginner to advanced (driving basics, how vehicles work, dashboard lights, signs, traffic law, practical manoeuvres, defensive driving, maintenance, emergencies, vehicle dynamics, psychology, licensing) — 38 authored lessons with objectives, worked examples, safety notes, knowledge checks and cited, date-verified sources, plus the 18 original theory articles.
+- **Interactive:** clickable vehicle explorer, 17-entry warning-light encyclopedia (stop-now vs check-soon), stopping-distance lab, reaction-time test, animated four-stroke engine, six hazard-perception scenarios.
+- **Practice:** 255-sign library and quiz, 471 MCQs, server-scored timed mock exams, flashcards, a spaced revision queue built from missed lesson questions.
+- **AI instructor:** answers grounded in iDrive's own content with numbered citations; search-only fallback when no provider is configured.
+- **Dashboard:** curriculum progress, levels (Beginner → Theory mastery, based on completed checks, mocks and scenarios — not time), streak, readiness, strongest/weakest modules, bookmarks, milestones.
+
+iDrive is a FastAPI app with a vanilla-JS, no-build frontend animated with vendored GSAP (ScrollTrigger, Flip, DrawSVG). See `docs/AUDIT.md` for the audit and roadmap.
 
 ## Quick start
 
@@ -14,9 +22,16 @@ idrive                               # → http://localhost:5000
 Run checks:
 
 ```bash
-python -m pytest -q     # or: make test   — 43 unit/API/data tests
+python -m pytest -q     # or: make test   — unit/API/data + curriculum linter
 python tools/smoke.py   # or: make smoke  — end-to-end happy path
 python -m compileall -q app tests tools  # or: make lint
+```
+
+Visual + interaction check across desktop/tablet/mobile and dark/light (server running):
+
+```bash
+pip install playwright && playwright install chromium
+python tools/visual_check.py --base http://localhost:5000 --out shots
 ```
 
 Re-extract content after editing `Sadak Saathi.html`:
@@ -38,6 +53,8 @@ app/
   api/           auth / content / quiz / exam / progress routers
   services/      content store, exam engine, progress store, auth
   data/          extracted JSON datasets (generated — do not hand-edit)
+  data/curriculum/  authored curriculum: modules/*.json, references, warning
+                 lights, vehicle parts, hazard scenarios (hand-edited, linted)
   static/        index.html + css + vanilla-JS modules (no build step)
   web/pages.py   versioned static serving + shell rendering
 tools/           extract_data.mjs (source → JSON), smoke.py
@@ -47,6 +64,14 @@ tests/           pytest suite (unit, API contract, data integrity)
 ### Data flow
 
 Learning content is extracted from `Sadak Saathi.html` by `tools/extract_data.mjs`, which evaluates the source script in a Node VM and serialises its data tables (255 signs, 9 categories, 18 topics + articles, 471 MCQs, 83 glossary terms) into `app/data/*.json`. The frontend boots from `/api/content/index` (text only) and lazily fetches sign SVGs, articles and the glossary.
+
+### Curriculum
+
+`app/data/curriculum/` is the hand-authored source of truth for lessons. Each `modules/mNN-*.json` file holds a module, its chapters (ordered items such as `lesson:id`, `article:speed`, `lab:stopping`, `scenario:animal`, `signs:caut`, `practice:docs`, `exam:mock`) and its lessons. `app/services/curriculum.py` validates everything with pydantic at startup, and `tests/test_curriculum.py` runs the content linter: unresolved items, bad answer indices, legal notes without references, references without verification dates, and **any money amount** fail the build. Endpoints: `GET /api/curriculum`, `/api/curriculum/lessons/{id}`, `/api/curriculum/search?q=`, `/api/library/{lights,vehicle,scenarios,references}`.
+
+### AI instructor
+
+`POST /api/instructor/ask` retrieves the best passages from lessons, articles, lights, parts, signs and the glossary, then (for signed-in users, when `AI_API_KEY` is set) asks an OpenAI-compatible model to answer **only from those numbered sources**, with citations, no fine amounts, no invented section numbers and no unsafe instructions. Guests, keyless deployments and provider errors get `mode: "search"` — the sourced passages themselves.
 
 ### Accounts and progress
 
@@ -66,6 +91,7 @@ All settings are env vars (see `.env.example`). The important ones:
 | `SECRET_PEPPER` | change-me-in-production | **required in production** — app refuses to boot otherwise |
 | `ENVIRONMENT` | development | `production` enforces the pepper check |
 | `RATE_LIMIT_DEFAULT` / `RATE_LIMIT_AUTH` | 300/min, 20/min | slowapi format |
+| `AI_API_KEY` / `AI_BASE_URL` / `AI_MODEL` | empty / OpenRouter / `openai/gpt-4o-mini` | AI instructor provider; empty key = search-only mode |
 | `GOOGLE_CLIENT_ID` | empty | enables the Google sign-in button + `POST /api/auth/google`; ID tokens are verified server-side via Google's tokeninfo. Add your origins to the OAuth client's **Authorized JavaScript origins** in Google Cloud Console. `GOOGLE_CLIENT_SECRET` is unused by this flow. |
 
 ## Docker

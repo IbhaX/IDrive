@@ -1,0 +1,167 @@
+{
+  "id": "m11",
+  "n": 11,
+  "title": "Driving psychology and human factors",
+  "summary": "How attention, fatigue, distraction, emotion, alcohol and medication change what your brain can do behind the wheel.",
+  "accent": "#f472b6",
+  "icon": "brain",
+  "level": "intermediate",
+  "chapters": [
+    {
+      "id": "m11c1",
+      "title": "Attention",
+      "items": ["lesson:attention-fatigue", "lab:reaction"]
+    },
+    {
+      "id": "m11c2",
+      "title": "Impairment",
+      "items": ["lesson:alcohol-impairment"]
+    },
+    {
+      "id": "m11c3",
+      "title": "Emotion and decisions",
+      "items": ["lesson:emotion-decisions", "article:defensive"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "attention-fatigue",
+      "title": "Attention, distraction, fatigue and cognitive overload",
+      "level": "intermediate",
+      "minutes": 10,
+      "lab": "reaction",
+      "objectives": [
+        "Explain why the brain cannot truly multitask while driving.",
+        "Recognise the early signs of fatigue and microsleep.",
+        "Reduce cognitive load before and during a drive."
+      ],
+      "intro": "Your eyes can be pointed at the road while your mind is elsewhere. Psychologists call it 'looking but not seeing'. Most distraction crashes happen to drivers who never took their eyes off the road for long — their attention simply was not there.",
+      "sections": [
+        {
+          "h": "Attention is limited",
+          "p": [
+            "The brain switches between tasks rather than doing them at once. Each switch costs time. A phone conversation — even hands-free — draws attention away from scanning and predicting, so drivers react later and miss signs and signals. Texting is far worse: eyes, hands and mind all leave the road."
+          ]
+        },
+        {
+          "h": "Cognitive overload",
+          "p": [
+            "A busy junction, an unfamiliar route, rain, a crying child and a navigation voice at once can overload anyone. When overloaded, people narrow their attention and miss things. Reduce the load: plan the route before you set off, set navigation while parked, ask passengers to stay quiet at tricky moments, and slow down to buy processing time."
+          ]
+        },
+        {
+          "h": "Fatigue and microsleep",
+          "p": [
+            "Tiredness slows reactions, narrows attention and dulls judgement. A microsleep is a few seconds of sleep without realising it — at 80 km/h, three seconds is over 65 m with nobody in control. Warning signs: yawning, heavy eyelids, drifting in the lane, missing an exit, not remembering the last few kilometres.",
+            "The only cure for tiredness is sleep. Open windows, loud music and coffee give a brief boost at most. Plan breaks every two hours, avoid driving at times you would normally be asleep, and if you feel drowsy, stop somewhere safe and take a 15–20 minute nap."
+          ],
+          "note": { "kind": "safety", "text": "Early-morning hours and the post-lunch dip are peak times for fatigue crashes." }
+        }
+      ],
+      "terms": [["Inattention blindness", "Failing to see something in plain view because attention is elsewhere."], ["Microsleep", "A brief, involuntary episode of sleep lasting a few seconds."], ["Cognitive load", "The amount of mental work a task demands."]],
+      "examples": ["Try the reaction-time lab twice: once focused, once while counting backwards from 100 in sevens. Most people react noticeably slower the second time."],
+      "mistakes": ["Driving through the night to 'save a day'.", "Taking calls in heavy traffic.", "Relying on coffee to stay awake."],
+      "safety": ["If you notice any fatigue sign, stop as soon as it is safe. Do not try to push through."],
+      "check": [
+        { "q": "What is the only real cure for driver fatigue?", "o": ["Coffee", "Loud music", "Sleep", "Opening the window"], "a": 2, "r": "Stimulants and noise give short-lived alertness; sleep is the only remedy." },
+        { "q": "Why can a hands-free phone call still be dangerous?", "o": ["It uses mobile data", "It draws attention away from the driving task", "It drains the battery", "It is always illegal"], "a": 1, "r": "The conversation competes for the same limited attention needed for scanning and predicting." }
+      ],
+      "related": ["lab:reaction", "lesson:stopping-distance-physics", "lesson:hazard-perception-basics"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "alcohol-impairment",
+      "title": "Alcohol, drugs and medication",
+      "level": "intermediate",
+      "minutes": 9,
+      "objectives": [
+        "Describe how alcohol affects vision, reaction time and judgement.",
+        "Know the legal threshold and why it is not a safe amount.",
+        "Check medicines for drowsiness warnings before driving."
+      ],
+      "intro": "Alcohol is a depressant. It slows the brain's processing, dulls the senses and — most dangerously — makes people feel more confident while they become less capable.",
+      "sections": [
+        {
+          "h": "How alcohol impairs",
+          "p": [
+            "Even small amounts lengthen reaction time, narrow the field of vision, reduce the ability to judge speed and distance, and make it harder to track several things at once. Larger amounts affect balance, coordination and consciousness. The effect lasts as long as alcohol is in the blood; the body removes it slowly, and nothing — coffee, a cold shower, food — speeds that up. You can still be over the limit the morning after a heavy night."
+          ]
+        },
+        {
+          "h": "The law",
+          "p": [
+            "Section 185 of the MV Act makes it an offence to drive or attempt to drive with alcohol exceeding 30 mg per 100 ml of blood detected by a breath analyser or other test, or under the influence of drugs to an extent that you cannot exercise proper control. The penalties are severe and can include imprisonment and action against your licence."
+          ]
+        },
+        {
+          "h": "Drugs and medicines",
+          "p": [
+            "Illegal drugs, including cannabis, impair driving and are covered by s. 185. Many legal medicines can also cause drowsiness or blurred vision: some antihistamines, cough syrups, painkillers, sleeping tablets, anti-anxiety and anti-depressant medicines. Read the label and ask your doctor or pharmacist whether it is safe to drive. Never combine medicine and alcohol."
+          ],
+          "note": { "kind": "safety", "text": "Plan before you drink: designate a sober driver, book a cab, or use public transport." }
+        }
+      ],
+      "terms": [["Blood alcohol concentration", "The amount of alcohol in the blood, here measured in mg per 100 ml."], ["Depressant", "A substance that slows brain activity."]],
+      "examples": ["After a late celebration, you feel fine at 7 am but slept only four hours after the last drink. You may still have alcohol in your blood, and you are also fatigued — take a cab."],
+      "mistakes": ["Believing you drive better after a drink.", "Thinking food or coffee sobers you up.", "Ignoring the drowsiness warning on a cold medicine."],
+      "safety": ["Never get into a vehicle with a driver who has been drinking."],
+      "check": [
+        { "q": "What speeds up the removal of alcohol from the blood?", "o": ["Coffee", "A cold shower", "Food", "Nothing — only time"], "a": 3, "r": "The liver removes alcohol at a roughly fixed rate; nothing meaningfully speeds it up." },
+        { "q": "Are some legal medicines dangerous before driving?", "o": ["No, they are tested", "Yes — some cause drowsiness or blurred vision", "Only injections", "Only in large doses"], "a": 1, "r": "Check labels and ask a pharmacist; s. 185 also covers drugs that impair control." }
+      ],
+      "related": ["lesson:safety-laws", "lesson:attention-fatigue"],
+      "refs": ["mvact"],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "emotion-decisions",
+      "title": "Stress, road rage, risk perception and decisions under pressure",
+      "level": "intermediate",
+      "minutes": 9,
+      "objectives": [
+        "Recognise how stress and anger change driving.",
+        "De-escalate conflict with other road users.",
+        "Explain optimism bias and overconfidence."
+      ],
+      "intro": "Driving puts you among strangers who make mistakes, often at speed. How you handle your own emotions — and other people's — is a safety skill like any other.",
+      "sections": [
+        {
+          "h": "Stress and anger",
+          "p": [
+            "Stress narrows attention and pushes people to hurry. Anger makes drivers follow too closely, overtake aggressively and take revenge for imagined insults. Both make crashes more likely. Notice your body: a tight grip, clenched jaw, fast breathing. Slow your breathing, increase your gap, and remind yourself the other driver's mistake is not about you."
+          ]
+        },
+        {
+          "h": "Dealing with aggressive drivers",
+          "p": [
+            "Do not respond to gestures, horns or flashing lights. Avoid eye contact. Let them pass. If someone follows you, drive to a busy public place or a police station — do not go home. Keep doors locked and windows up, and call 112 if you feel threatened."
+          ]
+        },
+        {
+          "h": "Risk perception",
+          "p": [
+            "Most drivers rate themselves above average — which cannot be true for all of us. Optimism bias makes people believe crashes happen to others. Familiar routes feel safe, so attention drops. Good drivers accept they can make mistakes and leave a margin for them."
+          ]
+        },
+        {
+          "h": "Decisions under pressure",
+          "p": [
+            "In an emergency, people fall back on what they have practised. That is why rehearsing the steps for a skid, blowout or brake failure in your head matters. When unsure, the safest default is usually to slow down in a straight line while staying in your lane."
+          ]
+        }
+      ],
+      "terms": [["Optimism bias", "Believing negative events are less likely to happen to you than to others."], ["Road rage", "Aggressive or violent behaviour caused by anger at other road users."]],
+      "examples": ["A car cuts in sharply and the driver gestures at you. You ease off, let the gap grow, and the moment passes. Chasing them would have put you both at risk."],
+      "mistakes": ["Teaching another driver a lesson by braking in front of them.", "Driving while upset after an argument."],
+      "safety": ["If you are too angry or upset to concentrate, stop and calm down before continuing."],
+      "check": [
+        { "q": "An aggressive driver is following you closely. What should you do?", "o": ["Brake suddenly to warn them", "Let them pass and avoid eye contact", "Speed up", "Stop and confront them"], "a": 1, "r": "De-escalation keeps you safe. Never retaliate." },
+        { "q": "Optimism bias means:", "o": ["Being cheerful while driving", "Believing crashes are less likely to happen to you", "Driving with the radio on", "Trusting the GPS"], "a": 1, "r": "This bias leads people to take risks they would warn others against." }
+      ],
+      "related": ["lesson:beginner-mindset", "lesson:attention-fatigue", "article:defensive"],
+      "refs": ["erss112"],
+      "verified": "2026-11-25"
+    }
+  ]
+}

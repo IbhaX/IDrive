@@ -1,0 +1,130 @@
+{
+  "id": "m12",
+  "n": 12,
+  "title": "Licensing and driving examinations",
+  "summary": "From learner's licence to permanent DL: eligibility, documents, the theory test, the driving test, renewal and the International Driving Permit.",
+  "accent": "#60a5fa",
+  "icon": "badge",
+  "level": "foundation",
+  "chapters": [
+    {
+      "id": "m12c1",
+      "title": "Getting licensed",
+      "items": ["lesson:licence-pathway", "article:docs"]
+    },
+    {
+      "id": "m12c2",
+      "title": "Passing the tests",
+      "items": ["lesson:driving-test-prep", "article:lictest", "exam:mock", "practice:signs"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "licence-pathway",
+      "title": "Learner's licence to driving licence, renewal and IDP",
+      "level": "foundation",
+      "minutes": 11,
+      "objectives": [
+        "Know the eligibility, timing and validity rules for a learner's licence and a DL.",
+        "Follow the online application process on Sarathi.",
+        "Understand renewal and the International Driving Permit."
+      ],
+      "intro": "Getting a licence in India is a two-step process: a learner's licence first, then a permanent driving licence after a driving test. Most of it is now done online through the Parivahan Sarathi portal.",
+      "sections": [
+        {
+          "h": "Eligibility",
+          "p": [
+            "Age limits come from s. 4 of the MV Act: 16 for a motorcycle with engine capacity not exceeding 50 cc, 18 for other non-transport vehicles, and 20 for transport vehicles. You must also be medically fit to drive; applicants above a certain age, and applicants for transport licences, need a medical certificate."
+          ]
+        },
+        {
+          "h": "Learner's licence",
+          "p": [
+            "Apply on Sarathi, selecting your state, with proof of age and address, a photo and signature, and the fee. You then take a computer-based test on road signs, rules and safe driving. A learner's licence is valid for six months from the date of issue (s. 14(1)). Under the Central Motor Vehicles Rules you must hold it for at least 30 days before taking the driving test. While learning, drive only with a person holding a valid licence for that class beside you and display an 'L' plate."
+          ],
+          "note": { "kind": "law", "text": "MV Act s. 14(1): learner's licence valid six months. CMVR: at least 30 days before the driving test. Verified 2026-11-25." }
+        },
+        {
+          "h": "Driving licence",
+          "p": [
+            "Within the learner's licence validity, book a driving test slot. You test in a vehicle of the class you are applying for. If you pass, the licence is issued and posted or made available digitally. For non-transport vehicles, s. 14(2) as amended in 2019 sets validity by age at issue or renewal: issued before 30 — valid until you turn 40; between 30 and 50 — ten years; between 50 and 55 — until you turn 60; above 55 — five years. A transport-vehicle licence is valid for five years."
+          ]
+        },
+        {
+          "h": "Renewal",
+          "p": [
+            "Renewal is applied for on Sarathi. Since the 2019 amendment you can apply up to one year before expiry. The 2019 changes removed the old 30-day grace period after expiry: a licence is not valid after its expiry date, so do not drive on an expired licence. If you leave it too long after expiry, you may have to take a test again."
+          ]
+        },
+        {
+          "h": "International Driving Permit",
+          "p": [
+            "An IDP lets you drive in many other countries alongside your Indian licence. Apply through Sarathi or your RTO with your valid DL, passport and visa details. Check the destination country's rules before you travel; some countries do not recognise an IDP or require their own licence for residents."
+          ]
+        }
+      ],
+      "terms": [["LL", "Learner's licence."], ["DL", "Driving licence."], ["Sarathi", "The national online portal for licence services."], ["IDP", "International Driving Permit."]],
+      "examples": ["Riya gets her LL on 1 March. She can take her driving test from 31 March and must pass before 1 September, when the LL expires."],
+      "mistakes": ["Letting the LL expire while waiting for a test slot.", "Driving alone on a learner's licence.", "Assuming there is a grace period after the DL expires."],
+      "safety": ["Use the learner period to practise in many conditions — rain, night, highways — with an experienced driver."],
+      "check": [
+        { "q": "How long is a learner's licence valid?", "o": ["30 days", "Six months", "One year", "Five years"], "a": 1, "r": "MV Act s. 14(1) makes it effective for six months from the date of issue." },
+        { "q": "How soon after getting an LL can you take the driving test?", "o": ["Immediately", "After at least 30 days", "After six months", "After one year"], "a": 1, "r": "The Central Motor Vehicles Rules require holding the LL for at least 30 days." },
+        { "q": "A 25-year-old gets a non-transport DL. Until when is it valid?", "o": ["Five years", "Ten years", "Until they turn 40", "For life"], "a": 2, "r": "Under s. 14(2) as amended in 2019, a licence issued before age 30 is valid until the holder turns 40." }
+      ],
+      "related": ["lesson:vehicle-categories", "lesson:driving-test-prep", "lesson:kerala-rules"],
+      "refs": ["mvact-ch2", "mvact2019", "sarathi", "cmvr"],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "driving-test-prep",
+      "title": "Preparing for the theory and driving tests",
+      "level": "foundation",
+      "minutes": 9,
+      "objectives": [
+        "Prepare for the computer-based learner's test.",
+        "Know what examiners look for in the ground and road test.",
+        "Avoid the most common reasons for failing."
+      ],
+      "intro": "Both tests check one thing: whether you can be trusted to drive safely on your own. Prepare for that, not just for the questions, and passing follows.",
+      "sections": [
+        {
+          "h": "The learner's test",
+          "p": [
+            "The test asks multiple-choice questions on signs, rules and safe behaviour, under time pressure. The number of questions, time and pass mark are set by the state and have changed recently in Kerala, so check the current pattern on the Kerala MVD website before your test. iDrive's mock exam follows a 30-question format to train speed and accuracy; practise until you pass comfortably, not just once."
+          ]
+        },
+        {
+          "h": "The ground and road test",
+          "p": [
+            "For two-wheelers, the ground test is usually a figure-of-eight track without putting a foot down. For cars, Kerala's revised format adds angular parking, parallel parking and a gradient test to the traditional 'H' or reversing test, plus a road test. Examiners watch your observation (mirrors, shoulder checks), signalling, speed control, lane position, and how you respond to pedestrians and other traffic."
+          ]
+        },
+        {
+          "h": "Common reasons for failing",
+          "p": [
+            "Not checking mirrors or blind spots. Rolling back on the gradient. Touching or knocking a pole or line. Stalling repeatedly. Not signalling, or signalling too late. Ignoring a STOP or GIVE WAY. Driving too fast or too hesitantly. Not giving way to pedestrians."
+          ],
+          "note": { "kind": "tip", "text": "Exaggerate your head movements for mirror and shoulder checks in the test — the examiner needs to see them." }
+        },
+        {
+          "h": "On the day",
+          "p": [
+            "Carry your learner's licence and required documents, arrive early, and make sure the test vehicle has valid papers and an 'L' plate. Sleep well, eat beforehand, and if you make a mistake, carry on calmly — one error does not always mean failure."
+          ]
+        }
+      ],
+      "terms": [["Ground test", "The manoeuvring part of the driving test on a marked track."], ["Road test", "Driving on public roads with an examiner."]],
+      "examples": ["During the gradient test you stall. Calmly apply the parking brake, restart, find the biting point again and move off without rolling back."],
+      "mistakes": ["Practising only the H track.", "Memorising answers without understanding them."],
+      "safety": ["Passing the test is the start of learning, not the end. Keep building experience carefully."],
+      "check": [
+        { "q": "Where should you check the current learner's-test format in Kerala?", "o": ["Social media", "The Kerala MVD website or your RTO", "A driving school poster", "It never changes"], "a": 1, "r": "The format is set by the state and has been revised; confirm with the official source." },
+        { "q": "Which is a common reason for failing the driving test?", "o": ["Checking mirrors often", "Rolling back on the gradient", "Driving within the speed limit", "Giving way to pedestrians"], "a": 1, "r": "Roll-back on the slope is a frequent fault; practise clutch control and the parking brake." }
+      ],
+      "related": ["lesson:clutch-hill-start", "lesson:parking-manoeuvres", "lesson:kerala-rules", "exam:mock"],
+      "refs": ["keralamvd", "kl-test-2024", "kl-hc-2025"],
+      "verified": "2026-11-25"
+    }
+  ]
+}

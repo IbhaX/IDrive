@@ -215,6 +215,36 @@ class ProgressConflictOut(BaseModel):
     server: ProgressOut
 
 
+# ---------- instructor ----------
+
+class ChatTurn(BaseModel):
+    role: Literal["user", "assistant"]
+    content: str = Field(max_length=4000)
+
+
+class InstructorIn(BaseModel):
+    question: str = Field(min_length=2, max_length=600)
+    history: list[ChatTurn] = Field(default_factory=list, max_length=12)
+
+
+class InstructorSource(BaseModel):
+    n: int
+    kind: str
+    id: str
+    title: str
+    group: str
+    href: str
+    snippet: str
+    cited: bool = False
+
+
+class InstructorOut(BaseModel):
+    mode: Literal["ai", "search"]
+    reason: Optional[str] = None
+    answer: Optional[str] = None
+    sources: list[InstructorSource]
+
+
 # ---------- misc ----------
 
 class OkOut(BaseModel):

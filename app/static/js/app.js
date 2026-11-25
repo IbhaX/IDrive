@@ -1,11 +1,13 @@
-/* IDrive app.js — shell: progress state, tabs, hash routing, event
-   delegation, keyboard, boot. Mirrors the source app's event contract. */
+/* iDrive app.js — shell: progress state, navigation, hash routing,
+   event delegation, keyboard, boot. Keeps the source app's data-* event
+   contract and adds the curriculum/lab/vehicle/hazard/instructor routes. */
 (() => {
 "use strict";
 const PKEY = "idrive-v1";
 
 function defaultProgress() {
-  return { seen: {}, box: {}, wrong: {}, best: 0, played: 0, lang: "both", mock: { taken: 0, passed: 0, best: 0 }, tq: {}, v: 1 };
+  return { seen: {}, box: {}, wrong: {}, best: 0, played: 0, lang: "both", mock: { taken: 0, passed: 0, best: 0 }, tq: {},
+    les: {}, bm: {}, rec: [], days: {}, rq: {}, hz: {}, lab: {}, secs: 0, v: 1 };
 }
 window.defaultProgress = defaultProgress;
 
@@ -17,7 +19,7 @@ window.P = (() => {
   return defaultProgress();
 })();
 
-window.S = { view: "learn", cat: "all", q: "", list: [], quiz: null, quizCat: "all", quizLen: 10, cards: null, cardCat: "all", exam: null, art: null, gq: "" };
+window.S = { view: "home", param: null, param2: null, cat: "all", q: "", list: [], quiz: null, quizCat: "all", quizLen: 10, cards: null, cardCat: "all", exam: null, art: null, gq: "" };
 
 function saveLocal() { try { localStorage.setItem(PKEY, JSON.stringify(P)); } catch (e) {} }
 window.saveLocal = saveLocal;
@@ -29,22 +31,31 @@ window.box = (id) => (P.box || {})[id] || 0;
 window.setBox = (id, v) => { P.box[id] = Math.max(0, Math.min(4, v)); P.seen[id] = 1; };
 window.shuffle = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 
-/* ---------- shell ---------- */
+/* ---------- navigation ---------- */
+const I = (d) => `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
 const TABS = [
-  { id: "learn", k: "tLearn", icon: '<path d="M3 4h7v7H3zM14 4h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>' },
-  { id: "theory", k: "tTheory", icon: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5M9 8h6M9 12h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>' },
-  { id: "exam", k: "tExam", icon: '<rect x="5" y="4" width="14" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 4V3h6v1M9 13l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' },
-  { id: "quiz", k: "tQuiz", icon: '<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' },
-  { id: "progress", k: "tProg", icon: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' },
+  { id: "home", k: "tHome", icon: '<path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>' },
+  { id: "course", k: "tCourse", icon: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5M9 8h6M9 12h6"/>' },
+  { id: "learn", k: "tSigns", icon: '<path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/>' },
+  { id: "vehicle", k: "tVehicle", icon: '<path d="M5 16l1.5-5A2 2 0 0 1 8.4 9.5h7.2a2 2 0 0 1 1.9 1.5L19 16M3 16h18v3H3z"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/>' },
+  { id: "science", k: "tScience", icon: '<path d="M9 3h6M10 3v6L4 19a1.5 1.5 0 0 0 1.3 2h13.4a1.5 1.5 0 0 0 1.3-2L14 9V3"/><path d="M7 15h10"/>' },
+  { id: "hazard", k: "tHazard", icon: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>' },
+  { id: "exam", k: "tTests", icon: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 13l2 2 4-4"/>' },
+  { id: "ask", k: "tAsk", icon: '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 10h6M9 13.5h4"/>' },
+  { id: "progress", k: "tProg", icon: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>' },
 ];
-const LANGS = [["en", "English"], ["ml", "മലയാളം"], ["both", "EN + മലയാളം"]];
+const DOCK = ["home", "course", "learn", "exam"];
+const TAB_OF = { lesson: "course", theory: "course", quiz: "exam", cards: "exam" };
+const LANGS = [["en", "EN", "English"], ["ml", "മല", "മലയാളം"], ["both", "EN+മല", "English + മലയാളം"]];
+const curTab = () => TAB_OF[S.view] || S.view;
 
-const tabHtml = () => TABS.map(t =>
-  `<a href="#${t.id}" ${(t.id === S.view || (S.view === "cards" && t.id === "quiz")) ? 'aria-current="page"' : ""}><svg viewBox="0 0 24 24" aria-hidden="true">${t.icon}</svg>${esc(I18n.u(t.k))}</a>`).join("");
+const tabHtml = (ids) => TABS.filter(t => !ids || ids.includes(t.id)).map(t =>
+  `<a href="#${t.id}" ${t.id === curTab() ? 'aria-current="page"' : ""} title="${esc(I18n.u(t.k))}">${I(t.icon)}<span>${esc(I18n.u(t.k))}</span></a>`).join("");
+const dockHtml = () => tabHtml(DOCK) + `<button class="morebtn ${DOCK.includes(curTab()) ? "" : "cur"}" data-act="more" aria-haspopup="true" aria-expanded="false">${I('<circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/>')}<span>${esc(I18n.u("more"))}</span></button>`;
 const langHtml = () => LANGS.map(l =>
-  `<button class="lg ${I18n.lang() === l[0] ? "on" : ""}" data-lang="${l[0]}" aria-pressed="${I18n.lang() === l[0]}">${l[1]}</button>`).join("");
+  `<button class="lg ${I18n.lang() === l[0] ? "on" : ""}" data-lang="${l[0]}" aria-pressed="${I18n.lang() === l[0]}" aria-label="${l[2]}" title="${l[2]}">${l[1]}</button>`).join("");
 
-/* theme: dark is the Aurora default; "light" sets data-theme=light */
+/* theme: dark is the default; "light" sets data-theme=light */
 const SUN = '<circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5 5l1.8 1.8M17.2 17.2 19 19M19 5l-1.8 1.8M6.8 17.2 5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
 const MOON = '<path d="M20 13.5A8.5 8.5 0 0 1 10.5 4a8.5 8.5 0 1 0 9.5 9.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>';
 function isLight() { return document.documentElement.dataset.theme === "light"; }
@@ -54,7 +65,7 @@ function applyThemeIcon() {
   ico.innerHTML = isLight() ? MOON : SUN;
   btn.setAttribute("aria-label", I18n.u(isLight() ? "themeDark" : "themeLight"));
   const mc = document.querySelector('meta[name="theme-color"]');
-  if (mc) mc.content = isLight() ? "#eef0f7" : "#06080f";
+  if (mc) mc.content = isLight() ? "#eef0f4" : "#07090d";
 }
 window.toggleTheme = () => {
   const light = !isLight();
@@ -66,34 +77,57 @@ window.toggleTheme = () => {
 
 function applyStatic() {
   document.documentElement.lang = I18n.lang() === "ml" ? "ml" : "en";
-  document.getElementById("subline").textContent = I18n.u("sub");
+  document.getElementById("subline").textContent = I18n.u("sub2");
   document.getElementById("foot").textContent = I18n.u("foot");
   document.getElementById("langs").innerHTML = langHtml();
+  const sb = document.getElementById("searchBtn");
+  if (sb) { sb.setAttribute("aria-label", I18n.u("searchAll")); sb.querySelector("span").textContent = I18n.u("search"); }
   applyThemeIcon();
   const sc = document.getElementById("sClose");
   if (sc) sc.setAttribute("aria-label", I18n.u("close"));
 }
 
-function setHash(v) {
-  const h = "#" + v;
-  if (location.hash !== h) history.replaceState(null, "", h);
-}
-window.setHash = setHash;
-
-function viewFromHash() {
-  const h = (location.hash || "#learn").slice(1);
-  return (TABS.some(t => t.id === h) || h === "cards") ? h : "learn";
-}
-
-/* ---------- render ---------- */
+/* ---------- routing: #view[/param[/param2[/…]]] ---------- */
 const VIEWS = {
+  home: (app) => Course.home(app),
+  course: (app) => Course.course(app),
+  lesson: (app) => Course.lessonView(app),
   learn: (app) => Learn.view(app),
+  vehicle: (app) => Vehicle.view(app),
+  science: (app) => Labs.view(app),
+  hazard: (app) => Hazard.view(app),
   theory: (app) => Theory.view(app),
   exam: (app) => Exam.view(app),
   quiz: (app) => Quiz.view(app),
   cards: (app) => Quiz.cardsView(app),
+  ask: (app) => Instructor.view(app),
   progress: (app) => Progress.view(app),
 };
+const ALIASES = { sign: "learn" };
+
+function parseHash() {
+  const raw = decodeURIComponent((location.hash || "#home").slice(1));
+  const [v, a, b, c] = raw.split("/");
+  let view = ALIASES[v] || v;
+  if (!VIEWS[view]) view = "home";
+  return { view, a: a || null, b: b || null, c: c || null, raw: v };
+}
+let lastRoute = "";
+function applyRoute() {
+  const r = parseHash();
+  S.view = r.view;
+  S.param = r.a; S.param2 = r.b;
+  if (r.view === "theory") S.art = r.a || null;
+  if (r.view === "learn" && r.raw === "learn" && r.a) S.cat = Data.catById[r.a] || r.a === "all" ? r.a : "all";
+  return r;
+}
+function setHash(v) {
+  const h = "#" + v;
+  if (location.hash !== h) history.replaceState(null, "", h);
+  lastRoute = location.hash;
+}
+window.setHash = setHash;
+window.go = (h) => { if (location.hash === h) route(); else location.hash = h; };
 
 function render() {
   Exam.stopTimer();
@@ -101,32 +135,68 @@ function render() {
   const ex = S.exam;
   if (S.view !== "exam" && ex && ex.mode === "mock" && ex.stage === "play" && ex.pausedLeft == null)
     ex.pausedLeft = Math.max(0, ex.deadline - Date.now());
-  document.getElementById("tabsTop").innerHTML = tabHtml();
-  document.getElementById("dockin").innerHTML = tabHtml();
+  Motion.resetView();
+  closeMore();
+  document.getElementById("tabsTop").innerHTML = tabHtml(TABS.map(t => t.id).filter(id => id !== "home"));
+  document.getElementById("dockin").innerHTML = dockHtml();
   applyStatic();
   Auth.renderChip();
   const app = document.getElementById("app");
-  const r = (VIEWS[S.view] || VIEWS.learn)(app);
+  app.dataset.view = S.view;
+  const r = (VIEWS[S.view] || VIEWS.home)(app);
   if (r && r.then) r.catch(() => {});
   requestAnimationFrame(() => {
     Motion.jelly(document.getElementById("tabsTop"));
     Motion.jelly(document.getElementById("dockin"));
     Motion.langPill(document.getElementById("langs"));
     Motion.bindTilt();
+    Motion.bindMagnetic();
   });
 }
 window.render = render;
 
-/* ---------- event delegation (same contract as the source app) ---------- */
+async function route() {
+  const r = applyRoute();
+  lastRoute = location.hash;
+  render();
+  window.scrollTo(0, 0);
+  // deep links that need an action after the view renders
+  if (r.raw === "sign" && r.a && Data.byId[r.a]) { await Data.ensureSvgIds([r.a]); Learn.openSheet(r.a, [r.a]); }
+  if (r.view === "exam" && r.a === "practice" && r.b && Data.topicById[r.b]) Exam.startPractice(r.b);
+}
+
+/* ---------- "more" menu (mobile dock) ---------- */
+function closeMore() {
+  const m = document.getElementById("moreMenu");
+  if (m && !m.hidden) { m.hidden = true; const b = document.querySelector(".morebtn"); if (b) b.setAttribute("aria-expanded", "false"); }
+}
+function toggleMore(btn) {
+  const m = document.getElementById("moreMenu");
+  if (!m) return;
+  if (!m.hidden) { closeMore(); return; }
+  m.innerHTML = `<div class="moregrid">${TABS.filter(t => !DOCK.includes(t.id)).map(t => `<a href="#${t.id}" ${t.id === curTab() ? 'aria-current="page"' : ""}>${I(t.icon)}<span>${esc(I18n.u(t.k))}</span></a>`).join("")}<a href="#theory">${I('<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5"/>')}<span>${esc(I18n.u("tTheory"))}</span></a><button data-act="search">${I('<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>')}<span>${esc(I18n.u("search"))}</span></button></div>`;
+  m.hidden = false;
+  btn.setAttribute("aria-expanded", "true");
+  Motion.rise(m.querySelectorAll("a,button"));
+}
+
+/* ---------- event delegation ---------- */
 document.addEventListener("click", (e) => {
   if (e.target === document.getElementById("sheet")) { Learn.closeSheet(); return; }
   if (e.target === document.getElementById("amodal")) { Auth.closeModal(); return; }
-  const t = e.target.closest("[data-go],[data-art],[data-etopic],[data-ans],[data-lang],[data-open],[data-act],[data-cat],[data-qcat],[data-qlen],[data-ccat],[data-opt],[data-amode],#sClose");
+  if (e.target === document.getElementById("searchOv")) { Search.close(); return; }
+  if (!e.target.closest("#moreMenu,.morebtn")) closeMore();
+  const t = e.target.closest("[data-go],[data-art],[data-etopic],[data-ans],[data-lang],[data-open],[data-act],[data-cat],[data-qcat],[data-qlen],[data-ccat],[data-opt],[data-amode],[data-kc],[data-vgroup],[data-vsev],[data-light],[data-part],[data-hz],[data-hzc],[data-ask],[data-sclose],#sClose");
   if (!t) return;
   if (t.id === "sClose") { Learn.closeSheet(); return; }
   const ds = t.dataset;
-  if (ds.go) { S.view = ds.go.slice(1); setHash(S.view); render(); return; }
-  if (ds.art !== undefined) { S.art = ds.art || null; render(); window.scrollTo(0, 0); return; }
+  if (ds.sclose) {
+    Search.close();
+    if (ds.askq) Instructor.pending = ds.askq;
+    return; // the link itself navigates
+  }
+  if (ds.go) { e.preventDefault(); go(ds.go); return; }
+  if (ds.art !== undefined) { go("#theory" + (ds.art ? "/" + ds.art : "")); return; }
   if (ds.etopic) { Exam.startPractice(ds.etopic); return; }
   if (ds.ans !== undefined) { Exam.select(+ds.ans); return; }
   if (ds.lang) { P.lang = ds.lang; save(); render(); if (!document.getElementById("sheet").hidden) Learn.renderSheet(); return; }
@@ -135,12 +205,20 @@ document.addEventListener("click", (e) => {
     Learn.openSheet(ds.open, solo ? [ds.open] : (S.view === "learn" ? S.list : null));
     return;
   }
-  if (ds.cat) { S.cat = ds.cat; Learn.renderGrid(); return; }
+  if (ds.cat) { S.cat = ds.cat; setHash("learn/" + ds.cat); Learn.renderGrid(); return; }
   if (ds.qcat) { S.quizCat = ds.qcat; Quiz.view(document.getElementById("app")); return; }
   if (ds.qlen) { S.quizLen = +ds.qlen; Quiz.view(document.getElementById("app")); return; }
   if (ds.ccat) { S.cardCat = ds.ccat; S.cards = null; Quiz.cardsView(document.getElementById("app")); return; }
   if (ds.opt !== undefined) { Quiz.answer(+ds.opt); return; }
   if (ds.amode) { Auth.openModal(ds.amode); return; }
+  if (ds.kc !== undefined) { Course.kcAnswer(+ds.kc); return; }
+  if (ds.vgroup) { Vehicle.group = ds.vgroup; Vehicle.explore(document.getElementById("vHost"), S.param2); return; }
+  if (ds.vsev) { Vehicle.sev = ds.vsev; Vehicle.lightsView(document.getElementById("vHost"), S.param2); return; }
+  if (ds.light) { S.param2 = ds.light; setHash("vehicle/lights/" + ds.light); Vehicle.lightsView(document.getElementById("vHost"), ds.light); return; }
+  if (ds.part) { Vehicle.selectPart(ds.part); return; }
+  if (ds.hz) { Hazard.spot(ds.hz); return; }
+  if (ds.hzc !== undefined) { Hazard.choose(+ds.hzc); return; }
+  if (ds.ask) { Instructor.send(ds.ask); return; }
   switch (ds.act) {
     case "startmock": Exam.startMock(); break;
     case "enext": Exam.advance(); break;
@@ -153,12 +231,12 @@ document.addEventListener("click", (e) => {
     case "quizsetup": S.quiz = null; Quiz.view(document.getElementById("app")); break;
     case "reviseMissed": {
       Quiz.buildCards(S.quiz.missed.slice());
-      Data.ensureSvgs("all").then(() => { S.view = "cards"; setHash("cards"); render(); });
+      Data.ensureSvgs("all").then(() => go("#cards"));
       break;
     }
     case "reviseWeak": {
       Quiz.buildCards(Data.D.filter(d => P.wrong[d.id]).sort((a, b) => P.wrong[b.id] - P.wrong[a.id]).slice(0, 8).map(d => d.id));
-      Data.ensureSvgs("all").then(() => { S.view = "cards"; setHash("cards"); render(); });
+      Data.ensureSvgs("all").then(() => go("#cards"));
       break;
     }
     case "flip": S.cards.flip = !S.cards.flip; Quiz.cardsView(document.getElementById("app")); break;
@@ -173,10 +251,27 @@ document.addEventListener("click", (e) => {
     case "signin": Auth.openModal("login"); break;
     case "theme": toggleTheme(); break;
     case "account": if (confirm(I18n.u("signOut") + "?")) Auth.signOut(); break;
+    case "search": closeMore(); Search.open(); break;
+    case "more": toggleMore(t); break;
+    case "bookmark": Course.toggleBookmark(ds.id); { const on = Course.bookmarked(ds.id); t.classList.toggle("on", on); t.setAttribute("aria-pressed", on); const p = t.querySelector("path"); if (p) p.setAttribute("fill", on ? "currentColor" : "none"); Motion.pop(t); Motion.toast(I18n.u(on ? "bookmarked" : "unbookmarked")); } break;
+    case "kcnext": Course.kcNext(); break;
+    case "kcretry": Course.kcRetry(); break;
+    case "labrun": Labs.drawStop(true); break;
+    case "rtpad": Labs.rtPress(); break;
+    case "engplay": Labs.engPlay(); break;
+    case "engstep": Labs.engStep(); break;
+    case "hzstart": Hazard.start(); break;
+    case "hzreplay": Hazard.replay(); break;
   }
 });
 
 document.addEventListener("keydown", (e) => {
+  const typing = /^(INPUT|TEXTAREA|SELECT)$/.test((e.target && e.target.tagName) || "");
+  if ((e.key === "k" && (e.metaKey || e.ctrlKey)) || (e.key === "/" && !typing && !Search.isOpen())) {
+    e.preventDefault(); Search.open(); return;
+  }
+  if (Search.isOpen()) { if (e.key === "Escape") Search.close(); return; }
+  if (e.key === "Escape") closeMore();
   const sheet = document.getElementById("sheet");
   if (!sheet.hidden) {
     if (e.key === "Escape") Learn.closeSheet();
@@ -186,6 +281,11 @@ document.addEventListener("keydown", (e) => {
   }
   const am = document.getElementById("amodal");
   if (!am.hidden && e.key === "Escape") { Auth.closeModal(); return; }
+  // SVG hotspots (vehicle explorer) act like buttons
+  if ((e.key === "Enter" || e.key === " ") && e.target && e.target.dataset && e.target.dataset.part && e.target.tagName.toLowerCase() === "g") {
+    e.preventDefault(); Vehicle.selectPart(e.target.dataset.part); return;
+  }
+  if (S.view === "science" && S.param === "reaction" && e.key === " " && !typing && e.target.tagName !== "BUTTON") { e.preventDefault(); Labs.rtPress(); return; }
   if (S.view === "cards" && S.cards && S.cards.i < S.cards.q.length) {
     if (e.key === " " || e.key === "Enter") {
       if (e.target.tagName !== "BUTTON") { e.preventDefault(); S.cards.flip = !S.cards.flip; Quiz.cardsView(document.getElementById("app")); }
@@ -194,8 +294,10 @@ document.addEventListener("keydown", (e) => {
 });
 
 window.addEventListener("hashchange", () => {
-  const v = viewFromHash();
-  if (v !== S.view) { S.view = v; render(); }
+  if (location.hash === lastRoute) return;
+  route().then(() => {
+    if (S.view === "ask" && Instructor.pending) { const q = Instructor.pending; Instructor.pending = null; setTimeout(() => Instructor.send(q), 50); }
+  });
 });
 
 window.addEventListener("visibilitychange", () => {
@@ -205,18 +307,17 @@ window.addEventListener("pagehide", saveLocal);
 
 /* ---------- boot ---------- */
 (async function boot() {
-  S.view = viewFromHash();
   const app = document.getElementById("app");
   app.innerHTML = `<section class="panel"><div class="skel"><i style="height:26px;width:34%"></i><i style="height:16px"></i><i style="height:16px;width:80%"></i><i style="height:16px;width:60%"></i></div></section>`;
   try {
     await Data.loadIndex();
   } catch (e) {
-    app.innerHTML = `<section class="panel"><h2>IDrive</h2><p class="muted">Failed to load content — is the server running?</p></section>`;
+    app.innerHTML = `<section class="panel"><h2>iDrive</h2><p class="muted">Failed to load content — is the server running?</p></section>`;
     return;
   }
-  // SVGs stream in lazily — re-render Learn if the view drew before they arrived
   Data.ensureSvgs("all").then(() => { if (S.view === "learn") render(); }).catch(() => {});
+  Course.loadOutline().catch(() => {});
   await Auth.restore();
-  render();
+  await route();
 })();
 })();

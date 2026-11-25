@@ -43,6 +43,13 @@ class Settings(BaseSettings):
     google_client_id: str = ""
     google_client_secret: str = ""
 
+    # AI instructor (any OpenAI-compatible chat-completions API). Empty key
+    # keeps the instructor in grounded search-only mode.
+    ai_api_key: str = ""
+    ai_base_url: str = "https://openrouter.ai/api/v1"
+    ai_model: str = "openai/gpt-4o-mini"
+    rate_limit_ai: str = "12/minute"
+
 
 @lru_cache
 def get_settings() -> Settings:

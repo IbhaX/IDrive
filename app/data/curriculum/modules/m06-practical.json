@@ -1,0 +1,238 @@
+{
+  "id": "m06",
+  "n": 6,
+  "title": "Practical driving theory",
+  "summary": "The theory behind every manoeuvre: moving off, clutch control, hill starts, parking, turns, lane changes, overtaking and junctions.",
+  "accent": "#f97316",
+  "icon": "wheel",
+  "level": "intermediate",
+  "chapters": [
+    {
+      "id": "m06c1",
+      "title": "Starting, moving and stopping",
+      "items": ["lesson:moving-off-stopping", "lesson:clutch-hill-start", "article:skills"]
+    },
+    {
+      "id": "m06c2",
+      "title": "Low-speed manoeuvres",
+      "items": ["lesson:parking-manoeuvres", "article:park", "practice:park"]
+    },
+    {
+      "id": "m06c3",
+      "title": "Traffic manoeuvres",
+      "items": ["lesson:lane-change-overtake", "lesson:junctions-roundabouts", "article:junc", "practice:junc"]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "moving-off-stopping",
+      "title": "Starting, moving off and stopping smoothly",
+      "level": "beginner",
+      "minutes": 10,
+      "objectives": [
+        "Follow a safe cockpit drill before starting.",
+        "Move off using mirrors, signal and blind-spot check.",
+        "Stop smoothly at a chosen point using progressive braking."
+      ],
+      "intro": "Moving off and stopping are the first things you learn and the things you will do most often. Doing them in the same order every time builds habits that protect you later, when your attention is needed elsewhere.",
+      "sections": [
+        {
+          "h": "Cockpit drill",
+          "p": ["Before you start the engine, set yourself up. Doors closed. Seat adjusted so you can press the pedals fully with a slight bend in the knee and reach the top of the wheel with a slightly bent arm. Head restraint level with the top of your ears. Mirrors adjusted. Seat belt on. Check the parking brake is on and the gear lever is in neutral (or P)."],
+          "steps": ["Doors", "Seat and head restraint", "Steering position", "Seat belt", "Mirrors", "Parking brake on, neutral or P"]
+        },
+        {
+          "h": "Moving off",
+          "p": ["Use the sequence Mirrors – Signal – Manoeuvre. Check the interior and right mirror, signal right if anyone could benefit, then look over your right shoulder at the blind spot — a motorcycle can hide there. Only move when there is a safe gap, and cancel the signal once you are moving."],
+          "steps": ["Press the clutch and select first gear (or D).", "Set a little engine power and find the biting point.", "Check mirrors and the blind spot.", "Signal if needed.", "Release the parking brake and ease off the clutch while adding a little power."]
+        },
+        {
+          "h": "Stopping",
+          "p": ["Choose your stopping point early. Check mirrors, signal left if pulling in, then brake progressively: gently at first, firmer in the middle, and easing off just before the car stops so it does not jerk. In a manual car, press the clutch just before the car stops so the engine does not stall. Apply the parking brake and select neutral when stopped for more than a moment."],
+          "note": { "kind": "tip", "text": "Look at where you want to stop, not at the bonnet. Your hands and feet follow your eyes." }
+        }
+      ],
+      "terms": [
+        ["MSM", "Mirrors – Signal – Manoeuvre, the basic routine before any change of speed or direction."],
+        ["Blind spot", "An area around the car you cannot see in the mirrors."],
+        ["Progressive braking", "Braking gently, then more firmly, then easing off for a smooth stop."]
+      ],
+      "examples": ["Pulling away from the kerb on a busy street, you check the right mirror, see clear road, but a shoulder check shows a scooter filtering past. Waiting two seconds avoids a collision."],
+      "mistakes": ["Skipping the blind-spot check.", "Stopping by stamping on the brake at the last moment.", "Signalling and pulling out in the same instant, giving others no time."],
+      "safety": ["Never assume a signal gives you the right to move. It tells others your plan; it does not clear the road."],
+      "check": [
+        { "q": "What is the correct order before moving off?", "o": ["Signal, mirrors, move", "Mirrors, signal, blind-spot check, move", "Move, then check mirrors", "Horn, then move"], "a": 1, "r": "Check mirrors first, signal if it helps others, check the blind spot, then move when it is safe." },
+        { "q": "Why ease off the brake just before stopping?", "o": ["To save brake pads", "To stop smoothly without a jerk", "To keep the engine running", "It is the law"], "a": 1, "r": "Releasing a little pressure as the car comes to rest avoids the final jolt and is easier on passengers." }
+      ],
+      "related": ["lesson:clutch-hill-start", "lesson:vehicle-controls"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "clutch-hill-start",
+      "title": "Clutch control, gear changes and hill starts",
+      "level": "intermediate",
+      "minutes": 10,
+      "objectives": [
+        "Use the biting point for slow control.",
+        "Change gear smoothly up and down.",
+        "Start on a slope without rolling back, with and without hill-hold."
+      ],
+      "intro": "Clutch control is the skill that makes manual driving feel smooth. It matters most at walking pace — in traffic, while parking and on hills — and it is what the gradient test checks.",
+      "sections": [
+        {
+          "h": "Using the biting point",
+          "p": ["Lift the clutch slowly until the engine note drops slightly and the car wants to creep. That is the biting point. Lift a fraction more to move, press a fraction to slow. At very low speed, small clutch movements give finer control than the brake."]
+        },
+        {
+          "h": "Changing gear",
+          "p": ["Up-change: ease off the accelerator, press the clutch fully, move the lever to the next gear with an open palm, lift the clutch smoothly, then add power. Down-change: slow down first with the brake, then select the gear that suits the new speed. You do not have to go through every gear on the way down."]
+        },
+        {
+          "h": "Hill start",
+          "p": ["On an uphill slope, gravity will roll the car back as soon as the brakes are released. The aim is to have the clutch at the biting point and enough power before the parking brake comes off."],
+          "steps": ["Parking brake on, first gear selected.", "Set a little more engine power than on the flat.", "Lift the clutch to the biting point and hold it still; you may feel the car's nose rise slightly.", "Check mirrors and blind spot.", "Release the parking brake — the car should hold or creep forward.", "Lift the clutch a little more and add power as you move off."],
+          "note": { "kind": "tip", "text": "With hill-hold assist, the car holds for about a second after you release the foot brake. Use it, but practise the parking-brake method too — test vehicles may not have it." }
+        }
+      ],
+      "terms": [
+        ["Biting point", "Where the clutch plates begin to connect engine and gearbox."],
+        ["Stall", "When the engine stops because the clutch was released without enough power."],
+        ["Roll-back", "Moving backwards on a slope when starting — a fault in a driving test."]
+      ],
+      "examples": ["Stopped in a queue on a steep ghat road, use the parking brake each time the queue halts rather than holding the car on the clutch."],
+      "mistakes": ["Holding the car on a hill with the clutch for long periods — it overheats and wears.", "Looking down at the gear lever.", "Releasing the parking brake before reaching the biting point."],
+      "safety": ["Leave a gap to the vehicle ahead on a hill — it may roll back when it moves off."],
+      "check": [
+        { "q": "On a hill start, when should you release the parking brake?", "o": ["Before finding the biting point", "Once the clutch is at the biting point with some power set", "After the car starts rolling", "Never"], "a": 1, "r": "The clutch must be holding the car before the parking brake comes off, or it will roll back." },
+        { "q": "Why should you not hold the car on a slope using only the clutch?", "o": ["It is illegal", "It overheats and wears the clutch", "It drains the battery", "It damages the tyres"], "a": 1, "r": "Slipping the clutch to hold the car generates heat and rapid wear." }
+      ],
+      "related": ["lesson:transmissions", "lesson:driving-test-prep"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "parking-manoeuvres",
+      "title": "Reversing, parallel parking, angular parking and three-point turns",
+      "level": "intermediate",
+      "minutes": 12,
+      "objectives": [
+        "Reverse in a straight line and around a corner with full observation.",
+        "Parallel park using reference points.",
+        "Park in an angled bay and turn in the road safely."
+      ],
+      "intro": "Low-speed manoeuvres rarely cause serious injuries, but they cause countless scrapes — and they make up a large part of the Kerala ground test. The secret is to go slowly enough that you have time to look.",
+      "sections": [
+        {
+          "h": "Reversing",
+          "p": ["Turn your body to look through the rear window, with your left hand on the top of the wheel or holding the passenger seat if you need to. Use the mirrors and camera as aids, not the only view. Move at walking pace using clutch control. Look all around before and during the manoeuvre — children and animals can appear behind the car."]
+        },
+        {
+          "h": "Parallel parking",
+          "p": ["Choose a space at least one and a half times your car's length. Signal left and stop alongside the car in front of the space, about half a metre away, with your rear bumpers roughly in line."],
+          "steps": ["Select reverse and check all around.", "Reverse slowly until the rear of your car is level with the rear of the car beside you.", "Steer left briskly; reverse until your car is at about 45° to the kerb.", "Straighten the wheel and reverse until your front corner clears the parked car's rear.", "Steer right to bring the front in, watching the kerb in the left mirror.", "Straighten up and adjust position so you are close to and parallel with the kerb."]
+        },
+        {
+          "h": "Angular (bay) parking",
+          "p": ["Angled bays are easier to enter forwards and leave in reverse, or the other way round depending on local rules and the test format. Approach slowly, start turning when your mirror lines up with the near line of the bay, and centre the car between the lines. Reversing in gives a better view when you leave."]
+        },
+        {
+          "h": "Turning in the road (three-point turn)",
+          "p": ["Use it only on a quiet road wide enough. Check all around. Steer fully right, move slowly to the opposite kerb, and stop before touching it. Reverse while steering fully left, stopping before the kerb behind, looking all around. Move forward, steering right, to complete the turn."],
+          "note": { "kind": "safety", "text": "Never turn in the road near a bend, the brow of a hill, or anywhere oncoming drivers cannot see you in time." }
+        }
+      ],
+      "terms": [["Reference point", "A part of the car lined up with a feature outside to judge position."], ["Bay", "A marked parking space."]],
+      "examples": ["In a crowded market, reversing out of a bay is dangerous because you cannot see approaching scooters. Reversing in when you arrive lets you drive out forwards later."],
+      "mistakes": ["Reversing too fast to see.", "Relying only on a reversing camera.", "Steering while stationary, which strains the steering and tyres."],
+      "safety": ["Before reversing, walk around the vehicle if you could not see behind it when you arrived."],
+      "check": [
+        { "q": "During reversing, where should you mainly look?", "o": ["At the camera screen only", "Through the rear window, turning your body, plus all-round checks", "At the instrument cluster", "Straight ahead"], "a": 1, "r": "Turn to look where you are going and keep checking all around; mirrors and cameras are aids." },
+        { "q": "A three-point turn should not be done:", "o": ["On a quiet road", "Near a bend or the brow of a hill", "In daylight", "In a car with power steering"], "a": 1, "r": "Oncoming drivers may not see you in time near bends and crests." }
+      ],
+      "related": ["article:park", "lesson:driving-test-prep"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "lane-change-overtake",
+      "title": "Lane changing, merging and overtaking",
+      "level": "intermediate",
+      "minutes": 11,
+      "objectives": [
+        "Change lane using mirrors, signal and a blind-spot check.",
+        "Judge whether an overtake is safe on a two-lane road.",
+        "Merge into fast traffic by matching speed."
+      ],
+      "intro": "On two-lane undivided roads, overtaking is one of the most dangerous things a driver does. A head-on crash combines both vehicles' speeds. The skill is less about acceleration and more about deciding when not to overtake.",
+      "sections": [
+        {
+          "h": "Changing lanes",
+          "p": ["Mirrors, signal, blind spot, then move gradually across, keeping your speed steady. Do not change lanes in a junction, on a bend, or when it would force another driver to brake."]
+        },
+        {
+          "h": "Should I overtake?",
+          "p": ["Ask: Is it legal here (no solid line, no sign, not near a junction, crossing or bend)? Can I see far enough to complete the whole overtake and return with room to spare? Is the vehicle ahead likely to turn or pull out? Will I be able to get back in? If any answer is no or unsure, stay behind.", "Overtaking a 60 km/h lorry at 80 km/h takes a long time and distance: the speed difference is only 20 km/h. Meanwhile an oncoming car closing at 80 km/h means you approach each other at 160 km/h."],
+          "steps": ["Hang back to see past the vehicle ahead.", "Check mirrors and the blind spot.", "Signal right.", "Move out, accelerate decisively in a lower gear.", "Keep a wide berth as you pass, especially of two-wheelers.", "Signal left and return only when you can see the overtaken vehicle in your interior mirror.", "Cancel the signal."]
+        },
+        {
+          "h": "Merging",
+          "p": ["On a slip road, use its length to match the speed of traffic on the main carriageway, find a gap, signal, and merge without forcing anyone to brake. Drivers on the main road should, where safe, move over or adjust speed to help."]
+        }
+      ],
+      "terms": [["Closing speed", "The speed at which two vehicles approach each other — the sum of their speeds when head-on."], ["Slip road", "A road joining or leaving a highway, used to match speed."]],
+      "examples": ["Behind a bus on a winding state highway, you can see 200 m ahead but a bend hides the rest. Wait for a straight with a clear view; the few minutes saved are not worth a head-on crash."],
+      "mistakes": ["Following too closely before overtaking, so you cannot see ahead.", "Cutting in too early in front of the overtaken vehicle.", "Overtaking a queue of vehicles in one go."],
+      "safety": ["If you start an overtake and see danger, slow down and return behind — do not race it."],
+      "check": [
+        { "q": "Two cars drive towards each other, each at 80 km/h. What is the closing speed?", "o": ["80 km/h", "120 km/h", "160 km/h", "0 km/h"], "a": 2, "r": "Head-on, speeds add. That is why misjudged overtakes are so dangerous." },
+        { "q": "When should you return to the left after overtaking?", "o": ["Immediately after passing the front bumper", "When you can see the overtaken vehicle in your interior mirror", "After 5 seconds", "When the other driver flashes"], "a": 1, "r": "Seeing it in your interior mirror means you have left enough room not to cut in." }
+      ],
+      "related": ["lesson:following-distance", "article:speed", "scenario:lane-cut"],
+      "refs": [],
+      "verified": "2026-11-25"
+    },
+    {
+      "id": "junctions-roundabouts",
+      "title": "Junctions, roundabouts and U-turns",
+      "level": "intermediate",
+      "minutes": 10,
+      "objectives": [
+        "Approach junctions with the right speed, position and observation.",
+        "Apply right of way at uncontrolled junctions and roundabouts.",
+        "Make right turns and U-turns without cutting across others."
+      ],
+      "intro": "Junctions are where paths cross, so they are where many collisions happen. A good junction approach gives you time to see, to be seen, and to change your mind.",
+      "sections": [
+        {
+          "h": "Approaching a junction",
+          "p": ["Look for signs and markings early. Check mirrors, signal, and position: keep left to turn left; move towards the centre of the road (left of the centre line) to turn right. Slow down so you can stop at the line if needed. Look right, left, and right again, and look for pedestrians crossing the road you are turning into."]
+        },
+        {
+          "h": "Right of way",
+          "p": ["At a STOP sign, stop at the line. At a GIVE WAY sign or a major road, give way to traffic on the major road. At an uncontrolled junction of equal roads, give way to traffic coming from your right, and be ready for others who do not. When turning right, give way to oncoming traffic going straight or turning left. Always give way to pedestrians already crossing."]
+        },
+        {
+          "h": "Roundabouts",
+          "p": ["Give way to traffic already on the roundabout, which comes from your right. Choose your lane early: usually the left lane to turn left or go straight on, the right lane to turn right or go full circle, unless markings say otherwise. Signal left as you pass the exit before the one you want."],
+          "note": { "kind": "tip", "text": "Watch the front wheels and the driver's head of vehicles on the roundabout — they show what the vehicle will do better than its indicator." }
+        },
+        {
+          "h": "U-turns",
+          "p": ["Make a U-turn only where it is allowed and you can see clearly in both directions. On divided roads use the marked median openings. Do not U-turn where a sign prohibits it, on a bend, near the brow of a hill, or across a solid line."]
+        }
+      ],
+      "terms": [["Uncontrolled junction", "A junction with no signals, signs or officer controlling it."], ["Major road", "The road with priority at a junction, often wider or marked with a GIVE WAY or STOP on the minor road."]],
+      "examples": ["Turning right at a signal, a scooter comes straight through from the opposite side. Wait in the junction with wheels straight until it passes — if you are hit from behind, straight wheels stop you being pushed into oncoming traffic."],
+      "mistakes": ["Cutting the corner when turning right.", "Forgetting to look for pedestrians in the road you are turning into.", "Signalling the wrong way on roundabouts."],
+      "safety": ["Never wave a pedestrian across a road — another vehicle may not stop."],
+      "check": [
+        { "q": "At a roundabout, you usually give way to:", "o": ["Traffic joining from your left", "Traffic already on the roundabout, coming from your right", "Nobody", "Larger vehicles only"], "a": 1, "r": "Traffic already circulating has priority; in India it approaches from your right." },
+        { "q": "Waiting to turn right in a junction, how should your wheels be?", "o": ["Turned right, ready to go", "Straight", "Turned left", "It does not matter"], "a": 1, "r": "If you are rear-ended with wheels turned, you are pushed into oncoming traffic." }
+      ],
+      "related": ["article:junc", "scenario:side-road", "lesson:sign-families"],
+      "refs": [],
+      "verified": "2026-11-25"
+    }
+  ]
+}
