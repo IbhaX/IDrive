@@ -5,15 +5,16 @@ Learn Indian road signs, markings, signals, hand signals and driving theory — 
 ## Quick start
 
 ```bash
-pip install -r requirements-dev.txt   # or: make install
-uvicorn app.main:app --reload          # or: make dev
-# open http://localhost:8000
+pip install -e .                     # installs the `idrive` command
+idrive                               # → http://localhost:8765
+# dev alternatives: pip install -r requirements-dev.txt && uvicorn app.main:app --reload
+# flags: idrive --host 0.0.0.0 --port 8000 --reload
 ```
 
 Run checks:
 
 ```bash
-python -m pytest -q     # or: make test   — 39 unit/API/data tests
+python -m pytest -q     # or: make test   — 43 unit/API/data tests
 python tools/smoke.py   # or: make smoke  — end-to-end happy path
 python -m compileall -q app tests tools  # or: make lint
 ```

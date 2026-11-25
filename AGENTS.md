@@ -5,7 +5,7 @@
 | Task | Command |
 | --- | --- |
 | Install (runtime + dev) | `pip install -r requirements-dev.txt` |
-| Run dev server | `uvicorn app.main:app --reload` (or `make dev`) |
+| Run dev server | `idrive` (after `pip install -e .`) or `uvicorn app.main:app --reload` (or `make dev`) |
 | Tests | `python -m pytest -q` (or `make test`) |
 | Smoke check | `python tools/smoke.py` (or `make smoke`) |
 | Re-extract content | `node tools/extract_data.mjs` (or `make extract`) |
