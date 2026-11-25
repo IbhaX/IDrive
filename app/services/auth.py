@@ -5,6 +5,7 @@ from __future__ import annotations
 import re
 from datetime import datetime, timedelta, timezone
 
+import httpx
 from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -46,6 +47,47 @@ async def login(db: AsyncSession, email: str, password: str) -> User | None:
         return None
     user.last_login_at = datetime.now(timezone.utc)
     await db.commit()
+    return user
+
+
+async def verify_google_id_token(credential: str) -> dict[str, str]:
+    """Verify a GIS ID token via Google's tokeninfo endpoint and return
+    {sub, email, name}. Raises ValueError on any invalid claim."""
+    try:
+        async with httpx.AsyncClient(timeout=8) as c:
+            r = await c.get(
+                "https://oauth2.googleapis.com/tokeninfo",
+                params={"id_token": credential},
+            )
+    except httpx.HTTPError:
+        raise ValueError("google verify unreachable")
+    if r.status_code != 200:
+        raise ValueError("token rejected")
+    info = r.json()
+    if info.get("aud") != get_settings().google_client_id:
+        raise ValueError("token not for this app")
+    if info.get("iss") not in ("accounts.google.com", "https://accounts.google.com"):
+        raise ValueError("bad issuer")
+    if info.get("email_verified") not in (True, "true", "1"):
+        raise ValueError("email unverified")
+    email = normalise_email(info.get("email", ""))
+    if not valid_email(email):
+        raise ValueError("no verified email")
+    return {"sub": str(info.get("sub", "")), "email": email, "name": (info.get("name") or "").strip()}
+
+
+async def login_or_register_google(db: AsyncSession, email: str, name: str) -> User:
+    """Find a user by verified email or create a passwordless account.
+    Accounts merge on email — Google-verified addresses are trusted."""
+    user = await db.scalar(select(User).where(User.email == email))
+    if user is None:
+        user = User(email=email, password_hash="", name=name or email.split("@")[0])
+        db.add(user)
+        await db.commit()
+        await db.refresh(user)
+    else:
+        user.last_login_at = datetime.now(timezone.utc)
+        await db.commit()
     return user
 
 

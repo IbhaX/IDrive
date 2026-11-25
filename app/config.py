@@ -37,6 +37,12 @@ class Settings(BaseSettings):
     cors_origins: str = "*"
     log_level: str = "INFO"
 
+    # Google sign-in (GIS button → ID token verified server-side). Empty
+    # disables the feature. The secret is unused by this flow but kept for
+    # deployments that add the server-side code exchange later.
+    google_client_id: str = ""
+    google_client_secret: str = ""
+
 
 @lru_cache
 def get_settings() -> Settings:

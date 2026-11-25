@@ -85,6 +85,54 @@ def test_protected_endpoints_401(client) -> None:
     assert client.post("/api/exam/mock").status_code == 401
 
 
+def test_google_disabled_returns_404(client) -> None:
+    assert client.get("/api/auth/config").json()["google_client_id"] == ""
+    assert client.post("/api/auth/google", json={
+        "credential": "x" * 30}).status_code == 404
+
+
+def test_google_signin_flow(client, monkeypatch) -> None:
+    from app.config import get_settings
+    from app.services import auth as auth_service
+
+    monkeypatch.setattr(get_settings(), "google_client_id", "test-client-id")
+
+    async def fake_verify(credential: str):
+        return {"sub": "g123", "email": "g@example.com", "name": "G Person"}
+    monkeypatch.setattr(auth_service, "verify_google_id_token", fake_verify)
+
+    r = client.post("/api/auth/google", json={"credential": "x" * 30})
+    assert r.status_code == 200
+    tok = r.json()["token"]
+    assert r.json()["user"]["email"] == "g@example.com"
+    assert r.json()["user"]["name"] == "G Person"
+    me = client.get("/api/auth/me", headers={"Authorization": f"Bearer {tok}"})
+    assert me.status_code == 200
+
+    # second sign-in reuses the same account (merge on verified email)
+    r2 = client.post("/api/auth/google", json={"credential": "x" * 30})
+    assert r2.json()["user"]["id"] == r.json()["user"]["id"]
+
+    # a Google-only account can't sign in with a password
+    bad = client.post("/api/auth/login", json={
+        "email": "g@example.com", "password": "whatever12"})
+    assert bad.status_code == 401
+
+
+def test_google_bad_token_401(client, monkeypatch) -> None:
+    from app.config import get_settings
+    from app.services import auth as auth_service
+
+    monkeypatch.setattr(get_settings(), "google_client_id", "test-client-id")
+
+    async def fake_verify(credential: str):
+        raise ValueError("token rejected")
+    monkeypatch.setattr(auth_service, "verify_google_id_token", fake_verify)
+
+    r = client.post("/api/auth/google", json={"credential": "x" * 30})
+    assert r.status_code == 401
+
+
 # ---------- quiz / practice ----------
 
 def test_sign_quiz(client, auth_headers) -> None:

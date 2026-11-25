@@ -37,6 +37,7 @@ A.openModal = (mode) => {
     </div>
     <div class="aerr" id="aerr" role="alert"></div>
     <div class="row"><button class="btn primary big" id="ago">${esc(isLogin ? I18n.u("signIn") : I18n.u("createAcct"))}</button><button class="btn" id="aclose">${esc(I18n.u("close"))}</button></div>
+    <div class="gzone" id="gzone"><div class="adiv"><span>${esc(I18n.u("or"))}</span></div><div class="gbtn" id="gbtn"></div></div>
     <p class="muted">${esc(I18n.u("authNote"))}</p>`;
   m.hidden = false;
   m.classList.add("opening");
@@ -60,7 +61,54 @@ A.openModal = (mode) => {
   card.querySelector("#aclose").onclick = A.closeModal;
   card.querySelector("#ago").onclick = () => A.submit(isLogin);
   card.onkeydown = (e) => { if (e.key === "Enter") A.submit(isLogin); };
+  A.mountGoogle(card);
   setTimeout(() => { const f = card.querySelector(isLogin ? "#aemail" : "#aname") || pw; f && f.focus(); }, 60);
+};
+
+/* shared post-signin path for email/password and Google */
+A.finishAuth = async (r) => {
+  Api.setToken(r.token);
+  A.user = r.user;
+  A.closeModal();
+  A.renderChip();
+  Motion.toast(I18n.u("welcome") + (r.user.name ? ", " + r.user.name : ""));
+  await A.syncFromServer();
+  render();
+};
+
+/* ---------- Google sign-in (GIS button → POST /api/auth/google) ---------- */
+let gcfgPromise = null;
+A.gconfig = () => {
+  if (!gcfgPromise) gcfgPromise = Api.get("/api/auth/config").catch(() => ({ google_client_id: "" }));
+  return gcfgPromise;
+};
+
+A.onGoogle = async (resp) => {
+  const err = document.querySelector("#acard .aerr");
+  try {
+    const r = await Api.post("/api/auth/google", { credential: resp.credential });
+    await A.finishAuth(r);
+  } catch (e) {
+    if (err) err.textContent = I18n.u("networkErr");
+  }
+};
+
+A.mountGoogle = async (card) => {
+  const holder = card.querySelector("#gbtn"), zone = card.querySelector("#gzone");
+  if (!holder || !zone) return;
+  const cfg = await A.gconfig();
+  const g = window.google && window.google.accounts && window.google.accounts.id;
+  if (!cfg.google_client_id || !g || !card.isConnected) { zone.hidden = true; return; }
+  g.initialize({ client_id: cfg.google_client_id, callback: A.onGoogle });
+  holder.innerHTML = "";
+  g.renderButton(holder, {
+    type: "standard",
+    theme: document.documentElement.dataset.theme === "light" ? "outline" : "filled_black",
+    size: "large",
+    text: "continue_with",
+    shape: "pill",
+    width: Math.min(holder.clientWidth || 320, 400),
+  });
 };
 
 A.closeModal = () => {
@@ -80,13 +128,7 @@ A.submit = async (isLogin) => {
     const r = isLogin
       ? await Api.post("/api/auth/login", { email, password })
       : await Api.post("/api/auth/register", { email, password, name: nameEl ? nameEl.value.trim() : "" });
-    Api.setToken(r.token);
-    A.user = r.user;
-    A.closeModal();
-    A.renderChip();
-    Motion.toast(I18n.u("welcome") + (r.user.name ? ", " + r.user.name : ""));
-    await A.syncFromServer();
-    render();
+    await A.finishAuth(r);
   } catch (e) {
     err.textContent = e.code === "rate_limited" ? I18n.u("tooMany") : (e.code === "email_taken" ? I18n.u("emailTaken") : I18n.u("badLogin"));
   }

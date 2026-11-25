@@ -65,6 +65,7 @@ All settings are env vars (see `.env.example`). The important ones:
 | `SECRET_PEPPER` | change-me-in-production | **required in production** — app refuses to boot otherwise |
 | `ENVIRONMENT` | development | `production` enforces the pepper check |
 | `RATE_LIMIT_DEFAULT` / `RATE_LIMIT_AUTH` | 300/min, 20/min | slowapi format |
+| `GOOGLE_CLIENT_ID` | empty | enables the Google sign-in button + `POST /api/auth/google`; ID tokens are verified server-side via Google's tokeninfo. Add your origins to the OAuth client's **Authorized JavaScript origins** in Google Cloud Console. `GOOGLE_CLIENT_SECRET` is unused by this flow. |
 
 ## Docker
 

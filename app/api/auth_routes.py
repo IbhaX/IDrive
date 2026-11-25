@@ -11,7 +11,15 @@ from slowapi.util import get_remote_address
 from app.api.deps import CurrentUser, DbDep
 from app.config import get_settings
 from app.models import User
-from app.schemas import AuthOut, LoginIn, OkOut, RegisterIn, UserOut
+from app.schemas import (
+    AuthConfigOut,
+    AuthOut,
+    GoogleIn,
+    LoginIn,
+    OkOut,
+    RegisterIn,
+    UserOut,
+)
 from app.services import auth as auth_service
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
@@ -66,3 +74,25 @@ async def logout(
 @router.get("/me", response_model=UserOut)
 async def me(user: CurrentUser) -> UserOut:
     return _user_out(user)
+
+
+@router.get("/config", response_model=AuthConfigOut)
+async def auth_config() -> AuthConfigOut:
+    """Public client-side auth config (GIS client id, or empty = disabled)."""
+    return AuthConfigOut(google_client_id=get_settings().google_client_id)
+
+
+@router.post("/google", response_model=AuthOut)
+@limiter.limit("20/minute")
+async def google_login(request: Request, payload: GoogleIn, db: DbDep) -> AuthOut:
+    if not get_settings().google_client_id:
+        raise HTTPException(404, "google sign-in disabled")
+    try:
+        info = await auth_service.verify_google_id_token(payload.credential)
+    except ValueError:
+        raise HTTPException(401, "invalid google token")
+    user = await auth_service.login_or_register_google(db, info["email"], info["name"])
+    token = await auth_service.create_session(
+        db, user.id, request.headers.get("user-agent", "")
+    )
+    return AuthOut(token=token, user=_user_out(user))

@@ -23,6 +23,14 @@ class LoginIn(BaseModel):
     password: str = Field(min_length=1, max_length=256)
 
 
+class GoogleIn(BaseModel):
+    credential: str = Field(min_length=20, max_length=4096)
+
+
+class AuthConfigOut(BaseModel):
+    google_client_id: str
+
+
 class UserOut(BaseModel):
     id: int
     email: str

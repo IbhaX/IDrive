@@ -82,10 +82,11 @@ async def html_headers(
         resp.headers["Content-Security-Policy"] = (
             "default-src 'self'; "
             "img-src 'self' data:; "
-            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
+            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://accounts.google.com; "
             "font-src 'self' https://fonts.gstatic.com; "
-            "script-src 'self'; "
-            "connect-src 'self'"
+            "script-src 'self' https://accounts.google.com; "
+            "frame-src https://accounts.google.com; "
+            "connect-src 'self' https://accounts.google.com"
         )
     return resp
 

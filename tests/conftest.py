@@ -25,6 +25,8 @@ def db_path(tmp_path: Path) -> Path:
 def client(db_path: Path, monkeypatch: pytest.MonkeyPatch) -> Generator:
     """TestClient backed by a throwaway SQLite file."""
     monkeypatch.setenv("database_url", f"sqlite+aiosqlite:///{db_path}")
+    # google sign-in is off by default in tests; the flow tests patch it per-test
+    monkeypatch.setenv("google_client_id", "")
     get_settings.cache_clear()
     # engine/session singletons reset via lifespan close_db on exit
     from app.main import app

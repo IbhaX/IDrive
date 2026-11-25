@@ -454,6 +454,11 @@ details.rv summary{display:flex;gap:10px;padding:12px 14px;cursor:pointer;align-
               background:var(--panel);font-size:16px;transition:border-color var(--dur-fast),box-shadow var(--dur-med)}
 .afield input:focus{border-color:rgba(124,108,255,.55);outline:none;box-shadow:var(--glow)}
 .aerr{color:var(--bad);font-size:14px;min-height:20px}
+.gzone{margin-top:14px}
+.adiv{display:flex;align-items:center;gap:12px;margin:2px 0 12px}
+.adiv::before,.adiv::after{content:"";flex:1;height:1px;background:var(--line)}
+.adiv span{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+.gbtn{display:flex;justify-content:center;min-height:44px}
 .pwrow{position:relative}
 .pwrow input{width:100%;padding-right:52px}
 .pwreveal{position:absolute;right:6px;top:50%;transform:translateY(-50%);border:0;background:transparent;
