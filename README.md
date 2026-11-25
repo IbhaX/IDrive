@@ -71,7 +71,7 @@ Learning content is extracted from `Sadak Saathi.html` by `tools/extract_data.mj
 
 ### AI instructor
 
-`POST /api/instructor/ask` retrieves the best passages from lessons, articles, lights, parts, signs and the glossary, then (for signed-in users, when `AI_API_KEY` is set) asks an OpenAI-compatible model to answer **only from those numbered sources**, with citations, no fine amounts, no invented section numbers and no unsafe instructions. Guests, keyless deployments and provider errors get `mode: "search"` — the sourced passages themselves.
+`POST /api/instructor/ask` retrieves the best passages from lessons, articles, lights, parts, signs and the glossary, then (for signed-in users, when `OPENROUTER_API_KEY` is set) asks an OpenAI-compatible model to answer **only from those numbered sources**, with citations, no fine amounts, no invented section numbers and no unsafe instructions. Guests, keyless deployments and provider errors get `mode: "search"` — the sourced passages themselves.
 
 ### Accounts and progress
 
@@ -91,7 +91,7 @@ All settings are env vars (see `.env.example`). The important ones:
 | `SECRET_PEPPER` | change-me-in-production | **required in production** — app refuses to boot otherwise |
 | `ENVIRONMENT` | development | `production` enforces the pepper check |
 | `RATE_LIMIT_DEFAULT` / `RATE_LIMIT_AUTH` | 300/min, 20/min | slowapi format |
-| `AI_API_KEY` / `AI_BASE_URL` / `AI_MODEL` | empty / OpenRouter / `openai/gpt-4o-mini` | AI instructor provider; empty key = search-only mode |
+| `OPENROUTER_API_KEY` / `OPENROUTER_MODEL` | empty / `openai/gpt-4o-mini` | AI instructor via OpenRouter, set in the root `.env`; empty key = search-only mode. `AI_*` names are accepted too. |
 | `GOOGLE_CLIENT_ID` | empty | enables the Google sign-in button + `POST /api/auth/google`; ID tokens are verified server-side via Google's tokeninfo. Add your origins to the OAuth client's **Authorized JavaScript origins** in Google Cloud Console. `GOOGLE_CLIENT_SECRET` is unused by this flow. |
 
 ## Docker

@@ -5,6 +5,7 @@ from __future__ import annotations
 from functools import lru_cache
 from pathlib import Path
 
+from pydantic import AliasChoices, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,11 +44,14 @@ class Settings(BaseSettings):
     google_client_id: str = ""
     google_client_secret: str = ""
 
-    # AI instructor (any OpenAI-compatible chat-completions API). Empty key
-    # keeps the instructor in grounded search-only mode.
-    ai_api_key: str = ""
-    ai_base_url: str = "https://openrouter.ai/api/v1"
-    ai_model: str = "openai/gpt-4o-mini"
+    # AI instructor via OpenRouter (or any OpenAI-compatible API). Set in the
+    # root .env as OPENROUTER_API_KEY / OPENROUTER_MODEL (AI_* names also
+    # work). Empty key keeps the instructor in grounded search-only mode.
+    ai_api_key: str = Field(default="", validation_alias=AliasChoices("openrouter_api_key", "ai_api_key"))
+    ai_base_url: str = Field(default="https://openrouter.ai/api/v1", validation_alias=AliasChoices("openrouter_base_url", "ai_base_url"))
+    ai_model: str = Field(default="openai/gpt-4o-mini", validation_alias=AliasChoices("openrouter_model", "ai_model"))
+    # Sent as OpenRouter's HTTP-Referer attribution header (optional).
+    ai_site_url: str = Field(default="", validation_alias=AliasChoices("openrouter_site_url", "ai_site_url"))
     rate_limit_ai: str = "12/minute"
 
 

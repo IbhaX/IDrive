@@ -92,6 +92,7 @@ async def ask(
     base_url: str,
     model: str,
     allow_ai: bool,
+    site_url: str = "",
     timeout: float = 30.0,
     transport: Optional[httpx.AsyncBaseTransport] = None,
 ) -> dict[str, Any]:
@@ -115,7 +116,12 @@ async def ask(
         async with httpx.AsyncClient(timeout=timeout, transport=transport) as client:
             r = await client.post(
                 base_url.rstrip("/") + "/chat/completions",
-                headers={"Authorization": f"Bearer {api_key}", "X-Title": "iDrive"},
+                headers={
+                    "Authorization": f"Bearer {api_key}",
+                    # OpenRouter app attribution (ignored by other providers)
+                    "X-Title": "iDrive",
+                    **({"HTTP-Referer": site_url} if site_url else {}),
+                },
                 json={"model": model, "messages": messages, "temperature": 0.2, "max_tokens": 700},
             )
             r.raise_for_status()

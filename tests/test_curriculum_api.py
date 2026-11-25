@@ -91,3 +91,37 @@ def test_new_spa_paths_serve_shell(client, path: str) -> None:
     r = client.get(path)
     assert r.status_code == 200
     assert "text/html" in r.headers["content-type"]
+
+
+def test_openrouter_env_names_configure_instructor(monkeypatch: pytest.MonkeyPatch) -> None:
+    from app.config import get_settings
+
+    monkeypatch.setenv("OPENROUTER_API_KEY", "sk-or-test")
+    monkeypatch.setenv("OPENROUTER_MODEL", "some/model")
+    get_settings.cache_clear()
+    try:
+        s = get_settings()
+        assert s.ai_api_key == "sk-or-test"
+        assert s.ai_model == "some/model"
+        assert s.ai_base_url == "https://openrouter.ai/api/v1"
+    finally:
+        get_settings.cache_clear()
+
+
+def test_instructor_sends_openrouter_headers() -> None:
+    seen: dict[str, str] = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        seen.update({k.lower(): v for k, v in request.headers.items()})
+        seen["model"] = json.loads(request.content)["model"]
+        return httpx.Response(200, json={"choices": [{"message": {"content": "ok [1]"}}]})
+
+    asyncio.run(instructor.ask(
+        "seat belt", [], api_key="sk-or-x", base_url="https://openrouter.ai/api/v1",
+        model="some/model", allow_ai=True, site_url="https://idrive.example",
+        transport=httpx.MockTransport(handler),
+    ))
+    assert seen["authorization"] == "Bearer sk-or-x"
+    assert seen["x-title"] == "iDrive"
+    assert seen["http-referer"] == "https://idrive.example"
+    assert seen["model"] == "some/model"
