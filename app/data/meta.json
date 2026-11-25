@@ -1,0 +1,15 @@
+{
+ "source": "Sadak Saathi.html",
+ "sourceSha256": "cf046620cefcaf236da5355610659ead632bebb96ea568935386510b8cc1ae24",
+ "contentVersion": "cf046620cefc",
+ "extractedAt": "2026-11-25T05:16:08.255Z",
+ "counts": {
+  "signs": 255,
+  "categories": 9,
+  "topics": 18,
+  "articles": 18,
+  "questions": 471,
+  "glossary": 83,
+  "uiKeys": 145
+ }
+}

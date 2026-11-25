@@ -1,0 +1,348 @@
+{
+ "intro": [
+  "A driver who understands the vehicle drives more safely and spends less on repairs. This lesson covers the controls, dashboard lights, basic mechanical systems, tyres, battery, lights, fluids, fuel types, EV basics, safety systems and a simple pre-drive habit. Your owner's manual is always the final guide for your specific vehicle.",
+  "വാഹനം മനസ്സിലാക്കുന്ന ഡ്രൈവർ കൂടുതൽ സുരക്ഷിതമായി ഓടിക്കുകയും അറ്റകുറ്റപ്പണിക്ക് കുറച്ച് മാത്രം ചെലവാക്കുകയും ചെയ്യുന്നു. നിയന്ത്രണങ്ങൾ, ഡാഷ്ബോർഡ് ലൈറ്റുകൾ, അടിസ്ഥാന യന്ത്രഭാഗങ്ങൾ, ടയർ, ബാറ്ററി, ലൈറ്റുകൾ, ദ്രാവകങ്ങൾ, ഇന്ധന തരങ്ങൾ, ഇവി അടിസ്ഥാനങ്ങൾ, സുരക്ഷാ സംവിധാനങ്ങൾ, ലളിതമായ പ്രീ-ഡ്രൈവ് ശീലം എന്നിവ ഈ പാഠത്തിൽ ഉൾപ്പെടുന്നു. നിങ്ങളുടെ വാഹനത്തിന് ഓണേഴ്സ് മാനുവലാണ് അവസാന വാക്ക്."
+ ],
+ "sections": [
+  {
+   "h": [
+    "Controls and gauges",
+    "നിയന്ത്രണങ്ങളും ഗേജുകളും"
+   ],
+   "p": [
+    [
+     "The steering wheel, accelerator, brake and (in manual cars) clutch and gear lever are your main controls. Know where the indicator, headlight, wiper, horn, hazard and handbrake controls are so you can use them without looking down.",
+     "സ്റ്റിയറിങ്, ആക്സിലറേറ്റർ, ബ്രേക്ക്, (മാനുവൽ കാറിൽ) ക്ലച്ച്, ഗിയർ ലിവർ എന്നിവയാണ് പ്രധാന നിയന്ത്രണങ്ങൾ. ഇൻഡിക്കേറ്റർ, ഹെഡ്‌ലൈറ്റ്, വൈപ്പർ, ഹോൺ, ഹസാർഡ്, ഹാൻഡ് ബ്രേക്ക് എന്നിവ എവിടെയെന്ന് അറിഞ്ഞാൽ താഴേക്ക് നോക്കാതെ ഉപയോഗിക്കാം."
+    ],
+    [
+     "The speedometer shows speed, the fuel gauge shows fuel level, and the temperature gauge shows engine heat. If the temperature needle rises into the hot zone, stop safely and let the engine cool instead of pressing on.",
+     "സ്പീഡോമീറ്റർ വേഗവും ഫ്യൂവൽ ഗേജ് ഇന്ധനനിലയും ടെമ്പറേച്ചർ ഗേജ് എൻജിൻ ചൂടും കാണിക്കുന്നു. ടെമ്പറേച്ചർ സൂചി ചൂടുള്ള ഭാഗത്തേക്ക് കയറിയാൽ ഓടിച്ചുപോകാതെ സുരക്ഷിതമായി നിർത്തി എൻജിൻ തണുക്കാൻ അനുവദിക്കുക."
+    ],
+    [
+     "Seating position matters: sit so you can press the pedals fully, hold the wheel with slightly bent arms, and see well in the mirrors. Set the seat and mirrors before you start moving, never while driving.",
+     "ഇരിപ്പ് പ്രധാനമാണ്: പെഡലുകൾ പൂർണമായി അമർത്താനും കൈകൾ അല്പം വളച്ച് സ്റ്റിയറിങ് പിടിക്കാനും മിററിൽ നന്നായി കാണാനും പറ്റുംവിധം ഇരിക്കുക. സീറ്റും മിററും ക്രമീകരിക്കേണ്ടത് വാഹനം നീങ്ങുംമുമ്പാണ്, ഓടിക്കുമ്പോഴല്ല."
+    ]
+   ]
+  },
+  {
+   "h": [
+    "Dashboard warning lights",
+    "ഡാഷ്ബോർഡ് മുന്നറിയിപ്പ് ലൈറ്റുകൾ"
+   ],
+   "p": [
+    [
+     "Warning lights use colour like traffic signals: red usually means a serious problem needing attention now, amber or yellow means a fault or caution to be checked soon, and green or blue usually show a system working, such as headlights or indicators.",
+     "മുന്നറിയിപ്പ് ലൈറ്റുകൾ ട്രാഫിക് സിഗ്നൽ പോലെ നിറം ഉപയോഗിക്കുന്നു: ചുവപ്പ് സാധാരണ ഉടൻ ശ്രദ്ധിക്കേണ്ട ഗുരുതര പ്രശ്നം, ആംബർ അല്ലെങ്കിൽ മഞ്ഞ വൈകാതെ പരിശോധിക്കേണ്ട തകരാർ അല്ലെങ്കിൽ ജാഗ്രത, പച്ചയോ നീലയോ സാധാരണ ഹെഡ്‌ലൈറ്റ്, ഇൻഡിക്കേറ്റർ പോലുള്ള സംവിധാനം പ്രവർത്തിക്കുന്നതിന്റെ സൂചന."
+    ],
+    [
+     "Common lights include engine oil pressure, battery or charging, brake system, engine or check-engine, ABS, airbag and tyre pressure. Symbols differ between makes, so learn yours from the manual.",
+     "എൻജിൻ ഓയിൽ പ്രഷർ, ബാറ്ററി അല്ലെങ്കിൽ ചാർജിങ്, ബ്രേക്ക് സിസ്റ്റം, എൻജിൻ അല്ലെങ്കിൽ ചെക്ക്-എൻജിൻ, എബിഎസ്, എയർബാഗ്, ടയർ പ്രഷർ എന്നിവ സാധാരണ ലൈറ്റുകളാണ്. ചിഹ്നങ്ങൾ കമ്പനിക്കനുസരിച്ച് വ്യത്യസ്തമാണ്, മാനുവലിൽ നിന്ന് പഠിക്കുക."
+    ],
+    [
+     "A red oil-pressure or brake light while driving is a reason to stop safely and get help. Running the engine without oil pressure can ruin it quickly. Do not ignore a light because the car still seems to drive.",
+     "ഓടിക്കുമ്പോൾ ചുവപ്പ് ഓയിൽ പ്രഷർ അല്ലെങ്കിൽ ബ്രേക്ക് ലൈറ്റ് തെളിഞ്ഞാൽ സുരക്ഷിതമായി നിർത്തി സഹായം തേടണം. ഓയിൽ പ്രഷർ ഇല്ലാതെ ഓടിച്ചാൽ എൻജിൻ പെട്ടെന്ന് നശിക്കാം. വാഹനം ഓടുന്നുണ്ടല്ലോ എന്ന് കരുതി ലൈറ്റ് അവഗണിക്കരുത്."
+    ]
+   ]
+  },
+  {
+   "h": [
+    "Engine, transmission, brakes and tyres",
+    "എൻജിൻ, ട്രാൻസ്മിഷൻ, ബ്രേക്ക്, ടയർ"
+   ],
+   "p": [
+    [
+     "The engine turns fuel into power. The transmission (gearbox) passes that power to the wheels at suitable ratios: low gears for strength and slow speed, higher gears for efficient cruising.",
+     "എൻജിൻ ഇന്ധനത്തെ ശക്തിയാക്കി മാറ്റുന്നു. ട്രാൻസ്മിഷൻ (ഗിയർബോക്സ്) ആ ശക്തി അനുയോജ്യമായ അനുപാതത്തിൽ ചക്രങ്ങളിലെത്തിക്കുന്നു: ശക്തിക്കും കുറഞ്ഞ വേഗത്തിനും താഴ്ന്ന ഗിയർ, കാര്യക്ഷമമായ ക്രൂയിസിങ്ങിന് ഉയർന്ന ഗിയർ."
+    ],
+    [
+     "Brakes turn the motion of the vehicle into heat through friction. Brake pads and discs or drums wear over time, so a squeal, a soft pedal, a pull to one side or longer stopping all deserve a prompt check.",
+     "ഘർഷണത്തിലൂടെ വാഹനത്തിന്റെ ചലനത്തെ ചൂടാക്കി മാറ്റിയാണ് ബ്രേക്ക് പ്രവർത്തിക്കുന്നത്. ബ്രേക്ക് പാഡുകളും ഡിസ്കോ ഡ്രമ്മോ കാലക്രമേണ തേയും; കരച്ചിൽ ശബ്ദം, മൃദുവായ പെഡൽ, ഒരു വശത്തേക്ക് വലിവ്, നിർത്താൻ കൂടുതൽ ദൂരം എന്നിവ ഉടൻ പരിശോധിക്കണം."
+    ],
+    [
+     "Tyres are the only part touching the road. Keep the pressure the manufacturer recommends, check tread wear and sidewall cuts or bulges, and replace tyres that are worn or damaged. This matters most on wet Kerala roads.",
+     "റോഡിൽ തൊടുന്ന ഒരേയൊരു ഭാഗം ടയറാണ്. നിർമാതാവ് ശുപാർശ ചെയ്യുന്ന പ്രഷർ നിലനിർത്തുക, ട്രെഡ് തേയ്മാനവും വശങ്ങളിലെ മുറിവോ വീർപ്പോ പരിശോധിക്കുക, തേഞ്ഞതോ കേടായതോ ആയ ടയർ മാറ്റുക. നനഞ്ഞ കേരള റോഡുകളിൽ ഇത് ഏറെ പ്രധാനമാണ്."
+    ],
+    [
+     "Also check the spare tyre and the tools to change it. Know how to do this safely, away from traffic, or call for help.",
+     "സ്പെയർ ടയറും മാറ്റാനുള്ള ഉപകരണങ്ങളും പരിശോധിക്കുക. ഇത് ഗതാഗതത്തിൽ നിന്ന് മാറി സുരക്ഷിതമായി ചെയ്യാൻ അറിയുക, അല്ലെങ്കിൽ സഹായം വിളിക്കുക."
+    ]
+   ]
+  },
+  {
+   "h": [
+    "Battery, lights, wipers and fluids",
+    "ബാറ്ററി, ലൈറ്റുകൾ, വൈപ്പർ, ദ്രാവകങ്ങൾ"
+   ],
+   "p": [
+    [
+     "The battery starts the engine and powers electrics. Slow cranking, dim lights or a battery warning light suggest it needs a check. Keep terminals clean and tight.",
+     "ബാറ്ററി എൻജിൻ സ്റ്റാർട്ട് ചെയ്യുകയും വൈദ്യുതി ഉപകരണങ്ങൾക്ക് ഊർജം നൽകുകയും ചെയ്യുന്നു. സ്റ്റാർട്ട് ചെയ്യാൻ താമസം, മങ്ങിയ ലൈറ്റ്, ബാറ്ററി മുന്നറിയിപ്പ് എന്നിവ പരിശോധന വേണമെന്ന് സൂചിപ്പിക്കുന്നു. ടെർമിനലുകൾ വൃത്തിയായും മുറുക്കത്തോടെയും സൂക്ഷിക്കുക."
+    ],
+    [
+     "Lights are for seeing and being seen. Check headlights, tail lights, brake lights and indicators regularly, since a failed brake light is dangerous in traffic and you cannot see it yourself from the driver's seat.",
+     "ലൈറ്റുകൾ കാണാനും കാണപ്പെടാനുമാണ്. ഹെഡ്‌ലൈറ്റ്, ടെയിൽ ലൈറ്റ്, ബ്രേക്ക് ലൈറ്റ്, ഇൻഡിക്കേറ്റർ എന്നിവ പതിവായി പരിശോധിക്കുക; ബ്രേക്ക് ലൈറ്റ് തകരാറിലായാൽ ഗതാഗതത്തിൽ അപകടമാണ്, ഡ്രൈവർ സീറ്റിൽ നിന്ന് നിങ്ങൾക്ക് അത് കാണാനും കഴിയില്ല."
+    ],
+    [
+     "Wipers and washer fluid keep the windscreen clear in monsoon rain. Replace worn, streaky wiper blades before the rains begin.",
+     "മൺസൂൺ മഴയിൽ വിൻഡ്സ്ക്രീൻ വ്യക്തമായി സൂക്ഷിക്കാൻ വൈപ്പറും വാഷർ ദ്രാവകവും സഹായിക്കുന്നു. മഴ തുടങ്ങും മുമ്പ് തേഞ്ഞതോ വര വീഴ്ത്തുന്നതോ ആയ വൈപ്പർ ബ്ലേഡുകൾ മാറ്റുക."
+    ],
+    [
+     "Key fluids are engine oil, coolant, brake fluid and washer fluid (plus power steering or gearbox fluid in some vehicles). Check levels as the manual describes, and top up only with the recommended type.",
+     "പ്രധാന ദ്രാവകങ്ങൾ: എൻജിൻ ഓയിൽ, കൂളന്റ്, ബ്രേക്ക് ഫ്ലൂയിഡ്, വാഷർ ഫ്ലൂയിഡ് (ചില വാഹനങ്ങളിൽ പവർ സ്റ്റിയറിങ്, ഗിയർബോക്സ് ദ്രാവകവും). മാനുവൽ പറയുംപോലെ അളവ് പരിശോധിക്കുക; ശുപാർശ ചെയ്ത തരം മാത്രം നിറയ്ക്കുക."
+    ]
+   ]
+  },
+  {
+   "h": [
+    "Fuel types and EV basics",
+    "ഇന്ധന തരങ്ങളും ഇവി അടിസ്ഥാനങ്ങളും"
+   ],
+   "p": [
+    [
+     "Petrol and diesel engines need the correct fuel. Putting the wrong fuel in can badly damage the engine, so read the fuel cap label and check the pump before filling. Some vehicles run on CNG or LPG, which have their own safety rules.",
+     "പെട്രോൾ, ഡീസൽ എൻജിനുകൾക്ക് ശരിയായ ഇന്ധനം വേണം. തെറ്റായ ഇന്ധനം നിറച്ചാൽ എൻജിൻ ഗുരുതരമായി കേടാകാം; അതിനാൽ ഫ്യൂവൽ ക്യാപ്പിലെ ലേബൽ വായിച്ച് നിറയ്ക്കുംമുമ്പ് പമ്പ് പരിശോധിക്കുക. ചില വാഹനങ്ങൾ സിഎൻജിയോ എൽപിജിയോ ഉപയോഗിക്കുന്നു; അവയ്ക്ക് സ്വന്തം സുരക്ഷാ നിയമങ്ങളുണ്ട്."
+    ],
+    [
+     "Electric vehicles (EVs) use a battery and electric motor, so there is no gearbox in the usual sense and often strong, quiet acceleration. Many EVs slow down when you lift off the accelerator (regenerative braking), so learn the feel in a safe place.",
+     "ഇലക്ട്രിക് വാഹനങ്ങൾ (ഇവി) ബാറ്ററിയും ഇലക്ട്രിക് മോട്ടോറും ഉപയോഗിക്കുന്നു; അതിനാൽ സാധാരണ അർഥത്തിൽ ഗിയർബോക്സ് ഇല്ല, ശക്തവും നിശബ്ദവുമായ ആക്സിലറേഷൻ ഉണ്ടാകും. പല ഇവികളും ആക്സിലറേറ്റർ വിടുമ്പോൾ വേഗം കുറയ്ക്കും (റീജനറേറ്റീവ് ബ്രേക്കിങ്); സുരക്ഷിതമായ സ്ഥലത്ത് ഈ അനുഭവം പരിചയപ്പെടുക."
+    ],
+    [
+     "Charge an EV with the correct charger and cable, in a dry, well-maintained place. Do not use damaged cables, makeshift connections or wet plugs, and follow the maker's guidance. EVs are quiet, so pedestrians may not hear them; drive with extra care.",
+     "ഇവി ചാർജ് ചെയ്യാൻ ശരിയായ ചാർജറും കേബിളും ഉപയോഗിക്കുക, ഉണങ്ങിയതും നന്നായി പരിപാലിക്കുന്നതുമായ സ്ഥലത്ത്. കേടായ കേബിൾ, താൽക്കാലിക കണക്ഷൻ, നനഞ്ഞ പ്ലഗ് എന്നിവ ഉപയോഗിക്കരുത്; നിർമാതാവിന്റെ നിർദേശം പാലിക്കുക. ഇവികൾ നിശബ്ദമായതിനാൽ കാൽനടയാത്രക്കാർ കേൾക്കണമെന്നില്ല; കൂടുതൽ ശ്രദ്ധിക്കുക."
+    ]
+   ]
+  },
+  {
+   "h": [
+    "Safety systems: ABS, airbags, ESP",
+    "സുരക്ഷാ സംവിധാനങ്ങൾ: എബിഎസ്, എയർബാഗ്, ഇഎസ്പി"
+   ],
+   "p": [
+    [
+     "ABS (anti-lock braking system) stops wheels from locking in hard braking, so you can keep steering. In an emergency, press the brake firmly and hold; a pulsing pedal is normal. Do not pump the pedal.",
+     "എബിഎസ് (ആന്റി-ലോക്ക് ബ്രേക്കിങ് സിസ്റ്റം) ശക്തമായ ബ്രേക്കിങ്ങിൽ ചക്രങ്ങൾ ലോക്കാകുന്നത് തടയുന്നു; അങ്ങനെ സ്റ്റിയർ ചെയ്യാൻ കഴിയും. അടിയന്തരത്തിൽ ബ്രേക്ക് ശക്തമായി അമർത്തി പിടിക്കുക; പെഡലിലെ വിറയൽ സാധാരണമാണ്. പെഡൽ പമ്പ് ചെയ്യരുത്."
+    ],
+    [
+     "Airbags inflate in certain crashes to cushion the body, but they work together with seat belts and do not replace them. Keep children out of front seats with active airbags unless the maker's guidance says it is safe.",
+     "ചില അപകടങ്ങളിൽ ശരീരത്തിന് കുഷ്യൻ നൽകാൻ എയർബാഗ് വീർക്കുന്നു; അവ സീറ്റ് ബെൽറ്റുമായി ചേർന്നാണ് പ്രവർത്തിക്കുന്നത്, ബെൽറ്റിന് പകരമല്ല. നിർമാതാവിന്റെ നിർദേശം സുരക്ഷിതമെന്ന് പറയുന്നില്ലെങ്കിൽ ആക്ടീവ് എയർബാഗുള്ള മുൻസീറ്റിൽ കുട്ടികളെ ഇരുത്തരുത്."
+    ],
+    [
+     "ESP or ESC (electronic stability control) helps the driver keep control if the car starts to skid, by braking individual wheels. These aids help, but they cannot beat physics, so they are not a reason to drive faster.",
+     "കാർ തെന്നിത്തുടങ്ങിയാൽ ഓരോ ചക്രത്തിലും ബ്രേക്ക് പ്രയോഗിച്ച് നിയന്ത്രണം നിലനിർത്താൻ ഇഎസ്പി അല്ലെങ്കിൽ ഇഎസ്സി (ഇലക്ട്രോണിക് സ്റ്റെബിലിറ്റി കൺട്രോൾ) സഹായിക്കുന്നു. ഇത്തരം സഹായങ്ങൾ ഗുണം ചെയ്യും, പക്ഷേ ഭൗതികശാസ്ത്രത്തെ മറികടക്കില്ല; അതിനാൽ കൂടുതൽ വേഗത്തിൽ ഓടിക്കാനുള്ള കാരണമല്ല."
+    ]
+   ]
+  },
+  {
+   "h": [
+    "Maintenance and the pre-drive check",
+    "അറ്റകുറ്റപ്പണിയും പ്രീ-ഡ്രൈവ് പരിശോധനയും"
+   ],
+   "p": [
+    [
+     "Follow the service schedule in your manual and have the vehicle serviced by a trusted workshop. Regular service is cheaper than repairing a failure on the road.",
+     "മാനുവലിലെ സർവീസ് ഷെഡ്യൂൾ പാലിക്കുകയും വിശ്വസ്ത വർക്ക്ഷോപ്പിൽ സർവീസ് ചെയ്യിക്കുകയും ചെയ്യുക. വഴിയിലെ തകരാർ നന്നാക്കുന്നതിനെക്കാൾ ചെലവു കുറവാണ് പതിവ് സർവീസിന്."
+    ],
+    [
+     "A quick walk-around takes a minute: look at tyres, check for leaks under the vehicle, test lights, and make sure windows and mirrors are clean. Inside, adjust seat and mirrors, fasten your belt and check the dashboard lights go off after starting.",
+     "ഒരു മിനിറ്റ് മതി ഒരു ചുറ്റിനടന്ന പരിശോധനയ്ക്ക്: ടയറുകൾ നോക്കുക, വാഹനത്തിനടിയിൽ ചോർച്ചയുണ്ടോ എന്ന് നോക്കുക, ലൈറ്റുകൾ പരീക്ഷിക്കുക, ജനലും മിററും വൃത്തിയാണെന്ന് ഉറപ്പാക്കുക. അകത്ത് സീറ്റും മിററും ക്രമീകരിച്ച് ബെൽറ്റ് ഇടുക, സ്റ്റാർട്ട് ചെയ്ത ശേഷം ഡാഷ്ബോർഡ് ലൈറ്റുകൾ അണയുന്നുണ്ടോ എന്ന് പരിശോധിക്കുക."
+    ],
+    [
+     "Before the monsoon and before long ghat drives, check brakes, tyres, wipers and lights with extra care. Keep valid insurance and pollution certificates up to date too.",
+     "മൺസൂണിനു മുമ്പും ദീർഘമായ ഘാട്ട് യാത്രയ്ക്കു മുമ്പും ബ്രേക്ക്, ടയർ, വൈപ്പർ, ലൈറ്റ് എന്നിവ കൂടുതൽ ശ്രദ്ധയോടെ പരിശോധിക്കുക. സാധുവായ ഇൻഷുറൻസും പുക പരിശോധനാ സർട്ടിഫിക്കറ്റും കാലികമായി സൂക്ഷിക്കുക."
+    ]
+   ]
+  }
+ ],
+ "dos": [
+  [
+   "Read your owner's manual and learn your dashboard symbols.",
+   "ഓണേഴ്സ് മാനുവൽ വായിച്ച് ഡാഷ്ബോർഡ് ചിഹ്നങ്ങൾ പഠിക്കുക."
+  ],
+  [
+   "Do a quick walk-around before driving.",
+   "ഓടിക്കുംമുമ്പ് വാഹനത്തിന് ചുറ്റും ഒരു പെട്ടെന്നുള്ള പരിശോധന നടത്തുക."
+  ],
+  [
+   "Keep tyres at the recommended pressure and replace worn ones.",
+   "ടയർ ശുപാർശ ചെയ്ത പ്രഷറിൽ നിലനിർത്തുകയും തേഞ്ഞവ മാറ്റുകയും ചെയ്യുക."
+  ],
+  [
+   "Test lights, indicators and brake lights regularly.",
+   "ലൈറ്റ്, ഇൻഡിക്കേറ്റർ, ബ്രേക്ക് ലൈറ്റ് എന്നിവ പതിവായി പരിശോധിക്കുക."
+  ],
+  [
+   "Replace worn wipers before the monsoon.",
+   "മൺസൂണിനു മുമ്പ് തേഞ്ഞ വൈപ്പറുകൾ മാറ്റുക."
+  ],
+  [
+   "Service the vehicle as per the schedule.",
+   "ഷെഡ്യൂൾ അനുസരിച്ച് വാഹനം സർവീസ് ചെയ്യിക്കുക."
+  ],
+  [
+   "Stop safely if a red warning light comes on.",
+   "ചുവപ്പ് മുന്നറിയിപ്പ് ലൈറ്റ് തെളിഞ്ഞാൽ സുരക്ഷിതമായി നിർത്തുക."
+  ],
+  [
+   "Check the fuel label before filling.",
+   "നിറയ്ക്കുംമുമ്പ് ഇന്ധന ലേബൽ പരിശോധിക്കുക."
+  ],
+  [
+   "Use proper chargers and undamaged cables for an EV.",
+   "ഇവിക്ക് ശരിയായ ചാർജറും കേടില്ലാത്ത കേബിളും ഉപയോഗിക്കുക."
+  ],
+  [
+   "Keep the spare tyre and tools ready.",
+   "സ്പെയർ ടയറും ഉപകരണങ്ങളും തയ്യാറായി സൂക്ഷിക്കുക."
+  ]
+ ],
+ "donts": [
+  [
+   "Do not ignore red dashboard warnings.",
+   "ചുവപ്പ് ഡാഷ്ബോർഡ് മുന്നറിയിപ്പുകൾ അവഗണിക്കരുത്."
+  ],
+  [
+   "Do not drive on smooth, bald or damaged tyres.",
+   "മിനുസമായതോ കേടായതോ ആയ ടയറിൽ ഓടിക്കരുത്."
+  ],
+  [
+   "Do not pump the brake pedal in an ABS car in an emergency.",
+   "എബിഎസ് കാറിൽ അടിയന്തരത്തിൽ ബ്രേക്ക് പെഡൽ പമ്പ് ചെയ്യരുത്."
+  ],
+  [
+   "Do not open a hot radiator or coolant cap.",
+   "ചൂടുള്ള റേഡിയേറ്ററോ കൂളന്റ് ക്യാപ്പോ തുറക്കരുത്."
+  ],
+  [
+   "Do not top up with the wrong fluid or fuel.",
+   "തെറ്റായ ദ്രാവകമോ ഇന്ധനമോ നിറയ്ക്കരുത്."
+  ],
+  [
+   "Do not rely on airbags instead of seat belts.",
+   "സീറ്റ് ബെൽറ്റിനു പകരം എയർബാഗിനെ ആശ്രയിക്കരുത്."
+  ],
+  [
+   "Do not use damaged or makeshift EV charging cables.",
+   "കേടായതോ താൽക്കാലികമോ ആയ ഇവി ചാർജിങ് കേബിളുകൾ ഉപയോഗിക്കരുത്."
+  ],
+  [
+   "Do not smoke or use flames near fuelling.",
+   "ഇന്ധനം നിറയ്ക്കുമ്പോൾ പുകവലിക്കുകയോ തീ ഉപയോഗിക്കുകയോ ചെയ്യരുത്."
+  ],
+  [
+   "Do not delay service until something fails.",
+   "തകരാർ വരുംവരെ സർവീസ് വൈകിക്കരുത്."
+  ],
+  [
+   "Do not rest your foot on the clutch while driving.",
+   "ഓടിക്കുമ്പോൾ ക്ലച്ചിൽ കാൽ വിശ്രമിപ്പിക്കരുത്."
+  ]
+ ],
+ "myths": [
+  {
+   "m": [
+    "If the car is still driving, a warning light can wait.",
+    "വാഹനം ഓടുന്നുണ്ടെങ്കിൽ മുന്നറിയിപ്പ് ലൈറ്റ് കാത്തിരിക്കാം."
+   ],
+   "f": [
+    "Some lights, like oil pressure or brakes, need action now. Check the manual and get it examined.",
+    "ഓയിൽ പ്രഷർ, ബ്രേക്ക് പോലുള്ള ചില ലൈറ്റുകൾക്ക് ഉടൻ നടപടി വേണം. മാനുവൽ നോക്കി പരിശോധിപ്പിക്കുക."
+   ]
+  },
+  {
+   "m": [
+    "ABS means I can brake later and stop anywhere.",
+    "എബിഎസ് ഉണ്ടെങ്കിൽ വൈകി ബ്രേക്ക് ചെയ്താലും എവിടെയും നിർത്താം."
+   ],
+   "f": [
+    "ABS helps you steer while braking, but it does not shorten physics. Keep your safe gap.",
+    "ബ്രേക്ക് ചെയ്യുമ്പോൾ സ്റ്റിയർ ചെയ്യാൻ എബിഎസ് സഹായിക്കും, പക്ഷേ ഭൗതികനിയമം മാറ്റില്ല. സുരക്ഷിത അകലം പാലിക്കുക."
+   ]
+  },
+  {
+   "m": [
+    "Airbags mean seat belts are optional.",
+    "എയർബാഗ് ഉണ്ടെങ്കിൽ സീറ്റ് ബെൽറ്റ് നിർബന്ധമല്ല."
+   ],
+   "f": [
+    "Airbags are designed to work with seat belts. Without a belt, you can be thrown into the wrong position.",
+    "എയർബാഗ് സീറ്റ് ബെൽറ്റിനൊപ്പം പ്രവർത്തിക്കാൻ രൂപകൽപ്പന ചെയ്തതാണ്. ബെൽറ്റില്ലെങ്കിൽ നിങ്ങൾ തെറ്റായ സ്ഥാനത്തേക്ക് തെറിക്കാം."
+   ]
+  },
+  {
+   "m": [
+    "Electric vehicles need no maintenance at all.",
+    "ഇലക്ട്രിക് വാഹനങ്ങൾക്ക് ഒട്ടും അറ്റകുറ്റപ്പണി വേണ്ട."
+   ],
+   "f": [
+    "EVs still have tyres, brakes, suspension, lights and wipers that need checks, and the maker will give a service plan.",
+    "ഇവികൾക്കും ടയർ, ബ്രേക്ക്, സസ്പെൻഷൻ, ലൈറ്റ്, വൈപ്പർ പരിശോധന വേണം; നിർമാതാവ് സർവീസ് പ്ലാൻ നൽകും."
+   ]
+  },
+  {
+   "m": [
+    "Higher tyre pressure is always better.",
+    "ടയർ പ്രഷർ കൂടുതലായാൽ എപ്പോഴും നല്ലത്."
+   ],
+   "f": [
+    "Too high or too low both reduce grip and wear tyres unevenly. Use the maker's recommended pressure.",
+    "കൂടിയാലും കുറഞ്ഞാലും പിടിത്തം കുറയുകയും ടയർ അസമമായി തേയുകയും ചെയ്യും. നിർമാതാവ് ശുപാർശ ചെയ്ത പ്രഷർ ഉപയോഗിക്കുക."
+   ]
+  }
+ ],
+ "stories": [
+  {
+   "t": [
+    "The light that kept glowing",
+    "തെളിഞ്ഞുനിന്ന ലൈറ്റ്"
+   ],
+   "s": [
+    "Sajan, in an illustrative example, noticed a red oil light flicker on his dashboard during a long drive. He thought, it is only a light, and kept driving to reach the town. Soon the engine made a rough noise and stopped, leaving him stranded by the roadside. His neighbour Latha had once seen the same light, pulled over at once, and called for help. Her repair was small, while his was big and costly.",
+    "ഒരു ഉദാഹരണ കഥയിൽ, ദീർഘയാത്രയ്ക്കിടെ ഡാഷ്ബോർഡിൽ ചുവപ്പ് ഓയിൽ ലൈറ്റ് മിന്നുന്നത് സജൻ കണ്ടു. ഇത് വെറുമൊരു ലൈറ്റല്ലേ എന്ന് കരുതി ടൗണിൽ എത്താൻ ഓടിച്ചുപോയി. താമസിയാതെ എൻജിൻ പരുക്കൻ ശബ്ദത്തോടെ നിന്നുപോയി, വഴിയരികിൽ കുടുങ്ങി. അയൽക്കാരി ലത ഒരിക്കൽ ഇതേ ലൈറ്റ് കണ്ടപ്പോൾ ഉടൻ വാഹനം ഒതുക്കി സഹായം വിളിച്ചു. അവളുടെ അറ്റകുറ്റപ്പണി ചെറുതായിരുന്നു; സജന്റേത് വലുതും ചെലവേറിയതും."
+   ],
+   "lesson": [
+    "Respect red warning lights: stop safely and get help.",
+    "ചുവപ്പ് മുന്നറിയിപ്പ് ലൈറ്റുകളെ മാനിക്കുക: സുരക്ഷിതമായി നിർത്തി സഹായം തേടുക."
+   ]
+  },
+  {
+   "t": [
+    "Before the rains",
+    "മഴയ്ക്ക് മുമ്പ്"
+   ],
+   "s": [
+    "Fathima, a made-up driver, always checked her car at the start of the monsoon. One evening she noticed her wiper blades left streaks and that a rear brake light was dim. She replaced the blades and the bulb in a short workshop visit. A week later heavy rain began on her commute. Her windscreen stayed clear and the vehicle behind could see her brake lights clearly as she slowed for a crossing.",
+    "ഫാത്തിമ എന്ന ഭാവനാ ഡ്രൈവർ മൺസൂൺ തുടങ്ങുമ്പോൾ കാർ പരിശോധിക്കുക പതിവാക്കിയിരുന്നു. ഒരു വൈകുന്നേരം വൈപ്പർ ബ്ലേഡ് വര വീഴ്ത്തുന്നതും പിന്നിലെ ബ്രേക്ക് ലൈറ്റ് മങ്ങിയതും അവൾ ശ്രദ്ധിച്ചു. ഒരു ചെറിയ വർക്ക്ഷോപ്പ് സന്ദർശനത്തിൽ ബ്ലേഡും ബൾബും മാറ്റി. ഒരാഴ്ചയ്ക്കു ശേഷം യാത്രയ്ക്കിടെ കനത്ത മഴ തുടങ്ങി. അവളുടെ വിൻഡ്സ്ക്രീൻ വ്യക്തമായിരുന്നു; ക്രോസിങ്ങിൽ വേഗം കുറച്ചപ്പോൾ പിന്നിലെ വാഹനത്തിന് ബ്രേക്ക് ലൈറ്റ് വ്യക്തമായി കാണാനായി."
+   ],
+   "lesson": [
+    "Small checks before the rains prevent big risks later.",
+    "മഴയ്ക്കു മുമ്പുള്ള ചെറിയ പരിശോധനകൾ പിന്നീടുള്ള വലിയ അപകടങ്ങൾ തടയും."
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Learn your controls, gauges and dashboard colours: red is urgent.",
+   "നിയന്ത്രണങ്ങളും ഗേജുകളും ഡാഷ്ബോർഡ് നിറങ്ങളും പഠിക്കുക: ചുവപ്പ് അടിയന്തരമാണ്."
+  ],
+  [
+   "Tyres, brakes, lights and wipers matter most for safety, especially in rain.",
+   "സുരക്ഷയ്ക്ക് ടയർ, ബ്രേക്ക്, ലൈറ്റ്, വൈപ്പർ എന്നിവ ഏറ്റവും പ്രധാനം; മഴയിൽ പ്രത്യേകിച്ചും."
+  ],
+  [
+   "ABS, airbags and ESP help but never replace seat belts and careful driving.",
+   "എബിഎസ്, എയർബാഗ്, ഇഎസ്പി സഹായിക്കും, പക്ഷേ സീറ്റ് ബെൽറ്റിനും ശ്രദ്ധയോടെയുള്ള ഡ്രൈവിങ്ങിനും പകരമാവില്ല."
+  ],
+  [
+   "Use the correct fuel, and charge EVs safely with proper equipment.",
+   "ശരിയായ ഇന്ധനം ഉപയോഗിക്കുക; ഇവി ശരിയായ ഉപകരണങ്ങളോടെ സുരക്ഷിതമായി ചാർജ് ചെയ്യുക."
+  ],
+  [
+   "Service on schedule and do a one-minute walk-around before driving.",
+   "ഷെഡ്യൂൾ പ്രകാരം സർവീസ് ചെയ്യുക; ഓടിക്കുംമുമ്പ് ഒരു മിനിറ്റ് പരിശോധന നടത്തുക."
+  ],
+  [
+   "Your owner's manual is the final guide for your vehicle.",
+   "നിങ്ങളുടെ വാഹനത്തിന് ഓണേഴ്സ് മാനുവലാണ് അവസാന വാക്ക്."
+  ]
+ ]
+}

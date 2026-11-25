@@ -1,0 +1,404 @@
+[
+ {
+  "id": "rules",
+  "name": [
+   "Rules of the road",
+   "റോഡ് നിയമങ്ങൾ"
+  ],
+  "dot": "#0b6b3b",
+  "lessons": [
+   [
+    "Traffic keeps to the left in India. Use the right side only to overtake.",
+    "ഇന്ത്യയിൽ ഗതാഗതം ഇടതുവശത്തുകൂടിയാണ്. മറികടക്കാൻ മാത്രം വലതുവശം ഉപയോഗിക്കുക."
+   ],
+   [
+    "Signal in good time before you turn, change lane, stop or pull out. Check your mirrors first.",
+    "തിരിയുന്നതിനും ലെയ്ൻ മാറുന്നതിനും നിർത്തുന്നതിനും മുമ്പ് നേരത്തേ സിഗ്നൽ നൽകുക. ആദ്യം മിററുകൾ നോക്കുക."
+   ],
+   [
+    "Slow down and stop for pedestrians on a zebra crossing. Never stop on the crossing itself.",
+    "സീബ്ര ക്രോസിങ്ങിലുള്ള കാൽനടയാത്രക്കാർക്കായി വേഗം കുറച്ച് നിർത്തുക. ക്രോസിങ്ങിന് മുകളിൽ നിർത്തരുത്."
+   ],
+   [
+    "Give way to ambulances, fire engines and police vehicles sounding a siren. Move left and stop if needed.",
+    "സൈറൺ മുഴക്കുന്ന ആംബുലൻസ്, ഫയർ എൻജിൻ, പോലീസ് വാഹനങ്ങൾക്ക് വഴി കൊടുക്കുക. ഇടത്തോട്ട് മാറി ആവശ്യമെങ്കിൽ നിർത്തുക."
+   ],
+   [
+    "On a hill road, the vehicle going downhill gives way to the one going uphill.",
+    "മലമ്പാതയിൽ ഇറക്കം ഇറങ്ങുന്ന വാഹനം കയറ്റം കയറുന്ന വാഹനത്തിന് വഴി കൊടുക്കണം."
+   ],
+   [
+    "Walk on the right side of a road with no footpath, facing the traffic.",
+    "നടപ്പാതയില്ലാത്ത റോഡിൽ വലതുവശത്തുകൂടി, വാഹനങ്ങൾക്ക് അഭിമുഖമായി നടക്കുക."
+   ]
+  ],
+  "hasArticle": true
+ },
+ {
+  "id": "speed",
+  "name": [
+   "Speed, distance and overtaking",
+   "വേഗം, അകലം, ഓവർടേക്കിങ്"
+  ],
+  "dot": "#d4202c",
+  "lessons": [
+   [
+    "A speed limit is a maximum for good conditions. In rain, fog, crowds or near schools, drive slower.",
+    "വേഗപരിധി നല്ല സാഹചര്യത്തിലെ പരമാവധി മാത്രമാണ്. മഴ, മൂടൽമഞ്ഞ്, തിരക്ക്, സ്കൂൾ പരിസരം എന്നിവിടങ്ങളിൽ വേഗം കുറയ്ക്കുക."
+   ],
+   [
+    "Stopping distance is reaction distance plus braking distance. It grows quickly with speed.",
+    "നിർത്താൻ വേണ്ട ദൂരം പ്രതികരണ ദൂരവും ബ്രേക്കിങ് ദൂരവും ചേർന്നതാണ്. വേഗം കൂടുമ്പോൾ ഇത് പെട്ടെന്ന് കൂടും."
+   ],
+   [
+    "Double the speed means about four times the braking distance.",
+    "വേഗം ഇരട്ടിയായാൽ ബ്രേക്കിങ് ദൂരം ഏകദേശം നാലിരട്ടിയാകും."
+   ],
+   [
+    "Keep a gap that lets you stop safely. Leave more on wet roads and at higher speeds.",
+    "സുരക്ഷിതമായി നിർത്താൻ പറ്റുന്ന അകലം പാലിക്കുക. നനഞ്ഞ റോഡിലും വേഗം കൂടുമ്പോഴും കൂടുതൽ അകലം വേണം."
+   ],
+   [
+    "Never overtake at a bend, hill crest, junction, bridge or pedestrian crossing, or where there is a solid centre line.",
+    "വളവ്, കയറ്റത്തിന്റെ മുകൾഭാഗം, ജംഗ്ഷൻ, പാലം, കാൽനട ക്രോസിങ്, തുടർവരയുള്ള ഭാഗം എന്നിവിടങ്ങളിൽ ഒരിക്കലും മറികടക്കരുത്."
+   ]
+  ],
+  "hasArticle": true
+ },
+ {
+  "id": "safe",
+  "name": [
+   "Safety gear and behaviour",
+   "സുരക്ഷാ ഉപകരണങ്ങളും പെരുമാറ്റവും"
+  ],
+  "dot": "#f08a00",
+  "lessons": [
+   [
+    "Rider and pillion must both wear a proper helmet with the strap fastened.",
+    "റൈഡറും പിൻസീറ്റ് യാത്രക്കാരനും ശരിയായ ഹെൽമറ്റ് ധരിക്കുകയും സ്ട്രാപ്പ് മുറുക്കുകയും വേണം."
+   ],
+   [
+    "A two-wheeler may carry the rider and one pillion only. Triple riding is an offence.",
+    "ഇരുചക്രവാഹനത്തിൽ റൈഡറും ഒരു പിൻസീറ്റ് യാത്രക്കാരനും മാത്രം. മൂന്നുപേർ യാത്ര ചെയ്യുന്നത് കുറ്റകരമാണ്."
+   ],
+   [
+    "Driver and passengers in a car should wear seat belts.",
+    "കാറിലെ ഡ്രൈവറും യാത്രക്കാരും സീറ്റ് ബെൽറ്റ് ധരിക്കണം."
+   ],
+   [
+    "Do not use a hand-held mobile phone while driving. Stop safely first.",
+    "വാഹനം ഓടിക്കുമ്പോൾ കയ്യിൽ പിടിച്ച് മൊബൈൽ ഫോൺ ഉപയോഗിക്കരുത്. ആദ്യം സുരക്ഷിതമായി നിർത്തുക."
+   ],
+   [
+    "Never drive after drinking. The legal limit is 30 mg of alcohol per 100 ml of blood.",
+    "മദ്യപിച്ച് വാഹനം ഓടിക്കരുത്. നിയമപരമായ പരിധി 100 മില്ലി രക്തത്തിൽ 30 മില്ലിഗ്രാം ആൽക്കഹോൾ ആണ്."
+   ],
+   [
+    "If you feel sleepy, stop and rest. Drowsy driving causes serious crashes.",
+    "ഉറക്കം വന്നാൽ നിർത്തി വിശ്രമിക്കുക. ഉറക്കച്ചടവോടെയുള്ള ഡ്രൈവിങ് ഗുരുതരമായ അപകടങ്ങൾക്ക് കാരണമാകും."
+   ]
+  ],
+  "hasArticle": true
+ },
+ {
+  "id": "docs",
+  "name": [
+   "Licence, documents and law",
+   "ലൈസൻസ്, രേഖകൾ, നിയമം"
+  ],
+  "dot": "#1b5aa6",
+  "lessons": [
+   [
+    "A learner's licence (LLR) is valid for 6 months.",
+    "ലേണേഴ്സ് ലൈസൻസ് (എൽ.എൽ.ആർ.) 6 മാസത്തേക്ക് സാധുവാണ്."
+   ],
+   [
+    "You can take the permanent licence driving test after 30 days of the LLR, within its validity.",
+    "എൽ.എൽ.ആർ. കിട്ടി 30 ദിവസം കഴിഞ്ഞ്, അതിന്റെ കാലാവധിക്കുള്ളിൽ സ്ഥിരം ലൈസൻസിനുള്ള ഡ്രൈവിങ് ടെസ്റ്റിന് ശ്രമിക്കാം."
+   ],
+   [
+    "Minimum age is 18 for a car or geared motorcycle and 16 for a gearless motorcycle up to 50 cc.",
+    "കാറിനും ഗിയർ ബൈക്കിനും കുറഞ്ഞ പ്രായം 18 ആണ്; 50 സിസി വരെയുള്ള ഗിയറില്ലാത്ത ബൈക്കിന് 16."
+   ],
+   [
+    "A learner displays an “L” sign and drives with a licensed person who holds a valid licence for that class.",
+    "പഠിതാവ് “L” ചിഹ്നം പ്രദർശിപ്പിക്കണം, ആ വിഭാഗത്തിൽ സാധുവായ ലൈസൻസുള്ള ഒരാൾക്കൊപ്പമേ ഓടിക്കാവൂ."
+   ],
+   [
+    "Carry your driving licence, registration certificate, valid insurance and PUC certificate.",
+    "ഡ്രൈവിങ് ലൈസൻസ്, രജിസ്ട്രേഷൻ സർട്ടിഫിക്കറ്റ്, സാധുവായ ഇൻഷുറൻസ്, പി.യു.സി. സർട്ടിഫിക്കറ്റ് എന്നിവ കൈവശം വയ്ക്കുക."
+   ],
+   [
+    "Third-party insurance is compulsory for every motor vehicle.",
+    "എല്ലാ മോട്ടോർ വാഹനത്തിനും തേർഡ് പാർട്ടി ഇൻഷുറൻസ് നിർബന്ധമാണ്."
+   ]
+  ],
+  "hasArticle": true
+ },
+ {
+  "id": "park",
+  "name": [
+   "Parking and stopping",
+   "പാർക്കിങ്ങും നിർത്തലും"
+  ],
+  "dot": "#6b7280",
+  "lessons": [
+   [
+    "Park on the left, parallel to the kerb, in the direction of traffic.",
+    "ഗതാഗത ദിശയിൽ, കെർബിന് സമാന്തരമായി ഇടതുവശത്ത് പാർക്ക് ചെയ്യുക."
+   ],
+   [
+    "Do not park on a zebra crossing, near a bend or hill crest, close to a junction or bus stop, or in front of a gate.",
+    "സീബ്ര ക്രോസിങ്ങിൽ, വളവിനോ കയറ്റത്തിന്റെ മുകളിലോ അടുത്ത്, ജംഗ്ഷനോ ബസ് സ്റ്റോപ്പോ അടുത്ത്, ഗേറ്റിന് മുന്നിൽ പാർക്ക് ചെയ്യരുത്."
+   ],
+   [
+    "Before opening a door, check mirrors and look back for cyclists, two-wheelers and pedestrians.",
+    "വാതിൽ തുറക്കും മുമ്പ് മിററുകൾ നോക്കുകയും സൈക്കിൾ, ഇരുചക്ര വാഹനങ്ങൾ, കാൽനടയാത്രക്കാർ എന്നിവർക്കായി തിരിഞ്ഞു നോക്കുകയും ചെയ്യുക."
+   ]
+  ],
+  "hasArticle": true
+ },
+ {
+  "id": "junc",
+  "name": [
+   "Junctions and right of way",
+   "ജംഗ്ഷനുകളും മുൻഗണനയും"
+  ],
+  "dot": "#7a4a9c",
+  "lessons": [
+   [
+    "At a junction with no signs or signals and roads of equal importance, give way to traffic on your right.",
+    "അടയാളമോ സിഗ്നലോ ഇല്ലാത്ത, തുല്യ പ്രാധാന്യമുള്ള റോഡുകളുടെ ജംഗ്ഷനിൽ വലതുവശത്തുനിന്ന് വരുന്ന വാഹനങ്ങൾക്ക് വഴി കൊടുക്കുക."
+   ],
+   [
+    "Traffic on the main road has priority over traffic joining from a side road.",
+    "പ്രധാന റോഡിലെ വാഹനങ്ങൾക്ക് ഉപറോഡിൽ നിന്ന് വരുന്നവരേക്കാൾ മുൻഗണനയുണ്ട്."
+   ],
+   [
+    "When turning right, give way to oncoming traffic going straight.",
+    "വലത്തോട്ട് തിരിയുമ്പോൾ എതിരെ നേരെ വരുന്ന വാഹനങ്ങൾക്ക് വഴി കൊടുക്കുക."
+   ],
+   [
+    "A traffic police signal overrides signs and lights.",
+    "ട്രാഫിക് പോലീസിന്റെ സൂചന ചിഹ്നങ്ങളെയും ലൈറ്റുകളെയും മറികടക്കുന്നു."
+   ],
+   [
+    "Do not enter a junction unless your exit is clear. Never block it.",
+    "പുറത്തേക്കുള്ള വഴി ഒഴിഞ്ഞതല്ലെങ്കിൽ ജംഗ്ഷനിൽ കയറരുത്. ജംഗ്ഷൻ തടയരുത്."
+   ],
+   [
+    "At a level crossing with no gate, stop, look both ways and listen before crossing.",
+    "ഗേറ്റില്ലാത്ത ലെവൽ ക്രോസിങ്ങിൽ നിർത്തുക, ഇരുവശവും നോക്കുക, ശ്രദ്ധിച്ച് കേൾക്കുക, എന്നിട്ടേ കടക്കാവൂ."
+   ]
+  ],
+  "hasArticle": true
+ },
+ {
+  "id": "night",
+  "name": [
+   "Night, weather and lights",
+   "രാത്രി, കാലാവസ്ഥ, ലൈറ്റുകൾ"
+  ],
+  "dot": "#2a6f97",
+  "lessons": [
+   [
+    "Use dipped headlights when meeting other vehicles at night, and when following closely.",
+    "രാത്രി എതിരെ വാഹനം വരുമ്പോഴും തൊട്ടുപിന്നിൽ പോകുമ്പോഴും ഡിപ്പ് ചെയ്ത ഹെഡ്‌ലൈറ്റ് ഉപയോഗിക്കുക."
+   ],
+   [
+    "At night, drive slowly enough to stop within the distance your lights show.",
+    "രാത്രിയിൽ നിങ്ങളുടെ ലൈറ്റ് കാണിക്കുന്ന ദൂരത്തിനുള്ളിൽ നിർത്താൻ പറ്റുന്നത്ര വേഗത്തിൽ മാത്രം ഓടിക്കുക."
+   ],
+   [
+    "In fog, use low beam or fog lamps, slow down and keep more distance.",
+    "മൂടൽമഞ്ഞിൽ ലോ ബീമോ ഫോഗ് ലാമ്പോ ഉപയോഗിക്കുക, വേഗം കുറയ്ക്കുക, കൂടുതൽ അകലം പാലിക്കുക."
+   ],
+   [
+    "In heavy rain, slow down, use wipers and headlights, and avoid sudden braking.",
+    "കനത്ത മഴയിൽ വേഗം കുറയ്ക്കുക, വൈപ്പറും ഹെഡ്‌ലൈറ്റും ഉപയോഗിക്കുക, പെട്ടെന്ന് ബ്രേക്ക് ചെയ്യരുത്."
+   ],
+   [
+    "If the car starts to skid or aquaplane, ease off the accelerator and steer gently. Do not brake hard.",
+    "വാഹനം തെന്നുകയോ വെള്ളത്തിൽ പൊങ്ങിപ്പോകുകയോ ചെയ്താൽ ആക്സിലറേറ്റർ പതുക്കെ വിടുകയും സ്റ്റിയറിങ് മൃദുവായി പിടിക്കുകയും ചെയ്യുക. ശക്തിയായി ബ്രേക്ക് ചെയ്യരുത്."
+   ]
+  ],
+  "hasArticle": true
+ },
+ {
+  "id": "veh",
+  "name": [
+   "Vehicle care and environment",
+   "വാഹന പരിപാലനവും പരിസ്ഥിതിയും"
+  ],
+  "dot": "#2e9d5b",
+  "lessons": [
+   [
+    "A PUC certificate shows that the vehicle's exhaust emissions are within the set limits.",
+    "വാഹനത്തിന്റെ പുകമലിനീകരണം നിശ്ചിത പരിധിക്കുള്ളിലാണെന്ന് പി.യു.സി. സർട്ടിഫിക്കറ്റ് തെളിയിക്കുന്നു."
+   ],
+   [
+    "Check tyre pressure, brakes, lights and fluids regularly.",
+    "ടയർ പ്രഷർ, ബ്രേക്ക്, ലൈറ്റുകൾ, ദ്രാവകങ്ങൾ എന്നിവ ഇടയ്ക്കിടെ പരിശോധിക്കുക."
+   ],
+   [
+    "Do not open a hot radiator cap. Let the engine cool first.",
+    "ചൂടുള്ള റേഡിയേറ്റർ ക്യാപ്പ് തുറക്കരുത്. ആദ്യം എൻജിൻ തണുക്കാൻ അനുവദിക്കുക."
+   ],
+   [
+    "If brakes fail, pump the pedal, shift to a lower gear and use the handbrake gradually.",
+    "ബ്രേക്ക് പോയാൽ പെഡൽ ആവർത്തിച്ച് അമർത്തുക, താഴ്ന്ന ഗിയറിലേക്ക് മാറുക, ഹാൻഡ് ബ്രേക്ക് പതുക്കെ ഉപയോഗിക്കുക."
+   ],
+   [
+    "Unnecessary honking is noise pollution and an offence.",
+    "അനാവശ്യമായി ഹോൺ അടിക്കുന്നത് ശബ്ദമലിനീകരണവും കുറ്റകരവുമാണ്."
+   ]
+  ],
+  "hasArticle": true
+ },
+ {
+  "id": "emerg",
+  "name": [
+   "Accidents and first aid",
+   "അപകടവും പ്രഥമശുശ്രൂഷയും"
+  ],
+  "dot": "#b5222d",
+  "lessons": [
+   [
+    "Call 112 for any emergency in India. Kerala's ambulance service is reached on 108.",
+    "ഇന്ത്യയിൽ ഏത് അടിയന്തര സാഹചര്യത്തിലും 112 വിളിക്കുക. കേരളത്തിലെ ആംബുലൻസ് സേവനം 108 ൽ ലഭിക്കും."
+   ],
+   [
+    "After a crash, stop, switch on hazard lights, help the injured and call for help. Do not leave the scene.",
+    "അപകടമുണ്ടായാൽ നിർത്തുക, ഹസാർഡ് ലൈറ്റ് ഇടുക, പരിക്കേറ്റവരെ സഹായിക്കുക, സഹായത്തിന് വിളിക്കുക. സ്ഥലം വിട്ടുപോകരുത്."
+   ],
+   [
+    "Good Samaritan rules protect people who help accident victims in good faith.",
+    "നല്ല ഉദ്ദേശ്യത്തോടെ അപകടത്തിൽപ്പെട്ടവരെ സഹായിക്കുന്നവരെ ഗുഡ് സമരിറ്റൻ നിയമങ്ങൾ സംരക്ഷിക്കുന്നു."
+   ],
+   [
+    "For heavy bleeding, press firmly on the wound with a clean cloth.",
+    "കനത്ത രക്തസ്രാവമുണ്ടെങ്കിൽ വൃത്തിയുള്ള തുണി കൊണ്ട് മുറിവിൽ ശക്തിയായി അമർത്തിപ്പിടിക്കുക."
+   ],
+   [
+    "Do not move an injured person unless there is danger. Moving them can worsen spine injuries.",
+    "അപകടസാധ്യതയില്ലെങ്കിൽ പരിക്കേറ്റയാളെ അനക്കരുത്. നട്ടെല്ലിന് ക്ഷതമുണ്ടെങ്കിൽ അനക്കുന്നത് അത് വഷളാക്കും."
+   ],
+   [
+    "If your vehicle breaks down, move it to the side, switch on hazard lights and place a warning triangle behind.",
+    "വാഹനം കേടായാൽ അരികിലേക്ക് മാറ്റുക, ഹസാർഡ് ലൈറ്റ് ഇടുക, പിന്നിൽ വാണിങ് ട്രയാങ്കിൾ വയ്ക്കുക."
+   ]
+  ],
+  "hasArticle": true
+ },
+ {
+  "id": "marks",
+  "name": [
+   "Signs, markings and signals",
+   "ചിഹ്നങ്ങൾ, അടയാളങ്ങൾ, സിഗ്നലുകൾ"
+  ],
+  "dot": "#a05a00",
+  "lessons": [
+   [
+    "Mandatory signs give orders, cautionary signs warn of hazards and informatory signs show facilities and directions.",
+    "നിർബന്ധിത ചിഹ്നങ്ങൾ ഉത്തരവുകൾ നൽകുന്നു, മുന്നറിയിപ്പ് ചിഹ്നങ്ങൾ അപകടങ്ങളെക്കുറിച്ച് മുന്നറിയിപ്പ് തരുന്നു, വിവര ചിഹ്നങ്ങൾ സൗകര്യങ്ങളും ദിശകളും കാണിക്കുന്നു."
+   ],
+   [
+    "A red ring means something is prohibited. A blue circle means you must do what it shows.",
+    "ചുവപ്പ് വളയം എന്തോ നിരോധിച്ചിരിക്കുന്നു എന്നർത്ഥം. നീല വൃത്തം അത് കാണിക്കുന്നത് നിങ്ങൾ ചെയ്യണം എന്നർത്ഥം."
+   ],
+   [
+    "Do not cross a solid line on your side of the road. You may cross a broken line to overtake when it is safe.",
+    "റോഡിൽ നിങ്ങളുടെ വശത്തെ തുടർവര കടക്കരുത്. സുരക്ഷിതമാണെങ്കിൽ മറികടക്കാൻ മുറിഞ്ഞ വര കടക്കാം."
+   ],
+   [
+    "Red means stop, amber means get ready to stop and green means go when the way is clear.",
+    "ചുവപ്പ് നിർത്തുക, മഞ്ഞ നിർത്താൻ തയ്യാറാകുക, പച്ച വഴി ഒഴിഞ്ഞതെങ്കിൽ പോകാം എന്നർത്ഥം."
+   ],
+   [
+    "A traffic police officer's signal overrides signs and lights.",
+    "ട്രാഫിക് പോലീസിന്റെ സൂചന ചിഹ്നങ്ങളെയും ലൈറ്റുകളെയും മറികടക്കുന്നു."
+   ]
+  ],
+  "hasArticle": true
+ },
+ {
+  "id": "skills",
+  "name": [
+   "Driving skills for beginners",
+   "തുടക്കക്കാർക്കുള്ള ഡ്രൈവിങ് കഴിവുകൾ"
+  ],
+  "dot": "#0e7c86",
+  "lessons": [],
+  "hasArticle": true
+ },
+ {
+  "id": "twowheeler",
+  "name": [
+   "Riding a two-wheeler safely",
+   "ഇരുചക്രവാഹനം സുരക്ഷിതമായി ഓടിക്കൽ"
+  ],
+  "dot": "#c2410c",
+  "lessons": [],
+  "hasArticle": true
+ },
+ {
+  "id": "ghat",
+  "name": [
+   "Hills, ghats and monsoon",
+   "മലമ്പാത, ചുരം, മഴക്കാലം"
+  ],
+  "dot": "#4d7c0f",
+  "lessons": [],
+  "hasArticle": true
+ },
+ {
+  "id": "defensive",
+  "name": [
+   "Defensive driving",
+   "പ്രതിരോധ ഡ്രൈവിങ്"
+  ],
+  "dot": "#4338ca",
+  "lessons": [],
+  "hasArticle": true
+ },
+ {
+  "id": "law",
+  "name": [
+   "Traffic law and offences",
+   "ഗതാഗത നിയമവും കുറ്റകൃത്യങ്ങളും"
+  ],
+  "dot": "#9f1239",
+  "lessons": [],
+  "hasArticle": true
+ },
+ {
+  "id": "lictest",
+  "name": [
+   "Licence test guide",
+   "ലൈസൻസ് ടെസ്റ്റ് ഗൈഡ്"
+  ],
+  "dot": "#0369a1",
+  "lessons": [],
+  "hasArticle": true
+ },
+ {
+  "id": "vehicle",
+  "name": [
+   "Know your vehicle",
+   "നിങ്ങളുടെ വാഹനത്തെ അറിയുക"
+  ],
+  "dot": "#65a30d",
+  "lessons": [],
+  "hasArticle": true
+ },
+ {
+  "id": "sharing",
+  "name": [
+   "Sharing the road",
+   "റോഡ് പങ്കിടൽ"
+  ],
+  "dot": "#a21caf",
+  "lessons": [],
+  "hasArticle": true
+ }
+]

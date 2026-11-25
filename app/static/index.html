@@ -1,0 +1,47 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>IDrive</title>
+<meta name="description" content="IDrive — learn Indian road signs, markings, signals, hand signals and driving theory. Bilingual English and Malayalam.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 40'%3E%3Cpath d='M3 38V15a14 14 0 0 1 28 0v23z' fill='%23fff' stroke='%230a3b22' stroke-width='2'/%3E%3Cpath d='M3 15a14 14 0 0 1 28 0v4H3z' fill='%23f4c20d'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/app.css">
+</head><body>
+<div class="hero">
+  <div class="wrap head">
+    <div class="brand">
+      <svg viewBox="0 0 34 40" aria-hidden="true"><path d="M3 38V15a14 14 0 0 1 28 0v23z" fill="#fff" stroke="#0a3b22" stroke-width="2"/><path d="M3 15a14 14 0 0 1 28 0v4H3z" fill="#f4c20d"/><path d="M11 27h12M13 32h8" stroke="#0a3b22" stroke-width="2" stroke-linecap="round"/></svg>
+      <div><b>IDrive</b><small id="subline">Indian road signs, markings, signals and hand signals</small></div>
+    </div>
+    <nav class="tabs" id="tabsTop" aria-label="Sections"></nav>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      <div class="langs" id="langs" role="group" aria-label="Language"></div>
+      <span id="authSlot"></span>
+    </div>
+  </div>
+</div>
+<main class="wrap" id="app" aria-live="polite"></main>
+<footer class="wrap note" id="foot"></footer>
+<nav class="dock" id="dock" aria-label="Sections"><div class="dockin" id="dockin"></div></nav>
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-label="Sign details"><div class="sheetcard" id="sheetCard"></div></div>
+<div class="amodal" id="amodal" hidden role="dialog" aria-modal="true" aria-label="Sign in"><div class="acard" id="acard"></div></div>
+<div id="toasts" aria-live="polite"></div>
+<canvas id="confetti" hidden></canvas>
+<script src="/static/vendor/gsap/gsap.min.js"></script>
+<script src="/static/vendor/gsap/Flip.min.js"></script>
+<script src="/static/vendor/gsap/ScrollTrigger.min.js"></script>
+<script src="/static/vendor/gsap/DrawSVGPlugin.min.js"></script>
+<script src="/static/vendor/gsap/MotionPathPlugin.min.js"></script>
+<script src="/static/vendor/gsap/CustomEase.min.js"></script>
+<script src="/static/js/api.js"></script>
+<script src="/static/js/data.js"></script>
+<script src="/static/js/i18n.js"></script>
+<script src="/static/js/motion.js"></script>
+<script src="/static/js/auth.js"></script>
+<script src="/static/js/learn.js"></script>
+<script src="/static/js/quiz.js"></script>
+<script src="/static/js/exam.js"></script>
+<script src="/static/js/theory.js"></script>
+<script src="/static/js/progress.js"></script>
+<script src="/static/js/app.js"></script>
+</body></html>

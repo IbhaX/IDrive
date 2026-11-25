@@ -1,0 +1,92 @@
+[
+ {
+  "id": "mand",
+  "name": "Mandatory",
+  "dot": "#d4202c",
+  "blurb": "Regulatory signs are orders. Red-ringed circles tell you what not to do, blue circles tell you what you must do, and Stop and Give way have shapes of their own.",
+  "ml": [
+   "നിർബന്ധിത ചിഹ്നങ്ങൾ",
+   "നിയന്ത്രണ ചിഹ്നങ്ങൾ ഉത്തരവുകളാണ്. ചുവപ്പ് വളയമുള്ള വൃത്തങ്ങൾ ചെയ്യരുതാത്തത് പറയുന്നു, നീല വൃത്തങ്ങൾ ചെയ്യേണ്ടത് പറയുന്നു; സ്റ്റോപ്പിനും വഴി കൊടുക്കുക എന്നതിനും സ്വന്തം ആകൃതിയുണ്ട്."
+  ]
+ },
+ {
+  "id": "caut",
+  "name": "Cautionary",
+  "dot": "#f08a00",
+  "blurb": "Warning triangles with a red border tell you about a hazard or a change in the road ahead. Slow down and be ready.",
+  "ml": [
+   "മുന്നറിയിപ്പ് ചിഹ്നങ്ങൾ",
+   "ചുവപ്പ് അരികുള്ള ത്രികോണങ്ങൾ മുന്നിലെ അപകടത്തെക്കുറിച്ചോ റോഡിലെ മാറ്റത്തെക്കുറിച്ചോ മുന്നറിയിപ്പ് നൽകുന്നു. വേഗം കുറച്ച് തയ്യാറാകുക."
+  ]
+ },
+ {
+  "id": "info",
+  "name": "Informatory",
+  "dot": "#1b5aa6",
+  "blurb": "Blue rectangles and squares show facilities such as parking and fuel. Boards in green, blue or brown give directions and distances.",
+  "ml": [
+   "വിവര ചിഹ്നങ്ങൾ",
+   "നീല ദീർഘചതുരങ്ങളും ചതുരങ്ങളും പാർക്കിങ്, ഇന്ധനം തുടങ്ങിയ സൗകര്യങ്ങൾ കാണിക്കുന്നു. പച്ച, നീല, തവിട്ട് ബോർഡുകൾ ദിശയും ദൂരവും നൽകുന്നു."
+  ]
+ },
+ {
+  "id": "mark",
+  "name": "Road markings",
+  "dot": "#6b7280",
+  "blurb": "Lines, arrows and patterns painted on the road. They carry the same force as signs.",
+  "ml": [
+   "റോഡ് അടയാളങ്ങൾ",
+   "റോഡിൽ വരച്ച വരകളും അമ്പുകളും രൂപങ്ങളും. ചിഹ്നങ്ങളുടെ അതേ ബലം ഇവയ്ക്കുമുണ്ട്."
+  ]
+ },
+ {
+  "id": "sig",
+  "name": "Traffic signals",
+  "dot": "#2e9d5b",
+  "blurb": "Lights at junctions and crossings for vehicle drivers and for pedestrians.",
+  "ml": [
+   "ട്രാഫിക് സിഗ്നലുകൾ",
+   "ജംഗ്ഷനുകളിലും ക്രോസിങ്ങുകളിലും ഡ്രൈവർമാർക്കും കാൽനടയാത്രക്കാർക്കുമുള്ള ലൈറ്റുകൾ."
+  ]
+ },
+ {
+  "id": "hand",
+  "name": "Hand signals",
+  "dot": "#8a5a2b",
+  "blurb": "Signals given by drivers with the arm, and by traffic police. A police signal overrides any light or sign.",
+  "ml": [
+   "കൈ സിഗ്നലുകൾ",
+   "ഡ്രൈവർമാരും ട്രാഫിക് പോലീസും കൈ കൊണ്ട് നൽകുന്ന സൂചനകൾ. പോലീസിന്റെ സൂചന ഏത് ലൈറ്റിനെയും ചിഹ്നത്തെയും മറികടക്കുന്നു."
+  ]
+ },
+ {
+  "id": "dash",
+  "name": "Dashboard warning lights",
+  "dot": "#e8590c",
+  "blurb": "Symbols that light up on the instrument panel. Red means stop and check now, amber means get it checked soon, and green or blue means a system is on.",
+  "ml": [
+   "ഡാഷ്ബോർഡ് മുന്നറിയിപ്പ് ലൈറ്റുകൾ",
+   "ഇൻസ്ട്രുമെന്റ് പാനലിൽ തെളിയുന്ന ചിഹ്നങ്ങൾ. ചുവപ്പ് ഉടൻ നിർത്തി പരിശോധിക്കണം എന്നും, മഞ്ഞ ഉടൻ പരിശോധിപ്പിക്കണം എന്നും, പച്ചയോ നീലയോ ഒരു സംവിധാനം പ്രവർത്തിക്കുന്നു എന്നും സൂചിപ്പിക്കുന്നു."
+  ]
+ },
+ {
+  "id": "ctrl",
+  "name": "Vehicle controls and switches",
+  "dot": "#5c6b7a",
+  "blurb": "Symbols printed on the switches, buttons and controls inside a vehicle.",
+  "ml": [
+   "വാഹന നിയന്ത്രണങ്ങളും സ്വിച്ചുകളും",
+   "വാഹനത്തിനുള്ളിലെ സ്വിച്ചുകളിലും ബട്ടണുകളിലും നിയന്ത്രണങ്ങളിലും അച്ചടിച്ചിരിക്കുന്ന ചിഹ്നങ്ങൾ."
+  ]
+ },
+ {
+  "id": "plate",
+  "name": "Number plates and vehicle markings",
+  "dot": "#b08900",
+  "blurb": "The colour and layout of a number plate, and marks on a vehicle, tell you what kind of vehicle it is.",
+  "ml": [
+   "നമ്പർ പ്ലേറ്റുകളും വാഹന അടയാളങ്ങളും",
+   "നമ്പർ പ്ലേറ്റിന്റെ നിറവും രൂപവും വാഹനത്തിന്റെ അടയാളങ്ങളും അത് ഏത് തരം വാഹനമാണെന്ന് സൂചിപ്പിക്കുന്നു."
+  ]
+ }
+]

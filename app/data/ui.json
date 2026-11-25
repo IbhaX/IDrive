@@ -1,0 +1,582 @@
+{
+ "sub": [
+  "Indian road signs, markings, signals and hand signals",
+  "ഇന്ത്യൻ റോഡ് ചിഹ്നങ്ങൾ, അടയാളങ്ങൾ, സിഗ്നലുകൾ, കൈ സിഗ്നലുകൾ"
+ ],
+ "foot": [
+  "Signs here are simplified redraws for learning. Wording and details follow the IRC road sign standards and the Motor Vehicles Act conventions, but state rules, local languages and exact artwork differ. For a licence test, check your state RTO handbook too. Fines are not covered because they change.",
+  "ഇവിടെയുള്ള ചിഹ്നങ്ങൾ പഠനത്തിനായി ലളിതമായി വരച്ചതാണ്. വിവരണങ്ങൾ IRC റോഡ് ചിഹ്ന മാനദണ്ഡങ്ങളെയും മോട്ടോർ വാഹന നിയമത്തിലെ രീതികളെയും അടിസ്ഥാനമാക്കിയുള്ളതാണ്, എന്നാൽ സംസ്ഥാന നിയമങ്ങളും പ്രാദേശിക ഭാഷകളും യഥാർത്ഥ രൂപവും വ്യത്യസ്തമായിരിക്കാം. ലൈസൻസ് ടെസ്റ്റിന് നിങ്ങളുടെ സംസ്ഥാനത്തെ ആർ.ടി.ഒ. കൈപ്പുസ്തകവും പരിശോധിക്കുക. പിഴകൾ മാറിക്കൊണ്ടിരിക്കുന്നതിനാൽ ഉൾപ്പെടുത്തിയിട്ടില്ല."
+ ],
+ "tLearn": [
+  "Learn",
+  "പഠിക്കാം"
+ ],
+ "tQuiz": [
+  "Sign quiz",
+  "ചിഹ്ന ക്വിസ്"
+ ],
+ "tCards": [
+  "Flashcards",
+  "ഫ്ലാഷ്കാർഡുകൾ"
+ ],
+ "tProg": [
+  "Progress",
+  "പുരോഗതി"
+ ],
+ "all": [
+  "Everything",
+  "എല്ലാം"
+ ],
+ "shown": [
+  "{n} of {t} signs shown.",
+  "{t} ചിഹ്നങ്ങളിൽ {n} എണ്ണം കാണിക്കുന്നു."
+ ],
+ "nomatch": [
+  "No sign matches that search. Try a shorter word such as “school” or “turn”.",
+  "ഈ തിരയലിന് ചിഹ്നമൊന്നും കണ്ടില്ല. “സ്കൂൾ”, “വളവ്” പോലുള്ള ചെറിയ വാക്ക് പരീക്ഷിക്കുക."
+ ],
+ "today": [
+  "Sign of the day",
+  "ഇന്നത്തെ ചിഹ്നം"
+ ],
+ "primer": [
+  "How to read a sign: shapes and colours",
+  "ചിഹ്നം വായിക്കാൻ: ആകൃതിയും നിറവും"
+ ],
+ "p1": [
+  "Octagon: Stop. The only sign with this shape.",
+  "അഷ്ടഭുജം: നിർത്തുക. ഈ ആകൃതിയുള്ള ഒരേയൊരു ചിഹ്നം."
+ ],
+ "p2": [
+  "Inverted triangle: Give way.",
+  "തലകീഴായ ത്രികോണം: വഴി കൊടുക്കുക."
+ ],
+ "p3": [
+  "Red ring: something is prohibited. A red slash means that thing may not be done.",
+  "ചുവപ്പ് വളയം: എന്തോ നിരോധിച്ചിരിക്കുന്നു. ചുവപ്പ് ചരിഞ്ഞ വര ആ കാര്യം ചെയ്യരുത് എന്നർത്ഥം."
+ ],
+ "p4": [
+  "Blue circle: a compulsory instruction, such as go straight.",
+  "നീല വൃത്തം: നിർബന്ധിത നിർദേശം, ഉദാഹരണത്തിന് നേരെ പോകുക."
+ ],
+ "p5": [
+  "Triangle with red border: a warning of a hazard ahead.",
+  "ചുവപ്പ് അരികുള്ള ത്രികോണം: മുന്നിലെ അപകടത്തിന്റെ മുന്നറിയിപ്പ്."
+ ],
+ "p6": [
+  "Blue rectangle or square: information about facilities.",
+  "നീല ദീർഘചതുരമോ ചതുരമോ: സൗകര്യങ്ങളെക്കുറിച്ചുള്ള വിവരം."
+ ],
+ "p7": [
+  "Green board: highway directions. Blue is for state roads and brown for tourist places.",
+  "പച്ച ബോർഡ്: ഹൈവേ ദിശകൾ. നീല സംസ്ഥാന റോഡുകൾക്കും തവിട്ട് വിനോദസഞ്ചാര കേന്ദ്രങ്ങൾക്കും."
+ ],
+ "p8": [
+  "Solid line: do not cross. Broken line: crossing is allowed when safe.",
+  "തുടർവര: കടക്കരുത്. മുറിഞ്ഞ വര: സുരക്ഷിതമെങ്കിൽ കടക്കാം."
+ ],
+ "searchLab": [
+  "Search signs",
+  "ചിഹ്നങ്ങൾ തിരയുക"
+ ],
+ "searchPh": [
+  "Search {t} signs, such as school, hairpin or zebra",
+  "{t} ചിഹ്നങ്ങളിൽ തിരയുക: സ്കൂൾ, ഹെയർപിൻ, സീബ്ര"
+ ],
+ "do": [
+  "What you do",
+  "ചെയ്യേണ്ടത്"
+ ],
+ "prev": [
+  "Previous",
+  "മുമ്പത്തേത്"
+ ],
+ "next": [
+  "Next",
+  "അടുത്തത്"
+ ],
+ "know": [
+  "I know this sign",
+  "എനിക്ക് ഈ ചിഹ്നം അറിയാം"
+ ],
+ "unknow": [
+  "Mark as not learned",
+  "പഠിച്ചിട്ടില്ല എന്ന് അടയാളപ്പെടുത്തുക"
+ ],
+ "close": [
+  "Close",
+  "അടയ്ക്കുക"
+ ],
+ "pos": [
+  "{i} of {n}",
+  "{n}-ൽ {i}"
+ ],
+ "qTitle": [
+  "Sign quiz",
+  "ചിഹ്ന ക്വിസ്"
+ ],
+ "qLede": [
+  "Each question either shows a sign and asks what it means, or gives a name and asks you to pick the right sign.",
+  "ഓരോ ചോദ്യത്തിലും ഒന്നുകിൽ ഒരു ചിഹ്നം കാണിച്ച് അർത്ഥം ചോദിക്കും, അല്ലെങ്കിൽ പേര് തന്ന് ശരിയായ ചിഹ്നം തിരഞ്ഞെടുക്കാൻ പറയും."
+ ],
+ "topic": [
+  "Topic",
+  "വിഭാഗം"
+ ],
+ "qs": [
+  "Questions",
+  "ചോദ്യങ്ങൾ"
+ ],
+ "start": [
+  "Start with {n} questions",
+  "{n} ചോദ്യങ്ങളോടെ തുടങ്ങുക"
+ ],
+ "played": [
+  "Quizzes played: {p}. Best score: {b}%.",
+  "കളിച്ച ക്വിസുകൾ: {p}. മികച്ച സ്കോർ: {b}%."
+ ],
+ "done": [
+  "Quiz complete",
+  "ക്വിസ് പൂർത്തിയായി"
+ ],
+ "great": [
+  "Excellent. You know these signs well.",
+  "ഉഗ്രൻ. നിങ്ങൾക്ക് ഈ ചിഹ്നങ്ങൾ നന്നായി അറിയാം."
+ ],
+ "good": [
+  "Good work. A little more revision will make it solid.",
+  "നന്നായി. കുറച്ചുകൂടി ആവർത്തിച്ചാൽ ഉറയ്ക്കും."
+ ],
+ "keep": [
+  "Keep going. Review the signs you missed below and try again.",
+  "തുടരുക. തെറ്റിയ ചിഹ്നങ്ങൾ താഴെ നോക്കി വീണ്ടും ശ്രമിക്കുക."
+ ],
+ "revise": [
+  "Signs to revise",
+  "ആവർത്തിക്കേണ്ട ചിഹ്നങ്ങൾ"
+ ],
+ "nomiss": [
+  "No mistakes. Try a bigger set or another topic.",
+  "തെറ്റുകളില്ല. കൂടുതൽ ചോദ്യങ്ങളോ മറ്റൊരു വിഭാഗമോ പരീക്ഷിക്കുക."
+ ],
+ "reviseCards": [
+  "Revise missed as flashcards",
+  "തെറ്റിയവ ഫ്ലാഷ്കാർഡുകളായി ആവർത്തിക്കുക"
+ ],
+ "again": [
+  "Play again",
+  "വീണ്ടും കളിക്കുക"
+ ],
+ "chTopic": [
+  "Change topic",
+  "വിഭാഗം മാറ്റുക"
+ ],
+ "qn": [
+  "Question {i} of {n}",
+  "ചോദ്യം {i} / {n}"
+ ],
+ "qmean": [
+  "What does this mean?",
+  "ഇതിന്റെ അർത്ഥമെന്ത്?"
+ ],
+ "qw1": [
+  "Which sign is “",
+  "“"
+ ],
+ "qw2": [
+  "”?",
+  "” ഏത് ചിഹ്നമാണ്?"
+ ],
+ "option": [
+  "Option",
+  "ഓപ്ഷൻ"
+ ],
+ "right": [
+  "Correct",
+  "ശരി"
+ ],
+ "wrong1": [
+  "Not quite. This is ",
+  "ശരിയല്ല. ഇത് "
+ ],
+ "wrong2": [
+  "",
+  "ആണ്"
+ ],
+ "seeRes": [
+  "See result",
+  "ഫലം കാണുക"
+ ],
+ "nextQ": [
+  "Next question",
+  "അടുത്ത ചോദ്യം"
+ ],
+ "cLede": [
+  "Signs you find hard come back more often. Sessions are up to 12 cards.",
+  "ബുദ്ധിമുട്ടുള്ള ചിഹ്നങ്ങൾ കൂടുതൽ തവണ വരും. ഒരു സെഷനിൽ പരമാവധി 12 കാർഡുകൾ."
+ ],
+ "cTitle": [
+  "Flashcards",
+  "ഫ്ലാഷ്കാർഡുകൾ"
+ ],
+ "cFin": [
+  "Session finished",
+  "സെഷൻ കഴിഞ്ഞു"
+ ],
+ "cKnew": [
+  "You marked {n} of the cards as known.",
+  "{n} കാർഡുകൾ നിങ്ങൾ അറിയാമെന്ന് അടയാളപ്പെടുത്തി."
+ ],
+ "cAgain": [
+  "Start another session",
+  "മറ്റൊരു സെഷൻ തുടങ്ങുക"
+ ],
+ "cardN": [
+  "Card {i} of {n}",
+  "കാർഡ് {i} / {n}"
+ ],
+ "hint": [
+  "What does it mean? Tap to check.",
+  "അർത്ഥമെന്ത്? ഉത്തരം കാണാൻ തൊടുക."
+ ],
+ "showAns": [
+  "Show the answer",
+  "ഉത്തരം കാണിക്കുക"
+ ],
+ "showing": [
+  "Showing the answer",
+  "ഉത്തരം കാണിക്കുന്നു"
+ ],
+ "showAgain": [
+  "Show again",
+  "വീണ്ടും കാണിക്കുക"
+ ],
+ "knewIt": [
+  "I knew it",
+  "എനിക്കറിയാമായിരുന്നു"
+ ],
+ "pTitle": [
+  "Your progress",
+  "നിങ്ങളുടെ പുരോഗതി"
+ ],
+ "pLearned": [
+  "signs learned of {t}",
+  "{t} ചിഹ്നങ്ങളിൽ പഠിച്ചത്"
+ ],
+ "pViewed": [
+  "signs viewed",
+  "കണ്ട ചിഹ്നങ്ങൾ"
+ ],
+ "pBest": [
+  "best quiz score",
+  "മികച്ച ക്വിസ് സ്കോർ"
+ ],
+ "pNote": [
+  "A sign counts as learned after you get it right in a quiz or flashcard a few times, or when you mark it yourself.",
+  "ക്വിസിലോ ഫ്ലാഷ്കാർഡിലോ കുറച്ചു തവണ ശരിയാക്കിയാൽ, അല്ലെങ്കിൽ നിങ്ങൾ തന്നെ അടയാളപ്പെടുത്തിയാൽ ഒരു ചിഹ്നം പഠിച്ചതായി കണക്കാക്കും."
+ ],
+ "byTopic": [
+  "By topic",
+  "വിഭാഗം അനുസരിച്ച്"
+ ],
+ "legend": [
+  "Dark bar: learned. Light bar: viewed.",
+  "കടും നിറം: പഠിച്ചത്. ഇളം നിറം: കണ്ടത്."
+ ],
+ "hardest": [
+  "Hardest for you",
+  "നിങ്ങൾക്ക് ഏറ്റവും ബുദ്ധിമുട്ടുള്ളവ"
+ ],
+ "missedN": [
+  "Missed {n} time(s)",
+  "{n} തവണ തെറ്റി"
+ ],
+ "reviseWeak": [
+  "Revise these as flashcards",
+  "ഇവ ഫ്ലാഷ്കാർഡുകളായി ആവർത്തിക്കുക"
+ ],
+ "nothing": [
+  "Nothing yet. Take a quiz and the signs you miss will show up here.",
+  "ഇതുവരെ ഒന്നുമില്ല. ഒരു ക്വിസ് എടുക്കൂ; തെറ്റുന്ന ചിഹ്നങ്ങൾ ഇവിടെ കാണാം."
+ ],
+ "reset": [
+  "Reset",
+  "പുനഃക്രമീകരിക്കുക"
+ ],
+ "resetBtn": [
+  "Reset my progress",
+  "എന്റെ പുരോഗതി മായ്ക്കുക"
+ ],
+ "resetAsk": [
+  "This clears everything you have learned on this device.",
+  "ഈ ഉപകരണത്തിൽ നിങ്ങൾ പഠിച്ചതെല്ലാം ഇത് മായ്ക്കും."
+ ],
+ "resetYes": [
+  "Yes, reset",
+  "അതെ, മായ്ക്കുക"
+ ],
+ "resetNo": [
+  "Keep it",
+  "വേണ്ട"
+ ],
+ "tTheory": [
+  "Theory",
+  "സിദ്ധാന്തം"
+ ],
+ "tExam": [
+  "LLR test",
+  "എൽ.എൽ.ആർ. ടെസ്റ്റ്"
+ ],
+ "thTitle": [
+  "Theory lessons",
+  "സിദ്ധാന്ത പാഠങ്ങൾ"
+ ],
+ "thLede": [
+  "Short notes on every topic in the LLR test. Read a topic, then practise it.",
+  "എൽ.എൽ.ആർ. ടെസ്റ്റിലെ ഓരോ വിഷയത്തിനും ചെറിയ കുറിപ്പുകൾ. ഒരു വിഷയം വായിച്ച ശേഷം പരിശീലിക്കുക."
+ ],
+ "thPractise": [
+  "Practise this topic",
+  "ഈ വിഷയം പരിശീലിക്കുക"
+ ],
+ "thSigns": [
+  "Road signs, markings and signals",
+  "റോഡ് ചിഹ്നങ്ങൾ, അടയാളങ്ങൾ, സിഗ്നലുകൾ"
+ ],
+ "thSignsNote": [
+  "All 133 signs with pictures, meanings and what to do.",
+  "133 ചിഹ്നങ്ങളും ചിത്രം, അർത്ഥം, ചെയ്യേണ്ടത് എന്നിവയോടെ."
+ ],
+ "thSignsBtn": [
+  "Open the sign library",
+  "ചിഹ്ന ശേഖരം തുറക്കുക"
+ ],
+ "procTitle": [
+  "How the Kerala LLR works",
+  "കേരളത്തിലെ എൽ.എൽ.ആർ. എങ്ങനെ പ്രവർത്തിക്കുന്നു"
+ ],
+ "proc1": [
+  "Apply for the learner's licence through the Parivahan Sarathi portal, or as the Kerala MVD directs.",
+  "പരിവാഹൻ സാരഥി പോർട്ടൽ വഴിയോ കേരള എം.വി.ഡി. നിർദേശിക്കുന്ന രീതിയിലോ ലേണേഴ്സ് ലൈസൻസിന് അപേക്ഷിക്കുക."
+ ],
+ "proc2": [
+  "Pass the computer-based LLR test. The pattern reported from October 2025 is 30 questions, 30 seconds each, 18 correct to pass.",
+  "കമ്പ്യൂട്ടർ അധിഷ്ഠിത എൽ.എൽ.ആർ. ടെസ്റ്റ് ജയിക്കുക. 2025 ഒക്ടോബർ മുതൽ റിപ്പോർട്ട് ചെയ്ത രീതി: 30 ചോദ്യം, ഓരോന്നിനും 30 സെക്കൻഡ്, ജയിക്കാൻ 18 ശരി."
+ ],
+ "proc3": [
+  "The LLR is valid for 6 months.",
+  "എൽ.എൽ.ആർ. 6 മാസത്തേക്ക് സാധുവാണ്."
+ ],
+ "proc4": [
+  "After 30 days, book the driving test. It must be taken within the LLR's validity.",
+  "30 ദിവസത്തിന് ശേഷം ഡ്രൈവിങ് ടെസ്റ്റ് ബുക്ക് ചെയ്യുക. എൽ.എൽ.ആർ. കാലാവധിക്കുള്ളിൽ തന്നെ എടുക്കണം."
+ ],
+ "proc5": [
+  "The MVD LEADS app carries the official syllabus and practice tests. News reports say clearing its road safety levels can exempt you from the pre-learner class.",
+  "ഔദ്യോഗിക സിലബസും പരിശീലന ടെസ്റ്റുകളും എം.വി.ഡി. ലീഡ്സ് ആപ്പിലുണ്ട്. അതിലെ റോഡ് സുരക്ഷാ ലെവലുകൾ പൂർത്തിയാക്കിയാൽ ലേണേഴ്സിന് മുമ്പുള്ള ക്ലാസ് ഒഴിവാക്കാമെന്ന് വാർത്തകൾ പറയുന്നു."
+ ],
+ "procNote": [
+  "Rules change. Check the Kerala MVD or Parivahan site before you apply.",
+  "നിയമങ്ങൾ മാറാം. അപേക്ഷിക്കുന്നതിന് മുമ്പ് കേരള എം.വി.ഡി. അല്ലെങ്കിൽ പരിവാഹൻ സൈറ്റ് പരിശോധിക്കുക."
+ ],
+ "exTitle": [
+  "Kerala LLR test practice",
+  "കേരള എൽ.എൽ.ആർ. ടെസ്റ്റ് പരിശീലനം"
+ ],
+ "exLede": [
+  "Original practice questions in the style of the LLR test, with the reason behind every answer. They are not the official question bank.",
+  "എൽ.എൽ.ആർ. ടെസ്റ്റ് മാതൃകയിലുള്ള സ്വന്തം പരിശീലന ചോദ്യങ്ങൾ, ഓരോ ഉത്തരത്തിനും കാരണം സഹിതം. ഇവ ഔദ്യോഗിക ചോദ്യബാങ്ക് അല്ല."
+ ],
+ "mockTitle": [
+  "Mock test",
+  "മോക്ക് ടെസ്റ്റ്"
+ ],
+ "mockInfo": [
+  "30 questions, 30 seconds each, 18 correct to pass. A mix of road signs and rules.",
+  "30 ചോദ്യങ്ങൾ, ഓരോന്നിനും 30 സെക്കൻഡ്, ജയിക്കാൻ 18 ശരി. റോഡ് ചിഹ്നങ്ങളും നിയമങ്ങളും ചേർന്നത്."
+ ],
+ "mockStart": [
+  "Start mock test",
+  "മോക്ക് ടെസ്റ്റ് തുടങ്ങുക"
+ ],
+ "topicPr": [
+  "Practise by topic",
+  "വിഷയം അനുസരിച്ച് പരിശീലിക്കുക"
+ ],
+ "topicPrNote": [
+  "No timer. You see the answer and the reason after each question.",
+  "ടൈമർ ഇല്ല. ഓരോ ചോദ്യത്തിനും ശേഷം ഉത്തരവും കാരണവും കാണാം."
+ ],
+ "signsTopic": [
+  "Road signs",
+  "റോഡ് ചിഹ്നങ്ങൾ"
+ ],
+ "tleft": [
+  "Time left",
+  "ബാക്കി സമയം"
+ ],
+ "fin": [
+  "Finish",
+  "അവസാനിപ്പിക്കുക"
+ ],
+ "quit": [
+  "Quit",
+  "നിർത്തുക"
+ ],
+ "skipped": [
+  "Not answered",
+  "ഉത്തരം നൽകിയില്ല"
+ ],
+ "yourAns": [
+  "Your answer",
+  "നിങ്ങളുടെ ഉത്തരം"
+ ],
+ "corrAns": [
+  "Correct answer",
+  "ശരിയായ ഉത്തരം"
+ ],
+ "why": [
+  "Why",
+  "കാരണം"
+ ],
+ "passed": [
+  "Passed",
+  "ജയിച്ചു"
+ ],
+ "failed": [
+  "Not passed yet",
+  "ഇതുവരെ ജയിച്ചില്ല"
+ ],
+ "passNote": [
+  "You needed 18 of 30.",
+  "ജയിക്കാൻ 30-ൽ 18 വേണമായിരുന്നു."
+ ],
+ "scoreLine": [
+  "{c} of {n} correct",
+  "{n}-ൽ {c} ശരി"
+ ],
+ "rvAll": [
+  "All questions",
+  "എല്ലാ ചോദ്യങ്ങളും"
+ ],
+ "rvWrong": [
+  "Wrong or skipped",
+  "തെറ്റിയതോ വിട്ടതോ"
+ ],
+ "backMenu": [
+  "Back to menu",
+  "മെനുവിലേക്ക്"
+ ],
+ "allRight": [
+  "Every answer was right.",
+  "എല്ലാ ഉത്തരങ്ങളും ശരിയായിരുന്നു."
+ ],
+ "exStats": [
+  "LLR test results",
+  "എൽ.എൽ.ആർ. ടെസ്റ്റ് ഫലങ്ങൾ"
+ ],
+ "mTaken": [
+  "mock tests taken",
+  "എടുത്ത മോക്ക് ടെസ്റ്റുകൾ"
+ ],
+ "mPassed": [
+  "passed",
+  "ജയിച്ചവ"
+ ],
+ "mBest": [
+  "best mock score",
+  "മികച്ച മോക്ക് സ്കോർ"
+ ],
+ "topicAcc": [
+  "Accuracy by topic",
+  "വിഷയം അനുസരിച്ചുള്ള കൃത്യത"
+ ],
+ "noEx": [
+  "No answers yet. Try a mock test or topic practice.",
+  "ഉത്തരങ്ങളൊന്നുമില്ല. ഒരു മോക്ക് ടെസ്റ്റോ വിഷയ പരിശീലനമോ ശ്രമിക്കുക."
+ ],
+ "flashLink": [
+  "Flashcards",
+  "ഫ്ലാഷ്കാർഡുകൾ"
+ ],
+ "signQuizLink": [
+  "Sign quiz",
+  "ചിഹ്ന ക്വിസ്"
+ ],
+ "sqMean": [
+  "What does this sign mean?",
+  "ഈ ചിഹ്നത്തിന്റെ അർത്ഥമെന്ത്?"
+ ],
+ "artRead": [
+  "Read full lesson",
+  "പൂർണ്ണ പാഠം വായിക്കുക"
+ ],
+ "artBack": [
+  "All lessons",
+  "എല്ലാ പാഠങ്ങളും"
+ ],
+ "artDos": [
+  "Do",
+  "ചെയ്യേണ്ടത്"
+ ],
+ "artDonts": [
+  "Don't",
+  "ചെയ്യരുതാത്തത്"
+ ],
+ "artMyth": [
+  "Myth",
+  "തെറ്റിദ്ധാരണ"
+ ],
+ "artFact": [
+  "Fact",
+  "വസ്തുത"
+ ],
+ "artStory": [
+  "Illustrative story",
+  "ഉദാഹരണ കഥ"
+ ],
+ "artStoryNote": [
+  "Made-up example to show an idea. Not a real event.",
+  "ആശയം വിശദീകരിക്കാൻ ഉണ്ടാക്കിയ ഉദാഹരണം. യഥാർത്ഥ സംഭവമല്ല."
+ ],
+ "artLesson": [
+  "Lesson",
+  "പാഠം"
+ ],
+ "artRecap": [
+  "Remember",
+  "ഓർക്കുക"
+ ],
+ "artPrev": [
+  "Previous",
+  "മുമ്പത്തേത്"
+ ],
+ "artNext": [
+  "Next",
+  "അടുത്തത്"
+ ],
+ "glTitle": [
+  "Glossary",
+  "പദാവലി"
+ ],
+ "glSub": [
+  "Driving and road terms explained simply",
+  "ഡ്രൈവിങ്, റോഡ് പദങ്ങൾ ലളിതമായി"
+ ],
+ "glSearch": [
+  "Search a term",
+  "പദം തിരയുക"
+ ],
+ "glNone": [
+  "No matching term.",
+  "പൊരുത്തപ്പെടുന്ന പദമില്ല."
+ ],
+ "artCheck": [
+  "Rules can change. Confirm with the latest Motor Vehicles Act or your RTO / Parivahan.",
+  "നിയമങ്ങൾ മാറാം. ഏറ്റവും പുതിയ മോട്ടോർ വാഹന നിയമമോ നിങ്ങളുടെ ആർ.ടി.ഒ./പരിവാഹനോ പരിശോധിക്കുക."
+ ],
+ "artLessons": [
+  "Lessons",
+  "പാഠങ്ങൾ"
+ ]
+}

@@ -1,0 +1,101 @@
+"""User accounts and bearer-session management."""
+
+from __future__ import annotations
+
+import re
+from datetime import datetime, timedelta, timezone
+
+from sqlalchemy import delete, select
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from app.config import get_settings
+from app.models import Session, User
+from app.security import hash_password, hash_token, new_session_token, verify_password
+
+_EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+
+
+def normalise_email(email: str) -> str:
+    return email.strip().lower()
+
+
+def valid_email(email: str) -> bool:
+    return bool(_EMAIL_RE.match(email))
+
+
+async def register(db: AsyncSession, email: str, password: str, name: str) -> User:
+    """Create a user. Raises ValueError on a duplicate or bad email."""
+    email = normalise_email(email)
+    if not valid_email(email):
+        raise ValueError("invalid email")
+    exists = await db.scalar(select(User.id).where(User.email == email))
+    if exists is not None:
+        raise ValueError("email already registered")
+    user = User(email=email, password_hash=hash_password(password), name=name.strip())
+    db.add(user)
+    await db.commit()
+    await db.refresh(user)
+    return user
+
+
+async def login(db: AsyncSession, email: str, password: str) -> User | None:
+    """Return the user on success, else None. Callers must not reveal which
+    part failed."""
+    user = await db.scalar(select(User).where(User.email == normalise_email(email)))
+    if user is None or not verify_password(password, user.password_hash):
+        return None
+    user.last_login_at = datetime.now(timezone.utc)
+    await db.commit()
+    return user
+
+
+async def create_session(db: AsyncSession, user_id: int, user_agent: str = "") -> str:
+    """Create a session row, return the raw token (shown once)."""
+    token = new_session_token()
+    ttl = timedelta(days=get_settings().session_ttl_days)
+    db.add(
+        Session(
+            token_hash=hash_token(token),
+            user_id=user_id,
+            expires_at=datetime.now(timezone.utc) + ttl,
+            user_agent=user_agent[:256],
+        )
+    )
+    await db.commit()
+    return token
+
+
+async def get_user_by_token(db: AsyncSession, token: str) -> User | None:
+    if not token:
+        return None
+    row = await db.scalar(
+        select(Session).where(Session.token_hash == hash_token(token))
+    )
+    if row is None:
+        return None
+    exp = row.expires_at
+    if exp.tzinfo is None:
+        exp = exp.replace(tzinfo=timezone.utc)
+    if exp <= datetime.now(timezone.utc):
+        await db.delete(row)
+        await db.commit()
+        return None
+    return await db.get(User, row.user_id)
+
+
+async def logout(db: AsyncSession, token: str) -> None:
+    await db.execute(delete(Session).where(Session.token_hash == hash_token(token)))
+    await db.commit()
+
+
+async def cleanup_expired(db: AsyncSession) -> int:
+    """Delete expired sessions and stale exam papers. Returns rows removed."""
+    now = datetime.now(timezone.utc)
+    res = await db.execute(delete(Session).where(Session.expires_at <= now))
+    from app.models import ExamPaper
+
+    res2 = await db.execute(
+        delete(ExamPaper).where(ExamPaper.created_at < now - timedelta(days=2))
+    )
+    await db.commit()
+    return (res.rowcount or 0) + (res2.rowcount or 0)
