@@ -1158,5 +1158,65 @@
  "searchPh2": [
   "Search lessons, signs, lights, parts, rules…",
   "പാഠങ്ങൾ, ചിഹ്നങ്ങൾ, ലൈറ്റുകൾ, ഭാഗങ്ങൾ, നിയമങ്ങൾ തിരയുക…"
+ ],
+ "install": [
+  "Install app",
+  "ആപ്പ് ഇൻസ്റ്റാൾ ചെയ്യുക"
+ ],
+ "installTitle": [
+  "Install iDrive",
+  "iDrive ഇൻസ്റ്റാൾ ചെയ്യുക"
+ ],
+ "installSub": [
+  "Open it from your home screen like an app — full screen, and lessons you have opened work offline.",
+  "ഒരു ആപ്പ് പോലെ ഹോം സ്ക്രീനിൽ നിന്ന് തുറക്കാം — ഫുൾ സ്ക്രീനിൽ; തുറന്ന പാഠങ്ങൾ ഓഫ്‌ലൈനിലും വായിക്കാം."
+ ],
+ "notNow": [
+  "Not now",
+  "ഇപ്പോൾ വേണ്ട"
+ ],
+ "gotIt": [
+  "Got it",
+  "മനസ്സിലായി"
+ ],
+ "installDone": [
+  "iDrive is installed — find it on your home screen",
+  "iDrive ഇൻസ്റ്റാൾ ആയി — ഹോം സ്ക്രീനിൽ കാണാം"
+ ],
+ "iosHint": [
+  "On iPhone and iPad, Safari adds apps from the Share menu.",
+  "ഐഫോണിലും ഐപാഡിലും സഫാരിയിലെ ഷെയർ മെനുവിൽ നിന്നാണ് ആപ്പ് ചേർക്കുന്നത്."
+ ],
+ "iosStep1": [
+  "Tap the Share button {share} in Safari’s toolbar.",
+  "സഫാരി ടൂൾബാറിലെ ഷെയർ ബട്ടൺ {share} തൊടുക."
+ ],
+ "iosStep2": [
+  "Scroll down and choose “Add to Home Screen” {add}.",
+  "താഴേക്ക് നീക്കി “Add to Home Screen” {add} തിരഞ്ഞെടുക്കുക."
+ ],
+ "iosStep3": [
+  "Tap “Add”. iDrive appears on your home screen.",
+  "“Add” തൊടുക. iDrive ഹോം സ്ക്രീനിൽ വരും."
+ ],
+ "macHint": [
+  "Safari on Mac can add iDrive to your Dock.",
+  "മാക്കിലെ സഫാരിയിൽ iDrive ഡോക്കിലേക്ക് ചേർക്കാം."
+ ],
+ "macStep1": [
+  "In the menu bar, open File.",
+  "മെനു ബാറിൽ File തുറക്കുക."
+ ],
+ "macStep2": [
+  "Choose “Add to Dock…”, then “Add”.",
+  "“Add to Dock…” തിരഞ്ഞെടുത്ത് “Add” അമർത്തുക."
+ ],
+ "offlineNow": [
+  "You are offline — lessons you have opened still work",
+  "നിങ്ങൾ ഓഫ്‌ലൈനിലാണ് — തുറന്ന പാഠങ്ങൾ ഇപ്പോഴും വായിക്കാം"
+ ],
+ "onlineAgain": [
+  "Back online",
+  "വീണ്ടും ഓൺലൈനിൽ"
  ]
 }

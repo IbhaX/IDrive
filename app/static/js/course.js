@@ -155,6 +155,7 @@ C.home = async (app) => {
     <div class="stile"><div class="bignum" id="hStreak">0</div><div><b>${e(u("dayStreak"))}</b><span>${e(u("streakSub"))}</span></div></div>
     <div class="stile"><div class="lvpill">${lv + 1}/5</div><div><b>${e(u(C.LEVELS[lv]))}</b><span>${e(u("levelSub"))}</span></div></div>
   </section>
+  ${Pwa.cardHtml()}
   ${nxm ? `<a class="nextcard rvl" href="#lesson/${nx}" style="--accent:${C.modById[nxm.module].accent}"><span class="eyebrow">${e(doneN ? u("upNext") : u("startHere"))} · ${e(u("moduleN", { n: C.modById[nxm.module].n }))}</span><b>${e(nxm.title)}</b><small>${e(nxm.chapter)} · ${nxm.minutes} ${e(u("min"))}</small></a>` : ""}
   ${recent.length ? `<section class="rvl"><h3 class="lab">${e(u("recent"))}</h3><div class="ilist">${recent.map(id => C.itemRow({ type: "lesson", ...C.lessonMeta[id] })).join("")}</div></section>` : ""}
   <section class="rvl"><h3 class="lab">${e(u("explore"))}</h3><div class="feat">${feats.map(f => `<a class="fcard tiltc" href="${f[0]}"><span class="fi">${C.icon(f[1])}</span><b>${e(u(f[2]))}</b><small>${e(u(f[3]))}</small></a>`).join("")}</div></section>

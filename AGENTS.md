@@ -30,6 +30,9 @@ Python 3.12+, Node 18+ (extraction only). Windows-friendly: no shell-isms outsid
 - **Progress blob additions** (`les`, `bm`, `rec`, `days`, `rq`, `hz`, `lab`, `secs`) merge as: `les` field-wise max; `bm` latest `|ts|` wins (sign = on/off); `days` union; `hz`/`rq` per-key max; `lab.rt` min; `rec` local order first; `secs` max.
 - **Content safety:** no fine amounts in data; stories carry the illustrative label (a data field); the RTO/Parivahan disclaimer stays in the footer + articles. Track unverified facts in `content_review.md`.
 
+- **PWA:** `app/static/sw.js` is served at `/sw.js` with `__BUILD__` replaced by the build fingerprint (new worker per deploy). Shell = network first, `/static/*` = cache first (URLs are content-versioned), read-only content APIs = network first with offline fallback; auth/progress/exam/instructor are never cached. Install UI lives in `pwa.js` (native prompt on Chrome/Edge/Android, Share-sheet steps on iOS, File › Add to Dock on macOS Safari). Icons: `app/static/img/`, manifest: `app/static/manifest.webmanifest`.
+- **Logo:** the top-bar mark is the animated road-"i" (SMIL, so it runs on iOS); `app.js` pauses it under reduced motion. Static versions: `img/logo-mark.svg`, `img/icon.svg`, `img/favicon.svg`; animated: `img/logo-animated.svg`.
+
 ## Where things live
 
 - Question engine port (`signQ`/`prep`/`buildMock`/`buildPractice`/`build_sign_quiz`): `app/services/exams.py`

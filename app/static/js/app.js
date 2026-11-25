@@ -141,6 +141,7 @@ function render() {
   document.getElementById("dockin").innerHTML = dockHtml();
   applyStatic();
   Auth.renderChip();
+  Pwa.refresh();
   const app = document.getElementById("app");
   app.dataset.view = S.view;
   const r = (VIEWS[S.view] || VIEWS.home)(app);
@@ -202,7 +203,7 @@ function toggleMore(btn) {
   const m = document.getElementById("moreMenu");
   if (!m) return;
   if (!m.hidden) { closeMore(); return; }
-  m.innerHTML = `<div class="moregrid">${TABS.filter(t => !DOCK.includes(t.id)).map(t => `<a href="#${t.id}" ${t.id === curTab() ? 'aria-current="page"' : ""}>${I(t.icon)}<span>${esc(I18n.u(t.k))}</span></a>`).join("")}<a href="#theory">${I('<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5"/>')}<span>${esc(I18n.u("tTheory"))}</span></a><button data-act="search">${I('<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>')}<span>${esc(I18n.u("search"))}</span></button></div>`;
+  m.innerHTML = `<div class="moregrid">${TABS.filter(t => !DOCK.includes(t.id)).map(t => `<a href="#${t.id}" ${t.id === curTab() ? 'aria-current="page"' : ""}>${I(t.icon)}<span>${esc(I18n.u(t.k))}</span></a>`).join("")}<a href="#theory">${I('<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5"/>')}<span>${esc(I18n.u("tTheory"))}</span></a><button data-act="search">${I('<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>')}<span>${esc(I18n.u("search"))}</span></button>${Pwa.menuHtml()}</div>`;
   m.hidden = false;
   btn.setAttribute("aria-expanded", "true");
   Motion.rise(m.querySelectorAll("a,button"));
@@ -213,6 +214,7 @@ document.addEventListener("click", (e) => {
   if (e.target === document.getElementById("sheet")) { Learn.closeSheet(); return; }
   if (e.target === document.getElementById("amodal")) { Auth.closeModal(); return; }
   if (e.target === document.getElementById("searchOv")) { Search.close(); return; }
+  if (e.target === document.getElementById("pwaSheet")) { Pwa.closeHelp(); return; }
   if (!e.target.closest("#moreMenu,.morebtn")) closeMore();
   const t = e.target.closest("[data-go],[data-art],[data-etopic],[data-ans],[data-lang],[data-open],[data-act],[data-cat],[data-qcat],[data-qlen],[data-ccat],[data-opt],[data-amode],[data-kc],[data-vgroup],[data-vsev],[data-light],[data-part],[data-hz],[data-hzc],[data-ask],[data-sclose],#sClose");
   if (!t) return;
@@ -278,6 +280,9 @@ document.addEventListener("click", (e) => {
     case "reset0": render(); break;
     case "signin": Auth.openModal("login"); break;
     case "theme": toggleTheme(); break;
+    case "install": closeMore(); Pwa.install(); break;
+    case "installLater": Pwa.dismiss(); break;
+    case "pwaClose": Pwa.closeHelp(); break;
     case "account": if (confirm(I18n.u("signOut") + "?")) Auth.signOut(); break;
     case "search": closeMore(); Search.open(); break;
     case "more": toggleMore(t); break;
@@ -298,6 +303,7 @@ document.addEventListener("keydown", (e) => {
   if ((e.key === "k" && (e.metaKey || e.ctrlKey)) || (e.key === "/" && !typing && !Search.isOpen())) {
     e.preventDefault(); Search.open(); return;
   }
+  if (e.key === "Escape" && !document.getElementById("pwaSheet").hidden) { Pwa.closeHelp(); return; }
   if (Search.isOpen()) { if (e.key === "Escape") Search.close(); return; }
   if (e.key === "Escape") closeMore();
   const sheet = document.getElementById("sheet");
@@ -348,4 +354,15 @@ window.addEventListener("pagehide", saveLocal);
   await Auth.restore();
   await route();
 })();
+})();
+
+/* the logo's car animation is SMIL; honour reduced-motion by freezing it */
+(function logoMotion() {
+  const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const apply = () => document.querySelectorAll("svg.bmark").forEach((s) => {
+    if (!s.pauseAnimations) return;
+    if (mq.matches) { s.pauseAnimations(); s.setCurrentTime && s.setCurrentTime(0.4); } else s.unpauseAnimations();
+  });
+  apply();
+  if (mq.addEventListener) mq.addEventListener("change", apply);
 })();

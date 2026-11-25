@@ -143,3 +143,11 @@ def test_icons_and_manifest_are_served(client) -> None:
         assert r.status_code == 200 and r.headers["content-type"].startswith(kind), path
     html = client.get("/").text
     assert 'rel="manifest"' in html and "og:image" in html and 'class="bmark"' in html
+
+
+def test_service_worker_is_served_from_root_with_build(client) -> None:
+    r = client.get("/sw.js")
+    assert r.status_code == 200
+    assert r.headers["content-type"].startswith("application/javascript")
+    assert r.headers.get("Service-Worker-Allowed") == "/"
+    assert "__BUILD__" not in r.text and "idrive-shell-" in r.text

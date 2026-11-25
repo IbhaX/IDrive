@@ -875,9 +875,71 @@ html{scroll-padding-top:calc(var(--navh,76px) + 12px);scroll-padding-bottom:calc
 
 /* ---------- brand: road-"i" mark + "Drive" wordmark ---------- */
 .brand{gap:1px;align-items:center}
-.brand svg.bmark{width:auto;height:38px;aspect-ratio:100/150;filter:drop-shadow(0 0 10px rgba(124,108,255,.4));margin-right:1px}
+.brand svg.bmark{width:auto;height:40px;aspect-ratio:100/150;filter:drop-shadow(0 0 10px rgba(124,108,255,.4));margin-right:1px}
 .brand b{font-family:"Inter",var(--display),system-ui,sans-serif;font-size:27px;font-weight:700;letter-spacing:-.03em;text-transform:none;
          background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--ink);line-height:1;padding-top:6px}
 .brand small{padding-left:2px}
 .topnav.nav-tight .brand svg.bmark{height:32px}
 @media (max-width:380px){.brand svg.bmark{height:28px}.brand b{font-size:22px;padding-top:4px}}
+
+/* ============ PWA: install card, top-bar button, help sheet ============ */
+.installbtn{display:none}
+@media (min-width:760px){.installbtn:not([hidden]){display:inline-flex;align-items:center;justify-content:center}}
+.installbtn svg{width:18px;height:18px}
+.pwacard{display:grid;grid-template-columns:56px 1fr;gap:12px 14px;align-items:center;padding:16px;border-radius:var(--r-lg);
+  border:1px solid color-mix(in srgb,var(--acc2,#7c6cff) 35%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,#7c6cff 14%,var(--panel2)),color-mix(in srgb,#38bdf8 10%,var(--panel2)))}
+.pwacard img{width:56px;height:56px;border-radius:14px}
+.pwatxt{display:flex;flex-direction:column;gap:3px;min-width:0}
+.pwatxt b{font-size:16px}
+.pwatxt small{color:var(--muted);font-size:13.5px;line-height:1.45}
+.pwaact{grid-column:1/-1;display:flex;gap:10px;flex-wrap:wrap}
+.pwaact .btn{flex:1 1 140px;min-height:46px}
+.pwaact .btn svg{width:18px;height:18px}
+@media (min-width:760px){.pwacard{grid-template-columns:56px 1fr auto}.pwaact{grid-column:auto}.pwaact .btn{flex:0 0 auto}}
+.pwaov{position:fixed;inset:0;z-index:70;background:rgba(5,6,12,.62);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  display:flex;align-items:flex-end;justify-content:center;padding:12px max(12px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.pwaov[hidden]{display:none}
+@media (min-width:640px){.pwaov{align-items:center}}
+.pwasheet{width:min(440px,100%);background:var(--panel-solid);border:1px solid var(--line);border-radius:22px;padding:20px;display:flex;flex-direction:column;gap:16px;box-shadow:var(--shadow-2)}
+.pwahead{display:flex;gap:12px;align-items:center}
+.pwahead img{border-radius:12px}
+.pwahead div{display:flex;flex-direction:column;gap:2px}
+.pwahead small{color:var(--muted);font-size:13.5px}
+.pwasteps{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:10px;font-size:15.5px;line-height:1.5}
+.pwasteps svg.inl{width:20px;height:20px;vertical-align:-4px;color:#38bdf8}
+.pwasheet .btn{min-height:48px}
+
+/* ============ mobile-first polish ============ */
+/* installed app on iOS draws under the status bar */
+.topnav{padding-top:calc(10px + env(safe-area-inset-top,0px))}
+main{padding-top:calc(var(--navh,76px) + 20px)}
+#toasts{top:calc(var(--navh,76px) + 10px)}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overscroll-behavior-y:none}
+a,button,[role="button"],summary,label{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+/* iOS zooms into inputs under 16px */
+@media (max-width:760px){input,select,textarea{font-size:16px !important}}
+/* comfortable touch targets on touch screens */
+@media (pointer:coarse){
+  .btn,.chip,.opt,.tagc,.themebtn,.searchbtn{min-height:44px}
+  .lg{min-height:38px}
+  .themebtn,.searchbtn{min-width:44px}
+  .dock a,.dock .morebtn{min-height:54px}
+  .moregrid a,.moregrid button{min-height:64px}
+}
+@media (display-mode:standalone){
+  /* no browser chrome: a little more air at the bottom, no text selection on chrome */
+  .topnav,.dock{-webkit-user-select:none;user-select:none}
+}
+/* small labels stay readable on phones (Malayalam especially) */
+@media (max-width:760px){
+  .eyebrow,.today .eyebrow,.mn,.myth span.tag,.story .tag,.lnote b{font-size:12px}
+  :root[lang="ml"] .eyebrow,:root[lang="ml"] .mn,:root[lang="ml"] .tag,:root[lang="ml"] .lnote b{font-size:12.5px;letter-spacing:.04em}
+}
+@media (pointer:coarse){
+  .crumbs{gap:2px}
+  .crumbs a{display:inline-flex;align-items:center;min-height:40px;padding:0 6px;margin:0 -6px}
+  input[type=range]{height:44px}
+  .btn.small{min-height:44px}
+  .lg{min-width:44px}
+}

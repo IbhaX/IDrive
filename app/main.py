@@ -157,6 +157,18 @@ for _url, (_rel, _media) in _ROOT_FILES.items():
     app.get(_url, include_in_schema=False)(_root_file(_rel, _media))
 
 
+@app.get("/sw.js", include_in_schema=False)
+async def service_worker() -> Response:
+    """The PWA service worker. Served from the root so it controls the whole
+    site; the build fingerprint is baked in so each deploy ships a new worker."""
+    body = (static_dir / "sw.js").read_text(encoding="utf-8").replace("__BUILD__", app_build(static_dir))
+    return Response(
+        body,
+        media_type="application/javascript",
+        headers={"Cache-Control": "no-cache", "Service-Worker-Allowed": "/"},
+    )
+
+
 # Hash-routed SPA: every app path serves the shell.
 for _path in ("home", "course", "lesson", "learn", "vehicle", "science", "hazard", "theory", "exam", "quiz", "cards", "ask", "progress"):
     app.get("/" + _path, include_in_schema=False)(
