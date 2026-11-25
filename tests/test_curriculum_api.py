@@ -151,3 +151,12 @@ def test_service_worker_is_served_from_root_with_build(client) -> None:
     assert r.headers["content-type"].startswith("application/javascript")
     assert r.headers.get("Service-Worker-Allowed") == "/"
     assert "__BUILD__" not in r.text and "idrive-shell-" in r.text
+
+
+def test_csp_allows_3d_assets_but_no_inline_scripts(client) -> None:
+    csp = client.get("/").headers["Content-Security-Policy"]
+    script = next(p for p in csp.split(";") if p.strip().startswith("script-src"))
+    assert "'unsafe-inline'" not in script and "https://cdn.jsdelivr.net" in script
+    assert "'wasm-unsafe-eval'" in script and "worker-src 'self' blob:" in csp
+    assert "https://raw.githubusercontent.com" in csp
+    assert "<script>" not in client.get("/").text

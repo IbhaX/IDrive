@@ -50,14 +50,27 @@ V.carSvg = (parts, sel) => `<svg viewBox="0 0 800 340" class="carx" role="group"
   <g class="wheels"><circle cx="170" cy="262" r="40" class="tyre"/><circle cx="170" cy="262" r="20" class="disc"/><circle cx="620" cy="262" r="40" class="tyre"/><circle cx="620" cy="262" r="20" class="disc"/></g>
   ${parts.map(p => `<g class="hot ${p.id === sel ? "on" : ""} ${V.group !== "all" && p.group !== V.group ? "dim" : ""}" data-part="${p.id}" tabindex="0" role="button" aria-label="${esc(I18n.one(p.name))}" aria-pressed="${p.id === sel}" transform="translate(${p.x},${p.y})"><circle r="15" class="hring"/><circle r="6" class="hdot"/></g>`).join("")}
 </svg>`;
+/* 3D (real model) or the flat diagram; 3D is the default where WebGL works */
+V.mode = (() => { try { return localStorage.getItem("idrive-vmode") || ""; } catch (e) { return ""; } })();
+V.useMode = () => (V.mode === "2d" || !window.Car3D || !Car3D.supported() ? "2d" : "3d");
+V.infoHtml = (p) => p ? V.partHtml(p) : `<p class="muted">${e(u("pickPart"))}</p><div class="plist">${V.parts.filter(x => V.group === "all" || x.group === V.group).map(x => `<button class="chip" data-part="${x.id}">${e(x.name)}</button>`).join("")}</div>`;
 V.explore = (host, sel) => {
   const p = V.parts.find(x => x.id === sel) || null;
+  const mode = V.useMode();
+  const toggle = window.Car3D && Car3D.supported() ? `<div class="seg vmode" role="tablist" aria-label="${I18n.esc(I18n.one(u("v3dView")))}"><a href="#" role="tab" data-vmode="3d" class="${mode === "3d" ? "on" : ""}" aria-selected="${mode === "3d"}">${e(u("v3dModel"))}</a><a href="#" role="tab" data-vmode="2d" class="${mode === "2d" ? "on" : ""}" aria-selected="${mode === "2d"}">${e(u("v3dDiagram"))}</a></div>` : "";
   host.innerHTML = `<section class="panel rvl"><h2>${e(u("fVehicle"))}</h2><p class="lede">${e(u("explorerLede"))}</p>
   <div class="chips" role="group">${GROUPS.map(g => `<button class="chip ${V.group === g ? "on" : ""}" data-vgroup="${g}">${e(u("grp_" + g))}</button>`).join("")}</div></section>
-  <div class="xgrid"><section class="panel xviz rvl">${V.carSvg(V.parts, sel)}</section>
-  <section class="panel xinfo rvl" id="xInfo" aria-live="polite">${p ? V.partHtml(p) : `<p class="muted">${e(u("pickPart"))}</p><div class="plist">${V.parts.filter(x => V.group === "all" || x.group === V.group).map(x => `<button class="chip" data-part="${x.id}">${e(x.name)}</button>`).join("")}</div>`}</section></div>`;
+  <div class="xgrid"><section class="panel xviz rvl">${toggle}${mode === "3d" ? `<div id="x3dSlot"></div><p class="x3dnote">${e(u("v3dHint"))}</p><p class="x3dcredit">${e(u("v3dCredit"))} · <a href="https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/CarConcept" target="_blank" rel="noopener">CC BY 4.0</a></p>` : V.carSvg(V.parts, sel)}</section>
+  <section class="panel xinfo rvl" id="xInfo" aria-live="polite">${V.infoHtml(p)}</section></div>`;
+  host.querySelectorAll("[data-vmode]").forEach(a => a.addEventListener("click", (ev) => {
+    ev.preventDefault();
+    V.mode = a.dataset.vmode;
+    try { localStorage.setItem("idrive-vmode", V.mode); } catch (err) {}
+    V.explore(host, S.param2);
+  }));
+  if (mode === "3d") Car3D.mount(document.getElementById("x3dSlot"), V.parts, sel, V.selectPart);
   Motion.reveal(host);
-  if (p) Motion.pop(host.querySelector(`.hot[data-part="${p.id}"] .hring`));
+  if (p && mode === "2d") Motion.pop(host.querySelector(`.hot[data-part="${p.id}"] .hring`));
 };
 V.partHtml = (p) => {
   const rel = p.related.map(id => V.parts.find(x => x.id === id)).filter(Boolean);
@@ -71,6 +84,14 @@ V.selectPart = (id) => {
   S.param2 = id;
   setHash("vehicle/explore/" + id);
   const host = document.getElementById("vHost");
+  // 3D: keep the scene, just fly to the part and swap the info panel
+  if (V.useMode() === "3d" && window.Car3D && Car3D.state === "ready" && document.getElementById("x3dSlot")) {
+    Car3D.select(id, true);
+    const info = document.getElementById("xInfo"), p = V.parts.find(x => x.id === id);
+    Course.loadOutline().catch(() => {}).then(() => { info.innerHTML = V.infoHtml(p); Motion.rise && Motion.rise(info.children); });
+    if (window.matchMedia("(max-width:900px)").matches) document.getElementById("x3dSlot").scrollIntoView({ block: "nearest", behavior: Motion.reduced() ? "auto" : "smooth" });
+    return;
+  }
   if (host && V.parts) {
     Course.loadOutline().catch(() => {}).then(() => V.explore(host, id));
   }

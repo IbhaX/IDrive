@@ -107,9 +107,13 @@ def run(base: str, out: Path, browser_path: Optional[str]) -> int:
         check("knowledge check reaches score", page.locator(".kcdone").count() == 1)
 
         page.goto(f"{base}/#vehicle/explore"); _wait(page)
+        if page.locator("[data-vmode='2d']").count():      # 3D is the default where WebGL works
+            check("3D viewer mounts", page.locator(".x3d").count() == 1)
+            page.click("[data-vmode='2d']"); page.wait_for_timeout(300)
         page.click(".hot[data-part=brakes]", force=True)
         page.wait_for_timeout(300)
         check("vehicle hotspot shows part", "Brakes" in page.inner_text("#xInfo"))
+        page.click("[data-vmode='3d']") if page.locator("[data-vmode='3d']").count() else None
 
         page.goto(f"{base}/#science/stopping"); _wait(page)
         page.fill("#inKmh", "100")

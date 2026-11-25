@@ -85,12 +85,15 @@ async def html_headers(
     if "text/html" in ctype:
         resp.headers["Content-Security-Policy"] = (
             "default-src 'self'; "
-            "img-src 'self' data:; "
+            "img-src 'self' data: blob:; "
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://accounts.google.com; "
             "font-src 'self' https://fonts.gstatic.com; "
-            "script-src 'self' https://accounts.google.com; "
+            # three.js + loaders for the 3D car come from jsDelivr; the Draco/Basis
+            # decoders run as WebAssembly in blob: workers.
+            "script-src 'self' 'wasm-unsafe-eval' https://accounts.google.com https://cdn.jsdelivr.net; "
+            "worker-src 'self' blob:; "
             "frame-src https://accounts.google.com; "
-            "connect-src 'self' https://accounts.google.com"
+            "connect-src 'self' https://accounts.google.com https://cdn.jsdelivr.net https://raw.githubusercontent.com"
         )
     return resp
 

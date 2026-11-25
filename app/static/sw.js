@@ -11,7 +11,9 @@ const BUILD = "__BUILD__";
 const SHELL = "idrive-shell-" + BUILD;
 const STATIC = "idrive-static-" + BUILD;
 const DATA = "idrive-data-v1";
-const KEEP = [SHELL, STATIC, DATA];
+const MODELS = "idrive-3d-v1";   // three.js + the 3D car, pinned versions: keep across deploys
+const KEEP = [SHELL, STATIC, DATA, MODELS];
+const CROSS_CACHE = [/^https:\/\/cdn\.jsdelivr\.net\/npm\/three@/, /^https:\/\/raw\.githubusercontent\.com\/KhronosGroup\/glTF-Sample-Assets\//];
 
 const CACHEABLE_API = [
   /^\/api\/content\/(index|ui|glossary|svgs|signs\/|theory\/)/,
@@ -69,6 +71,17 @@ self.addEventListener("fetch", (event) => {
   const req = event.request;
   if (req.method !== "GET") return;
   const url = new URL(req.url);
+  if (CROSS_CACHE.some((re) => re.test(req.url))) {
+    event.respondWith((async () => {
+      const cache = await caches.open(MODELS);
+      const hit = await cache.match(req);
+      if (hit) return hit;
+      const res = await fetch(req);
+      if (res.ok) cache.put(req, res.clone());
+      return res;
+    })());
+    return;
+  }
   if (url.origin !== self.location.origin) return;
 
   if (req.mode === "navigate") {
