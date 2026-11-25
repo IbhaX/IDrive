@@ -50,7 +50,7 @@ with TestClient(app) as c:
     check("register", reg.status_code == 201)
     h = {"Authorization": "Bearer " + reg.json()["token"]}
 
-    quiz = c.post("/api/quiz/signs", json={"cat": "all", "length": 5})
+    quiz = c.post("/api/quiz/signs", json={"cat": "all", "length": 5}, headers=h)
     check("sign quiz", len(quiz.json()["questions"]) == 5)
 
     mock = c.post("/api/exam/mock", headers=h)

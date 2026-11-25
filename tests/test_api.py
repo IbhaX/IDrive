@@ -79,12 +79,16 @@ def test_protected_endpoints_401(client) -> None:
     assert client.get("/api/auth/me").status_code == 401
     assert client.get("/api/progress").status_code == 401
     assert client.get("/api/exam/attempts").status_code == 401
+    # every test/quiz endpoint requires an account
+    assert client.post("/api/quiz/signs", json={"cat": "all", "length": 5}).status_code == 401
+    assert client.post("/api/exam/practice", json={"topic": "rules"}).status_code == 401
+    assert client.post("/api/exam/mock").status_code == 401
 
 
 # ---------- quiz / practice ----------
 
-def test_sign_quiz(client) -> None:
-    r = client.post("/api/quiz/signs", json={"cat": "mand", "length": 10})
+def test_sign_quiz(client, auth_headers) -> None:
+    r = client.post("/api/quiz/signs", json={"cat": "mand", "length": 10}, headers=auth_headers)
     assert r.status_code == 200
     qs = r.json()["questions"]
     assert len(qs) == 10
@@ -94,20 +98,20 @@ def test_sign_quiz(client) -> None:
         assert q["target"]["id"]
 
 
-def test_practice_topics(client) -> None:
-    r = client.post("/api/exam/practice", json={"topic": "rules"})
+def test_practice_topics(client, auth_headers) -> None:
+    r = client.post("/api/exam/practice", json={"topic": "rules"}, headers=auth_headers)
     assert r.status_code == 200
     qs = r.json()["questions"]
     assert qs and all(q["t"] == "rules" and "a" in q and "r" in q for q in qs)
-    r2 = client.post("/api/exam/practice", json={"topic": "signs"})
+    r2 = client.post("/api/exam/practice", json={"topic": "signs"}, headers=auth_headers)
     assert len(r2.json()["questions"]) == 15
-    assert client.post("/api/exam/practice", json={"topic": "nope"}).status_code == 400
+    assert client.post("/api/exam/practice", json={"topic": "nope"}, headers=auth_headers).status_code == 400
 
 
 # ---------- mock exam ----------
 
-def test_mock_no_answers_leaked(client) -> None:
-    r = client.post("/api/exam/mock")
+def test_mock_no_answers_leaked(client, auth_headers) -> None:
+    r = client.post("/api/exam/mock", headers=auth_headers)
     assert r.status_code == 201
     qs = r.json()["questions"]
     assert len(qs) == 30
@@ -115,29 +119,29 @@ def test_mock_no_answers_leaked(client) -> None:
     assert r.json()["deadline_at"]
 
 
-def test_mock_submit_all_correct(client, db_path) -> None:
-    exam_id = client.post("/api/exam/mock").json()["exam_id"]
+def test_mock_submit_all_correct(client, db_path, auth_headers) -> None:
+    exam_id = client.post("/api/exam/mock", headers=auth_headers).json()["exam_id"]
     key = answer_key(db_path, exam_id)
-    r = client.post(f"/api/exam/{exam_id}/submit", json={"answers": key})
+    r = client.post(f"/api/exam/{exam_id}/submit", json={"answers": key}, headers=auth_headers)
     assert r.status_code == 200
     body = r.json()
     assert body["score"] == 30 and body["total"] == 30 and body["passed"] is True
     assert len(body["review"]) == 30
     # idempotent: second submit returns the stored result
-    r2 = client.post(f"/api/exam/{exam_id}/submit", json={"answers": [None] * 30})
+    r2 = client.post(f"/api/exam/{exam_id}/submit", json={"answers": [None] * 30}, headers=auth_headers)
     assert r2.status_code == 200 and r2.json()["score"] == 30
 
 
-def test_mock_pass_boundary(client, db_path) -> None:
+def test_mock_pass_boundary(client, db_path, auth_headers) -> None:
     # exactly 18 correct passes, 17 fails
     for correct, want in ((18, True), (17, False)):
-        exam_id = client.post("/api/exam/mock").json()["exam_id"]
+        exam_id = client.post("/api/exam/mock", headers=auth_headers).json()["exam_id"]
         key = answer_key(db_path, exam_id)
         ans = key[:correct] + [None] * (30 - correct)
         # None where the key points elsewhere could collide — force wrong pick
         for i in range(correct, 30):
             ans[i] = (key[i] + 1) % 4
-        body = client.post(f"/api/exam/{exam_id}/submit", json={"answers": ans}).json()
+        body = client.post(f"/api/exam/{exam_id}/submit", json={"answers": ans}, headers=auth_headers).json()
         assert body["score"] == correct
         assert body["passed"] is want
 
@@ -149,14 +153,24 @@ def test_mock_records_attempt_for_user(client, auth_headers) -> None:
     assert len(attempts) == 1 and attempts[0]["mode"] == "mock" and attempts[0]["total"] == 30
 
 
-def test_mock_guest_no_attempt(client) -> None:
-    exam_id = client.post("/api/exam/mock").json()["exam_id"]
-    r = client.post(f"/api/exam/{exam_id}/submit", json={"answers": [0] * 30})
-    assert r.status_code == 200  # guests can sit mocks; nothing is recorded
+def test_mock_requires_auth(client) -> None:
+    # guests may not start a mock; submit and attempts are 401 too
+    assert client.post("/api/exam/mock").status_code == 401
+    assert client.post("/api/exam/x/submit", json={"answers": []}).status_code == 401
 
 
-def test_submit_unknown_paper(client) -> None:
-    assert client.post("/api/exam/nope/submit", json={"answers": []}).status_code == 404
+def test_submit_other_users_paper_404(client, db_path, auth_headers) -> None:
+    exam_id = client.post("/api/exam/mock", headers=auth_headers).json()["exam_id"]
+    other = client.post("/api/auth/register", json={
+        "email": "other@idrive.dev", "password": "other-password-1"}).json()
+    h = {"Authorization": f"Bearer {other['token']}"}
+    r = client.post(f"/api/exam/{exam_id}/submit", json={"answers": [0] * 30}, headers=h)
+    assert r.status_code == 404  # another user's paper is invisible
+
+
+def test_submit_unknown_paper(client, auth_headers) -> None:
+    assert client.post("/api/exam/nope/submit", json={"answers": []},
+                       headers=auth_headers).status_code == 404
 
 
 # ---------- progress ----------

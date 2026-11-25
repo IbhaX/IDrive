@@ -47,8 +47,11 @@ E.view = (app) => {
           : (Data.questionCounts[t.id] || 0);
         return `<button class="chip" data-etopic="${t.id}"><i style="background:${I18n.topDot(t.id)}"></i>${esc(I18n.BPP(I18n.topN(t.id)))} <small>${n}</small></button>`;
       }).join("");
+    const mockCta = Auth.signedIn()
+      ? `<button class="btn primary big" data-act="startmock">${esc(I18n.u("mockStart"))}</button>`
+      : `<button class="btn primary big" data-act="signin">${esc(I18n.u("signIn"))}</button>`;
     app.innerHTML = `<section class="panel"><h2>${esc(I18n.u("exTitle"))}</h2><p class="lede">${esc(I18n.u("exLede"))}</p></section>
-    <section class="panel"><h3 class="lab">${esc(I18n.u("mockTitle"))}</h3><p>${esc(I18n.u("mockInfo"))}</p><div class="row"><button class="btn primary big" data-act="startmock">${esc(I18n.u("mockStart"))}</button></div>${P.mock.taken ? `<p class="muted">${esc(I18n.u("mTaken"))}: ${P.mock.taken} · ${esc(I18n.u("mPassed"))}: ${P.mock.passed} · ${esc(I18n.u("mBest"))}: ${P.mock.best}/30</p>` : ""}<p class="muted">${esc(I18n.u("procNote"))}</p></section>
+    <section class="panel"><h3 class="lab">${esc(I18n.u("mockTitle"))}</h3><p>${esc(I18n.u("mockInfo"))}</p>${Auth.signedIn() ? "" : `<p class="muted">${esc(I18n.u("mockNeedAcct"))}</p>`}<div class="row">${mockCta}</div>${P.mock.taken ? `<p class="muted">${esc(I18n.u("mTaken"))}: ${P.mock.taken} · ${esc(I18n.u("mPassed"))}: ${P.mock.passed} · ${esc(I18n.u("mBest"))}: ${P.mock.best}/30</p>` : ""}<p class="muted">${esc(I18n.u("procNote"))}</p></section>
     <section class="panel"><h3 class="lab">${esc(I18n.u("topicPr"))}</h3><p class="muted">${esc(I18n.u("topicPrNote"))}</p><div class="chips">${chips}</div></section>`;
     return;
   }
@@ -92,6 +95,7 @@ E.doneView = (app) => {
 
 /* ---------- flows ---------- */
 E.startMock = async () => {
+  if (!Auth.signedIn()) { Auth.openModal("login"); Motion.toast(I18n.u("mockNeedAcct")); return; }
   try {
     const r = await Api.post("/api/exam/mock", {});
     S.exam = {
@@ -104,11 +108,13 @@ E.startMock = async () => {
     render();
     window.scrollTo(0, 0);
   } catch (e) {
+    if (e.code === "auth_required") { Auth.openModal("login"); Motion.toast(I18n.u("mockNeedAcct")); return; }
     Motion.toast(I18n.u("networkErr"), "err");
   }
 };
 
 E.startPractice = async (t) => {
+  if (!Auth.signedIn()) { Auth.openModal("login"); Motion.toast(I18n.u("testsNeedAcct")); return; }
   try {
     const r = await Api.post("/api/exam/practice", { topic: t });
     if (!r.questions.length) { Motion.toast(I18n.u("nothing"), "err"); return; }
@@ -117,6 +123,7 @@ E.startPractice = async (t) => {
     render();
     window.scrollTo(0, 0);
   } catch (e) {
+    if (e.code === "auth_required") { Auth.openModal("login"); Motion.toast(I18n.u("testsNeedAcct")); return; }
     Motion.toast(I18n.u("networkErr"), "err");
   }
 };

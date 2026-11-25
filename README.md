@@ -49,11 +49,11 @@ Learning content is extracted from `Sadak Saathi.html` by `tools/extract_data.mj
 
 ### Accounts and progress
 
-Registering creates a bearer session (30 days). Progress (`seen`, Leitner `box`, `wrong`, quiz/exam stats) is a JSON blob synced via `GET/PUT /api/progress` with optimistic-concurrency versioning — a stale write returns 409 + the server blob, and the client re-merges (union/max rules in `static/js/auth.js`). Guests get the full experience with localStorage only.
+Registering creates a bearer session (30 days). Progress (`seen`, Leitner `box`, `wrong`, quiz/exam stats) is a JSON blob synced via `GET/PUT /api/progress` with optimistic-concurrency versioning — a stale write returns 409 + the server blob, and the client re-merges (union/max rules in `static/js/auth.js`). Guests can browse the sign library and read theory articles; every test feature — sign quiz, flashcards, topic practice, mock exams — requires an account, as does synced progress.
 
 ### Mock exams
 
-`POST /api/exam/mock` builds the 30-question paper server-side (12 sign + 18 theory questions, 30 s per question, pass at 18) and stores the answer key in `exam_papers`. The client never receives `a`/`r` fields. `POST /api/exam/{id}/submit` scores against the stored key, flags late submissions past the server deadline, and is idempotent. Practice sets (`/api/exam/practice`) and the sign quiz (`/api/quiz/signs`) ship answers by design — instant feedback is the learning feature.
+`POST /api/exam/mock` (auth required) builds the 30-question paper server-side (12 sign + 18 theory questions, 30 s per question, pass at 18) and stores the answer key in `exam_papers`. The client never receives `a`/`r` fields. `POST /api/exam/{id}/submit` scores against the stored key, flags late submissions past the server deadline, and is idempotent. Practice sets (`/api/exam/practice`) and the sign quiz (`/api/quiz/signs`) ship answers by design — instant feedback is the learning feature.
 
 ## Configuration
 

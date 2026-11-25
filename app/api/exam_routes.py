@@ -8,7 +8,7 @@ from datetime import datetime, timedelta, timezone
 
 from fastapi import APIRouter, HTTPException
 
-from app.api.deps import DbDep, OptionalUser
+from app.api.deps import CurrentUser, DbDep
 from app.config import get_settings
 from app.models import ExamAttempt, ExamPaper
 from app.schemas import (
@@ -28,7 +28,7 @@ router = APIRouter(prefix="/api/exam", tags=["exam"])
 
 
 @router.post("/mock", response_model=ExamMockOut, status_code=201, response_model_exclude_none=True)
-async def start_mock(user: OptionalUser, db: DbDep) -> ExamMockOut:
+async def start_mock(user: CurrentUser, db: DbDep) -> ExamMockOut:
     rng = random.Random(secrets.randbelow(2**63))
     questions = exams.build_mock(rng)
     now = datetime.now(timezone.utc)
@@ -38,7 +38,7 @@ async def start_mock(user: OptionalUser, db: DbDep) -> ExamMockOut:
     )
     paper = ExamPaper(
         id=secrets.token_urlsafe(16),
-        user_id=user.id if user else None,
+        user_id=user.id,
         mode="mock",
         topic="",
         payload={"questions": questions},
@@ -57,9 +57,9 @@ async def start_mock(user: OptionalUser, db: DbDep) -> ExamMockOut:
 
 
 @router.post("/{exam_id}/submit", response_model=SubmitResultOut)
-async def submit_mock(exam_id: str, body: SubmitAnswersIn, user: OptionalUser, db: DbDep) -> SubmitResultOut:
+async def submit_mock(exam_id: str, body: SubmitAnswersIn, user: CurrentUser, db: DbDep) -> SubmitResultOut:
     paper = await db.get(ExamPaper, exam_id)
-    if paper is None or paper.mode != "mock":
+    if paper is None or paper.mode != "mock" or paper.user_id != user.id:
         raise HTTPException(status_code=404, detail={"detail": "exam not found", "code": "not_found"})
 
     stored = paper.payload.get("result")
@@ -85,25 +85,24 @@ async def submit_mock(exam_id: str, body: SubmitAnswersIn, user: OptionalUser, d
 
     paper.status = "submitted"
     paper.payload = {**paper.payload, "result": stored_result}
-    if user is not None:
-        db.add(
-            ExamAttempt(
-                user_id=user.id,
-                paper_id=paper.id,
-                mode="mock",
-                topic="",
-                total=result["total"],
-                score=result["score"],
-                passed=1 if passed else 0,
-                late=1 if late else 0,
-            )
+    db.add(
+        ExamAttempt(
+            user_id=user.id,
+            paper_id=paper.id,
+            mode="mock",
+            topic="",
+            total=result["total"],
+            score=result["score"],
+            passed=1 if passed else 0,
+            late=1 if late else 0,
         )
+    )
     await db.commit()
     return SubmitResultOut(exam_id=exam_id, **stored_result)
 
 
 @router.post("/practice", response_model=ExamPracticeOut)
-async def practice(body: ExamPracticeIn) -> ExamPracticeOut:
+async def practice(body: ExamPracticeIn, user: CurrentUser) -> ExamPracticeOut:
     topic = body.topic
     valid = topic == "signs" or topic.startswith("sg:") or topic in content.topic_by_id()
     if topic.startswith("sg:"):
@@ -115,11 +114,7 @@ async def practice(body: ExamPracticeIn) -> ExamPracticeOut:
 
 
 @router.get("/attempts", response_model=list[AttemptOut])
-async def attempts(user: OptionalUser, db: DbDep) -> list[AttemptOut]:
-    if user is None:
-        raise HTTPException(
-            status_code=401, detail={"detail": "authentication required", "code": "auth_required"}
-        )
+async def attempts(user: CurrentUser, db: DbDep) -> list[AttemptOut]:
     rows = (
         await db.execute(
             select(ExamAttempt)

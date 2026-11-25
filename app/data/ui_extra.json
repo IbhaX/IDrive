@@ -78,5 +78,13 @@
  "themeDark": [
   "Switch to dark theme",
   "ഇരുണ്ട തീമിലേക്ക് മാറുക"
+ ],
+ "mockNeedAcct": [
+  "Sign in to take the mock test and keep your results.",
+  "മോക്ക് ടെസ്റ്റ് എഴുതാനും ഫലം സൂക്ഷിക്കാനും സൈൻ ഇൻ ചെയ്യുക."
+ ],
+ "testsNeedAcct": [
+  "Sign in to take tests and keep your results.",
+  "ടെസ്റ്റുകൾ എഴുതാനും ഫലങ്ങൾ സൂക്ഷിക്കാനും സൈൻ ഇൻ ചെയ്യുക."
  ]
 }

@@ -230,20 +230,10 @@ M.roadScene = (host) => {
   </svg>`;
   if (M.reduced() || !G) return;
   const car = host.querySelector(".car"), dashes = host.querySelectorAll(".dashes rect"),
-        fsigns = host.querySelectorAll(".fsign"), skyline = host.querySelector(".skyline"),
         stars2 = host.querySelectorAll(".stars circle");
   G.to(dashes, { x: -80, duration: .9, ease: "none", repeat: -1 });
   G.fromTo(car, { x: -140 }, { x: 820, duration: 8, ease: "none", repeat: -1, repeatDelay: 2.2 });
-  fsigns.forEach((s, i) => G.to(s, { y: i ? 6 : -7, duration: 2.2 + i * .6, ease: "sine.inOut", repeat: -1, yoyo: true }));
   G.to(stars2, { opacity: .3, duration: 1.6, ease: "sine.inOut", repeat: -1, yoyo: true, stagger: { each: .3, from: "random" } });
-  /* subtle pointer parallax on layered depth */
-  host.addEventListener("pointermove", (e) => {
-    if (M.reduced()) return;
-    const r = host.getBoundingClientRect();
-    const dx = (e.clientX - r.left) / r.width - .5;
-    G.to(skyline, { x: dx * -10, duration: .6, ease: "power2.out", overwrite: "auto" });
-    G.to(fsigns, { x: dx * -22, duration: .6, ease: "power2.out", overwrite: "auto" });
-  });
 };
 
 window.Motion = M;

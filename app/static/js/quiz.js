@@ -9,10 +9,13 @@ Q.view = (app) => {
   const q = S.quiz;
   if (!q || q.stage === "setup") {
     const n = Data.D.filter(d => S.quizCat === "all" || d.cat === S.quizCat).length;
+    const cta = Auth.signedIn()
+      ? `<button class="btn primary big" data-act="startquiz">${esc(I18n.u("start", { n: Math.min(S.quizLen, n) }))}</button>`
+      : `<p class="muted">${esc(I18n.u("testsNeedAcct"))}</p><button class="btn primary big" data-act="signin">${esc(I18n.u("signIn"))}</button>`;
     app.innerHTML = `<section class="panel"><h2>${esc(I18n.u("qTitle"))}</h2><p class="lede">${esc(I18n.u("qLede"))}</p>
     <div><h3 class="lab">${esc(I18n.u("topic"))}</h3><div class="chips">${Learn.chipHtml(S.quizCat, "qcat", true)}</div></div>
     <div><h3 class="lab">${esc(I18n.u("qs"))}</h3><div class="chips">${[10, 20, 30].map(k => `<button class="chip ${S.quizLen === k ? "on" : ""}" data-qlen="${k}">${k}</button>`).join("")}</div></div>
-    <button class="btn primary big" data-act="startquiz">${esc(I18n.u("start", { n: Math.min(S.quizLen, n) }))}</button>
+    ${cta}
     ${P.played ? `<p class="muted">${esc(I18n.u("played", { p: P.played, b: P.best }))}</p>` : ""}<div class="row"><button class="btn" data-go="#cards">${esc(I18n.u("flashLink"))}</button></div></section>`;
     return;
   }
@@ -45,6 +48,7 @@ Q.view = (app) => {
 };
 
 Q.start = async () => {
+  if (!Auth.signedIn()) { Auth.openModal("login"); Motion.toast(I18n.u("testsNeedAcct")); return; }
   try {
     const r = await Api.post("/api/quiz/signs", { cat: S.quizCat, length: S.quizLen });
     if (!r.questions.length) { Motion.toast(I18n.u("nomatch"), "err"); return; }
@@ -52,6 +56,7 @@ Q.start = async () => {
     render();
     window.scrollTo(0, 0);
   } catch (e) {
+    if (e.code === "auth_required") { Auth.openModal("login"); Motion.toast(I18n.u("testsNeedAcct")); return; }
     Motion.toast(I18n.u("networkErr"), "err");
   }
 };
@@ -102,6 +107,10 @@ Q.buildCards = (ids) => {
 };
 
 Q.cardsView = async (app) => {
+  if (!Auth.signedIn()) {
+    app.innerHTML = `<section class="panel"><h2>${esc(I18n.u("cTitle"))}</h2><p class="lede">${esc(I18n.u("testsNeedAcct"))}</p><div class="row"><button class="btn primary big" data-act="signin">${esc(I18n.u("signIn"))}</button></div></section>`;
+    return;
+  }
   if (!S.cards) {
     await Data.ensureSvgs(S.cardCat);
     if (S.view !== "cards") return;
