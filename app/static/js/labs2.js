@@ -370,7 +370,8 @@ Lb.hlDraw = (animate) => {
    5. MIRRORS & BLIND SPOTS — top-down, right-hand drive (India)
    ===================================================================== */
 const BS = { lane: "right", dist: -3, rAdj: 0, lAdj: 0, look: "none" };
-const M2PX = 16, OX = 140, OY = 110; // metres → px; car centre at (OX, OY); forward = up
+const M2PX = 20, VW = 300, VH = 400, OX = 150, OY = 120; // metres → px; car centre at (OX, OY); forward = up
+const LANE = 3.5, ROAD = LANE * 1.5;                        // three lanes: road edges at ±5.25 m
 const BSG = {
   eye: [0.35, 0.3],
   rM: { at: [1.0, 0.9], base: 9, fov: 18 },     // flat driver-side mirror
@@ -399,54 +400,124 @@ Lb.blindspot = (host) => {
   GROUPS.bsLook = { obj: BS, key: "look", after };
   host.innerHTML = shell(
     pick("bsLane", "bsLane", BS.lane, [["right", "bsRightLane"], ["left", "bsLeftLane"]]) +
-    rng("bsDist", "bsDist", BS.dist, -18, 6, 0.5, "m", 1) +
+    rng("bsDist", "bsDist", BS.dist, -14, 5, 0.5, "m", 1) +
     rng("bsR", "bsRAdj", BS.rAdj, 0, 15, 1, "°") +
     rng("bsL", "bsLAdj", BS.lAdj, 0, 15, 1, "°") +
     pick("bsLook", "bsLook", BS.look, [["none", "bsNoLook"], ["right", "bsLookR"], ["left", "bsLookL"]]),
-    `<div class="bswrap"><svg id="bsSvg" viewBox="0 0 280 420" role="img" aria-label="${I18n.esc(I18n.one(u("lab_blindspot")))}"></svg><div id="bsOut" class="readout one" aria-live="polite"></div></div>`,
+    `<div class="bswrap"><div class="bsstage"><svg id="bsSvg" viewBox="0 0 ${VW} ${VH}" role="img" aria-label="${t1("lab_blindspot")}"></svg><p class="bsdrag">${e(u("bsDrag"))}</p></div><div id="bsOut" class="readout one" aria-live="polite"></div></div>`,
     "bsModel");
   bindRange("bsDist", BS, "dist", 1, after); bindRange("bsR", BS, "rAdj", 0, after); bindRange("bsL", BS, "lAdj", 0, after);
   Lb.bsDraw();
+  Lb.bsBindDrag();
   Motion.reveal(host);
 };
+
+/* drag the bike, or tap anywhere on the road to put it there */
+Lb.bsBindDrag = () => {
+  const svg = $("bsSvg");
+  if (!svg) return;
+  const toM = (ev) => {
+    const pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+    const p = pt.matrixTransform(svg.getScreenCTM().inverse());
+    return [(p.x - OX) / M2PX, (OY - p.y) / M2PX];
+  };
+  const moveTo = (ev) => {
+    const [x, y] = toM(ev);
+    const lane = x >= 0 ? "right" : "left";
+    const dist = Math.round(Math.min(5, Math.max(-14, y)) * 2) / 2;
+    if (lane === BS.lane && dist === BS.dist) return;
+    BS.lane = lane; BS.dist = dist;
+    const r = $("bsDist"); if (r) { r.value = dist; $("bsDistV").textContent = fx(dist); }
+    document.querySelectorAll('[data-g="bsLane"]').forEach(b => { const on = b.dataset.v === lane; b.classList.toggle("on", on); b.setAttribute("aria-checked", on); });
+    Lb.bsDraw();
+  };
+  let dragging = false;
+  svg.addEventListener("pointerdown", (ev) => {
+    if (!ev.target.closest(".bshit")) return;
+    dragging = true; svg.setPointerCapture(ev.pointerId); svg.classList.add("dragging"); ev.preventDefault();
+  });
+  svg.addEventListener("pointermove", (ev) => { if (dragging) moveTo(ev); });
+  const stop = () => { dragging = false; svg.classList.remove("dragging"); };
+  svg.addEventListener("pointerup", stop); svg.addEventListener("pointercancel", stop);
+  svg.addEventListener("click", (ev) => { if (!ev.target.closest(".bshit")) moveTo(ev); });
+};
+
 Lb.bsDraw = () => {
   const svg = $("bsSvg");
   if (!svg) return;
   const P2 = (x, y) => [OX + x * M2PX, OY - y * M2PX];
+  const f1 = (n) => n.toFixed(1);
   const wedge = (at, centre, fov, len, cls) => {
     const [ax, ay] = P2(at[0], at[1]);
-    const a1 = (centre - fov / 2) * Math.PI / 180, a2 = (centre + fov / 2) * Math.PI / 180;
-    const p = (a) => P2(at[0] + Math.sin(a) * len, at[1] + Math.cos(a) * len);
-    const [x1, y1] = p(a1), [x2, y2] = p(a2);
-    return `<path d="M${ax} ${ay} L${x1.toFixed(1)} ${y1.toFixed(1)} L${x2.toFixed(1)} ${y2.toFixed(1)} Z" class="wedge ${cls}"/>`;
+    const p = (a) => P2(at[0] + Math.sin(a * Math.PI / 180) * len, at[1] + Math.cos(a * Math.PI / 180) * len);
+    const [x1, y1] = p(centre - fov / 2), [x2, y2] = p(centre + fov / 2);
+    return `<path d="M${f1(ax)} ${f1(ay)} L${f1(x1)} ${f1(y1)} L${f1(x2)} ${f1(y2)} Z" class="bsw ${cls}" fill="url(#bsg-${cls})"/>`;
   };
-  let s = `<rect width="280" height="420" rx="14" class="labbg"/>`;
-  [-1, 0, 1].forEach(k => { const [x] = P2(k * 3.5 - 1.75, 0); s += `<rect x="${x}" y="0" width="${3.5 * M2PX}" height="420" class="road${k ? "" : " own"}"/>`; });
-  [-1, 0, 1, 2].forEach(k => { const [x] = P2(k * 3.5 - 1.75, 0); s += `<line x1="${x}" y1="0" x2="${x}" y2="420" class="${k === -1 || k === 2 ? "edgel" : "cl"}"/>`; });
-  // blind-zone heat map (sampled)
-  for (let x = -6.5; x <= 6.5; x += 0.5) for (let y = -17; y <= 3; y += 0.5) {
-    if (Math.abs(x) < 1.1 && y > -2.5 && y < 2.4) continue;
-    if (!Lb.bsSees(x, y).length) { const [px, py] = P2(x - .25, y + .25); s += `<rect x="${px.toFixed(1)}" y="${py.toFixed(1)}" width="${M2PX / 2}" height="${M2PX / 2}" class="blindc"/>`; }
+  const grad = (id, col) => `<linearGradient id="bsg-${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${col}" stop-opacity=".42"/><stop offset="1" stop-color="${col}" stop-opacity=".06"/></linearGradient>`;
+  const [rl] = P2(-ROAD, 0), [rr] = P2(ROAD, 0);
+  let s = `<defs>${grad("rm", "#38bdf8")}${grad("lm", "#2dd4bf")}${grad("im", "#a78bfa")}${grad("look", "#fbbf24")}
+    <filter id="bsGoo" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="5"/><feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -9"/></filter>
+    <pattern id="bsHatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="8" height="8" fill="#ef4444" fill-opacity=".22"/><line x1="0" y1="0" x2="0" y2="8" stroke="#ef4444" stroke-opacity=".55" stroke-width="3"/></pattern>
+    <mask id="bsBlindMask"><g filter="url(#bsGoo)">`;
+  // blind zones: sample the plan, then melt the cells into smooth blobs (gooey filter)
+  const cells = { l: [], r: [] };
+  for (let x = -ROAD + 0.25; x < ROAD; x += 0.5) for (let y = -13.75; y <= 3; y += 0.5) {
+    if (Math.abs(x) < 1.2 && y > -2.6 && y < 2.6) continue;
+    if (!Lb.bsSees(x, y).length) {
+      const [px, py] = P2(x - .25, y + .25);
+      s += `<rect x="${f1(px)}" y="${f1(py)}" width="${M2PX / 2 + .6}" height="${M2PX / 2 + .6}" fill="#fff"/>`;
+      (x < 0 ? cells.l : cells.r).push([x, y]);
+    }
   }
+  s += `</g></mask></defs>`;
+  // ground: verges, asphalt, lane markings
+  s += `<rect width="${VW}" height="${VH}" class="bsverge"/><rect x="${rl}" y="0" width="${rr - rl}" height="${VH}" class="bsasph"/>`;
+  s += `<line x1="${rl + 3}" y1="0" x2="${rl + 3}" y2="${VH}" class="bsedge"/><line x1="${rr - 3}" y1="0" x2="${rr - 3}" y2="${VH}" class="bsedge"/>`;
+  [-LANE / 2, LANE / 2].forEach(x => { const [lx] = P2(x, 0); s += `<line x1="${lx}" y1="0" x2="${lx}" y2="${VH}" class="bsdash"/>`; });
+  for (let m = 5; m <= 13; m += 5) { const [, ty] = P2(0, -m); s += `<line x1="${rr + 4}" y1="${ty}" x2="${rr + 12}" y2="${ty}" class="bstick"/><text x="${rr + 15}" y="${ty + 4}" class="bstickt">${m} m</text>`; }
+  // mirror coverage
+  s += wedge(BSG.iM.at, 180, BSG.iM.fov, 22, "im");
   s += wedge(BSG.rM.at, 180 - (BSG.rM.base + 2 * BS.rAdj), BSG.rM.fov, 22, "rm");
   s += wedge(BSG.lM.at, -180 + (BSG.lM.base + 2 * BS.lAdj), BSG.lM.fov, 22, "lm");
-  s += wedge(BSG.iM.at, 180, BSG.iM.fov, 23, "im");
-  if (BS.look !== "none") s += wedge(BSG.eye, BS.look === "right" ? 112 : -112, 105, 10, "look");
-  // own car (driver on the right)
-  const [cx, cy] = P2(-0.9, 2.25);
-  s += `<g><rect x="${cx}" y="${cy}" width="${1.8 * M2PX}" height="${4.5 * M2PX}" rx="8" class="bscar"/><rect x="${cx + 4}" y="${cy + 14}" width="${1.8 * M2PX - 8}" height="12" rx="3" class="win"/>
-    <circle cx="${P2(BSG.eye[0], 0)[0]}" cy="${P2(0, BSG.eye[1])[1]}" r="4" class="eyed"/>
-    <rect x="${P2(1.0, 0)[0] - 2}" y="${P2(0, 0.9)[1] - 3}" width="6" height="5" rx="1" class="mir"/><rect x="${P2(-1.0, 0)[0] - 4}" y="${P2(0, 0.9)[1] - 3}" width="6" height="5" rx="1" class="mir"/></g>`;
-  // the motorbike
-  const bx = BS.lane === "right" ? 3.5 : -3.5;
+  if (BS.look !== "none") s += wedge(BSG.eye, BS.look === "right" ? 112 : -112, 105, 9, "look");
+  // blind zones on top of the mirror fans: hatched, smooth-edged
+  s += `<rect width="${VW}" height="${VH}" fill="url(#bsHatch)" mask="url(#bsBlindMask)"/>`;
+  const label = (arr, side) => {
+    if (arr.length < 6) return "";
+    const cx = arr.reduce((a, c) => a + c[0], 0) / arr.length;
+    let cy = arr.reduce((a, c) => a + c[1], 0) / arr.length;
+    if (side === BS.lane && Math.abs(cy - BS.dist) < 2.5) cy = BS.dist - 3;   // keep clear of the bike
+    const [px, py] = P2(cx, cy);
+    return `<text x="${f1(px)}" y="${f1(py)}" class="bsbl" text-anchor="middle">${t1("bsBlindShort")}</text>`;
+  };
+  s += label(cells.l, "left") + label(cells.r, "right");
+  // own car, top view (right-hand drive: the driver sits on the right)
+  const [cx0, cy0] = P2(-0.9, 2.25), cw = 1.8 * M2PX, ch = 4.5 * M2PX;
+  s += `<g class="bsown"><rect x="${cx0 + 1}" y="${cy0 + 3}" width="${cw}" height="${ch}" rx="11" class="bsshadow"/>
+    <rect x="${cx0}" y="${cy0}" width="${cw}" height="${ch}" rx="11" class="bsbody"/>
+    <path d="M${cx0 + 4} ${cy0 + 24} Q${cx0 + cw / 2} ${cy0 + 16} ${cx0 + cw - 4} ${cy0 + 24} L${cx0 + cw - 6} ${cy0 + 34} L${cx0 + 6} ${cy0 + 34} Z" class="bsglass"/>
+    <rect x="${cx0 + 6}" y="${cy0 + 36}" width="${cw - 12}" height="${ch - 58}" rx="5" class="bsroof"/>
+    <path d="M${cx0 + 6} ${cy0 + ch - 20} L${cx0 + cw - 6} ${cy0 + ch - 20} L${cx0 + cw - 4} ${cy0 + ch - 12} Q${cx0 + cw / 2} ${cy0 + ch - 8} ${cx0 + 4} ${cy0 + ch - 12} Z" class="bsglass"/>
+    <rect x="${cx0 - 5}" y="${cy0 + 26}" width="6" height="4" rx="1.5" class="bsmir"/><rect x="${cx0 + cw - 1}" y="${cy0 + 26}" width="6" height="4" rx="1.5" class="bsmir"/>
+    <rect x="${cx0 + 4}" y="${cy0 + 1}" width="7" height="3" rx="1" class="bshl"/><rect x="${cx0 + cw - 11}" y="${cy0 + 1}" width="7" height="3" rx="1" class="bshl"/>
+    <rect x="${cx0 + 4}" y="${cy0 + ch - 4}" width="7" height="3" rx="1" class="bstl"/><rect x="${cx0 + cw - 11}" y="${cy0 + ch - 4}" width="7" height="3" rx="1" class="bstl"/>
+    <circle cx="${P2(BSG.eye[0], 0)[0]}" cy="${P2(0, BSG.eye[1])[1] + 6}" r="4.5" class="bsdriver"/></g>`;
+  // the motorbike (top view), draggable
+  const bx = BS.lane === "right" ? LANE : -LANE;
   const pts = [[bx, BS.dist + 1], [bx, BS.dist], [bx, BS.dist - 1]];
   const seen = new Set(pts.flatMap(([x, y]) => Lb.bsSees(x, y)));
-  const [bpx, bpy] = P2(bx, BS.dist);
   const hidden = !seen.size;
-  s += `<g transform="translate(${bpx},${bpy})" class="bike ${hidden ? "hid" : ""}"><rect x="-5" y="-16" width="10" height="32" rx="5"/><circle cx="0" cy="-6" r="5" class="rider"/></g>`;
+  const [bpx, bpy] = P2(bx, BS.dist);
+  s += `<g class="bsbike ${hidden ? "hid" : "vis"}" transform="translate(${f1(bpx)},${f1(bpy)})">
+    ${hidden ? `<circle r="22" class="bsping"/>` : ""}
+    <ellipse cx="1" cy="3" rx="7" ry="20" class="bsshadow"/>
+    <rect x="-3.5" y="-20" width="7" height="40" rx="3.5" class="bsbk"/>
+    <line x1="-9" y1="-12" x2="9" y2="-12" class="bsbar"/>
+    <circle cx="0" cy="-2" r="6.5" class="bshelm"/>
+    <circle r="26" class="bshit"/></g>`;
   svg.innerHTML = s;
   const names = { rm: "bsSeenR", lm: "bsSeenL", im: "bsSeenI", eye: "bsSeenEye", look: "bsSeenLook" };
-  $("bsOut").innerHTML = `<div class="ro"><b class="${hidden ? "bad" : "good"}">${e(u(hidden ? "bsHidden" : "bsVisible"))}</b>${hidden ? `<span>${e(u("bsHiddenTip"))}</span>` : [...seen].map(k => `<span>✓ ${e(u(names[k]))}</span>`).join("")}</div>
+  $("bsOut").innerHTML = `<div class="ro bsstate ${hidden ? "bad" : "good"}"><b>${hidden ? "⚠ " : "✓ "}${e(u(hidden ? "bsHidden" : "bsVisible"))}</b>${hidden ? `<span>${e(u("bsHiddenTip"))}</span>` : [...seen].map(k => `<span>${e(u(names[k]))}</span>`).join("")}</div>
     <div class="ro"><b>${e(u("bsLegend"))}</b><span><i class="sw rmk"></i>${e(u("bsSeenR"))}</span><span><i class="sw lmk"></i>${e(u("bsSeenL"))}</span><span><i class="sw imk"></i>${e(u("bsSeenI"))}</span><span><i class="sw blk"></i>${e(u("bsBlindZone"))}</span><span class="muted">${e(u("bsTip"))}</span></div>`;
 };
 })();

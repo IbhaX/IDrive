@@ -1738,5 +1738,13 @@
  "v3dPreparing": [
   "preparing the 3D model…",
   "3D മോഡൽ തയ്യാറാക്കുന്നു…"
+ ],
+ "bsDrag": [
+  "Drag the bike, or tap the road to move it.",
+  "ബൈക്ക് വലിച്ചുനീക്കുക, അല്ലെങ്കിൽ റോഡിൽ തൊട്ട് മാറ്റുക."
+ ],
+ "bsBlindShort": [
+  "BLIND SPOT",
+  "ബ്ലൈൻഡ് സ്പോട്ട്"
  ]
 }
