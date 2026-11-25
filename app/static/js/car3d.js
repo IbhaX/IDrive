@@ -88,28 +88,39 @@ C.load = async () => {
   if (!C.supported()) { C.state = "error"; msg(`<p>${I18n.esc(u("v3dNoGl"))}</p>`); return; }
   C.state = "loading";
   msg(`<div class="x3dload"><i></i></div><p>${I18n.esc(u("v3dLoading"))}</p><b class="x3dpct">0%</b>`);
+  /* progress: 0–15 % for the 3D library, 15–100 % by files of the model.
+     (Byte counts are unreliable here: the CDN gzips, so "loaded" can exceed
+     the compressed "total" — that is what produced readings over 100 %.) */
+  let shown = 0;
+  const pct = (v) => {
+    shown = Math.max(shown, Math.min(99, Math.round(v)));
+    const el = C.el && C.el.querySelector(".x3dpct");
+    if (el) el.textContent = shown + "%";
+  };
+  let libs = 0;
+  const step = (pr) => pr.then((m) => { libs++; pct(libs / 6 * 15); return m; });
   try {
     const [three, gltf, draco, ktx2, orbit, room] = await Promise.all([
-      import(`${CDN}/+esm`),
-      import(`${CDN}/examples/jsm/loaders/GLTFLoader.js/+esm`),
-      import(`${CDN}/examples/jsm/loaders/DRACOLoader.js/+esm`),
-      import(`${CDN}/examples/jsm/loaders/KTX2Loader.js/+esm`),
-      import(`${CDN}/examples/jsm/controls/OrbitControls.js/+esm`),
-      import(`${CDN}/examples/jsm/environments/RoomEnvironment.js/+esm`),
-    ]);
+      step(import(`${CDN}/+esm`)),
+      step(import(`${CDN}/examples/jsm/loaders/GLTFLoader.js/+esm`)),
+      step(import(`${CDN}/examples/jsm/loaders/DRACOLoader.js/+esm`)),
+      step(import(`${CDN}/examples/jsm/loaders/KTX2Loader.js/+esm`)),
+      step(import(`${CDN}/examples/jsm/controls/OrbitControls.js/+esm`)),
+      step(import(`${CDN}/examples/jsm/environments/RoomEnvironment.js/+esm`)),]);
     T = three;
+    pct(15);
     setup(orbit.OrbitControls, room.RoomEnvironment);
-    const loader = new gltf.GLTFLoader();
-    const dl = new draco.DRACOLoader().setDecoderPath(`${CDN}/examples/jsm/libs/draco/gltf/`);
-    const kl = new ktx2.KTX2Loader().setTranscoderPath(`${CDN}/examples/jsm/libs/basis/`).detectSupport(renderer);
+    const manager = new T.LoadingManager();
+    manager.onProgress = (url, done, total) => { if (total) pct(15 + done / total * 85); };
+    const loader = new gltf.GLTFLoader(manager);
+    const dl = new draco.DRACOLoader(manager).setDecoderPath(`${CDN}/examples/jsm/libs/draco/gltf/`);
+    const kl = new ktx2.KTX2Loader(manager).setTranscoderPath(`${CDN}/examples/jsm/libs/basis/`).detectSupport(renderer);
     loader.setDRACOLoader(dl); loader.setKTX2Loader(kl);
     let res = null, lastErr = null;
     for (const url of MODEL_URLS) {
       try {
-        res = await loader.loadAsync(url, (p) => {
-          const el = C.el.querySelector(".x3dpct");
-          if (el && p.total) el.textContent = Math.round(p.loaded / p.total * 100) + "%";
-        });
+        // never spin forever: give up after 90 s and offer a retry
+        res = await Promise.race([loader.loadAsync(url), new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), 90000))]);
         break;
       } catch (e) { lastErr = e; }
     }
