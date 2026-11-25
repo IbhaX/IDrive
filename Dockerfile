@@ -19,7 +19,9 @@ COPY app ./app
 ENV DATABASE_URL=sqlite+aiosqlite:////app/data/idrive.db \
     ENVIRONMENT=production \
     CORS_ORIGINS=
-RUN mkdir -p /app/data && \
+# pre-fetch the 3D car into the image (also fetched at startup if missing);
+# a build without network still succeeds and falls back to the runtime fetch
+RUN mkdir -p /app/data && (python -m app.services.model_mirror || true) && \
     useradd --system --uid 10001 --home /app idrive && \
     chown -R idrive:idrive /app
 USER idrive

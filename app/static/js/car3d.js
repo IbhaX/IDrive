@@ -16,6 +16,7 @@ const CDN = `https://cdn.jsdelivr.net/npm/three@${THREE_V}`;
 const MODEL_SHA = "e124e8d8d7330a5372bc2b4d00d39a4a9d7997ea";
 const MODEL_PATH = "Models/CarConcept/glTF-KTX-BasisU-Draco/CarConcept.gltf";
 const MODEL_URLS = [
+  "/models/carconcept/CarConcept.gltf",   // same-origin mirror (fast, not blocked by ISPs)
   `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/${MODEL_SHA}/${MODEL_PATH}`,
   `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/${MODEL_PATH}`,
 ];
@@ -67,7 +68,7 @@ function showGate() {
   msg(`<p>${I18n.esc(u("v3dIntro"))}</p><button class="btn primary" data-x3d="load">${I18n.esc(u("v3dLoad"))}</button><small>${I18n.esc(u("v3dCredit"))}</small>`);
 }
 function showError() {
-  msg(`<p>${I18n.esc(u("v3dFail"))}</p><button class="btn" data-x3d="load">${I18n.esc(u("v3dRetry"))}</button>`);
+  msg(`<p>${I18n.esc(u("v3dFail"))}</p><button class="btn" data-x3d="load">${I18n.esc(u("v3dRetry"))}</button>${C.lastErr ? `<small>${I18n.esc(C.lastErr)}</small>` : ""}`);
 }
 
 function onClick(ev) {
@@ -87,7 +88,7 @@ C.load = async () => {
   if (C.state === "loading" || C.state === "ready") return;
   if (!C.supported()) { C.state = "error"; msg(`<p>${I18n.esc(u("v3dNoGl"))}</p>`); return; }
   C.state = "loading";
-  msg(`<div class="x3dload"><i></i></div><p>${I18n.esc(u("v3dLoading"))}</p><b class="x3dpct">0%</b>`);
+  msg(`<div class="x3dload"><i></i></div><p>${I18n.esc(u("v3dLoading"))}</p><b class="x3dpct">0%</b><small class="x3dfile"></small>`);
   /* progress: 0–15 % for the 3D library, 15–100 % by files of the model.
      (Byte counts are unreliable here: the CDN gzips, so "loaded" can exceed
      the compressed "total" — that is what produced readings over 100 %.) */
@@ -111,7 +112,7 @@ C.load = async () => {
     pct(15);
     setup(orbit.OrbitControls, room.RoomEnvironment);
     const manager = new T.LoadingManager();
-    manager.onProgress = (url, done, total) => { if (total) pct(15 + done / total * 85); };
+    manager.onProgress = (url, done, total) => { if (total) { pct(15 + done / total * 85); const f = C.el && C.el.querySelector(".x3dfile"); if (f) f.textContent = `${done} / ${total}`; } };
     const loader = new gltf.GLTFLoader(manager);
     const dl = new draco.DRACOLoader(manager).setDecoderPath(`${CDN}/examples/jsm/libs/draco/gltf/`);
     const kl = new ktx2.KTX2Loader(manager).setTranscoderPath(`${CDN}/examples/jsm/libs/basis/`).detectSupport(renderer);
@@ -134,7 +135,7 @@ C.load = async () => {
     Motion.rise && Motion.rise(C.el.querySelector(".x3dstage"));
   } catch (err) {
     console.warn("3D car failed to load", err);
-    C.state = "error"; showError();
+    C.state = "error"; C.lastErr = String((err && err.message) || err).slice(0, 160); showError();
   }
 };
 

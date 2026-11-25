@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import asyncio
 from collections.abc import AsyncIterator, Awaitable, Callable
+from typing import Optional
 from contextlib import asynccontextmanager
 from pathlib import Path
 
@@ -17,12 +19,13 @@ from app.api.auth_routes import router as auth_router
 from app.api.content_routes import router as content_router
 from app.api.curriculum_routes import router as curriculum_router
 from app.api.exam_routes import router as exam_router
+from app.api.model_routes import router as model_router
 from app.api.progress_routes import router as progress_router
 from app.api.quiz_routes import router as quiz_router
 from app.config import BASE_DIR, get_settings
 from app.db import close_db, get_session_factory, init_db
 from app.logging_config import setup_logging
-from app.services import content, curriculum
+from app.services import content, curriculum, model_mirror
 from app.services.auth import cleanup_expired
 from app.web.pages import VersionedStaticFiles, app_build, render_page
 
@@ -49,7 +52,12 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     content.warm()
     curriculum.warm()
     log.info("IDrive ready — content version %s", content.version())
+    mirror_task: Optional[asyncio.Task[bool]] = None
+    if settings.mirror_3d and model_mirror.missing():
+        mirror_task = asyncio.create_task(model_mirror.ensure())
     yield
+    if mirror_task and not mirror_task.done():
+        mirror_task.cancel()
     await close_db()
 
 
@@ -100,6 +108,7 @@ async def html_headers(
 
 app.include_router(auth_router)
 app.include_router(content_router)
+app.include_router(model_router)
 app.include_router(quiz_router)
 app.include_router(exam_router)
 app.include_router(progress_router)

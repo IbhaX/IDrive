@@ -53,6 +53,8 @@ class Settings(BaseSettings):
     # Sent as OpenRouter's HTTP-Referer attribution header (optional).
     ai_site_url: str = Field(default="", validation_alias=AliasChoices("openrouter_site_url", "ai_site_url"))
     rate_limit_ai: str = "12/minute"
+    # keep a same-origin copy of the 3D car (downloaded in the background at startup)
+    mirror_3d: bool = True
 
 
 @lru_cache

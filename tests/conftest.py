@@ -12,6 +12,7 @@ import pytest
 os.environ.setdefault("database_url", "sqlite+aiosqlite:///./data/test-default.db")
 os.environ.setdefault("rate_limit_default", "100000/minute")
 os.environ.setdefault("rate_limit_auth", "100000/minute")
+os.environ.setdefault("mirror_3d", "false")
 
 from app.config import get_settings  # noqa: E402
 

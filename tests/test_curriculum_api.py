@@ -160,3 +160,16 @@ def test_csp_allows_3d_assets_but_no_inline_scripts(client) -> None:
     assert "'wasm-unsafe-eval'" in script and "worker-src 'self' blob:" in csp
     assert "https://raw.githubusercontent.com" in csp
     assert "<script>" not in client.get("/").text
+
+
+def test_model_route_redirects_until_mirrored(client, tmp_path, monkeypatch) -> None:
+    from app.services import model_mirror as mm
+
+    monkeypatch.setattr(mm, "MODEL_DIR", tmp_path)
+    r = client.get("/models/carconcept/CarConcept.gltf", follow_redirects=False)
+    assert r.status_code == 307 and r.headers["location"] == mm.UPSTREAM + "CarConcept.gltf"
+    assert client.get("/models/carconcept/evil.js", follow_redirects=False).status_code == 404
+    (tmp_path / "Rib_N.ktx2").write_bytes(b"\0" * mm.FILES["Rib_N.ktx2"])
+    r = client.get("/models/carconcept/Rib_N.ktx2")
+    assert r.status_code == 200 and r.headers["content-type"] == "image/ktx2"
+    assert "immutable" in r.headers["cache-control"]

@@ -88,6 +88,10 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(networkFirst(req, SHELL, "/"));
     return;
   }
+  if (url.pathname.startsWith("/models/")) {          // pinned 3D model files
+    event.respondWith(caches.open(MODELS).then(async (c) => (await c.match(req)) || fetch(req).then((r) => { if (r.ok) c.put(req, r.clone()); return r; })));
+    return;
+  }
   if (url.pathname.startsWith("/static/")) {
     event.respondWith(cacheFirst(req));
     return;
