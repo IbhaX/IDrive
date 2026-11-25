@@ -44,11 +44,32 @@ const tabHtml = () => TABS.map(t =>
 const langHtml = () => LANGS.map(l =>
   `<button class="lg ${I18n.lang() === l[0] ? "on" : ""}" data-lang="${l[0]}" aria-pressed="${I18n.lang() === l[0]}">${l[1]}</button>`).join("");
 
+/* theme: dark is the Aurora default; "light" sets data-theme=light */
+const SUN = '<circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5 5l1.8 1.8M17.2 17.2 19 19M19 5l-1.8 1.8M6.8 17.2 5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
+const MOON = '<path d="M20 13.5A8.5 8.5 0 0 1 10.5 4a8.5 8.5 0 1 0 9.5 9.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>';
+function isLight() { return document.documentElement.dataset.theme === "light"; }
+function applyThemeIcon() {
+  const ico = document.getElementById("themeIco"), btn = document.getElementById("themeBtn");
+  if (!ico) return;
+  ico.innerHTML = isLight() ? MOON : SUN;
+  btn.setAttribute("aria-label", I18n.u(isLight() ? "themeDark" : "themeLight"));
+  const mc = document.querySelector('meta[name="theme-color"]');
+  if (mc) mc.content = isLight() ? "#eef0f7" : "#06080f";
+}
+window.toggleTheme = () => {
+  const light = !isLight();
+  if (light) document.documentElement.dataset.theme = "light";
+  else delete document.documentElement.dataset.theme;
+  try { localStorage.setItem("idrive-theme", light ? "light" : "dark"); } catch (e) {}
+  applyThemeIcon();
+};
+
 function applyStatic() {
   document.documentElement.lang = I18n.lang() === "ml" ? "ml" : "en";
   document.getElementById("subline").textContent = I18n.u("sub");
   document.getElementById("foot").textContent = I18n.u("foot");
   document.getElementById("langs").innerHTML = langHtml();
+  applyThemeIcon();
   const sc = document.getElementById("sClose");
   if (sc) sc.setAttribute("aria-label", I18n.u("close"));
 }
@@ -91,6 +112,7 @@ function render() {
     Motion.jelly(document.getElementById("tabsTop"));
     Motion.jelly(document.getElementById("dockin"));
     Motion.langPill(document.getElementById("langs"));
+    Motion.bindTilt();
   });
 }
 window.render = render;
@@ -149,6 +171,7 @@ document.addEventListener("click", (e) => {
     case "reset1": Progress.resetAsk(); break;
     case "reset0": render(); break;
     case "signin": Auth.openModal("login"); break;
+    case "theme": toggleTheme(); break;
     case "account": if (confirm(I18n.u("signOut") + "?")) Auth.signOut(); break;
   }
 });

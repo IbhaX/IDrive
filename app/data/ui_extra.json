@@ -1,20 +1,82 @@
 {
- "signIn": ["Sign in", "സൈൻ ഇൻ"],
- "signUp": ["Sign up", "സൈൻ അപ്പ്"],
- "signOut": ["Sign out", "സൈൻ ഔട്ട്"],
- "createAcct": ["Create account", "അക്കൗണ്ട് ഉണ്ടാക്കുക"],
- "yourName": ["Your name (optional)", "നിങ്ങളുടെ പേര് (നിർബന്ധമല്ല)"],
- "email": ["Email", "ഇമെയിൽ"],
- "password": ["Password", "പാസ്‌വേഡ്"],
- "show": ["Show", "കാണിക്കുക"],
- "welcome": ["Welcome", "സ്വാഗതം"],
- "signedOut": ["Signed out.", "സൈൻ ഔട്ട് ചെയ്തു."],
- "fillAll": ["Fill in every field.", "എല്ലാ കളകളും പൂരിപ്പിക്കുക."],
- "tooMany": ["Too many tries. Wait a minute and try again.", "അധികം ശ്രമങ്ങൾ. ഒരു മിനിറ്റ് കാത്തിരുന്ന് വീണ്ടും ശ്രമിക്കുക."],
- "emailTaken": ["That email already has an account. Try signing in.", "ആ ഇമെയിലിൽ ഒരു അക്കൗണ്ട് ഉണ്ട്. സൈൻ ഇൻ ചെയ്യുക."],
- "badLogin": ["Wrong email or password.", "തെറ്റായ ഇമെയിൽ അല്ലെങ്കിൽ പാസ്‌വേഡ്."],
- "authNote": ["An account keeps your progress in sync across devices. You can keep learning without one.", "അക്കൗണ്ട് ഉണ്ടെങ്കിൽ നിങ്ങളുടെ പുരോഗതി എല്ലാ ഉപകരണങ്ങളിലും സമന്വയിക്കും. അക്കൗണ്ട് ഇല്ലാതെയും പഠിക്കാം."],
- "networkErr": ["Could not reach the server. Check your connection and try again.", "സെർവറിലേക്ക് എത്താൻ കഴിഞ്ഞില്ല. കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക."],
- "synced": ["Synced to your account.", "നിങ്ങളുടെ അക്കൗണ്ടുമായി സമന്വയിച്ചു."],
- "signQuizLink": ["Try the sign quiz", "ചിഹ്ന ക്വിസ് പരീക്ഷിക്കുക"]
+ "signIn": [
+  "Sign in",
+  "സൈൻ ഇൻ"
+ ],
+ "signUp": [
+  "Sign up",
+  "സൈൻ അപ്പ്"
+ ],
+ "signOut": [
+  "Sign out",
+  "സൈൻ ഔട്ട്"
+ ],
+ "createAcct": [
+  "Create account",
+  "അക്കൗണ്ട് ഉണ്ടാക്കുക"
+ ],
+ "yourName": [
+  "Your name (optional)",
+  "നിങ്ങളുടെ പേര് (നിർബന്ധമല്ല)"
+ ],
+ "email": [
+  "Email",
+  "ഇമെയിൽ"
+ ],
+ "password": [
+  "Password",
+  "പാസ്‌വേഡ്"
+ ],
+ "show": [
+  "Show",
+  "കാണിക്കുക"
+ ],
+ "welcome": [
+  "Welcome",
+  "സ്വാഗതം"
+ ],
+ "signedOut": [
+  "Signed out.",
+  "സൈൻ ഔട്ട് ചെയ്തു."
+ ],
+ "fillAll": [
+  "Fill in every field.",
+  "എല്ലാ കളകളും പൂരിപ്പിക്കുക."
+ ],
+ "tooMany": [
+  "Too many tries. Wait a minute and try again.",
+  "അധികം ശ്രമങ്ങൾ. ഒരു മിനിറ്റ് കാത്തിരുന്ന് വീണ്ടും ശ്രമിക്കുക."
+ ],
+ "emailTaken": [
+  "That email already has an account. Try signing in.",
+  "ആ ഇമെയിലിൽ ഒരു അക്കൗണ്ട് ഉണ്ട്. സൈൻ ഇൻ ചെയ്യുക."
+ ],
+ "badLogin": [
+  "Wrong email or password.",
+  "തെറ്റായ ഇമെയിൽ അല്ലെങ്കിൽ പാസ്‌വേഡ്."
+ ],
+ "authNote": [
+  "An account keeps your progress in sync across devices. You can keep learning without one.",
+  "അക്കൗണ്ട് ഉണ്ടെങ്കിൽ നിങ്ങളുടെ പുരോഗതി എല്ലാ ഉപകരണങ്ങളിലും സമന്വയിക്കും. അക്കൗണ്ട് ഇല്ലാതെയും പഠിക്കാം."
+ ],
+ "networkErr": [
+  "Could not reach the server. Check your connection and try again.",
+  "സെർവറിലേക്ക് എത്താൻ കഴിഞ്ഞില്ല. കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക."
+ ],
+ "synced": [
+  "Synced to your account.",
+  "നിങ്ങളുടെ അക്കൗണ്ടുമായി സമന്വയിച്ചു."
+ ],
+ "signQuizLink": [
+  "Try the sign quiz",
+  "ചിഹ്ന ക്വിസ് പരീക്ഷിക്കുക"
+ ],
+ "themeLight": [
+  "Switch to light theme",
+  "വെളിച്ച തീമിലേക്ക് മാറുക"
+ ],
+ "themeDark": [
+  "Switch to dark theme",
+  "ഇരുണ്ട തീമിലേക്ക് മാറുക"
+ ]
 }

@@ -109,7 +109,7 @@ M.confetti = () => {
   cv.hidden = false;
   const ctx2 = cv.getContext("2d");
   cv.width = innerWidth; cv.height = innerHeight;
-  const colors = ["#0b6b3b", "#f4c20d", "#1b5aa6", "#d4202c", "#ffffff"];
+  const colors = ["#7c6cff", "#38bdf8", "#34d399", "#fbbf24", "#e8ecf6"];
   const N = Math.min(90, Math.floor(innerWidth / 9));
   const parts = Array.from({ length: N }, () => ({
     x: innerWidth / 2, y: innerHeight * .38,
@@ -167,21 +167,83 @@ M.holdToConfirm = (btn, onDone, ms = 1200) => {
   btn.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") end(true); });
 };
 
-/* sign-of-the-day hero road scene: dashes streaming, car gliding */
+/* pointer tilt: 3D card response on tiles (delegated — tiles re-render) */
+let tiltBound = false;
+M.bindTilt = () => {
+  if (tiltBound) return;
+  tiltBound = true;
+  if (M.reduced() || !window.matchMedia("(pointer:fine)").matches) return;
+  let cur = null;
+  const clear = () => { if (cur) { cur.style.setProperty("--rx", "0deg"); cur.style.setProperty("--ry", "0deg"); cur = null; } };
+  document.addEventListener("pointermove", (e) => {
+    const t = e.target.closest && e.target.closest(".tile");
+    if (t !== cur) { clear(); if (!t) return; cur = t; }
+    if (!cur) return;
+    cur.classList.add("tilt");
+    const r = cur.getBoundingClientRect();
+    const dx = (e.clientX - r.left) / r.width - .5, dy = (e.clientY - r.top) / r.height - .5;
+    cur.style.setProperty("--ry", (dx * 10).toFixed(2) + "deg");
+    cur.style.setProperty("--rx", (-dy * 10).toFixed(2) + "deg");
+  });
+  document.addEventListener("pointerleave", clear, true);
+};
+
+/* immersive night drive: parallax layers, glowing skyline, streaming
+   dashes, car with headlight beam, floating signs. Light-theme keeps
+   the same scene (it reads as dusk) — surfaces adapt via CSS. */
 M.roadScene = (host) => {
   if (!host) return;
-  host.innerHTML = `<svg viewBox="0 0 720 150" role="img" aria-label="Animated road">
-    <rect x="0" y="86" width="720" height="46" fill="#3a4046" rx="6"/>
-    <g class="dashes">${[0, 60, 120, 180, 240, 300, 360, 420, 480, 540, 600, 660].map(x => `<rect x="${x}" y="106" width="34" height="5" rx="2.5" fill="#f4c20d"/>`).join("")}</g>
-    <g class="car"><rect x="0" y="78" width="52" height="22" rx="7" fill="#0b6b3b"/><rect x="10" y="68" width="30" height="16" rx="5" fill="#14633a"/><circle cx="13" cy="102" r="6" fill="#15181b"/><circle cx="40" cy="102" r="6" fill="#15181b"/></g>
-    <g class="signs"><g transform="translate(560,30) scale(.45)"><circle cx="50" cy="50" r="44" fill="#fff" stroke="#d4202c" stroke-width="9"/><rect x="18" y="42" width="64" height="16" rx="2" fill="#d4202c"/></g>
-    <g transform="translate(635,40) scale(.4)"><path d="M8 14H92L50 89Z" fill="#fff" stroke="#d4202c" stroke-width="9" stroke-linejoin="round"/></g></g>
+  const dashX = [0, 80, 160, 240, 320, 400, 480, 560, 640];
+  const stars = [[60, 22], [140, 12], [230, 30], [330, 16], [420, 26], [520, 14], [610, 24], [690, 10]];
+  host.innerHTML = `<svg viewBox="0 0 720 190" role="img" aria-label="Animated night road">
+    <defs>
+      <linearGradient id="hs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a0e24"/><stop offset=".7" stop-color="#141a3e"/><stop offset="1" stop-color="#0a0d20"/></linearGradient>
+      <linearGradient id="rd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#151a30"/><stop offset="1" stop-color="#0b0e1c"/></linearGradient>
+      <radialGradient id="mg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#a5b4ff" stop-opacity=".9"/><stop offset=".45" stop-color="#7c6cff" stop-opacity=".35"/><stop offset="1" stop-color="#7c6cff" stop-opacity="0"/></radialGradient>
+      <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fbbf24" stop-opacity=".5"/><stop offset="1" stop-color="#fbbf24" stop-opacity="0"/></linearGradient>
+    </defs>
+    <rect width="720" height="190" fill="url(#hs)"/>
+    <g class="stars">${stars.map(s => `<circle cx="${s[0]}" cy="${s[1]}" r="1.4" fill="#c7d2fe" opacity=".8"/>`).join("")}</g>
+    <circle cx="600" cy="52" r="30" fill="url(#mg)"/><circle cx="600" cy="52" r="13" fill="#dbe2ff"/>
+    <g class="skyline" fill="#0e1330">
+      <rect x="20" y="82" width="34" height="52"/><rect x="66" y="96" width="24" height="38"/><rect x="104" y="74" width="40" height="60"/>
+      <rect x="470" y="88" width="30" height="46"/><rect x="516" y="72" width="38" height="62"/><rect x="566" y="94" width="26" height="40"/>
+      <rect x="640" y="80" width="36" height="54"/><rect x="688" y="98" width="24" height="36"/>
+    </g>
+    <g class="citylights" fill="#38bdf8">${[30, 78, 118, 130, 482, 530, 548, 576, 654, 696].map((x, i) => `<rect x="${x}" y="${88 + (i % 3) * 12}" width="4" height="5" opacity=".85"/>`).join("")}</g>
+    <rect x="0" y="132" width="720" height="58" fill="url(#rd)"/>
+    <rect x="0" y="132" width="720" height="3" fill="#1e2650"/>
+    <g class="dashes">${dashX.map(x => `<rect x="${x}" y="158" width="40" height="6" rx="3" fill="#7c6cff" opacity=".85"/>`).join("")}</g>
+    <g class="car">
+      <path d="M54 128 L96 120 L96 142 L54 146 Z" fill="url(#beam)"/>
+      <rect x="0" y="126" width="54" height="22" rx="8" fill="#7c6cff"/>
+      <rect x="9" y="115" width="32" height="16" rx="6" fill="#5b48f2"/>
+      <rect x="14" y="118" width="10" height="8" rx="2" fill="#38bdf8" opacity=".85"/>
+      <rect x="27" y="118" width="10" height="8" rx="2" fill="#38bdf8" opacity=".85"/>
+      <circle cx="14" cy="149" r="7" fill="#05060d"/><circle cx="41" cy="149" r="7" fill="#05060d"/>
+      <circle cx="14" cy="149" r="3" fill="#1e2650"/><circle cx="41" cy="149" r="3" fill="#1e2650"/>
+    </g>
+    <g class="signs">
+      <g class="fsign" transform="translate(300,84) scale(.42)"><rect x="46" y="88" width="8" height="46" fill="#232a4a"/><circle cx="50" cy="50" r="44" fill="#0d1120" stroke="#fbbf24" stroke-width="7"/><circle cx="50" cy="50" r="38" fill="#f8fafc"/><rect x="18" y="42" width="64" height="16" rx="3" fill="#d4202c"/></g>
+      <g class="fsign" transform="translate(430,96) scale(.34)"><rect x="46" y="86" width="8" height="48" fill="#232a4a"/><path d="M8 16H92L50 92Z" fill="#f8fafc" stroke="#d4202c" stroke-width="9" stroke-linejoin="round"/></g>
+    </g>
   </svg>`;
   if (M.reduced() || !G) return;
-  const car = host.querySelector(".car"), dashes = host.querySelectorAll(".dashes rect"), signs = host.querySelectorAll(".signs > g");
-  G.to(dashes, { x: -60, duration: 1.1, ease: "none", repeat: -1 });
-  G.fromTo(car, { x: -80 }, { x: 780, duration: 7, ease: "none", repeat: -1, repeatDelay: 2.4 });
-  G.fromTo(signs, { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: .5, ease: "back.out(2)", stagger: .2, delay: .3 });
+  const car = host.querySelector(".car"), dashes = host.querySelectorAll(".dashes rect"),
+        fsigns = host.querySelectorAll(".fsign"), skyline = host.querySelector(".skyline"),
+        stars2 = host.querySelectorAll(".stars circle");
+  G.to(dashes, { x: -80, duration: .9, ease: "none", repeat: -1 });
+  G.fromTo(car, { x: -140 }, { x: 820, duration: 8, ease: "none", repeat: -1, repeatDelay: 2.2 });
+  fsigns.forEach((s, i) => G.to(s, { y: i ? 6 : -7, duration: 2.2 + i * .6, ease: "sine.inOut", repeat: -1, yoyo: true }));
+  G.to(stars2, { opacity: .3, duration: 1.6, ease: "sine.inOut", repeat: -1, yoyo: true, stagger: { each: .3, from: "random" } });
+  /* subtle pointer parallax on layered depth */
+  host.addEventListener("pointermove", (e) => {
+    if (M.reduced()) return;
+    const r = host.getBoundingClientRect();
+    const dx = (e.clientX - r.left) / r.width - .5;
+    G.to(skyline, { x: dx * -10, duration: .6, ease: "power2.out", overwrite: "auto" });
+    G.to(fsigns, { x: dx * -22, duration: .6, ease: "power2.out", overwrite: "auto" });
+  });
 };
 
 window.Motion = M;
