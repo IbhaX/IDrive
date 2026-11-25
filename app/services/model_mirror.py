@@ -79,6 +79,37 @@ def missing() -> list[str]:
     return [n for n in FILES if local_path(n) is None]
 
 
+def status() -> dict[str, object]:
+    """What the mirror holds — used by the client and for troubleshooting."""
+    left = missing()
+    return {"complete": not left, "missing": left, "files": len(FILES)}
+
+
+async def fetch_one(name: str, timeout: float = 45.0) -> Optional[Path]:
+    """Make sure one file is mirrored now (used when a student asks for it
+    before the background copy has finished). Returns its path or None."""
+    if name not in FILES:
+        return None
+    hit = local_path(name)
+    if hit is not None:
+        return hit
+    async with httpx.AsyncClient(timeout=timeout, follow_redirects=True) as cl:
+        try:
+            r = await cl.get(UPSTREAM + name)
+            r.raise_for_status()
+        except httpx.HTTPError as exc:
+            log.warning("3D model mirror: on-demand fetch of %s failed: %s", name, exc)
+            return None
+    if len(r.content) != FILES[name]:
+        log.warning("3D model mirror: %s has %d bytes, expected %d", name, len(r.content), FILES[name])
+        return None
+    MODEL_DIR.mkdir(parents=True, exist_ok=True)
+    tmp = MODEL_DIR / (name + ".part")
+    tmp.write_bytes(r.content)
+    tmp.replace(MODEL_DIR / name)
+    return MODEL_DIR / name
+
+
 async def ensure(client: Optional[httpx.AsyncClient] = None, timeout: float = 60.0) -> bool:
     """Download any missing files. Returns True when the mirror is complete."""
     todo = missing()

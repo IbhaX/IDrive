@@ -162,13 +162,20 @@ def test_csp_allows_3d_assets_but_no_inline_scripts(client) -> None:
     assert "<script>" not in client.get("/").text
 
 
-def test_model_route_redirects_until_mirrored(client, tmp_path, monkeypatch) -> None:
+def test_model_route_serves_mirror_or_fetches_on_demand(client, tmp_path, monkeypatch) -> None:
     from app.services import model_mirror as mm
 
     monkeypatch.setattr(mm, "MODEL_DIR", tmp_path)
+
+    async def no_network(name: str, timeout: float = 45.0):
+        return None
+
+    monkeypatch.setattr(mm, "fetch_one", no_network)
     r = client.get("/models/carconcept/CarConcept.gltf", follow_redirects=False)
-    assert r.status_code == 307 and r.headers["location"] == mm.UPSTREAM + "CarConcept.gltf"
-    assert client.get("/models/carconcept/evil.js", follow_redirects=False).status_code == 404
+    assert r.status_code == 503                      # never redirects students to GitHub
+    assert client.get("/models/carconcept/evil.js").status_code == 404
+    st = client.get("/api/models/carconcept/status").json()
+    assert st["complete"] is False and "CarConcept.gltf" in st["missing"]
     (tmp_path / "Rib_N.ktx2").write_bytes(b"\0" * mm.FILES["Rib_N.ktx2"])
     r = client.get("/models/carconcept/Rib_N.ktx2")
     assert r.status_code == 200 and r.headers["content-type"] == "image/ktx2"

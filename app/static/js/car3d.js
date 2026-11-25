@@ -112,7 +112,21 @@ C.load = async () => {
     pct(15);
     setup(orbit.OrbitControls, room.RoomEnvironment);
     const manager = new T.LoadingManager();
-    manager.onProgress = (url, done, total) => { if (total) { pct(15 + done / total * 85); const f = C.el && C.el.querySelector(".x3dfile"); if (f) f.textContent = `${done} / ${total}`; } };
+    // track which files are still in flight so a stall can say what it is waiting for
+    const pend = new Set(); let lastTick = Date.now(), counts = "";
+    const s0 = manager.itemStart.bind(manager), e0 = manager.itemEnd.bind(manager);
+    manager.itemStart = (url) => { pend.add(url); s0(url); };
+    manager.itemEnd = (url) => { pend.delete(url); e0(url); };
+    const fileLine = () => {
+      const f = C.el && C.el.querySelector(".x3dfile");
+      if (!f) return;
+      const stalled = Date.now() - lastTick > 6000;
+      const names = [...pend].map(x => x.split("/").pop().split("?")[0]).slice(0, 2).join(", ");
+      f.textContent = counts + (stalled && names ? ` · ${u("v3dWaiting")} ${names}` : stalled && counts && !pend.size ? ` · ${u("v3dPreparing")}` : "");
+    };
+    manager.onProgress = (url, done, total) => { lastTick = Date.now(); if (total) { pct(15 + done / total * 85); counts = `${done} / ${total}`; fileLine(); } };
+    const ticker = setInterval(() => { if (C.state !== "loading") { clearInterval(ticker); return; } fileLine(); }, 1000);
+    C.pending = () => [...pend].map(x => x.split("/").pop());
     const loader = new gltf.GLTFLoader(manager);
     const dl = new draco.DRACOLoader(manager).setDecoderPath(`${CDN}/examples/jsm/libs/draco/gltf/`);
     const kl = new ktx2.KTX2Loader(manager).setTranscoderPath(`${CDN}/examples/jsm/libs/basis/`).detectSupport(renderer);
@@ -135,7 +149,7 @@ C.load = async () => {
     Motion.rise && Motion.rise(C.el.querySelector(".x3dstage"));
   } catch (err) {
     console.warn("3D car failed to load", err);
-    C.state = "error"; C.lastErr = String((err && err.message) || err).slice(0, 160); showError();
+    C.state = "error"; C.lastErr = (String((err && err.message) || err) + (C.pending && C.pending().length ? " — " + C.pending().join(", ") : "")).slice(0, 200); showError();
   }
 };
 

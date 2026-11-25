@@ -1730,5 +1730,13 @@
  "v3dCredit": [
   "3D model: “Car Concept” by Eric Chadwick, from a CC0 model by Unity Fan — Khronos glTF Sample Assets",
   "3D മോഡൽ: എറിക് ചാഡ്‌വിക്കിന്റെ “Car Concept”, യൂണിറ്റി ഫാനിന്റെ CC0 മോഡലിൽ നിന്ന് — Khronos glTF Sample Assets"
+ ],
+ "v3dWaiting": [
+  "waiting for",
+  "കാത്തിരിക്കുന്നു:"
+ ],
+ "v3dPreparing": [
+  "preparing the 3D model…",
+  "3D മോഡൽ തയ്യാറാക്കുന്നു…"
  ]
 }
