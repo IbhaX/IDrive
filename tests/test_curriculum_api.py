@@ -133,3 +133,13 @@ def test_app_build_is_embedded_and_echoed(client) -> None:
     build = html.split('<meta name="app-build" content="', 1)[1].split('"', 1)[0]
     r = client.get("/api/curriculum")
     assert r.headers["X-App-Build"] == build
+
+
+def test_icons_and_manifest_are_served(client) -> None:
+    for path, kind in [("/favicon.ico", "image/"), ("/apple-touch-icon.png", "image/png"),
+                       ("/manifest.webmanifest", "application/manifest+json"),
+                       ("/static/img/favicon.svg", "image/svg"), ("/static/img/icon-512.png", "image/png")]:
+        r = client.get(path)
+        assert r.status_code == 200 and r.headers["content-type"].startswith(kind), path
+    html = client.get("/").text
+    assert 'rel="manifest"' in html and "og:image" in html and 'class="bmark"' in html

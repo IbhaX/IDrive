@@ -872,3 +872,12 @@ html{scroll-padding-top:calc(var(--navh,76px) + 12px);scroll-padding-bottom:calc
   .searchbtn,.themebtn{width:34px;height:34px}
   .navctl .btn,.navctl button.chip,#authSlot>*{padding-inline:10px}
 }
+
+/* ---------- brand: road-"i" mark + "Drive" wordmark ---------- */
+.brand{gap:1px;align-items:center}
+.brand svg.bmark{width:auto;height:38px;aspect-ratio:100/150;filter:drop-shadow(0 0 10px rgba(124,108,255,.4));margin-right:1px}
+.brand b{font-family:"Inter",var(--display),system-ui,sans-serif;font-size:27px;font-weight:700;letter-spacing:-.03em;text-transform:none;
+         background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--ink);line-height:1;padding-top:6px}
+.brand small{padding-left:2px}
+.topnav.nav-tight .brand svg.bmark{height:32px}
+@media (max-width:380px){.brand svg.bmark{height:28px}.brand b{font-size:22px;padding-top:4px}}

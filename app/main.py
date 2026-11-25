@@ -8,7 +8,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse, Response
+from fastapi.responses import FileResponse, JSONResponse, Response
 from slowapi import Limiter
 from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
@@ -135,6 +135,26 @@ app.mount("/static", VersionedStaticFiles(directory=static_dir), name="static")
 @app.get("/", include_in_schema=False)
 async def spa() -> Response:
     return render_page(static_dir=static_dir, name="index.html")
+
+
+# Icons and the web-app manifest at the conventional root paths (browsers and
+# home-screen installers ask for these without reading the page first).
+_ROOT_FILES: dict[str, tuple[str, str]] = {
+    "/favicon.ico": ("img/favicon.ico", "image/x-icon"),
+    "/apple-touch-icon.png": ("img/apple-touch-icon.png", "image/png"),
+    "/apple-touch-icon-precomposed.png": ("img/apple-touch-icon.png", "image/png"),
+    "/manifest.webmanifest": ("manifest.webmanifest", "application/manifest+json"),
+}
+
+
+def _root_file(rel: str, media: str) -> Callable[[], FileResponse]:
+    def handler() -> FileResponse:
+        return FileResponse(static_dir / rel, media_type=media, headers={"Cache-Control": "public, max-age=86400"})
+    return handler
+
+
+for _url, (_rel, _media) in _ROOT_FILES.items():
+    app.get(_url, include_in_schema=False)(_root_file(_rel, _media))
 
 
 # Hash-routed SPA: every app path serves the shell.
