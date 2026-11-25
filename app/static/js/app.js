@@ -375,7 +375,7 @@ window.hideSplash = () => {
 /* the logo's car animation is SMIL; honour reduced-motion by freezing it */
 (function logoMotion() {
   const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const apply = () => document.querySelectorAll("svg.bmark,svg.smark").forEach((s) => {
+  const apply = () => document.querySelectorAll("svg.bmark,svg.slock").forEach((s) => {
     if (!s.pauseAnimations) return;
     if (mq.matches) { s.pauseAnimations(); s.setCurrentTime && s.setCurrentTime(0.4); } else s.unpauseAnimations();
   });
