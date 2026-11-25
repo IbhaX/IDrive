@@ -6,7 +6,7 @@ Learn Indian road signs, markings, signals, hand signals and driving theory — 
 
 ```bash
 pip install -e .                     # installs the `idrive` command
-idrive                               # → http://localhost:8765
+idrive                               # → http://localhost:5000
 # dev alternatives: pip install -r requirements-dev.txt && uvicorn app.main:app --reload
 # flags: idrive --host 0.0.0.0 --port 8000 --reload
 ```
