@@ -5,7 +5,7 @@
 "use strict";
 const H = {};
 const u = (k, o) => I18n.u(k, o);
-const e = (s) => esc(s == null ? "" : s);
+const e = (s) => I18n.X(s);   // strings are escaped; [en, ml] pairs render bilingually
 
 H.view = async (app) => {
   app.innerHTML = `<section class="panel"><div class="skel"><i style="height:240px"></i></div></section>`;
@@ -59,7 +59,7 @@ H.st = null;
 H.play = (app, s) => {
   H.st = { s, phase: "intro", spotted: null, choice: null, tl: null };
   app.innerHTML = `${Course.crumbs([[u("tHazard"), "#hazard"], [s.title, "#hazard/" + s.id]])}
-  <div class="hzgrid"><section class="panel hzscene"><svg id="hzSvg" viewBox="0 0 400 600" role="img" aria-label="${e(s.title)}">${road(s.layout)}${s.actors.map(a => actorG(a, [a.x, a.y])).join("")}${ego}<rect id="hzFlash" width="400" height="600" class="flash" opacity="0"/></svg></section>
+  <div class="hzgrid"><section class="panel hzscene"><svg id="hzSvg" viewBox="0 0 400 600" role="img" aria-label="${esc(I18n.one(s.title))}">${road(s.layout)}${s.actors.map(a => actorG(a, [a.x, a.y])).join("")}${ego}<rect id="hzFlash" width="400" height="600" class="flash" opacity="0"/></svg></section>
   <section class="panel hzpanel" id="hzPanel" aria-live="polite"></section></div>`;
   H.panel();
 };

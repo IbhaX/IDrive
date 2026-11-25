@@ -64,6 +64,16 @@ I.BPP = (p) => {
   return L === "en" ? p[0] : L === "ml" ? p[1] : p[1] + " / " + p[0];
 };
 
+/* bilingual part -> one language only (crumbs, attributes): ml in ml/both modes */
+I.one = (p) => {
+  if (p == null) return "";
+  if (typeof p === "string") return p;
+  if (p && p.svg) return I.one(p.n);
+  return I.lang() === "en" ? p[0] : (p[1] || p[0]);
+};
+/* HTML for a value that may be a plain string or an [en, ml] pair */
+I.X = (p) => (p == null ? "" : (Array.isArray(p) ? I.BP(p) : I.esc(p)));
+
 /* topic/chip helpers */
 I.topN = (id) => {
   if (id === "signs") return Data.UI.signsTopic;

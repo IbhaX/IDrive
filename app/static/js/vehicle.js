@@ -4,7 +4,7 @@
 "use strict";
 const V = {};
 const u = (k, o) => I18n.u(k, o);
-const e = (s) => esc(s == null ? "" : s);
+const e = (s) => I18n.X(s);   // strings are escaped; [en, ml] pairs render bilingually
 
 V.view = async (app) => {
   const tab = S.param === "lights" ? "lights" : "explore";
@@ -48,7 +48,7 @@ V.carSvg = (parts, sel) => `<svg viewBox="0 0 800 340" class="carx" role="group"
     <path d="M336 104 L356 150" class="c-steer"/><circle cx="332" cy="108" r="12" class="c-steer"/>
   </g>
   <g class="wheels"><circle cx="170" cy="262" r="40" class="tyre"/><circle cx="170" cy="262" r="20" class="disc"/><circle cx="620" cy="262" r="40" class="tyre"/><circle cx="620" cy="262" r="20" class="disc"/></g>
-  ${parts.map(p => `<g class="hot ${p.id === sel ? "on" : ""} ${V.group !== "all" && p.group !== V.group ? "dim" : ""}" data-part="${p.id}" tabindex="0" role="button" aria-label="${e(p.name)}" aria-pressed="${p.id === sel}" transform="translate(${p.x},${p.y})"><circle r="15" class="hring"/><circle r="6" class="hdot"/></g>`).join("")}
+  ${parts.map(p => `<g class="hot ${p.id === sel ? "on" : ""} ${V.group !== "all" && p.group !== V.group ? "dim" : ""}" data-part="${p.id}" tabindex="0" role="button" aria-label="${esc(I18n.one(p.name))}" aria-pressed="${p.id === sel}" transform="translate(${p.x},${p.y})"><circle r="15" class="hring"/><circle r="6" class="hdot"/></g>`).join("")}
 </svg>`;
 V.explore = (host, sel) => {
   const p = V.parts.find(x => x.id === sel) || null;

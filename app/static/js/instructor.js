@@ -4,7 +4,7 @@
 "use strict";
 const A = {};
 const u = (k, o) => I18n.u(k, o);
-const e = (s) => esc(s == null ? "" : s);
+const e = (s) => I18n.X(s);   // strings are escaped; [en, ml] pairs render bilingually
 
 A.log = [];        // {role, content, sources?, mode?}
 A.busy = false;
@@ -18,7 +18,7 @@ A.md = (text, sources) => {
     .replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
     .replace(/\[(\d{1,2})\]/g, (m, n) => {
       const src = (sources || []).find(x => x.n === +n);
-      return src ? `<a class="cite" href="${e(src.href)}" title="${e(src.title)}">${n}</a>` : m;
+      return src ? `<a class="cite" href="${esc(src.href)}" title="${esc(I18n.one(src.title))}">${n}</a>` : m;
     });
   for (const ln of lines) {
     const li = ln.match(/^\s*(?:[-*•]|\d+[.)])\s+(.*)$/);

@@ -231,8 +231,8 @@ class InstructorSource(BaseModel):
     n: int
     kind: str
     id: str
-    title: str
-    group: str
+    title: str | list[str]
+    group: str | list[str]
     href: str
     snippet: str
     cited: bool = False

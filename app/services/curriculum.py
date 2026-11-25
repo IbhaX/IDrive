@@ -32,6 +32,17 @@ LIBRARIES: dict[str, str] = {
     "lights": "Warning-light encyclopedia",
     "vehicle": "Interactive vehicle explorer",
 }
+_ML_FIXED: dict[str, str] = {
+    "lab:stopping": "നിർത്താനുള്ള ദൂരം — ലാബ്",
+    "lab:reaction": "പ്രതികരണ സമയ പരിശോധന",
+    "lab:engine": "ഫോർ-സ്ട്രോക്ക് എൻജിൻ",
+    "library:lights": "മുന്നറിയിപ്പ് ലൈറ്റ് വിജ്ഞാനകോശം",
+    "library:vehicle": "ഇന്ററാക്ടീവ് വാഹന പര്യവേക്ഷണം",
+    "exam:mock": "മുഴുവൻ മോക്ക് പരീക്ഷ",
+    "practice:signs": "പരിശീലനം: ചിഹ്ന ചോദ്യങ്ങൾ",
+    "signs:all": "ചിഹ്ന ലൈബ്രറി: 255 ചിഹ്നങ്ങളും",
+}
+ML_DIR = CURRICULUM_DIR / "ml"
 _DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
@@ -282,9 +293,37 @@ def item_title(item: str) -> Optional[str]:
     return None
 
 
+def item_title_ml(item: str) -> Optional[str]:
+    """Malayalam title for an item, or None when no translation exists."""
+    if item in _ML_FIXED:
+        return _ML_FIXED[item]
+    kind, _, ref = item.partition(":")
+    c = _content()
+    if kind == "lesson":
+        return _ml_text(("lesson", ref, "title"))
+    if kind == "article":
+        t = c.topic_by_id().get(ref)
+        return t["name"][1] if t else None
+    if kind == "practice":
+        t = c.topic_by_id().get(ref)
+        return f"പരിശീലനം: {t['name'][1]}" if t else None
+    if kind == "signs":
+        cat = c.cat_by_id().get(ref)
+        return f"ചിഹ്ന ലൈബ്രറി: {cat['ml'][0]}" if cat and cat.get("ml") else None
+    if kind == "scenario":
+        t = _ml_text(("scenario", ref, "title"))
+        return f"അപകട സാഹചര്യം: {t}" if t else None
+    return None
+
+
+def _pair(en: str, ml: Optional[str]) -> Any:
+    return [en, ml] if ml else en
+
+
 def _item_out(item: str) -> dict[str, Any]:
     kind, _, ref = item.partition(":")
-    out: dict[str, Any] = {"ref": item, "type": kind, "id": ref, "title": item_title(item) or item}
+    out: dict[str, Any] = {"ref": item, "type": kind, "id": ref,
+                           "title": _pair(item_title(item) or item, item_title_ml(item))}
     if kind == "lesson":
         hit = lesson(ref)
         if hit:
@@ -298,12 +337,15 @@ def catalogue() -> dict[str, Any]:
     mods: list[dict[str, Any]] = []
     for m in modules():
         mods.append({
-            "id": m.id, "n": m.n, "title": m.title, "summary": m.summary,
+            "id": m.id, "n": m.n,
+            "title": _pair(m.title, _ml_text(("module", m.id, "title"))),
+            "summary": _pair(m.summary, _ml_text(("module", m.id, "summary"))),
             "accent": m.accent, "icon": m.icon, "level": m.level,
             "lessonCount": len(m.lessons),
             "minutes": sum(x.minutes for x in m.lessons),
             "chapters": [
-                {"id": c.id, "title": c.title, "items": [_item_out(i) for i in c.items]}
+                {"id": c.id, "title": _pair(c.title, _ml_text(("chapter", m.id, c.id))),
+                 "items": [_item_out(i) for i in c.items]}
                 for c in m.chapters
             ],
         })
@@ -331,13 +373,150 @@ def lesson_payload(lesson_id: str) -> Optional[dict[str, Any]]:
     order = catalogue()["lessonOrder"]
     i = order.index(les.id) if les.id in order else -1
     return {
-        "lesson": les.model_dump(),
-        "module": {"id": mod.id, "n": mod.n, "title": mod.title, "accent": mod.accent},
+        "lesson": bilingual(les.model_dump(), ml_lesson(les.id), LESSON_SKIP),
+        "module": {"id": mod.id, "n": mod.n, "title": _pair(mod.title, _ml_text(("module", mod.id, "title"))),
+                   "accent": mod.accent},
         "references": [{"id": r, **refs[r].model_dump()} for r in les.refs if r in refs],
         "related": [_item_out(x) for x in les.related],
         "prev": order[i - 1] if i > 0 else None,
         "next": order[i + 1] if 0 <= i < len(order) - 1 else None,
     }
+
+
+# ---------- Malayalam overlay ----------
+# app/data/curriculum/ml/<module id>.json mirrors each module's text:
+#   {"module": {"title", "summary"}, "chapters": {chapter id: title},
+#    "lessons": {lesson id: <same shape as the lesson, text fields only>}}
+# ml/library.json holds {"lights": {id: {...}}, "parts": {...}, "scenarios": {...}}.
+# `bilingual()` zips English and Malayalam into [en, ml] pairs, which the
+# frontend renders with I18n.BP (en / ml / both). Coverage is linted.
+
+LESSON_SKIP: frozenset[str] = frozenset({"id", "level", "minutes", "a", "related", "refs", "verified", "lab", "scenario", "kind"})
+LIGHT_SKIP: frozenset[str] = frozenset({"id", "sign", "colour", "severity"})
+PART_SKIP: frozenset[str] = frozenset({"id", "group", "x", "y", "related", "lessons"})
+SCEN_SKIP: frozenset[str] = frozenset({"id", "layout", "duration", "actors", "hazard", "ok", "lesson"})
+
+
+@lru_cache(maxsize=1)
+def _ml_modules() -> dict[str, dict[str, Any]]:
+    out: dict[str, dict[str, Any]] = {}
+    if ML_DIR.is_dir():
+        for p in ML_DIR.glob("m*.json"):
+            out[p.stem] = _read(p)
+    return out
+
+
+@lru_cache(maxsize=1)
+def _ml_library() -> dict[str, Any]:
+    p = ML_DIR / "library.json"
+    return _read(p) if p.is_file() else {}
+
+
+@lru_cache(maxsize=1)
+def _ml_lessons() -> dict[str, dict[str, Any]]:
+    out: dict[str, dict[str, Any]] = {}
+    for mod in _ml_modules().values():
+        out.update(mod.get("lessons", {}))
+    return out
+
+
+def ml_lesson(lesson_id: str) -> dict[str, Any]:
+    return _ml_lessons().get(lesson_id, {})
+
+
+def _ml_text(key: tuple[str, str, str]) -> Optional[str]:
+    kind, a, b = key
+    if kind == "module":
+        v = _ml_modules().get(a, {}).get("module", {}).get(b)
+    elif kind == "chapter":
+        v = _ml_modules().get(a, {}).get("chapters", {}).get(b)
+    elif kind == "lesson":
+        v = ml_lesson(a).get(b)
+    elif kind == "scenario":
+        v = _ml_library().get("scenarios", {}).get(a, {}).get(b)
+    else:
+        v = None
+    return v if isinstance(v, str) and v.strip() else None
+
+
+def bilingual(en: Any, ml: Any, skip: frozenset[str]) -> Any:
+    """Zip an English structure with its Malayalam mirror into [en, ml] pairs."""
+    if isinstance(en, str):
+        return [en, ml] if isinstance(ml, str) and ml.strip() else en
+    if isinstance(en, list):
+        if not isinstance(ml, list) or len(ml) != len(en):
+            return en
+        return [bilingual(a, b, skip) for a, b in zip(en, ml)]
+    if isinstance(en, dict):
+        mld = ml if isinstance(ml, dict) else {}
+        return {k: (v if k in skip else bilingual(v, mld.get(k), skip)) for k, v in en.items()}
+    return en
+
+
+def _missing(en: Any, ml: Any, skip: frozenset[str], path: str, out: list[str]) -> None:
+    if isinstance(en, str):
+        if en.strip() and not (isinstance(ml, str) and ml.strip()):
+            out.append(path)
+    elif isinstance(en, list):
+        if not isinstance(ml, list) or len(ml) != len(en):
+            if any(isinstance(x, (str, list, dict)) for x in en):
+                out.append(path + f" (expected list of {len(en)})")
+            return
+        for i, (a, b) in enumerate(zip(en, ml)):
+            _missing(a, b, skip, f"{path}[{i}]", out)
+    elif isinstance(en, dict):
+        mld = ml if isinstance(ml, dict) else {}
+        for k, v in en.items():
+            if k not in skip and v is not None:
+                _missing(v, mld.get(k), skip, f"{path}.{k}", out)
+
+
+def ml_coverage() -> list[str]:
+    """Paths of English text with no Malayalam translation (empty = complete)."""
+    out: list[str] = []
+    for m in modules():
+        mm = _ml_modules().get(m.id, {})
+        for f in ("title", "summary"):
+            if not (mm.get("module", {}).get(f) or "").strip():
+                out.append(f"{m.id}.module.{f}")
+        for c in m.chapters:
+            if not (mm.get("chapters", {}).get(c.id) or "").strip():
+                out.append(f"{m.id}.chapters.{c.id}")
+        for les in m.lessons:
+            _missing(les.model_dump(), ml_lesson(les.id), LESSON_SKIP, f"lesson:{les.id}", out)
+    lib = _ml_library()
+    for w in warning_lights():
+        _missing(w.model_dump(), lib.get("lights", {}).get(w.id), LIGHT_SKIP, f"light:{w.id}", out)
+    for p in vehicle_parts():
+        _missing(p.model_dump(), lib.get("parts", {}).get(p.id), PART_SKIP, f"part:{p.id}", out)
+    for sc in scenarios():
+        _missing(sc.model_dump(), lib.get("scenarios", {}).get(sc.id), SCEN_SKIP, f"scenario:{sc.id}", out)
+    return out
+
+
+def lights_payload() -> list[Any]:
+    lib = _ml_library().get("lights", {})
+    return [bilingual(w.model_dump(), lib.get(w.id), LIGHT_SKIP) for w in warning_lights()]
+
+
+def parts_payload() -> list[Any]:
+    lib = _ml_library().get("parts", {})
+    return [bilingual(p.model_dump(), lib.get(p.id), PART_SKIP) for p in vehicle_parts()]
+
+
+def scenarios_payload() -> list[Any]:
+    lib = _ml_library().get("scenarios", {})
+    return [bilingual(sc.model_dump(), lib.get(sc.id), SCEN_SKIP) for sc in scenarios()]
+
+
+def _flat_ml(x: Any) -> str:
+    if isinstance(x, str):
+        return x
+    if isinstance(x, list):
+        return " ".join(_flat_ml(i) for i in x)
+    if isinstance(x, dict):
+        return " ".join(_flat_ml(v) for v in x.values())
+    return ""
 
 
 # ---------- search ----------
@@ -357,7 +536,7 @@ def _snippet(text: str, q: str, width: int = 140) -> str:
 
 
 @lru_cache(maxsize=1)
-def _search_docs() -> list[dict[str, str]]:
+def _search_docs() -> list[dict[str, str]]:  # noqa: C901 — flat list builder
     """Flattened documents for search and for instructor retrieval."""
     docs: list[dict[str, str]] = []
     for les, mod in lessons_by_id().values():
@@ -366,29 +545,36 @@ def _search_docs() -> list[dict[str, str]]:
             + [" ".join([s.h, *s.p, *s.steps, s.note.text if s.note else ""]) for s in les.sections]
             + [" ".join(t) for t in les.terms] + les.mistakes + les.safety + les.examples
         )
-        docs.append({"kind": "lesson", "id": les.id, "title": les.title,
-                     "group": f"Module {mod.n}: {mod.title}", "body": body, "href": f"#lesson/{les.id}"})
+        mll = ml_lesson(les.id)
+        docs.append({"kind": "lesson", "id": les.id, "title": les.title, "title_ml": mll.get("title", ""),
+                     "group": f"Module {mod.n}: {mod.title}", "body": body, "body_ml": _flat_ml(mll),
+                     "href": f"#lesson/{les.id}"})
     c = _content()
     for t in c.topics():
         a = c.article(t["id"])
         if not a:
             continue
         body = " ".join([a["intro"][0]] + [s["h"][0] + " " + " ".join(p[0] for p in s["p"]) for s in a["sections"]])
-        docs.append({"kind": "article", "id": t["id"], "title": t["name"][0],
-                     "group": "Theory article", "body": body, "href": f"#theory/{t['id']}"})
+        body_ml = " ".join([a["intro"][1]] + [s["h"][1] + " " + " ".join(p[1] for p in s["p"]) for s in a["sections"]])
+        docs.append({"kind": "article", "id": t["id"], "title": t["name"][0], "title_ml": t["name"][1],
+                     "group": "Theory article", "body": body, "body_ml": body_ml, "href": f"#theory/{t['id']}"})
     for d in c.signs():
-        docs.append({"kind": "sign", "id": d["id"], "title": d["name"], "group": "Road sign",
-                     "body": d["meaning"] + " " + d["action"], "href": f"#sign/{d['id']}"})
+        ml = d.get("ml") or ["", "", ""]
+        docs.append({"kind": "sign", "id": d["id"], "title": d["name"], "title_ml": ml[0], "group": "Road sign",
+                     "body": d["meaning"] + " " + d["action"], "body_ml": ml[1] + " " + ml[2], "href": f"#sign/{d['id']}"})
     for g in c.glossary():
-        docs.append({"kind": "term", "id": g[0], "title": g[0], "group": "Glossary",
-                     "body": g[2], "href": "#theory/gloss"})
+        docs.append({"kind": "term", "id": g[0], "title": g[0], "title_ml": g[1], "group": "Glossary",
+                     "body": g[2], "body_ml": g[3], "href": "#theory/gloss"})
+    lib = _ml_library()
     for w in warning_lights():
-        docs.append({"kind": "light", "id": w.id, "title": w.name, "group": "Warning light",
-                     "body": " ".join([w.means, w.why, w.drive, *w.action, w.ignored]),
+        mw = lib.get("lights", {}).get(w.id, {})
+        docs.append({"kind": "light", "id": w.id, "title": w.name, "title_ml": mw.get("name", ""), "group": "Warning light",
+                     "body": " ".join([w.means, w.why, w.drive, *w.action, w.ignored]), "body_ml": _flat_ml(mw),
                      "href": f"#vehicle/lights/{w.id}"})
     for p in vehicle_parts():
-        docs.append({"kind": "part", "id": p.id, "title": p.name, "group": "Vehicle part",
-                     "body": " ".join([p.what, p.how, p.fails]), "href": f"#vehicle/explore/{p.id}"})
+        mp = lib.get("parts", {}).get(p.id, {})
+        docs.append({"kind": "part", "id": p.id, "title": p.name, "title_ml": mp.get("name", ""), "group": "Vehicle part",
+                     "body": " ".join([p.what, p.how, p.fails]), "body_ml": _flat_ml(mp), "href": f"#vehicle/explore/{p.id}"})
     return docs
 
 
@@ -398,18 +584,23 @@ _STOP: frozenset[str] = frozenset(
 )
 
 _KIND_WEIGHT: dict[str, float] = {"lesson": 1.3, "light": 1.2, "part": 1.1, "article": 1.0, "sign": 0.9, "term": 0.8}
+_GROUP_ML: dict[str, str] = {"Theory article": "തിയറി ലേഖനം", "Road sign": "റോഡ് ചിഹ്നം", "Glossary": "പദാവലി",
+                             "Warning light": "മുന്നറിയിപ്പ് ലൈറ്റ്", "Vehicle part": "വാഹന ഭാഗം"}
+_ML_CHARS = re.compile(r"[\u0d00-\u0d7f]")
 
 
 def search(q: str, limit: int = 30) -> list[dict[str, Any]]:
     qn = _norm(q)
     if len(qn) < 2:
         return []
-    words = [w for w in re.findall(r"[a-z0-9]+", qn) if len(w) > 1 and w not in _STOP]
+    words = [w for w in re.findall(r"[a-z0-9\u0d00-\u0d7f]+", qn) if len(w) > 1 and w not in _STOP]
     if not words:
         return []
     scored: list[tuple[float, dict[str, Any]]] = []
+    is_ml = bool(_ML_CHARS.search(qn))
     for d in _search_docs():
-        title, body = d["title"].lower(), d["body"].lower()
+        title = (d.get("title_ml", "") if is_ml else d["title"]).lower()
+        body = (d.get("body_ml", "") if is_ml else d["body"]).lower()
         score = 0.0
         if qn in title:
             score += 10 + (5 if title.startswith(qn) else 0)
@@ -427,9 +618,15 @@ def search(q: str, limit: int = 30) -> list[dict[str, Any]]:
         if score <= 0:
             continue
         score *= _KIND_WEIGHT.get(d["kind"], 1.0)
+        grp_ml = _GROUP_ML.get(d["group"], "")
+        if d["kind"] == "lesson":
+            grp_ml = d["group"].replace("Module", "മൊഡ്യൂൾ")
         scored.append((score, {
-            "kind": d["kind"], "id": d["id"], "title": d["title"], "group": d["group"],
-            "href": d["href"], "snippet": _snippet(d["body"], words[0] if words else qn),
+            "kind": d["kind"], "id": d["id"],
+            "title": _pair(d["title"], d.get("title_ml") or None),
+            "group": _pair(d["group"], grp_ml or None),
+            "href": d["href"],
+            "snippet": _snippet(d["body_ml"] if is_ml else d["body"], words[0] if words else qn),
         }))
     scored.sort(key=lambda x: -x[0])
     return [x[1] for x in scored[:limit]]
@@ -512,6 +709,8 @@ def validate() -> list[str]:
 
 
 def warm() -> None:
+    _ml_modules()
+    _ml_library()
     modules()
     lessons_by_id()
     references()

@@ -5,7 +5,7 @@
 "use strict";
 const C = {};
 const u = (k, o) => I18n.u(k, o);
-const e = (s) => esc(s == null ? "" : s);
+const e = (s) => I18n.X(s);   // strings are escaped; [en, ml] pairs render bilingually
 
 /* ---------- data ---------- */
 C.outline = null;
@@ -115,7 +115,7 @@ C.itemRow = (it) => {
   const meta = it.type === "lesson" ? `${it.minutes} ${u("min")} · ${u(it.level)}` : u(TYPE_KEY[it.type] || "itLesson");
   return `<a class="irow ${done ? "done" : ""}" href="${C.itemHref(it)}"><span class="ibadge t-${it.type}" aria-hidden="true"></span><span class="itxt"><b>${e(it.title)}</b><small>${e(meta)}</small></span>${done ? `<span class="ok" aria-label="${e(u("completed"))}">✓</span>` : '<span class="chev" aria-hidden="true">›</span>'}</a>`;
 };
-C.crumbs = (parts) => `<nav class="crumbs" aria-label="${e(u("breadcrumb"))}">${parts.map((p, i) => i < parts.length - 1 ? `<a href="${p[1]}">${e(p[0])}</a><span aria-hidden="true">/</span>` : `<span aria-current="page">${e(p[0])}</span>`).join("")}</nav>`;
+C.crumbs = (parts) => `<nav class="crumbs" aria-label="${e(u("breadcrumb"))}">${parts.map((p, i) => i < parts.length - 1 ? `<a href="${p[1]}">${esc(I18n.one(p[0]))}</a><span aria-hidden="true">/</span>` : `<span aria-current="page">${esc(I18n.one(p[0]))}</span>`).join("")}</nav>`;
 const fail = (app) => { app.innerHTML = `<section class="panel"><p class="empty">${e(u("networkErr"))}</p></section>`; };
 const skel = (app) => { app.innerHTML = `<section class="panel"><div class="skel"><i style="height:26px;width:40%"></i><i style="height:14px"></i><i style="height:14px;width:80%"></i><i style="height:14px;width:60%"></i></div></section>`; };
 
@@ -219,7 +219,7 @@ C.lessonView = async (app) => {
     : L.scenario ? `<a class="democard rvl" href="#hazard/${L.scenario}"><span class="fi">${C.icon("eye")}</span><span><b>${e(u("tryScenario"))}</b><small>${e(u("fHazardSub"))}</small></span><span class="chev">›</span></a>` : "";
   const toc = L.sections.map((s, i) => `<a href="#lesson/${id}" data-toc="s${i}">${e(s.h)}</a>`).join("");
   const bm = C.bookmarked(id);
-  app.innerHTML = `${C.crumbs([[u("tCourse"), "#course"], [u("moduleN", { n: M.n }) + " · " + M.title, "#course/" + M.id], [L.title, "#lesson/" + id]])}
+  app.innerHTML = `${C.crumbs([[u("tCourse"), "#course"], [u("moduleN", { n: M.n }) + " · " + I18n.one(M.title), "#course/" + M.id], [L.title, "#lesson/" + id]])}
   <div class="lgrid">
   <aside class="ltoc" aria-label="${e(u("onThisPage"))}"><h3 class="lab">${e(u("onThisPage"))}</h3>${toc}<a href="#lesson/${id}" data-toc="kc">${e(u("knowledgeCheck"))}</a></aside>
   <article class="lmain">

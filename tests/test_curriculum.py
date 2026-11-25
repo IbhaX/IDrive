@@ -80,3 +80,33 @@ def test_scenarios_have_one_correct_choice() -> None:
     for s in curriculum.scenarios():
         assert sum(c.ok for c in s.choices) == 1, s.id
         assert s.hazard in {a.id for a in s.actors}
+
+
+def test_malayalam_translation_is_complete() -> None:
+    """Every English string in lessons, modules, chapters, lights, parts and
+    scenarios must have a Malayalam counterpart with the same shape."""
+    missing = curriculum.ml_coverage()
+    assert missing == [], f"{len(missing)} untranslated: {missing[:15]}"
+
+
+def test_malayalam_has_no_money_and_keeps_legal_numbers() -> None:
+    money = re.compile(r"(₹|\brs\.?\s?\d|\d[\d,]*\s*രൂപ)", re.I)
+    for les, _m in curriculum.lessons_by_id().values():
+        ml = curriculum.ml_lesson(les.id)
+        blob = str(ml)
+        assert not money.search(blob), f"money amount in Malayalam lesson {les.id}"
+    # the legal thresholds must survive translation verbatim
+    assert "30 mg" in str(curriculum.ml_lesson("safety-laws"))
+    assert "134A" in str(curriculum.ml_lesson("accident-scene"))
+
+
+def test_bilingual_payload_pairs() -> None:
+    p = curriculum.lesson_payload("engine-basics")
+    assert p is not None
+    title = p["lesson"]["title"]
+    assert isinstance(title, list) and title[0] == "How a combustion engine works" and title[1]
+    q = p["lesson"]["check"][0]
+    assert isinstance(q["a"], int) and all(isinstance(o, list) for o in q["o"])
+    lights = curriculum.lights_payload()
+    assert all(isinstance(w["name"], list) for w in lights)
+    assert curriculum.search("ഹെൽമെറ്റ്"), "Malayalam search returns results"

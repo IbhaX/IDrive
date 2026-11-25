@@ -5,7 +5,7 @@
 "use strict";
 const Lb = {};
 const u = (k, o) => I18n.u(k, o);
-const e = (s) => esc(s == null ? "" : s);
+const e = (s) => I18n.X(s);   // strings are escaped; [en, ml] pairs render bilingually
 const G = () => Motion.gsap;
 
 Lb.LABS = ["stopping", "reaction", "engine"];

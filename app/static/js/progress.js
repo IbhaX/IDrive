@@ -92,10 +92,10 @@ Pr.dashboard = () => {
   </div>
   <div class="levels">${Course.LEVELS.map((k, i) => `<span class="lvl ${i <= lv ? "on" : ""} ${i === lv ? "cur" : ""}">${u(k)}</span>`).join('<i aria-hidden="true">→</i>')}</div>
   <p class="muted">${u("levelHow")}</p></section>
-  <section class="panel rvl"><h3 class="lab">${u("byModule")}</h3>${mods.map(x => `<a class="crow" href="#course/${x.m.id}"><span>${x.m.n}. ${esc(x.m.title)}</span><div class="bar"><i class="known" style="width:${x.st.pct}%;background:${x.m.accent}"></i></div><span class="num">${x.st.done}/${x.st.total}</span></a>`).join("")}</section>
+  <section class="panel rvl"><h3 class="lab">${u("byModule")}</h3>${mods.map(x => `<a class="crow" href="#course/${x.m.id}"><span>${x.m.n}. ${I18n.X(x.m.title)}</span><div class="bar"><i class="known" style="width:${x.st.pct}%;background:${x.m.accent}"></i></div><span class="num">${x.st.done}/${x.st.total}</span></a>`).join("")}</section>
   <div class="two rvl">
-    <section class="panel"><h3 class="lab">${u("strongest")}</h3>${strong.length ? strong.map(x => `<p>✓ ${esc(x.m.title)} <span class="muted">${Math.round(x.avg)}%</span></p>`).join("") : `<p class="muted">${u("needData")}</p>`}</section>
-    <section class="panel"><h3 class="lab">${u("weakest")}</h3>${weak.length ? weak.map(x => `<p><a href="#course/${x.m.id}">${esc(x.m.title)}</a> <span class="muted">${Math.round(x.avg)}%</span></p>`).join("") : `<p class="muted">${u("needData")}</p>`}${rq ? `<div class="row"><a class="btn" href="#course/review">↻ ${u("reviewN", { n: rq })}</a></div>` : ""}</section>
+    <section class="panel"><h3 class="lab">${u("strongest")}</h3>${strong.length ? strong.map(x => `<p>✓ ${I18n.X(x.m.title)} <span class="muted">${Math.round(x.avg)}%</span></p>`).join("") : `<p class="muted">${u("needData")}</p>`}</section>
+    <section class="panel"><h3 class="lab">${u("weakest")}</h3>${weak.length ? weak.map(x => `<p><a href="#course/${x.m.id}">${I18n.X(x.m.title)}</a> <span class="muted">${Math.round(x.avg)}%</span></p>`).join("") : `<p class="muted">${u("needData")}</p>`}${rq ? `<div class="row"><a class="btn" href="#course/review">↻ ${u("reviewN", { n: rq })}</a></div>` : ""}</section>
   </div>
   <section class="panel rvl"><h3 class="lab">${u("recommended")}</h3><div class="ilist">${pending.map(row).join("") || `<p class="muted">${u("allDone")}</p>`}</div></section>
   ${bms.length ? `<section class="panel rvl"><h3 class="lab">${u("bookmarks")}</h3><div class="ilist">${bms.map(row).join("")}</div></section>` : ""}

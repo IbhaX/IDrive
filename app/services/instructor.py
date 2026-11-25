@@ -34,7 +34,8 @@ Rules you must follow:
 3. Never give instructions that are unsafe or illegal (e.g. how to evade enforcement, drive impaired, or beat a breath test). For emergencies, always include calling 112 where relevant.
 4. Be a patient instructor: short paragraphs, plain language, define jargon, use a concrete Indian road example when helpful. Keep answers under about 220 words unless asked for more.
 5. When asked to quiz the learner, write 3 multiple-choice questions from the sources, then give the answers with one-line explanations at the end.
-6. Mark simplified physics as an educational model."""
+6. Mark simplified physics as an educational model.
+7. Reply in the learner's language: if the question is in Malayalam, answer in clear, natural Malayalam (keep common technical words such as clutch, brake, RTO in the form Kerala learners use); otherwise answer in English. Sources may be given in either language."""
 
 
 def _clip(text: str, n: int = MAX_PASSAGE) -> str:
@@ -42,12 +43,18 @@ def _clip(text: str, n: int = MAX_PASSAGE) -> str:
     return text if len(text) <= n else text[: n - 1].rsplit(" ", 1)[0] + "…"
 
 
+def _plain(x: Any) -> str:
+    return x[0] if isinstance(x, list) else str(x)
+
+
 def retrieve(question: str, k: int = TOP_K) -> list[dict[str, Any]]:
-    """Top-k passages for the question, from lessons, articles, lights, parts, signs, glossary."""
+    """Top-k passages for the question, from lessons, articles, lights, parts, signs, glossary.
+    Malayalam questions retrieve over the Malayalam text and pass it as the source."""
+    is_ml = bool(re.search(r"[\u0d00-\u0d7f]", question))
     hits = curriculum.search(question, limit=k * 3)
     if not hits:
         # fall back to single-word matches for long natural-language questions
-        words = sorted({w for w in re.findall(r"[a-zA-Z]{4,}", question.lower())}, key=len, reverse=True)[:4]
+        words = sorted({w for w in re.findall(r"[a-zA-Z\u0d00-\u0d7f]{4,}", question.lower())}, key=len, reverse=True)[:4]
         seen: set[str] = set()
         hits = []
         for w in words:
@@ -62,9 +69,10 @@ def retrieve(question: str, k: int = TOP_K) -> list[dict[str, Any]]:
         d = docs.get(h["kind"] + ":" + h["id"])
         if not d:
             continue
+        text = d.get("body_ml") if is_ml and d.get("body_ml") else d["body"]
         out.append({
             "n": len(out) + 1, "kind": h["kind"], "id": h["id"], "title": h["title"],
-            "group": h["group"], "href": h["href"], "text": _clip(d["body"]),
+            "group": h["group"], "href": h["href"], "text": _clip(text),
         })
         if len(out) >= k:
             break
@@ -72,7 +80,7 @@ def retrieve(question: str, k: int = TOP_K) -> list[dict[str, Any]]:
 
 
 def _sources_block(sources: list[dict[str, Any]]) -> str:
-    return "\n\n".join(f"[{s['n']}] {s['title']} ({s['group']})\n{s['text']}" for s in sources)
+    return "\n\n".join(f"[{s['n']}] {_plain(s['title'])} ({_plain(s['group'])})\n{s['text']}" for s in sources)
 
 
 def _public(sources: list[dict[str, Any]], cited: Optional[set[int]] = None) -> list[dict[str, Any]]:

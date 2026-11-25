@@ -12,7 +12,7 @@ Status tracker for learning content shipped in `app/data/`. **Required before pu
 | Glossary (83) | ⚠ Unreviewed | unassigned |
 | Malayalam text (all) | ⚠ **Not reviewed by a native speaker** | unassigned |
 | Curriculum lessons (38, `app/data/curriculum`) | ◐ Legal facts web-verified 2026-11-25 (see below); technical/safety content needs expert review | unassigned |
-| Curriculum Malayalam | ⚠ Lessons are English-only for now; new UI strings in `ui_extra.json` need native review | unassigned |
+| Curriculum Malayalam (`app/data/curriculum/ml/`) | ◐ **Complete translation** of all 12 modules, 38 lessons, 17 warning lights, 15 vehicle parts and 6 scenarios (coverage enforced by `test_malayalam_translation_is_complete`). Machine-authored — needs a native-speaker and subject-expert review for register and terminology before launch | unassigned |
 | Warning lights (17), vehicle parts (15), scenarios (6) | ⚠ Needs review by a qualified automotive instructor | unassigned |
 
 ## Built-in safeguards already in place

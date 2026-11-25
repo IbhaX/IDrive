@@ -47,19 +47,19 @@ async def search(q: str = Query(default="", max_length=80)) -> dict[str, Any]:
 @router.get("/api/library/lights")
 async def lights(response: Response) -> dict[str, Any]:
     response.headers["Cache-Control"] = _CACHE
-    return {"lights": [w.model_dump() for w in curriculum.warning_lights()]}
+    return {"lights": curriculum.lights_payload()}
 
 
 @router.get("/api/library/vehicle")
 async def vehicle(response: Response) -> dict[str, Any]:
     response.headers["Cache-Control"] = _CACHE
-    return {"parts": [p.model_dump() for p in curriculum.vehicle_parts()]}
+    return {"parts": curriculum.parts_payload()}
 
 
 @router.get("/api/library/scenarios")
 async def scenarios(response: Response) -> dict[str, Any]:
     response.headers["Cache-Control"] = _CACHE
-    return {"scenarios": [s.model_dump() for s in curriculum.scenarios()]}
+    return {"scenarios": curriculum.scenarios_payload()}
 
 
 @router.get("/api/library/references")

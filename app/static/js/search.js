@@ -4,7 +4,7 @@
 "use strict";
 const Q = {};
 const u = (k, o) => I18n.u(k, o);
-const e = (s) => esc(s == null ? "" : s);
+const e = (s) => I18n.X(s);   // strings are escaped; [en, ml] pairs render bilingually
 let timer = null, lastFocus = null, results = [], active = -1;
 
 Q.open = () => {

@@ -1,6 +1,6 @@
 # iDrive
 
-The interactive driving-theory school for India, with extra depth for Kerala — bilingual UI in English and Malayalam.
+The interactive driving-theory school for India, with extra depth for Kerala — fully bilingual in English and Malayalam (every lesson, quiz, warning light, vehicle part and scenario, not just the interface).
 
 - **Curriculum:** 12 modules from absolute beginner to advanced (driving basics, how vehicles work, dashboard lights, signs, traffic law, practical manoeuvres, defensive driving, maintenance, emergencies, vehicle dynamics, psychology, licensing) — 38 authored lessons with objectives, worked examples, safety notes, knowledge checks and cited, date-verified sources, plus the 18 original theory articles.
 - **Interactive:** clickable vehicle explorer, 17-entry warning-light encyclopedia (stop-now vs check-soon), stopping-distance lab, reaction-time test, animated four-stroke engine, six hazard-perception scenarios.
