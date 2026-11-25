@@ -341,6 +341,19 @@ window.addEventListener("visibilitychange", () => {
 window.addEventListener("pagehide", saveLocal);
 
 /* ---------- boot ---------- */
+/* startup splash: let the intro finish (≈1.5 s), then lift it off */
+window.hideSplash = () => {
+  const el = document.getElementById("splash");
+  if (!el || el.classList.contains("out")) return;
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const wait = Math.max(0, (reduced ? 500 : 1750) - (Date.now() - (window.__splashT0 || 0)));
+  setTimeout(() => {
+    el.classList.add("out");
+    document.documentElement.classList.remove("splashing");
+    setTimeout(() => el.remove(), reduced ? 200 : 650);
+  }, wait);
+};
+
 (async function boot() {
   const app = document.getElementById("app");
   app.innerHTML = `<section class="panel"><div class="skel"><i style="height:26px;width:34%"></i><i style="height:16px"></i><i style="height:16px;width:80%"></i><i style="height:16px;width:60%"></i></div></section>`;
@@ -348,19 +361,21 @@ window.addEventListener("pagehide", saveLocal);
     await Data.loadIndex();
   } catch (e) {
     app.innerHTML = `<section class="panel"><h2>iDrive</h2><p class="muted">Failed to load content — is the server running?</p></section>`;
+    window.hideSplash();
     return;
   }
   Data.ensureSvgs("all").then(() => { if (S.view === "learn") render(); }).catch(() => {});
   Course.loadOutline().catch(() => {});
   await Auth.restore();
   await route();
+  window.hideSplash();
 })();
 })();
 
 /* the logo's car animation is SMIL; honour reduced-motion by freezing it */
 (function logoMotion() {
   const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const apply = () => document.querySelectorAll("svg.bmark").forEach((s) => {
+  const apply = () => document.querySelectorAll("svg.bmark,svg.smark").forEach((s) => {
     if (!s.pauseAnimations) return;
     if (mq.matches) { s.pauseAnimations(); s.setCurrentTime && s.setCurrentTime(0.4); } else s.unpauseAnimations();
   });

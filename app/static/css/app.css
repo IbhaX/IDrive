@@ -997,3 +997,33 @@ a,button,[role="button"],summary,label{-webkit-tap-highlight-color:transparent;t
 .seg{scrollbar-width:none}.seg::-webkit-scrollbar{display:none}
 /* phones: show the experiment first, controls underneath, so every slider change is visible */
 @media (max-width:900px){.lab .labgrid>.labviz{order:-1}}
+
+/* ============ startup splash ============ */
+html.splashing,html.splashing body{overflow:hidden}
+#splash{position:fixed;inset:0;z-index:200;display:grid;place-items:center;
+  background:radial-gradient(120% 80% at 50% 30%,#1a1b38 0%,#0b0c14 62%);color:#f2f3fb;
+  padding:env(safe-area-inset-top,0px) 16px env(safe-area-inset-bottom,0px);transition:opacity .55s ease,visibility .55s}
+:root[data-theme="light"] #splash{background:radial-gradient(120% 80% at 50% 30%,#ffffff 0%,#e9ecf5 65%);color:#12131f}
+#splash.out{opacity:0;visibility:hidden}
+#splash.out .splin{transform:scale(1.06);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.splin{display:grid;grid-template-columns:auto auto;align-items:end;justify-content:center;column-gap:4px;row-gap:18px}
+.smark{width:auto;height:clamp(96px,22vw,150px);aspect-ratio:100/150;overflow:visible;filter:drop-shadow(0 0 24px rgba(124,108,255,.45))}
+.sword{font:700 clamp(64px,15vw,104px)/.78 "Inter",var(--display),system-ui,sans-serif;letter-spacing:-.04em;padding-bottom:clamp(2px,.6vw,6px)}
+.stag{grid-column:1/-1;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;color:#9a9cb8;font-size:14.5px;letter-spacing:.02em}
+.stag [lang="ml"]{font-family:"Noto Sans Malayalam",sans-serif;font-size:13.5px}
+:root[data-theme="light"] .stag{color:#5b5e78}
+/* the intro: road rises, car drives in, dot lands, word slides, tagline fades */
+.smark .sroad{transform-box:fill-box;transform-origin:50% 100%;animation:sRoad .55s cubic-bezier(.2,.8,.2,1) .05s both}
+.smark .scar{animation:sCar .8s cubic-bezier(.15,.75,.25,1) .35s both}
+.smark .sdotg{transform-box:fill-box;transform-origin:50% 50%;animation:sDot .5s cubic-bezier(.3,1.6,.5,1) .75s both}
+.sword{animation:sWord .6s cubic-bezier(.2,.8,.2,1) .55s both}
+.stag{animation:sFade .6s ease .95s both}
+@keyframes sRoad{from{transform:scaleY(0);opacity:0}to{transform:scaleY(1);opacity:1}}
+@keyframes sCar{from{transform:translateY(46px);opacity:0}to{transform:none;opacity:1}}
+@keyframes sDot{from{transform:translateY(-30px) scale(.2);opacity:0}to{transform:none;opacity:1}}
+@keyframes sWord{from{transform:translateX(-14px);opacity:0;clip-path:inset(0 100% 0 0)}to{transform:none;opacity:1;clip-path:inset(0 0 0 0)}}
+@keyframes sFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .smark .sroad,.smark .scar,.smark .sdotg,.sword,.stag{animation:sFade .3s ease both}
+  #splash.out .splin{transform:none}
+}
