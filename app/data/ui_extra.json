@@ -1218,5 +1218,465 @@
  "onlineAgain": [
   "Back online",
   "വീണ്ടും ഓൺലൈനിൽ"
+ ],
+ "lab_following": [
+  "Following distance",
+  "പിന്തുടരൽ അകലം"
+ ],
+ "labSub_following": [
+  "The car ahead brakes hard. Is your gap big enough? Plus a gap-counting drill.",
+  "മുന്നിലെ കാർ പെട്ടെന്ന് ബ്രേക്ക് ചെയ്യുന്നു. നിങ്ങളുടെ അകലം മതിയോ? ഒപ്പം അകലം എണ്ണിപ്പഠിക്കാനുള്ള പരിശീലനവും."
+ ],
+ "lab_cornering": [
+  "Cornering grip",
+  "വളവിലെ ഗ്രിപ്പ്"
+ ],
+ "labSub_cornering": [
+  "Speed, bend radius and road surface on a friction circle — see when tyres let go.",
+  "വേഗം, വളവിന്റെ ആരം, റോഡ് പ്രതലം — ടയറുകൾ പിടി വിടുന്നത് എപ്പോഴെന്ന് ഘർഷണ വൃത്തത്തിൽ കാണാം."
+ ],
+ "lab_energy": [
+  "Crash energy",
+  "ഇടിയുടെ ഊർജം"
+ ],
+ "labSub_energy": [
+  "A crash at speed is like falling from a building. How many floors?",
+  "വേഗത്തിലുള്ള ഇടി ഒരു കെട്ടിടത്തിൽ നിന്ന് വീഴുന്നതുപോലെയാണ്. എത്ര നിലകൾ?"
+ ],
+ "lab_headlights": [
+  "Headlight reach",
+  "ഹെഡ്‌ലൈറ്റിന്റെ ദൂരം"
+ ],
+ "labSub_headlights": [
+  "At night, can you stop within the distance you can see?",
+  "രാത്രിയിൽ, കാണാൻ കഴിയുന്ന ദൂരത്തിനുള്ളിൽ നിർത്താനാകുമോ?"
+ ],
+ "lab_blindspot": [
+  "Mirrors & blind spots",
+  "കണ്ണാടികളും ബ്ലൈൻഡ് സ്പോട്ടുകളും"
+ ],
+ "labSub_blindspot": [
+  "Adjust the mirrors, move a motorbike around you and find where it disappears.",
+  "കണ്ണാടികൾ ക്രമീകരിക്കുക, ബൈക്ക് ചുറ്റും നീക്കുക, അത് എവിടെ മറയുന്നു എന്ന് കണ്ടെത്തുക."
+ ],
+ "you": [
+  "You",
+  "നിങ്ങൾ"
+ ],
+ "yes": [
+  "Yes",
+  "ഉണ്ട്"
+ ],
+ "no": [
+  "No",
+  "ഇല്ല"
+ ],
+ "roadSurface": [
+  "Road surface",
+  "റോഡ് പ്രതലം"
+ ],
+ "measureRt": [
+  "Measure your reaction time",
+  "നിങ്ങളുടെ പ്രതികരണ സമയം അളക്കുക"
+ ],
+ "useMyRt": [
+  "Use my measured time (≈ {s} s on the road)",
+  "ഞാൻ അളന്ന സമയം ഉപയോഗിക്കുക (റോഡിൽ ≈ {s} s)"
+ ],
+ "folGap": [
+  "Time gap to the car ahead",
+  "മുന്നിലെ കാറുമായുള്ള സമയ അകലം"
+ ],
+ "folLeadCar": [
+  "The car ahead",
+  "മുന്നിലെ കാർ"
+ ],
+ "folSame": [
+  "Brakes like mine",
+  "എന്റേതുപോലെ ബ്രേക്ക്"
+ ],
+ "folBetter": [
+  "Brakes harder (better tyres)",
+  "കൂടുതൽ ശക്തമായി ബ്രേക്ക് (മികച്ച ടയർ)"
+ ],
+ "folBrake": [
+  "Car ahead brakes hard",
+  "മുന്നിലെ കാർ ശക്തമായി ബ്രേക്ക് ചെയ്യുന്നു"
+ ],
+ "folLeadShort": [
+  "Ahead",
+  "മുന്നിൽ"
+ ],
+ "folGapM": [
+  "Gap {m} m",
+  "അകലം {m} m"
+ ],
+ "folResult": [
+  "What happens",
+  "എന്ത് സംഭവിക്കും"
+ ],
+ "folHit": [
+  "You hit it at about {v} km/h",
+  "ഏകദേശം {v} km/h വേഗത്തിൽ ഇടിക്കുന്നു"
+ ],
+ "folSafe": [
+  "You stop in time — {m} m to spare",
+  "സമയത്ത് നിർത്തുന്നു — {m} m ബാക്കി"
+ ],
+ "folWhy": [
+  "Why the gap matters",
+  "അകലം എന്തുകൊണ്ട് പ്രധാനം"
+ ],
+ "folWhy1": [
+  "For {s} s you are still at full speed while the car ahead is already slowing.",
+  "{s} സെക്കൻഡ് നേരം മുന്നിലെ കാർ വേഗം കുറയ്ക്കുമ്പോഴും നിങ്ങൾ മുഴുവൻ വേഗത്തിലാണ്."
+ ],
+ "folGood": [
+  "Your gap covers your reaction time with a margin (about {s} s needed here).",
+  "നിങ്ങളുടെ അകലം പ്രതികരണ സമയവും ഒരു കരുതലും ഉൾക്കൊള്ളുന്നു (ഇവിടെ ഏകദേശം {s} s വേണം)."
+ ],
+ "folShort": [
+  "Your gap is shorter than your reaction time plus a margin — aim for at least {s} s.",
+  "നിങ്ങളുടെ അകലം പ്രതികരണ സമയവും കരുതലും ചേർന്നതിനേക്കാൾ കുറവാണ് — കുറഞ്ഞത് {s} s ലക്ഷ്യമിടുക."
+ ],
+ "folModel": [
+  "Both cars start at the same speed; the car ahead brakes at full grip and you brake with the same grip after your reaction time. Gaps are bumper to bumper. Real braking varies with tyres, load, brakes and ABS, so leave more than the model says — and double it in rain.",
+  "രണ്ട് കാറുകളും ഒരേ വേഗത്തിൽ തുടങ്ങുന്നു; മുന്നിലെ കാർ മുഴുവൻ ഗ്രിപ്പോടെ ബ്രേക്ക് ചെയ്യുന്നു, നിങ്ങൾ പ്രതികരണ സമയത്തിന് ശേഷം അതേ ഗ്രിപ്പോടെ. അകലം ബമ്പർ മുതൽ ബമ്പർ വരെ. യഥാർത്ഥ ബ്രേക്കിങ് ടയർ, ഭാരം, ബ്രേക്ക്, ABS എന്നിവ അനുസരിച്ച് മാറും — മാതൃക പറയുന്നതിലും കൂടുതൽ അകലം വിടുക, മഴയിൽ ഇരട്ടിയാക്കുക."
+ ],
+ "drillTitle": [
+  "Drill: count the gap",
+  "പരിശീലനം: അകലം എണ്ണുക"
+ ],
+ "drillLede": [
+  "When the car ahead passes a lamp post, start counting. Tap when your car reaches the same post.",
+  "മുന്നിലെ കാർ ഒരു വിളക്കുകാൽ കടക്കുമ്പോൾ എണ്ണിത്തുടങ്ങുക. നിങ്ങളുടെ കാർ അതേ വിളക്കുകാലിൽ എത്തുമ്പോൾ തൊടുക."
+ ],
+ "drillStart": [
+  "Start drill",
+  "പരിശീലനം തുടങ്ങുക"
+ ],
+ "drillTap": [
+  "Tap: I'm at the post",
+  "തൊടുക: ഞാൻ വിളക്കുകാലിൽ"
+ ],
+ "drillAgain": [
+  "Try another gap",
+  "മറ്റൊരു അകലം പരീക്ഷിക്കുക"
+ ],
+ "drillWatch": [
+  "Watch the car ahead…",
+  "മുന്നിലെ കാർ ശ്രദ്ധിക്കുക…"
+ ],
+ "drillTooEarly": [
+  "Wait — the car ahead hasn't reached a post yet.",
+  "കാത്തിരിക്കുക — മുന്നിലെ കാർ ഇതുവരെ വിളക്കുകാലിൽ എത്തിയിട്ടില്ല."
+ ],
+ "drillMissed": [
+  "Missed it — try again and count out loud.",
+  "നഷ്ടമായി — വീണ്ടും ശ്രമിക്കൂ, ഉറക്കെ എണ്ണുക."
+ ],
+ "drillRes": [
+  "You counted {you} s; the real gap was {real} s.",
+  "നിങ്ങൾ എണ്ണിയത് {you} s; യഥാർത്ഥ അകലം {real} s."
+ ],
+ "drillGood": [
+  "Spot on.",
+  "കൃത്യം."
+ ],
+ "drillEarly": [
+  "You tapped early — count slower.",
+  "നേരത്തെ തൊട്ടു — പതുക്കെ എണ്ണുക."
+ ],
+ "drillLate": [
+  "You tapped late — count faster.",
+  "വൈകി തൊട്ടു — വേഗത്തിൽ എണ്ണുക."
+ ],
+ "drillWasSafe": [
+  "That gap was 2 seconds or more.",
+  "ആ അകലം 2 സെക്കൻഡോ അതിൽ കൂടുതലോ ആയിരുന്നു."
+ ],
+ "drillWasClose": [
+  "That gap was under 2 seconds — too close.",
+  "ആ അകലം 2 സെക്കൻഡിൽ താഴെ — വളരെ അടുത്ത്."
+ ],
+ "coRadius": [
+  "Bend radius",
+  "വളവിന്റെ ആരം"
+ ],
+ "coBrake": [
+  "Braking in the bend",
+  "വളവിനുള്ളിൽ ബ്രേക്കിങ്"
+ ],
+ "coDrive": [
+  "Drive the bend",
+  "വളവിലൂടെ ഓടിക്കുക"
+ ],
+ "coCircle": [
+  "Friction circle",
+  "ഘർഷണ വൃത്തം"
+ ],
+ "coAccel": [
+  "accelerate",
+  "ത്വരണം"
+ ],
+ "coBrakeAx": [
+  "brake",
+  "ബ്രേക്ക്"
+ ],
+ "coTurn": [
+  "turn",
+  "തിരിവ്"
+ ],
+ "coUsed": [
+  "{p}% of grip used",
+  "ഗ്രിപ്പിന്റെ {p}% ഉപയോഗിച്ചു"
+ ],
+ "coGrip": [
+  "Grip budget",
+  "ഗ്രിപ്പ് ബജറ്റ്"
+ ],
+ "coSideways": [
+  "Sideways force needed: {a} g",
+  "വശത്തേക്ക് ആവശ്യമായ ബലം: {a} g"
+ ],
+ "coLimit": [
+  "Tyres can give about: {a} g",
+  "ടയറുകൾക്ക് നൽകാനാകുന്നത് ഏകദേശം: {a} g"
+ ],
+ "coFine": [
+  "Comfortably inside the grip — this is how a bend should feel.",
+  "ഗ്രിപ്പിനുള്ളിൽ സുഖമായി — വളവ് ഇങ്ങനെയായിരിക്കണം."
+ ],
+ "coEdge": [
+  "Close to the limit — any bump, oil or extra braking could start a slide.",
+  "പരിധിക്ക് അടുത്ത് — ഒരു കുഴിയോ എണ്ണയോ അധിക ബ്രേക്കിങ്ങോ തെന്നലിന് കാരണമാകാം."
+ ],
+ "coSlide": [
+  "Over the limit — the car slides wide off its line.",
+  "പരിധി കടന്നു — കാർ വരിയിൽ നിന്ന് പുറത്തേക്ക് തെന്നുന്നു."
+ ],
+ "coMax": [
+  "Speed limit of the tyres here",
+  "ഇവിടെ ടയറുകളുടെ വേഗപരിധി"
+ ],
+ "coMaxV": [
+  "Absolute maximum: about {v} km/h with no braking",
+  "പരമാവധി: ബ്രേക്കിങ് ഇല്ലാതെ ഏകദേശം {v} km/h"
+ ],
+ "coMaxBrake": [
+  "While braking this hard: about {v} km/h",
+  "ഇത്ര ശക്തമായി ബ്രേക്ക് ചെയ്യുമ്പോൾ: ഏകദേശം {v} km/h"
+ ],
+ "coReal": [
+  "Real safe speeds are well below this — slow down before the bend, not in it.",
+  "യഥാർത്ഥ സുരക്ഷിത വേഗം ഇതിലും വളരെ കുറവാണ് — വളവിനുള്ളിലല്ല, മുമ്പേ വേഗം കുറയ്ക്കുക."
+ ],
+ "coModel": [
+  "Grip is modelled as a friction circle: steering and braking share one budget (μ × g). Sideways force = speed² ÷ radius. Real cars also lose grip from bumps, camber, load transfer, worn tyres and sudden steering, so they slide earlier than this.",
+  "ഗ്രിപ്പിനെ ഘർഷണ വൃത്തമായി മാതൃകയാക്കിയിരിക്കുന്നു: സ്റ്റീയറിങ്ങും ബ്രേക്കിങ്ങും ഒരേ ബജറ്റ് (μ × g) പങ്കിടുന്നു. വശത്തേക്കുള്ള ബലം = വേഗം² ÷ ആരം. കുഴികൾ, ചരിവ്, ഭാരമാറ്റം, തേഞ്ഞ ടയർ, പെട്ടെന്നുള്ള സ്റ്റീയറിങ് എന്നിവ കാരണം യഥാർത്ഥ കാറുകൾ ഇതിലും നേരത്തെ തെന്നും."
+ ],
+ "enVehicle": [
+  "Vehicle",
+  "വാഹനം"
+ ],
+ "enScooter": [
+  "Scooter + rider",
+  "സ്കൂട്ടർ + യാത്രക്കാരൻ"
+ ],
+ "enCar": [
+  "Small car",
+  "ചെറിയ കാർ"
+ ],
+ "enSuv": [
+  "SUV",
+  "SUV"
+ ],
+ "enDrop": [
+  "Drop it from that height",
+  "ആ ഉയരത്തിൽ നിന്ന് വീഴ്ത്തുക"
+ ],
+ "enLike": [
+  "Like falling {h} m — about {f} floors",
+  "{h} m ഉയരത്തിൽ നിന്ന് വീഴുന്നതുപോലെ — ഏകദേശം {f} നിലകൾ"
+ ],
+ "enKj": [
+  "Movement energy: about {kj} kJ",
+  "ചലന ഊർജം: ഏകദേശം {kj} kJ"
+ ],
+ "enDouble": [
+  "Double the speed and the energy goes up four times.",
+  "വേഗം ഇരട്ടിയായാൽ ഊർജം നാലിരട്ടിയാകും."
+ ],
+ "enCompare": [
+  "Same crash at other speeds (height · energy vs now)",
+  "മറ്റു വേഗങ്ങളിൽ ഇതേ ഇടി (ഉയരം · ഇപ്പോഴത്തെ ഊർജവുമായി താരതമ്യം)"
+ ],
+ "enMassNote": [
+  "The fall height does not depend on the vehicle; the energy does — heavier vehicles carry more.",
+  "വീഴ്ചയുടെ ഉയരം വാഹനത്തെ ആശ്രയിക്കുന്നില്ല; ഊർജം ആശ്രയിക്കുന്നു — ഭാരമേറിയ വാഹനങ്ങൾക്ക് കൂടുതൽ."
+ ],
+ "enModel": [
+  "Equivalent height = speed² ÷ (2 × g), a floor is taken as 3 m, and the masses are typical round figures. It shows how the energy grows; it does not predict injuries, which depend on the crash, the vehicle and whether seat belts and helmets are worn.",
+  "തുല്യ ഉയരം = വേഗം² ÷ (2 × g); ഒരു നില 3 m ആയി കണക്കാക്കി; ഭാരം സാധാരണ ഏകദേശ കണക്കുകൾ. ഊർജം എങ്ങനെ വളരുന്നു എന്ന് കാണിക്കുന്നു; പരിക്കുകൾ പ്രവചിക്കുന്നില്ല — അവ ഇടി, വാഹനം, സീറ്റ് ബെൽറ്റും ഹെൽമെറ്റും ധരിച്ചോ എന്നതിനെ ആശ്രയിക്കുന്നു."
+ ],
+ "hlBeam": [
+  "Headlights",
+  "ഹെഡ്‌ലൈറ്റ്"
+ ],
+ "hlLow": [
+  "Low beam",
+  "ലോ ബീം"
+ ],
+ "hlHigh": [
+  "High beam",
+  "ഹൈ ബീം"
+ ],
+ "hlClothes": [
+  "Person on the road wears",
+  "റോഡിലുള്ള വ്യക്തി ധരിച്ചിരിക്കുന്നത്"
+ ],
+ "hlDark": [
+  "Dark clothes",
+  "ഇരുണ്ട വസ്ത്രം"
+ ],
+ "hlLight": [
+  "Light clothes",
+  "ഇളം നിറം"
+ ],
+ "hlRefl": [
+  "Reflective",
+  "പ്രതിഫലന വസ്ത്രം"
+ ],
+ "hlGlare": [
+  "Oncoming headlights",
+  "എതിരെ വരുന്ന ഹെഡ്‌ലൈറ്റ്"
+ ],
+ "hlDrive": [
+  "Drive at night",
+  "രാത്രി ഓടിക്കുക"
+ ],
+ "hlSee": [
+  "You see them at {m} m",
+  "{m} m-ൽ കാണുന്നു"
+ ],
+ "hlDipped": [
+  "high beam dipped for the oncoming car",
+  "എതിരെ വരുന്ന വാഹനത്തിനായി ഹൈ ബീം താഴ്ത്തി"
+ ],
+ "hlResult": [
+  "Can you stop?",
+  "നിർത്താനാകുമോ?"
+ ],
+ "hlOk": [
+  "Yes — you stop {m} m before them",
+  "ഉവ്വ് — {m} m മുമ്പ് നിർത്തുന്നു"
+ ],
+ "hlOver": [
+  "No — you need {m} m more than you can see",
+  "ഇല്ല — കാണാവുന്നതിലും {m} m കൂടുതൽ വേണം"
+ ],
+ "hlMax": [
+  "Fastest speed that still stops in time",
+  "സമയത്ത് നിർത്താനാകുന്ന പരമാവധി വേഗം"
+ ],
+ "hlMaxV": [
+  "About {v} km/h in these conditions",
+  "ഈ സാഹചര്യത്തിൽ ഏകദേശം {v} km/h"
+ ],
+ "hlTip": [
+  "At night, drive so you can stop within the lit road you can see.",
+  "രാത്രിയിൽ, കാണാവുന്ന വെളിച്ചമുള്ള റോഡിനുള്ളിൽ നിർത്താനാകുന്ന വേഗത്തിൽ ഓടിക്കുക."
+ ],
+ "hlModel": [
+  "Seeing distances are illustrative round figures (low beam ≈ 50 m, high beam ≈ 110 m), reduced for dark clothing and for glare from oncoming lights. Real distances depend on your lamps, their aim, the road and your eyes. Stopping uses the same model as the stopping-distance lab.",
+  "കാഴ്ചദൂരങ്ങൾ ഉദാഹരണത്തിനുള്ള ഏകദേശ കണക്കുകളാണ് (ലോ ബീം ≈ 50 m, ഹൈ ബീം ≈ 110 m); ഇരുണ്ട വസ്ത്രത്തിനും എതിരെ വരുന്ന വെളിച്ചത്തിന്റെ തിളക്കത്തിനും കുറച്ചിരിക്കുന്നു. യഥാർത്ഥ ദൂരം ലൈറ്റുകൾ, അവയുടെ ദിശ, റോഡ്, കണ്ണുകൾ എന്നിവയെ ആശ്രയിക്കുന്നു. നിർത്താനുള്ള ദൂരം 'നിർത്താനുള്ള ദൂരം' ലാബിലെ അതേ മാതൃകയിൽ."
+ ],
+ "bsLane": [
+  "Motorbike lane",
+  "ബൈക്കിന്റെ ലെയ്ൻ"
+ ],
+ "bsRightLane": [
+  "Right (overtaking side)",
+  "വലത് (ഓവർടേക്ക് വശം)"
+ ],
+ "bsLeftLane": [
+  "Left (kerb side)",
+  "ഇടത് (അരിക് വശം)"
+ ],
+ "bsDist": [
+  "Bike position (− behind, + ahead)",
+  "ബൈക്കിന്റെ സ്ഥാനം (− പിന്നിൽ, + മുന്നിൽ)"
+ ],
+ "bsRAdj": [
+  "Right mirror turned outward",
+  "വലത് കണ്ണാടി പുറത്തേക്ക് തിരിച്ചത്"
+ ],
+ "bsLAdj": [
+  "Left mirror turned outward",
+  "ഇടത് കണ്ണാടി പുറത്തേക്ക് തിരിച്ചത്"
+ ],
+ "bsLook": [
+  "Head check",
+  "തല തിരിച്ചു നോക്കൽ"
+ ],
+ "bsNoLook": [
+  "Eyes ahead",
+  "കണ്ണ് മുന്നോട്ട്"
+ ],
+ "bsLookR": [
+  "Over right shoulder",
+  "വലത് തോളിന് മുകളിലൂടെ"
+ ],
+ "bsLookL": [
+  "Over left shoulder",
+  "ഇടത് തോളിന് മുകളിലൂടെ"
+ ],
+ "bsVisible": [
+  "You can see the bike",
+  "ബൈക്ക് കാണാം"
+ ],
+ "bsHidden": [
+  "Blind spot — the bike is invisible",
+  "ബ്ലൈൻഡ് സ്പോട്ട് — ബൈക്ക് കാണാനാകില്ല"
+ ],
+ "bsHiddenTip": [
+  "Neither mirror nor your side vision shows it. A quick look over the shoulder before changing lanes would.",
+  "കണ്ണാടിയിലോ വശക്കാഴ്ചയിലോ ഇല്ല. ലെയ്ൻ മാറുന്നതിന് മുമ്പ് തോളിന് മുകളിലൂടെ ഒന്ന് നോക്കിയാൽ കാണാം."
+ ],
+ "bsSeenR": [
+  "Right mirror",
+  "വലത് കണ്ണാടി"
+ ],
+ "bsSeenL": [
+  "Left mirror",
+  "ഇടത് കണ്ണാടി"
+ ],
+ "bsSeenI": [
+  "Inside mirror",
+  "ഉള്ളിലെ കണ്ണാടി"
+ ],
+ "bsSeenEye": [
+  "Your direct and side vision",
+  "നേർക്കാഴ്ചയും വശക്കാഴ്ചയും"
+ ],
+ "bsSeenLook": [
+  "Your shoulder check",
+  "തോളിനു മുകളിലൂടെയുള്ള നോട്ടം"
+ ],
+ "bsLegend": [
+  "On the plan",
+  "ചിത്രത്തിൽ"
+ ],
+ "bsBlindZone": [
+  "Not visible without turning your head",
+  "തല തിരിക്കാതെ കാണാത്ത ഭാഗം"
+ ],
+ "bsTip": [
+  "Turn the side mirrors out until your own car only just leaves the edge — the red zones shrink. Some always remain.",
+  "സ്വന്തം കാർ അരികിൽ നിന്ന് മാറുന്നതുവരെ വശ കണ്ണാടികൾ പുറത്തേക്ക് തിരിക്കുക — ചുവന്ന ഭാഗങ്ങൾ ചുരുങ്ങും. ചിലത് എപ്പോഴും ബാക്കിയാകും."
+ ],
+ "bsModel": [
+  "Top-down sketch of a right-hand-drive car. Mirror angles of view are typical values (flat driver-side, wider convex passenger-side), side vision is taken as about 95° either side of straight ahead, and pillars and headrests are ignored. Your own car and mirrors will differ — sit in your seat and check where your blind spots are.",
+  "വലതുവശത്ത് സ്റ്റീയറിങ്ങുള്ള കാറിന്റെ മുകളിൽ നിന്നുള്ള രേഖാചിത്രം. കണ്ണാടികളുടെ കാഴ്ചക്കോണുകൾ സാധാരണ മൂല്യങ്ങൾ (ഡ്രൈവർ വശം പരന്നത്, മറുവശം വിശാലമായ കോൺവെക്സ്); വശക്കാഴ്ച നേരെ മുന്നിൽ നിന്ന് ഇരുവശത്തേക്കും ഏകദേശം 95°; തൂണുകളും ഹെഡ്റെസ്റ്റുകളും ഒഴിവാക്കി. നിങ്ങളുടെ കാറും കണ്ണാടികളും വ്യത്യസ്തമാകും — സീറ്റിലിരുന്ന് ബ്ലൈൻഡ് സ്പോട്ടുകൾ എവിടെയെന്ന് പരിശോധിക്കുക."
  ]
 }

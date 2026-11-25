@@ -27,6 +27,11 @@ LABS: dict[str, str] = {
     "stopping": "Stopping-distance lab",
     "reaction": "Reaction-time test",
     "engine": "Four-stroke engine",
+    "following": "Following-distance lab",
+    "cornering": "Cornering-grip lab",
+    "energy": "Crash-energy lab",
+    "headlights": "Headlight-reach lab",
+    "blindspot": "Mirrors and blind spots",
 }
 LIBRARIES: dict[str, str] = {
     "lights": "Warning-light encyclopedia",
@@ -36,6 +41,11 @@ _ML_FIXED: dict[str, str] = {
     "lab:stopping": "നിർത്താനുള്ള ദൂരം — ലാബ്",
     "lab:reaction": "പ്രതികരണ സമയ പരിശോധന",
     "lab:engine": "ഫോർ-സ്ട്രോക്ക് എൻജിൻ",
+    "lab:following": "പിന്തുടരൽ അകലം — ലാബ്",
+    "lab:cornering": "വളവിലെ ഗ്രിപ്പ് — ലാബ്",
+    "lab:energy": "ഇടിയുടെ ഊർജം — ലാബ്",
+    "lab:headlights": "ഹെഡ്‌ലൈറ്റിന്റെ ദൂരം — ലാബ്",
+    "lab:blindspot": "കണ്ണാടികളും ബ്ലൈൻഡ് സ്പോട്ടുകളും",
     "library:lights": "മുന്നറിയിപ്പ് ലൈറ്റ് വിജ്ഞാനകോശം",
     "library:vehicle": "ഇന്ററാക്ടീവ് വാഹന പര്യവേക്ഷണം",
     "exam:mock": "മുഴുവൻ മോക്ക് പരീക്ഷ",

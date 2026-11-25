@@ -10,17 +10,17 @@
     {
       "id": "m07c1",
       "title": "Seeing and predicting",
-      "items": ["lesson:hazard-perception-basics", "scenario:ped-crossing", "scenario:bike-blindspot", "scenario:side-road", "article:defensive"]
+      "items": ["lesson:hazard-perception-basics", "lab:blindspot", "scenario:ped-crossing", "scenario:bike-blindspot", "scenario:side-road", "article:defensive"]
     },
     {
       "id": "m07c2",
       "title": "Space and time",
-      "items": ["lesson:following-distance", "lab:stopping", "scenario:sudden-brake", "scenario:lane-cut"]
+      "items": ["lesson:following-distance", "lab:stopping", "lab:following", "scenario:sudden-brake", "scenario:lane-cut"]
     },
     {
       "id": "m07c3",
       "title": "Conditions",
-      "items": ["lesson:adverse-conditions", "scenario:animal", "article:night", "article:ghat"]
+      "items": ["lesson:adverse-conditions", "lab:headlights", "scenario:animal", "article:night", "article:ghat"]
     }
   ],
   "lessons": [
@@ -106,6 +106,7 @@
       "title": "Night, rain, fog, hydroplaning and ghat roads",
       "level": "intermediate",
       "minutes": 12,
+      "lab": "headlights",
       "objectives": [
         "Adjust lights, speed and gap for night and poor visibility.",
         "Recognise and handle hydroplaning.",

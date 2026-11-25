@@ -10,7 +10,7 @@
     {
       "id": "m09c1",
       "title": "When the vehicle fails",
-      "items": ["lesson:emergency-failures", "lesson:skids-water"]
+      "items": ["lesson:emergency-failures", "lesson:skids-water", "lab:cornering"]
     },
     {
       "id": "m09c2",

@@ -25,7 +25,8 @@ from playwright.sync_api import Page, sync_playwright
 ROUTES: list[str] = [
     "home", "course", "course/m02", "lesson/engine-basics", "lesson/safety-laws",
     "learn", "vehicle/explore", "vehicle/lights/oil", "science", "science/stopping",
-    "science/reaction", "science/engine", "hazard", "hazard/ped-crossing",
+    "science/reaction", "science/engine", "science/following", "science/cornering",
+    "science/energy", "science/headlights", "science/blindspot", "hazard", "hazard/ped-crossing",
     "theory", "theory/speed", "exam", "ask", "progress",
 ]
 VIEWPORTS: dict[str, dict[str, int]] = {

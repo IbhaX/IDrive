@@ -295,6 +295,7 @@ document.addEventListener("click", (e) => {
     case "engstep": Labs.engStep(); break;
     case "hzstart": Hazard.start(); break;
     case "hzreplay": Hazard.replay(); break;
+    default: if (ds.act && ds.act.startsWith("lab.")) Labs.act(ds.act.slice(4), t);
   }
 });
 

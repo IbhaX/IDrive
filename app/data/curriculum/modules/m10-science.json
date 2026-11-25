@@ -10,12 +10,12 @@
     {
       "id": "m10c1",
       "title": "Stopping",
-      "items": ["lesson:stopping-distance-physics", "lab:stopping", "lab:reaction"]
+      "items": ["lesson:stopping-distance-physics", "lab:stopping", "lab:reaction", "lab:energy"]
     },
     {
       "id": "m10c2",
       "title": "Grip and balance",
-      "items": ["lesson:grip-weight-transfer"]
+      "items": ["lesson:grip-weight-transfer", "lab:cornering"]
     },
     {
       "id": "m10c3",
@@ -82,6 +82,7 @@
       "title": "Friction, inertia, weight transfer and the limits of grip",
       "level": "advanced",
       "minutes": 11,
+      "lab": "cornering",
       "objectives": [
         "Explain inertia and centripetal force in a bend.",
         "Describe weight transfer under braking, acceleration and cornering.",

@@ -20,7 +20,7 @@
     {
       "id": "m06c3",
       "title": "Traffic manoeuvres",
-      "items": ["lesson:lane-change-overtake", "lesson:junctions-roundabouts", "article:junc", "practice:junc"]
+      "items": ["lesson:lane-change-overtake", "lab:blindspot", "lesson:junctions-roundabouts", "article:junc", "practice:junc"]
     }
   ],
   "lessons": [
@@ -159,6 +159,7 @@
       "title": "Lane changing, merging and overtaking",
       "level": "intermediate",
       "minutes": 11,
+      "lab": "blindspot",
       "objectives": [
         "Change lane using mirrors, signal and a blind-spot check.",
         "Judge whether an overtake is safe on a two-lane road.",

@@ -40,7 +40,7 @@ Python 3.12+, Node 18+ (extraction only). Windows-friendly: no shell-isms outsid
 - Sessions (hashed tokens, expiry sweep at startup): `app/services/auth.py`
 - Frontend event contract (`data-open`, `data-cat`, `data-etopic`, `data-ans`, `data-act`): `app/static/js/app.js` — mirrors the source app's delegation switch.
 - Curriculum store, validation, search: `app/services/curriculum.py`; instructor retrieval + provider call: `app/services/instructor.py`
-- New frontend modules: `course.js` (home, curriculum, lesson reader, knowledge checks, revision), `labs.js`, `vehicle.js`, `hazard.js`, `instructor.js`, `search.js`
+- New frontend modules: `course.js` (home, curriculum, lesson reader, knowledge checks, revision), `labs.js` (stopping, reaction, engine + lab router), `labs2.js` (following distance + gap drill, cornering friction circle, crash energy, headlight reach, mirrors & blind spots; controls use `data-act="lab.<name>"`), `vehicle.js`, `hazard.js`, `instructor.js`, `search.js`
 - Bilingual helpers (`T`, `TP`, `BP`, `BPP`, `cn`, `topN`, `topDot`): `app/static/js/i18n.js`
 
 ## Testing notes

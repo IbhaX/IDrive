@@ -8,20 +8,21 @@ const u = (k, o) => I18n.u(k, o);
 const e = (s) => I18n.X(s);   // strings are escaped; [en, ml] pairs render bilingually
 const G = () => Motion.gsap;
 
-Lb.LABS = ["stopping", "reaction", "engine"];
+Lb.LABS = ["stopping", "reaction", "following", "cornering", "energy", "headlights", "blindspot", "engine"];
+const LAB_ICON = { stopping: "atom", reaction: "brain", engine: "engine", following: "gauge", cornering: "wheel", energy: "alert", headlights: "eye", blindspot: "eye" };
 Lb.view = (app) => {
   const id = Lb.LABS.includes(S.param) ? S.param : null;
   const nav = `<div class="seg" role="tablist" aria-label="${e(u("tScience"))}">${Lb.LABS.map(l => `<a role="tab" href="#science/${l}" aria-selected="${id === l}" class="${id === l ? "on" : ""}">${e(u("lab_" + l))}</a>`).join("")}</div>`;
   if (!id) {
     app.innerHTML = `${Course.crumbs([[u("home"), "#home"], [u("tScience"), "#science"]])}
     <section class="panel rvl"><h2>${e(u("scienceTitle"))}</h2><p class="lede">${e(u("scienceLede"))}</p></section>
-    <div class="feat">${Lb.LABS.map(l => `<a class="fcard tiltc rvl" href="#science/${l}"><span class="fi">${Course.icon(l === "engine" ? "engine" : l === "reaction" ? "brain" : "atom")}</span><b>${e(u("lab_" + l))}</b><small>${e(u("labSub_" + l))}</small></a>`).join("")}</div>`;
+    <div class="feat">${Lb.LABS.map(l => `<a class="fcard tiltc rvl" href="#science/${l}"><span class="fi">${Course.icon(LAB_ICON[l] || "atom")}</span><b>${e(u("lab_" + l))}</b><small>${e(u("labSub_" + l))}</small></a>`).join("")}</div>`;
     Motion.reveal(app);
     return;
   }
   app.innerHTML = `${Course.crumbs([[u("home"), "#home"], [u("tScience"), "#science"], [u("lab_" + id), "#science/" + id]])}${nav}<div id="labHost"></div>`;
   const host = document.getElementById("labHost");
-  ({ stopping: Lb.stopping, reaction: Lb.reaction, engine: Lb.engine })[id](host);
+  Lb[id](host);
 };
 
 /* ---------- stopping distance ---------- */

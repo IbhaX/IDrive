@@ -943,3 +943,57 @@ a,button,[role="button"],summary,label{-webkit-tap-highlight-color:transparent;t
   .btn.small{min-height:44px}
   .lg{min-width:44px}
 }
+
+/* ============ labs 2: following, cornering, energy, headlights, blind spots ============ */
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pill{border:1px solid var(--line2);background:var(--panel2);color:var(--muted);border-radius:999px;padding:8px 13px;font-size:13.5px;font-weight:600;min-height:38px;cursor:pointer}
+.pill.on{color:var(--ink);border-color:var(--acc2);background:color-mix(in srgb,var(--acc2) 14%,var(--panel2))}
+@media (pointer:coarse){.pill{min-height:44px}}
+.labviz .readout.one,.readout.one{grid-template-columns:1fr}
+.road{fill:color-mix(in srgb,var(--ink) 9%,transparent)}.road.own{fill:color-mix(in srgb,var(--ink) 13%,transparent)}
+.cl{stroke:color-mix(in srgb,var(--ink) 40%,transparent);stroke-width:2;stroke-dasharray:14 12}
+.edgel{stroke:color-mix(in srgb,var(--ink) 45%,transparent);stroke-width:2}
+.gapbar{fill:color-mix(in srgb,var(--acc2) 55%,transparent)}
+.you rect:first-child{fill:var(--acc)}.lead rect:first-child{fill:#64748b}
+.you .win,.lead .win,.bscar+.win,.win{fill:color-mix(in srgb,#0b0c14 70%,transparent)}
+.tail{fill:#7f1d1d}.braking .tail{fill:#ff3b5c;filter:drop-shadow(0 0 4px #ff3b5c)}
+.clab{fill:var(--muted);font:600 11px var(--body)}
+.bang{fill:#fb7185}
+.drill{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.drill h3{margin:0;font-size:17px}.drill svg{width:100%;height:auto;display:block;border-radius:12px}
+.drout{font-size:14.5px;line-height:1.5}.drout .good{color:var(--good)}.drout .bad{color:var(--bad)}
+.post{stroke:var(--muted);stroke-width:3}.postl{fill:var(--amber)}
+.cowrap{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:14px;align-items:center}
+@media (max-width:560px){.cowrap{grid-template-columns:1fr}.cowrap #coFc{max-width:220px;margin:0 auto}}
+.cowrap svg{width:100%;height:auto;display:block}
+.bendroad{fill:none;stroke:color-mix(in srgb,var(--ink) 11%,transparent);stroke-width:54;stroke-linejoin:round}
+.bendline{fill:none;stroke:color-mix(in srgb,var(--ink) 40%,transparent);stroke-width:2;stroke-dasharray:12 10}
+.trail{fill:none;stroke:var(--acc2);stroke-width:2.5;stroke-dasharray:3 5;opacity:.8}
+.fcrim{fill:color-mix(in srgb,#fb7185 10%,transparent);stroke:#fb7185;stroke-width:2}
+.fcsafe{fill:color-mix(in srgb,var(--good) 12%,transparent);stroke:color-mix(in srgb,var(--good) 60%,transparent);stroke-dasharray:4 4}
+.fcvec{stroke-width:3}.fcvec.ok{stroke:var(--good)}.fcvec.warn{stroke:var(--amber)}.fcvec.bad{stroke:#fb7185}
+.fcdot.ok{fill:var(--good)}.fcdot.warn{fill:var(--amber)}.fcdot.bad{fill:#fb7185}
+.fcpct{font:700 13px var(--body)}.fcpct.ok{fill:var(--good)}.fcpct.warn{fill:var(--amber)}.fcpct.bad{fill:#fb7185}
+.tiny{fill:var(--muted);font:500 10.5px var(--body)}
+.ro .warnt{color:var(--amber);font-weight:600}
+.enwrap,.bswrap{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:620px){.enwrap,.bswrap{grid-template-columns:1fr}.enwrap svg,.bswrap svg{max-width:320px;margin:0 auto}}
+.enwrap svg,.bswrap svg{width:100%;height:auto;display:block}
+.groundr{fill:color-mix(in srgb,var(--ink) 14%,transparent)}
+.bldg{fill:color-mix(in srgb,var(--ink) 7%,transparent);stroke:var(--line2)}
+.floorl{stroke:var(--line2)}.winb{fill:color-mix(in srgb,var(--acc2) 18%,transparent)}
+.hline{stroke:#fb7185;stroke-width:2;stroke-dasharray:6 5}.hlab{fill:#fb7185;font:700 14px var(--body)}
+.wheel{fill:#111827}.boom{fill:#fbbf24;stroke:#f97316;stroke-width:2}
+.nightbg{fill:#05060c}.nroad{fill:#151826}.ncl{stroke:#3b4160;stroke-width:2;stroke-dasharray:14 12}
+.naxis{fill:#8a8fb0;font:500 11px var(--body)}
+.seeline{stroke:#fff6c8;stroke-width:1.5;stroke-dasharray:4 4;opacity:.7}
+.ped circle,.ped rect{fill:#2b2f45}.ped.light circle,.ped.light rect{fill:#a8adc4}.ped.reflective circle,.ped.reflective rect{fill:#6b7280}.ped .refl{fill:#d9f99d}
+.blindc{fill:#fb7185;opacity:.32}
+.wedge{stroke-width:1}.wedge.rm{fill:rgba(56,189,248,.22);stroke:rgba(56,189,248,.6)}.wedge.lm{fill:rgba(52,211,153,.2);stroke:rgba(52,211,153,.6)}
+.wedge.im{fill:rgba(167,139,250,.22);stroke:rgba(167,139,250,.6)}.wedge.look{fill:rgba(251,191,36,.18);stroke:rgba(251,191,36,.6)}
+.bscar{fill:var(--acc)}.eyed{fill:#fff}.mir{fill:#e5e7eb}
+.bike rect{fill:#f59e0b}.bike .rider{fill:#1f2937}.bike.hid rect{fill:#fb7185}
+.sw.rmk{background:rgba(56,189,248,.7)}.sw.lmk{background:rgba(52,211,153,.7)}.sw.imk{background:rgba(167,139,250,.7)}.sw.blk{background:rgba(251,113,133,.6)}
+.seg{scrollbar-width:none}.seg::-webkit-scrollbar{display:none}
+/* phones: show the experiment first, controls underneath, so every slider change is visible */
+@media (max-width:900px){.lab .labgrid>.labviz{order:-1}}
