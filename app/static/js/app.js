@@ -214,7 +214,8 @@ window.addEventListener("pagehide", saveLocal);
     app.innerHTML = `<section class="panel"><h2>IDrive</h2><p class="muted">Failed to load content — is the server running?</p></section>`;
     return;
   }
-  Data.ensureSvgs("all").catch(() => {});
+  // SVGs stream in lazily — re-render Learn if the view drew before they arrived
+  Data.ensureSvgs("all").then(() => { if (S.view === "learn") render(); }).catch(() => {});
   await Auth.restore();
   render();
 })();
