@@ -346,7 +346,7 @@ window.hideSplash = () => {
   const el = document.getElementById("splash");
   if (!el || el.classList.contains("out")) return;
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const wait = Math.max(0, (reduced ? 500 : 1750) - (Date.now() - (window.__splashT0 || 0)));
+  const wait = Math.max(0, (reduced ? 1500 : 3050) - (Date.now() - (window.__splashT0 || 0)));
   setTimeout(() => {
     el.classList.add("out");
     document.documentElement.classList.remove("splashing");
