@@ -22,6 +22,7 @@ const Api = {
       err.code = "network";
       throw err;
     }
+    Api.checkBuild(res.headers.get("x-app-build"));
     if (res.status === 401) {
       const err = new Error("authentication required");
       err.code = "auth_required";
@@ -39,6 +40,23 @@ const Api = {
       throw err;
     }
     return data;
+  },
+
+  /* the page was built for one server build; if the server now reports a
+     different one (a deploy happened while this tab stayed open), reload so
+     old code never renders new data. Guarded against reload loops. */
+  checkBuild(serverBuild) {
+    if (!serverBuild) return;
+    const meta = document.querySelector('meta[name="app-build"]');
+    const mine = meta && meta.content;
+    if (!mine || mine === serverBuild) return;
+    try {
+      const last = +sessionStorage.getItem("idrive-reloaded") || 0;
+      if (Date.now() - last < 30000) return;
+      sessionStorage.setItem("idrive-reloaded", String(Date.now()));
+    } catch (e) {}
+    if (window.saveLocal) window.saveLocal();
+    location.reload();
   },
 
   get(path) { return Api.req(path); },

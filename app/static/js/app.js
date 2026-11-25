@@ -149,11 +149,39 @@ function render() {
     Motion.jelly(document.getElementById("tabsTop"));
     Motion.jelly(document.getElementById("dockin"));
     Motion.langPill(document.getElementById("langs"));
+    fitNav();
     Motion.bindTilt();
     Motion.bindMagnetic();
   });
 }
 window.render = render;
+
+/* The top bar and dock are fixed, so their real heights (which change with
+   language, wrapping and viewport) are published as CSS variables that
+   drive main's top padding and the scroll padding used by scrollIntoView.
+   fitNav() steps the desktop tabs down (labels → icons → tighter) until the
+   whole row fits, so no tab is ever hidden behind the language switch. */
+function fitNav() {
+  const nav = document.querySelector(".topnav"), tabs = document.getElementById("tabsTop");
+  if (!nav || !tabs) return;
+  nav.classList.remove("nav-icons", "nav-tight");
+  const over = () => tabs.offsetParent !== null && tabs.scrollWidth > tabs.clientWidth + 1;
+  if (over()) nav.classList.add("nav-icons");
+  if (over()) nav.classList.add("nav-tight");
+  measureChrome();
+  requestAnimationFrame(() => { Motion.jelly(tabs); Motion.langPill(document.getElementById("langs")); });
+}
+function measureChrome() {
+  const nav = document.querySelector(".topnav"), dock = document.getElementById("dock");
+  const root = document.documentElement.style;
+  if (nav) root.setProperty("--navh", Math.ceil(nav.getBoundingClientRect().height) + "px");
+  const dh = dock && getComputedStyle(dock).display !== "none" ? Math.ceil(dock.getBoundingClientRect().height) : 0;
+  root.setProperty("--dockh", dh + "px");
+}
+window.fitNav = fitNav;
+let fitT = 0;
+window.addEventListener("resize", () => { clearTimeout(fitT); fitT = setTimeout(fitNav, 120); });
+if (window.ResizeObserver) new ResizeObserver(measureChrome).observe(document.querySelector(".topnav"));
 
 async function route() {
   const r = applyRoute();

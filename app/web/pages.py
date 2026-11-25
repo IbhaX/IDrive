@@ -42,6 +42,24 @@ def asset_url(url: str, static_dir: Path) -> str:
     return urlunsplit(("", "", parts.path, urlencode(query), parts.fragment))
 
 
+@lru_cache(maxsize=4)
+def app_build(static_dir: Path) -> str:
+    """Fingerprint of everything the client depends on: static assets plus the
+    content datasets. Computed once per process (deploys restart the server).
+    Pages embed it; API responses echo it so long-lived tabs can tell when the
+    server has moved on and reload instead of mixing old code with new data."""
+    h = hashlib.sha256()
+    roots = [static_dir, static_dir.parent / "data"]
+    for root in roots:
+        if not root.is_dir():
+            continue
+        for f in sorted(root.rglob("*")):
+            if f.is_file() and f.suffix in {".js", ".css", ".html", ".json"} and "vendor" not in f.parts:
+                h.update(str(f.relative_to(root)).encode())
+                h.update(f.read_bytes())
+    return h.hexdigest()[:16]
+
+
 def render_page(name: str, static_dir: Path) -> HTMLResponse:
     path = (static_dir / name).resolve()
     if not path.is_relative_to(static_dir.resolve()) or path.suffix != ".html":
@@ -52,6 +70,9 @@ def render_page(name: str, static_dir: Path) -> HTMLResponse:
             f"{m['prefix']}{m['quote']}{asset_url(m['url'], static_dir)}{m['quote']}"
         ),
         markup,
+    )
+    markup = markup.replace(
+        "</head>", f'<meta name="app-build" content="{app_build(static_dir)}">\n</head>', 1
     )
     return HTMLResponse(markup, headers={"Cache-Control": "no-cache"})
 

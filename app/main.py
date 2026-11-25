@@ -24,7 +24,7 @@ from app.db import close_db, get_session_factory, init_db
 from app.logging_config import setup_logging
 from app.services import content, curriculum
 from app.services.auth import cleanup_expired
-from app.web.pages import VersionedStaticFiles, render_page
+from app.web.pages import VersionedStaticFiles, app_build, render_page
 
 
 @asynccontextmanager
@@ -79,6 +79,8 @@ async def html_headers(
     if "text/html" in ctype:
         resp.headers["Cache-Control"] = "no-cache"
     resp.headers.setdefault("X-Content-Type-Options", "nosniff")
+    if request.url.path.startswith("/api/"):
+        resp.headers["X-App-Build"] = app_build(BASE_DIR / "app" / "static")
     resp.headers.setdefault("Referrer-Policy", "strict-origin-when-cross-origin")
     if "text/html" in ctype:
         resp.headers["Content-Security-Policy"] = (

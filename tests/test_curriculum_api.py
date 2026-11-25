@@ -125,3 +125,11 @@ def test_instructor_sends_openrouter_headers() -> None:
     assert seen["x-title"] == "iDrive"
     assert seen["http-referer"] == "https://idrive.example"
     assert seen["model"] == "some/model"
+
+
+def test_app_build_is_embedded_and_echoed(client) -> None:
+    html = client.get("/").text
+    assert '<meta name="app-build" content="' in html
+    build = html.split('<meta name="app-build" content="', 1)[1].split('"', 1)[0]
+    r = client.get("/api/curriculum")
+    assert r.headers["X-App-Build"] == build
