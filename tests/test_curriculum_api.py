@@ -171,12 +171,13 @@ def test_model_route_serves_mirror_or_fetches_on_demand(client, tmp_path, monkey
         return None
 
     monkeypatch.setattr(mm, "fetch_one", no_network)
-    r = client.get("/models/carconcept/CarConcept.gltf", follow_redirects=False)
+    r = client.get(f"/models/{mm.MODEL_KEY}/CarConcept.gltf", follow_redirects=False)
     assert r.status_code == 503                      # never redirects students to GitHub
-    assert client.get("/models/carconcept/evil.js").status_code == 404
+    assert client.get(f"/models/{mm.MODEL_KEY}/evil.js").status_code == 404
+    assert client.get("/models/carconcept/CarConcept.gltf").status_code == 404   # old, unversioned path
     st = client.get("/api/models/carconcept/status").json()
     assert st["complete"] is False and "CarConcept.gltf" in st["missing"]
     (tmp_path / "Rib_N.webp").write_bytes(b"\0" * mm.FILES["Rib_N.webp"])
-    r = client.get("/models/carconcept/Rib_N.webp")
+    r = client.get(f"/models/{mm.MODEL_KEY}/Rib_N.webp")
     assert r.status_code == 200 and r.headers["content-type"] == "image/webp"
     assert "immutable" in r.headers["cache-control"]

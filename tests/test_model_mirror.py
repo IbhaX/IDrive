@@ -47,3 +47,8 @@ def test_ensure_downloads_and_rejects_wrong_sizes(tmp_models: Path) -> None:
 def test_media_types() -> None:
     assert mm.media_type("CarConcept.gltf") == "model/gltf+json"
     assert mm.media_type("Occlusion.webp") == "image/webp"
+
+
+def test_client_requests_the_current_model_key() -> None:
+    src = (Path(__file__).resolve().parent.parent / "app/static/js/car3d.js").read_text(encoding="utf-8")
+    assert f'"/models/{mm.MODEL_KEY}/CarConcept.gltf"' in src

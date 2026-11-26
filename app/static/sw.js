@@ -11,7 +11,7 @@ const BUILD = "__BUILD__";
 const SHELL = "idrive-shell-" + BUILD;
 const STATIC = "idrive-static-" + BUILD;
 const DATA = "idrive-data-v1";
-const MODELS = "idrive-3d-v2";   // three.js + the 3D car, pinned versions: keep across deploys
+const MODELS = "idrive-3d-v3";   // three.js + the 3D car, pinned versions: keep across deploys
 const KEEP = [SHELL, STATIC, DATA, MODELS];
 const CROSS_CACHE = [/^https:\/\/cdn\.jsdelivr\.net\/npm\/three@/, /^https:\/\/raw\.githubusercontent\.com\/KhronosGroup\/glTF-Sample-Assets\//];
 

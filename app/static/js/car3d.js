@@ -14,7 +14,7 @@
    typical front-engine layout and revealed with X-ray mode. */
 (() => {
 "use strict";
-const MODEL_URLS = ["/models/carconcept/CarConcept.gltf"];   // served by our own server (see model_mirror.py)
+const MODEL_URLS = ["/models/carconcept-webp-e124e8d8/CarConcept.gltf"];   // path = variant + pinned commit (model_mirror.MODEL_KEY), served by our own server; new version ⇒ new path
 const GROUP_COL = { powertrain: 0xf5b83d, transmission: 0xa78bfa, chassis: 0x38bdf8, electrical: 0x34d399, safety: 0xfb7185 };
 const MODEL_PARTS = { tyres: /^(tiretread|tireside|rim1|rim2)$/i, brakes: /^(brake|disc)$/i };
 const HIDE_MATS = /^license$/i;

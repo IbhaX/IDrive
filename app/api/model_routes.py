@@ -20,9 +20,9 @@ async def car_model_status() -> JSONResponse:
     return JSONResponse(model_mirror.status(), headers={"Cache-Control": "no-store"})
 
 
-@router.get("/models/carconcept/{name}", include_in_schema=False)
-async def car_model_file(name: str) -> Response:
-    if name not in model_mirror.FILES:
+@router.get("/models/{key}/{name}", include_in_schema=False)
+async def car_model_file(key: str, name: str) -> Response:
+    if key != model_mirror.MODEL_KEY or name not in model_mirror.FILES:
         raise HTTPException(status_code=404, detail={"code": "not_found"})
     path = model_mirror.local_path(name) or await model_mirror.fetch_one(name)
     if path is None:
