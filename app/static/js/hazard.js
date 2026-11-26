@@ -67,7 +67,8 @@ const facing = (a, x0, y0, x1, y1) => {
   const dx = x1 - x0, dy = y1 - y0;
   return Math.hypot(dx, dy) < 2 ? (a.rot || 0) : Math.atan2(dx, -dy) * 180 / Math.PI;
 };
-const walk = (id, on) => { const g = document.getElementById("hzA-" + id); if (g) g.classList.toggle("walking", on); };
+const walk = (id, on) => { H.state.walk[id] = on; const g = document.getElementById("hzA-" + id); if (g) g.classList.toggle("walking", on); };
+const brake = (id) => { H.state.brake[id] = true; const g = document.getElementById("hzA-" + id); if (g) g.classList.add("braking"); };
 const shape = (a) => {
   const c = a.color || "#94a3b8";
   switch (a.kind) {
@@ -97,15 +98,59 @@ const mood = (m) => {
 };
 const ego = `<g id="hzEgo" transform="translate(150,500)"><rect x="-17" y="-30" width="34" height="60" rx="9" class="egob"/><rect x="-13" y="-22" width="26" height="12" rx="3" class="glass"/><path d="M-12 -34 L-30 -150 L30 -150 L12 -34 Z" class="beam"/></g>`;
 const actorG = (a, pos) => `<g class="actor" id="hzA-${a.id}" data-hz="${a.id}" tabindex="-1" role="button" aria-label="${I18n.attr(u("kind_" + a.kind))}" transform="translate(${pos[0]},${pos[1]}) rotate(${facing(a, a.x, a.y, a.tx, a.ty)})">${shape(a)}<circle r="34" class="hit"/></g>`;
-const place = (id, x, y, rot) => { const g = document.getElementById("hzA-" + id); if (g) g.setAttribute("transform", `translate(${x},${y}) rotate(${rot || 0})`); };
+const place = (id, x, y, rot) => { H.state.pos[id] = [x, y, rot || 0]; const g = document.getElementById("hzA-" + id); if (g) g.setAttribute("transform", `translate(${x},${y}) rotate(${rot || 0})`); };
 
-/* ---------- player ---------- */
+/* ---------- player ----------
+   The scene is drawn in 3D (hz3d.js, WebGL2) when the device supports it;
+   the SVG top view stays underneath as the fallback. Both read H.state. */
 H.st = null;
+H.state = { pos: {}, walk: {}, brake: {}, ego: { y: 0 }, hazard: null, pickHint: false, egoBrake: false };
+H.gl = null;
+const CAM_KEY = "idrive-hzcam";
+const camPref = () => { try { return localStorage.getItem(CAM_KEY) || "drive"; } catch (err) { return "drive"; } };
+H.cam = (k) => {
+  try { localStorage.setItem(CAM_KEY, k); } catch (err) {}
+  if (H.gl) H.gl.view(k);
+  document.querySelectorAll(".hzcam button").forEach((b) => { const on = b.dataset.k === k; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); });
+};
+const kmh = (s) => { const m = /(\d+)\s*km\/h/.exec(I18n.one(s.brief)) || /(\d+)\s*km\/h/.exec(String(s.brief)); return m ? +m[1] : 40; };
+H.mount3d = (s) => {
+  if (H.gl) { H.gl.destroy(); H.gl = null; }
+  const box = document.getElementById("hz3"), cv = document.getElementById("hzGl");
+  if (!box || !cv || !window.Hz3D || !Hz3D.supported()) { if (box) box.remove(); return; }
+  const base = kmh(s), out = document.getElementById("hzKmh"), mir = document.getElementById("hzMir");
+  H.gl = Hz3D.mount(cv, s, H.state, {
+    view: camPref(),
+    onSpeed: (v) => { if (out) { const n = String(Math.round(base * v)); if (out.textContent !== n) out.textContent = n; } },
+    onMirror: (r) => { if (!mir) return; mir.hidden = !r; if (r) { Object.assign(mir.style, { left: r.x * 100 + "%", top: r.y * 100 + "%", width: r.w * 100 + "%", height: r.h * 100 + "%" }); box.style.setProperty("--mirb", (r.y + r.h) * 100 + "%"); } },
+    onLost: () => { H.gl = null; const b = document.getElementById("hz3"); if (b) b.remove(); document.getElementById("hzSvg").classList.remove("hzoff"); },
+  });
+  if (!H.gl) { box.remove(); return; }
+  document.getElementById("hzSvg").classList.add("hzoff");
+  cv.addEventListener("click", (ev) => {
+    if (!H.st || H.st.phase !== "spot" || !H.gl) return;
+    const id = H.gl.pick(ev.clientX, ev.clientY);
+    if (id) H.spot(id);
+  });
+  cv.addEventListener("pointermove", (ev) => {
+    if (!H.gl) return;
+    cv.style.cursor = H.st && H.st.phase === "spot" && H.gl.pick(ev.clientX, ev.clientY) ? "pointer" : "";
+  });
+};
 H.play = (app, s) => {
   H.st = { s, phase: "intro", spotted: null, choice: null, tl: null };
+  H.state = { pos: {}, walk: {}, brake: {}, ego: { y: 0 }, hazard: null, pickHint: false, egoBrake: false };
+  const cam = camPref();
+  const camBtn = (k, label) => `<button data-act="hzcam" data-k="${k}" class="${cam === k ? "on" : ""}" aria-pressed="${cam === k}">${e(u(label))}</button>`;
   app.innerHTML = `${Course.crumbs([[u("tHazard"), "#hazard"], [s.title, "#hazard/" + s.id]])}
-  <div class="hzgrid"><section class="panel hzscene"><svg id="hzSvg" class="${s.mood ? "m-" + s.mood : ""}" viewBox="0 0 400 600" role="img" aria-label="${esc(I18n.one(s.title))}">${road(s.layout)}${s.actors.map(a => actorG(a, [a.x, a.y])).join("")}${mood(s.mood)}${ego}<rect id="hzFlash" width="400" height="600" class="flash" opacity="0"/></svg></section>
+  <div class="hzgrid"><section class="panel hzscene"><div class="hz3" id="hz3"><canvas id="hzGl" role="img" aria-label="${I18n.attr(s.title)}"></canvas>
+    <div class="hz3mir" id="hzMir" hidden aria-hidden="true"></div>
+    <div class="hz3cam seg hzcam" role="group" aria-label="${I18n.attr(u("hzCamLabel"))}">${camBtn("drive", "hzCamDrive")}${camBtn("top", "hzCamTop")}</div>
+    <div class="hz3spd" aria-hidden="true"><b id="hzKmh">0</b><small>km/h</small></div>
+    <div class="hz3tap" id="hzTap" hidden>${e(u("hzTapHazard"))}</div>
+    <div class="hz3flash" id="hz3Flash"></div></div><svg id="hzSvg" class="${s.mood ? "m-" + s.mood : ""}" viewBox="0 0 400 600" role="img" aria-label="${esc(I18n.one(s.title))}">${road(s.layout)}${s.actors.map(a => actorG(a, [a.x, a.y])).join("")}${mood(s.mood)}${ego}<rect id="hzFlash" width="400" height="600" class="flash" opacity="0"/></svg></section>
   <section class="panel hzpanel" id="hzPanel" aria-live="polite"></section></div>`;
+  H.mount3d(s);
   H.panel();
 };
 H.panel = () => {
@@ -135,12 +180,14 @@ H.start = () => {
   s.actors.forEach(a => place(a.id, a.x, a.y, facing(a, a.x, a.y, a.tx, a.ty)));
   const done = () => {
     s.actors.forEach(a => walk(a.id, false));
-    s.actors.forEach(a => { if (a.brake) { const g = document.getElementById("hzA-" + a.id); if (g) g.classList.add("braking"); } });
+    s.actors.forEach(a => { if (a.brake) brake(a.id); });
     st.phase = "spot";
     document.getElementById("hzSvg").classList.add("pick");
+    if (H.gl) { H.gl.speed(0, 0.35); H.state.pickHint = true; const t = document.getElementById("hzTap"); if (t) t.hidden = false; }
     H.panel();
   };
   if (!G || Motion.reduced()) { s.actors.forEach(a => place(a.id, a.tx, a.ty, facing(a, a.x, a.y, a.tx, a.ty))); done(); return; }
+  if (H.gl) H.gl.speed(1, 0.4);
   Motion.scoped(() => {
     const dash = document.getElementById("hzDash");
     st.dashTl = G.fromTo(dash, { y: 0 }, { y: 80, duration: .45, ease: "none", repeat: -1 });
@@ -149,7 +196,7 @@ H.start = () => {
       const o = { x: a.x, y: a.y }, r = facing(a, a.x, a.y, a.tx, a.ty);
       if (a.kind === "ped" && Math.hypot(a.tx - a.x, a.ty - a.y) > 2) walk(a.id, true);
       tl.to(o, { x: a.tx, y: a.ty, duration: s.duration, ease: "sine.inOut", onUpdate: () => place(a.id, o.x, o.y, r) }, 0);
-      if (a.brake) tl.add(() => { const g = document.getElementById("hzA-" + a.id); if (g) g.classList.add("braking"); }, s.duration * .55);
+      if (a.brake) tl.add(() => brake(a.id), s.duration * .55);
     });
     tl.to("#hzProg", { width: "100%", duration: s.duration, ease: "none" }, 0);
     st.tl = tl;
@@ -163,6 +210,8 @@ H.spot = (id) => {
   document.getElementById("hzSvg").classList.remove("pick");
   const g = document.getElementById("hzA-" + st.s.hazard);
   if (g) g.classList.add("hazard");
+  H.state.hazard = st.s.hazard; H.state.pickHint = false;
+  const tap = document.getElementById("hzTap"); if (tap) tap.hidden = true;
   st.phase = "choose"; H.panel();
 };
 H.choose = (i) => {
@@ -183,10 +232,17 @@ H.choose = (i) => {
     if (moves) walk(hz.id, true);
     G.to(o, { x: hz.then[0], y: hz.then[1], duration: 1.6, ease: "power1.inOut", onUpdate: () => place(hz.id, o.x, o.y, hr), onComplete: () => walk(hz.id, false) });
     if (st.dashTl) G.to(st.dashTl, { timeScale: ok ? 0 : 1.4, duration: ok ? 1.2 : .3, ease: "power2.out" });
-    if (ok) { Motion.confetti(); }
-    else {
+    if (ok) {
+      Motion.confetti();
+      if (H.gl) { H.state.egoBrake = true; H.gl.speed(0.3, 0.25); G.delayedCall(0.35, () => H.gl && H.gl.speed(0, 1.1)); }
+    } else {
       G.fromTo("#hzFlash", { opacity: 0 }, { opacity: .35, duration: .18, yoyo: true, repeat: 3 });
       G.to("#hzEgo", { y: -40, duration: 1, ease: "power1.in" });
+      if (H.gl) {
+        H.gl.speed(1.3, 0.3);
+        G.to(H.state.ego, { y: -40, duration: 1, ease: "power1.in", onComplete: () => { if (H.gl) { H.gl.shake(); H.gl.speed(0, 0.25); } } });
+        G.fromTo("#hz3Flash", { opacity: 0 }, { opacity: .55, duration: .18, yoyo: true, repeat: 3, delay: .6 });
+      }
     }
   });
 };

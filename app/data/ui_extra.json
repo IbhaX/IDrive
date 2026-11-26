@@ -4014,5 +4014,21 @@
  "hold": [
   "hold",
   "അമർത്തിപ്പിടിക്കുക"
+ ],
+ "hzCamDrive": [
+  "Driver view",
+  "ഡ്രൈവർ കാഴ്ച"
+ ],
+ "hzCamTop": [
+  "Overhead",
+  "മുകളിൽ നിന്ന്"
+ ],
+ "hzCamLabel": [
+  "Camera",
+  "ക്യാമറ"
+ ],
+ "hzTapHazard": [
+  "Paused — tap the hazard in the scene or the mirror",
+  "നിർത്തി — ദൃശ്യത്തിലോ കണ്ണാടിയിലോ അപകടത്തിൽ തൊടുക"
  ]
 }

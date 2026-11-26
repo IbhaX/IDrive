@@ -355,6 +355,7 @@ document.addEventListener("click", (e) => {
     case "engstep": Labs.engStep(); break;
     case "hzstart": Hazard.start(); break;
     case "hzreplay": Hazard.replay(); break;
+    case "hzcam": Hazard.cam(ds.k || "drive"); break;
     case "hzcat": Hazard.filter(ds.k || ""); break;
     case "spOpen": Learn.closeSheet(); go("#limits"); break;
     case "spRegion": case "spVeh": case "spRoad": case "spCell": SpeedLimits.act(ds.act, ds.k || ""); break;
