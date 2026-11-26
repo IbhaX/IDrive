@@ -10,6 +10,7 @@ from pathlib import Path
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import FileResponse, JSONResponse, Response
 from slowapi import Limiter
 from slowapi.errors import RateLimitExceeded
@@ -69,6 +70,8 @@ app = FastAPI(
 )
 
 _origins = [o.strip() for o in get_settings().cors_origins.split(",") if o.strip()]
+# compress responses (the 3D model geometry shrinks a lot)
+app.add_middleware(GZipMiddleware, minimum_size=1024)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_origins or ["*"],
@@ -96,12 +99,10 @@ async def html_headers(
             "img-src 'self' data: blob:; "
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://accounts.google.com; "
             "font-src 'self' https://fonts.gstatic.com; "
-            # three.js (original, unminified addons via the hashed import map) comes
-            # from jsDelivr; the Draco/Basis decoders run as WebAssembly in blob: workers.
-            "script-src 'self' 'wasm-unsafe-eval' "
+            # three.js (original addons via the hashed import map) comes from jsDelivr
+            "script-src 'self' "
             + " ".join(importmap_hashes(BASE_DIR / "app" / "static"))
             + " https://accounts.google.com https://cdn.jsdelivr.net; "
-            "worker-src 'self' blob:; "
             "frame-src https://accounts.google.com; "
             "connect-src 'self' https://accounts.google.com https://cdn.jsdelivr.net"
         )

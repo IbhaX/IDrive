@@ -157,7 +157,7 @@ def test_csp_allows_3d_assets_but_no_inline_scripts(client) -> None:
     csp = client.get("/").headers["Content-Security-Policy"]
     script = next(p for p in csp.split(";") if p.strip().startswith("script-src"))
     assert "'unsafe-inline'" not in script and "https://cdn.jsdelivr.net" in script
-    assert "'wasm-unsafe-eval'" in script and "worker-src 'self' blob:" in csp
+    assert "wasm" not in script and "blob:" not in csp   # no decoder workers needed
     assert "'sha256-" in script                         # the hashed import map, nothing else inline
     assert "<script>" not in client.get("/").text
 
@@ -176,7 +176,7 @@ def test_model_route_serves_mirror_or_fetches_on_demand(client, tmp_path, monkey
     assert client.get("/models/carconcept/evil.js").status_code == 404
     st = client.get("/api/models/carconcept/status").json()
     assert st["complete"] is False and "CarConcept.gltf" in st["missing"]
-    (tmp_path / "Rib_N.ktx2").write_bytes(b"\0" * mm.FILES["Rib_N.ktx2"])
-    r = client.get("/models/carconcept/Rib_N.ktx2")
-    assert r.status_code == 200 and r.headers["content-type"] == "image/ktx2"
+    (tmp_path / "Rib_N.webp").write_bytes(b"\0" * mm.FILES["Rib_N.webp"])
+    r = client.get("/models/carconcept/Rib_N.webp")
+    assert r.status_code == 200 and r.headers["content-type"] == "image/webp"
     assert "immutable" in r.headers["cache-control"]

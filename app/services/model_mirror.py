@@ -25,33 +25,35 @@ log = logging.getLogger("idrive.models")
 MODEL_SHA = "e124e8d8d7330a5372bc2b4d00d39a4a9d7997ea"
 UPSTREAM = (
     "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/"
-    f"{MODEL_SHA}/Models/CarConcept/glTF-KTX-BasisU-Draco/"
+    f"{MODEL_SHA}/Models/CarConcept/glTF-WEBP/"
 )
 # name -> exact size in bytes at the pinned commit (doubles as an integrity check)
 FILES: dict[str, int] = {
-    "CarConcept.gltf": 216508,
-    "CarConcept.data.bin": 1944620,
-    "Dash_E.ktx2": 15812,
-    "Dot_C.ktx2": 1374,
-    "Dot_N.ktx2": 7011,
-    "Hex_N.ktx2": 2858,
-    "Khronos_C.ktx2": 7081,
-    "Mechanical_N.ktx2": 226345,
-    "Mechanical_ORM.ktx2": 153752,
-    "Occlusion.ktx2": 545443,
-    "Powdercoat_N.ktx2": 21698,
-    "Rib_N.ktx2": 622,
-    "Thickness.ktx2": 51521,
-    "Tireside_C.ktx2": 7607,
-    "Tireside_N.ktx2": 316900,
-    "Tiretread_N.ktx2": 53888,
+    # the WebP variant: plain geometry + WebP images, so the browser needs no
+    # Draco/Basis decoders (WebAssembly workers) to show it
+    "CarConcept.gltf": 334313,
+    "CarConcept.data.bin": 8670516,
+    "Dash_E.webp": 9764,
+    "Dot_C.webp": 268,
+    "Dot_N.webp": 6438,
+    "Hex_N.webp": 3142,
+    "Khronos_C.webp": 3414,
+    "Mechanical_N.webp": 223440,
+    "Mechanical_ORM.webp": 9514,
+    "Occlusion.webp": 294098,
+    "Powdercoat_N.webp": 36868,
+    "Rib_N.webp": 92,
+    "Thickness.webp": 25758,
+    "Tireside_C.webp": 5538,
+    "Tireside_N.webp": 286764,
+    "Tiretread_N.webp": 37136,
 }
 MEDIA: dict[str, str] = {
     ".gltf": "model/gltf+json",
     ".bin": "application/octet-stream",
-    ".ktx2": "image/ktx2",
+    ".webp": "image/webp",
 }
-MODEL_DIR: Path = BASE_DIR / "data" / "models" / "carconcept"
+MODEL_DIR: Path = BASE_DIR / "data" / "models" / "carconcept-webp"
 
 _lock = asyncio.Lock()
 

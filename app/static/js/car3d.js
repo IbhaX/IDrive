@@ -3,16 +3,17 @@
    Model: "Car Concept" by Eric Chadwick (Darmstadt Graphics Group), from a
    CC0 model by Unity Fan — CC BY 4.0, Khronos glTF Sample Assets. Khronos
    logos are not covered by that licence, so badge/plate meshes are hidden.
-   three.js (MIT) and the model are loaded on demand from public CDNs and
+   three.js (MIT, via the import map) and the model (our own server) load on demand and
    cached by the service worker.
+
+   The WebP variant of the model is used: plain geometry and WebP images, so
+   no Draco/Basis decoders (WebAssembly in blob: workers) are involved.
 
    The car body is the real model. Tyres and brakes highlight the model's own
    meshes; inner parts (engine, gearbox, …) are simplified shapes placed in a
    typical front-engine layout and revealed with X-ray mode. */
 (() => {
 "use strict";
-const THREE_V = "0.170.0";
-const CDN = `https://cdn.jsdelivr.net/npm/three@${THREE_V}`;
 const MODEL_URLS = ["/models/carconcept/CarConcept.gltf"];   // served by our own server (see model_mirror.py)
 const GROUP_COL = { powertrain: 0xf5b83d, transmission: 0xa78bfa, chassis: 0x38bdf8, electrical: 0x34d399, safety: 0xfb7185 };
 const MODEL_PARTS = { tyres: /^(tiretread|tireside|rim1|rim2)$/i, brakes: /^(brake|disc)$/i };
@@ -93,13 +94,11 @@ C.load = async () => {
     if (el) el.textContent = shown + "%";
   };
   let libs = 0;
-  const step = (pr) => pr.then((m) => { libs++; pct(libs / 6 * 15); return m; });
+  const step = (pr) => pr.then((m) => { libs++; pct(libs / 4 * 15); return m; });
   try {
-    const [three, gltf, draco, ktx2, orbit, room] = await Promise.all([
+    const [three, gltf, orbit, room] = await Promise.all([
       step(import("three")),
       step(import("three/addons/loaders/GLTFLoader.js")),
-      step(import("three/addons/loaders/DRACOLoader.js")),
-      step(import("three/addons/loaders/KTX2Loader.js")),
       step(import("three/addons/controls/OrbitControls.js")),
       step(import("three/addons/environments/RoomEnvironment.js")),]);
     T = three;
@@ -124,9 +123,6 @@ C.load = async () => {
     const ticker = setInterval(() => { if (C.state !== "loading") { clearInterval(ticker); return; } fileLine(); }, 1000);
     C.pending = () => [...pend].map(x => x.split("/").pop());
     const loader = new gltf.GLTFLoader(manager);
-    const dl = new draco.DRACOLoader(manager).setDecoderPath(`${CDN}/examples/jsm/libs/draco/gltf/`);
-    const kl = new ktx2.KTX2Loader(manager).setTranscoderPath(`${CDN}/examples/jsm/libs/basis/`).detectSupport(renderer);
-    loader.setDRACOLoader(dl); loader.setKTX2Loader(kl);
     let res = null, lastErr = null;
     for (const url of MODEL_URLS) {
       try {
