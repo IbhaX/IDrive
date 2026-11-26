@@ -39,6 +39,7 @@ class UserOut(BaseModel):
     email: str
     name: str
     lang: str
+    role: str = "user"
 
 
 class AuthOut(BaseModel):

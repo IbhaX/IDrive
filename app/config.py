@@ -42,6 +42,9 @@ class Settings(BaseSettings):
     # disables the feature. The secret is unused by this flow but kept for
     # deployments that add the server-side code exchange later.
     google_client_id: str = ""
+    # Comma-separated emails that are always admins (they can open /admin).
+    # Admins can also promote other users from the admin panel.
+    admin_emails: str = ""
     google_client_secret: str = ""
 
     # AI instructor via OpenRouter (or any OpenAI-compatible API). Set in the
@@ -76,3 +79,8 @@ class Settings(BaseSettings):
 @lru_cache
 def get_settings() -> Settings:
     return Settings()
+
+
+def admin_emails() -> frozenset[str]:
+    """Emails listed in ADMIN_EMAILS, lower-cased."""
+    return frozenset(e.strip().lower() for e in get_settings().admin_emails.split(",") if e.strip())

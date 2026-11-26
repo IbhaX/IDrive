@@ -9,11 +9,28 @@ import httpx
 from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.config import get_settings
+from app.config import admin_emails, get_settings
 from app.models import Session, User
 from app.security import hash_password, hash_token, new_session_token, verify_password
 
 _EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
+
+
+class AccountBlocked(Exception):
+    """The account exists and the credentials are right, but an admin blocked it."""
+
+
+def is_admin(user: User) -> bool:
+    return user.role == "admin" or user.email in admin_emails()
+
+
+async def sync_admin(db: AsyncSession, user: User) -> User:
+    """Emails in ADMIN_EMAILS are always admins: store that on the row so the
+    admin panel lists them correctly."""
+    if user.email in admin_emails() and user.role != "admin":
+        user.role = "admin"
+        await db.commit()
+    return user
 
 
 def normalise_email(email: str) -> str:
@@ -45,6 +62,8 @@ async def login(db: AsyncSession, email: str, password: str) -> User | None:
     user = await db.scalar(select(User).where(User.email == normalise_email(email)))
     if user is None or not verify_password(password, user.password_hash):
         return None
+    if user.status == "blocked":
+        raise AccountBlocked()
     user.last_login_at = datetime.now(timezone.utc)
     await db.commit()
     return user
@@ -86,6 +105,8 @@ async def login_or_register_google(db: AsyncSession, email: str, name: str) -> U
         await db.commit()
         await db.refresh(user)
     else:
+        if user.status == "blocked":
+            raise AccountBlocked()
         user.last_login_at = datetime.now(timezone.utc)
         await db.commit()
     return user
@@ -122,7 +143,10 @@ async def get_user_by_token(db: AsyncSession, token: str) -> User | None:
         await db.delete(row)
         await db.commit()
         return None
-    return await db.get(User, row.user_id)
+    user = await db.get(User, row.user_id)
+    if user is not None and user.status == "blocked":
+        return None   # a blocked account is signed out everywhere at once
+    return user
 
 
 async def logout(db: AsyncSession, token: str) -> None:

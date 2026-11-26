@@ -28,7 +28,10 @@ limiter = Limiter(key_func=get_remote_address)
 
 
 def _user_out(u: User) -> UserOut:
-    return UserOut(id=u.id, email=u.email, name=u.name, lang=u.lang)
+    return UserOut(id=u.id, email=u.email, name=u.name, lang=u.lang, role="admin" if auth_service.is_admin(u) else "user")
+
+
+_BLOCKED = HTTPException(status_code=403, detail={"detail": "this account has been blocked", "code": "account_blocked"})
 
 
 @router.post("/register", response_model=AuthOut, status_code=201)
@@ -40,6 +43,7 @@ async def register(request: Request, body: RegisterIn, db: DbDep) -> AuthOut:
         code = "email_taken" if "registered" in str(e) else "invalid_email"
         raise HTTPException(status_code=400, detail={"detail": str(e), "code": code})
     await auth_service.save_attribution(db, user.id, body.attr)
+    await auth_service.sync_admin(db, user)
     token = await auth_service.create_session(
         db, user.id, request.headers.get("user-agent", "")
     )
@@ -49,13 +53,17 @@ async def register(request: Request, body: RegisterIn, db: DbDep) -> AuthOut:
 @router.post("/login", response_model=AuthOut)
 @limiter.limit(lambda: get_settings().rate_limit_auth)
 async def login(request: Request, body: LoginIn, db: DbDep) -> AuthOut:
-    user = await auth_service.login(db, body.email, body.password)
+    try:
+        user = await auth_service.login(db, body.email, body.password)
+    except auth_service.AccountBlocked:
+        raise _BLOCKED
     if user is None:
         # Same message either way - never reveal whether the email exists.
         raise HTTPException(
             status_code=401,
             detail={"detail": "invalid email or password", "code": "bad_credentials"},
         )
+    await auth_service.sync_admin(db, user)
     token = await auth_service.create_session(
         db, user.id, request.headers.get("user-agent", "")
     )
@@ -73,8 +81,8 @@ async def logout(
 
 
 @router.get("/me", response_model=UserOut)
-async def me(user: CurrentUser) -> UserOut:
-    return _user_out(user)
+async def me(user: CurrentUser, db: DbDep) -> UserOut:
+    return _user_out(await auth_service.sync_admin(db, user))
 
 
 @router.delete("/me", response_model=OkOut)
@@ -100,8 +108,12 @@ async def google_login(request: Request, payload: GoogleIn, db: DbDep) -> AuthOu
         info = await auth_service.verify_google_id_token(payload.credential)
     except ValueError:
         raise HTTPException(401, "invalid google token")
-    user = await auth_service.login_or_register_google(db, info["email"], info["name"])
+    try:
+        user = await auth_service.login_or_register_google(db, info["email"], info["name"])
+    except auth_service.AccountBlocked:
+        raise _BLOCKED
     await auth_service.save_attribution(db, user.id, payload.attr)
+    await auth_service.sync_admin(db, user)
     token = await auth_service.create_session(
         db, user.id, request.headers.get("user-agent", "")
     )

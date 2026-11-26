@@ -8,11 +8,13 @@
 const A = { user: null, syncing: false, putTimer: null, version: 0 };
 
 A.signedIn = () => !!A.user;
+A.isAdmin = () => !!(A.user && A.user.role === "admin");
 
 A.chipHtml = () => {
   if (A.user) {
     const init = (A.user.name || A.user.email || "?").trim()[0].toUpperCase();
-    return `<button class="authchip" data-act="account"><span class="dotu">${esc(init)}</span><span>${esc(A.user.name || A.user.email)}</span></button>`;
+    const adm = A.isAdmin() ? `<a class="themebtn adminbtn" href="#admin" aria-label="${I18n.attr(I18n.u("tAdmin"))}" title="${I18n.attr(I18n.u("tAdmin"))}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></a>` : "";
+    return adm + `<button class="authchip" data-act="account"><span class="dotu">${esc(init)}</span><span>${esc(A.user.name || A.user.email)}</span></button>`;
   }
   return `<button class="authchip" data-act="signin">${esc(I18n.u("signIn"))}</button>`;
 };
@@ -94,7 +96,7 @@ A.onGoogle = async (resp) => {
     const r = await Api.post("/api/auth/google", { credential: resp.credential, attr: window.Analytics ? Analytics.attribution() : null });
     await A.finishAuth(r);
   } catch (e) {
-    if (err) err.textContent = I18n.u("networkErr");
+    if (err) err.textContent = e.code === "account_blocked" ? I18n.u("acctBlocked") : I18n.u("networkErr");
   }
 };
 
@@ -136,7 +138,7 @@ A.submit = async (isLogin) => {
     if (!isLogin) if (window.Analytics) Analytics.event("sign_up", { method: "email" });
     await A.finishAuth(r);
   } catch (e) {
-    err.textContent = e.code === "rate_limited" ? I18n.u("tooMany") : (e.code === "email_taken" ? I18n.u("emailTaken") : I18n.u("badLogin"));
+    err.textContent = e.code === "rate_limited" ? I18n.u("tooMany") : e.code === "account_blocked" ? I18n.u("acctBlocked") : (e.code === "email_taken" ? I18n.u("emailTaken") : I18n.u("badLogin"));
   }
 };
 

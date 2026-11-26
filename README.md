@@ -93,6 +93,7 @@ All settings are env vars (see `.env.example`). The important ones:
 | `RATE_LIMIT_DEFAULT` / `RATE_LIMIT_AUTH` | 300/min, 20/min | slowapi format |
 | `OPENROUTER_API_KEY` / `OPENROUTER_MODEL` | empty / `openai/gpt-4o-mini` | AI instructor via OpenRouter, set in the root `.env`; empty key = search-only mode. `AI_*` names are accepted too. |
 | `GOOGLE_CLIENT_ID` | empty | enables the Google sign-in button + `POST /api/auth/google`; ID tokens are verified server-side via Google's tokeninfo. Add your origins to the OAuth client's **Authorized JavaScript origins** in Google Cloud Console. `GOOGLE_CLIENT_SECRET` is unused by this flow. |
+| `ADMIN_EMAILS` | empty | comma-separated emails that are always admins; admins can open `/admin` (user management: roles, block/unblock, sign out everywhere, delete) and promote other users. Listed admins cannot be demoted or blocked from the panel. |
 
 ## Docker
 

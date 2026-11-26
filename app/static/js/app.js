@@ -100,6 +100,7 @@ const VIEWS = {
   science: (app) => Labs.view(app),
   hazard: (app) => Hazard.view(app),
   games: (app) => Games.view(app),
+  admin: (app) => Admin.view(app),
   theory: (app) => Theory.view(app),
   exam: (app) => Exam.view(app),
   quiz: (app) => Quiz.view(app),
@@ -296,7 +297,7 @@ function toggleMore(btn) {
   const m = document.getElementById("moreMenu");
   if (!m) return;
   if (!m.hidden) { closeMore(); return; }
-  m.innerHTML = `<div class="moregrid">${TABS.filter(t => !DOCK.includes(t.id)).map(t => `<a href="#${t.id}" ${t.id === curTab() ? 'aria-current="page"' : ""}>${I(t.icon)}<span>${esc(I18n.u(t.k))}</span></a>`).join("")}<a href="#theory">${I('<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5"/>')}<span>${esc(I18n.u("tTheory"))}</span></a><a href="#limits">${I('<circle cx="12" cy="12" r="9"/><path d="M12 12l4-3M8 16h8"/>')}<span>${esc(I18n.u("tLimits"))}</span></a><button data-act="search">${I('<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>')}<span>${esc(I18n.u("search"))}</span></button>${Pwa.menuHtml()}</div>`;
+  m.innerHTML = `<div class="moregrid">${TABS.filter(t => !DOCK.includes(t.id)).map(t => `<a href="#${t.id}" ${t.id === curTab() ? 'aria-current="page"' : ""}>${I(t.icon)}<span>${esc(I18n.u(t.k))}</span></a>`).join("")}<a href="#theory">${I('<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5"/>')}<span>${esc(I18n.u("tTheory"))}</span></a><a href="#limits">${I('<circle cx="12" cy="12" r="9"/><path d="M12 12l4-3M8 16h8"/>')}<span>${esc(I18n.u("tLimits"))}</span></a>${Auth.isAdmin() ? `<a href="#admin">${I('<path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/>')}<span>${esc(I18n.u("tAdmin"))}</span></a>` : ""}<button data-act="search">${I('<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>')}<span>${esc(I18n.u("search"))}</span></button>${Pwa.menuHtml()}</div>`;
   m.hidden = false;
   btn.setAttribute("aria-expanded", "true");
   Motion.rise(m.querySelectorAll("a,button"));

@@ -5,7 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import AsyncGenerator
 
-from sqlalchemy import event
+from sqlalchemy import Connection, event, inspect, text
 from sqlalchemy.pool import ConnectionPoolEntry, PoolProxiedConnection
 from sqlalchemy.ext.asyncio import (
     AsyncEngine,
@@ -63,6 +63,26 @@ async def init_db() -> None:
     engine = get_engine()
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
+        await conn.run_sync(_add_missing_columns)
+
+
+# Columns added after v1. create_all() never alters an existing table, so a
+# database created before these existed gets them here (idempotent).
+_ADDED_COLUMNS: dict[str, list[tuple[str, str]]] = {
+    "users": [
+        ("role", "VARCHAR(16) NOT NULL DEFAULT 'user'"),
+        ("status", "VARCHAR(16) NOT NULL DEFAULT 'active'"),
+    ],
+}
+
+
+def _add_missing_columns(sync_conn: Connection) -> None:
+    insp = inspect(sync_conn)
+    for table, cols in _ADDED_COLUMNS.items():
+        have = {c["name"] for c in insp.get_columns(table)}
+        for name, ddl in cols:
+            if name not in have:
+                sync_conn.execute(text(f"ALTER TABLE {table} ADD COLUMN {name} {ddl}"))
 
 
 async def close_db() -> None:

@@ -62,6 +62,7 @@ const Api = {
   get(path) { return Api.req(path); },
   post(path, body) { return Api.req(path, { method: "POST", body: body || {} }); },
   put(path, body) { return Api.req(path, { method: "PUT", body: body || {} }); },
+  patch(path, body) { return Api.req(path, { method: "PATCH", body: body || {} }); },
   del(path) { return Api.req(path, { method: "DELETE" }); },
 };
 window.Api = Api;

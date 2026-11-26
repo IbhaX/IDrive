@@ -17,6 +17,7 @@ from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
 
 from app.api.auth_routes import router as auth_router
+from app.api.admin_routes import router as admin_router
 from app.api.content_routes import router as content_router
 from app.api.curriculum_routes import router as curriculum_router
 from app.api.exam_routes import router as exam_router
@@ -134,6 +135,7 @@ app.include_router(quiz_router)
 app.include_router(exam_router)
 app.include_router(progress_router)
 app.include_router(curriculum_router)
+app.include_router(admin_router)
 
 limiter = Limiter(
     key_func=get_remote_address,

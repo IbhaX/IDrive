@@ -828,6 +828,8 @@ def page_tool(view: str, lang: Lang) -> Page:
                     "റോഡ് ചിഹ്ന ഫ്ലാഷ്കാർഡുകൾ മറിക്കുക: തെറ്റുന്ന ചിഹ്നങ്ങൾ വേഗം തിരിച്ചുവരും, അറിയാവുന്നവ കുറച്ചേ വരൂ - എല്ലാം ഓർമയിൽ ഉറയ്ക്കും വരെ.", lang), True),
         "ask": (T("Ask the driving instructor", "ഡ്രൈവിങ് ഇൻസ്ട്രക്ടറോട് ചോദിക്കുക", lang),
                 T("Ask a driving-theory question and get an answer grounded in iDrive's lessons.", "ഒരു ഡ്രൈവിങ് തിയറി ചോദ്യം ചോദിച്ച് iDrive പാഠങ്ങളെ ആധാരമാക്കിയ ഉത്തരം നേടുക.", lang), False),
+        "admin": (T("Admin", "അഡ്മിൻ", lang),
+                  T("The iDrive admin panel: user management and recent activity, for site administrators only.", "iDrive അഡ്മിൻ പാനൽ: ഉപയോക്തൃ മാനേജ്മെന്റും സമീപകാല പ്രവർത്തനങ്ങളും - സൈറ്റ് അഡ്മിനിസ്ട്രേറ്റർമാർക്ക് മാത്രം.", lang), False),
         "progress": (T("Your progress", "നിങ്ങളുടെ പുരോഗതി", lang),
                      T("Your lessons, scores and streaks.", "നിങ്ങളുടെ പാഠങ്ങളും സ്കോറുകളും തുടർച്ചയും.", lang), False),
     }[view]
@@ -988,7 +990,7 @@ def _resolve(path: str, lang: Lang) -> Optional[Page]:
         return page_games(one, lang)
     if head == "limits" and not rest:
         return page_limits(lang)
-    if head in ("exam", "quiz", "cards", "ask", "progress") and not rest:
+    if head in ("exam", "quiz", "cards", "ask", "progress", "admin") and not rest:
         return page_tool(head, lang)
     if head in STATIC_PAGES and not rest:
         return page_static(head, lang)

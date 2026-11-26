@@ -6302,5 +6302,293 @@
  "labRelOther": [
   "More labs in this group",
   "ഈ വിഭാഗത്തിലെ മറ്റ് ലാബുകൾ"
+ ],
+ "tAdmin": [
+  "Admin",
+  "അഡ്മിൻ"
+ ],
+ "adTitle": [
+  "Admin dashboard",
+  "അഡ്മിൻ ഡാഷ്ബോർഡ്"
+ ],
+ "adSub": [
+  "Users, access and recent activity.",
+  "ഉപയോക്താക്കൾ, പ്രവേശനം, സമീപകാല പ്രവർത്തനം."
+ ],
+ "adRefresh": [
+  "Refresh",
+  "പുതുക്കുക"
+ ],
+ "adOverview": [
+  "Overview",
+  "അവലോകനം"
+ ],
+ "adUsers": [
+  "User management",
+  "ഉപയോക്തൃ മാനേജ്മെന്റ്"
+ ],
+ "adNote": [
+  "Changes take effect immediately. Blocking an account signs it out on every device and stops it signing in until access is restored. You can't change your own account here, and admins listed in ADMIN_EMAILS can only be changed in the server settings.",
+  "മാറ്റങ്ങൾ ഉടൻ പ്രാബല്യത്തിൽ വരും. ഒരു അക്കൗണ്ട് തടഞ്ഞാൽ എല്ലാ ഉപകരണങ്ങളിൽ നിന്നും സൈൻ ഔട്ട് ആകും; പ്രവേശനം തിരികെ നൽകും വരെ സൈൻ ഇൻ ചെയ്യാനാവില്ല. സ്വന്തം അക്കൗണ്ട് ഇവിടെ മാറ്റാനാവില്ല; ADMIN_EMAILS-ലുള്ള അഡ്മിൻമാരെ സെർവർ ക്രമീകരണത്തിൽ മാത്രമേ മാറ്റാനാകൂ."
+ ],
+ "adSearch": [
+  "Search name or email",
+  "പേര് അല്ലെങ്കിൽ ഇമെയിൽ തിരയുക"
+ ],
+ "adRoleAll": [
+  "All roles",
+  "എല്ലാ റോളുകളും"
+ ],
+ "adRoleUser": [
+  "User",
+  "ഉപയോക്താവ്"
+ ],
+ "adRoleAdmin": [
+  "Admin",
+  "അഡ്മിൻ"
+ ],
+ "adAccAll": [
+  "Any access",
+  "ഏത് പ്രവേശനവും"
+ ],
+ "adActive": [
+  "Active",
+  "സജീവം"
+ ],
+ "adBlocked": [
+  "Blocked",
+  "തടഞ്ഞത്"
+ ],
+ "adSortJoined": [
+  "Newest first",
+  "പുതിയത് ആദ്യം"
+ ],
+ "adSortLogin": [
+  "Last sign-in",
+  "അവസാന സൈൻ ഇൻ"
+ ],
+ "adSortEmail": [
+  "Email A-Z",
+  "ഇമെയിൽ A-Z"
+ ],
+ "adSortName": [
+  "Name A-Z",
+  "പേര് A-Z"
+ ],
+ "adColUser": [
+  "User",
+  "ഉപയോക്താവ്"
+ ],
+ "adColEmail": [
+  "Email",
+  "ഇമെയിൽ"
+ ],
+ "adColRole": [
+  "Role",
+  "റോൾ"
+ ],
+ "adColAccess": [
+  "Access",
+  "പ്രവേശനം"
+ ],
+ "adColProgress": [
+  "Progress",
+  "പുരോഗതി"
+ ],
+ "adColSignin": [
+  "Sign-in",
+  "സൈൻ ഇൻ"
+ ],
+ "adColJoined": [
+  "Joined",
+  "ചേർന്നത്"
+ ],
+ "adColActions": [
+  "Actions",
+  "പ്രവർത്തനങ്ങൾ"
+ ],
+ "adSignOut": [
+  "Sign out everywhere",
+  "എല്ലായിടത്തും സൈൻ ഔട്ട്"
+ ],
+ "adDelete": [
+  "Delete",
+  "ഇല്ലാതാക്കുക"
+ ],
+ "adConfirm": [
+  "Tap again to delete",
+  "ഇല്ലാതാക്കാൻ വീണ്ടും തൊടുക"
+ ],
+ "adYou": [
+  "you",
+  "നിങ്ങൾ"
+ ],
+ "adSelfLock": [
+  "You can't change your own account",
+  "സ്വന്തം അക്കൗണ്ട് മാറ്റാനാവില്ല"
+ ],
+ "adEnvAdmin": [
+  "Set in ADMIN_EMAILS on the server",
+  "സെർവറിലെ ADMIN_EMAILS-ൽ നിശ്ചയിച്ചത്"
+ ],
+ "adNever": [
+  "never",
+  "ഒരിക്കലുമില്ല"
+ ],
+ "adMinAgo": [
+  "{n} min ago",
+  "{n} മിനിറ്റ് മുമ്പ്"
+ ],
+ "adHrAgo": [
+  "{n} h ago",
+  "{n} മണിക്കൂർ മുമ്പ്"
+ ],
+ "adDayAgo": [
+  "{n} days ago",
+  "{n} ദിവസം മുമ്പ്"
+ ],
+ "adGoogle": [
+  "Google",
+  "Google"
+ ],
+ "adPassword": [
+  "Password",
+  "പാസ്‌വേഡ്"
+ ],
+ "adSessions": [
+  "{n} active sessions",
+  "{n} സജീവ സെഷനുകൾ"
+ ],
+ "adLessons": [
+  "{n} lessons",
+  "{n} പാഠങ്ങൾ"
+ ],
+ "adMockBest": [
+  "mock best {b}/30 ({t} taken)",
+  "മോക്ക് മികച്ചത് {b}/30 ({t} എഴുതി)"
+ ],
+ "adDays": [
+  "{n} days",
+  "{n} ദിവസം"
+ ],
+ "adShowing": [
+  "{a}-{b} of {n}",
+  "{n}-ൽ {a}-{b}"
+ ],
+ "adPrev": [
+  "Previous",
+  "മുമ്പത്തെ"
+ ],
+ "adNext": [
+  "Next",
+  "അടുത്തത്"
+ ],
+ "adNoUsers": [
+  "No users match.",
+  "പൊരുത്തപ്പെടുന്ന ഉപയോക്താക്കളില്ല."
+ ],
+ "adStUsers": [
+  "Users",
+  "ഉപയോക്താക്കൾ"
+ ],
+ "adStActive": [
+  "Signed in, last 7 days",
+  "സൈൻ ഇൻ, കഴിഞ്ഞ 7 ദിവസം"
+ ],
+ "adStNew": [
+  "New, last 7 days",
+  "പുതിയത്, കഴിഞ്ഞ 7 ദിവസം"
+ ],
+ "adStAdmins": [
+  "Admins",
+  "അഡ്മിൻമാർ"
+ ],
+ "adStBlocked": [
+  "Blocked",
+  "തടഞ്ഞവ"
+ ],
+ "adStSessions": [
+  "Live sessions",
+  "സജീവ സെഷനുകൾ"
+ ],
+ "adStMocks": [
+  "Mock tests, last 7 days",
+  "മോക്ക് ടെസ്റ്റുകൾ, കഴിഞ്ഞ 7 ദിവസം"
+ ],
+ "adStPassed": [
+  "{n} passed",
+  "{n} ജയിച്ചു"
+ ],
+ "adRecent": [
+  "Recent tests",
+  "സമീപകാല ടെസ്റ്റുകൾ"
+ ],
+ "adColTime": [
+  "Time",
+  "സമയം"
+ ],
+ "adColTest": [
+  "Test",
+  "ടെസ്റ്റ്"
+ ],
+ "adColScore": [
+  "Score",
+  "സ്കോർ"
+ ],
+ "adColResult": [
+  "Result",
+  "ഫലം"
+ ],
+ "adPass": [
+  "Pass",
+  "ജയം"
+ ],
+ "adFail": [
+  "Fail",
+  "തോൽവി"
+ ],
+ "adLate": [
+  "late",
+  "വൈകി"
+ ],
+ "adMockTest": [
+  "Mock test",
+  "മോക്ക് ടെസ്റ്റ്"
+ ],
+ "adPractice": [
+  "Practice: {t}",
+  "പരിശീലനം: {t}"
+ ],
+ "adDeleted": [
+  "deleted account",
+  "ഇല്ലാതാക്കിയ അക്കൗണ്ട്"
+ ],
+ "adNoTests": [
+  "No tests taken yet.",
+  "ഇതുവരെ ടെസ്റ്റുകളില്ല."
+ ],
+ "adSaved": [
+  "Saved",
+  "സേവ് ചെയ്തു"
+ ],
+ "adErr": [
+  "Couldn't save: {e}",
+  "സേവ് ചെയ്യാനായില്ല: {e}"
+ ],
+ "adOnly": [
+  "This page is for site admins.",
+  "ഈ പേജ് സൈറ്റ് അഡ്മിൻമാർക്കുള്ളതാണ്."
+ ],
+ "adSignedOut": [
+  "Signed out of {n} sessions",
+  "{n} സെഷനുകളിൽ നിന്ന് സൈൻ ഔട്ട് ചെയ്തു"
+ ],
+ "adDeletedOk": [
+  "Account deleted",
+  "അക്കൗണ്ട് ഇല്ലാതാക്കി"
+ ],
+ "acctBlocked": [
+  "This account has been blocked. Contact the site owner if you think this is a mistake.",
+  "ഈ അക്കൗണ്ട് തടഞ്ഞിരിക്കുന്നു. ഇത് തെറ്റാണെന്ന് തോന്നുന്നെങ്കിൽ സൈറ്റ് ഉടമയെ ബന്ധപ്പെടുക."
  ]
 }

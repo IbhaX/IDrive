@@ -26,6 +26,10 @@ class User(Base):
     lang: Mapped[str] = mapped_column(String(8), default="both")
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
     last_login_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    # "user" | "admin" - admins can open /admin (user management)
+    role: Mapped[str] = mapped_column(String(16), default="user", server_default="user")
+    # "active" | "blocked" - blocked accounts cannot sign in and lose every session
+    status: Mapped[str] = mapped_column(String(16), default="active", server_default="active")
 
 
 class Session(Base):

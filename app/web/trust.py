@@ -12,7 +12,7 @@ from typing import Optional
 
 from app.config import get_settings
 
-UPDATED = "2026-11-26"
+UPDATED = "2026-11-27"
 
 
 def _e(s: str) -> str:
@@ -60,6 +60,7 @@ def _privacy(lang: str) -> tuple[str, str, str]:
         b = f"""<h1>{t}</h1><p class="answer">{d} അവസാനം പുതുക്കിയത്: {UPDATED}.</p>
 <h2>അക്കൗണ്ട് ഇല്ലാതെ</h2><p>സൈൻ ഇൻ ചെയ്യാതെ ഉപയോഗിക്കുമ്പോൾ നിങ്ങളുടെ പുരോഗതി, ഭാഷ, തീം എന്നിവ നിങ്ങളുടെ ബ്രൗസറിൽ (local storage) മാത്രം സൂക്ഷിക്കുന്നു. ഓഫ്‌ലൈൻ ഉപയോഗത്തിനായി പാഠങ്ങൾ ബ്രൗസർ കാഷിൽ സൂക്ഷിക്കുന്നു. ഞങ്ങളുടെ സെർവർ സാധാരണ വെബ് സെർവർ ലോഗുകൾ (IP വിലാസം, അഭ്യർത്ഥിച്ച പേജ്, സമയം) സൂക്ഷിക്കുന്നു; ദുരുപയോഗം തടയാനും പ്രശ്നങ്ങൾ പരിഹരിക്കാനും മാത്രം.</p>
 <h2>അക്കൗണ്ട് ഉണ്ടാക്കിയാൽ</h2><ul><li>ഇമെയിൽ വിലാസവും പേരും.</li><li>പാസ്‌വേഡ് - ഹാഷ് ചെയ്ത രൂപത്തിൽ മാത്രം; യഥാർത്ഥ പാസ്‌വേഡ് ഞങ്ങൾ കാണുന്നില്ല.</li><li>സൈൻ-ഇൻ സെഷനുകൾ (ഹാഷ് ചെയ്ത ടോക്കൺ, ബ്രൗസർ വിവരം, കാലാവധി).</li><li>പഠന പുരോഗതി - പൂർത്തിയാക്കിയ പാഠങ്ങൾ, ക്വിസ് സ്കോറുകൾ, ബുക്ക്മാർക്കുകൾ - ഉപകരണങ്ങൾ തമ്മിൽ സമന്വയിപ്പിക്കാൻ.</li><li>മോക്ക് ടെസ്റ്റ് പേപ്പറുകളും ഫലങ്ങളും.</li></ul>
+<h2>അക്കൗണ്ട് ആർക്കൊക്കെ കാണാം</h2><p>സേവനം നടത്താനും ദുരുപയോഗം തടയാനുമായി iDrive അഡ്മിനിസ്ട്രേറ്റർമാർക്ക് നിങ്ങളുടെ പേര്, ഇമെയിൽ, സൈൻ-ഇൻ രീതി, ചേർന്നതും അവസാനം സൈൻ ഇൻ ചെയ്തതുമായ സമയം, പുരോഗതിയുടെയും ടെസ്റ്റ് ഫലങ്ങളുടെയും ചുരുക്കം എന്നിവ കാണാം. അവർക്ക് ഒരു അക്കൗണ്ട് തടയാനും എല്ലാ ഉപകരണങ്ങളിൽ നിന്നും സൈൻ ഔട്ട് ചെയ്യാനും ഇല്ലാതാക്കാനും കഴിയും. പാസ്‌വേഡ് അവർക്കും കാണാനാവില്ല.</p>
 <h2>Google സൈൻ-ഇൻ</h2><p>Google ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യുമ്പോൾ Google നിങ്ങളുടെ ഇമെയിലും പേരും ഞങ്ങൾക്ക് നൽകുന്നു. Google-ന്റെ സ്വന്തം സ്വകാര്യതാ നയം അവിടെ ബാധകമാണ്.</p>
 <h2>AI ഇൻസ്ട്രക്ടർ</h2><p>AI ഇൻസ്ട്രക്ടറോട് ചോദിക്കുന്ന ചോദ്യം, ബന്ധപ്പെട്ട iDrive പാഠഭാഗങ്ങൾക്കൊപ്പം ഉത്തരം തയ്യാറാക്കാനായി OpenRouter വഴി ഒരു AI മോഡൽ ദാതാവിന് അയക്കുന്നു. നിങ്ങളുടെ പേരോ ഇമെയിലോ അയക്കുന്നില്ല. ചോദ്യങ്ങളിൽ വ്യക്തിപരമായ വിവരങ്ങൾ ഉൾപ്പെടുത്തരുത്.</p>
 {an}
@@ -73,6 +74,7 @@ def _privacy(lang: str) -> tuple[str, str, str]:
     b = f"""<h1>{t}</h1><p class="answer">{d} Last updated: {UPDATED}.</p>
 <h2>Without an account</h2><p>If you use iDrive without signing in, your progress, language and theme are kept only in your browser (local storage), and lessons are cached in your browser for offline use. Our server keeps ordinary web server logs (IP address, page requested, time) to prevent abuse and fix problems.</p>
 <h2>If you create an account</h2><ul><li>Your email address and name.</li><li>Your password - only as a salted hash; we never see the password itself.</li><li>Sign-in sessions (a hashed token, your browser's user agent, and an expiry).</li><li>Your learning progress - lessons completed, quiz scores, bookmarks - so it syncs across devices.</li><li>Mock test papers and results.</li></ul>
+<h2>Who can see your account</h2><p>To run the service and deal with abuse, iDrive administrators can see your name, email, how you sign in, when you joined and last signed in, and a summary of your progress and test results. They can block an account, sign it out on every device, or delete it. They cannot see your password either.</p>
 <h2>Google sign-in</h2><p>If you sign in with Google, Google shares your email and name with us. Google's own privacy policy applies to that step.</p>
 <h2>AI instructor</h2><p>A question you ask the AI instructor is sent, with the relevant iDrive lesson extracts, through OpenRouter to an AI model provider to write the answer. Your name and email are not sent. Please don't put personal details in questions.</p>
 {an}
