@@ -1107,3 +1107,49 @@ html.splashing,html.splashing body{overflow:hidden}
    never let it widen its card or the page */
 .xgrid>*,.x3d,.x3dstage{min-width:0;max-width:100%}
 .x3dstage canvas{width:100% !important;height:100% !important;max-width:100%}
+
+/* ============ labs 3 (shared engine) ============ */
+.labgroup{margin:26px 4px 12px;font:700 13px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--acc2)}
+.labnav{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 14px}
+.labnav .labgrp{color:var(--muted);font-size:13px;flex:1 1 auto}
+.labnav .labpn{display:flex;gap:8px}
+.l3svg{width:100%;height:auto;display:block;border-radius:14px}
+.l3track{fill:color-mix(in srgb,var(--ink) 10%,transparent)}
+.l3okbar{fill:var(--good)}.l3badbar{fill:#fb7185}
+.l3fillA{fill:#38bdf8;fill-opacity:.85}.l3fillB{fill:#a78bfa;fill-opacity:.8}.l3heat{fill:#f97316;fill-opacity:.85}
+.l3curve{fill:none;stroke:var(--acc2);stroke-width:3;stroke-linejoin:round}
+.l3dot{fill:#fbbf24;stroke:#fff;stroke-width:2}.l3best{fill:var(--good)}
+.l3needle{stroke:#fb7185;stroke-width:3;stroke-linecap:round}
+.l3arrow{stroke:var(--ink);stroke-width:2.5;opacity:.7}
+.l3dash{stroke:var(--muted);stroke-width:1.5;stroke-dasharray:4 4}
+.l3cg{fill:#fbbf24;stroke:#0f172a;stroke-width:2}
+.l3body{fill:var(--acc)}.l3load{fill:#a16207}
+.l3wheel{fill:#111827}.l3wheelc{fill:#111827;stroke:#6b7280;stroke-width:4}
+.l3tyre{fill:#1f2329;stroke:#0b0c10;stroke-width:2}.l3rim{fill:#9ca3af;stroke:#4b5563;stroke-width:2}
+.l3groove{stroke:#4b5563;stroke-width:3}
+.l3water{fill:#38bdf8;fill-opacity:.35}.l3wedge{fill:#38bdf8;fill-opacity:.75}.l3spray{stroke:#7dd3fc;stroke-width:2;stroke-linecap:round;opacity:.8}
+.l3contact{fill:var(--good)}
+.l3patch{fill:#374151}.l3heavy{fill:#f97316;fill-opacity:.85}.l3even{fill:#22c55e;fill-opacity:.55}
+.l3zone{fill:var(--good);fill-opacity:.12}
+.l3steer{fill:none;stroke:var(--good);stroke-width:4;stroke-linecap:round}.l3nosteer{stroke:#fb7185;stroke-width:4}
+.l3good{fill:var(--good);font:700 13px var(--body)}.l3bad{fill:#fb7185;font:700 13px var(--body)}
+.l3blind{fill:#0f172a;fill-opacity:.55;stroke:#fb7185;stroke-dasharray:6 5}
+.l3ped circle,.l3ped rect{fill:#fbbf24}
+.l3fogwall{fill:#e2e8f0;fill-opacity:.55}
+.l3nozone{fill:#ef4444;fill-opacity:.3;stroke:#ef4444;stroke-opacity:.6;stroke-dasharray:5 4}
+.l3truck{fill:#64748b;stroke:#334155;stroke-width:2}.l3cab{fill:#94a3b8}
+.l3shell{fill:#1d4ed8}.l3eps{fill:#fde68a}.l3head{fill:#d6a77a}
+.l3dial{fill:none;stroke:color-mix(in srgb,var(--ink) 18%,transparent);stroke-width:14}
+.l3dialwarn{fill:none;stroke:#fbbf24;stroke-width:14;stroke-opacity:.6}.l3dialred{fill:none;stroke:#ef4444;stroke-width:14;stroke-opacity:.8}
+.l3tick{stroke:var(--ink);stroke-width:2;opacity:.6}
+.l3big{fill:var(--ink);font:800 30px var(--body)}
+.l3gearbox{fill:color-mix(in srgb,var(--acc) 25%,transparent);stroke:var(--acc)}
+.l3batt{fill:none;stroke:var(--ink);stroke-width:3;opacity:.7}
+.l3onbar{fill:#fff;font:700 12px var(--body)}
+.l3hill{fill:color-mix(in srgb,#16a34a 22%,transparent)}.l3ghat{fill:none;stroke:#6b7280;stroke-width:10;stroke-linecap:round}
+.l3disc{stroke:#374151;stroke-width:3}.l3holes{fill:#1f2937}
+.l3kerb{fill:none;stroke:#e5e7eb;stroke-width:4}
+.l3pathF,.l3pathR{fill:none;stroke-width:4;stroke-dasharray:10 7}.l3pathF{stroke:#38bdf8}.l3pathR{stroke:#fb7185}
+.l3pathFk{fill:#38bdf8}.l3pathRk{fill:#fb7185}
+.l3ring{fill:none;stroke:color-mix(in srgb,var(--ink) 14%,transparent);stroke-width:22}
+.l3pave{fill:color-mix(in srgb,var(--ink) 16%,transparent);stroke:#e5e7eb;stroke-width:3}

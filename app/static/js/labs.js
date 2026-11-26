@@ -8,18 +8,32 @@ const u = (k, o) => I18n.u(k, o);
 const e = (s) => I18n.X(s);   // strings are escaped; [en, ml] pairs render bilingually
 const G = () => Motion.gsap;
 
-Lb.LABS = ["stopping", "reaction", "following", "cornering", "energy", "headlights", "blindspot", "engine"];
-const LAB_ICON = { stopping: "atom", reaction: "brain", engine: "engine", following: "gauge", cornering: "wheel", energy: "alert", headlights: "eye", blindspot: "eye" };
+Lb.GROUPS = [
+  ["lgStop", ["stopping", "reaction", "following", "cornering", "slope", "abs", "aquaplaning", "tyrepressure", "weighttransfer"]],
+  ["lgSee", ["headlights", "fog", "blindspot", "truckzones", "eyesoff"]],
+  ["lgCrash", ["energy", "seatbelt", "helmet", "rollover"]],
+  ["lgCar", ["engine", "gears", "economy", "drag", "regen", "ghat"]],
+  ["lgTraffic", ["overtaking", "offtracking", "traveltime", "trafficwave"]],
+];
+Lb.LABS = Lb.GROUPS.flatMap(([, ids]) => ids);
+const LAB_ICON = { stopping: "atom", reaction: "brain", engine: "engine", following: "gauge", cornering: "wheel", energy: "alert", headlights: "eye", blindspot: "eye",
+  slope: "mountain", abs: "wheel", aquaplaning: "drop", tyrepressure: "wheel", weighttransfer: "gauge", fog: "cloud", truckzones: "truck", eyesoff: "phone",
+  seatbelt: "shield", helmet: "shield", rollover: "alert", gears: "gauge", economy: "fuel", drag: "wind", regen: "bolt", ghat: "mountain",
+  overtaking: "truck", offtracking: "truck", traveltime: "clock", trafficwave: "wind" };
 Lb.view = (app) => {
-  const id = Lb.LABS.includes(S.param) ? S.param : null;
-  const nav = `<div class="seg" role="tablist" aria-label="${e(u("tScience"))}">${Lb.LABS.map(l => `<a role="tab" href="#science/${l}" aria-selected="${id === l}" class="${id === l ? "on" : ""}">${e(u("lab_" + l))}</a>`).join("")}</div>`;
+  const id = Lb.LABS.includes(S.param) && typeof Lb[S.param] === "function" ? S.param : null;
   if (!id) {
     app.innerHTML = `${Course.crumbs([[u("home"), "#home"], [u("tScience"), "#science"]])}
     <section class="panel rvl"><h2>${e(u("scienceTitle"))}</h2><p class="lede">${e(u("scienceLede"))}</p></section>
-    <div class="feat">${Lb.LABS.map(l => `<a class="fcard tiltc rvl" href="#science/${l}"><span class="fi">${Course.icon(LAB_ICON[l] || "atom")}</span><b>${e(u("lab_" + l))}</b><small>${e(u("labSub_" + l))}</small></a>`).join("")}</div>`;
+    ${Lb.GROUPS.map(([gk, ids]) => `<h3 class="labgroup rvl">${e(u(gk))}</h3><div class="feat">${ids.map(l => `<a class="fcard tiltc rvl" href="#science/${l}"><span class="fi">${Course.icon(LAB_ICON[l] || "atom")}</span><b>${e(u("lab_" + l))}</b><small>${e(u("labSub_" + l))}</small></a>`).join("")}</div>`).join("")}`;
     Motion.reveal(app);
     return;
   }
+  const i = Lb.LABS.indexOf(id), prev = Lb.LABS[(i - 1 + Lb.LABS.length) % Lb.LABS.length], next = Lb.LABS[(i + 1) % Lb.LABS.length];
+  const grp = Lb.GROUPS.find(([, ids]) => ids.includes(id))[0];
+  const nav = `<nav class="labnav" aria-label="${I18n.esc(I18n.one(u("tScience")))}">
+    <a class="btn small" href="#science">← ${e(u("labAll"))}</a><span class="labgrp">${e(u(grp))} · ${i + 1}/${Lb.LABS.length}</span>
+    <span class="labpn"><a class="btn small" href="#science/${prev}" aria-label="${I18n.esc(I18n.one(u("labPrev")))}: ${I18n.esc(I18n.one(u("lab_" + prev)))}">‹</a><a class="btn small" href="#science/${next}" aria-label="${I18n.esc(I18n.one(u("labNext")))}: ${I18n.esc(I18n.one(u("lab_" + next)))}">${e(u("lab_" + next))} ›</a></span></nav>`;
   app.innerHTML = `${Course.crumbs([[u("home"), "#home"], [u("tScience"), "#science"], [u("lab_" + id), "#science/" + id]])}${nav}<div id="labHost"></div>`;
   const host = document.getElementById("labHost");
   Lb[id](host);

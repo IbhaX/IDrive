@@ -1746,5 +1746,1149 @@
  "bsBlindShort": [
   "BLIND SPOT",
   "ബ്ലൈൻഡ് സ്പോട്ട്"
+ ],
+ "lab_aquaplaning": [
+  "Aquaplaning",
+  "അക്വാപ്ലെയിനിങ്"
+ ],
+ "labSub_aquaplaning": [
+  "Speed, tyre pressure, tread and water depth — when does the tyre start to float?",
+  "വേഗം, ടയർ മർദ്ദം, ട്രെഡ്, വെള്ളത്തിന്റെ ആഴം — ടയർ എപ്പോൾ വെള്ളത്തിൽ പൊങ്ങിത്തുടങ്ങും?"
+ ],
+ "m_aquaplaning": [
+  "Onset speed uses Horne's rule of thumb (about 6.36 × √tyre pressure in kPa, in km/h) for deep water on smooth tyres; the effect of tread and water depth here is an illustrative adjustment. Real onset also depends on tyre width, load and the road surface.",
+  "ആരംഭ വേഗം ഹോണിന്റെ ഏകദേശ നിയമം (km/h-ൽ ഏകദേശം 6.36 × √ടയർ മർദ്ദം kPa) ഉപയോഗിക്കുന്നു — ആഴമുള്ള വെള്ളത്തിലും മിനുസമായ ടയറിലും. ട്രെഡിന്റെയും വെള്ളത്തിന്റെ ആഴത്തിന്റെയും സ്വാധീനം ഇവിടെ ഉദാഹരണത്തിനുള്ള ക്രമീകരണമാണ്. യഥാർത്ഥത്തിൽ ടയറിന്റെ വീതി, ഭാരം, റോഡ് പ്രതലം എന്നിവയും സ്വാധീനിക്കും."
+ ],
+ "aqP": [
+  "Tyre pressure",
+  "ടയർ മർദ്ദം"
+ ],
+ "aqTread": [
+  "Tread depth",
+  "ട്രെഡ് ആഴം"
+ ],
+ "aqWater": [
+  "Water on the road",
+  "റോഡിലെ വെള്ളം"
+ ],
+ "aqFull": [
+  "Aquaplaning — the tyre rides on water: no steering, no braking",
+  "അക്വാപ്ലെയിനിങ് — ടയർ വെള്ളത്തിന് മുകളിൽ: സ്റ്റീയറിങ്ങും ബ്രേക്കിങ്ങും ഇല്ല"
+ ],
+ "aqPartial": [
+  "Partly floating — grip is falling fast",
+  "ഭാഗികമായി പൊങ്ങുന്നു — ഗ്രിപ്പ് വേഗത്തിൽ കുറയുന്നു"
+ ],
+ "aqOk": [
+  "The tyre still clears the water",
+  "ടയർ ഇപ്പോഴും വെള്ളം നീക്കുന്നു"
+ ],
+ "aqOnset": [
+  "Aquaplaning starts near",
+  "അക്വാപ്ലെയിനിങ് തുടങ്ങുന്നത് ഏകദേശം"
+ ],
+ "aqContact": [
+  "Tyre still touching the road",
+  "റോഡിൽ തൊടുന്ന ടയർ ഭാഗം"
+ ],
+ "aqGauge": [
+  "Your speed vs aquaplaning speed",
+  "നിങ്ങളുടെ വേഗം / അക്വാപ്ലെയിനിങ് വേഗം"
+ ],
+ "aqTip": [
+  "If the steering suddenly feels light in rain: ease off the accelerator, hold the wheel straight, don't brake hard until the tyres grip again.",
+  "മഴയിൽ സ്റ്റീയറിങ് പെട്ടെന്ന് ഭാരം കുറഞ്ഞതായി തോന്നിയാൽ: ആക്സിലറേറ്റർ മെല്ലെ വിടുക, വീൽ നേരെ പിടിക്കുക, ടയർ വീണ്ടും പിടിക്കുന്നതുവരെ ശക്തമായി ബ്രേക്ക് ചെയ്യരുത്."
+ ],
+ "lab_tyrepressure": [
+  "Tyre pressure",
+  "ടയർ മർദ്ദം"
+ ],
+ "labSub_tyrepressure": [
+  "See how under- and over-inflation change the footprint, wear and rolling resistance.",
+  "കുറഞ്ഞതും കൂടിയതുമായ മർദ്ദം ടയറിന്റെ തൊടുന്ന ഭാഗം, തേയ്മാനം, ഉരുളൽ പ്രതിരോധം എന്നിവ എങ്ങനെ മാറ്റുന്നുവെന്ന് കാണുക."
+ ],
+ "m_tyrepressure": [
+  "Pressure is shown as a percentage of the value on your car's door-pillar placard or manual. Footprint area ≈ load ÷ pressure; the rolling-resistance change is an illustrative trend, not a measured figure for any tyre.",
+  "മർദ്ദം കാറിന്റെ ഡോർ തൂണിലെ ലേബലിലോ മാനുവലിലോ ഉള്ള മൂല്യത്തിന്റെ ശതമാനമായി കാണിക്കുന്നു. തൊടുന്ന ഭാഗത്തിന്റെ വിസ്തീർണം ≈ ഭാരം ÷ മർദ്ദം; ഉരുളൽ പ്രതിരോധത്തിലെ മാറ്റം ഒരു പ്രവണത മാത്രം, ഏതെങ്കിലും ടയറിന്റെ അളവല്ല."
+ ],
+ "tpPressure": [
+  "Pressure (of recommended)",
+  "മർദ്ദം (ശുപാർശ ചെയ്തതിന്റെ)"
+ ],
+ "tpLoad": [
+  "Load",
+  "ഭാരം"
+ ],
+ "tpNormal": [
+  "Driver + 1",
+  "ഡ്രൈവർ + 1"
+ ],
+ "tpFull": [
+  "Fully loaded",
+  "മുഴുവൻ ഭാരം"
+ ],
+ "tpUnder": [
+  "Under-inflated — tyre flexes and heats up, edges wear, steering feels vague",
+  "മർദ്ദം കുറവ് — ടയർ വളഞ്ഞ് ചൂടാകുന്നു, അരികുകൾ തേയുന്നു, സ്റ്റീയറിങ് അയഞ്ഞതായി തോന്നും"
+ ],
+ "tpOver": [
+  "Over-inflated — smaller footprint, less grip, centre wears, harsh ride",
+  "മർദ്ദം കൂടുതൽ — തൊടുന്ന ഭാഗം കുറവ്, ഗ്രിപ്പ് കുറവ്, നടുഭാഗം തേയുന്നു, കുലുക്കമുള്ള യാത്ര"
+ ],
+ "tpOk": [
+  "About right — even footprint and wear",
+  "ശരിയായ നിലയിൽ — തുല്യമായ തൊടലും തേയ്മാനവും"
+ ],
+ "tpArea": [
+  "Footprint area",
+  "തൊടുന്ന ഭാഗത്തിന്റെ വിസ്തീർണം"
+ ],
+ "tpRR": [
+  "Rolling resistance (fuel)",
+  "ഉരുളൽ പ്രതിരോധം (ഇന്ധനം)"
+ ],
+ "tpSide": [
+  "Tyre from the front",
+  "മുന്നിൽ നിന്ന് ടയർ"
+ ],
+ "tpFoot": [
+  "Footprint on the road",
+  "റോഡിൽ തൊടുന്ന ഭാഗം"
+ ],
+ "tpWearEdges": [
+  "Wears on both edges",
+  "ഇരു അരികുകളിലും തേയ്മാനം"
+ ],
+ "tpWearCentre": [
+  "Wears in the centre",
+  "നടുവിൽ തേയ്മാനം"
+ ],
+ "tpWearEven": [
+  "Even wear",
+  "തുല്യ തേയ്മാനം"
+ ],
+ "tpTip": [
+  "Check pressures when the tyres are cold, at least every couple of weeks, using the figures on the door pillar.",
+  "ടയർ തണുത്തിരിക്കുമ്പോൾ, രണ്ടാഴ്ചയിലൊരിക്കലെങ്കിലും, ഡോർ തൂണിലെ കണക്കുകൾ ഉപയോഗിച്ച് മർദ്ദം പരിശോധിക്കുക."
+ ],
+ "tpLoadTip": [
+  "Most placards give a higher pressure for a full load — use it before a loaded trip.",
+  "മിക്ക ലേബലുകളിലും മുഴുവൻ ഭാരത്തിന് ഉയർന്ന മർദ്ദം നൽകിയിരിക്കും — ഭാരമുള്ള യാത്രയ്ക്ക് മുമ്പ് അത് ഉപയോഗിക്കുക."
+ ],
+ "lab_slope": [
+  "Braking on a slope",
+  "ചരിവിൽ ബ്രേക്കിങ്"
+ ],
+ "labSub_slope": [
+  "Downhill, gravity keeps pushing. How much longer is the stop?",
+  "ഇറക്കത്തിൽ ഗുരുത്വാകർഷണം തള്ളിക്കൊണ്ടേയിരിക്കും. നിർത്താൻ എത്ര കൂടുതൽ ദൂരം വേണം?"
+ ],
+ "m_slope": [
+  "Braking deceleration = g × (μ·cos θ ± sin θ) for a steady slope θ; uphill adds, downhill subtracts. Braking distance only (no reaction time). Grip values are typical round numbers.",
+  "ബ്രേക്കിങ് മന്ദീകരണം = g × (μ·cos θ ± sin θ), θ സ്ഥിരമായ ചരിവ്; കയറ്റത്തിൽ കൂടുന്നു, ഇറക്കത്തിൽ കുറയുന്നു. ബ്രേക്കിങ് ദൂരം മാത്രം (പ്രതികരണ സമയം ഇല്ല). ഗ്രിപ്പ് മൂല്യങ്ങൾ സാധാരണ ഏകദേശ സംഖ്യകൾ."
+ ],
+ "slGrade": [
+  "Slope (− downhill, + uphill)",
+  "ചരിവ് (− ഇറക്കം, + കയറ്റം)"
+ ],
+ "slNoStop": [
+  "On this slope and surface the tyres cannot stop the car — it keeps sliding",
+  "ഈ ചരിവിലും പ്രതലത്തിലും ടയറുകൾക്ക് കാർ നിർത്താനാവില്ല — അത് തെന്നിക്കൊണ്ടിരിക്കും"
+ ],
+ "slDown": [
+  "Downhill: about {p}% longer than on the flat",
+  "ഇറക്കം: നിരപ്പിനേക്കാൾ ഏകദേശം {p}% കൂടുതൽ ദൂരം"
+ ],
+ "slUp": [
+  "Uphill: about {p}% shorter than on the flat",
+  "കയറ്റം: നിരപ്പിനേക്കാൾ ഏകദേശം {p}% കുറവ് ദൂരം"
+ ],
+ "slFlatSay": [
+  "Flat road",
+  "നിരപ്പായ റോഡ്"
+ ],
+ "slDist": [
+  "Braking distance here",
+  "ഇവിടെ ബ്രേക്കിങ് ദൂരം"
+ ],
+ "slFlat": [
+  "On the flat",
+  "നിരപ്പിൽ"
+ ],
+ "slThis": [
+  "On this slope",
+  "ഈ ചരിവിൽ"
+ ],
+ "slTip": [
+  "On ghat roads, leave a bigger gap going downhill and slow down before the bend.",
+  "ഘാട്ട് റോഡുകളിൽ ഇറങ്ങുമ്പോൾ കൂടുതൽ അകലം വിടുക, വളവിന് മുമ്പേ വേഗം കുറയ്ക്കുക."
+ ],
+ "lab_abs": [
+  "ABS and locked wheels",
+  "ABS-ഉം ലോക്കായ ചക്രങ്ങളും"
+ ],
+ "labSub_abs": [
+  "Why a locked wheel can't steer, and what ABS does about it.",
+  "ലോക്കായ ചക്രത്തിന് എന്തുകൊണ്ട് സ്റ്റീയർ ചെയ്യാനാവില്ല, ABS അതിന് എന്ത് ചെയ്യുന്നു."
+ ],
+ "m_abs": [
+  "Grip is shown against wheel slip (0% rolling, 100% locked) with a standard-shaped curve peaking near 15% slip. ABS is modelled as holding slip near that peak. Steering grip falls as slip rises. Shapes are typical, not measured for a specific tyre.",
+  "ഗ്രിപ്പ് ചക്രത്തിന്റെ സ്ലിപ്പിനെതിരെ (0% ഉരുളുന്നു, 100% ലോക്ക്) കാണിക്കുന്നു; ഏകദേശം 15% സ്ലിപ്പിൽ ഉയർന്ന വക്രം. ABS സ്ലിപ്പ് ആ ഉയർന്ന നിലയ്ക്ക് അടുത്ത് നിർത്തുന്നതായി മാതൃകയാക്കി. സ്ലിപ്പ് കൂടുമ്പോൾ സ്റ്റീയറിങ് ഗ്രിപ്പ് കുറയുന്നു. രൂപങ്ങൾ സാധാരണ രീതിയിൽ, ഒരു ടയറിന്റെ അളവല്ല."
+ ],
+ "abPedal": [
+  "Brake pedal",
+  "ബ്രേക്ക് പെഡൽ"
+ ],
+ "abAbs": [
+  "ABS",
+  "ABS"
+ ],
+ "on": [
+  "On",
+  "ഓൺ"
+ ],
+ "off": [
+  "Off",
+  "ഓഫ്"
+ ],
+ "abLocked": [
+  "Wheels locked — the car slides straight on and will not steer",
+  "ചക്രങ്ങൾ ലോക്കായി — കാർ നേരെ തെന്നുന്നു, തിരിയില്ല"
+ ],
+ "abWorking": [
+  "ABS working — keep pressing firmly; the pedal pulsing is normal",
+  "ABS പ്രവർത്തിക്കുന്നു — ഉറച്ച് അമർത്തിക്കൊണ്ടിരിക്കുക; പെഡൽ വിറയ്ക്കുന്നത് സാധാരണമാണ്"
+ ],
+ "abLight": [
+  "Light braking — plenty of steering left",
+  "ചെറിയ ബ്രേക്കിങ് — ധാരാളം സ്റ്റീയറിങ് ഗ്രിപ്പ് ബാക്കി"
+ ],
+ "abBrake": [
+  "Braking grip",
+  "ബ്രേക്കിങ് ഗ്രിപ്പ്"
+ ],
+ "abSteer": [
+  "Steering grip left",
+  "ബാക്കിയുള്ള സ്റ്റീയറിങ് ഗ്രിപ്പ്"
+ ],
+ "abStop": [
+  "Stop from 60 km/h",
+  "60 km/h-ൽ നിന്ന് നിർത്താൻ"
+ ],
+ "abSlip": [
+  "Wheel slip →",
+  "ചക്രത്തിന്റെ സ്ലിപ്പ് →"
+ ],
+ "abGripAx": [
+  "Grip",
+  "ഗ്രിപ്പ്"
+ ],
+ "abCanSteer": [
+  "Can steer around",
+  "ചുറ്റി തിരിയാം"
+ ],
+ "abNoSteer": [
+  "Cannot steer",
+  "തിരിയാനാവില്ല"
+ ],
+ "abTip": [
+  "In an emergency with ABS: press hard, keep pressing and steer where you want to go.",
+  "ABS ഉള്ളപ്പോൾ അടിയന്തരഘട്ടത്തിൽ: ശക്തമായി അമർത്തുക, അമർത്തിക്കൊണ്ടിരിക്കുക, പോകേണ്ടിടത്തേക്ക് സ്റ്റീയർ ചെയ്യുക."
+ ],
+ "lab_weighttransfer": [
+  "Weight transfer",
+  "ഭാരമാറ്റം"
+ ],
+ "labSub_weighttransfer": [
+  "Braking pushes the load onto the front tyres; accelerating moves it back.",
+  "ബ്രേക്കിങ് ഭാരം മുൻ ടയറുകളിലേക്ക് തള്ളുന്നു; ത്വരണം പിന്നിലേക്ക് മാറ്റുന്നു."
+ ],
+ "m_weighttransfer": [
+  "Load shift = acceleration × centre-of-gravity height ÷ wheelbase, starting from a typical 60/40 front/rear split. Suspension and aerodynamics are ignored.",
+  "ഭാരമാറ്റം = ത്വരണം × ഗുരുത്വകേന്ദ്രത്തിന്റെ ഉയരം ÷ വീൽബേസ്; സാധാരണ 60/40 മുൻ/പിൻ വിഭജനത്തിൽ നിന്ന്. സസ്പെൻഷനും വായുഘടകങ്ങളും ഒഴിവാക്കി."
+ ],
+ "wtAccel": [
+  "Braking (−) / accelerating (+)",
+  "ബ്രേക്കിങ് (−) / ത്വരണം (+)"
+ ],
+ "wtHeight": [
+  "Centre-of-gravity height",
+  "ഗുരുത്വകേന്ദ്രത്തിന്റെ ഉയരം"
+ ],
+ "wtWheelbase": [
+  "Wheelbase",
+  "വീൽബേസ്"
+ ],
+ "wtBrake": [
+  "Hard braking: the front tyres carry most of the load, the rear goes light and can slide",
+  "ശക്തമായ ബ്രേക്കിങ്: മുൻ ടയറുകൾ ഭൂരിഭാഗം ഭാരവും വഹിക്കുന്നു, പിൻഭാഗം ഭാരം കുറഞ്ഞ് തെന്നാം"
+ ],
+ "wtSteady": [
+  "Steady: load shared normally",
+  "സ്ഥിരം: ഭാരം സാധാരണ പോലെ പങ്കിടുന്നു"
+ ],
+ "wtFront": [
+  "Front",
+  "മുൻ"
+ ],
+ "wtRear": [
+  "Rear",
+  "പിൻ"
+ ],
+ "wtBraking": [
+  "braking",
+  "ബ്രേക്കിങ്"
+ ],
+ "wtAccelerating": [
+  "accelerating",
+  "ത്വരണം"
+ ],
+ "wtTip": [
+  "Brake in a straight line before a bend; braking hard while turning overloads the front tyres.",
+  "വളവിന് മുമ്പ് നേർരേഖയിൽ ബ്രേക്ക് ചെയ്യുക; തിരിയുമ്പോൾ ശക്തമായി ബ്രേക്ക് ചെയ്യുന്നത് മുൻ ടയറുകളെ അമിതഭാരത്തിലാക്കും."
+ ],
+ "lab_fog": [
+  "Fog",
+  "മൂടൽമഞ്ഞ്"
+ ],
+ "labSub_fog": [
+  "Match your speed to how far you can see.",
+  "കാണാനാകുന്ന ദൂരത്തിനനുസരിച്ച് വേഗം ക്രമീകരിക്കുക."
+ ],
+ "m_fog": [
+  "Stopping distance = reaction distance + v² ÷ (2·μ·g) with typical grip values; the car must stop within the visibility distance to avoid a stationary vehicle. Real fog is patchy and visibility can drop suddenly.",
+  "നിർത്താനുള്ള ദൂരം = പ്രതികരണ ദൂരം + v² ÷ (2·μ·g), സാധാരണ ഗ്രിപ്പ് മൂല്യങ്ങളോടെ; നിർത്തിയിട്ട വാഹനത്തിൽ ഇടിക്കാതിരിക്കാൻ കാഴ്ചദൂരത്തിനുള്ളിൽ നിർത്തണം. യഥാർത്ഥ മൂടൽമഞ്ഞ് ഇടവിട്ടതാണ്; കാഴ്ച പെട്ടെന്ന് കുറയാം."
+ ],
+ "fgVis": [
+  "You can see",
+  "കാണാനാകുന്ന ദൂരം"
+ ],
+ "fgDrive": [
+  "Drive into the fog",
+  "മൂടൽമഞ്ഞിലേക്ക് ഓടിക്കുക"
+ ],
+ "fgStopped": [
+  "stopped car",
+  "നിർത്തിയ കാർ"
+ ],
+ "fgOk": [
+  "You stop in time — {m} m to spare",
+  "സമയത്ത് നിർത്തുന്നു — {m} m ബാക്കി"
+ ],
+ "fgOver": [
+  "You would hit it — you need {m} m more than you can see",
+  "ഇടിക്കും — കാണാവുന്നതിലും {m} m കൂടുതൽ വേണം"
+ ],
+ "fgMax": [
+  "Fastest speed that still stops in time",
+  "സമയത്ത് നിർത്താനാകുന്ന പരമാവധി വേഗം"
+ ],
+ "fgTip": [
+  "Use dipped headlights and fog lamps (high beam reflects back off fog), keep a much larger gap, and pull well off the road if you must stop.",
+  "താഴ്ത്തിയ ഹെഡ്‌ലൈറ്റും ഫോഗ് ലാമ്പും ഉപയോഗിക്കുക (ഹൈ ബീം മഞ്ഞിൽ തിരിച്ചടിക്കും), വളരെ കൂടുതൽ അകലം വിടുക, നിർത്തേണ്ടിവന്നാൽ റോഡിൽ നിന്ന് നന്നായി മാറ്റി നിർത്തുക."
+ ],
+ "lab_eyesoff": [
+  "Eyes off the road",
+  "കണ്ണ് റോഡിൽ നിന്ന് മാറുമ്പോൾ"
+ ],
+ "labSub_eyesoff": [
+  "A quick look at the phone — how far do you drive blind?",
+  "ഫോണിലേക്ക് ഒരു നോട്ടം — എത്ര ദൂരം കണ്ണടച്ച് ഓടിക്കുന്നു?"
+ ],
+ "m_eyesoff": [
+  "Distance = speed × time. A cricket pitch is about 20 m; a city bus about 12 m. Real glances at a phone often repeat, adding up to much longer.",
+  "ദൂരം = വേഗം × സമയം. ഒരു ക്രിക്കറ്റ് പിച്ച് ഏകദേശം 20 m; ഒരു സിറ്റി ബസ് ഏകദേശം 12 m. ഫോണിലേക്കുള്ള നോട്ടങ്ങൾ പലപ്പോഴും ആവർത്തിക്കുന്നു, ആകെ സമയം വളരെ കൂടും."
+ ],
+ "eoSecs": [
+  "Looking away for",
+  "നോക്കാതിരിക്കുന്ന സമയം"
+ ],
+ "eoRun": [
+  "Look at the phone",
+  "ഫോണിലേക്ക് നോക്കുക"
+ ],
+ "eoSay": [
+  "You drive {m} m without seeing the road",
+  "റോഡ് കാണാതെ {m} m ഓടിക്കുന്നു"
+ ],
+ "eoDist": [
+  "Distance driven blind",
+  "കാണാതെ ഓടിച്ച ദൂരം"
+ ],
+ "eoPitch": [
+  "Cricket pitches",
+  "ക്രിക്കറ്റ് പിച്ചുകൾ"
+ ],
+ "eoBus": [
+  "Bus lengths",
+  "ബസ്സിന്റെ നീളങ്ങൾ"
+ ],
+ "eoBlind": [
+  "Not seen",
+  "കാണാത്തത്"
+ ],
+ "eoTip": [
+  "Set navigation and music before you move; let calls go to voicemail or pull over safely.",
+  "നീങ്ങുന്നതിന് മുമ്പ് നാവിഗേഷനും പാട്ടും ക്രമീകരിക്കുക; കോളുകൾ വോയ്‌സ്‌മെയിലിലേക്ക് പോകട്ടെ, അല്ലെങ്കിൽ സുരക്ഷിതമായി വണ്ടി ഒതുക്കുക."
+ ],
+ "lab_truckzones": [
+  "Truck and bus blind zones",
+  "ട്രക്കിന്റെയും ബസ്സിന്റെയും ബ്ലൈൻഡ് മേഖലകൾ"
+ ],
+ "labSub_truckzones": [
+  "Where a truck or bus driver cannot see you.",
+  "ട്രക്ക് അല്ലെങ്കിൽ ബസ് ഡ്രൈവർക്ക് നിങ്ങളെ കാണാനാകാത്ത ഇടങ്ങൾ."
+ ],
+ "m_truckzones": [
+  "Top view of a right-hand-drive truck or bus. Zone sizes are typical illustrations — real ones depend on the vehicle, its mirrors and the driver's seat. The left side is the largest because it is furthest from the driver.",
+  "വലത് സ്റ്റീയറിങ് ട്രക്കിന്റെ/ബസ്സിന്റെ മുകളിൽ നിന്നുള്ള കാഴ്ച. മേഖലകളുടെ വലുപ്പം സാധാരണ ഉദാഹരണങ്ങൾ — യഥാർത്ഥത്തിൽ വാഹനം, കണ്ണാടികൾ, ഡ്രൈവറുടെ സീറ്റ് എന്നിവയെ ആശ്രയിക്കും. ഡ്രൈവറിൽ നിന്ന് ഏറ്റവും അകലെയുള്ളതിനാൽ ഇടതുവശം ഏറ്റവും വലുത്."
+ ],
+ "tzVeh": [
+  "Vehicle",
+  "വാഹനം"
+ ],
+ "tzTruck": [
+  "Truck",
+  "ട്രക്ക്"
+ ],
+ "tzBus": [
+  "Bus",
+  "ബസ്"
+ ],
+ "tzSide": [
+  "Across (− left, + right)",
+  "കുറുകെ (− ഇടത്, + വലത്)"
+ ],
+ "tzAlong": [
+  "Along (− behind, + ahead)",
+  "നീളത്തിൽ (− പിന്നിൽ, + മുന്നിൽ)"
+ ],
+ "tzHidden": [
+  "In a blind zone — the driver cannot see you",
+  "ബ്ലൈൻഡ് മേഖലയിൽ — ഡ്രൈവർക്ക് നിങ്ങളെ കാണാനാവില്ല"
+ ],
+ "tzSeen": [
+  "The driver can see you here",
+  "ഇവിടെ ഡ്രൈവർക്ക് നിങ്ങളെ കാണാം"
+ ],
+ "tzTapHint": [
+  "Tap the road to move the rider",
+  "റൈഡറെ നീക്കാൻ റോഡിൽ തൊടുക"
+ ],
+ "tzTip": [
+  "If you can't see the driver's face in their mirror, they can't see you. Never wait on the left of a truck or bus at a junction.",
+  "അവരുടെ കണ്ണാടിയിൽ ഡ്രൈവറുടെ മുഖം കാണാനാകുന്നില്ലെങ്കിൽ അവർക്ക് നിങ്ങളെയും കാണാനാവില്ല. ജംഗ്ഷനിൽ ട്രക്കിന്റെയോ ബസ്സിന്റെയോ ഇടതുവശത്ത് ഒരിക്കലും കാത്തുനിൽക്കരുത്."
+ ],
+ "lab_seatbelt": [
+  "Seat belts",
+  "സീറ്റ് ബെൽറ്റ്"
+ ],
+ "labSub_seatbelt": [
+  "The same crash, belted and unbelted — and why nobody can hold a child.",
+  "ഒരേ ഇടി, ബെൽറ്റോടെയും ബെൽറ്റില്ലാതെയും — എന്തുകൊണ്ട് ആർക്കും ഒരു കുട്ടിയെ പിടിച്ചുനിർത്താനാവില്ല."
+ ],
+ "m_seatbelt": [
+  "Average deceleration = v² ÷ (2·d·g). Belted, the occupant stops over the crumple zone plus about 25 cm of belt ride-down; unbelted, over a few centimetres when hitting the interior. Peak forces are higher than these averages. A 12 kg child is used for the lap example.",
+  "ശരാശരി മന്ദീകരണം = v² ÷ (2·d·g). ബെൽറ്റോടെ, യാത്രക്കാരൻ ക്രംപിൾ സോണും ഏകദേശം 25 cm ബെൽറ്റ് നീട്ടവും വഴി നിർത്തുന്നു; ബെൽറ്റില്ലാതെ, ഉൾഭാഗത്ത് ഇടിക്കുമ്പോൾ ഏതാനും സെന്റിമീറ്ററിൽ. ഉയർന്ന ബലങ്ങൾ ഈ ശരാശരിയേക്കാൾ കൂടുതലാണ്. മടിയിലെ ഉദാഹരണത്തിന് 12 kg കുട്ടിയെ ഉപയോഗിച്ചു."
+ ],
+ "sbCrumple": [
+  "Crumple zone",
+  "ക്രംപിൾ സോൺ"
+ ],
+ "sbChild": [
+  "Child held on a lap",
+  "മടിയിൽ പിടിച്ച കുട്ടി"
+ ],
+ "sbCrash": [
+  "Crash",
+  "ഇടി"
+ ],
+ "sbBelted": [
+  "Belted",
+  "ബെൽറ്റോടെ"
+ ],
+ "sbUnbelted": [
+  "Unbelted",
+  "ബെൽറ്റില്ലാതെ"
+ ],
+ "sbSay": [
+  "Belted, you slow down over about {cm} cm; unbelted, over a few — about {x}× the force",
+  "ബെൽറ്റോടെ ഏകദേശം {cm} cm-ൽ വേഗം കുറയുന്നു; ബെൽറ്റില്ലാതെ ഏതാനും സെന്റിമീറ്ററിൽ — ഏകദേശം {x}× ബലം"
+ ],
+ "sbChildKg": [
+  "The child 'weighs' in the crash",
+  "ഇടിയിൽ കുട്ടിയുടെ 'ഭാരം'"
+ ],
+ "sbChildLine": [
+  "A 12 kg child would pull like {kg} kg — nobody can hold that",
+  "12 kg കുട്ടി {kg} kg പോലെ വലിക്കും — ആർക്കും അത് പിടിക്കാനാവില്ല"
+ ],
+ "sbStopsOver": [
+  "stops over about {cm} cm",
+  "ഏകദേശം {cm} cm-ൽ നിർത്തുന്നു"
+ ],
+ "sbTip": [
+  "Everyone belted, every seat, every trip. Children ride in a child seat that fits their size, never on a lap.",
+  "എല്ലാവരും, എല്ലാ സീറ്റിലും, എല്ലാ യാത്രയിലും ബെൽറ്റ് ധരിക്കുക. കുട്ടികൾ അവരുടെ വലുപ്പത്തിനുള്ള ചൈൽഡ് സീറ്റിൽ — ഒരിക്കലും മടിയിലല്ല."
+ ],
+ "lab_helmet": [
+  "Helmets",
+  "ഹെൽമെറ്റ്"
+ ],
+ "labSub_helmet": [
+  "How a helmet's foam liner turns a hard knock into a gentler stop.",
+  "ഹെൽമെറ്റിന്റെ ഫോം ലൈനർ ശക്തമായ ആഘാതത്തെ എങ്ങനെ മൃദുവാക്കുന്നു."
+ ],
+ "m_helmet": [
+  "Average head deceleration = v² ÷ (2·d·g), with about 35 mm of liner crush for a fastened helmet and a few millimetres without one. A loose strap can let the helmet come off, so it is treated like no helmet. The model does not predict injuries.",
+  "ശരാശരി തലയുടെ മന്ദീകരണം = v² ÷ (2·d·g); കെട്ടിയ ഹെൽമെറ്റിന് ഏകദേശം 35 mm ലൈനർ ചതയൽ, ഇല്ലെങ്കിൽ ഏതാനും മില്ലിമീറ്റർ. അയഞ്ഞ സ്ട്രാപ്പിൽ ഹെൽമെറ്റ് ഊരിപ്പോകാം, അതിനാൽ ഹെൽമെറ്റ് ഇല്ലാത്തതുപോലെ കണക്കാക്കി. പരിക്കുകൾ പ്രവചിക്കുന്നില്ല."
+ ],
+ "hmSpeed": [
+  "Head hits the ground at",
+  "തല നിലത്ത് ഇടിക്കുന്ന വേഗം"
+ ],
+ "hmHelmet": [
+  "Helmet",
+  "ഹെൽമെറ്റ്"
+ ],
+ "hmStrap": [
+  "Chin strap",
+  "ചിൻ സ്ട്രാപ്പ്"
+ ],
+ "hmTight": [
+  "Fastened",
+  "കെട്ടിയത്"
+ ],
+ "hmLoose": [
+  "Loose / open",
+  "അയഞ്ഞത് / തുറന്നത്"
+ ],
+ "hmWith": [
+  "The liner crushes and spreads the stop — far less force on the head",
+  "ലൈനർ ചതഞ്ഞ് ആഘാതം പരത്തുന്നു — തലയിൽ വളരെ കുറഞ്ഞ ബലം"
+ ],
+ "hmLooseSay": [
+  "A loose strap lets the helmet fly off before the impact",
+  "അയഞ്ഞ സ്ട്രാപ്പിൽ ഇടിക്കുന്നതിന് മുമ്പേ ഹെൽമെറ്റ് തെറിച്ചുപോകാം"
+ ],
+ "hmWithout": [
+  "Without a helmet the head stops in a few millimetres",
+  "ഹെൽമെറ്റില്ലെങ്കിൽ തല ഏതാനും മില്ലിമീറ്ററിൽ നിർത്തുന്നു"
+ ],
+ "hmG": [
+  "Average force on the head",
+  "തലയിലെ ശരാശരി ബലം"
+ ],
+ "hmFall": [
+  "Like a fall from",
+  "ഇത്ര ഉയരത്തിൽ നിന്നുള്ള വീഴ്ച പോലെ"
+ ],
+ "hmLiner": [
+  "Foam liner crushes",
+  "ഫോം ലൈനർ ചതയുന്നു"
+ ],
+ "hmNoLiner": [
+  "Nothing to crush",
+  "ചതയാൻ ഒന്നുമില്ല"
+ ],
+ "hmStopIn": [
+  "Head stops in about {mm} mm",
+  "തല ഏകദേശം {mm} mm-ൽ നിർത്തുന്നു"
+ ],
+ "hmTip": [
+  "Wear a certified helmet that fits snugly, strap fastened, for every ride — pillion too. Replace it after any crash.",
+  "എല്ലാ യാത്രയിലും — പിന്നിലിരിക്കുന്നവരും — ശരിയായി ചേരുന്ന സർട്ടിഫൈഡ് ഹെൽമെറ്റ് സ്ട്രാപ്പ് കെട്ടി ധരിക്കുക. ഏതെങ്കിലും വീഴ്ചയ്ക്ക് ശേഷം മാറ്റുക."
+ ],
+ "lab_rollover": [
+  "Rollover risk",
+  "മറിയാനുള്ള സാധ്യത"
+ ],
+ "labSub_rollover": [
+  "Tall, narrow and roof-loaded vehicles tip sooner.",
+  "ഉയരമുള്ളതും വീതി കുറഞ്ഞതും മേൽക്കൂരയിൽ ഭാരമുള്ളതുമായ വാഹനങ്ങൾ നേരത്തെ മറിയുന്നു."
+ ],
+ "m_rollover": [
+  "Static stability factor = track width ÷ (2 × centre-of-gravity height); on a flat road a vehicle tips when sideways force exceeds it, and skids first if grip runs out sooner. Kerbs, soft ground and sudden steering can trip a vehicle well below these figures. Dimensions are typical, not for any model.",
+  "സ്റ്റാറ്റിക് സ്റ്റെബിലിറ്റി ഫാക്ടർ = ചക്ര വീതി ÷ (2 × ഗുരുത്വകേന്ദ്രത്തിന്റെ ഉയരം); നിരപ്പായ റോഡിൽ വശത്തേക്കുള്ള ബലം ഇതിനേക്കാൾ കൂടുമ്പോൾ മറിയും, ഗ്രിപ്പ് നേരത്തെ തീർന്നാൽ ആദ്യം തെന്നും. അരിക്കല്ല്, മൃദുവായ നിലം, പെട്ടെന്നുള്ള സ്റ്റീയറിങ് എന്നിവ ഇതിനേക്കാൾ വളരെ താഴെ വാഹനം മറിക്കാം. അളവുകൾ സാധാരണ, ഏതെങ്കിലും മോഡലിന്റേതല്ല."
+ ],
+ "roVeh": [
+  "Vehicle",
+  "വാഹനം"
+ ],
+ "roHatch": [
+  "Hatchback",
+  "ഹാച്ച്ബാക്ക്"
+ ],
+ "roSuv": [
+  "SUV",
+  "SUV"
+ ],
+ "roVan": [
+  "Tall van",
+  "ഉയരമുള്ള വാൻ"
+ ],
+ "roRoof": [
+  "Luggage on the roof",
+  "മേൽക്കൂരയിൽ ലഗേജ്"
+ ],
+ "roLat": [
+  "Sideways force in the bend",
+  "വളവിലെ വശത്തേക്കുള്ള ബലം"
+ ],
+ "roTip": [
+  "It tips over before the tyres slide",
+  "ടയർ തെന്നുന്നതിന് മുമ്പ് മറിയുന്നു"
+ ],
+ "roSkid": [
+  "The tyres slide first — but a kerb or soft verge could still trip it",
+  "ആദ്യം ടയർ തെന്നുന്നു — എന്നാൽ അരിക്കല്ലോ മൃദുവായ അരികോ ഇപ്പോഴും മറിക്കാം"
+ ],
+ "roOk": [
+  "Stable at this force",
+  "ഈ ബലത്തിൽ സ്ഥിരത"
+ ],
+ "roSSF": [
+  "Stability factor",
+  "സ്ഥിരത ഘടകം"
+ ],
+ "roTipAt": [
+  "Tips at about",
+  "ഏകദേശം ഇതിൽ മറിയും"
+ ],
+ "roGrip": [
+  "Tyres slide at about",
+  "ഏകദേശം ഇതിൽ ടയർ തെന്നും"
+ ],
+ "roTip2": [
+  "Keep heavy loads low and inside the vehicle, and slow down more for bends in tall vehicles.",
+  "ഭാരമുള്ള സാധനങ്ങൾ താഴെയും വാഹനത്തിനുള്ളിലും വയ്ക്കുക; ഉയരമുള്ള വാഹനങ്ങളിൽ വളവുകൾക്ക് കൂടുതൽ വേഗം കുറയ്ക്കുക."
+ ],
+ "lab_gears": [
+  "Gears and engine speed",
+  "ഗിയറും എൻജിൻ വേഗവും"
+ ],
+ "labSub_gears": [
+  "Pick a gear and speed — watch the rev counter.",
+  "ഗിയറും വേഗവും തിരഞ്ഞെടുക്കുക — റെവ് കൗണ്ടർ ശ്രദ്ധിക്കുക."
+ ],
+ "m_gears": [
+  "Engine rpm = wheel rpm × gear ratio × final drive, using typical ratios for a small five-speed car. Comfortable and safe rpm ranges vary by engine; check your owner's manual.",
+  "എൻജിൻ rpm = ചക്ര rpm × ഗിയർ അനുപാതം × ഫൈനൽ ഡ്രൈവ്; ചെറിയ അഞ്ച് സ്പീഡ് കാറിന്റെ സാധാരണ അനുപാതങ്ങൾ. സുഖകരവും സുരക്ഷിതവുമായ rpm പരിധി എൻജിൻ അനുസരിച്ച് മാറും; ഓണേഴ്സ് മാനുവൽ നോക്കുക."
+ ],
+ "grGear": [
+  "Gear",
+  "ഗിയർ"
+ ],
+ "grOver": [
+  "Over-revving — change up now",
+  "അമിത റെവ് — ഉടൻ ഗിയർ കൂട്ടുക"
+ ],
+ "grLug": [
+  "Labouring — the engine is too slow for this gear; change down",
+  "എൻജിൻ ബുദ്ധിമുട്ടുന്നു — ഈ ഗിയറിന് വേഗം വളരെ കുറവ്; ഗിയർ കുറയ്ക്കുക"
+ ],
+ "grHigh": [
+  "High revs — fine for overtaking, noisy and thirsty otherwise",
+  "ഉയർന്ന റെവ് — ഓവർടേക്കിന് കൊള്ളാം, അല്ലെങ്കിൽ ശബ്ദവും ഇന്ധനച്ചെലവും"
+ ],
+ "grOk": [
+  "Comfortable engine speed",
+  "സുഖകരമായ എൻജിൻ വേഗം"
+ ],
+ "grRpm": [
+  "Engine speed (rpm)",
+  "എൻജിൻ വേഗം (rpm)"
+ ],
+ "grPull": [
+  "Pulling power vs 5th gear",
+  "5-ാം ഗിയറുമായി താരതമ്യം ചെയ്ത വലിവ്"
+ ],
+ "grBest": [
+  "Suggested gear",
+  "നിർദ്ദേശിക്കുന്ന ഗിയർ"
+ ],
+ "grTip": [
+  "Lower gears multiply pulling power — use them to climb and to hold speed on long descents.",
+  "താഴ്ന്ന ഗിയറുകൾ വലിവ് കൂട്ടുന്നു — കയറ്റത്തിനും നീണ്ട ഇറക്കത്തിൽ വേഗം പിടിച്ചുനിർത്താനും ഉപയോഗിക്കുക."
+ ],
+ "lab_economy": [
+  "Fuel and speed",
+  "ഇന്ധനവും വേഗവും"
+ ],
+ "labSub_economy": [
+  "Find the speed where your car uses the least fuel per kilometre.",
+  "കിലോമീറ്ററിന് ഏറ്റവും കുറവ് ഇന്ധനം ഉപയോഗിക്കുന്ന വേഗം കണ്ടെത്തുക."
+ ],
+ "m_economy": [
+  "Fuel per km = (air drag + rolling resistance) ÷ engine efficiency, plus accessory power spread over the distance, for a typical small petrol car. Real figures depend on the car, gear, traffic and driving style.",
+  "കിലോമീറ്ററിനുള്ള ഇന്ധനം = (വായു പ്രതിരോധം + ഉരുളൽ പ്രതിരോധം) ÷ എൻജിൻ കാര്യക്ഷമത, ഒപ്പം ആക്സസറി പവർ — സാധാരണ ചെറിയ പെട്രോൾ കാറിന്. യഥാർത്ഥ കണക്കുകൾ കാർ, ഗിയർ, ട്രാഫിക്, ഡ്രൈവിങ് ശൈലി എന്നിവയെ ആശ്രയിക്കും."
+ ],
+ "ecAc": [
+  "Air-conditioning",
+  "എയർ കണ്ടീഷനിങ്"
+ ],
+ "ecLoad": [
+  "Load",
+  "ഭാരം"
+ ],
+ "ecOne": [
+  "Driver only",
+  "ഡ്രൈവർ മാത്രം"
+ ],
+ "ecFull": [
+  "Full car",
+  "നിറഞ്ഞ കാർ"
+ ],
+ "ecRoof": [
+  "Roof carrier",
+  "മേൽക്കൂര ക്യാരിയർ"
+ ],
+ "ecHigh": [
+  "About {p}% more fuel than at the best speed",
+  "മികച്ച വേഗത്തേക്കാൾ ഏകദേശം {p}% കൂടുതൽ ഇന്ധനം"
+ ],
+ "ecGood": [
+  "Close to the most economical speed",
+  "ഏറ്റവും ലാഭകരമായ വേഗത്തിനടുത്ത്"
+ ],
+ "ecL100": [
+  "Fuel use",
+  "ഇന്ധന ഉപയോഗം"
+ ],
+ "ecKmpl": [
+  "Mileage",
+  "മൈലേജ്"
+ ],
+ "ecBest": [
+  "Most economical",
+  "ഏറ്റവും ലാഭകരം"
+ ],
+ "ecBestShort": [
+  "best",
+  "മികച്ചത്"
+ ],
+ "ecTip": [
+  "Smooth driving, steady speeds and correct tyre pressures save more fuel than any gadget.",
+  "സുഗമമായ ഡ്രൈവിങ്, സ്ഥിരമായ വേഗം, ശരിയായ ടയർ മർദ്ദം എന്നിവ ഏത് ഉപകരണത്തേക്കാളും ഇന്ധനം ലാഭിക്കും."
+ ],
+ "lab_drag": [
+  "Air resistance",
+  "വായു പ്രതിരോധം"
+ ],
+ "labSub_drag": [
+  "Why going faster gets so expensive: power rises with the cube of speed.",
+  "വേഗം കൂടുന്നത് എന്തുകൊണ്ട് ഇത്ര ചെലവേറിയതാകുന്നു: പവർ വേഗത്തിന്റെ ഘനത്തിനൊത്ത് കൂടുന്നു."
+ ],
+ "m_drag": [
+  "Power = ½·ρ·Cd·A·v³ (air) + Crr·m·g·v (tyres), with typical values for a small car. Open windows and roof racks are shown as typical increases in drag area.",
+  "പവർ = ½·ρ·Cd·A·v³ (വായു) + Crr·m·g·v (ടയർ), ചെറിയ കാറിന്റെ സാധാരണ മൂല്യങ്ങൾ. തുറന്ന ജനലുകളും റൂഫ് റാക്കും വായു പ്രതിരോധ വിസ്തീർണത്തിലെ സാധാരണ വർധനവായി കാണിക്കുന്നു."
+ ],
+ "drShape": [
+  "Car",
+  "കാർ"
+ ],
+ "drClosed": [
+  "Windows closed",
+  "ജനലുകൾ അടച്ചു"
+ ],
+ "drOpen": [
+  "Windows open",
+  "ജനലുകൾ തുറന്നു"
+ ],
+ "drRoof": [
+  "Roof rack",
+  "റൂഫ് റാക്ക്"
+ ],
+ "drCube": [
+  "Double the speed → about 8× the power to push the air aside",
+  "വേഗം ഇരട്ടിയാക്കിയാൽ → വായു തള്ളിമാറ്റാൻ ഏകദേശം 8× പവർ"
+ ],
+ "drPower": [
+  "Power needed",
+  "ആവശ്യമായ പവർ"
+ ],
+ "drShare": [
+  "Spent on air",
+  "വായുവിനായി ചെലവ്"
+ ],
+ "drHalf": [
+  "Compared with half this speed",
+  "ഇതിന്റെ പകുതി വേഗവുമായി താരതമ്യം"
+ ],
+ "drAir": [
+  "Air",
+  "വായു"
+ ],
+ "drRolling": [
+  "Tyres",
+  "ടയർ"
+ ],
+ "drTip": [
+  "Remove empty roof racks and keep speeds moderate on highways.",
+  "ഒഴിഞ്ഞ റൂഫ് റാക്ക് നീക്കം ചെയ്യുക, ഹൈവേകളിൽ മിതമായ വേഗം പാലിക്കുക."
+ ],
+ "lab_regen": [
+  "Regenerative braking",
+  "റീജനറേറ്റീവ് ബ്രേക്കിങ്"
+ ],
+ "labSub_regen": [
+  "Electric vehicles turn some braking energy back into charge.",
+  "ഇലക്ട്രിക് വാഹനങ്ങൾ ബ്രേക്കിങ് ഊർജത്തിന്റെ ഒരു ഭാഗം വീണ്ടും ചാർജാക്കുന്നു."
+ ],
+ "m_regen": [
+  "Movement energy = ½·m·v². The recovered share is a slider because it varies with the vehicle, battery and speed; the distance gained assumes about 150 Wh per km.",
+  "ചലന ഊർജം = ½·m·v². വീണ്ടെടുക്കുന്ന ഭാഗം വാഹനം, ബാറ്ററി, വേഗം എന്നിവ അനുസരിച്ച് മാറുന്നതിനാൽ സ്ലൈഡറായി നൽകി; കിട്ടുന്ന ദൂരം കിലോമീറ്ററിന് ഏകദേശം 150 Wh എന്ന് കണക്കാക്കുന്നു."
+ ],
+ "rgMass": [
+  "Vehicle mass",
+  "വാഹനത്തിന്റെ ഭാരം"
+ ],
+ "rgEff": [
+  "Energy recovered",
+  "വീണ്ടെടുക്കുന്ന ഊർജം"
+ ],
+ "rgSay": [
+  "Each stop returns about {p}% of the movement energy to the battery",
+  "ഓരോ നിർത്തലിലും ചലന ഊർജത്തിന്റെ ഏകദേശം {p}% ബാറ്ററിയിലേക്ക് തിരികെ"
+ ],
+ "rgKE": [
+  "Movement energy",
+  "ചലന ഊർജം"
+ ],
+ "rgBack": [
+  "Back to the battery",
+  "ബാറ്ററിയിലേക്ക് തിരികെ"
+ ],
+ "rgKm": [
+  "Extra driving it gives",
+  "അതുകൊണ്ട് കിട്ടുന്ന അധിക ദൂരം"
+ ],
+ "rgSplit": [
+  "Where one stop's energy goes",
+  "ഒരു നിർത്തലിന്റെ ഊർജം എവിടെ പോകുന്നു"
+ ],
+ "rgToBattery": [
+  "Battery",
+  "ബാറ്ററി"
+ ],
+ "rgToHeat": [
+  "Heat",
+  "ചൂട്"
+ ],
+ "rgTip": [
+  "Regeneration is gentle; in an emergency press the brake pedal hard — the friction brakes and ABS do the real stopping.",
+  "റീജനറേഷൻ മൃദുവാണ്; അടിയന്തരഘട്ടത്തിൽ ബ്രേക്ക് പെഡൽ ശക്തമായി അമർത്തുക — ഫ്രിക്ഷൻ ബ്രേക്കുകളും ABS-ഉം ആണ് യഥാർത്ഥത്തിൽ നിർത്തുന്നത്."
+ ],
+ "lab_ghat": [
+  "Ghat roads and hot brakes",
+  "ഘാട്ട് റോഡും ചൂടാകുന്ന ബ്രേക്കും"
+ ],
+ "labSub_ghat": [
+  "Going down a long descent, where does all that energy go?",
+  "നീണ്ട ഇറക്കം ഇറങ്ങുമ്പോൾ ആ ഊർജമെല്ലാം എവിടെ പോകുന്നു?"
+ ],
+ "m_ghat": [
+  "Energy released = m·g·height; about 20% is taken as lost to air and tyres, the engine (low gear) takes the share you choose, and the rest goes into the brakes. The temperature rise assumes none of that heat cools away, so it exaggerates — but shows why continuous braking makes brakes fade.",
+  "പുറത്തുവരുന്ന ഊർജം = m·g·ഉയരം; ഏകദേശം 20% വായുവിലും ടയറിലും നഷ്ടപ്പെടുന്നു, നിങ്ങൾ തിരഞ്ഞെടുക്കുന്ന ഭാഗം എൻജിൻ (താഴ്ന്ന ഗിയർ) എടുക്കുന്നു, ബാക്കി ബ്രേക്കിലേക്ക്. ചൂട് ഒട്ടും തണുക്കുന്നില്ലെന്ന് കണക്കാക്കുന്നതിനാൽ താപനില കൂട്ടിക്കാണിക്കുന്നു — എന്നാൽ തുടർച്ചയായ ബ്രേക്കിങ് ബ്രേക്കിനെ ദുർബലമാക്കുന്നത് എന്തുകൊണ്ടെന്ന് കാണിക്കുന്നു."
+ ],
+ "ghDrop": [
+  "Height you descend",
+  "ഇറങ്ങുന്ന ഉയരം"
+ ],
+ "ghVeh": [
+  "Vehicle",
+  "വാഹനം"
+ ],
+ "ghCar": [
+  "Car",
+  "കാർ"
+ ],
+ "ghLoaded": [
+  "Loaded car",
+  "ഭാരം നിറഞ്ഞ കാർ"
+ ],
+ "ghBus": [
+  "Bus",
+  "ബസ്"
+ ],
+ "ghEngine": [
+  "Engine braking (low gear)",
+  "എൻജിൻ ബ്രേക്കിങ് (താഴ്ന്ന ഗിയർ)"
+ ],
+ "ghDanger": [
+  "Far too much heat for the brakes — they would fade",
+  "ബ്രേക്കിന് വളരെയധികം ചൂട് — അവ ദുർബലമാകും"
+ ],
+ "ghHot": [
+  "Brakes get very hot — use a lower gear",
+  "ബ്രേക്ക് വളരെ ചൂടാകുന്നു — താഴ്ന്ന ഗിയർ ഉപയോഗിക്കുക"
+ ],
+ "ghOk": [
+  "Manageable with a low gear",
+  "താഴ്ന്ന ഗിയറോടെ നിയന്ത്രിക്കാം"
+ ],
+ "ghEnergy": [
+  "Energy released",
+  "പുറത്തുവരുന്ന ഊർജം"
+ ],
+ "ghBrakes": [
+  "Into the brakes",
+  "ബ്രേക്കിലേക്ക്"
+ ],
+ "ghTemp": [
+  "If none cooled away",
+  "ഒട്ടും തണുത്തില്ലെങ്കിൽ"
+ ],
+ "ghDropShort": [
+  "Descent",
+  "ഇറക്കം"
+ ],
+ "ghTip": [
+  "Go down in the same low gear you would use to climb, and brake in firm short applications rather than riding the pedal.",
+  "കയറാൻ ഉപയോഗിക്കുന്ന അതേ താഴ്ന്ന ഗിയറിൽ ഇറങ്ങുക; പെഡലിൽ കാൽ വച്ചുകൊണ്ടിരിക്കാതെ ഉറച്ച ചെറിയ ബ്രേക്കിങ്ങുകൾ ചെയ്യുക."
+ ],
+ "lab_overtaking": [
+  "Overtaking",
+  "ഓവർടേക്കിങ്"
+ ],
+ "labSub_overtaking": [
+  "How much clear road does passing a truck really need?",
+  "ഒരു ട്രക്കിനെ മറികടക്കാൻ യഥാർത്ഥത്തിൽ എത്ര ഒഴിഞ്ഞ റോഡ് വേണം?"
+ ],
+ "m_overtaking": [
+  "You must gain the truck's length plus your car and about 20 m of space before and after. Time = that distance ÷ speed difference; the oncoming car closes in during the same time. Speeds are held constant; real overtakes need extra margin.",
+  "ട്രക്കിന്റെ നീളം, നിങ്ങളുടെ കാർ, മുമ്പും ശേഷവും ഏകദേശം 20 m സ്ഥലം എന്നിവ നിങ്ങൾ മുന്നേറണം. സമയം = ആ ദൂരം ÷ വേഗവ്യത്യാസം; അതേ സമയത്ത് എതിരെ വരുന്ന കാർ അടുക്കുന്നു. വേഗങ്ങൾ സ്ഥിരമായി കണക്കാക്കി; യഥാർത്ഥ ഓവർടേക്കിന് കൂടുതൽ കരുതൽ വേണം."
+ ],
+ "ovYou": [
+  "Your speed",
+  "നിങ്ങളുടെ വേഗം"
+ ],
+ "ovTruck": [
+  "Truck speed",
+  "ട്രക്കിന്റെ വേഗം"
+ ],
+ "ovLen": [
+  "Truck length",
+  "ട്രക്കിന്റെ നീളം"
+ ],
+ "ovOnc": [
+  "Oncoming car",
+  "എതിരെ വരുന്ന കാർ"
+ ],
+ "ovNever": [
+  "You are not faster than the truck — you can never get past",
+  "നിങ്ങൾ ട്രക്കിനേക്കാൾ വേഗത്തിലല്ല — ഒരിക്കലും മറികടക്കാനാവില്ല"
+ ],
+ "ovLong": [
+  "You need {m} m of clear road — more than you can judge on most roads",
+  "{m} m ഒഴിഞ്ഞ റോഡ് വേണം — മിക്ക റോഡുകളിലും വിലയിരുത്താവുന്നതിലും കൂടുതൽ"
+ ],
+ "ovOk": [
+  "You need {m} m of clear road ahead",
+  "മുന്നിൽ {m} m ഒഴിഞ്ഞ റോഡ് വേണം"
+ ],
+ "ovTime": [
+  "Time on the wrong side",
+  "എതിർവശത്തുള്ള സമയം"
+ ],
+ "ovDist": [
+  "You travel",
+  "നിങ്ങൾ സഞ്ചരിക്കുന്നത്"
+ ],
+ "ovNeed": [
+  "Clear road needed",
+  "വേണ്ട ഒഴിഞ്ഞ റോഡ്"
+ ],
+ "ovTip": [
+  "If you can't see all of that road clear — bends, crests, junctions — don't start the overtake.",
+  "ആ റോഡ് മുഴുവൻ ഒഴിഞ്ഞുകിടക്കുന്നത് കാണാനാകുന്നില്ലെങ്കിൽ — വളവുകൾ, കയറ്റങ്ങളുടെ മുകൾഭാഗം, ജംഗ്ഷനുകൾ — ഓവർടേക്ക് തുടങ്ങരുത്."
+ ],
+ "lab_traveltime": [
+  "Is speeding worth it?",
+  "അമിതവേഗം മുതലാകുമോ?"
+ ],
+ "labSub_traveltime": [
+  "The minutes you save against the extra stopping distance.",
+  "ലാഭിക്കുന്ന മിനിറ്റുകളും കൂടുന്ന നിർത്തൽ ദൂരവും."
+ ],
+ "m_traveltime": [
+  "Time = distance ÷ speed; in towns and traffic you are assumed to average 30 km/h whatever your top speed. Stopping distances use a 1.5 s reaction and a dry road.",
+  "സമയം = ദൂരം ÷ വേഗം; പട്ടണങ്ങളിലും ട്രാഫിക്കിലും പരമാവധി വേഗം എന്തായാലും ശരാശരി 30 km/h എന്ന് കണക്കാക്കി. നിർത്തൽ ദൂരം 1.5 s പ്രതികരണവും ഉണങ്ങിയ റോഡും ഉപയോഗിക്കുന്നു."
+ ],
+ "ttKm": [
+  "Trip length",
+  "യാത്രാ ദൂരം"
+ ],
+ "ttSlow": [
+  "Usual speed",
+  "സാധാരണ വേഗം"
+ ],
+ "ttFast": [
+  "Faster speed",
+  "കൂടിയ വേഗം"
+ ],
+ "ttTown": [
+  "Share in towns / traffic",
+  "പട്ടണം / ട്രാഫിക് ഭാഗം"
+ ],
+ "ttSay": [
+  "Over {km} km you save about {m} minutes",
+  "{km} km-ൽ ഏകദേശം {m} മിനിറ്റ് ലാഭിക്കുന്നു"
+ ],
+ "ttSaved": [
+  "Time saved",
+  "ലാഭിക്കുന്ന സമയം"
+ ],
+ "ttStops": [
+  "Stopping distance",
+  "നിർത്തൽ ദൂരം"
+ ],
+ "ttEnergy": [
+  "Crash energy",
+  "ഇടിയുടെ ഊർജം"
+ ],
+ "ttTimeTitle": [
+  "Journey time",
+  "യാത്രാ സമയം"
+ ],
+ "ttStopTitle": [
+  "Stopping distance",
+  "നിർത്തൽ ദൂരം"
+ ],
+ "ttTip": [
+  "Leaving five minutes earlier saves more than driving faster — and costs nothing in safety.",
+  "അഞ്ച് മിനിറ്റ് നേരത്തെ ഇറങ്ങുന്നത് വേഗത്തിൽ ഓടിക്കുന്നതിനേക്കാൾ ലാഭം — സുരക്ഷയ്ക്ക് ഒരു നഷ്ടവുമില്ല."
+ ],
+ "lab_offtracking": [
+  "Long vehicles turning",
+  "നീളമുള്ള വാഹനങ്ങൾ തിരിയുമ്പോൾ"
+ ],
+ "labSub_offtracking": [
+  "The rear wheels of a bus or truck cut the corner — right where cyclists wait.",
+  "ബസ്സിന്റെയോ ട്രക്കിന്റെയോ പിൻചക്രങ്ങൾ മൂല മുറിക്കുന്നു — സൈക്കിൾ യാത്രക്കാർ കാത്തുനിൽക്കുന്നിടത്ത്."
+ ],
+ "m_offtracking": [
+  "For a rigid vehicle at low speed, the rear axle follows a tighter circle: rear radius = √(front radius² − wheelbase²). Wheelbases are typical; articulated trucks cut in even more.",
+  "കുറഞ്ഞ വേഗത്തിൽ ഒറ്റ ബോഡി വാഹനത്തിൽ പിൻ ആക്സിൽ ചെറിയ വൃത്തം പിന്തുടരുന്നു: പിൻ ആരം = √(മുൻ ആരം² − വീൽബേസ്²). വീൽബേസുകൾ സാധാരണ; ആർട്ടിക്കുലേറ്റഡ് ട്രക്കുകൾ ഇതിലും കൂടുതൽ ഉള്ളിലേക്ക് കയറും."
+ ],
+ "otVeh": [
+  "Vehicle",
+  "വാഹനം"
+ ],
+ "otCar": [
+  "Car",
+  "കാർ"
+ ],
+ "otBus": [
+  "Bus",
+  "ബസ്"
+ ],
+ "otTruck": [
+  "Truck",
+  "ട്രക്ക്"
+ ],
+ "otRadius": [
+  "Turn radius (front)",
+  "തിരിയൽ ആരം (മുൻ)"
+ ],
+ "otSay": [
+  "The rear wheels cut in about {m} m inside the front wheels",
+  "പിൻചക്രങ്ങൾ മുൻചക്രങ്ങളേക്കാൾ ഏകദേശം {m} m ഉള്ളിലൂടെ കടന്നുപോകുന്നു"
+ ],
+ "otCut": [
+  "Rear wheels cut in",
+  "പിൻചക്രങ്ങൾ ഉള്ളിലേക്ക്"
+ ],
+ "otFront": [
+  "Front wheel path",
+  "മുൻചക്ര പാത"
+ ],
+ "otRear": [
+  "Rear wheel path",
+  "പിൻചക്ര പാത"
+ ],
+ "otTip": [
+  "Never ride or walk on the inside of a turning bus or truck — wait behind it until it has finished the turn.",
+  "തിരിയുന്ന ബസ്സിന്റെയോ ട്രക്കിന്റെയോ ഉള്ളിലൂടെ ഒരിക്കലും ഓടിക്കുകയോ നടക്കുകയോ ചെയ്യരുത് — തിരിഞ്ഞുകഴിയുന്നതുവരെ പിന്നിൽ കാത്തിരിക്കുക."
+ ],
+ "lab_trafficwave": [
+  "Phantom traffic jams",
+  "കാരണമില്ലാത്ത ട്രാഫിക് ജാം"
+ ],
+ "labSub_trafficwave": [
+  "One tap on the brakes and a jam appears from nowhere — unless the gaps are big enough.",
+  "ബ്രേക്കിൽ ഒരു തട്ട്, എവിടെനിന്നോ ജാം — അകലം മതിയായില്ലെങ്കിൽ."
+ ],
+ "m_trafficwave": [
+  "Cars on a 360 m ring road follow the Intelligent Driver Model, a standard traffic-research model, with a little random variation. Each driver keeps the time gap you set. Real traffic is more varied, but the effect is the same: short gaps let small disturbances grow into stop-go waves.",
+  "360 m വൃത്ത റോഡിലെ കാറുകൾ ഇന്റലിജന്റ് ഡ്രൈവർ മോഡൽ — ട്രാഫിക് ഗവേഷണത്തിലെ ഒരു സാധാരണ മാതൃക — പിന്തുടരുന്നു, അല്പം ക്രമരഹിത വ്യതിയാനത്തോടെ. ഓരോ ഡ്രൈവറും നിങ്ങൾ നൽകുന്ന സമയ അകലം പാലിക്കുന്നു. യഥാർത്ഥ ട്രാഫിക് കൂടുതൽ വൈവിധ്യമുള്ളതാണ്, പക്ഷേ ഫലം ഒന്നുതന്നെ: ചെറിയ അകലം ചെറിയ തടസ്സങ്ങളെ നിർത്തി-ഓടൽ തിരമാലകളാക്കുന്നു."
+ ],
+ "twGap": [
+  "Time gap each driver keeps",
+  "ഓരോ ഡ്രൈവറും പാലിക്കുന്ന സമയ അകലം"
+ ],
+ "twCars": [
+  "Cars on the ring",
+  "വൃത്തത്തിലെ കാറുകൾ"
+ ],
+ "twTap": [
+  "One driver taps the brakes",
+  "ഒരു ഡ്രൈവർ ബ്രേക്കിൽ തട്ടുന്നു"
+ ],
+ "twJam": [
+  "Stop-go wave: {n} cars stopped",
+  "നിർത്തി-ഓടൽ തിരമാല: {n} കാറുകൾ നിന്നു"
+ ],
+ "twFlow": [
+  "Traffic flowing",
+  "ട്രാഫിക് ഒഴുകുന്നു"
+ ],
+ "twAvg": [
+  "Average speed",
+  "ശരാശരി വേഗം"
+ ],
+ "twStopped": [
+  "Cars stopped",
+  "നിന്ന കാറുകൾ"
+ ],
+ "twTip": [
+  "Keep a steady gap and ease off early instead of braking late — you absorb the wave instead of passing it back.",
+  "സ്ഥിരമായ അകലം പാലിക്കുക, വൈകി ബ്രേക്ക് ചെയ്യുന്നതിന് പകരം നേരത്തെ വേഗം കുറയ്ക്കുക — തിരമാല പിന്നിലേക്ക് കൈമാറാതെ അത് ആഗിരണം ചെയ്യുന്നു."
+ ],
+ "lgStop": [
+  "Stopping and grip",
+  "നിർത്തലും ഗ്രിപ്പും"
+ ],
+ "lgSee": [
+  "Seeing and being seen",
+  "കാണലും കാണപ്പെടലും"
+ ],
+ "lgCrash": [
+  "Crash safety",
+  "ഇടി സുരക്ഷ"
+ ],
+ "lgCar": [
+  "Vehicle and engine",
+  "വാഹനവും എൻജിനും"
+ ],
+ "lgTraffic": [
+  "Traffic and planning",
+  "ട്രാഫിക്കും ആസൂത്രണവും"
+ ],
+ "labAll": [
+  "All labs",
+  "എല്ലാ ലാബുകളും"
+ ],
+ "labPrev": [
+  "Previous",
+  "മുമ്പത്തേത്"
+ ],
+ "labNext": [
+  "Next",
+  "അടുത്തത്"
+ ],
+ "wtAccelSay": [
+  "Accelerating: load moves to the rear — the nose lifts and the front tyres have less grip",
+  "ത്വരണം: ഭാരം പിന്നിലേക്ക് — മുൻഭാഗം ഉയരുന്നു, മുൻ ടയറുകൾക്ക് ഗ്രിപ്പ് കുറയുന്നു"
  ]
 }
