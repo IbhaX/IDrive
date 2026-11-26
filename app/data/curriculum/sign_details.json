@@ -1223,6 +1223,2022 @@
     ],
     "mistake": "Driving fast in the lane next to the median past an occupied gap."
   },
+  "unguarded": {
+    "more": "A railway line crosses with no gate and no gatekeeper. Trains can't stop or swerve, and they are often faster and closer than they look.",
+    "where": [
+      "Rural branch lines and siding crossings",
+      "Roads beside fields with a single track"
+    ],
+    "when": [
+      {
+        "s": "You're approaching the track",
+        "d": "Stop before it, switch off music, lower the window, look and listen both ways, then cross without changing gear on the track."
+      },
+      {
+        "s": "Your vehicle stalls on the track",
+        "d": "Get everyone out and well away at once, then call for help — don't try to restart."
+      }
+    ],
+    "mistake": "Following the vehicle ahead across without looking yourself."
+  },
+  "guarded": {
+    "more": "A railway crossing with a gate operated by a gatekeeper. The gate closes some time before the train arrives.",
+    "where": [
+      "Busy level crossings in towns",
+      "Main roads crossing railway lines"
+    ],
+    "when": [
+      {
+        "s": "The bell is ringing and the gate is coming down",
+        "d": "Stop behind the line — never speed up to get through."
+      },
+      {
+        "s": "The gate is closed and the queue is long",
+        "d": "Switch off the engine, stay in your lane and don't zigzag round the barrier."
+      }
+    ],
+    "mistake": "Riding a two-wheeler under a half-closed barrier."
+  },
+  "quay": {
+    "more": "The road runs along a quay, canal or riverbank with an unprotected edge and a drop into water.",
+    "where": [
+      "Canal roads in Kuttanad and Alappuzha",
+      "Fishing harbours and jetties"
+    ],
+    "when": [
+      {
+        "s": "It's night or raining",
+        "d": "Drive slowly, keep to the land side and use low beam to see the edge."
+      },
+      {
+        "s": "You meet an oncoming vehicle",
+        "d": "Stop and let it pass rather than moving towards the edge."
+      }
+    ],
+    "mistake": "Reversing near the edge without someone guiding you."
+  },
+  "cable": {
+    "more": "Electric or telephone cables hang low across the road. Touching a live line with a tall load can be fatal.",
+    "where": [
+      "Village roads with low power lines",
+      "Near railway electrification and substations"
+    ],
+    "when": [
+      {
+        "s": "You carry a tall load such as hay, a ladder or a crane arm",
+        "d": "Check the clearance before you drive under; if in doubt, don't."
+      },
+      {
+        "s": "A cable is hanging down onto the road",
+        "d": "Stop well back, don't touch it, and report it to the electricity board."
+      }
+    ],
+    "mistake": "Standing on top of a load to lift a cable out of the way."
+  },
+  "signal": {
+    "more": "A traffic signal is ahead, possibly hidden by a bend, a crest or a flyover pillar. Traffic may already be queuing.",
+    "where": [
+      "Highways entering towns",
+      "After bends or bridges where the signal isn't visible"
+    ],
+    "when": [
+      {
+        "s": "You can't see the signal yet",
+        "d": "Ease off so you can stop smoothly if it's red or there's a queue."
+      },
+      {
+        "s": "The light turns amber as you arrive",
+        "d": "Stop if you can do so safely."
+      }
+    ],
+    "mistake": "Keeping highway speed until the signal comes into view."
+  },
+  "bullock": {
+    "more": "Slow animal-drawn carts use this road — they may be heavily loaded, wide and without lights.",
+    "where": [
+      "Farming areas and village markets",
+      "Sugarcane and paddy belts at harvest time"
+    ],
+    "when": [
+      {
+        "s": "A cart is ahead of you",
+        "d": "Slow down well back and pass wide only when you can see far ahead."
+      },
+      {
+        "s": "It's dusk",
+        "d": "Expect unlit carts; drive slower and use low beam."
+      }
+    ],
+    "mistake": "Overtaking close and fast, startling the animals."
+  },
+  "parking": {
+    "more": "The blue P marks an authorised parking area. A plate may add times, a fee or the type of vehicle allowed.",
+    "where": [
+      "Town centres, malls and stations",
+      "Hospitals, offices and tourist spots"
+    ],
+    "when": [
+      {
+        "s": "The bays are full",
+        "d": "Don't double-park or block the entrance — find another legal spot."
+      },
+      {
+        "s": "You're leaving the bay",
+        "d": "Check behind for pedestrians and other vehicles before you reverse out."
+      }
+    ],
+    "mistake": "Using a bay meant for all vehicles when you aren't one."
+  },
+  "parkcar": {
+    "more": "Parking set aside for cars. Two-wheelers should use their own area so bays aren't wasted.",
+    "where": [
+      "Town centres, malls and stations",
+      "Hospitals, offices and tourist spots"
+    ],
+    "when": [
+      {
+        "s": "The bays are full",
+        "d": "Don't double-park or block the entrance — find another legal spot."
+      },
+      {
+        "s": "You're leaving the bay",
+        "d": "Check behind for pedestrians and other vehicles before you reverse out."
+      }
+    ],
+    "mistake": "Using a bay meant for cars when you aren't one."
+  },
+  "parkmoto": {
+    "more": "Parking for scooters and motorcycles. Park in line, on the stand, so others can get in and out.",
+    "where": [
+      "Town centres, malls and stations",
+      "Hospitals, offices and tourist spots"
+    ],
+    "when": [
+      {
+        "s": "The bays are full",
+        "d": "Don't double-park or block the entrance — find another legal spot."
+      },
+      {
+        "s": "You're leaving the bay",
+        "d": "Check behind for pedestrians and other vehicles before you reverse out."
+      }
+    ],
+    "mistake": "Using a bay meant for two-wheelers when you aren't one."
+  },
+  "parkcycle": {
+    "more": "A stand for cycles, keeping them off the footpath. Lock the cycle to the stand.",
+    "where": [
+      "Town centres, malls and stations",
+      "Hospitals, offices and tourist spots"
+    ],
+    "when": [
+      {
+        "s": "The bays are full",
+        "d": "Don't double-park or block the entrance — find another legal spot."
+      },
+      {
+        "s": "You're leaving the bay",
+        "d": "Check behind for pedestrians and other vehicles before you reverse out."
+      }
+    ],
+    "mistake": "Using a bay meant for cycles when you aren't one."
+  },
+  "taxi": {
+    "more": "A place where taxis wait for passengers. Keeping it clear lets them load without blocking the road.",
+    "where": [
+      "Railway stations and bus stands",
+      "Busy junctions and markets"
+    ],
+    "when": [
+      {
+        "s": "You want to hire one",
+        "d": "Go to the front of the taxi queue rather than stopping one on the road."
+      },
+      {
+        "s": "You're driving past the stand",
+        "d": "Expect taxis to pull out or U-turn suddenly; slow down."
+      }
+    ],
+    "mistake": "Parking a private vehicle on the stand."
+  },
+  "auto": {
+    "more": "An auto-rickshaw stand. Autos queue here; prepaid counters are common at stations.",
+    "where": [
+      "Railway stations and bus stands",
+      "Busy junctions and markets"
+    ],
+    "when": [
+      {
+        "s": "You want to hire one",
+        "d": "Go to the front of the auto-rickshaw queue rather than stopping one on the road."
+      },
+      {
+        "s": "You're driving past the stand",
+        "d": "Expect auto-rickshaws to pull out or U-turn suddenly; slow down."
+      }
+    ],
+    "mistake": "Parking a private vehicle on the stand."
+  },
+  "rickshaw": {
+    "more": "A stand for cycle-rickshaws, which still serve short trips in some towns.",
+    "where": [
+      "Railway stations and bus stands",
+      "Busy junctions and markets"
+    ],
+    "when": [
+      {
+        "s": "You want to hire one",
+        "d": "Go to the front of the cycle-rickshaw queue rather than stopping one on the road."
+      },
+      {
+        "s": "You're driving past the stand",
+        "d": "Expect cycle-rickshaws to pull out or U-turn suddenly; slow down."
+      }
+    ],
+    "mistake": "Parking a private vehicle on the stand."
+  },
+  "busstop": {
+    "more": "Buses stop here to pick up and set down passengers. People cluster at the stop and may step into the road to board.",
+    "where": [
+      "Every few hundred metres on town routes",
+      "Village junctions on highways"
+    ],
+    "when": [
+      {
+        "s": "A bus is stopped at the stop",
+        "d": "Pass slowly — passengers may walk out in front of it."
+      },
+      {
+        "s": "You want to drop someone off",
+        "d": "Stop beyond the bus bay, not in it."
+      }
+    ],
+    "mistake": "Overtaking a stopped bus at speed."
+  },
+  "truckby": {
+    "more": "A lay-by where lorries can pull off the highway to rest, check loads or wait out restricted hours.",
+    "where": [
+      "National highways between towns",
+      "Before ghat sections and city entry points"
+    ],
+    "when": [
+      {
+        "s": "You drive a lorry and feel tired",
+        "d": "Pull in here and rest rather than stopping on the shoulder."
+      },
+      {
+        "s": "You're passing in a car",
+        "d": "Watch for lorries pulling out slowly."
+      }
+    ],
+    "mistake": "Parking cars in the lay-by so lorries park on the road."
+  },
+  "petrol": {
+    "more": "Fuel is available ahead. On highways the next pump may be far away, especially at night or in hill areas.",
+    "where": [
+      "Highways between towns",
+      "Near towns and junctions"
+    ],
+    "when": [
+      {
+        "s": "You're filling up",
+        "d": "Switch off the engine, don't use your phone, and nobody should smoke."
+      },
+      {
+        "s": "You decide to stop",
+        "d": "Signal early, slow down in your lane and pull fully off the carriageway before stopping."
+      }
+    ],
+    "mistake": "Braking suddenly from the fast lane to swerve into the pump."
+  },
+  "hospital": {
+    "more": "A hospital is nearby — expect ambulances, patients crossing and vehicles stopping at the gate. It's usually also a silence zone.",
+    "where": [
+      "Town roads near medical colleges",
+      "Highways near district hospitals"
+    ],
+    "when": [
+      {
+        "s": "An ambulance needs to get through",
+        "d": "Pull left and stop if needed; never block the hospital gate."
+      },
+      {
+        "s": "You decide to stop",
+        "d": "Signal early, slow down in your lane and pull fully off the carriageway before stopping."
+      }
+    ],
+    "mistake": "Honking in front of the hospital."
+  },
+  "firstaid": {
+    "more": "A first aid post is nearby where injuries can be treated quickly until an ambulance arrives.",
+    "where": [
+      "Highways between towns",
+      "Near towns and junctions"
+    ],
+    "when": [
+      {
+        "s": "You've seen a crash",
+        "d": "Make the scene safe, call 108 or 112, and send someone to the post for help."
+      },
+      {
+        "s": "You decide to stop",
+        "d": "Signal early, slow down in your lane and pull fully off the carriageway before stopping."
+      }
+    ],
+    "mistake": "Moving an injured person with a possible neck or back injury without need."
+  },
+  "phone": {
+    "more": "A public telephone is available — useful where mobile coverage is poor, such as forests and ghats.",
+    "where": [
+      "Forest and ghat roads",
+      "Remote stretches of highway"
+    ],
+    "when": [
+      {
+        "s": "You've broken down with no signal",
+        "d": "Note your location (kilometre stone, landmark) and call for help from here."
+      },
+      {
+        "s": "You decide to stop",
+        "d": "Signal early, slow down in your lane and pull fully off the carriageway before stopping."
+      }
+    ],
+    "mistake": "Stopping on the carriageway to make the call."
+  },
+  "eat": {
+    "more": "A restaurant or dhaba ahead. A meal break on a long drive helps you stay alert.",
+    "where": [
+      "Highways between towns",
+      "Near towns and junctions"
+    ],
+    "when": [
+      {
+        "s": "You've been driving for two hours",
+        "d": "Stop, eat light and walk around before you continue."
+      },
+      {
+        "s": "You decide to stop",
+        "d": "Signal early, slow down in your lane and pull fully off the carriageway before stopping."
+      }
+    ],
+    "mistake": "Parking half on the road in front of the eatery."
+  },
+  "refresh": {
+    "more": "Tea, snacks or cold drinks are available — a good place for a short break.",
+    "where": [
+      "Highways between towns",
+      "Near towns and junctions"
+    ],
+    "when": [
+      {
+        "s": "You feel drowsy",
+        "d": "Stop here for a break; a short nap of 15–20 minutes helps more than tea alone."
+      },
+      {
+        "s": "You decide to stop",
+        "d": "Signal early, slow down in your lane and pull fully off the carriageway before stopping."
+      }
+    ],
+    "mistake": "Stopping on a bend or a narrow stretch because the tea stall is there."
+  },
+  "rest": {
+    "more": "A resting place for long-distance drivers. Tiredness is a major cause of crashes, especially at night and after lunch.",
+    "where": [
+      "Highways between towns",
+      "Near towns and junctions"
+    ],
+    "when": [
+      {
+        "s": "You catch yourself yawning or drifting",
+        "d": "Stop here and rest; don't push on to 'just the next town'."
+      },
+      {
+        "s": "You decide to stop",
+        "d": "Signal early, slow down in your lane and pull fully off the carriageway before stopping."
+      }
+    ],
+    "mistake": "Sleeping in the vehicle on the shoulder instead of a proper rest area."
+  },
+  "pedxinfo": {
+    "more": "Marks the crossing itself. People on or waiting at a zebra crossing should be able to cross safely in front of you.",
+    "where": [
+      "Outside schools, hospitals and bus stands",
+      "Busy shopping streets"
+    ],
+    "when": [
+      {
+        "s": "Someone is waiting at the kerb",
+        "d": "Slow down and stop before the stop line or the stripes, not on them."
+      },
+      {
+        "s": "A pedestrian is halfway across",
+        "d": "Wait until they reach the other side or a refuge; don't creep forward."
+      }
+    ],
+    "mistake": "Stopping on the stripes in a queue, so people must walk round your car."
+  },
+  "nothru": {
+    "more": "The road ahead is a dead end. There's no way out other than coming back, and often little room to turn.",
+    "where": [
+      "Residential lanes and colony roads",
+      "Roads ending at a river, beach or railway"
+    ],
+    "when": [
+      {
+        "s": "You're just looking for a shortcut",
+        "d": "Don't go in — you'll have to turn round in a narrow space."
+      },
+      {
+        "s": "You must go in to reach an address",
+        "d": "Drive slowly; children may be playing and residents walking."
+      }
+    ],
+    "mistake": "Driving in and making a long reverse back to the main road."
+  },
+  "nothruside": {
+    "more": "The side road shown is a dead end; the main road continues.",
+    "where": [
+      "Side lanes off highways",
+      "Approach roads to temples, schools or homes"
+    ],
+    "when": [
+      {
+        "s": "Your map shows the side road as a route",
+        "d": "Trust the sign; stay on the main road."
+      },
+      {
+        "s": "Vehicles come out of the dead-end lane",
+        "d": "They may be turning round — expect slow, awkward manoeuvres."
+      }
+    ],
+    "mistake": "Turning in and then reversing out onto the main road."
+  },
+  "repair": {
+    "more": "A vehicle repair workshop or puncture shop is nearby.",
+    "where": [
+      "Highways between towns",
+      "Near towns and junctions"
+    ],
+    "when": [
+      {
+        "s": "A warning light comes on",
+        "d": "Have it checked here rather than driving on and risking a breakdown."
+      },
+      {
+        "s": "You decide to stop",
+        "d": "Signal early, slow down in your lane and pull fully off the carriageway before stopping."
+      }
+    ],
+    "mistake": "Driving on a flat tyre to reach the shop and ruining the rim."
+  },
+  "dirnh": {
+    "more": "Green boards are used on national highways and expressways. They show destinations, route numbers and distances, and which lane leads where.",
+    "where": [
+      "Approaching interchanges on national highways",
+      "Overhead gantries on expressways"
+    ],
+    "when": [
+      {
+        "s": "You see your destination on the board",
+        "d": "Move into the lane under its arrow early and stay there."
+      },
+      {
+        "s": "You've missed your exit",
+        "d": "Carry on to the next exit — never stop, reverse or cut across the gore area."
+      }
+    ],
+    "mistake": "Reading the board so late that you swerve across lanes."
+  },
+  "dirstate": {
+    "more": "Blue boards guide you on state highways and other roads; white boards are common in cities and on local roads.",
+    "where": [
+      "State highway junctions",
+      "City junctions with several destinations"
+    ],
+    "when": [
+      {
+        "s": "Several places are listed",
+        "d": "Find yours early and note the arrow and the lane."
+      },
+      {
+        "s": "You're unsure which way to go",
+        "d": "Take the safest option and correct your route later; don't stop at the junction to decide."
+      }
+    ],
+    "mistake": "Stopping in the junction to read the board."
+  },
+  "dirtourist": {
+    "more": "Brown boards point to tourist, cultural and heritage places such as beaches, waterfalls, forts and temples.",
+    "where": [
+      "Near beaches, backwaters and hill stations",
+      "Heritage towns such as Fort Kochi"
+    ],
+    "when": [
+      {
+        "s": "You're following the brown signs",
+        "d": "Slow down near the entrance — visitors often walk on the road and park badly."
+      },
+      {
+        "s": "The road becomes narrow and crowded",
+        "d": "Park at the first proper parking area and walk the last part."
+      }
+    ],
+    "mistake": "Stopping suddenly on the highway to read the tourist board."
+  },
+  "mile": {
+    "more": "Kilometre stones show the distance to the next town and the road type by colour: yellow tops on national highways, green on state highways, white or black on other roads, orange on village roads.",
+    "where": [
+      "Along every national and state highway",
+      "Rural roads built under village road programmes"
+    ],
+    "when": [
+      {
+        "s": "You need to tell someone where you've broken down",
+        "d": "Read the nearest kilometre stone and the road number — it pinpoints your location."
+      },
+      {
+        "s": "You're checking your speedometer",
+        "d": "Time yourself between two stones as a rough check."
+      }
+    ],
+    "mistake": "Not knowing where you are when calling for help."
+  },
+  "centreBroken": {
+    "more": "Short dashes with long gaps divide two-way traffic where you can see far enough to overtake. Dashes get longer and closer as a hazard approaches.",
+    "where": [
+      "Straight sections of two-lane highways",
+      "Rural roads with good visibility"
+    ],
+    "when": [
+      {
+        "s": "You want to overtake a slow vehicle",
+        "d": "Check far ahead, signal, overtake briskly and return to your side well before oncoming traffic."
+      },
+      {
+        "s": "The dashes become longer and closer together",
+        "d": "A hazard is coming — don't start an overtake now."
+      }
+    ],
+    "mistake": "Driving along the centre line instead of on your side."
+  },
+  "centreSolid": {
+    "more": "A continuous centre line where overtaking is unsafe — bends, crests, junction approaches and bridges.",
+    "where": [
+      "Approaches to bends and hill crests",
+      "Near junctions and narrow bridges"
+    ],
+    "when": [
+      {
+        "s": "A slow vehicle is ahead",
+        "d": "Stay behind until the line becomes broken again."
+      },
+      {
+        "s": "A parked vehicle blocks your side",
+        "d": "You may pass it if the road is clear, crossing the line only as much as needed."
+      }
+    ],
+    "mistake": "Overtaking across the solid line because the road 'looks clear'."
+  },
+  "centreDouble": {
+    "more": "Two solid lines act as a barrier between opposing traffic, on the most dangerous stretches.",
+    "where": [
+      "Ghat roads and sharp bends",
+      "Busy multi-lane roads without a median"
+    ],
+    "when": [
+      {
+        "s": "You want to turn right into a gate",
+        "d": "Go on to a place where the line is broken or a U-turn is allowed."
+      },
+      {
+        "s": "A vehicle ahead breaks down",
+        "d": "Wait or pass only with great care if police or circumstances leave no choice."
+      }
+    ],
+    "mistake": "Treating double lines like a single broken line."
+  },
+  "centreMixed": {
+    "more": "A solid and a broken line side by side. Each direction reads the line nearest to it.",
+    "where": [
+      "Hill roads where visibility differs in each direction",
+      "Approaches to crests"
+    ],
+    "when": [
+      {
+        "s": "The broken line is on your side",
+        "d": "You may overtake if it's safe, and must finish before the solid line resumes."
+      },
+      {
+        "s": "The solid line is on your side",
+        "d": "Don't cross it, even though oncoming drivers may cross theirs."
+      }
+    ],
+    "mistake": "Looking at the far line instead of the one nearest to you."
+  },
+  "stopline": {
+    "more": "A thick white line across your lane at signals and Stop signs. It keeps vehicles clear of the zebra crossing and the junction.",
+    "where": [
+      "Signal junctions",
+      "Stop-controlled junctions and level crossings"
+    ],
+    "when": [
+      {
+        "s": "The light is red",
+        "d": "Stop with your front bumper behind the line — not on the crossing."
+      },
+      {
+        "s": "You can't see from the line",
+        "d": "After stopping at it, creep forward slowly only when the signal allows or the way is clear."
+      }
+    ],
+    "mistake": "Stopping several metres over the line, blocking the zebra crossing."
+  },
+  "zebra": {
+    "more": "White stripes across the road where pedestrians cross. People on the crossing should be able to cross safely.",
+    "where": [
+      "Near schools, bus stops and markets",
+      "At signal junctions"
+    ],
+    "when": [
+      {
+        "s": "A pedestrian steps onto the crossing",
+        "d": "Stop and wait until they've crossed your half of the road and beyond."
+      },
+      {
+        "s": "Traffic is queuing over the crossing",
+        "d": "Stop before it so the stripes stay clear, even if a gap opens behind."
+      }
+    ],
+    "mistake": "Overtaking near or on a zebra crossing."
+  },
+  "giveline": {
+    "more": "A row of triangles (or a double broken line) across your lane at a give-way junction or roundabout.",
+    "where": [
+      "Side roads joining main roads",
+      "Roundabout entries"
+    ],
+    "when": [
+      {
+        "s": "Traffic on the main road is approaching",
+        "d": "Stop with your front behind the triangles and wait."
+      },
+      {
+        "s": "The way is clearly free",
+        "d": "You may go on without stopping, at low speed."
+      }
+    ],
+    "mistake": "Stopping beyond the line with your nose in the traffic lane."
+  },
+  "edge": {
+    "more": "A line along the edge of the carriageway showing where the road ends and the shoulder begins — vital at night and in rain.",
+    "where": [
+      "Highways and expressways",
+      "Roads with soft or dropped shoulders"
+    ],
+    "when": [
+      {
+        "s": "You need to stop for an emergency",
+        "d": "Pull completely over the edge line onto the shoulder and switch on hazard lights."
+      },
+      {
+        "s": "Visibility is poor",
+        "d": "Use the edge line, not the centre line, to keep your position."
+      }
+    ],
+    "mistake": "Riding on the shoulder to overtake on the left."
+  },
+  "lane": {
+    "more": "Broken lines between lanes that carry traffic in the same direction. Each lane is for one line of vehicles.",
+    "where": [
+      "Multi-lane city roads",
+      "Four- and six-lane highways"
+    ],
+    "when": [
+      {
+        "s": "You want to change lanes",
+        "d": "Mirror, signal, check your blind spot, then move across gradually."
+      },
+      {
+        "s": "Traffic is slow",
+        "d": "Stay in your lane; weaving gains seconds and causes crashes."
+      }
+    ],
+    "mistake": "Straddling two lanes, or two-wheelers riding on the line between cars."
+  },
+  "arrows": {
+    "more": "Arrows in each lane show which directions that lane serves at the junction ahead.",
+    "where": [
+      "Approaches to signal junctions",
+      "Before flyover splits"
+    ],
+    "when": [
+      {
+        "s": "Your lane's arrow points the wrong way",
+        "d": "Move to the correct lane early; if it's too late, follow your lane's arrow and re-route."
+      },
+      {
+        "s": "The arrows are worn or covered by traffic",
+        "d": "Look for overhead signs and the arrows further back."
+      }
+    ],
+    "mistake": "Turning across lanes from a straight-only lane."
+  },
+  "hatch": {
+    "more": "Diagonal stripes inside a border separate traffic or protect turning vehicles. Don't drive or park on them except in an emergency.",
+    "where": [
+      "Between lanes at junctions and merges",
+      "Around traffic islands and bridge piers"
+    ],
+    "when": [
+      {
+        "s": "The lane next to the hatching is queuing",
+        "d": "Stay in the queue; don't use the hatched area as an extra lane."
+      },
+      {
+        "s": "An emergency vehicle needs room",
+        "d": "You may move onto the hatching briefly to let it pass, if that's the only way."
+      }
+    ],
+    "mistake": "Using hatching to overtake or jump a queue."
+  },
+  "kerb": {
+    "more": "Alternate yellow and black on the kerb marks an obstruction or a stretch where parking isn't allowed, and makes the kerb visible at night.",
+    "where": [
+      "Medians, islands and bridge parapets",
+      "Kerbs near junctions and bus stops"
+    ],
+    "when": [
+      {
+        "s": "You're looking for parking",
+        "d": "Don't stop beside painted kerbs."
+      },
+      {
+        "s": "It's dark and the road curves",
+        "d": "Use the painted kerb to judge the edge."
+      }
+    ],
+    "mistake": "Mounting the kerb to park half on the footpath."
+  },
+  "cyclelane": {
+    "more": "A lane marked with a cycle symbol for cyclists, usually at the left edge of the road.",
+    "where": [
+      "New city roads and smart-city corridors",
+      "Roads near colleges and parks"
+    ],
+    "when": [
+      {
+        "s": "You're turning left across the cycle lane",
+        "d": "Check your left mirror and shoulder for cyclists before turning."
+      },
+      {
+        "s": "You want to stop to drop someone",
+        "d": "Don't stop in the cycle lane; find a place beyond it."
+      }
+    ],
+    "mistake": "Parking or riding a motorcycle in the cycle lane."
+  },
+  "box": {
+    "more": "Yellow criss-cross lines keep a junction clear. Queuing on the box locks the junction for everyone.",
+    "where": [
+      "Busy city junctions",
+      "In front of fire stations and hospital gates"
+    ],
+    "when": [
+      {
+        "s": "The light is green but the road beyond is queued",
+        "d": "Wait behind the box until there's room for your whole vehicle on the far side."
+      },
+      {
+        "s": "You're turning right and only oncoming traffic stops you",
+        "d": "You may wait in the box if your exit is clear."
+      }
+    ],
+    "mistake": "Following the car ahead into the box and getting stuck when the light changes."
+  },
+  "breaker": {
+    "more": "Black and white or yellow stripes painted on a speed breaker make it visible from a distance and at night.",
+    "where": [
+      "Village roads and school zones",
+      "Entries to housing colonies"
+    ],
+    "when": [
+      {
+        "s": "You see the stripes late at night",
+        "d": "Brake firmly but smoothly before the hump, not on it."
+      },
+      {
+        "s": "The paint has worn off",
+        "d": "Watch for the bump in the road surface and the warning sign."
+      }
+    ],
+    "mistake": "Crossing at an angle on a two-wheeler."
+  },
+  "studs": {
+    "more": "Small reflectors set into the road surface. In headlights they light up the lanes and edges when paint is hard to see.",
+    "where": [
+      "Highways and expressways",
+      "Bridges and ghat roads"
+    ],
+    "when": [
+      {
+        "s": "It's night and raining heavily",
+        "d": "Follow the line of studs to stay in your lane."
+      },
+      {
+        "s": "You drive over a row of studs",
+        "d": "You're crossing a lane line or the edge — check your position."
+      }
+    ],
+    "mistake": "Relying on studs alone and driving too fast for what you can see."
+  },
+  "bays": {
+    "more": "White lines mark individual parking spaces so more vehicles fit and none block the aisle.",
+    "where": [
+      "Car parks at malls and offices",
+      "Roadside parking in towns"
+    ],
+    "when": [
+      {
+        "s": "The bay is tight",
+        "d": "Reverse in if you can — it's easier and safer to drive out."
+      },
+      {
+        "s": "Your car is over the line",
+        "d": "Straighten up so the next driver can use their bay."
+      }
+    ],
+    "mistake": "Parking across two bays."
+  },
+  "objmark": {
+    "more": "Black and yellow slanted stripes on a post, wall or pier show an obstruction close to the road. The stripes slope down towards the side you should pass on.",
+    "where": [
+      "Bridge piers and culvert walls",
+      "Ends of medians and narrow gaps"
+    ],
+    "when": [
+      {
+        "s": "You see the marker at night",
+        "d": "Slow down and pass on the side the stripes point to."
+      },
+      {
+        "s": "The road narrows past the marker",
+        "d": "Give way to oncoming traffic if both can't pass."
+      }
+    ],
+    "mistake": "Passing too close and clipping the obstruction with a mirror."
+  },
+  "red": {
+    "more": "Red means stop and wait behind the stop line. Turning on red isn't allowed unless a green arrow or a sign permits it.",
+    "where": [
+      "Signal junctions",
+      "Pedestrian crossings with signals"
+    ],
+    "when": [
+      {
+        "s": "The road looks empty at night",
+        "d": "Still wait for green."
+      },
+      {
+        "s": "An ambulance needs to pass you",
+        "d": "Move only as much as needed to let it through, without entering the junction dangerously."
+      }
+    ],
+    "mistake": "Creeping over the stop line while waiting."
+  },
+  "amber": {
+    "more": "Amber comes before red. It means stop — unless you're so close that braking would be unsafe.",
+    "where": [
+      "Every signal junction",
+      "Before pedestrian crossings"
+    ],
+    "when": [
+      {
+        "s": "Amber appears and you can stop comfortably",
+        "d": "Stop."
+      },
+      {
+        "s": "A vehicle is close behind you",
+        "d": "Brake early and smoothly rather than speeding through."
+      }
+    ],
+    "mistake": "Accelerating to beat the red."
+  },
+  "green": {
+    "more": "Green means you may go if the way is clear — not that it is clear.",
+    "where": [
+      "Signal junctions",
+      "Pedestrian crossing signals"
+    ],
+    "when": [
+      {
+        "s": "Pedestrians are still crossing",
+        "d": "Wait for them to finish."
+      },
+      {
+        "s": "The road beyond the junction is queued",
+        "d": "Don't enter until there's room on the far side."
+      }
+    ],
+    "mistake": "Pulling away the instant it turns green without looking."
+  },
+  "greenarrow": {
+    "more": "A green arrow allows movement only in its direction, even while the main light is red.",
+    "where": [
+      "Free-left and right-turn phases at junctions",
+      "Flyover approaches"
+    ],
+    "when": [
+      {
+        "s": "The left arrow is green, main light red",
+        "d": "Turn left carefully, giving way to pedestrians."
+      },
+      {
+        "s": "The arrow goes out",
+        "d": "Stop — the movement is no longer allowed."
+      }
+    ],
+    "mistake": "Going straight on because the arrow beside you is green."
+  },
+  "flashred": {
+    "more": "A flashing red light works like a Stop sign — common at night when signals switch to flashing mode, and at some crossings.",
+    "where": [
+      "Junctions at night",
+      "Minor roads meeting a main road"
+    ],
+    "when": [
+      {
+        "s": "You arrive at a flashing red",
+        "d": "Stop completely, look both ways and go only when clear."
+      },
+      {
+        "s": "The other road has flashing amber",
+        "d": "They may not stop — wait for a real gap."
+      }
+    ],
+    "mistake": "Treating it as 'signal not working'."
+  },
+  "flashamber": {
+    "more": "Flashing amber means proceed with caution — often on main roads at night or when signals are off.",
+    "where": [
+      "Junctions late at night",
+      "School zones and minor crossings"
+    ],
+    "when": [
+      {
+        "s": "Side-road traffic may come out",
+        "d": "Slow down and be ready to give way."
+      },
+      {
+        "s": "A pedestrian is waiting to cross",
+        "d": "Stop and let them cross."
+      }
+    ],
+    "mistake": "Driving through at full speed because 'it's not red'."
+  },
+  "pedred": {
+    "more": "The red standing figure tells pedestrians to wait. Drivers usually have green at the same time.",
+    "where": [
+      "Signal junctions and mid-block crossings",
+      "Near schools and stations"
+    ],
+    "when": [
+      {
+        "s": "You're walking and see a gap in traffic",
+        "d": "Wait for the green figure — drivers aren't expecting you."
+      },
+      {
+        "s": "You're driving and someone crosses on their red",
+        "d": "Slow down and let them clear; your green doesn't make hitting them acceptable."
+      }
+    ],
+    "mistake": "Starting to cross as the figure turns red."
+  },
+  "pedgreen": {
+    "more": "The green walking figure lets pedestrians cross. It may flash before turning red — don't start crossing then.",
+    "where": [
+      "Signal junctions",
+      "Mid-block crossings on busy roads"
+    ],
+    "when": [
+      {
+        "s": "You're turning and the pedestrian signal is green",
+        "d": "Give way to people crossing the road you're turning into."
+      },
+      {
+        "s": "An elderly person is still crossing as it flashes",
+        "d": "Wait for them, even if your light turns green."
+      }
+    ],
+    "mistake": "Edging into the crossing while people are on it."
+  },
+  "count": {
+    "more": "A countdown beside the signal shows the seconds left on the current colour.",
+    "where": [
+      "Busy city junctions",
+      "Major highway signals"
+    ],
+    "when": [
+      {
+        "s": "Green shows 3 seconds left and you're far away",
+        "d": "Prepare to stop — don't race it."
+      },
+      {
+        "s": "Red shows 5 seconds left",
+        "d": "Get ready, but don't move until the light is actually green."
+      }
+    ],
+    "mistake": "Starting off before green because the timer is near zero."
+  },
+  "hsright": {
+    "more": "A driver's right arm held straight out, palm forward, says 'I'm turning right' — used when indicators fail or aren't visible.",
+    "where": [
+      "Bullock carts, cycles and old vehicles",
+      "Any vehicle whose indicators have failed"
+    ],
+    "when": [
+      {
+        "s": "The vehicle ahead shows this signal",
+        "d": "Don't overtake on its right; slow down and let it turn."
+      },
+      {
+        "s": "You need to use it yourself",
+        "d": "Give it early and hold it clearly, then bring your hand back to steer."
+      }
+    ],
+    "mistake": "Overtaking a vehicle that's signalling right."
+  },
+  "hsleft": {
+    "more": "Right arm out and swung in an anticlockwise circle means the driver will turn left.",
+    "where": [
+      "Vehicles with failed indicators",
+      "Cycle-rickshaws and carts"
+    ],
+    "when": [
+      {
+        "s": "You're behind a vehicle giving this signal",
+        "d": "Expect it to slow and turn left; don't squeeze past on its left."
+      },
+      {
+        "s": "You're on a two-wheeler beside it",
+        "d": "Hold back — it may cut across your path."
+      }
+    ],
+    "mistake": "Mistaking the circle for a wave to overtake."
+  },
+  "hsstop": {
+    "more": "Right arm raised straight up, palm facing back, warns that the vehicle is about to stop.",
+    "where": [
+      "Vehicles stopping without working brake lights",
+      "Lorries pulling over on highways"
+    ],
+    "when": [
+      {
+        "s": "The vehicle ahead raises its arm",
+        "d": "Brake smoothly and leave room — it's stopping."
+      },
+      {
+        "s": "You're too close to stop gently",
+        "d": "Check mirrors and steer round only if the next lane is clear."
+      }
+    ],
+    "mistake": "Ignoring the signal because the brake lights didn't come on."
+  },
+  "hsslow": {
+    "more": "Right arm out, palm down, moved up and down, means the driver is slowing.",
+    "where": [
+      "Approaching hazards on narrow roads",
+      "Vehicles without working brake lights"
+    ],
+    "when": [
+      {
+        "s": "The vehicle ahead signals slowing",
+        "d": "Ease off and increase your gap."
+      },
+      {
+        "s": "You see a hazard the driver behind can't",
+        "d": "Use the signal to warn them as you slow."
+      }
+    ],
+    "mistake": "Overtaking a vehicle that's signalling it's slowing for a hazard you can't see."
+  },
+  "hsovertake": {
+    "more": "The driver ahead waves you past. It's an invitation, not a guarantee the road is clear.",
+    "where": [
+      "Lorries on hill roads",
+      "Slow vehicles on two-lane roads"
+    ],
+    "when": [
+      {
+        "s": "A lorry driver waves you on",
+        "d": "Check for yourself that the road ahead is clear before you go."
+      },
+      {
+        "s": "You're not sure you can see far enough",
+        "d": "Stay behind; you can't overtake on someone else's judgement."
+      }
+    ],
+    "mistake": "Pulling out blindly because the driver ahead waved."
+  },
+  "polstop": {
+    "more": "A police officer facing you with an arm raised, palm towards you, means stop. Police signals override lights and signs.",
+    "where": [
+      "Junctions during peak hours or signal failure",
+      "Checkpoints and processions"
+    ],
+    "when": [
+      {
+        "s": "The signal behind the officer is green",
+        "d": "Obey the officer and stop."
+      },
+      {
+        "s": "You're already very close",
+        "d": "Stop as safely as you can; don't speed past."
+      }
+    ],
+    "mistake": "Driving on because the traffic light is green."
+  },
+  "polsides": {
+    "more": "With both arms stretched sideways, traffic facing the officer's front and back stops; traffic from the sides may go.",
+    "where": [
+      "Busy junctions during power cuts",
+      "Festival and procession traffic control"
+    ],
+    "when": [
+      {
+        "s": "You face the officer's chest or back",
+        "d": "Stop and wait."
+      },
+      {
+        "s": "You face the officer's outstretched arm",
+        "d": "Proceed carefully when signalled."
+      }
+    ],
+    "mistake": "Moving off before the officer turns to release your stream."
+  },
+  "polgo": {
+    "more": "The officer beckons you forward with a sweeping arm movement towards the body.",
+    "where": [
+      "Junctions controlled by police",
+      "Accident scenes and diversions"
+    ],
+    "when": [
+      {
+        "s": "You're beckoned on but pedestrians are crossing",
+        "d": "Move slowly and still give way to them."
+      },
+      {
+        "s": "You're not sure the signal is for you",
+        "d": "Make eye contact or wait for a clearer signal."
+      }
+    ],
+    "mistake": "Accelerating hard as soon as you're waved on."
+  },
+  "dash_engine": {
+    "more": "The engine computer has stored a fault — anything from a loose fuel cap to a misfire. Steady means 'get it checked soon'; flashing means a serious misfire that can damage the catalytic converter.",
+    "where": [
+      "For a second or two at start-up, as a bulb check",
+      "While driving, after a fault is detected"
+    ],
+    "when": [
+      {
+        "s": "It comes on steady and the car drives normally",
+        "d": "Check the fuel cap, then book a workshop visit soon."
+      },
+      {
+        "s": "It flashes and the engine shakes",
+        "d": "Slow down, avoid hard acceleration and get it checked straight away."
+      }
+    ],
+    "mistake": "Ignoring it for weeks because the car 'seems fine'."
+  },
+  "dash_oil": {
+    "more": "Oil pressure is too low to protect the engine. Running even a few minutes like this can wreck the engine.",
+    "where": [
+      "For a second or two at start-up, as a bulb check",
+      "While driving or at idle, if oil is low or the pump fails"
+    ],
+    "when": [
+      {
+        "s": "It comes on while driving",
+        "d": "Pull over safely and switch off at once; check the oil level when the engine is off and level."
+      },
+      {
+        "s": "The oil level is fine but the light stays on",
+        "d": "Don't drive — call for help or a tow."
+      }
+    ],
+    "mistake": "Driving 'just to the next town' with the light on."
+  },
+  "dash_battery": {
+    "more": "The battery isn't being charged — usually an alternator or belt fault. The car runs on battery alone until it goes flat.",
+    "where": [
+      "For a second or two at start-up, as a bulb check",
+      "While driving, when charging stops"
+    ],
+    "when": [
+      {
+        "s": "It comes on while driving",
+        "d": "Switch off AC, music and other loads and drive straight to a workshop."
+      },
+      {
+        "s": "The temperature gauge also rises",
+        "d": "The belt may have snapped and the water pump stopped — pull over and switch off."
+      }
+    ],
+    "mistake": "Stopping the engine in a remote place — it may not restart."
+  },
+  "dash_coolant": {
+    "more": "The engine is overheating. Common causes are low coolant, a leak, a stuck thermostat or a failed fan — often in traffic jams or on ghat climbs.",
+    "where": [
+      "For a second or two at start-up, as a bulb check",
+      "In slow traffic, on long climbs or after a coolant leak"
+    ],
+    "when": [
+      {
+        "s": "It comes on while driving",
+        "d": "Pull over, switch off and let the engine cool; don't open the radiator cap while hot."
+      },
+      {
+        "s": "You must keep moving a short way",
+        "d": "Switch off the AC and turn the heater to full to draw heat away."
+      }
+    ],
+    "mistake": "Opening the hot radiator cap — boiling coolant can spray out."
+  },
+  "dash_brake": {
+    "more": "The handbrake is on, brake fluid is low, or the brake system has a fault.",
+    "where": [
+      "For a second or two at start-up, as a bulb check",
+      "When the handbrake is up, or while driving if fluid is low"
+    ],
+    "when": [
+      {
+        "s": "It stays on after releasing the handbrake",
+        "d": "Drive slowly to a safe stop, check the fluid level and get the brakes inspected."
+      },
+      {
+        "s": "The pedal also feels soft or goes low",
+        "d": "Don't continue — call for help."
+      }
+    ],
+    "mistake": "Topping up fluid repeatedly without finding the leak."
+  },
+  "dash_park": {
+    "more": "The parking brake is applied. Driving with it on overheats the rear brakes.",
+    "where": [
+      "Whenever the handbrake is up",
+      "If the handbrake switch is faulty"
+    ],
+    "when": [
+      {
+        "s": "The car feels sluggish as you move off",
+        "d": "Check this light — the handbrake may be partly on."
+      },
+      {
+        "s": "It stays on with the handbrake fully down",
+        "d": "The switch or fluid may be at fault; get it checked."
+      }
+    ],
+    "mistake": "Driving a long way with the handbrake half on."
+  },
+  "dash_abs": {
+    "more": "The anti-lock system is off because of a fault. Normal braking still works, but wheels can lock in an emergency stop.",
+    "where": [
+      "For a second or two at start-up, as a bulb check",
+      "While driving, after a sensor or module fault"
+    ],
+    "when": [
+      {
+        "s": "It comes on during a trip",
+        "d": "Increase your following gap and brake progressively; get it checked."
+      },
+      {
+        "s": "Both ABS and brake lights are on",
+        "d": "Treat it as a serious brake fault — stop safely and get help."
+      }
+    ],
+    "mistake": "Braking as hard as usual on wet roads after the light comes on."
+  },
+  "dash_airbag": {
+    "more": "The airbag or seat-belt pretensioner system has a fault, so it may not work in a crash.",
+    "where": [
+      "For a second or two at start-up, as a bulb check",
+      "After a seat has been moved or wiring disturbed"
+    ],
+    "when": [
+      {
+        "s": "It stays on after start-up",
+        "d": "Book a workshop visit soon; keep wearing seat belts."
+      },
+      {
+        "s": "Children travel in the front",
+        "d": "Move them to the back seat until it's fixed."
+      }
+    ],
+    "mistake": "Living with the light because the car drives normally."
+  },
+  "dash_belt": {
+    "more": "A front seat belt isn't fastened. Many cars also chime, and rear-belt reminders are becoming common.",
+    "where": [
+      "When you start without a belt",
+      "When a passenger unbuckles mid-journey"
+    ],
+    "when": [
+      {
+        "s": "A passenger says it's a short trip",
+        "d": "Belts are for every trip — most crashes happen close to home."
+      },
+      {
+        "s": "The light stays on with everyone belted",
+        "d": "A heavy bag on the seat may trigger it; move it to the floor."
+      }
+    ],
+    "mistake": "Plugging in a dummy buckle to silence the chime."
+  },
+  "dash_fuel": {
+    "more": "The tank is low — typically enough for some tens of kilometres, but it varies by car, road and load.",
+    "where": [
+      "Long highway trips",
+      "Hill and forest roads with few pumps"
+    ],
+    "when": [
+      {
+        "s": "It comes on far from a town",
+        "d": "Drive smoothly at a moderate speed and head for the nearest pump."
+      },
+      {
+        "s": "You're about to climb a ghat",
+        "d": "Fill up before the climb; fuel use rises on long ascents."
+      }
+    ],
+    "mistake": "Running the tank dry, which can damage the fuel pump and leave you stranded."
+  },
+  "dash_tpms": {
+    "more": "One or more tyres is under-inflated. A soft tyre overheats, grips poorly and can fail at speed.",
+    "where": [
+      "After a puncture or slow leak",
+      "When temperatures drop or after long parking"
+    ],
+    "when": [
+      {
+        "s": "It comes on while driving",
+        "d": "Slow down, stop safely and look at each tyre."
+      },
+      {
+        "s": "All tyres look fine",
+        "d": "Check pressures at the next pump and reset the system as the manual says."
+      }
+    ],
+    "mistake": "Continuing at highway speed on a soft tyre."
+  },
+  "dash_door": {
+    "more": "A door isn't fully latched — it could fly open while moving, and a child could fall out.",
+    "where": [
+      "Moving off after passengers get in",
+      "After loading through a rear door"
+    ],
+    "when": [
+      {
+        "s": "It lights as you start moving",
+        "d": "Stop in a safe place and shut every door firmly."
+      },
+      {
+        "s": "It stays on with all doors shut",
+        "d": "A door switch may be faulty; check the doors are really latched."
+      }
+    ],
+    "mistake": "Driving off and trying to slam the door while moving."
+  },
+  "dash_bonnet": {
+    "more": "The bonnet isn't latched. At speed it can fly up and block your entire view.",
+    "where": [
+      "After checking oil or coolant",
+      "After a workshop visit"
+    ],
+    "when": [
+      {
+        "s": "It lights after you've checked the oil",
+        "d": "Stop and press the bonnet down firmly until it clicks."
+      },
+      {
+        "s": "The bonnet flies up while driving",
+        "d": "Look through the gap at the bottom or out of the side window, brake gently and pull over."
+      }
+    ],
+    "mistake": "Closing the bonnet gently so it rests on the first catch only."
+  },
+  "dash_boot": {
+    "more": "The boot or tailgate isn't closed; luggage could fall out and exhaust fumes can be drawn in.",
+    "where": [
+      "After loading luggage",
+      "When the tailgate catch is worn"
+    ],
+    "when": [
+      {
+        "s": "It lights as you drive off",
+        "d": "Stop and close the boot properly."
+      },
+      {
+        "s": "You must carry a long load with the boot open",
+        "d": "Secure the load and lid, and keep windows slightly open for fresh air."
+      }
+    ],
+    "mistake": "Driving with the boot open and passengers breathing exhaust."
+  },
+  "dash_high": {
+    "more": "Main beam is on. It lights the road far ahead but dazzles anyone in front of you.",
+    "where": [
+      "Dark rural roads and ghats at night",
+      "When you flash your lights"
+    ],
+    "when": [
+      {
+        "s": "An oncoming vehicle appears",
+        "d": "Dip to low beam early, well before it reaches you."
+      },
+      {
+        "s": "You're following another vehicle",
+        "d": "Use low beam so you don't dazzle the driver through their mirrors."
+      }
+    ],
+    "mistake": "Keeping high beam on in town or behind other vehicles."
+  },
+  "dash_low": {
+    "more": "Dipped headlights are on — the normal setting for night driving, rain and poor light.",
+    "where": [
+      "From dusk to dawn",
+      "In rain, tunnels and heavy shade"
+    ],
+    "when": [
+      {
+        "s": "It's raining in the daytime",
+        "d": "Switch on low beam so others can see you."
+      },
+      {
+        "s": "You've parked",
+        "d": "Switch the lights off to avoid a flat battery (unless your car does it automatically)."
+      }
+    ],
+    "mistake": "Driving at dusk with no lights because 'I can still see'."
+  },
+  "dash_fogF": {
+    "more": "Front fog lamps are on. They throw a low, wide beam under the fog.",
+    "where": [
+      "Dense fog on hill roads and highways",
+      "Very heavy rain"
+    ],
+    "when": [
+      {
+        "s": "The fog clears",
+        "d": "Switch them off — in clear weather they dazzle others."
+      },
+      {
+        "s": "Fog is thick",
+        "d": "Use them with low beam, not high beam, and slow down."
+      }
+    ],
+    "mistake": "Using fog lamps as decoration in clear weather."
+  },
+  "dash_fogR": {
+    "more": "The bright rear fog lamp is on so vehicles behind can see you in thick fog. In clear weather it looks like a brake light and dazzles.",
+    "where": [
+      "Very dense fog",
+      "Heavy spray on highways"
+    ],
+    "when": [
+      {
+        "s": "Visibility improves",
+        "d": "Switch it off straight away."
+      },
+      {
+        "s": "A vehicle is close behind in fog",
+        "d": "Keep it on, but be aware it may hide your brake lights."
+      }
+    ],
+    "mistake": "Leaving it on for days without noticing."
+  },
+  "dash_left": {
+    "more": "The left indicator is flashing. Fast flashing usually means a bulb has failed.",
+    "where": [
+      "Before turning or moving left",
+      "Pulling in to the kerb"
+    ],
+    "when": [
+      {
+        "s": "It flashes twice as fast as usual",
+        "d": "Check the indicator bulbs at the front, side and rear."
+      },
+      {
+        "s": "It keeps flashing after the turn",
+        "d": "Cancel it — a forgotten indicator misleads others."
+      }
+    ],
+    "mistake": "Signalling only as you start to turn."
+  },
+  "dash_right": {
+    "more": "The right indicator is flashing. Signal before turning or changing lanes to the right.",
+    "where": [
+      "Before right turns and overtakes",
+      "Pulling out from the kerb"
+    ],
+    "when": [
+      {
+        "s": "You're waiting to turn right",
+        "d": "Keep the indicator on and the wheels straight until you go."
+      },
+      {
+        "s": "It's still on after an overtake",
+        "d": "Cancel it so drivers behind aren't confused."
+      }
+    ],
+    "mistake": "Using the right indicator to tell drivers behind it's safe to overtake."
+  },
+  "dash_hazard": {
+    "more": "All indicators flash together to warn others that you're stopped or a danger.",
+    "where": [
+      "Breakdowns and emergencies",
+      "Warning traffic behind of a sudden queue on a highway"
+    ],
+    "when": [
+      {
+        "s": "You've broken down on the road",
+        "d": "Switch them on, get people to safety and place a warning triangle well behind."
+      },
+      {
+        "s": "It's raining and you're driving slowly",
+        "d": "Don't use them while moving in rain — they hide your indicators."
+      }
+    ],
+    "mistake": "Using hazard lights to park illegally or to go straight through a junction."
+  },
+  "dash_esp": {
+    "more": "Flashing means stability or traction control is working to stop a skid; steady means the system is off or faulty.",
+    "where": [
+      "On wet, muddy or gravel roads",
+      "When accelerating hard or cornering fast"
+    ],
+    "when": [
+      {
+        "s": "It flickers in a bend",
+        "d": "You're near the grip limit — ease off and steer smoothly."
+      },
+      {
+        "s": "It stays on",
+        "d": "The system is off or faulty; drive gently and get it checked."
+      }
+    ],
+    "mistake": "Taking the flashing light as a sign the car will 'save' you whatever you do."
+  },
+  "dash_eps": {
+    "more": "Electric power steering has a fault or is protecting itself from overheating; steering becomes much heavier.",
+    "where": [
+      "After repeated full-lock parking manoeuvres",
+      "After a voltage drop or fault"
+    ],
+    "when": [
+      {
+        "s": "Steering suddenly feels heavy",
+        "d": "Hold the wheel firmly, slow down and stop safely."
+      },
+      {
+        "s": "It comes on after long parking manoeuvres",
+        "d": "Let the car rest a few minutes; if it stays on, get it checked."
+      }
+    ],
+    "mistake": "Continuing at speed with heavy steering."
+  },
+  "dash_glow": {
+    "more": "On a diesel, the coil shows the glow plugs are heating the engine for a cold start. If it flashes while driving, there's an engine fault.",
+    "where": [
+      "Turning the key on a diesel, especially in cold weather",
+      "While driving, if a fault is detected"
+    ],
+    "when": [
+      {
+        "s": "You turn the key",
+        "d": "Wait until the light goes out, then start."
+      },
+      {
+        "s": "It flashes while driving",
+        "d": "Drive gently and get the engine checked soon."
+      }
+    ],
+    "mistake": "Cranking the engine before the light goes out."
+  },
+  "dash_dpf": {
+    "more": "The diesel particulate filter is filling with soot, often from many short, slow trips.",
+    "where": [
+      "Diesel cars used mostly in town",
+      "After long periods of idling"
+    ],
+    "when": [
+      {
+        "s": "It comes on",
+        "d": "Drive for 15–20 minutes at a steady higher speed on an open road so it can clean itself."
+      },
+      {
+        "s": "It stays on after that drive",
+        "d": "Get it checked before the filter blocks completely."
+      }
+    ],
+    "mistake": "Ignoring it until the car goes into limp mode."
+  },
+  "dash_immo": {
+    "more": "The immobiliser stops the engine starting without a recognised key. Flashing when locked is normal; staying on at start-up means the key isn't recognised.",
+    "where": [
+      "When the car is locked (flashing as a deterrent)",
+      "When starting with a different or damaged key"
+    ],
+    "when": [
+      {
+        "s": "The engine won't start and the light stays on",
+        "d": "Try the spare key, and keep other keys and phones away from it."
+      },
+      {
+        "s": "The key battery is weak",
+        "d": "Replace it; some cars let you hold the key against a marked spot to start."
+      }
+    ],
+    "mistake": "Repeatedly cranking until the battery is flat."
+  },
+  "dash_cruise": {
+    "more": "Cruise control is holding a set speed. It's meant for steady, open roads — not traffic, rain or hills with bends.",
+    "where": [
+      "Expressways with light traffic",
+      "Long straight highways"
+    ],
+    "when": [
+      {
+        "s": "Traffic builds up or it starts to rain",
+        "d": "Switch cruise off and control the speed yourself."
+      },
+      {
+        "s": "You need to slow down quickly",
+        "d": "Brake normally — that cancels cruise control."
+      }
+    ],
+    "mistake": "Using cruise on wet or winding roads, or relaxing your attention."
+  },
+  "dash_service": {
+    "more": "A scheduled service is due or a minor fault has been logged.",
+    "where": [
+      "At set kilometres or months",
+      "After a battery reconnection (until reset)"
+    ],
+    "when": [
+      {
+        "s": "It comes on",
+        "d": "Book a service and follow the schedule in the service book."
+      },
+      {
+        "s": "It's on right after a service",
+        "d": "Ask the workshop to reset it."
+      }
+    ],
+    "mistake": "Postponing service for months, missing oil changes and brake checks."
+  },
+  "dash_washer": {
+    "more": "Washer fluid is low. In the monsoon, and behind lorries on dusty roads, you'll need it often.",
+    "where": [
+      "After heavy use in rain and dust",
+      "On long highway trips"
+    ],
+    "when": [
+      {
+        "s": "It comes on during a trip",
+        "d": "Top up with clean water or washer fluid at the next stop."
+      },
+      {
+        "s": "The windscreen is smeared and the tank is empty",
+        "d": "Slow down until you can clean the glass properly."
+      }
+    ],
+    "mistake": "Filling the tank with soapy water that smears the glass."
+  },
+  "dash_ev": {
+    "more": "On an electric vehicle, this shows it's ready to drive (silently) or that it's plugged in and charging.",
+    "where": [
+      "Switching on an EV",
+      "While charging at home or a station"
+    ],
+    "when": [
+      {
+        "s": "The car is 'ready' but makes no sound",
+        "d": "Watch for pedestrians — they can't hear you moving off."
+      },
+      {
+        "s": "It's charging",
+        "d": "Don't drive off with the cable attached; most cars prevent it, but check."
+      }
+    ],
+    "mistake": "Assuming the car is off because it's silent, and leaving it in drive."
+  },
+  "ctrl_wiperF": {
+    "more": "The front wiper stalk usually has intermittent, slow and fast settings, plus a single wipe.",
+    "where": [
+      "On the right or left stalk behind the steering wheel",
+      "Rain-sensing wipers on newer cars"
+    ],
+    "when": [
+      {
+        "s": "Rain is light and patchy",
+        "d": "Use intermittent or single wipe so the blades don't drag on dry glass."
+      },
+      {
+        "s": "The blades smear or judder",
+        "d": "Replace them — worn blades are dangerous in monsoon rain at night."
+      }
+    ],
+    "mistake": "Running wipers on a dry, dusty windscreen without washer fluid."
+  },
+  "ctrl_wiperR": {
+    "more": "The rear wiper clears the back glass on hatchbacks and SUVs; it often comes on automatically when you reverse with the front wipers on.",
+    "where": [
+      "On the end of the wiper stalk",
+      "Hatchbacks, MUVs and SUVs"
+    ],
+    "when": [
+      {
+        "s": "You're reversing in rain",
+        "d": "Switch it on so the rear view and camera stay clear."
+      },
+      {
+        "s": "The rear glass is dry and dusty",
+        "d": "Use the washer first so the blade doesn't scratch it."
+      }
+    ],
+    "mistake": "Forgetting the rear window in rain and reversing blind."
+  },
+  "ctrl_washer": {
+    "more": "Sprays fluid onto the windscreen with a few wipes to clear dust, mud and insects.",
+    "where": [
+      "Pull the wiper stalk towards you (front) or push it (rear)",
+      "Behind lorries on dusty or muddy roads"
+    ],
+    "when": [
+      {
+        "s": "Mud from a lorry covers the glass",
+        "d": "Drop back first, then use the washer — wiping dry mud smears it."
+      },
+      {
+        "s": "Sun is low and the glass is dirty",
+        "d": "Wash it before the glare blinds you."
+      }
+    ],
+    "mistake": "Waiting until you can't see before washing."
+  },
+  "ctrl_demistF": {
+    "more": "Directs air onto the windscreen to clear mist. Turning the AC on with it clears glass much faster, because AC dries the air.",
+    "where": [
+      "Monsoon mornings and rainy nights",
+      "When several people are in the car"
+    ],
+    "when": [
+      {
+        "s": "The windscreen mists up in rain",
+        "d": "Press demist, switch on AC, select fresh air and open a window slightly if needed."
+      },
+      {
+        "s": "You can't see while moving",
+        "d": "Slow down and stop safely until the glass clears."
+      }
+    ],
+    "mistake": "Wiping the inside of the glass with your hand while driving."
+  },
+  "ctrl_demistR": {
+    "more": "Heats thin wires in the rear glass to clear mist, and often the side mirrors too. It uses a lot of power.",
+    "where": [
+      "A button with a rectangle and wavy arrows",
+      "Monsoon and cold mornings"
+    ],
+    "when": [
+      {
+        "s": "The rear glass is misted",
+        "d": "Switch it on; it usually turns itself off after some minutes."
+      },
+      {
+        "s": "The glass is clear",
+        "d": "Switch it off to save battery load."
+      }
+    ],
+    "mistake": "Scraping the inside of the rear glass and breaking the heater lines."
+  },
+  "ctrl_ac": {
+    "more": "Air conditioning cools and dries the air. Dry air also clears misted glass quickly.",
+    "where": [
+      "Snowflake button on the climate panel",
+      "Most cars, buses and many trucks today"
+    ],
+    "when": [
+      {
+        "s": "It's hot and you've just got in",
+        "d": "Open windows for a minute to let hot air out, then close them and use AC."
+      },
+      {
+        "s": "You're climbing a steep ghat in a small car",
+        "d": "Switching AC off briefly gives the engine more power."
+      }
+    ],
+    "mistake": "Sleeping in a parked car with the engine and AC running."
+  },
+  "ctrl_recirc": {
+    "more": "Recirculation reuses cabin air and keeps outside air out — good for smoke, dust and fast cooling, bad for long use.",
+    "where": [
+      "Behind smoky lorries and buses",
+      "In tunnels and traffic jams"
+    ],
+    "when": [
+      {
+        "s": "You're behind a smoky vehicle",
+        "d": "Switch to recirculation until you're clear."
+      },
+      {
+        "s": "You feel drowsy on a long drive",
+        "d": "Switch to fresh air — stale air with rising carbon dioxide makes you sleepy."
+      }
+    ],
+    "mistake": "Leaving recirculation on for hours with the windows closed."
+  },
+  "ctrl_fresh": {
+    "more": "Fresh-air mode brings outside air in, keeping you alert and the windows clear.",
+    "where": [
+      "Climate panel, opposite the recirculation button",
+      "Long highway drives"
+    ],
+    "when": [
+      {
+        "s": "Windows keep misting up",
+        "d": "Use fresh air with AC on."
+      },
+      {
+        "s": "You pass a burning garbage pile or dusty works",
+        "d": "Switch to recirculation briefly, then back."
+      }
+    ],
+    "mistake": "Never switching back from recirculation."
+  },
+  "ctrl_hazard": {
+    "more": "The red triangle button flashes all indicators. It works even with the ignition off.",
+    "where": [
+      "Centre of the dashboard in most cars",
+      "Usually easy to reach for the passenger too"
+    ],
+    "when": [
+      {
+        "s": "You stop on the shoulder after a breakdown",
+        "d": "Switch it on at once, then set the warning triangle behind."
+      },
+      {
+        "s": "Traffic ahead suddenly stops on a highway",
+        "d": "Briefly switch it on to warn those behind you."
+      }
+    ],
+    "mistake": "Driving through junctions with hazards on, so nobody knows which way you're going."
+  },
+  "ctrl_horn": {
+    "more": "The horn is for warning others of danger — not for expressing impatience.",
+    "where": [
+      "Centre pad of the steering wheel",
+      "Some two-wheelers: a button on the left switch block"
+    ],
+    "when": [
+      {
+        "s": "You approach a blind hairpin",
+        "d": "A short honk warns oncoming traffic."
+      },
+      {
+        "s": "You're in a silence zone or the traffic is jammed",
+        "d": "Don't honk — it achieves nothing and disturbs others."
+      }
+    ],
+    "mistake": "Continuous honking at signals or behind slow vehicles."
+  },
+  "ctrl_headlamp": {
+    "more": "The headlamp switch (often on the indicator stalk) turns on parking lights, low beam and — by pushing or pulling the stalk — high beam.",
+    "where": [
+      "Rotary switch on the stalk or dashboard",
+      "Auto setting on newer cars"
+    ],
+    "when": [
+      {
+        "s": "Dusk is falling",
+        "d": "Switch on low beam early so others can see you."
+      },
+      {
+        "s": "You want to flash a warning",
+        "d": "Pull the stalk briefly; don't use it to bully drivers out of your way."
+      }
+    ],
+    "mistake": "Driving at night on parking lights only."
+  },
+  "ctrl_fog": {
+    "more": "Switches front (and sometimes rear) fog lamps. They're for fog and heavy rain only.",
+    "where": [
+      "On the headlamp stalk or a separate button",
+      "Usually needs headlamps on first"
+    ],
+    "when": [
+      {
+        "s": "Thick fog in the ghats at dawn",
+        "d": "Switch fog lamps on with low beam and slow down."
+      },
+      {
+        "s": "The fog lifts",
+        "d": "Switch them off so you don't dazzle others."
+      }
+    ],
+    "mistake": "Driving with fog lamps on in clear weather for looks."
+  },
+  "ctrl_clock": {
+    "more": "Central locking locks or unlocks every door at once; many cars also lock automatically above a set speed.",
+    "where": [
+      "On the driver's door panel or the key fob",
+      "Many cars unlock automatically in a crash"
+    ],
+    "when": [
+      {
+        "s": "You stop in an unfamiliar or crowded place",
+        "d": "Keep the doors locked and windows up."
+      },
+      {
+        "s": "Passengers want to get out",
+        "d": "Unlock only when stopped safely, and remind them to check for bikes first."
+      }
+    ],
+    "mistake": "Leaving keys inside with the car on auto-lock."
+  },
+  "ctrl_child": {
+    "more": "A small switch on the edge of each rear door. When set, the door can't be opened from inside.",
+    "where": [
+      "On the edge of the rear doors (visible only when open)",
+      "Some cars have an electric child-lock button"
+    ],
+    "when": [
+      {
+        "s": "Young children ride in the back",
+        "d": "Set the child locks on both rear doors before the trip."
+      },
+      {
+        "s": "An adult passenger needs to get out",
+        "d": "Open the door for them from outside."
+      }
+    ],
+    "mistake": "Forgetting to set them and a child opens the door while moving."
+  },
+  "ctrl_window": {
+    "more": "Raises and lowers the window glass. Many cars have a lock button so rear passengers can't operate their windows.",
+    "where": [
+      "Door armrests",
+      "Driver's door has a master panel and lock switch"
+    ],
+    "when": [
+      {
+        "s": "Children are in the back",
+        "d": "Use the window lock so they can't open windows or trap fingers."
+      },
+      {
+        "s": "You're closing a window with a child nearby",
+        "d": "Watch until it's fully shut — some windows don't stop for fingers."
+      }
+    ],
+    "mistake": "Letting children stick their heads or hands out of the window."
+  },
+  "ctrl_mirror": {
+    "more": "Adjusts the outside mirrors electrically. Set them so you see a sliver of your own car and as much of the next lane as possible.",
+    "where": [
+      "A small joystick on the driver's door",
+      "Some cars also fold the mirrors with a button"
+    ],
+    "when": [
+      {
+        "s": "You've just got into a car someone else drove",
+        "d": "Adjust both mirrors before you move off."
+      },
+      {
+        "s": "You're parking in a narrow lane",
+        "d": "Fold the mirrors in once parked."
+      }
+    ],
+    "mistake": "Adjusting mirrors while driving."
+  },
+  "ctrl_ignition": {
+    "more": "The key or Start/Stop button starts the engine. Push-button cars need the brake (or clutch) pressed to start.",
+    "where": [
+      "Key slot on the steering column",
+      "Start/Stop button on the dashboard"
+    ],
+    "when": [
+      {
+        "s": "The engine won't start on a push-button car",
+        "d": "Press the brake firmly; if the key battery is weak, hold the key near the button."
+      },
+      {
+        "s": "You need to stop the engine in an emergency while moving",
+        "d": "Most push-button cars stop the engine if you hold the button for a few seconds — steering stays, but becomes heavier."
+      }
+    ],
+    "mistake": "Turning the key to 'lock' while the car is still moving."
+  },
   "x2_notonga": {
     "more": "Horse-drawn vehicles are kept off this road, usually because they are slow and horses can be startled by fast traffic. Other traffic is unaffected.",
     "where": [
@@ -1420,5 +3436,1157 @@
       }
     ],
     "mistake": "Swerving from one side to the other just before the island."
+  },
+  "x2_twoway": {
+    "more": "A one-way or divided road ends and traffic will soon come towards you in the same carriageway.",
+    "where": [
+      "Where a four-lane highway narrows to two lanes",
+      "End of a one-way section in town"
+    ],
+    "when": [
+      {
+        "s": "You're in the right-hand lane",
+        "d": "Move left before the change; the right lane becomes the oncoming lane."
+      },
+      {
+        "s": "You were planning to overtake",
+        "d": "Wait — you now share the road with oncoming traffic."
+      }
+    ],
+    "mistake": "Staying in the right lane out of habit after the divider ends."
+  },
+  "x2_winding": {
+    "more": "A run of bends one after another — typical on ghat roads. The plate below may show the length of the winding stretch.",
+    "where": [
+      "Ghat roads to Munnar, Wayanad, Ponmudi and Sabarimala",
+      "Roads through rubber and tea estates"
+    ],
+    "when": [
+      {
+        "s": "A vehicle behind wants to pass",
+        "d": "Keep left and let it pass on a straight where it can see; don't speed up."
+      },
+      {
+        "s": "Passengers feel car-sick",
+        "d": "Drive smoothly with gentle steering and braking; stop at a safe wide spot if needed."
+      }
+    ],
+    "mistake": "Cutting corners across the centre line."
+  },
+  "x2_elephant": {
+    "more": "Wild elephants use this stretch to move between forest areas, often at dawn, dusk and night. A herd may include calves, and adults protect them aggressively.",
+    "where": [
+      "Forest highways in Wayanad, Athirappilly, Aralam and Munnar",
+      "Roads near elephant corridors and reserves"
+    ],
+    "when": [
+      {
+        "s": "Elephants are on or beside the road",
+        "d": "Stop at a safe distance with the engine running, don't honk, flash lights or get out, and wait until they have crossed."
+      },
+      {
+        "s": "An elephant comes towards your vehicle",
+        "d": "Reverse slowly away if the road behind is clear; never try to drive past it."
+      }
+    ],
+    "mistake": "Stopping close to take photos or videos."
+  },
+  "x2_deer": {
+    "more": "Deer, wild boar, gaur and other animals cross here, especially at dawn and dusk. Where one animal crosses, others often follow.",
+    "where": [
+      "Roads through wildlife sanctuaries and national parks",
+      "Forest edges and plantations at night"
+    ],
+    "when": [
+      {
+        "s": "An animal crosses ahead",
+        "d": "Slow down and wait — more may follow."
+      },
+      {
+        "s": "An animal freezes in your headlights",
+        "d": "Dip your lights, slow or stop, and give it time to move."
+      }
+    ],
+    "mistake": "Swerving violently to avoid a small animal and losing control."
+  },
+  "x2_tunnel": {
+    "more": "A tunnel ahead. Your eyes need a few seconds to adjust to the dark when you enter and to the glare when you leave.",
+    "where": [
+      "The Kuthiran tunnels near Thrissur, and other tunnels",
+      "Hill highways and new expressways"
+    ],
+    "when": [
+      {
+        "s": "You're entering the tunnel",
+        "d": "Switch on headlights, remove sunglasses and slow down before the entrance."
+      },
+      {
+        "s": "Traffic stops inside the tunnel",
+        "d": "Keep a good gap, switch on hazard lights and switch off the engine if you're stuck for long."
+      }
+    ],
+    "mistake": "Overtaking or changing lanes inside the tunnel."
+  },
+  "x2_flood": {
+    "more": "The road or causeway can go under water in heavy rain. Even shallow moving water can sweep a car away, and the road beneath may be washed out.",
+    "where": [
+      "Low-lying roads in Kuttanad and near rivers",
+      "Causeways that are submerged in the monsoon"
+    ],
+    "when": [
+      {
+        "s": "Water is flowing across the road",
+        "d": "Turn back and find another route; don't try to drive through."
+      },
+      {
+        "s": "You've driven through standing water",
+        "d": "Drive slowly afterwards and press the brakes lightly a few times to dry them."
+      }
+    ],
+    "mistake": "Following a bus or lorry through deep water in a car."
+  },
+  "x2_landslide": {
+    "more": "Saturated soil and rock can slide onto the road during and after heavy rain, sometimes taking part of the road with it.",
+    "where": [
+      "Ghat roads in Idukki, Wayanad and Kozhikode",
+      "Hill highways after days of heavy rain"
+    ],
+    "when": [
+      {
+        "s": "Mud, stones or cracks appear on the road",
+        "d": "Slow down, don't stop under the slope, and turn back if the road looks undermined."
+      },
+      {
+        "s": "Authorities have closed the road or issued an alert",
+        "d": "Don't travel on it; wait or take the advised route."
+      }
+    ],
+    "mistake": "Driving ghat roads at night during red-alert rain."
+  },
+  "x2_rough": {
+    "more": "A broken surface, potholes or a row of humps. Hitting them fast can damage tyres and suspension and throw riders off balance.",
+    "where": [
+      "Roads under repair and village roads after the monsoon",
+      "Rows of rumble humps before junctions"
+    ],
+    "when": [
+      {
+        "s": "Potholes are full of water",
+        "d": "Slow right down — you can't tell how deep they are."
+      },
+      {
+        "s": "You're on a two-wheeler",
+        "d": "Hold the handlebar firmly, keep a steady line and don't brake hard on broken patches."
+      }
+    ],
+    "mistake": "Swerving suddenly around each pothole into other traffic."
+  },
+  "x2_lcmarker": {
+    "more": "Posts with three, two and one red bars count down your distance to a level crossing, so you can slow down in stages.",
+    "where": [
+      "Approaches to railway level crossings on highways",
+      "Rural roads near unguarded crossings"
+    ],
+    "when": [
+      {
+        "s": "You pass the three-bar post",
+        "d": "Start slowing down and look for gate lights and bells."
+      },
+      {
+        "s": "You reach the one-bar post",
+        "d": "You should be at a speed where you can stop easily before the crossing."
+      }
+    ],
+    "mistake": "Ignoring the markers and braking hard at the gate."
+  },
+  "x2_subway": {
+    "more": "An underpass lets people cross a busy road safely without stepping into traffic.",
+    "where": [
+      "Under busy highways in towns",
+      "Near railway stations and bus stands"
+    ],
+    "when": [
+      {
+        "s": "You're walking and the subway is a little out of the way",
+        "d": "Use it — the detour is short compared with the risk."
+      },
+      {
+        "s": "You're driving past the entrance",
+        "d": "Don't stop or park near the stairs; people come out without looking."
+      }
+    ],
+    "mistake": "Crossing on the road right above the subway."
+  },
+  "x2_fob": {
+    "more": "A foot-over bridge carries pedestrians over a busy road or railway.",
+    "where": [
+      "Over national highways near schools and markets",
+      "Across railway lines at stations"
+    ],
+    "when": [
+      {
+        "s": "You're walking with heavy bags",
+        "d": "Still use the bridge — vehicles on a highway can't stop in time."
+      },
+      {
+        "s": "You're driving under it",
+        "d": "Watch for people who chose not to use it and cross below."
+      }
+    ],
+    "mistake": "Climbing over the median below the bridge."
+  },
+  "x2_toll": {
+    "more": "A toll plaza ahead. Lanes split into booths — FASTag lanes, cash lanes and lanes for oversized vehicles — and traffic slows suddenly.",
+    "where": [
+      "National highways and expressways",
+      "Bridge and bypass entries"
+    ],
+    "when": [
+      {
+        "s": "You have FASTag",
+        "d": "Choose a FASTag lane early and keep a gap; the barrier may not lift instantly."
+      },
+      {
+        "s": "The queue is long",
+        "d": "Stay in your lane — weaving between booths causes many small crashes."
+      }
+    ],
+    "mistake": "Changing lanes at the last moment inside the plaza."
+  },
+  "x2_uturn": {
+    "more": "A place where turning round is allowed — usually a median gap or a dedicated U-turn bay.",
+    "where": [
+      "Median openings on divided highways",
+      "Under flyovers"
+    ],
+    "when": [
+      {
+        "s": "You're in the U-turn bay",
+        "d": "Wait for a real gap in the oncoming traffic; turn in one smooth movement."
+      },
+      {
+        "s": "Large vehicles are using the U-turn",
+        "d": "Give them room — they may need several attempts."
+      }
+    ],
+    "mistake": "Starting the U-turn from the left lane across all the traffic."
+  },
+  "x2_expy": {
+    "more": "From here the road is an expressway: fast, access-controlled and closed to slow vehicles, pedestrians, cycles and animals.",
+    "where": [
+      "Entry ramps of expressways",
+      "Start of access-controlled highway sections"
+    ],
+    "when": [
+      {
+        "s": "You join from the ramp",
+        "d": "Use the acceleration lane to match the traffic speed, then merge into a gap."
+      },
+      {
+        "s": "You break down",
+        "d": "Get onto the shoulder, switch on hazard lights, get everyone behind the barrier and call the helpline."
+      }
+    ],
+    "mistake": "Stopping on the carriageway or reversing after missing an exit."
+  },
+  "x2_expyend": {
+    "more": "The expressway ends. Ordinary roads have junctions, pedestrians, cycles, animals and slower vehicles again.",
+    "where": [
+      "End of an expressway at a town",
+      "Where an access-controlled section rejoins the old highway"
+    ],
+    "when": [
+      {
+        "s": "You've been driving fast for a long time",
+        "d": "Check your speedometer — after long fast stretches, slower speeds feel like crawling."
+      },
+      {
+        "s": "A junction comes up soon after",
+        "d": "Be ready to stop; signals and give-way rules apply again."
+      }
+    ],
+    "mistake": "Keeping expressway speed into the town."
+  },
+  "x2_cng": {
+    "more": "A CNG filling station. CNG is stored at high pressure, so the rules on the forecourt are strict.",
+    "where": [
+      "Highways between towns",
+      "Near towns and junctions"
+    ],
+    "when": [
+      {
+        "s": "Your vehicle is being filled",
+        "d": "Switch off the engine and get passengers out if the staff ask you to."
+      },
+      {
+        "s": "You decide to stop",
+        "d": "Signal early, slow down in your lane and pull fully off the carriageway before stopping."
+      }
+    ],
+    "mistake": "Joining a long queue that spills back onto the highway."
+  },
+  "x2_ev": {
+    "more": "An electric-vehicle charging station. Charging can take anything from about half an hour to several hours.",
+    "where": [
+      "Highways between towns",
+      "Near towns and junctions"
+    ],
+    "when": [
+      {
+        "s": "Your car has finished charging",
+        "d": "Move it so the next driver can charge."
+      },
+      {
+        "s": "You decide to stop",
+        "d": "Signal early, slow down in your lane and pull fully off the carriageway before stopping."
+      }
+    ],
+    "mistake": "Parking a petrol car in the charging bay."
+  },
+  "x2_toilet": {
+    "more": "Public toilets are available nearby.",
+    "where": [
+      "Highways between towns",
+      "Near towns and junctions"
+    ],
+    "when": [
+      {
+        "s": "Children or elderly passengers need a stop",
+        "d": "Plan to stop here rather than on the roadside."
+      },
+      {
+        "s": "You decide to stop",
+        "d": "Signal early, slow down in your lane and pull fully off the carriageway before stopping."
+      }
+    ],
+    "mistake": "Stopping on the carriageway near the sign."
+  },
+  "x2_police": {
+    "more": "A police post or station is nearby — a safe place to report a crash, a theft or harassment.",
+    "where": [
+      "Highways between towns",
+      "Near towns and junctions"
+    ],
+    "when": [
+      {
+        "s": "You're being followed or feel unsafe",
+        "d": "Drive to the police post and stop there."
+      },
+      {
+        "s": "You decide to stop",
+        "d": "Signal early, slow down in your lane and pull fully off the carriageway before stopping."
+      }
+    ],
+    "mistake": "Leaving the scene of a crash instead of reporting it."
+  },
+  "x2_airport": {
+    "more": "The road leads to an airport. Expect drop-off zones, security checks, slow-moving cabs and people with luggage.",
+    "where": [
+      "Airport approach roads at Kochi, Thiruvananthapuram, Kozhikode and Kannur",
+      "Ring roads near airports"
+    ],
+    "when": [
+      {
+        "s": "You're dropping someone off",
+        "d": "Use the departure kerb, unload quickly and move on; don't wait there."
+      },
+      {
+        "s": "You're picking someone up",
+        "d": "Wait in the parking area until they're out, then drive to the pick-up point."
+      }
+    ],
+    "mistake": "Stopping on the approach road to wait for a flight to land."
+  },
+  "x2_rail": {
+    "more": "The road leads to a railway station. Around train times the area fills with autos, taxis and people crossing with luggage.",
+    "where": [
+      "Station approach roads in towns",
+      "Near railway overbridges"
+    ],
+    "when": [
+      {
+        "s": "A train has just arrived",
+        "d": "Drive slowly; people rush across the road to buses and autos."
+      },
+      {
+        "s": "You're dropping someone off",
+        "d": "Use the drop-off area and don't block the entrance."
+      }
+    ],
+    "mistake": "Double-parking outside the station entrance."
+  },
+  "x2_helpline": {
+    "more": "Shows the highway helpline number. On national highways 1033 connects you to help for crashes and breakdowns; 112 is the all-emergency number.",
+    "where": [
+      "Along national highways and expressways",
+      "Near toll plazas"
+    ],
+    "when": [
+      {
+        "s": "You see a crash on the highway",
+        "d": "Call 1033 or 112 with the road number and nearest kilometre stone."
+      },
+      {
+        "s": "Your vehicle breaks down on a fast road",
+        "d": "Move to the shoulder, put on hazard lights, get people away from traffic, then call."
+      }
+    ],
+    "mistake": "Not noting the number and location before you need it."
+  },
+  "x2_speedcam": {
+    "more": "Speed is measured by camera on this stretch, either at a point or as an average between two cameras.",
+    "where": [
+      "Highways through towns and accident-prone stretches",
+      "Expressways"
+    ],
+    "when": [
+      {
+        "s": "You realise you're over the limit",
+        "d": "Ease off smoothly — harsh braking can cause a rear-end crash."
+      },
+      {
+        "s": "Average-speed cameras are used",
+        "d": "Keep to the limit for the whole stretch, not just at the camera."
+      }
+    ],
+    "mistake": "Slamming the brakes at the camera and speeding again right after."
+  },
+  "x2_buslane": {
+    "more": "A lane reserved for buses, so public transport isn't stuck in queues. A plate may give the hours.",
+    "where": [
+      "City corridors with bus priority",
+      "Approaches to bus stands"
+    ],
+    "when": [
+      {
+        "s": "You need to turn left from beyond the bus lane",
+        "d": "Enter it only just before the turn, after checking for buses."
+      },
+      {
+        "s": "A bus is behind you in the bus lane",
+        "d": "Move out of the lane as soon as it's safe."
+      }
+    ],
+    "mistake": "Using an empty bus lane to skip a queue."
+  },
+  "x2_parkbus": {
+    "more": "Parking set aside for buses — tourist coaches, school and staff buses. Cars parked here force buses onto the road.",
+    "where": [
+      "Town centres, malls and stations",
+      "Hospitals, offices and tourist spots"
+    ],
+    "when": [
+      {
+        "s": "The bays are full",
+        "d": "Don't double-park or block the entrance — find another legal spot."
+      },
+      {
+        "s": "You're leaving the bay",
+        "d": "Check behind for pedestrians and other vehicles before you reverse out."
+      }
+    ],
+    "mistake": "Using a bay meant for buses when you aren't one."
+  },
+  "x2_ambulance": {
+    "more": "A bay kept free so ambulances can stop right at the door of a hospital or emergency point.",
+    "where": [
+      "Hospital entrances and casualty doors",
+      "Large malls, stadiums and event venues"
+    ],
+    "when": [
+      {
+        "s": "You're bringing a patient by car",
+        "d": "Stop briefly to unload, then move to the car park."
+      },
+      {
+        "s": "The bay is empty and parking is full",
+        "d": "Still keep out — an ambulance may arrive any moment."
+      }
+    ],
+    "mistake": "Parking in the bay 'only for a few minutes'."
+  },
+  "x3_dblYellow": {
+    "more": "Two continuous yellow lines down the middle, used where crossing into the other lane is especially dangerous.",
+    "where": [
+      "Ghat roads and sharp curves",
+      "Busy stretches without a median"
+    ],
+    "when": [
+      {
+        "s": "You're stuck behind a slow lorry",
+        "d": "Stay behind until the yellow lines end."
+      },
+      {
+        "s": "You need to turn right across the lines",
+        "d": "Go on to a gap or junction where turning is allowed."
+      }
+    ],
+    "mistake": "Crossing the yellow lines to overtake on a bend."
+  },
+  "x3_yelEdge": {
+    "more": "A yellow line along the kerb means no parking along that stretch; a sign may also ban stopping.",
+    "where": [
+      "Busy commercial streets",
+      "Near junctions and bus stops"
+    ],
+    "when": [
+      {
+        "s": "You need to drop someone off",
+        "d": "Stop briefly only if stopping isn't also banned, and stay with the vehicle."
+      },
+      {
+        "s": "Everyone else is parked on it",
+        "d": "Don't join them — find a legal spot."
+      }
+    ],
+    "mistake": "Parking along the yellow line 'only for a minute'."
+  },
+  "x3_rumble": {
+    "more": "Raised bars that make the vehicle rumble and shake, waking you up to a hazard ahead — or warning that you're drifting off the road.",
+    "where": [
+      "Before toll plazas, junctions and sharp bends",
+      "Along highway edges"
+    ],
+    "when": [
+      {
+        "s": "You feel the rumble before a junction",
+        "d": "Slow down at once and look for what's ahead."
+      },
+      {
+        "s": "You hit edge rumble strips",
+        "d": "You're drifting — steer back gently, and if you're tired, stop and rest."
+      }
+    ],
+    "mistake": "Driving on the rumble strips' edge to avoid the vibration."
+  },
+  "x3_transBars": {
+    "more": "Lines across the lane that get closer together make you feel you're going faster, nudging you to slow down before a hazard.",
+    "where": [
+      "Before roundabouts and sharp bends",
+      "Approaches to toll plazas and villages"
+    ],
+    "when": [
+      {
+        "s": "The bars start passing quickly under you",
+        "d": "Check your speedometer and ease off."
+      },
+      {
+        "s": "You're already slow",
+        "d": "Keep a steady speed and look for the hazard ahead."
+      }
+    ],
+    "mistake": "Ignoring them because they're 'only paint'."
+  },
+  "x3_chevron": {
+    "more": "A wedge of V-shaped stripes where a slip road splits off or joins. It keeps merging and diverging traffic apart.",
+    "where": [
+      "Flyover and expressway exits",
+      "Merges at interchanges"
+    ],
+    "when": [
+      {
+        "s": "You're about to miss your exit",
+        "d": "Don't cut across the chevrons — take the next exit."
+      },
+      {
+        "s": "You're merging from a slip road",
+        "d": "Merge at the end of the chevrons, not across them."
+      }
+    ],
+    "mistake": "Stopping on the chevrons to decide which way to go."
+  },
+  "x3_busLane": {
+    "more": "BUS painted in a lane reserves it for buses; the colour or an extra sign may show the hours.",
+    "where": [
+      "City bus corridors",
+      "Approaches to bus terminals"
+    ],
+    "when": [
+      {
+        "s": "You need to turn left just ahead",
+        "d": "Enter the bus lane only for the last short stretch, after checking for buses."
+      },
+      {
+        "s": "Traffic is jammed next to the empty bus lane",
+        "d": "Stay out — it keeps buses on time for everyone."
+      }
+    ],
+    "mistake": "Stopping in the bus lane to drop passengers."
+  },
+  "x3_island": {
+    "more": "A raised island with black-and-white kerbs divides traffic and gives pedestrians a place to wait.",
+    "where": [
+      "Junction approaches and wide roads",
+      "Ends of medians"
+    ],
+    "when": [
+      {
+        "s": "The island has a keep-left sign",
+        "d": "Pass on the left of it."
+      },
+      {
+        "s": "People are standing on the island",
+        "d": "Slow down; they may step off in front of you."
+      }
+    ],
+    "mistake": "Clipping the island kerb at night by cutting the corner."
+  },
+  "x3_refuge": {
+    "more": "A small island in the middle of a crossing so people can cross one direction of traffic at a time.",
+    "where": [
+      "Wide roads in towns",
+      "Highways passing through villages"
+    ],
+    "when": [
+      {
+        "s": "Someone is waiting on the refuge",
+        "d": "Assume they'll step out; slow down and be ready to stop."
+      },
+      {
+        "s": "You're walking and reach the refuge",
+        "d": "Stop there and check the second half of the road before going on."
+      }
+    ],
+    "mistake": "Overtaking near the refuge, where the road is narrowest."
+  },
+  "x3_slowWord": {
+    "more": "SLOW painted on the road, stretched so it reads correctly from a moving vehicle.",
+    "where": [
+      "Before schools, villages and hospitals",
+      "Ahead of bends and junctions"
+    ],
+    "when": [
+      {
+        "s": "You see SLOW and nothing obvious ahead",
+        "d": "Slow down anyway — the hazard may be just out of sight."
+      },
+      {
+        "s": "It's raining",
+        "d": "Slow down even more; painted words are slippery for two-wheelers."
+      }
+    ],
+    "mistake": "Braking hard on the painted letters on a wet day."
+  },
+  "x3_stopWord": {
+    "more": "STOP painted before a stop line reinforces a Stop sign at a dangerous junction.",
+    "where": [
+      "Village roads meeting highways",
+      "Level crossings and blind junctions"
+    ],
+    "when": [
+      {
+        "s": "You can see the road is empty",
+        "d": "Still stop completely at the line, then look both ways."
+      },
+      {
+        "s": "The sign is missing but the word is painted",
+        "d": "Treat it exactly like a Stop sign."
+      }
+    ],
+    "mistake": "Slowing down without actually stopping."
+  },
+  "x3_studCol": {
+    "more": "Coloured reflective studs help you read the road at night. A common pattern is white between lanes, yellow along the median side and red at the left edge — but follow the painted lines where they differ.",
+    "where": [
+      "Expressways and national highways",
+      "Bridges and flyovers"
+    ],
+    "when": [
+      {
+        "s": "Rain hides the paint",
+        "d": "Use the stud colours to tell the lane line from the edge."
+      },
+      {
+        "s": "You cross a row of red studs",
+        "d": "You're at the road edge — steer back."
+      }
+    ],
+    "mistake": "Mistaking the edge studs for a lane line."
+  },
+  "x3_laneCombo": {
+    "more": "A lane arrow with a branch means traffic in that lane may go straight or turn the way the branch points.",
+    "where": [
+      "Signal junctions with shared lanes",
+      "Approaches to roundabouts"
+    ],
+    "when": [
+      {
+        "s": "You're going straight in a shared lane",
+        "d": "Expect the vehicle ahead to stop and wait to turn."
+      },
+      {
+        "s": "You're turning from a shared lane",
+        "d": "Signal clearly so drivers behind know you'll turn."
+      }
+    ],
+    "mistake": "Turning from a straight-only lane next to a shared one."
+  },
+  "x3_cone": {
+    "more": "Orange cones with reflective bands guide traffic around works, crashes or checks, and close lanes temporarily.",
+    "where": [
+      "Road works and lane closures",
+      "Police checks and accident scenes"
+    ],
+    "when": [
+      {
+        "s": "Cones taper your lane away",
+        "d": "Merge early and in turn — don't race to the last cone."
+      },
+      {
+        "s": "A cone has been knocked into your lane",
+        "d": "Slow down and steer round it; don't run it over."
+      }
+    ],
+    "mistake": "Moving cones aside to drive through a closed lane."
+  },
+  "x3_barricade": {
+    "more": "Red-and-white striped boards close the road or part of it — for works, a hole, a collapse or an event.",
+    "where": [
+      "Road works and trench digging",
+      "Closed bridges and flooded roads"
+    ],
+    "when": [
+      {
+        "s": "The road ahead is barricaded",
+        "d": "Stop and follow the diversion; never go round the barricade."
+      },
+      {
+        "s": "A barricade is placed partly across the lane",
+        "d": "Slow down and pass only where the gap is clearly meant for traffic."
+      }
+    ],
+    "mistake": "Removing or squeezing past a barricade at night."
+  },
+  "x3_diversion": {
+    "more": "A bold arrow board sends you off your usual route around a closure. Diversions are often narrow, unlit and busy.",
+    "where": [
+      "Around flyover and bridge works",
+      "During festivals and processions"
+    ],
+    "when": [
+      {
+        "s": "The diversion goes through narrow lanes",
+        "d": "Drive slowly and watch for pedestrians and parked vehicles."
+      },
+      {
+        "s": "You lose the diversion signs",
+        "d": "Stop safely and check, rather than guessing into a one-way street."
+      }
+    ],
+    "mistake": "Ignoring the diversion and driving up to the closure."
+  },
+  "x3_flagman": {
+    "more": "A worker with a STOP/SLOW paddle controls one-way flow through road works. Their signal must be obeyed like a traffic light.",
+    "where": [
+      "Single-lane sections at road works",
+      "Ghat road repairs"
+    ],
+    "when": [
+      {
+        "s": "STOP faces you",
+        "d": "Stop behind the worker and wait, even if the road looks clear."
+      },
+      {
+        "s": "SLOW faces you",
+        "d": "Drive through slowly, following the cones and any lead vehicle."
+      }
+    ],
+    "mistake": "Creeping forward or overtaking the queue while STOP is shown."
+  },
+  "x3_delineator": {
+    "more": "Short reflective posts along the road edge trace the line of the road ahead, especially round bends and on embankments.",
+    "where": [
+      "Ghat roads and embankments",
+      "Highways in open country"
+    ],
+    "when": [
+      {
+        "s": "It's foggy or dark",
+        "d": "Follow the posts to see where the road goes before your headlights reach the bend."
+      },
+      {
+        "s": "The posts curve sharply",
+        "d": "Slow down early — the bend is tighter than the road suggests."
+      }
+    ],
+    "mistake": "Driving too fast for the visibility and relying only on the posts."
+  },
+  "x3_convex": {
+    "more": "A round mirror at a blind bend or exit shows traffic you can't see directly. Mirrors make vehicles look smaller and further away than they are.",
+    "where": [
+      "Hairpins on ghat roads",
+      "Exits from gates and car parks onto busy roads"
+    ],
+    "when": [
+      {
+        "s": "You see a vehicle in the mirror",
+        "d": "Assume it's closer and faster than it looks; wait or keep well left."
+      },
+      {
+        "s": "The mirror is empty",
+        "d": "It may be dirty or have a blind area — still go slowly and sound the horn on hill bends."
+      }
+    ],
+    "mistake": "Trusting the mirror completely and pulling out quickly."
+  },
+  "x3_guardrail": {
+    "more": "A steel barrier along drops, bridges and sharp curves catches vehicles that leave the road. It marks the most dangerous edges.",
+    "where": [
+      "Ghat roads above steep drops",
+      "Bridges, embankments and medians"
+    ],
+    "when": [
+      {
+        "s": "You need to stop urgently on a guard-railed stretch",
+        "d": "Pull as far left as safely possible, switch on hazards and get people behind the barrier."
+      },
+      {
+        "s": "You see a damaged section",
+        "d": "Slow down — the protection there is gone."
+      }
+    ],
+    "mistake": "Leaning or standing on the rail at a viewpoint near traffic."
+  },
+  "x3_median": {
+    "more": "A raised, planted strip separating opposing traffic. Shrubs also cut glare from oncoming headlights.",
+    "where": [
+      "Four- and six-lane highways",
+      "Wide city roads"
+    ],
+    "when": [
+      {
+        "s": "Your turn is on the other side",
+        "d": "Drive on to the next official gap or U-turn."
+      },
+      {
+        "s": "People cross through gaps in the plants",
+        "d": "Watch for pedestrians stepping out of the median."
+      }
+    ],
+    "mistake": "Driving two-wheelers through a gap in the shrubs."
+  },
+  "x3_plPrivate": {
+    "more": "Black characters on white mark a privately owned vehicle not used for hire. The first letters show the state (KL for Kerala) and the RTO code, followed by a series and number.",
+    "where": [
+      "Most private cars and two-wheelers",
+      "Personal vehicles registered in any state"
+    ],
+    "when": [
+      {
+        "s": "You need to report a vehicle after a hit-and-run",
+        "d": "Note the full number, colour and model — the state and RTO code come first."
+      },
+      {
+        "s": "Your own plate is dirty or cracked",
+        "d": "Clean or replace it so it can be read by day and night."
+      }
+    ],
+    "mistake": "Using fancy fonts or stickers that make the number hard to read."
+  },
+  "x3_plCommercial": {
+    "more": "Black on yellow marks a commercial vehicle — taxis, autos, buses and goods carriers used for hire or reward.",
+    "where": [
+      "Taxis, autos and tourist cabs",
+      "Lorries, pickups and private buses"
+    ],
+    "when": [
+      {
+        "s": "You're hiring a taxi",
+        "d": "Check it has a yellow plate — it means it's registered for carrying passengers for hire."
+      },
+      {
+        "s": "A yellow-plate vehicle is ahead",
+        "d": "Expect sudden stops to pick up or set down passengers or goods."
+      }
+    ],
+    "mistake": "Using a private car as a regular taxi."
+  },
+  "x3_plRental": {
+    "more": "Yellow on black marks a self-drive rental vehicle — you hire the car and drive it yourself.",
+    "where": [
+      "Self-drive rental cars and scooters",
+      "Tourist areas, airports and stations"
+    ],
+    "when": [
+      {
+        "s": "You're renting one",
+        "d": "Check the papers, insurance and the car's condition, and photograph any damage before you leave."
+      },
+      {
+        "s": "You're driving an unfamiliar rental",
+        "d": "Take a few minutes to find the lights, wipers and hazard switch before you set off."
+      }
+    ],
+    "mistake": "Driving a rental far harder than you would your own car."
+  },
+  "x3_plEV": {
+    "more": "White on green marks a private electric vehicle. EVs are almost silent at low speed and accelerate quickly.",
+    "where": [
+      "Private electric cars and scooters",
+      "Residential areas and car parks"
+    ],
+    "when": [
+      {
+        "s": "You're walking in a car park",
+        "d": "Look as well as listen — an EV may be moving without a sound."
+      },
+      {
+        "s": "You're driving an EV near pedestrians",
+        "d": "Go slowly and give extra room; they may not hear you."
+      }
+    ],
+    "mistake": "Assuming a silent vehicle isn't moving."
+  },
+  "x3_plEVcomm": {
+    "more": "Yellow on green marks an electric vehicle used for hire — e-autos, e-buses and electric taxis.",
+    "where": [
+      "Electric autos and city e-buses",
+      "App-based electric taxis"
+    ],
+    "when": [
+      {
+        "s": "An e-auto is ahead",
+        "d": "Expect it to stop suddenly for passengers, like any auto."
+      },
+      {
+        "s": "You're crossing near a bus stop with e-buses",
+        "d": "Look carefully — the bus may pull away almost silently."
+      }
+    ],
+    "mistake": "Not hearing an e-bus and stepping out in front of it."
+  },
+  "x3_plDiplo": {
+    "more": "White on blue with codes such as CD or CC marks vehicles of foreign missions and their staff.",
+    "where": [
+      "Diplomatic areas in large cities",
+      "Official visits and events"
+    ],
+    "when": [
+      {
+        "s": "You see one in traffic",
+        "d": "Treat it like any other vehicle and drive normally."
+      },
+      {
+        "s": "It's part of an official convoy",
+        "d": "Follow police instructions and give the convoy room."
+      }
+    ],
+    "mistake": "Trying to follow or photograph an official vehicle closely."
+  },
+  "x3_plBH": {
+    "more": "The Bharat (BH) series starts with the year of registration, then BH, a number and letters. It's meant for people who move between states for work.",
+    "where": [
+      "Vehicles of people in transferable jobs",
+      "Any state — the plate doesn't show a state code"
+    ],
+    "when": [
+      {
+        "s": "You need to note a BH plate",
+        "d": "Write it in order: year, BH, four digits, letters."
+      },
+      {
+        "s": "You're considering a BH registration",
+        "d": "Check current eligibility rules with the RTO or Parivahan before applying."
+      }
+    ],
+    "mistake": "Assuming a BH-plate vehicle is from outside your state and 'not local'."
+  },
+  "x3_plHSRP": {
+    "more": "A high-security plate has a chromium hologram of the Ashoka Chakra, IND in blue, a laser-etched number and non-reusable snap locks, making it hard to forge or swap.",
+    "where": [
+      "New vehicles from the dealer",
+      "Older vehicles that have been refitted"
+    ],
+    "when": [
+      {
+        "s": "Your plate is damaged",
+        "d": "Get a replacement through the authorised process, not a local copy."
+      },
+      {
+        "s": "You see a plate with HSRP features missing",
+        "d": "It may be a fake — note other details if you need to report the vehicle."
+      }
+    ],
+    "mistake": "Replacing an HSRP with a decorative plate."
+  },
+  "x3_learnerL": {
+    "more": "A red L on a white background, front and rear, shows the driver is a learner, who must be accompanied as the learner licence requires.",
+    "where": [
+      "Driving-school cars",
+      "Family cars used for practice"
+    ],
+    "when": [
+      {
+        "s": "You're behind a learner who stalls at a signal",
+        "d": "Be patient — don't hoot or overtake dangerously."
+      },
+      {
+        "s": "You're the learner",
+        "d": "Display the L plates and practise first on quiet roads at quiet times."
+      }
+    ],
+    "mistake": "Tailgating or cutting in front of learners to 'teach them'."
+  },
+  "x3_reflTape": {
+    "more": "Red and white reflective tape outlines the back and sides of heavy vehicles so their size shows up in headlights.",
+    "where": [
+      "Lorries, trailers and buses",
+      "Tractor trolleys on rural roads"
+    ],
+    "when": [
+      {
+        "s": "You see tape low and wide ahead at night",
+        "d": "It's likely a slow lorry or trailer — slow down early."
+      },
+      {
+        "s": "A trailer has no tape",
+        "d": "Be extra careful; it may be almost invisible at night."
+      }
+    ],
+    "mistake": "Misjudging the length of a trailer and cutting in too soon after overtaking."
+  },
+  "x3_schoolBus": {
+    "more": "A yellow bus marked SCHOOL BUS (or 'On school duty') carries children. Children may get on and off at any roadside stop.",
+    "where": [
+      "Mornings and afternoons on school days",
+      "Residential roads and village junctions"
+    ],
+    "when": [
+      {
+        "s": "The bus stops with children getting off",
+        "d": "Slow right down or stop — a child may run round the front of the bus."
+      },
+      {
+        "s": "You're behind it on a narrow road",
+        "d": "Keep a good distance; it stops often."
+      }
+    ],
+    "mistake": "Overtaking a stopped school bus at speed."
+  },
+  "x3_ambulance": {
+    "more": "An ambulance with lights and siren is carrying a patient or racing to one. Minutes matter.",
+    "where": [
+      "City traffic and highways",
+      "Near hospitals"
+    ],
+    "when": [
+      {
+        "s": "You hear a siren but can't see where it is",
+        "d": "Slow down, check mirrors and look around before moving over."
+      },
+      {
+        "s": "You're at a red light and it's behind you",
+        "d": "Move over only if you can do so safely; don't drive into the junction dangerously."
+      }
+    ],
+    "mistake": "Following an ambulance closely to get through traffic."
+  },
+  "x3_fireEngine": {
+    "more": "A red fire tender with beacons and siren on its way to a fire or rescue. It's heavy and needs space to manoeuvre.",
+    "where": [
+      "City roads near fire stations",
+      "Narrow lanes during emergencies"
+    ],
+    "when": [
+      {
+        "s": "A fire engine approaches",
+        "d": "Pull left and stop where safe; let it pass and watch for a second one."
+      },
+      {
+        "s": "You park near a hydrant or fire station gate",
+        "d": "Don't — keep those spaces clear at all times."
+      }
+    ],
+    "mistake": "Parking across the fire station exit."
+  },
+  "x3_laneCtl": {
+    "more": "Signals above each lane open or close it — common on tunnels, toll plazas, bridges and tidal-flow roads.",
+    "where": [
+      "Tunnels and toll plazas",
+      "Bridges with reversible lanes"
+    ],
+    "when": [
+      {
+        "s": "A red cross appears over your lane",
+        "d": "Move to a lane with a green arrow as soon as it's safe."
+      },
+      {
+        "s": "An amber diagonal arrow appears",
+        "d": "Change lanes in the direction shown — your lane is closing ahead."
+      }
+    ],
+    "mistake": "Staying in a red-cross lane because it's empty."
+  },
+  "x3_levelX": {
+    "more": "Alternately flashing red lights at a level crossing mean a train is coming. Barriers may follow.",
+    "where": [
+      "Railway level crossings",
+      "Tram or metro depot crossings"
+    ],
+    "when": [
+      {
+        "s": "The lights start flashing as you approach",
+        "d": "Stop behind the line, even if the barrier is still up."
+      },
+      {
+        "s": "A train has passed but the lights keep flashing",
+        "d": "Wait — another train may be coming."
+      }
+    ],
+    "mistake": "Zigzagging round half-down barriers."
+  },
+  "x3_schoolFlash": {
+    "more": "A flashing amber light on a school sign shows that the school zone is active — children are arriving or leaving.",
+    "where": [
+      "Outside schools on main roads",
+      "Near school bus stops"
+    ],
+    "when": [
+      {
+        "s": "The light is flashing",
+        "d": "Drive at a crawl, be ready to stop and watch between parked vehicles."
+      },
+      {
+        "s": "A traffic warden is crossing children",
+        "d": "Stop and wait for the warden's signal."
+      }
+    ],
+    "mistake": "Assuming the light is just decoration outside school hours."
+  },
+  "x3_pedPush": {
+    "more": "A push button lets pedestrians call a green walking phase at a crossing that otherwise stays green for vehicles.",
+    "where": [
+      "Mid-block crossings on main roads",
+      "Near schools and hospitals"
+    ],
+    "when": [
+      {
+        "s": "You're walking",
+        "d": "Press once and wait for the green figure — pressing again doesn't speed it up."
+      },
+      {
+        "s": "You're driving and the light turns amber",
+        "d": "Someone has pressed the button; stop for the crossing."
+      }
+    ],
+    "mistake": "Crossing before the signal changes because the button 'takes too long'."
+  },
+  "x3_countRed": {
+    "more": "A countdown under the red light tells you how long you'll wait — useful for deciding to switch off the engine.",
+    "where": [
+      "Long signal cycles at city junctions",
+      "Major highway signals"
+    ],
+    "when": [
+      {
+        "s": "The countdown shows a long wait",
+        "d": "Switch off the engine if it's more than about a minute."
+      },
+      {
+        "s": "It reaches zero",
+        "d": "Wait for the green light itself, then check the junction is clear before moving."
+      }
+    ],
+    "mistake": "Starting to roll as the numbers count down."
   }
 }

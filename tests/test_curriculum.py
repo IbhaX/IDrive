@@ -127,3 +127,12 @@ def test_sign_details_cover_real_signs_and_are_translated() -> None:
     details = curriculum.sign_details()
     assert set(details) <= ids
     assert curriculum.sign_details_missing_ml() == []
+
+
+def test_every_sign_has_rich_details() -> None:
+    from app.services import content
+    details = curriculum.sign_details()
+    missing = [s["id"] for s in content.signs() if s["id"] not in details]
+    assert missing == []
+    for k, v in details.items():
+        assert len(v.where) >= 2 and len(v.when) >= 2, k
