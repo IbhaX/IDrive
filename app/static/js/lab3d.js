@@ -230,17 +230,18 @@ L3.attach = (viz, id, get) => {
   let playHold = 0;
   const syncPlay = () => {
     const ctl = runCtl();
-    if (!ctl) { playBtn.hidden = true; return; }
+    if (sc.noplay) { playBtn.hidden = true; return; }
     const busy = runDur > 0 || Date.now() < playHold || (sc.playing && sc.playing());
-    if (!busy) { const name = (ctl.textContent || "").replace(/[▶▼❚]/g, "").trim(); if (playBtn._h !== name) { playBtn.innerHTML = `<i aria-hidden="true">${/▼/.test(ctl.textContent) ? "▼" : "▶"}</i>`; playBtn.setAttribute("aria-label", name); playBtn.title = name; playBtn._h = name; } }
+    if (!busy) { const name = ctl ? (ctl.textContent || "").replace(/[▶▼❚]/g, "").trim() : I18n.one(I18n.u("play")); if (playBtn._h !== name) { playBtn.innerHTML = `<i aria-hidden="true">${ctl && /▼/.test(ctl.textContent) ? "▼" : "▶"}</i>`; playBtn.setAttribute("aria-label", name); playBtn.title = name; playBtn._h = name; } }
     playBtn.hidden = busy;
   };
   playBtn.addEventListener("click", () => {
     dirty = true;
-    const ctl = runCtl(); if (!ctl) return;
+    const ctl = runCtl();
     playBtn.hidden = true;
     if (sc.hold) playHold = Date.now() + sc.hold * 1000;
-    ctl.click();
+    if (ctl) ctl.click();
+    else api.run(sc.dur || 3);          // the scene's own animation
     setTimeout(syncPlay, 60);
   });
 

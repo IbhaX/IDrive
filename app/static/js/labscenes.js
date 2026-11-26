@@ -11,6 +11,9 @@ const fx = (n, d = 1) => (+n).toFixed(d);
 const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
 const GOOD = "#22c55e", BAD = "#ef4444", WARN = "#f59e0b", REACT = "#f97316", BRAKE = "#38bdf8", YOU = "#2563eb", LEAD = "#e5e7eb";
 const LL = -1.8, LR = 1.8;
+const sm = (x) => { x = clamp(x, 0, 1); return x * x * (3 - 2 * x); };
+const P0 = (c) => (c.idle ? 0 : c.t);   // idle: the starting pose
+const P1 = (c) => (c.idle ? 1 : c.t);   // idle: the settled result
 const ease = (x) => 1 - Math.pow(1 - clamp(x, 0, 1), 2);
 const lvl = (s) => (s === "bad" ? BAD : s === "warnt" ? WARN : GOOD);
 const sayCls = (r) => (r && r.say ? (r.say[2] === "bad" ? "bad" : r.say[2] === "warnt" ? "warn" : r.say[2] === "good" ? "good" : "") : "");
@@ -96,7 +99,7 @@ def("stopping", {
 });
 
 def("reaction", {
-  env: { kind: "road", length: 200 },
+  env: { kind: "road", length: 200 }, noplay: true,
   scene(S, c) {
     const s = c.state, go = s === "go" || s === "done";
     S.car(LL, -22, { color: "#dc2626", brake: go });
@@ -169,38 +172,40 @@ def("cornering", {
 });
 
 def("slope", {
-  env: { kind: "open" },
+  env: { kind: "open" }, dur: 3,
   scene(S, c) {
     const st = c.st, r = c.r, th = Math.atan(st.grade / 100) * 1.6, base = M.mul(M.t(0, 7, 6), M.rx(th));
-    const span = Math.max(r.flat, isFinite(r.dist) ? r.dist : r.flat * 2.5) * 1.1, k = Math.min(1, 55 / span);
+    const span = Math.max(r.flat, isFinite(r.dist) ? r.dist : r.flat * 2.5) * 1.1, k = Math.min(1, 55 / span), p = P0(c);
     inBase(S, base, -4, -0.5, 14, 4, 0, -70, "#3b3d40");
     inBase(S, base, -0.07, 0, 0, 0.07, 0.015, -70, "#f2f2f2");
     inBase(S, base, -4.2, -0.5, 14, -4, 0.35, -70, "#d6d3d1"); inBase(S, base, 4, -0.5, 14, 4.2, 0.35, -70, "#d6d3d1");
-    for (let zz = 10; zz > -70; zz -= 16) { const p = at(base, [0, -0.5, zz]); if (p[1] > 0.2) S.box(-0.4, 0, p[2] - 0.4, 0.4, p[1], p[2] + 0.4, "#9ca3af"); }
-    const dz = isFinite(r.dist) ? r.dist * k : span * k;
+    for (let zz = 10; zz > -70; zz -= 16) { const q = at(base, [0, -0.5, zz]); if (q[1] > 0.2) S.box(-0.4, 0, q[2] - 0.4, 0.4, q[1], q[2] + 0.4, "#9ca3af"); }
+    const dz = isFinite(r.dist) ? r.dist * k : span * k, fz = r.flat * k, dec = 1 - (1 - p) ** 2;
     inBase(S, base, LL - 0.4, 0.01, 0, LL + 0.4, 0.04, -dz, isFinite(r.dist) ? (r.dist > r.flat ? BAD : GOOD) : BAD, 0.9);
-    inBase(S, base, LR - 0.4, 0.01, 0, LR + 0.4, 0.04, -r.flat * k, "#94a3b8", 0.55);
-    S.car(LL, 2.1, { color: YOU, base });
-    const e1 = at(base, [LL, 0.4, -dz]), e2 = at(base, [LR, 0.4, -r.flat * k]);
-    S.label("d", e1, `<b>${isFinite(r.dist) ? fx(r.dist) + " m" : "∞"}</b>`, sayCls(r));
-    S.label("f", [e2[0] + 1.5, e2[1] - 0.6, e2[2]], `${tt("slFlat")} ${fx(r.flat)} m`, "tag");
-    S.label("g", at(base, [0, 2.4, 2]), `${st.grade > 0 ? "+" : ""}${st.grade}%`, "big");
+    inBase(S, base, LR - 0.4, 0.01, 0, LR + 0.4, 0.04, -fz, "#94a3b8", 0.55);
+    S.car(LL, 2.1 - (isFinite(r.dist) ? dz * dec : dz * p), { color: YOU, base, brake: p > 0 });
+    S.car(LR, 2.1 - fz * dec, { color: "#94a3b8", base, alpha: 0.4, brake: p > 0 });
+    S.label("d", at(base, [LL, 0.4, -dz]), `<b>${isFinite(r.dist) ? fx(r.dist) + " m" : "∞"}</b>`, sayCls(r));
+    S.label("f", at(base, [LR + 1.5, -0.2, -fz]), `${tt("slFlat")} ${fx(r.flat)} m`, "tag");
+    S.label("g", at(base, [0, 2.4, 6]), `${st.grade > 0 ? "+" : ""}${st.grade}%`, "big");
     S.cam([20, 12, 20], [-1, 6, -6], 44);
   },
 });
 
 def("abs", {
-  env: { kind: "road", length: 120 },
+  env: { kind: "road", length: 120 }, dur: 3.2,
   scene(S, c) {
-    const st = c.st, r = c.r, ok = r.lat / r.mup > 0.3, locked = r.s >= 0.9;
+    const st = c.st, r = c.r, ok = r.lat / r.mup > 0.3, locked = r.s >= 0.9, p = P0(c);
     S.cone(LL, 0, -16, 0.35, 0.8, "#f97316"); S.cyl(LL, 0.35, -16, 0.28, 0.12, "#f8fafc");
-    const pts = [];
-    for (let i = 0; i <= 30; i++) { const q = i / 30, z = 6 - q * 30; const x = ok ? LL + Math.sin(clamp((q - 0.25) / 0.5, 0, 1) * Math.PI / 2) * 3.4 * (q > 0.25 ? 1 : 0) : LL; pts.push([x, z]); }
-    pts.forEach(([x, z], i) => { if (i % 2) return; S.cyl(x, 0.01, z, 0.12, 0.02, ok ? GOOD : BAD, 0.9); });
-    if (locked) [-0.8, 0.8].forEach((dx) => S.strip(LL + dx - 0.12, -10, LL + dx + 0.12, 4, "#111111", 0.6, 0.014));
-    else if (st.abs === "on" && st.pedal >= 30) for (let z = 4; z > -10; z -= 1.4) [-0.8, 0.8].forEach((dx) => S.strip(LL + dx - 0.12, z - 0.6, LL + dx + 0.12, z, "#111111", 0.35, 0.014));
-    const q = 0.42, [cx, cz] = pts[Math.round(q * 30)], [nx, nz] = pts[Math.round(q * 30) + 1];
-    S.car(cx, cz, { color: YOU, yaw: Math.atan2(nx - cx, -(nz - cz)), brake: st.pedal > 0 });
+    const path = (q) => { const z = 6 - q * 30, x = ok ? LL + Math.sin(clamp((q - 0.25) / 0.5, 0, 1) * Math.PI / 2) * 3.4 * (q > 0.25 ? 1 : 0) : LL; return [x, z]; };
+    for (let i = 0; i <= 30; i += 2) { const [x, z] = path(i / 30); S.cyl(x, 0.01, z, 0.12, 0.02, ok ? GOOD : BAD, 0.6); }
+    const qEnd = ok ? 0.9 : 0.68, q = qEnd * (1 - (1 - p) ** 2), [cx, cz] = path(q), [nx, nz] = path(Math.min(1, q + 0.02));
+    if (st.pedal > 0) {
+      if (locked) [-0.8, 0.8].forEach((dx) => S.strip(LL + dx - 0.12, cz + 1.3, LL + dx + 0.12, 4.5, "#111111", 0.6, 0.014));
+      else if (st.abs === "on" && st.pedal >= 30) for (let z = 4; z > cz + 1.3; z -= 1.4) [-0.8, 0.8].forEach((dx) => S.strip(LL + dx - 0.12, z - 0.6, LL + dx + 0.12, z, "#111111", 0.35, 0.014));
+    }
+    S.car(cx, cz, { color: YOU, yaw: Math.atan2(nx - cx, -(nz - cz)), brake: st.pedal > 0 && p > 0 });
+    if (!ok && p >= 1 && !c.idle) S.glow([LL, 0.6, -15], 2.2, [1, 0.3, 0.1]);
     S.label("s", [cx, 2.2, cz], `${tt(ok ? "abCanSteer" : "abNoSteer")}`, ok ? "good" : "bad");
     S.label("c", [LL, 1.3, -16], "⚠", "bad");
     S.label("d", [cx + 1.5, 0.4, cz - 4], `${tt("abStop")}: <b>${isFinite(r.stop) ? fx(r.stop) + " m" : "—"}</b>`, "tag");
@@ -209,52 +214,52 @@ def("abs", {
 });
 
 def("aquaplaning", {
-  env: { kind: "road", length: 60, scenery: false, mood: "rain" },
+  env: { kind: "road", length: 60, scenery: false, mood: "rain" }, dur: 3.2,
   scene(S, c) {
     S.live();
-    const st = c.st, r = c.r, R = 0.33, w = 0.22, water = st.water * 0.006 + 0.004, lift = (1 - r.contact) * 0.02;
-    const spin = c.time * st.kmh / 3.6 / R * 0.25;
+    const st = c.st, r = c.r, R = 0.33, w = 0.22, p = P1(c), sp = sm(clamp(p / 0.85, 0, 1));
+    const contact = 1 - (1 - r.contact) * sp, ratio = r.ratio * sp, water = st.water * 0.006 + 0.004, lift = (1 - contact) * 0.02;
+    const spin = c.time * (st.kmh * sp) / 3.6 / R * 0.25;
     S.dyn("tyre", "t" + st.tread, () => tyreMesh(R, w, 0.002 + st.tread * 0.0022), M.mul(M.t(0, R + lift, 0), M.rx(-spin)));
     S.box(-0.2, 0, -3, 0.25, water, 3, "#60a5fa", 0.35);
-    const wedge = (1 - r.contact) * 0.5;
+    const wedge = (1 - contact) * 0.5;
     if (wedge > 0.01) S.prim("cube", M.mul(M.t(0.02, water + wedge * 0.06, -R * 0.55 - wedge * 0.2), M.mul(M.rx(-0.35), M.s(w + 0.02, wedge * 0.16, wedge * 0.7))), "#93c5fd", 0.55);
-    S.strip(-w / 2, -0.09 * r.contact, w / 2, 0.09 * r.contact, "#020617", 0.8, water + 0.002);
-    const n = Math.round(r.ratio * 30);
+    S.strip(-w / 2, -0.09 * contact, w / 2, 0.09 * contact, "#020617", 0.8, water + 0.002);
+    const n = Math.round(ratio * 30);
     for (let i = 0; i < n; i++) { const ph = (c.time * 1.6 + i * 0.137) % 1, a = (i * 2.399) % 1; S.sph(-0.15 + a * 0.3 + (a - 0.5) * ph * 0.6, 0.02 + ph * 0.35 * (1 - ph) * 2, 0.25 + ph * 0.9, 0.012 + ph * 0.01, "#dbeafe", 0.6); }
-    S.label("c", [0, 0.02, -0.45], `${tt("aqContact")} <b>${Math.round(r.contact * 100)}%</b>`, sayCls(r));
-    S.label("v", [0, 0.82, 0], `${st.kmh} km/h · ${tt("aqOnset")} ${Math.round(r.von)}`, "tag");
+    S.label("c", [0, 0.02, -0.45], `${tt("aqContact")} <b>${Math.round(contact * 100)}%</b>`, contact < 0.05 ? "bad" : contact < 0.4 ? "warn" : "good");
+    S.label("v", [0, 0.82, 0], `<b>${Math.round(st.kmh * sp)} km/h</b> · ${tt("aqOnset")} ${Math.round(r.von)}`, "big");
     S.cam([1.25, 0.42, -1.05], [0, 0.2, 0], 40);
   },
 });
 
 def("tyrepressure", {
-  env: { kind: "studio" },
+  env: { kind: "studio" }, dur: 2.6,
   scene(S, c) {
-    const st = c.st, r = c.r, R = 0.33, defl = clamp((r.area - 1) * 0.08 + 0.015, 0.004, 0.08);
-    const sy = 1 - defl / (2 * R), sx = 1 + defl * 1.4;
+    const st = c.st, r = c.r, R = 0.33, p = P1(c), k = sm(p), area = 1 + (r.area - 1) * k, pNow = 1 + (r.p - 1) * k;
+    const defl = clamp((area - 1) * 0.08 + 0.015, 0.004, 0.08), sy = 1 - defl / (2 * R), sx = 1 + defl * 1.4;
     S.dyn("tyre", "t", () => tyreMesh(R, 0.21, 0.007), M.mul(M.t(0, R * sy, 0), M.s(sx, sy, 1)));
-    const W = 0.2 * clamp(Math.sqrt(r.area) * (r.p < 1 ? 1.08 : 0.92), 0.5, 1.6), H = 0.16 * clamp(Math.sqrt(r.area), 0.5, 1.6);
+    const W = 0.2 * clamp(Math.sqrt(area) * (pNow < 1 ? 1.08 : 0.92), 0.5, 1.6), H = 0.16 * clamp(Math.sqrt(area), 0.5, 1.6);
     S.strip(-W / 2, -H / 2, W / 2, H / 2, "#0f172a", 0.85, 0.004);
-    if (r.p < 0.95) { S.strip(-W / 2, -H / 2, -W / 2 + W * 0.22, H / 2, BAD, 0.8, 0.006); S.strip(W / 2 - W * 0.22, -H / 2, W / 2, H / 2, BAD, 0.8, 0.006); }
-    else if (r.p > 1.05) S.strip(-W * 0.18, -H / 2, W * 0.18, H / 2, WARN, 0.85, 0.006);
+    if (pNow < 0.95) { S.strip(-W / 2, -H / 2, -W / 2 + W * 0.22, H / 2, BAD, 0.8, 0.006); S.strip(W / 2 - W * 0.22, -H / 2, W / 2, H / 2, BAD, 0.8, 0.006); }
+    else if (pNow > 1.05) S.strip(-W * 0.18, -H / 2, W * 0.18, H / 2, WARN, 0.85, 0.006);
     else S.strip(-W / 2 + 0.01, -H / 2 + 0.01, W / 2 - 0.01, H / 2 - 0.01, GOOD, 0.55, 0.006);
-    if (st.load === "full") for (let i = 0; i < 3; i++) S.box(-0.12, 0.7 + i * 0.12, -0.15, 0.12, 0.81 + i * 0.12, 0.15, "#d6b25e");
-    S.label("p", [0, 0.86, 0], `<b>${st.pct}%</b> · ${tt("tpArea")} ×${fx(r.area, 2)}`, sayCls(r));
-    S.label("w", [0, 0.01, H / 2 + 0.12], tt(r.p < 0.95 ? "tpWearEdges" : r.p > 1.05 ? "tpWearCentre" : "tpWearEven"), "tag");
+    if (st.load === "full") for (let i = 0; i < 3; i++) { const y = 0.7 + i * 0.12 + (1 - sm(clamp(p * 2 - i * 0.3, 0, 1))) * 1.2; S.box(-0.12, y, -0.15, 0.12, y + 0.11, 0.15, "#d6b25e"); }
+    S.label("p", [0, 0.86, 0], `<b>${Math.round(100 + (st.pct - 100) * k)}%</b> · ${tt("tpArea")} ×${fx(area, 2)}`, "big");
+    S.label("w", [0, 0.01, H / 2 + 0.12], tt(pNow < 0.95 ? "tpWearEdges" : pNow > 1.05 ? "tpWearCentre" : "tpWearEven"), "tag");
     S.cam([0.95, 0.75, 1.15], [0, 0.18, 0], 38);
   },
 });
 
 def("weighttransfer", {
-  env: { kind: "studio" },
+  env: { kind: "studio" }, dur: 2.6,
   scene(S, c) {
-    const st = c.st, r = c.r, pitch = -(r.front - 0.6) * 0.32;
-    S.car(0, 0, { color: YOU, pitch, pivot: [0, 0.6, 0], brake: st.acc < -0.05 });
-    S.sph(0, st.h + 0.1, 0, 0.09, "#facc15");
-    const col = (z, share, key) => { const h = share * 2.6; S.cyl(1.55, 0, z, 0.2, h, share > 0.65 ? WARN : GOOD, 0.9); S.label(key, [1.55, h + 0.2, z], `${tt(key === "f" ? "wtFront" : "wtRear")} <b>${Math.round(share * 100)}%</b>`, "tag"); };
-    col(-1.33, r.front, "f"); col(1.32, 1 - r.front, "r");
-    if (st.acc < -0.05) S.arrow([0, st.h + 0.1, 0], [0, st.h + 0.1, -1.6 * Math.min(1, -st.acc)], "#a78bfa", 0.05);
-    if (st.acc > 0.05) S.arrow([0, st.h + 0.1, 0], [0, st.h + 0.1, 1.6 * st.acc], "#a78bfa", 0.05);
+    const st = c.st, r = c.r, p = P1(c), k = sm(clamp(p / 0.6, 0, 1)), front = 0.6 + (r.front - 0.6) * k, pitch = -(front - 0.6) * 0.32;
+    const z = c.idle ? 0 : (st.acc < 0 ? 3 - 3 * (1 - (1 - p) ** 2) : 3 - 3 * p * p);
+    S.car(0, z, { color: YOU, pitch, pivot: [0, 0.6, 0], brake: st.acc < -0.05 && !c.idle });
+    const col = (zz, share, key) => { const h = share * 2.6; S.cyl(1.55, 0, zz + z, 0.2, h, share > 0.65 ? WARN : GOOD, 0.9); S.label(key, [1.55, h + 0.2, zz + z], `${tt(key === "f" ? "wtFront" : "wtRear")} <b>${Math.round(share * 100)}%</b>`, "good"); };
+    col(-1.33, front, "f"); col(1.32, 1 - front, "r");
+    if (Math.abs(st.acc) > 0.05) S.arrow([0, st.h + 0.1, z], [0, st.h + 0.1, z + (st.acc < 0 ? -1.6 * Math.min(1, -st.acc) : 1.6 * st.acc) * k], "#a78bfa", 0.05);
     S.cam([7.2, 2.4, -0.6], [0, 0.7, 0], 38);
   },
 });
@@ -318,25 +323,27 @@ const TZ = {
   bus: { L: 12, W: 2.6, zones: [[-1.6, 6, 3.2, 2.5], [-4.2, -4.5, 2.9, 9.5], [1.3, -2.5, 1.5, 4.5], [-1.8, -19, 3.6, 13]] },
 };
 def("truckzones", {
-  env: { kind: "road", length: 80, lanes: 4, width: 3.4 },
+  env: { kind: "road", length: 80, lanes: 4, width: 3.4 }, dur: 3.5,
   hint: "lab3TapPlace",
   scene(S, c) {
-    const st = c.st, v = TZ[st.veh];
-    S.car(0, 0, { kind: st.veh === "bus" ? "bus" : "truck", color: st.veh === "bus" ? "#b91c1c" : "#0f766e", scale: 1, id: "tz" });
-    v.zones.forEach(([x, y, w, h], i) => { S.box(x, 0, -(y + h), x + w, 1.3, -y, BAD, 0.16); S.strip(x, -(y + h), x + w, -y, BAD, 0.3); void i; });
-    S.car(st.x, -st.y, { kind: "bike", color: "#16a34a", id: "tzb", tint: c.r.hid ? 0.25 : 0, tintC: [1, 0.1, 0.1] });
-    S.ring(st.x, -st.y, 1.1, c.r.hid ? BAD : GOOD, 0.95);
-    S.label("b", [st.x, 2, -st.y], tt(c.r.hid ? "tzHidden" : "tzSeen"), c.r.hid ? "bad" : "good");
+    const st = c.st, v = TZ[st.veh], p = P1(c), running = !c.idle && p < 1;
+    S.car(0, 0, { kind: st.veh === "bus" ? "bus" : "truck", color: st.veh === "bus" ? "#b91c1c" : "#0f766e", id: "tz" });
+    v.zones.forEach(([x, y, w, h], i) => { const pulse = running ? Math.max(0, 1 - Math.abs(p * 4.5 - i - 0.5)) : 0; S.box(x, 0, -(y + h), x + w, 1.3, -y, BAD, 0.14 + pulse * 0.3); S.strip(x, -(y + h), x + w, -y, BAD, 0.25 + pulse * 0.4); });
+    const by = st.y - 12 * (1 - sm(p));
+    const hid = v.zones.some(([x, y, w, h]) => st.x >= x && st.x <= x + w && by >= y && by <= y + h) || (Math.abs(st.x) < v.W / 2 && Math.abs(by) < v.L / 2);
+    S.car(st.x, -by, { kind: "bike", color: "#16a34a", id: "tzb", tint: hid ? 0.25 : 0, tintC: [1, 0.1, 0.1] });
+    S.ring(st.x, -by, 1.1, hid ? BAD : GOOD, 0.95);
+    S.label("b", [st.x, 2, -by], tt(hid ? "tzHidden" : "tzSeen"), hid ? "bad" : "good");
     S.cam([9, 24, 16], [0, 0, -3], 44);
   },
-  click(p, c) { c.set({ x: clamp(Math.round(p[0] * 2) / 2, -6, 6), y: clamp(Math.round(-p[1] * 2) / 2, -16, 9) }); },
+  click(q, c) { c.set({ x: clamp(Math.round(q[0] * 2) / 2, -6, 6), y: clamp(Math.round(-q[1] * 2) / 2, -16, 9) }); },
 });
 
 def("blindspot", {
-  env: { kind: "road", length: 80, lanes: 3, width: 3.5 },
+  env: { kind: "road", length: 80, lanes: 3, width: 3.5 }, dur: 4,
   hint: "lab3TapPlace",
   scene(S, c) {
-    const BS = c.st, sees = Labs.bsSees, G = Labs.BSG;
+    const BS = c.st, sees = Labs.bsSees, G = Labs.BSG, p = P1(c);
     S.car(0, 0, { color: YOU });
     const wedge = (key, at0, centre, fov, len, color) => {
       S.dyn("w" + key, `${centre}|${fov}`, () => { const b = new B(), n = 14, cc = lin(color);
@@ -356,32 +363,29 @@ def("blindspot", {
       }
       return b;
     }, M.t(0, 0.04, 0), { alpha: 0.45 });
-    const bx = BS.lane === "right" ? 3.5 : -3.5, seen = new Set([[bx, BS.dist + 1], [bx, BS.dist], [bx, BS.dist - 1]].flatMap(([x, y]) => sees(x, y)));
-    const hid = !seen.size;
-    S.car(bx, -BS.dist, { kind: "bike", color: "#7c3aed", id: "bsb" });
-    S.ring(bx, -BS.dist, 1.2, hid ? BAD : GOOD, 0.95);
-    S.label("b", [bx, 2.1, -BS.dist], hid ? `⚠ ${tt("bsHidden")}` : `✓ ${tt("bsVisible")}`, hid ? "bad" : "good");
+    const bx = BS.lane === "right" ? 3.5 : -3.5, dist = -16 + (BS.dist + 16) * sm(p);
+    const seen = new Set([[bx, dist + 1], [bx, dist], [bx, dist - 1]].flatMap(([x, y]) => sees(x, y))), hid = !seen.size;
+    S.car(bx, -dist, { kind: "bike", color: "#7c3aed", id: "bsb", tint: hid ? 0.2 : 0, tintC: [1, 0.1, 0.1] });
+    S.ring(bx, -dist, 1.2, hid ? BAD : GOOD, 0.95);
+    S.label("b", [bx, 2.1, -dist], hid ? `⚠ ${tt("bsHidden")}` : `✓ ${tt("bsVisible")}`, hid ? "bad" : "good");
     S.cam([7, 21, 15], [0, 0, 3.5], 44);
   },
-  click(p, c) { c.set(p[0], -p[1]); },
+  click(q, c) { c.set(q[0], -q[1]); },
 });
 
-def("microsleep", {
-  env: { kind: "road", length: 200 },
-  scene(S, c) { blindRun(S, c, c.r.d, "😴", tt("msDist"), "#0b1020"); },
-});
+def("microsleep", { env: { kind: "road", length: 200 }, dur: 2.6, scene(S, c) { blindRun(S, c, c.r.d, "😴", tt("msDist"), "#0b1020"); } });
 def("glare", {
-  env: { kind: "road", length: 200, mood: "labnight" },
+  env: { kind: "road", length: 200, mood: "labnight" }, dur: 2.6,
   scene(S, c) {
     S.mood("labnight");
-    const span = Math.max(c.r.d, c.r.stop, 40) * 1.12, sc = scaler(span, 75), zc = sc.z(span * 0.85);
+    const span = Math.max(c.r.d, c.r.stop, 40) * 1.12, sc = scaler(span, 75), p = P0(c), zc = sc.z(span * 0.85) + p * 10;
     S.car(LR, zc, { yaw: Math.PI, color: "#334155" });
-    [-0.6, 0.6].forEach((dx) => { S.glow([LR + dx, 0.7, zc + 2.2], 5, [1, 0.95, 0.8]); S.light([LR + dx, 0.7, zc + 2.3], 40, "#fff3d6", 3, [0, -0.05, 1], 25); });
+    [-0.6, 0.6].forEach((dx) => { S.glow([LR + dx, 0.7, zc + 2.2], 4 + p * 2, [1, 0.95, 0.8]); S.light([LR + dx, 0.7, zc + 2.3], 40, "#fff3d6", 3, [0, -0.05, 1], 25); });
     blindRun(S, c, c.r.d, "😵", tt("glDist"), "#fffbe6", sc);
   },
 });
 function blindRun(S, c, dist, icon, label, color, sc0) {
-  const r = c.r, span = Math.max(dist, r.stop, 40) * 1.12, sc = sc0 || scaler(span, 75), p = c.idle ? 1 : c.t;
+  const r = c.r, span = Math.max(dist, r.stop, 40) * 1.12, sc = sc0 || scaler(span, 75), p = c.idle ? 0 : c.t;
   S.box(-3.6, 0, sc.z(dist), 0, 2.4, sc.z(0), color, color === "#fffbe6" ? 0.2 : 0.3);
   S.car(LL, sc.z(dist) - 4, { color: "#dc2626", brake: true });
   S.car(LL, sc.z(dist * p) + 2.1, { color: YOU });
@@ -393,17 +397,19 @@ function blindRun(S, c, dist, icon, label, color, sc0) {
 }
 
 def("reversezone", {
-  env: { kind: "road", length: 60, scenery: true },
+  env: { kind: "road", length: 60, scenery: true }, dur: 3.4,
   scene(S, c) {
-    const st = c.st, r = c.r, V = r.V, sy = V[0] / 1.15, rear = 2.15, eyeZ = rear - V[2];
-    S.car(LL, 0, { color: YOU, scale: 1, pitch: 0 });
-    if (sy > 1.05) S.box(LL - 0.85, 1.3, -0.4, LL + 0.85, 1.3 + (sy - 1) * 1.4, 1.1, YOU);
+    const st = c.st, r = c.r, V = r.V, sy = V[0] / 1.15, p = P1(c);
+    const cz = -3.5 * (1 - sm(p)), rear = 2.15 + cz, eyeZ = rear - V[2];
+    S.car(LL, cz, { color: YOU, brake: false });
+    if (sy > 1.05) S.box(LL - 0.85, 1.3, cz - 0.4, LL + 0.85, 1.3 + (sy - 1) * 1.4, cz + 1.1, YOU);
+    if (!c.idle && p < 1) { S.glow([LL - 0.64, 0.79, rear + 0.05], 0.5, [1, 1, 1]); S.glow([LL + 0.64, 0.79, rear + 0.05], 0.5, [1, 1, 1]); }
     const slope = (V[0] - V[1]) / V[2], gz = rear + V[1] / slope;
     S.sph(LL + 0.35, V[0], eyeZ, 0.07, "#facc15");
     S.rod([LL + 0.35, V[0], eyeZ], [LL + 0.35, 0.02, Math.min(gz, rear + 25)], 0.02, "#facc15");
-    if (r.blind > 0.05) S.dyn("bz", `${fx(r.blind, 2)}|${st.h}|${V}`, () => new B().ext([[rear, 0.01], [rear, V[1] - 0.4 / V[2] * (V[0] - V[1])], [rear + r.blind, st.h], [rear + r.blind, 0.01]], -1, 1, lin("#ef4444"), 0.25, 0.1), M.t(LL, 0, 0), { alpha: 0.35 });
-    const kz = rear + Math.min(r.blind, 6) * 0.6 + 0.5;
-    S.person(LL, kz, { id: "kidrz", scale: st.h / 1.1, yaw: Math.PI });
+    if (r.blind > 0.05) S.dyn("bz", `${fx(r.blind, 2)}|${st.h}|${V}`, () => new B().ext([[0, 0.01], [0, V[1] - 0.4 / V[2] * (V[0] - V[1])], [r.blind, st.h], [r.blind, 0.01]], -1, 1, lin("#ef4444"), 0.25, 0.1), M.t(LL, 0, rear), { alpha: 0.35 });
+    const kz = 2.15 + Math.min(r.blind, 6) * 0.6 + 0.5, kx = LL + 3.2 * (1 - sm(clamp(p * 1.4, 0, 1)));
+    S.person(kx, kz, { id: "kidrz", scale: st.h / 1.1, yaw: kx > LL + 0.1 ? -Math.PI / 2 : Math.PI, walk: kx > LL + 0.1 ? c.time * 8 : 0 });
     S.label("b", [LL, 1.8, rear + 1], r.blind > 0.05 ? `⚠ ${tt("rzBlind")} <b>${fx(r.blind, 1)} m</b>` : `✓ ${tt("rzSeen")}`, r.blind > 0.05 ? "bad" : "good");
     S.cam([9, 3.2, 3.5], [LL, 0.8, 2.6], 38);
   },
@@ -412,9 +418,8 @@ def("reversezone", {
 /* =================== ROADS, BENDS & JUNCTIONS =================== */
 
 def("speedbump", {
-  env: { kind: "road", length: 120 },
+  env: { kind: "road", length: 120 }, dur: 3,
   scene(S, c) {
-    S.live();
     const st = c.st, r = c.r, hm = st.h / 100, Lh = st.L;
     S.dyn("hump", `${st.h}|${Lh}`, () => {
       const b = new B(), n = 24, y = (z) => hm * (1 - Math.cos(2 * Math.PI * (z / Lh + 0.5))) / 2;
@@ -422,54 +427,55 @@ def("speedbump", {
         for (let s = 0; s < 10; s++) { const x0 = -3.6 + s * 0.72, x1 = x0 + 0.72; b.quad([x0, y(z0 + Lh / 2), z0], [x1, y(z0 + Lh / 2), z0], [x1, y(z1 + Lh / 2), z1], [x0, y(z1 + Lh / 2), z1], s % 2 ? lin("#facc15") : lin("#111827"), 0, 0.2); } }
       return b;
     }, M.t(0, 0.002, 0));
-    const red = Motion.reduced(), per = 30 / Math.max(st.kmh, 5) * 1.4, ph = red ? 0.5 : (c.time % per) / per;
-    const z = 14 - ph * 28, prof = (zz) => (Math.abs(zz) < Lh / 2 ? hm * (1 - Math.cos(2 * Math.PI * (zz / Lh + 0.5))) / 2 : 0);
+    const ph = c.idle ? 0.5 : c.t, z = 14 - ph * 28, prof = (zz) => (Math.abs(zz) < Lh / 2 ? hm * (1 - Math.cos(2 * Math.PI * (zz / Lh + 0.5))) / 2 : 0);
     const lift = clamp(r.gs - 1, 0, 1) * 0.35 * Math.max(0, Math.sin(clamp((-z + Lh / 2) / (Lh + 3), 0, 1) * Math.PI));
     const yF = prof(z - 1.33), yR = prof(z + 1.32), pitch = Math.atan2(yF - yR, 2.65) + lift * 0.1;
-    S.car(LL, z, { color: YOU, y: (yF + yR) / 2 + lift + Math.min(0.06, r.gs * 0.03) * Math.sin(c.time * 30) * (Math.abs(z) < Lh ? 1 : 0), pitch, pivot: [0, 0.4, 0] });
+    const shake = !c.idle && Math.abs(z) < Lh ? Math.min(0.06, r.gs * 0.03) * Math.sin(c.time * 30) : 0;
+    if (shake) S.live();
+    S.car(LL, z, { color: YOU, y: (yF + yR) / 2 + lift + shake, pitch, pivot: [0, 0.4, 0] });
     S.label("g", [LL, 2.3, z], `${tt("sbJolt")} <b>${fx(r.gs, 2)} g</b>`, sayCls(r));
     S.cam([9.5, 2.6, 4], [0, 0.5, 0], 40);
   },
 });
 
 def("hillstart", {
-  env: { kind: "open" },
+  env: { kind: "open" }, dur: 3,
   scene(S, c) {
-    const st = c.st, r = c.r, th = r.th * 1.4, base = M.mul(M.t(0, 3, 6), M.rx(th));
+    const st = c.st, r = c.r, th = r.th * 1.4, base = M.mul(M.t(0, 3, 6), M.rx(th)), p = P1(c);
     inBase(S, base, -3.8, -0.4, 18, 3.8, 0, -40, "#3b3d40");
     inBase(S, base, -0.07, 0, 18, 0.07, 0.015, -40, "#f2f2f2");
-    for (let zz = 14; zz > -40; zz -= 14) { const p = at(base, [0, -0.4, zz]); if (p[1] > 0.2) S.box(-0.4, 0, p[2] - 0.4, 0.4, p[1], p[2] + 0.4, "#9ca3af"); }
-    const back = Math.min(r.roll, 3);
+    for (let zz = 14; zz > -40; zz -= 14) { const q = at(base, [0, -0.4, zz]); if (q[1] > 0.2) S.box(-0.4, 0, q[2] - 0.4, 0.4, q[1], q[2] + 0.4, "#9ca3af"); }
+    const k = clamp((p - 0.15) / 0.75, 0, 1), back = Math.min(r.roll, 3) * k * k;
     S.car(LL, -6, { color: "#dc2626", base, brake: true });
     S.car(LL, 0.4, { color: YOU, base, alpha: 0.28 });
-    S.car(LL, 0.4 + back, { color: YOU, base });
+    S.car(LL, 0.4 + back, { color: YOU, base, brake: p < 0.15 && !c.idle });
     if (back > 0.05) S.prim("cube", M.mul(base, M.mul(M.t(LL + 1.2, 0.05, 0.4 + back / 2 - 2.1), M.s(0.35, 0.02, back))), BAD, 0.9);
-    S.label("b", at(base, [LL, 2.2, 0.4 + back]), back > 0.05 ? `↓ <b>${Math.round(r.roll * 100)} cm</b>` : `✓`, sayCls(r));
+    S.label("b", at(base, [LL, 2.2, 0.4 + back]), back > 0.05 ? `↓ <b>${Math.round(r.roll * 100 * k * k)} cm</b>` : `✓`, sayCls(r));
     S.label("g", at(base, [0, 3, -10]), `${st.grade}%`, "big");
     S.cam([16, 7, 6], [0, 3, -2], 40);
   },
 });
 
 def("banking", {
-  env: { kind: "open" },
+  env: { kind: "open" }, dur: 3,
   scene(S, c) {
     const st = c.st, r = c.r, roll = st.bank * Math.PI / 180, base = M.mul(M.t(0, 1.2, 0), M.rz(roll));
     inBase(S, base, -4.5, -0.6, 30, 4.5, 0, -30, "#3b3d40");
     inBase(S, base, -0.07, 0, 30, 0.07, 0.015, -30, "#f2f2f2");
     S.box(-4.6, 0, -30, 4.6, 1.2 - Math.abs(Math.sin(roll)) * 4.5, 30, "#7c6f5c");
-    S.car(LL + 1.2, 0, { color: YOU, base });
-    const p = at(base, [LL + 1.2, 0.6, 0]);
-    S.arrow(p, [p[0] - 2.2, p[1], p[2]], "#a78bfa", 0.07);
-    const col = (x, v, key, cl) => { const h = v / 25; S.cyl(x, 0, 9, 0.35, h, cl, 0.9); S.label(key, [x, h + 0.4, 9], `${tt(key === "f" ? "bkFlat" : "bkMax")} <b>${Math.round(v)} km/h</b>`, "tag"); };
+    const z = c.idle ? 0 : 22 - 44 * c.t;
+    S.car(LL + 1.2, z, { color: YOU, base });
+    const q = at(base, [LL + 1.2, 0.6, z]);
+    S.arrow(q, [q[0] - 2.2, q[1], q[2]], "#a78bfa", 0.07);
+    const col = (x, v, key, cl) => { const h = v / 25; S.cyl(x, 0, 9, 0.35, h, cl, 0.9); S.label(key, [x, h + 0.4, 9], `${tt(key === "f" ? "bkFlat" : "bkMax")} <b>${Math.round(v)} km/h</b>`, key === "f" ? "tag" : "good"); };
     col(-8, r.f, "f", "#94a3b8"); col(8, r.v, "v", r.v < r.f ? BAD : GOOD);
-    S.label("in", [-6, 0.4, -6], "← " + tt("bkInside"), "tiny"); S.label("out", [6, 0.4, -6], tt("bkOutside") + " →", "tiny");
     S.label("a", [0, 3.4, 0], `${st.bank}°`, "big");
     S.cam([0, 4.5, -16], [0, 1.6, 0], 42);
   },
 });
 
 def("bendsight", {
-  env: { kind: "open" },
+  env: { kind: "open" }, dur: 3.6,
   scene(S, c) {
     const st = c.st, r = c.r, R = st.r, phi = Math.asin(clamp(r.S / (2 * R), 0, 1));
     const P = (a, rr) => [-R + rr * Math.cos(a), -rr * Math.sin(a)];
@@ -483,62 +489,67 @@ def("bendsight", {
       }
       return b;
     }, M.t(0, 0, 0));
-    const [ax, az] = P(-phi, R), [bx, bz] = P(phi, R);
-    S.car(ax, az, { color: YOU, yaw: phi });
+    const a = c.idle ? -phi : -1.1 + (1.1 - 2 * phi + 0.9) * c.t * 0.75, [ax, az] = P(a, R), [bx, bz] = P(a + 2 * phi, R);
+    S.car(ax, az, { color: YOU, yaw: -a });
     S.rod([ax, 1.2, az], [bx, 1.2, bz], 0.05, "#facc15");
     S.sph(bx, 1.2, bz, 0.25, "#facc15");
-    S.label("s", [bx, 2, bz], `👁 <b>${Math.round(r.S)} m</b> · ${Math.round(r.v)} km/h`, "tag");
-    S.label("h", [...(() => { const [x, z] = P(0, R - st.m); return [x, 2.4, z]; })()], tt("bsHedge"), "tiny");
+    S.label("s", [bx, 2, bz], `👁 <b>${Math.round(r.S)} m</b> · ${Math.round(r.v)} km/h`, "good");
     const mid = P(0, R);
     S.cam([mid[0] + 18 + R * 0.25, 22 + R * 0.35, mid[1] + 24 + R * 0.3], [mid[0], 0, mid[1]], 44);
   },
 });
 
 def("gap", {
-  env: { kind: "open" },
+  env: { kind: "open" }, dur: 4,
   scene(S, c) {
     const st = c.st, r = c.r, w = st.width;
     S.dyn("j", "w" + w, () => { const b = new B(); b.flat(-220, -w, 120, 0, 0, K.C.tarmac, -3, 0.12); b.flat(-3.6, 0, 3.6, 60, 0.001, K.C.tarmac, -3, 0.12);
       for (let x = -220; x < 120; x += 9) b.flat(x, -w / 2 - 0.07, x + 4.5, -w / 2 + 0.07, 0.012, K.C.white, 0, 0.2);
       for (let x = -3.4; x < 3.4; x += 0.9) b.flat(x, 0.2, x + 0.5, 0.35, 0.013, K.C.white, 0, 0.2);
       return b; }, M.t(0, 0, 0));
-    S.car(LL, 3, { color: YOU });
-    const p = (Math.sin(c.time * 0.8) * 0.5 + 0.5) * 0.25; S.live();
-    S.car(-st.dist + p * 4, -w * 0.72, { yaw: Math.PI / 2, color: "#dc2626" });
+    const T = Math.max(r.tta, r.need) + 1.5, tau = P0(c) * T, v = st.dist / r.tta;
+    const ox = -st.dist + v * tau, cross = clamp(tau / r.need, 0, 1), cz = 3 - (w + 6) * sm(cross);
+    const yourZone = cz < 1 && cz > -w - 1, theirZone = Math.abs(ox) < 4;
+    const crash = !c.idle && yourZone && theirZone;
+    S.car(LL, cz, { color: YOU });
+    S.car(ox, -w * 0.72, { yaw: Math.PI / 2, color: "#dc2626", brake: crash });
+    if (crash) S.glow([LL, 0.8, -w * 0.72], 2.6, [1, 0.25, 0.1]);
     S.strip(-st.dist, -w - 0.6, 0, -w - 0.3, r.tta - r.need < 2 ? BAD : GOOD, 0.9);
     S.label("d", [-st.dist / 2, 0.4, -w - 0.5], `${st.dist} m · <b>${fx(r.tta, 1)} s</b>`, r.tta - r.need < 1 ? "bad" : r.tta - r.need < 2 ? "warn" : "good");
-    S.label("n", [LL, 2.3, 3], `${tt("gpNeed")} ${fx(r.need, 1)} s`, "tag");
+    S.label("n", [LL, 2.3, cz], `${tt("gpNeed")} ${fx(r.need, 1)} s`, "tag");
     S.cam([10, 9, 22], [-st.dist * 0.35, 0, -w], 44);
   },
 });
 
 def("signal", {
-  env: { kind: "road", length: 200 },
+  env: { kind: "road", length: 200 }, dur: 3.6,
   scene(S, c) {
-    S.live();
-    const st = c.st, r = c.r, sc = scaler(160, 80), zt = sc.z(150);
+    const st = c.st, r = c.r, sc = scaler(160, 80), zt = sc.z(150), p = P0(c);
     S.strip(-60, zt - 3.6, -3.6, zt + 3.6, "#3b3d40", 1, 0.004);
-    const zc = sc.z(150 - st.m) + 2.1, n = Math.max(1, Math.round(r.w * 1.5));
-    S.car(LL, zc, { color: YOU });
-    if (Math.sin(c.time * 9.4) > 0) { S.glow([LL - 0.85, 0.75, zc - 2.05], 0.9, [1, 0.55, 0.05]); S.glow([LL - 0.85, 0.8, zc + 2.1], 0.9, [1, 0.55, 0.05]); }
+    const start = sc.z(150 - st.m) + 2.1, n = Math.max(1, Math.round(r.w * 1.5)), drive = clamp(p / 0.75, 0, 1);
+    let x = LL, z = start + (zt + 1 - start) * drive, yaw = 0;
+    if (p > 0.75) { const a = (p - 0.75) / 0.25 * Math.PI / 2; x = LL - 4 + 4 * Math.cos(a); z = zt + 1 - 4 * Math.sin(a); yaw = -a; }
+    const blinking = c.idle || p < 0.95;
+    if (blinking) S.live();
+    S.car(x, z, { color: YOU, yaw });
+    if (blinking && Math.sin(c.time * 9.4) > 0) { const s = Math.sin(yaw), co = Math.cos(yaw); [[-0.85, -2.05], [-0.85, 2.1]].forEach(([lx, lz]) => S.glow([x + lx * co - lz * s, 0.78, z + lx * s + lz * co], 0.9, [1, 0.55, 0.05])); }
     for (let i = 0; i < n; i++) { const m = (150 - st.m) + st.m * (n === 1 ? 0 : i / (n - 1)) * 0.92; S.cyl(LL - 1.2, 0.01, sc.z(m), 0.22, 0.03, WARN, 0.9); }
-    S.strip(LL - 1.6, sc.z(150), LL - 1.4, sc.z(150 - st.m), WARN, 0.6);
-    S.label("w", [LL, 2.3, zc], `↰ <b>${fx(r.w, 1)} s</b> · ${st.m} m`, sayCls(r));
-    S.label("t", [-10, 0.4, zt], "↰", "big");
+    S.label("w", [x, 2.3, z], `↰ <b>${fx(r.w, 1)} s</b> · ${st.m} m`, sayCls(r));
     along(S, 12, sc.z(160));
   },
 });
 
 def("crosswind", {
-  env: { kind: "road", length: 120 },
+  env: { kind: "road", length: 120 }, dur: 3.2,
   scene(S, c) {
     S.live();
-    const st = c.st, r = c.r, kind = st.veh === "bike" ? "bike" : st.veh, off = clamp(r.share, 0, 1) * 1.6;
-    S.car(LL + off, 0, { kind, color: kind === "bus" ? "#b45309" : kind === "truck" ? "#16a34a" : YOU, id: "cw" });
+    const st = c.st, r = c.r, kind = st.veh === "bike" ? "bike" : st.veh, p = P1(c), off = clamp(r.share, 0, 1) * 1.6 * sm(p), z = c.idle ? 0 : 12 - 12 * p;
+    S.car(LL + off, z, { kind, color: kind === "bus" ? "#b45309" : kind === "truck" ? "#16a34a" : YOU, id: "cw", roll: kind === "bike" ? -off * 0.15 : 0 });
+    if (!c.idle) S.strip(LL - 0.05, z, LL + 0.05, 12, "#f8fafc", 0.5);
     const n = Math.round(st.wind / 6) + 3, sp = st.wind / 10;
-    for (let i = 0; i < n; i++) { const z = -14 + (i * 7.3) % 28, x = -16 + ((c.time * sp + i * 3.7) % 13), y = 0.6 + (i % 4) * 0.7; S.line([x, y, z], [x + 1.4 + st.wind / 40, y, z], "#e0f2fe", 0.7); }
-    S.arrow([LL - 3, 1.3, 0], [LL - 3 + 0.6 + r.share * 3, 1.3, 0], lvl(r.say[2]), 0.09);
-    S.label("s", [LL + off, 2.8 + (kind === "bus" || kind === "truck" ? 1.6 : 0), 0], `💨 ${st.wind} km/h · <b>${Math.round(r.share * 100)}%</b>`, sayCls(r));
+    for (let i = 0; i < n; i++) { const zz = -14 + (i * 7.3) % 28, x = -16 + ((c.time * sp + i * 3.7) % 13), y = 0.6 + (i % 4) * 0.7; S.line([x, y, zz], [x + 1.4 + st.wind / 40, y, zz], "#e0f2fe", 0.7); }
+    S.arrow([LL - 3, 1.3, z], [LL - 3 + 0.6 + r.share * 3, 1.3, z], lvl(r.say[2]), 0.09);
+    S.label("s", [LL + off, 2.8 + (kind === "bus" || kind === "truck" ? 1.6 : 0), z], `💨 ${st.wind} km/h · <b>${Math.round(r.share * 100)}%</b>`, sayCls(r));
     S.cam([6, 13, 15], [0, 0, -2], 42);
   },
 });
@@ -546,25 +557,29 @@ def("crosswind", {
 /* =================== TWO-WHEELERS =================== */
 
 def("lean", {
-  env: { kind: "road", length: 80 },
+  env: { kind: "road", length: 80 }, dur: 2.8,
   scene(S, c) {
-    const st = c.st, r = c.r, d = Math.min(r.deg, 75) * Math.PI / 180, lim = r.lim * Math.PI / 180;
-    S.car(LL, 0, { kind: "bike", color: "#dc2626", id: "ln", roll: d });
+    const st = c.st, r = c.r, p = P1(c), dTarget = Math.min(r.deg, 75) * Math.PI / 180, lim = r.lim * Math.PI / 180;
+    let d = dTarget * sm(clamp(p / 0.7, 0, 1)), x = LL;
+    const slide = r.deg > r.lim && p > 0.7;
+    if (slide) { const k = (p - 0.7) / 0.3; d = dTarget + (1.35 - dTarget) * k; x = LL + 1.2 * k; }
+    S.car(x, 0, { kind: "bike", color: "#dc2626", id: "ln", roll: d });
     S.car(LL, 0, { kind: "bike", color: "#94a3b8", id: "ln2", roll: lim, alpha: 0.22, shadow: false });
-    S.label("a", [LL - 1.2, 1.6, 0], `<b>${Math.round(r.deg)}°</b> / ${tt("lnLimit")} ${Math.round(r.lim)}°`, sayCls(r));
+    if (slide) S.glow([x, 0.2, 0], 1.6, [1, 0.3, 0.1]);
+    S.label("a", [LL - 1.2, 1.6, 0], `<b>${Math.round(d * 180 / Math.PI)}°</b> / ${tt("lnLimit")} ${Math.round(r.lim)}°`, sayCls(r));
     S.cam([LL, 1.3, -5.6], [LL - 0.4, 0.8, 0], 40);
   },
 });
 
 def("bikebrake", {
-  env: { kind: "road", length: 160, lanes: 3, width: 3.2 },
+  env: { kind: "road", length: 160, lanes: 3, width: 3.2 }, dur: 3,
   scene(S, c) {
-    const st = c.st, r = c.r, ks = ["rear", "front", "both"], span = r.dist("rear") * 1.1, sc = scaler(span, 70);
+    const st = c.st, r = c.r, ks = ["rear", "front", "both"], span = r.dist("rear") * 1.1, sc = scaler(span, 70), p = P0(c);
     ks.forEach((k, i) => {
-      const x = -3.2 + i * 3.2, on = k === st.mode, dd = r.dist(k);
-      S.car(x, sc.z(dd) + 1, { kind: "bike", color: on ? "#dc2626" : "#64748b", id: "bb" + i, brake: true, pitch: k === "front" ? -0.06 : 0, pivot: [0, 0.3, -0.7], alpha: on ? 1 : 0.55 });
+      const x = -3.2 + i * 3.2, on = k === st.mode, dd = r.dist(k), m = dd * (1 - (1 - p) ** 2);
+      S.car(x, sc.z(m) + 1, { kind: "bike", color: on ? "#dc2626" : "#64748b", id: "bb" + i, brake: p > 0, pitch: k === "front" && p > 0 && p < 1 ? -0.06 : 0, pivot: [0, 0.3, -0.7], alpha: on ? 1 : 0.55 });
       distStrip(S, x + 0.9, sc.z(0), sc.z(dd), on ? (k === "rear" ? BAD : GOOD) : "#94a3b8", 0.2);
-      if (k === "rear") S.strip(x - 0.04, sc.z(dd) + 1.6, x + 0.04, sc.z(dd * 0.3), "#111", 0.6, 0.014);
+      if (k === "rear" && p > 0) S.strip(x - 0.04, sc.z(m) + 1.6, x + 0.04, sc.z(dd * 0.3), "#111", 0.6, 0.014);
       S.label("k" + i, [x, 1.9, sc.z(dd) + 1], `${tt({ rear: "bbRear", front: "bbFront", both: "bbBoth" }[k])} · <b>${Math.round(dd)} m</b>`, on ? "big" : "tag");
     });
     along(S, 12, sc.z(span));
@@ -572,19 +587,23 @@ def("bikebrake", {
 });
 
 def("doorzone", {
-  env: { kind: "road", length: 80 },
+  env: { kind: "road", length: 80 }, dur: 3.4,
   scene(S, c) {
-    const st = c.st, x0 = -3.6 + 1.05;
+    const st = c.st, x0 = -3.6 + 1.05, p = c.idle ? 0.55 : c.t, cls = c.r.say[2];
+    const open = sm(clamp((p - 0.3) / 0.2, 0, 1)) * 1.2;
     S.car(x0, 0, { color: "#f8fafc" });
-    S.prim("cube", M.mul(M.t(x0 + 0.88, 0.85, -0.85), M.mul(M.trs(0, 0, 0, 1.2), M.mul(M.t(0.03, 0, 0.5), M.s(0.06, 0.7, 1)))), "#f8fafc");
-    S.box(x0 + 0.9, 0, -1.6, x0 + 1.9, 1.2, 0.4, BAD, 0.18);
-    const bx = x0 + 0.9 + st.gap + 0.3, cls = c.r.say[2];
-    S.car(bx, -6, { kind: "cycle", id: "dzc" });
-    S.ring(bx, -6, 1, lvl(cls), 0.95);
+    S.prim("cube", M.mul(M.t(x0 + 0.88, 0.85, -0.85), M.mul(M.trs(0, 0, 0, open), M.mul(M.t(0.03, 0, 0.5), M.s(0.06, 0.7, 1)))), "#f8fafc");
+    if (open > 0.3) S.box(x0 + 0.9, 0, -1.6, x0 + 1.9, 1.2, 0.4, BAD, 0.18);
+    const bx = x0 + 0.9 + st.gap + 0.3, hit = st.gap < 0.6 && open > 0.6;
+    let bz = 9 - 18 * p;
+    if (hit && bz < 0.2) bz = 0.2;
+    S.car(bx, bz, { kind: "cycle", id: "dzc", roll: hit && bz <= 0.2 ? 0.5 : 0 });
+    if (hit && bz <= 0.2 && !c.idle) S.glow([bx, 1, 0], 2, [1, 0.25, 0.1]);
+    S.ring(bx, bz, 1, lvl(cls), 0.95);
     S.rod([x0 + 0.9, 0.05, -4], [bx, 0.05, -4], 0.03, "#facc15");
     S.label("g", [(x0 + 0.9 + bx) / 2, 0.5, -4], `<b>${fx(st.gap, 1)} m</b>`, sayCls(c.r));
     S.label("z", [x0 + 1.4, 1.5, -0.6], "🚪 ≈ 1 m", "tag");
-    S.cam([6, 5.5, 5], [x0 + 1, 0.6, -3], 42);
+    S.cam([6, 5.5, 6], [x0 + 1, 0.6, -2], 42);
   },
 });
 
@@ -629,12 +648,10 @@ def("seatbelt", {
 });
 
 def("helmet", {
-  env: { kind: "studio" },
+  env: { kind: "studio" }, dur: 2.2,
   scene(S, c) {
-    S.live();
-    const st = c.st, r = c.r, red = Motion.reduced(), ph = red ? 1 : (c.time % 2.4) / 2.4, fall = ph < 0.6 ? 1 - (ph / 0.6) ** 2 : 0, squash = ph >= 0.6 && ph < 0.75 ? Math.sin((ph - 0.6) / 0.15 * Math.PI) : 0;
-    const y = 0.42 + fall * 1.4, hr = 0.2;
-    const crush = r.on ? 0.12 * squash : 0.02 * squash;
+    const st = c.st, r = c.r, ph = P1(c), fall = ph < 0.6 ? 1 - (ph / 0.6) ** 2 : 0, squash = ph >= 0.6 && ph < 0.8 ? Math.sin((ph - 0.6) / 0.2 * Math.PI) : 0;
+    const y = 0.42 + fall * 1.4, hr = 0.2, crush = r.on ? 0.12 * squash : 0.02 * squash;
     S.sph(0, y - crush * 0.5, 0, hr, "#c68642");
     if (st.helmet === "yes") {
       const tilt = st.strap === "loose" ? 0.5 * squash + 0.2 : 0;
@@ -642,63 +659,68 @@ def("helmet", {
       S.prim("sph", M.mul(M.t(st.strap === "loose" ? 0.08 : 0, y + 0.01 - crush * 0.5, 0), M.mul(M.rz(tilt), M.s(0.235, 0.235 * (1 - crush * 1.5), 0.25))), "#f8fafc", 0.5);
     }
     if (squash > 0) S.ring(0, 0, 0.45 + squash * 0.3, r.on ? GOOD : BAD, 0.9);
-    const hg = clamp(r.gg / 2600, 0, 1) * 1.8;
+    const hg = clamp(r.gg / 2600, 0, 1) * 1.8 * (ph >= 0.6 ? 1 : 0.02);
     S.cyl(1.2, 0, 0, 0.14, Math.max(0.02, hg), r.on ? GOOD : BAD, 0.9);
-    S.label("g", [1.2, hg + 0.25, 0], `<b>${Math.round(r.gg)} g</b> · ${tt("hmStopIn", { mm: Math.round(r.d * 1000) })}`, sayCls(r));
+    if (ph >= 0.6) S.label("g", [1.2, hg + 0.25, 0], `<b>${Math.round(r.gg)} g</b> · ${tt("hmStopIn", { mm: Math.round(r.d * 1000) })}`, sayCls(r));
     S.cam([1.9, 1.3, 2.6], [0.45, 0.6, 0], 40);
   },
 });
 
 def("rollover", {
-  env: { kind: "studio" },
+  env: { kind: "studio" }, dur: 3.2,
   scene(S, c) {
-    const st = c.st, r = c.r, tip = st.gl >= r.ssf && r.ssf <= r.mu, tilt = clamp(st.gl / r.ssf, 0, 1.2) * (tip ? 0.42 : 0.09);
+    const st = c.st, r = c.r, tip = st.gl >= r.ssf && r.ssf <= r.mu, p = P1(c), k = sm(clamp(p / 0.7, 0, 1)), gl = st.gl * k;
+    let tilt = clamp(gl / r.ssf, 0, 1.2) * (tip && gl >= r.ssf ? 0.42 : 0.09);
+    if (tip && p > 0.7) tilt += (p - 0.7) / 0.3 * 1.1;
     const sy = { hatch: 1, suv: 1.28, van: 1.55 }[st.veh], half = r.t / 2;
     const base = M.mul(M.t(half, 0, 0), M.mul(M.rz(-tilt), M.t(-half, 0, 0)));
     S.car(0, 0, { color: YOU, base: M.mul(base, M.s(r.t / 1.76, sy, 1)), shadow: false });
     S.shadow(0, 0, 1.4, 2.8);
     if (st.roof === "yes") S.prim("cube", M.mul(base, M.mul(M.t(0, 1.46 * sy + 0.22, 0.2), M.s(1.3, 0.42, 1.8))), "#a16207");
     const cg = at(base, [0, r.h, 0]);
-    S.sph(cg[0], cg[1], cg[2] - 2.4, 0.09, "#facc15");
-    S.arrow([cg[0], cg[1], -2.4], [cg[0] + st.gl * 1.8, cg[1], -2.4], "#a78bfa", 0.06);
+    S.sph(cg[0], cg[1], -2.4, 0.09, "#facc15");
+    S.arrow([cg[0], cg[1], -2.4], [cg[0] + gl * 1.8, cg[1], -2.4], "#a78bfa", 0.06);
     S.arrow([cg[0], cg[1], -2.4], [cg[0], cg[1] - 1.2, -2.4], "#94a3b8", 0.06);
     S.rod([cg[0], cg[1], -2.4], [half, 0.02, -2.4], 0.015, "#f8fafc", 0.8);
-    S.label("s", [0, 2.9 * sy, 0], `${tt("roSSF")} <b>${fx(r.ssf, 2)}</b> · ${fx(st.gl, 2)} g`, sayCls(r));
+    S.label("s", [0, 2.9 * sy, 0], `${tt("roSSF")} <b>${fx(r.ssf, 2)}</b> · ${fx(gl, 2)} g`, sayCls(r));
     S.cam([0.6, 2.2, -8.5], [0, 1, 0], 38);
   },
 });
 
 def("childseat", {
-  env: { kind: "studio" },
+  env: { kind: "studio" }, dur: 2.6,
   scene(S, c) {
-    const st = c.st, r = c.r;
+    const st = c.st, r = c.r, p = P1(c);
     S.box(-2.6, 0, -0.5, -1.4, 0.12, 0.5, "#334155");
     S.label("kg0", [-2, 0.2, 0.55], `${st.kg} kg`, "tag");
     S.box(-2.35, 0.12, -0.35, -1.65, 0.55, 0.35, "#0ea5e9"); S.box(-2.35, 0.55, 0.2, -1.65, 1.2, 0.35, "#0ea5e9");
-    S.person(-2, 0, { id: "kidcs", sit: true, y: 0.12, yaw: 0, scale: clamp(st.kg / 15, 0.7, 1.3) });
+    S.person(-2, 0, { id: "kidcs", sit: true, y: 0.12, scale: clamp(st.kg / 15, 0.7, 1.3) });
     const n = Math.min(24, Math.max(1, Math.round(r.w / 50)));
-    for (let i = 0; i < n; i++) { const col = i % 4, row = Math.floor(i / 4) % 3, lay = Math.floor(i / 12); S.box(0.6 + col * 0.62, lay * 0.36, -0.9 + row * 0.62, 1.15 + col * 0.62, lay * 0.36 + 0.33, -0.4 + row * 0.62, "#f1efe6"); }
-    S.label("w", [1.8, 1.2, -0.3], `= <b>${Math.round(r.w)} kg</b> (${n} × 50 kg)`, "bad big");
+    for (let i = 0; i < n; i++) {
+      const drop = clamp(p * n * 1.1 - i, 0, 1); if (drop <= 0) continue;
+      const col = i % 4, row = Math.floor(i / 4) % 3, lay = Math.floor(i / 12), y = lay * 0.36 + (1 - sm(drop)) * 2.5;
+      S.box(0.6 + col * 0.62, y, -0.9 + row * 0.62, 1.15 + col * 0.62, y + 0.33, -0.4 + row * 0.62, "#f1efe6");
+    }
+    S.label("w", [1.8, 1.2, -0.3], `= <b>${Math.round(r.w * p)} kg</b>`, "bad big");
     S.label("d", [-2, 1.7, 0], `${st.kmh} km/h · ${Math.round(r.gs)} g`, "tag");
     S.cam([0, 3.4, 5.6], [0, 0.6, 0], 42);
   },
 });
 
 def("airbag", {
-  env: { kind: "studio" },
+  env: { kind: "studio" }, dur: 1.8,
   scene(S, c) {
-    S.live();
-    const st = c.st, gap = st.cm / 100, wz = -0.6;
+    const st = c.st, gap = st.cm / 100, wz = -0.6, p = P1(c), inf = sm(clamp((p - 0.1) / 0.3, 0, 1)), lunge = sm(clamp((p - 0.2) / 0.5, 0, 1)) * (st.belt === "yes" ? 0.06 : 0.22);
     S.box(-0.7, 0, -1.3, 0.7, 1.05, -0.75, "#475569");
     S.prim("ring", M.mul(M.t(0, 1.05, wz), M.mul(M.rx(Math.PI / 2 - 0.35), M.s(0.19, 1, 0.19))), "#111827");
     S.rod([0, 0.95, wz - 0.25], [0, 1.03, wz], 0.03, "#111827");
-    const inf = Motion.reduced() ? 1 : 0.7 + 0.3 * Math.sin(c.time * 2);
-    S.prim("sph", M.mul(M.t(0, 1.08, wz + 0.25 * inf), M.s(0.32 * inf, 0.3 * inf, 0.28 * inf)), "#f8fafc", 0.85);
+    if (inf > 0.02) S.prim("sph", M.mul(M.t(0, 1.08, wz + 0.25 * inf), M.s(0.32 * inf, 0.3 * inf, 0.28 * inf)), "#f8fafc", 0.85);
     S.box(-0.4, 0.75, wz, 0.4, 1.4, wz + 0.25, BAD, 0.16);
     const sz = wz + 0.1 + gap;
     S.box(-0.3, 0, sz + 0.25, 0.3, 0.45, sz + 0.75, "#94a3b8"); S.box(-0.3, 0.45, sz + 0.64, 0.3, 1.35, sz + 0.75, "#94a3b8");
-    S.person(0, sz + 0.45, { id: "abd", sit: true, y: -0.47, yaw: 0, color: "#64748b" });
-    if (st.belt === "yes") S.rod([0.22, 1.4, sz + 0.5], [-0.2, 0.62, sz + 0.35], 0.025, "#f97316");
+    S.person(0, sz + 0.45 - lunge, { id: "abd", sit: true, y: -0.47, color: "#64748b", lean: -lunge * 2 });
+    if (st.belt === "yes") S.rod([0.22, 1.4, sz + 0.5 - lunge], [-0.2, 0.62, sz + 0.35], 0.025, "#f97316");
+    if (inf > 0.5 && st.cm < 25) S.glow([0, 1.25, wz + 0.4], 0.9, [1, 0.3, 0.1]);
     S.rod([0.55, 0.3, wz], [0.55, 0.3, sz], 0.012, "#facc15");
     S.label("g", [0.55, 0.42, (wz + sz) / 2], `<b>${st.cm} cm</b>`, sayCls(c.r));
     S.label("z", [0, 1.55, wz + 0.12], `${tt("abgZone")} 25 cm`, "bad");
@@ -707,23 +729,22 @@ def("airbag", {
 });
 
 def("hotcar", {
-  env: { kind: "open" },
+  env: { kind: "open" }, dur: 4,
   scene(S, c) {
     S.live();
-    const st = c.st, r = c.r;
+    const st = c.st, r = c.r, p = P1(c), mins = st.min * p, tNow = r.T0(mins);
     S.car(0, 0, { color: "#64748b", yaw: 0.3 });
     if (st.shade === "yes") { S.mesh("tree", () => K.broadTree(11), M.trs(-3.5, 0, -1, 0, 1.3)); S.shadow(-1.2, -0.5, 4, 4, 0, 0.45); }
     else S.glow([-30, 40, -80], 14, [1, 0.85, 0.45]);
-    for (let i = 0; i < 6; i++) { const ph = (c.time * 0.5 + i / 6) % 1; S.box(-1 + i * 0.35, 1.5 + ph * 1.2, -1.6, -0.9 + i * 0.35, 1.52 + ph * 1.2, 1.6, "#fde68a", 0.08 * (1 - ph) * (r.t / 50)); }
-    const T0 = 15, T1 = 70, Y = (tc) => 0.3 + (tc - T0) / (T1 - T0) * 3.2, x = 3.2;
+    for (let i = 0; i < 6; i++) { const ph = (c.time * 0.5 + i / 6) % 1; S.box(-1 + i * 0.35, 1.5 + ph * 1.2, -1.6, -0.9 + i * 0.35, 1.52 + ph * 1.2, 1.6, "#fde68a", 0.08 * (1 - ph) * (tNow / 50)); }
+    const Y = (tc) => 0.3 + (tc - 15) / 55 * 3.2, x = 3.2;
     S.cyl(x, 0.3, 0, 0.16, 3.3, "#e2e8f0", 0.35);
     S.sph(x, 0.25, 0, 0.26, BAD);
-    S.cyl(x, 0.3, 0, 0.09, Y(r.t) - 0.3, r.t >= 45 ? BAD : r.t >= 38 ? "#f97316" : WARN);
+    S.cyl(x, 0.3, 0, 0.09, Y(tNow) - 0.3, tNow >= 45 ? BAD : tNow >= 38 ? "#f97316" : WARN);
     S.cyl(x, Y(45), 0, 0.2, Y(70) - Y(45), BAD, 0.15);
     S.cyl(x, Y(st.amb), 0, 0.2, 0.03, "#38bdf8");
-    S.label("in", [x + 0.5, Y(r.t), 0], `🌡 <b>${Math.round(r.t)} °C</b>`, sayCls(r));
-    S.label("amb", [x + 0.5, Y(st.amb), 0], `${tt("hcAmb")} ${st.amb} °C`, "tiny");
-    S.label("min", [0, 2.2, 0], `⏱ ${st.min} min`, "tag");
+    S.label("in", [x + 0.5, Y(tNow), 0], `🌡 <b>${Math.round(tNow)} °C</b>`, tNow >= 45 ? "bad" : tNow >= 38 ? "warn" : "good");
+    S.label("min", [0, 2.2, 0], `⏱ ${Math.round(mins)} min`, "big");
     S.cam([8.5, 3.8, 7], [1.2, 1.3, 0], 40);
   },
 });
@@ -759,35 +780,37 @@ def("engine", {
 });
 
 def("gears", {
-  env: { kind: "road", length: 120 },
+  env: { kind: "road", length: 160 }, dur: 3.2,
   scene(S, c) {
     S.live();
-    const st = c.st, r = c.r;
-    S.car(LL, 0, { color: YOU });
-    const sp = st.kmh / 3.6;
-    for (let i = 0; i < 10; i++) { const z = 8 - ((c.time * sp + i * 7) % 70); S.line([LL - 1.3, 0.3 + (i % 3) * 0.35, z], [LL - 1.3, 0.3 + (i % 3) * 0.35, z + 1 + sp * 0.05], "#e2e8f0", 0.6); }
-    const dc = [LL + 0.2, 3.4, 0];
+    const st = c.st, r = c.r, p = P1(c), k = sm(p), v = st.kmh * k, sp = v / 3.6, rpm = r.rpm * k;
+    const z = c.idle ? 0 : 10 - 30 * p * p;
+    S.car(LL, z, { color: YOU });
+    for (let i = 0; i < 10; i++) { const zz = 8 - ((c.time * sp + i * 7) % 70); if (sp > 0.5) S.line([LL - 1.3, 0.3 + (i % 3) * 0.35, zz], [LL - 1.3, 0.3 + (i % 3) * 0.35, zz + 1 + sp * 0.05], "#e2e8f0", 0.6); }
+    if (rpm > 4500 && Math.sin(c.time * 40) > 0) S.sph(LL + 0.5, 0.3, z + 2.4, 0.12, "#cbd5e1", 0.4);
+    const dc = [LL + 0.2, 3.4, z];
     dial(S, "t", dc, 1.3, 7000, 1000, 6000, 1200, "k");
-    needle(S, dc, r.rpm, 7000, 1.05, "#ef4444");
-    S.label("rpm", [dc[0] + 0.1, dc[1] - 0.55, dc[2]], `<b>${Math.round(r.rpm / 10) * 10}</b> rpm`, sayCls(r));
-    S.label("gear", [dc[0], dc[1] + 1.65, dc[2]], `${tt("grGear")} <b>${st.gear}</b> · ${st.kmh} km/h`, "big");
-    S.cam([11, 3.6, 1.5], [LL, 2, 0], 42);
+    needle(S, dc, rpm, 7000, 1.05, "#ef4444");
+    S.label("rpm", [dc[0] + 0.1, dc[1] - 0.55, dc[2]], `<b>${Math.round(rpm / 10) * 10}</b> rpm`, sayCls(r));
+    S.label("gear", [dc[0], dc[1] + 1.65, dc[2]], `${tt("grGear")} <b>${st.gear}</b> · ${Math.round(v)} km/h`, "big");
+    S.cam([11, 3.6, z + 1.5], [LL, 2, z], 42);
   },
 });
 
 def("economy", {
-  env: { kind: "road", length: 200 },
+  env: { kind: "road", length: 200 }, dur: 3.2,
   scene(S, c) {
     S.live();
-    const st = c.st, r = c.r, sp = st.kmh / 3.6;
+    const st = c.st, r = c.r, p = P1(c), k = sm(p), sp = st.kmh / 3.6 * k;
     S.car(LL, 0, { color: YOU });
     if (st.load === "roof") S.box(LL - 0.6, 1.47, -0.6, LL + 0.6, 1.85, 0.9, "#111827");
     if (st.load === "full") [[-0.35, -0.3], [0.35, -0.3], [-0.35, 0.65], [0.35, 0.65]].forEach(([x, z]) => S.sph(LL + x, 1.2, z, 0.12, "#7c5a3a"));
     if (st.ac === "on") S.glow([LL, 1.1, -1.9], 1, [0.3, 0.6, 1]);
-    for (let i = 0; i < 14; i++) { const z = -6 + ((c.time * sp * 0.4 + i * 1.3) % 12), y = 0.9 + (i % 4) * 0.25 + (Math.abs(z) < 2 ? 0.55 : 0); S.line([LL - 0.6 + (i % 5) * 0.3, y, z], [LL - 0.6 + (i % 5) * 0.3, y, z + 0.6], "#bae6fd", 0.55); }
-    const ratio = r.cur / (fuelL100(r.best, st) || r.cur), h = clamp(ratio, 0.5, 2.5) * 1.4;
-    S.cyl(2.6, 0, 0, 0.32, h, ratio > 1.2 ? WARN : GOOD, 0.9);
-    S.label("f", [2.6, h + 0.4, 0], `⛽ <b>${fx(r.cur)} L/100 km</b> · ${fx(100 / r.cur)} km/L`, sayCls(r));
+    for (let i = 0; i < 14; i++) { const z = -6 + ((c.time * sp * 0.4 + i * 1.3) % 12), y = 0.9 + (i % 4) * 0.25 + (Math.abs(z) < 2 ? 0.55 : 0); if (sp > 0.5) S.line([LL - 0.6 + (i % 5) * 0.3, y, z], [LL - 0.6 + (i % 5) * 0.3, y, z + 0.6], "#bae6fd", 0.55); }
+    for (let i = 0; i < 10; i++) { const zz = 8 - ((c.time * sp + i * 7) % 70); if (sp > 0.5) S.line([LL - 1.3, 0.3 + (i % 3) * 0.35, zz], [LL - 1.3, 0.3 + (i % 3) * 0.35, zz + 1], "#e2e8f0", 0.5); }
+    const ratio = r.cur / (fuelL100(r.best, st) || r.cur), h = clamp(ratio, 0.5, 2.5) * 1.4 * k;
+    S.cyl(2.6, 0, 0, 0.32, Math.max(0.02, h), ratio > 1.2 ? WARN : GOOD, 0.9);
+    S.label("f", [2.6, h + 0.4, 0], `⛽ <b>${fx(r.cur)} L/100 km</b> · ${Math.round(st.kmh * k)} km/h`, sayCls(r));
     S.label("b", [2.6, 0.3, 1.2], `${tt("ecBest")} ≈ ${r.best} km/h`, "tag");
     S.cam([9, 4.2, 7], [0.4, 1, 0], 40);
   },
@@ -799,10 +822,10 @@ const fuelL100 = (kmh, st) => {
 };
 
 def("drag", {
-  env: { kind: "studio" },
+  env: { kind: "studio" }, dur: 3.2,
   scene(S, c) {
     S.live();
-    const st = c.st, r = c.r, sp = st.kmh / 30;
+    const st = c.st, r = c.r, p = P1(c), k = sm(p), sp = st.kmh / 30 * k;
     S.car(0, 0, { color: "#e5e7eb" });
     if (st.shape === "roof") S.box(-0.6, 1.47, -0.6, 0.6, 1.85, 0.9, "#111827");
     if (st.shape === "open") [-0.9, 0.9].forEach((x) => S.box(x - 0.02, 1.0, -0.6, x + 0.02, 1.32, 0.9, "#0b0b0c"));
@@ -812,123 +835,126 @@ def("drag", {
       const ph = (c.time * sp * 0.35 + i * 0.173) % 1, z = -6 + ph * 12;
       const prof = (zz) => (Math.abs(zz) < 2.3 && Math.abs(x) < 1 ? 1.5 - y0 * 0.2 + 0.2 : 0);
       const y = y0 + (y0 < 1.5 ? prof(z) * (1 - Math.abs(x) * 0.5) * 0.8 : 0) + (z > 2.2 ? Math.sin(z * 6 + i) * rough * 0.25 : 0);
-      S.line([x, y, z], [x, y, z + 0.5 + sp * 0.12], z > 2.2 ? "#fca5a5" : "#7dd3fc", 0.8);
+      if (sp > 0.05) S.line([x, y, z], [x, y, z + 0.5 + sp * 0.12], z > 2.2 ? "#fca5a5" : "#7dd3fc", 0.8);
     }
-    const tot = r.d + r.rr, hA = r.d / 30, hB = r.rr / 30;
+    const tot = r.d + r.rr, hA = r.d / 30 * k ** 3, hB = r.rr / 30 * k;
     S.cyl(2.6, 0, 0, 0.3, Math.max(0.02, hB), WARN, 0.9); S.cyl(2.6, hB, 0, 0.3, Math.max(0.02, hA), "#38bdf8", 0.9);
-    S.label("p", [2.6, hA + hB + 0.35, 0], `<b>${fx(tot)} kW</b> · ${tt("drAir")} ${Math.round(r.d / tot * 100)}%`, "tag");
-    S.label("v", [0, 2.4, 0], `${st.kmh} km/h`, "big");
+    S.label("p", [2.6, hA + hB + 0.35, 0], `<b>${fx(tot * (k ** 3 * r.d + k * r.rr) / tot)} kW</b> · ${tt("drAir")} ${Math.round(r.d / tot * 100)}%`, "good");
+    S.label("v", [0, 2.4, 0], `${Math.round(st.kmh * k)} km/h`, "big");
     S.cam([6.5, 3.2, 6.5], [0.6, 0.8, 0], 40);
   },
 });
 
 def("regen", {
-  env: { kind: "road", length: 120 },
+  env: { kind: "road", length: 120 }, dur: 3.4,
   scene(S, c) {
     S.live();
-    const st = c.st, r = c.r, eff = st.eff / 100;
-    S.car(LL, 0, { color: "#0f766e", brake: true });
-    S.box(LL - 0.7, 0.32, -1, LL + 0.7, 0.48, 1, "#0b1220", 0.6);
-    S.box(LL - 0.65, 0.33, -0.95, LL - 0.65 + 1.3 * clamp(0.3 + eff * 0.6, 0, 1), 0.47, 0.95, GOOD, 0.85);
-    [[-0.8, -1.33], [0.8, -1.33], [-0.8, 1.32], [0.8, 1.32]].forEach(([x, z], i) => {
-      S.glow([LL + x * 1.15, 0.33, z], 0.35 + (1 - eff) * 0.9, [1 * (1 - eff) + 0.1, 0.35 * (1 - eff), 0.05]);
-      for (let k = 0; k < 3; k++) { const ph = (c.time * 1.2 + k / 3 + i * 0.21) % 1; S.sph(LL + x * (1 - ph), 0.4, z * (1 - ph), 0.04, GOOD, eff * (1 - ph)); }
+    const st = c.st, r = c.r, eff = st.eff / 100, p = P1(c), braking = !c.idle && p < 1, z = c.idle ? 0 : 14 - 14 * (1 - (1 - p) ** 2);
+    S.car(LL, z, { color: "#0f766e", brake: braking });
+    S.box(LL - 0.7, 0.32, z - 1, LL + 0.7, 0.48, z + 1, "#0b1220", 0.6);
+    const fill = 0.3 + (clamp(0.3 + eff * 0.6, 0, 1) - 0.3) * p;
+    S.box(LL - 0.65, 0.33, z - 0.95, LL - 0.65 + 1.3 * fill, 0.47, z + 0.95, GOOD, 0.85);
+    if (braking || c.idle) [[-0.8, -1.33], [0.8, -1.33], [-0.8, 1.32], [0.8, 1.32]].forEach(([x, zz], i) => {
+      S.glow([LL + x * 1.15, 0.33, z + zz], 0.35 + (1 - eff) * 0.9, [1 * (1 - eff) + 0.1, 0.35 * (1 - eff), 0.05]);
+      for (let k = 0; k < 3; k++) { const ph = (c.time * 1.2 + k / 3 + i * 0.21) % 1; S.sph(LL + x * (1 - ph), 0.4, z + zz * (1 - ph), 0.04, GOOD, eff * (1 - ph)); }
     });
-    S.label("b", [LL, 2.2, 0], `🔋 <b>${Math.round(r.back)} Wh</b> · 🔥 ${Math.round(r.wh - r.back)} Wh`, "tag");
+    S.label("b", [LL, 2.2, z], `🔋 <b>${Math.round(r.back * p)} Wh</b> · 🔥 ${Math.round((r.wh - r.back) * p)} Wh`, "good");
     S.cam([6, 3.2, 5.5], [LL, 0.6, 0], 40);
   },
 });
 
 def("ghat", {
-  env: { kind: "open" },
+  env: { kind: "open" }, dur: 4.5,
   scene(S, c) {
-    const st = c.st, r = c.r, base = M.mul(M.t(0, 0, -10), M.rx(-0.32));
+    const st = c.st, r = c.r, base = M.mul(M.t(0, 0, -10), M.rx(-0.32)), p = P1(c);
     S.prim("cube", M.mul(base, M.mul(M.t(0, -1, 0), M.s(70, 2, 76))), "#5b8c3a");
     const pts = [[-24, 30], [22, 22], [-22, 8], [22, -6], [-22, -20], [20, -32]];
+    const segs = []; let total = 0;
     for (let i = 0; i < pts.length - 1; i++) {
       const [x0, z0] = pts[i], [x1, z1] = pts[i + 1], len = Math.hypot(x1 - x0, z1 - z0), yaw = Math.atan2(x1 - x0, -(z1 - z0));
       S.prim("cube", M.mul(base, M.mul(M.trs((x0 + x1) / 2, 0.03, (z0 + z1) / 2, yaw), M.s(6, 0.06, len + 6))), "#3b3d40");
+      segs.push({ x0, z0, x1, z1, len, yaw, from: total }); total += len;
     }
-    const [x0, z0] = pts[2], [x1, z1] = pts[3];
-    S.car((x0 + x1) / 2, (z0 + z1) / 2, { kind: st.veh === "bus" ? "bus" : "car", color: st.veh === "bus" ? "#b91c1c" : YOU, yaw: Math.atan2(x1 - x0, -(z1 - z0)), base: M.mul(base, M.t(0, 0.06, 0)), brake: true, id: "gh" });
-    if (st.veh === "loaded") S.prim("cube", M.mul(base, M.mul(M.t((x0 + x1) / 2, 1.7, (z0 + z1) / 2), M.s(1.2, 0.4, 1.6))), "#a16207");
-    const hh = clamp(r.dT / 600, 0, 1), dc = [26, 9, 14];
+    const d = (c.idle ? 0.5 : p) * total, sg = segs.find((s) => d <= s.from + s.len) || segs[segs.length - 1], q = clamp((d - sg.from) / sg.len, 0, 1);
+    const cx = sg.x0 + (sg.x1 - sg.x0) * q, cz = sg.z0 + (sg.z1 - sg.z0) * q;
+    S.car(cx, cz, { kind: st.veh === "bus" ? "bus" : "car", color: st.veh === "bus" ? "#b91c1c" : YOU, yaw: sg.yaw, base: M.mul(base, M.t(0, 0.06, 0)), brake: true, id: "gh" });
+    if (st.veh === "loaded") S.prim("cube", M.mul(base, M.mul(M.trs(cx, 1.7, cz, sg.yaw), M.s(1.2, 0.4, 1.6))), "#a16207");
+    const dT = r.dT * p, hh = clamp(dT / 600, 0, 1), dc = [26, 9, 14];
     S.prim("cyl", M.mul(M.t(dc[0], dc[1], dc[2]), M.mul(M.rz(Math.PI / 2), M.s(2.6, 0.3, 2.6))), "#9ca3af", 1, { tint: hh * 1.2, tintC: heat(hh) });
     S.prim("cyl", M.mul(M.t(dc[0] + 0.05, dc[1], dc[2]), M.mul(M.rz(Math.PI / 2), M.s(0.9, 0.42, 0.9))), "#475569");
     if (hh > 0.3) S.glow([dc[0] + 0.4, dc[1], dc[2]], 3 + hh * 3, [hh, hh * 0.35, 0.05]);
-    S.label("t", [dc[0], dc[1] + 3.4, dc[2]], `<b>+${Math.round(r.dT)} °C</b>`, sayCls(r));
-    S.label("d", [-24, 14, 18], `⛰ ${tt("ghDropShort")} ${st.drop} m`, "tag");
+    S.label("t", [dc[0], dc[1] + 3.4, dc[2]], `<b>+${Math.round(dT)} °C</b>`, dT > 500 ? "bad" : dT > 250 ? "warn" : "good");
+    S.label("d", [-24, 14, 18], `⛰ ${tt("ghDropShort")} ${Math.round(st.drop * p)} m`, "tag");
     S.cam([44, 26, 40], [8, 3, -2], 44);
   },
 });
 
 def("evrange", {
-  env: { kind: "road", length: 200 },
+  env: { kind: "road", length: 200 }, dur: 4,
   scene(S, c) {
-    const st = c.st, r = c.r, sc = scaler(Math.max(r.range, 100) * 1.1, 80);
-    S.car(LL, 6, { color: "#14b8a6" });
-    S.box(LL - 0.7, 2, 5, LL + 0.7, 2.6, 7, "#0b1220", 0.55);
-    S.box(LL - 0.66, 2.04, 5.05, LL - 0.66 + 1.32 * clamp(st.kwh / 80, 0.1, 1), 2.56, 6.95, GOOD, 0.9);
-    for (let km = 25; km < r.range; km += 25) { post(S, -4.4, sc.z(km), "#f8fafc", 1.2); S.label("k" + km, [-4.4, 1.6, sc.z(km)], `${km}`, "tiny"); }
+    const st = c.st, r = c.r, sc = scaler(Math.max(r.range, 100) * 1.1, 80), p = P0(c), km = r.range * p;
+    const z = sc.z(km) + 6 - 8;
+    S.car(LL, z, { color: "#14b8a6" });
+    const lvlB = clamp(st.kwh / 80, 0.1, 1) * (1 - p);
+    S.box(LL - 0.7, 2, z - 1, LL + 0.7, 2.6, z + 1, "#0b1220", 0.55);
+    if (lvlB > 0.01) S.box(LL - 0.66, 2.04, z - 0.95, LL - 0.66 + 1.32 * lvlB, 2.56, z + 0.95, lvlB < 0.1 ? BAD : GOOD, 0.9);
+    for (let k = 25; k < r.range; k += 25) { post(S, -4.4, sc.z(k), "#f8fafc", 1.2); S.label("k" + k, [-4.4, 1.6, sc.z(k)], `${k}`, "tiny"); }
     S.strip(LL - 0.3, sc.z(r.range), LL + 0.3, sc.z(0), "#14b8a6", 0.85);
     S.cyl(-4.4, 0, sc.z(r.range), 0.35, 2.2, "#f8fafc"); S.glow([-4.4, 2.3, sc.z(r.range)], 1.2, [0.1, 0.8, 0.6]);
     S.label("r", [-4.4, 3, sc.z(r.range)], `⚡ <b>${Math.round(r.range)} km</b>`, "big");
-    S.label("u", [LL, 3, 6], `${Math.round(r.wh)} Wh/km${st.ac === "yes" ? " · ❄" : ""}`, "tag");
+    S.label("u", [LL, 3, z], `${Math.round(km)} km · ${Math.round(r.wh)} Wh/km${st.ac === "yes" ? " · ❄" : ""}`, "good");
     along(S, 14, sc.z(r.range));
   },
 });
 
 def("idling", {
-  env: { kind: "road", length: 80 },
+  env: { kind: "road", length: 80 }, dur: 4,
   scene(S, c) {
     S.live();
-    const r = c.r;
+    const r = c.r, p = P1(c), L = r.L * p;
     S.car(LL, 0, { color: "#64748b" });
     for (let i = 0; i < 6; i++) { const ph = (c.time * 0.6 + i / 6) % 1; S.sph(LL + 0.5 + ph * 0.3, 0.3 + ph * 1.2, 2.3 + ph * 0.8, 0.08 + ph * 0.25, "#cbd5e1", 0.35 * (1 - ph)); }
-    const full = Math.floor(r.L / 20), part = r.L / 20 - full, n = Math.min(full + (part > 0.02 ? 1 : 0), 40);
+    const full = Math.floor(L / 20), part = L / 20 - full, n = Math.min(full + (part > 0.02 ? 1 : 0), 40);
     for (let i = 0; i < n; i++) {
       const col = i % 8, row = Math.floor(i / 8), x = 2.2 + col * 0.42, z = -2 + row * 0.55, f = i < full ? 1 : part;
       S.box(x, 0, z, x + 0.34, 0.5, z + 0.18, "#334155", 0.35); S.box(x + 0.01, 0, z + 0.01, x + 0.33, 0.49 * f, z + 0.17, "#dc2626");
       S.box(x + 0.12, 0.5, z + 0.05, x + 0.22, 0.56, z + 0.13, "#1f2937");
     }
-    S.label("l", [3.8, 1.3, -1], `⛽ <b>${Math.round(r.L)} L</b> · ${Math.round(r.L * 2.3)} kg CO₂`, sayCls(r));
+    S.label("l", [3.8, 1.3, -1], `⛽ <b>${Math.round(L)} L</b> · ${Math.round(L * 2.3)} kg CO₂`, sayCls(r));
     S.cam([7.5, 4.4, 7], [1.6, 0.4, -0.5], 40);
   },
 });
 
 def("coasting", {
-  env: { kind: "road", length: 200 },
+  env: { kind: "road", length: 200 }, dur: 5,
   scene(S, c) {
-    S.live();
     const r = c.r, pts = r.pts;
     if (!pts || !pts.length) return;
-    const span = Math.max(r.x, 50) * 1.05, sc = scaler(span, 75), T = pts.length - 1;
-    const red = Motion.reduced(), per = 5, ph = red ? 1 : Math.min(1, ((c.time % (per + 1.2)) / per));
+    const span = Math.max(r.x, 50) * 1.05, sc = scaler(span, 75), T = pts.length - 1, ph = P0(c);
     const fi = clamp(ph, 0, 1) * T, i0 = clamp(Math.floor(fi), 0, T), i1 = Math.min(T, i0 + 1), w = fi - i0;
     const m = pts[i0][0] * (1 - w) + pts[i1][0] * w, v = pts[i0][1] * (1 - w) + pts[i1][1] * w;
     const stepM = span > 260 ? 100 : 50;
     for (let d = stepM; d < span; d += stepM) { post(S, -4.4, sc.z(d), "#f8fafc", 1.1); S.label("m" + d, [-4.4, 1.5, sc.z(d)], `${d} m`, "tiny"); }
     S.car(LL, sc.z(m) + 2.1, { color: YOU });
     S.strip(LL - 0.3, sc.z(r.x), LL + 0.3, sc.z(0), GOOD, 0.5);
-    S.label("v", [LL, 2.3, sc.z(m) + 2.1], `<b>${Math.round(v)} km/h</b>`, "tag");
+    S.label("v", [LL, 2.3, sc.z(m) + 2.1], `<b>${Math.round(v)} km/h</b>`, "good");
     S.label("x", [LL, 0.6, sc.z(r.x)], r.stops ? `${tt("coDist")} <b>${Math.round(r.x)} m</b>` : tt("coNoStop"), sayCls(r));
     along(S, 12, sc.z(span));
   },
 });
 
 def("tyresize", {
-  env: { kind: "studio" },
+  env: { kind: "studio" }, dur: 3,
   scene(S, c) {
-    S.live();
-    const st = c.st, r = c.r, R0 = 0.33, R1 = R0 * (1 + st.pct / 100), rot = Motion.reduced() ? 0 : c.time * 1.4;
-    S.dyn("t0", "a", () => tyreMesh(R0, 0.2, 0.007), M.mul(M.t(-0.5, R0, 0), M.rx(-rot)));
-    S.dyn("t1", "b" + st.pct, () => tyreMesh(R1, 0.2, 0.007), M.mul(M.t(0.5, R1, 0), M.rx(-rot)));
+    const st = c.st, r = c.r, R0 = 0.33, R1 = R0 * (1 + st.pct / 100), p = P1(c), rot = 2 * Math.PI * p;
     const c0 = 2 * Math.PI * R0, c1 = 2 * Math.PI * R1;
-    S.strip(-0.62, -c0, -0.38, 0, "#94a3b8", 0.85); S.strip(0.38, -c1, 0.62, 0, st.pct > 0 ? WARN : st.pct < 0 ? BRAKE : GOOD, 0.85);
-    S.label("a", [-0.5, 0.05, -c0], `${fx(c0, 2)} m`, "tiny"); S.label("b", [0.5, 0.05, -c1], `${fx(c1, 2)} m`, "tiny");
+    S.dyn("t0", "a", () => tyreMesh(R0, 0.2, 0.007), M.mul(M.t(-0.5, R0, -c0 * p), M.rx(-rot)));
+    S.dyn("t1", "b" + st.pct, () => tyreMesh(R1, 0.2, 0.007), M.mul(M.t(0.5, R1, -c1 * p), M.rx(-rot)));
+    S.strip(-0.62, -c0 * p, -0.38, 0, "#94a3b8", 0.85); S.strip(0.38, -c1 * p, 0.62, 0, st.pct > 0 ? WARN : st.pct < 0 ? BRAKE : GOOD, 0.85);
+    S.label("a", [-0.5, 0.05, -c0], `${fx(c0, 2)} m`, "tag"); S.label("b", [0.5, 0.05, -c1], `${fx(c1, 2)} m`, "tag");
     const dc = [1.6, 1.25, -0.6];
     dial(S, "s", dc, 0.75, 160, 20, null, null, 2);
-    needle(S, dc, st.kmh, 160, 0.6, "#94a3b8", 0.03); needle(S, dc, r.v, 160, 0.62, "#ef4444");
+    needle(S, dc, st.kmh * sm(p), 160, 0.6, "#94a3b8", 0.03); needle(S, dc, r.v * sm(p), 160, 0.62, "#ef4444");
     S.label("v", [dc[0] + 0.1, dc[1] - 0.95, dc[2]], `${tt("tsShown")} ${st.kmh} · <b>${fx(r.v, 1)} km/h</b>`, sayCls(r));
     S.cam([3.6, 1.9, 2.6], [0.6, 0.6, -0.6], 42);
   },
@@ -937,50 +963,58 @@ def("tyresize", {
 /* =================== TRAFFIC & PLANNING =================== */
 
 def("overtaking", {
-  env: { kind: "road", length: 200 },
+  env: { kind: "road", length: 200 }, dur: 4.5,
   scene(S, c) {
     const st = c.st, r = c.r, tl = st.len / 8;
-    S.car(LL, -2, { kind: "truck", color: "#a16207", id: "ov", post: M.s(1, 1, tl), shadow: false });
-    S.shadow(LL, -2, 1.6, 4.8 * tl);
-    S.car(LL, 2 + st.len / 2 + 6, { color: YOU });
-    if (r.never) { S.label("n", [LL, 3, 0], `✕ ${tt("ovNever")}`, "bad big"); along(S, 20, -40); return; }
-    const sc = scaler(Math.max(r.need, 120) * 1.05, 80), zo = sc.z(r.need);
-    S.car(LR, zo, { yaw: Math.PI, color: "#e2e8f0" });
-    [0.25, 0.5, 0.75].forEach((q, i) => S.car(q < 0.3 || q > 0.7 ? LL + (LR - LL) * Math.sin(q * Math.PI) : LR, sc.z(r.dy * q) + 4, { color: YOU, alpha: 0.25, shadow: false, id: "g" + i, yaw: q < 0.5 ? 0.12 : -0.12 }));
-    S.strip(LR - 0.35, zo, LR + 0.35, sc.z(0) + 8, r.need > 400 ? BAD : GOOD, 0.75);
-    S.label("n", [LR, 2.3, zo], `${tt("ovNeed")} <b>${Math.round(r.need)} m</b> · ${fx(r.t)} s`, sayCls(r));
-    along(S, 22, zo);
+    if (r.never) {
+      S.car(LL, -2, { kind: "truck", color: "#a16207", id: "ov", post: M.s(1, 1, tl), shadow: false });
+      S.car(LL, 2 + st.len / 2 + 6, { color: YOU });
+      S.label("n", [LL, 3, 0], `✕ ${tt("ovNever")}`, "bad big"); along(S, 20, -40); return;
+    }
+    const sc = scaler(Math.max(r.need, 120) * 1.05, 80), p = P0(c), tau = r.t * p;
+    const vt = st.truck / 3.6, vy = st.you / 3.6, vo = st.onc / 3.6;
+    const gap0 = 20 + st.len / 2 + 2.2;
+    const truckM = vt * tau, youM = vy * tau - gap0, oncM = r.need - vo * tau;
+    const rel = youM - (truckM - gap0), q = clamp(rel / (r.dy - vt * r.t || 1), 0, 1);
+    const lane = q < 0.15 ? q / 0.15 : q > 0.85 ? (1 - q) / 0.15 : 1;
+    const z0 = 8;
+    S.car(LL, z0 - truckM * sc.k - 2, { kind: "truck", color: "#a16207", id: "ov", post: M.s(1, 1, tl), shadow: false });
+    S.car(LL + (LR - LL) * sm(clamp(lane, 0, 1)), z0 - youM * sc.k, { color: YOU, yaw: (q < 0.15 ? 0.15 : q > 0.85 ? -0.15 : 0) * (p > 0 && p < 1 ? 1 : 0) });
+    S.car(LR, z0 - oncM * sc.k, { yaw: Math.PI, color: "#e2e8f0" });
+    S.strip(LR - 0.35, z0 - r.need * sc.k, LR + 0.35, z0, r.need > 400 ? BAD : GOOD, 0.6);
+    S.label("n", [LR, 2.3, z0 - r.need * sc.k], `${tt("ovNeed")} <b>${Math.round(r.need)} m</b> · ${fx(r.t)} s`, sayCls(r));
+    along(S, 22, z0 - r.need * sc.k);
   },
 });
 
 def("traveltime", {
-  env: { kind: "road", length: 260 },
+  env: { kind: "road", length: 260 }, dur: 4,
   scene(S, c) {
-    S.live();
-    const st = c.st, r = c.r, fast = Math.max(st.fast, st.slow), L1 = 90;
-    const lap = (v) => ((c.time * v / 8) % L1);
-    const zs = 8 - lap(st.slow), zf = 8 - lap(fast);
+    const st = c.st, r = c.r, fast = Math.max(st.fast, st.slow), L1 = 90, p = P0(c);
+    const df = Math.min(1, p / 0.75), ds = Math.min(1, df * st.slow / fast);
+    const zs = 8 - L1 * ds, zf = 8 - L1 * df;
+    S.strip(-3.6, -L1 + 8 - 0.3, 3.6, -L1 + 8 + 0.3, "#f8fafc", 0.95);
     S.car(LL, zs, { color: "#94a3b8" }); S.car(LR, zf, { color: YOU });
     S.strip(LL - 0.25, zs - 2.2 - r.sa * 0.5, LL + 0.25, zs - 2.2, GOOD, 0.75);
     S.strip(LR - 0.25, zf - 2.2 - r.sb * 0.5, LR + 0.25, zf - 2.2, BAD, 0.75);
-    S.label("a", [LL, 2.2, zs], `${st.slow} km/h · <b>${Math.round(r.a)} min</b>`, "tag");
-    S.label("b", [LR, 2.2, zf], `${fast} km/h · <b>${Math.round(r.b)} min</b>`, "tag");
-    S.label("s", [0, 4, -40], `${tt("ttSaved")} <b>${Math.round(r.a - r.b)} min</b> / ${st.km} km`, "big");
+    S.label("a", [LL, 2.2, zs], `${st.slow} km/h · <b>${Math.round(r.a)} min</b>`, "good");
+    S.label("b", [LR, 2.2, zf], `${fast} km/h · <b>${Math.round(r.b)} min</b>`, "warn");
+    S.label("s", [0, 4, -L1 + 8], `🏁 ${tt("ttSaved")} <b>${Math.round(r.a - r.b)} min</b> / ${st.km} km`, "big");
     along(S, 14, -L1 + 8);
   },
 });
 
 const WB = { car: 2.6, bus: 6.0, truck: 7.5 };
 def("offtracking", {
-  env: { kind: "open" },
+  env: { kind: "open" }, dur: 3.6,
   scene(S, c) {
-    const st = c.st, r = c.r, Rf = r.Rf, rr = r.rr;
+    const st = c.st, r = c.r, Rf = r.Rf, rr = r.rr, p = P1(c), aEnd = c.idle ? Math.PI / 2 : Math.PI / 2 * p, aCar = c.idle ? Math.PI / 4 : aEnd;
     S.dyn("j", "j", () => { const b = new B(); b.flat(-4, -60, 40, 4, 0.002, K.C.tarmac, -3, 0.12); b.flat(-60, -40, -4, -4, 0.002, K.C.tarmac, -3, 0.12); return b; }, M.t(0, 0, 0));
     S.cyl(0, 0, 0, 3, 0.15, "#a8a29e");
     S.box(-60, 0, -3, 0, 0.15, 4, "#a8a29e"); S.box(-3, 0, -0.01, 4, 0.15, 4, "#a8a29e");
-    const arc = (rad, color) => { for (let i = 0; i <= 24; i++) { const a = i / 24 * Math.PI / 2; S.cyl(rad * Math.cos(a), 0.01, -rad * Math.sin(a), 0.12, 0.02, color, 0.95); } };
+    const arc = (rad, color) => { for (let i = 0; i <= 24; i++) { const a = i / 24 * Math.PI / 2; if (a > aEnd + 1e-3) break; S.cyl(rad * Math.cos(a), 0.01, -rad * Math.sin(a), 0.12, 0.02, color, 0.95); } };
     arc(Rf, GOOD); arc(rr, BAD);
-    const a = Math.PI / 4, fxA = Rf * Math.cos(a), fzA = -Rf * Math.sin(a), yaw = -a, dir = [Math.sin(yaw), -Math.cos(yaw)];
+    const fxA = Rf * Math.cos(aCar), fzA = -Rf * Math.sin(aCar), yaw = -aCar, dir = [Math.sin(yaw), -Math.cos(yaw)];
     const kind = st.veh, L = { car: 4.2, bus: 10.5, truck: 8 }[kind], off = L / 2 - (kind === "car" ? 1.3 : 1.6);
     S.car(fxA - dir[0] * off, fzA - dir[1] * off, { kind, yaw, color: kind === "bus" ? "#b91c1c" : kind === "truck" ? "#0f766e" : YOU, id: "ot" });
     const bR = Math.max(rr - 1.2, 4.5), bA = Math.PI / 4.6;
