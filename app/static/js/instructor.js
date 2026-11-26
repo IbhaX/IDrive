@@ -52,7 +52,7 @@ A.msgHtml = (m) => {
   if (m.pending) return `<div class="msg bot"><div class="typing"><i></i><i></i><i></i></div></div>`;
   if (m.error) return `<div class="msg bot err"><p>${e(m.content)}</p></div>`;
   const srcs = (m.sources || []);
-  const body = m.mode === "ai" ? A.md(m.content, srcs) : `<p>${e(u(srcs.length ? "askFound" : "askNothing"))}</p>`;
+  const body = m.mode === "ai" ? A.md(m.content, srcs) : `<p>${e(u(m.offline ? "askOffline" : srcs.length ? "askFound" : "askNothing"))}</p>`;
   const shown = m.mode === "ai" ? srcs.filter(s => s.cited).concat(srcs.filter(s => !s.cited).slice(0, 2)) : srcs;
   return `<div class="msg bot">${body}${shown.length ? `<div class="srcs"><h4 class="lab">${e(u("sources"))}</h4>${shown.map(s => `<a class="src" href="${e(s.href)}"><span class="sn">${s.n}</span><span><b>${e(s.title)}</b><small>${e(s.group)}</small>${m.mode === "search" ? `<em>${e(s.snippet)}</em>` : ""}</span></a>`).join("")}</div>` : ""}</div>`;
 };
@@ -69,7 +69,11 @@ A.send = async (text) => {
     const r = await Api.post("/api/instructor/ask", { question: q, history });
     A.log[A.log.length - 1] = { role: "assistant", content: r.answer || "", mode: r.mode, sources: r.sources };
   } catch (err) {
-    A.log[A.log.length - 1] = { role: "assistant", error: true, content: u(err.status === 429 ? "tooMany" : "networkErr") };
+    let local = null;
+    if (err.code === "network") { try { local = await Search.local(q, 6); } catch (e2) {} }
+    A.log[A.log.length - 1] = local
+      ? { role: "assistant", mode: "search", offline: true, content: "", sources: local.map((x, i) => ({ ...x, n: i + 1 })) }
+      : { role: "assistant", error: true, content: u(err.status === 429 ? "tooMany" : "networkErr") };
   }
   A.busy = false;
   if (S.view === "ask") { A.redraw(); const b = document.querySelector("#chatForm button"); if (b) b.disabled = false; }

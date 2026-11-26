@@ -1212,8 +1212,8 @@
   "“Add to Dock…” തിരഞ്ഞെടുത്ത് “Add” അമർത്തുക."
  ],
  "offlineNow": [
-  "You are offline — lessons you have opened still work",
-  "നിങ്ങൾ ഓഫ്‌ലൈനിലാണ് — തുറന്ന പാഠങ്ങൾ ഇപ്പോഴും വായിക്കാം"
+  "You're offline — everything except tests still works",
+  "നിങ്ങൾ ഓഫ്‌ലൈനിലാണ് — ടെസ്റ്റുകൾ ഒഴികെ എല്ലാം പ്രവർത്തിക്കും"
  ],
  "onlineAgain": [
   "Back online",
@@ -2890,5 +2890,33 @@
  "wtAccelSay": [
   "Accelerating: load moves to the rear — the nose lifts and the front tyres have less grip",
   "ത്വരണം: ഭാരം പിന്നിലേക്ക് — മുൻഭാഗം ഉയരുന്നു, മുൻ ടയറുകൾക്ക് ഗ്രിപ്പ് കുറയുന്നു"
+ ],
+ "offReady": [
+  "Available offline — {n} lessons, signs, articles and guides saved on this device",
+  "ഓഫ്‌ലൈനിൽ ലഭ്യം — {n} പാഠങ്ങൾ, ചിഹ്നങ്ങൾ, ലേഖനങ്ങൾ, ഗൈഡുകൾ ഈ ഉപകരണത്തിൽ സൂക്ഷിച്ചു"
+ ],
+ "offSaving": [
+  "Saving for offline use… {p}%",
+  "ഓഫ്‌ലൈൻ ഉപയോഗത്തിനായി സൂക്ഷിക്കുന്നു… {p}%"
+ ],
+ "offNot": [
+  "Not saved for offline use yet — it saves automatically while you're online",
+  "ഇതുവരെ ഓഫ്‌ലൈനിനായി സൂക്ഷിച്ചിട്ടില്ല — ഓൺലൈനിലായിരിക്കുമ്പോൾ സ്വയം സൂക്ഷിക്കും"
+ ],
+ "offReadyToast": [
+  "iDrive now works offline — everything except tests",
+  "iDrive ഇപ്പോൾ ഓഫ്‌ലൈനിൽ പ്രവർത്തിക്കും — ടെസ്റ്റുകൾ ഒഴികെ എല്ലാം"
+ ],
+ "testsOffline": [
+  "Mock tests, practice and quizzes need internet and sign-in",
+  "മോക്ക് ടെസ്റ്റ്, പ്രാക്ടീസ്, ക്വിസ് എന്നിവയ്ക്ക് ഇന്റർനെറ്റും സൈൻ ഇന്നും വേണം"
+ ],
+ "searchOffline": [
+  "Offline — results from this device",
+  "ഓഫ്‌ലൈൻ — ഈ ഉപകരണത്തിലെ ഫലങ്ങൾ"
+ ],
+ "askOffline": [
+  "You're offline, so the AI instructor can't answer right now. These saved lessons match your question:",
+  "നിങ്ങൾ ഓഫ്‌ലൈനിലാണ്, അതിനാൽ AI ഇൻസ്ട്രക്ടർക്ക് ഇപ്പോൾ മറുപടി നൽകാനാവില്ല. നിങ്ങളുടെ ചോദ്യവുമായി യോജിക്കുന്ന സൂക്ഷിച്ച പാഠങ്ങൾ:"
  ]
 }

@@ -9,9 +9,12 @@ from slowapi import Limiter
 from slowapi.util import get_remote_address
 
 from app.api.deps import OptionalUser
-from app.config import get_settings
 from app.schemas import InstructorIn, InstructorOut
-from app.services import curriculum, instructor
+from app.config import BASE_DIR, get_settings
+from app.services import curriculum, instructor, offline
+from app.web.pages import app_build
+
+STATIC_DIR = BASE_DIR / "app" / "static"
 
 router = APIRouter(tags=["curriculum"])
 limiter = Limiter(key_func=get_remote_address)
@@ -37,6 +40,19 @@ async def lesson(lesson_id: str, response: Response) -> dict[str, Any]:
         raise _not_found("lesson")
     response.headers["Cache-Control"] = _CACHE
     return payload
+
+
+@router.get("/api/curriculum/search-index")
+async def curriculum_search_index(response: Response) -> dict[str, Any]:
+    """Everything the on-device search needs when there is no connection."""
+    response.headers["Cache-Control"] = "no-cache"
+    return {"docs": curriculum.search_index()}
+
+
+@router.get("/api/offline/manifest")
+async def offline_manifest(response: Response) -> dict[str, Any]:
+    response.headers["Cache-Control"] = "no-cache"
+    return offline.manifest(app_build(STATIC_DIR))
 
 
 @router.get("/api/curriculum/search")

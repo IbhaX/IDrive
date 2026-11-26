@@ -686,6 +686,24 @@ def search_docs() -> list[dict[str, str]]:
     return _search_docs()
 
 
+@lru_cache(maxsize=1)
+def search_index() -> list[dict[str, str]]:
+    """Compact copy of the search documents for on-device (offline) search.
+    Same fields the server search uses, with the Malayalam group label filled in."""
+    out: list[dict[str, str]] = []
+    for d in _search_docs():
+        grp_ml = _GROUP_ML.get(d["group"], "")
+        if d["kind"] == "lesson":
+            grp_ml = d["group"].replace("Module", "മൊഡ്യൂൾ")
+        out.append({
+            "kind": d["kind"], "id": d["id"], "href": d["href"],
+            "title": d["title"], "title_ml": d.get("title_ml", ""),
+            "group": d["group"], "group_ml": grp_ml,
+            "body": d["body"][:1500], "body_ml": d.get("body_ml", "")[:1500],
+        })
+    return out
+
+
 # ---------- linter ----------
 
 def validate() -> list[str]:

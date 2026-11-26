@@ -46,7 +46,7 @@ const Api = {
      different one (a deploy happened while this tab stayed open), reload so
      old code never renders new data. Guarded against reload loops. */
   checkBuild(serverBuild) {
-    if (!serverBuild) return;
+    if (!serverBuild || navigator.onLine === false) return;   // offline: answers come from the saved copy
     const meta = document.querySelector('meta[name="app-build"]');
     const mine = meta && meta.content;
     if (!mine || mine === serverBuild) return;

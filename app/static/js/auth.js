@@ -66,9 +66,14 @@ A.openModal = (mode) => {
 };
 
 /* shared post-signin path for email/password and Google */
+const USER_KEY = "idrive-user";
+const keepUser = (u) => { try { u ? localStorage.setItem(USER_KEY, JSON.stringify(u)) : localStorage.removeItem(USER_KEY); } catch (e) {} };
+const lastUser = () => { try { return JSON.parse(localStorage.getItem(USER_KEY) || "null"); } catch (e) { return null; } };
+
 A.finishAuth = async (r) => {
   Api.setToken(r.token);
   A.user = r.user;
+  keepUser(r.user);
   A.closeModal();
   A.renderChip();
   Motion.toast(I18n.u("welcome") + (r.user.name ? ", " + r.user.name : ""));
@@ -138,6 +143,7 @@ A.signOut = async () => {
   try { await Api.post("/api/auth/logout"); } catch (e) {}
   Api.setToken("");
   A.user = null;
+  keepUser(null);
   A.version = 0;
   A.renderChip();
   Motion.toast(I18n.u("signedOut"));
@@ -148,13 +154,20 @@ A.restore = async () => {
   if (!Api.token()) { A.renderChip(); return; }
   try {
     A.user = await Api.get("/api/auth/me");
+    keepUser(A.user);
     await A.syncFromServer();
   } catch (e) {
-    Api.setToken("");
-    A.user = null;
+    if (e.status === 401) {          // the session really ended
+      Api.setToken(""); A.user = null; keepUser(null);
+    } else {
+      A.user = lastUser();           // offline or server unreachable: stay signed in locally
+    }
   }
   A.renderChip();
 };
+
+/* back online: push anything learned offline */
+window.addEventListener("online", () => { if (A.user) A.syncFromServer(); });
 
 /* ---------- progress sync ---------- */
 A.mergeProgress = (local, server) => {

@@ -1071,7 +1071,7 @@ html.splashing,html.splashing body{overflow:hidden}
 .x3d:not(.ready) .x3dbar,.x3d:not(.ready) .x3dpins{display:none}
 .x3d:not(.ready) .x3dstage{min-height:300px}
 /* ---- mirrors & blind spots, redrawn ---- */
-.bswrap{grid-template-columns:minmax(0,340px) minmax(0,1fr)}
+@media (min-width:621px){.bswrap{grid-template-columns:minmax(0,340px) minmax(0,1fr)}}
 .bsstage{display:flex;flex-direction:column;gap:6px}
 .bswrap svg#bsSvg{width:100%;max-width:340px;max-height:64vh;margin:0 auto;border-radius:18px;display:block;cursor:pointer;
   box-shadow:0 10px 30px rgba(0,0,0,.18),inset 0 0 0 1px var(--line)}
@@ -1153,3 +1153,13 @@ html.splashing,html.splashing body{overflow:hidden}
 .l3pathFk{fill:#38bdf8}.l3pathRk{fill:#fb7185}
 .l3ring{fill:none;stroke:color-mix(in srgb,var(--ink) 14%,transparent);stroke-width:22}
 .l3pave{fill:color-mix(in srgb,var(--ink) 16%,transparent);stroke:#e5e7eb;stroke-width:3}
+
+/* offline pack status (footer) */
+.offst{display:flex;align-items:center;gap:8px;justify-content:center;color:var(--muted);font-size:12.5px;margin:-6px auto 110px;text-align:center}
+.offst:empty{display:none}
+.offdot{width:8px;height:8px;border-radius:50%;background:var(--muted);flex:none}
+.offdot.ok{background:var(--good)}.offdot.busy{background:var(--amber);animation:pinPulse 1.2s ease-in-out infinite}
+.soff{margin:0 0 8px;font-size:12.5px}
+.labnav .labpn{min-width:0;max-width:100%}
+.labnav .labpn a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:min(60vw,320px)}
+@media (max-width:520px){.labnav .labgrp{flex-basis:100%;order:3}}

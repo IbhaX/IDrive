@@ -107,6 +107,42 @@ const Pwa = (() => {
   window.addEventListener("offline", () => window.Motion && Motion.toast(I18n.u("offlineNow")));
   window.addEventListener("online", () => window.Motion && Motion.toast(I18n.u("onlineAgain")));
 
+  /* ---------- offline pack status (the service worker saves all content) ---------- */
+  P.off = { state: null, done: 0, total: 0, running: false };
+  const myBuild = () => { const m = document.querySelector('meta[name="app-build"]'); return m ? m.content : ""; };
+  P.offlineLine = () => {
+    const o = P.off;
+    if (o.running && o.total) return I18n.u("offSaving", { p: Math.round(o.done / o.total * 100) });
+    if (o.state && o.state.saved) return I18n.u("offReady", { n: o.state.saved });
+    return I18n.u("offNot");
+  };
+  const paintOff = () => {
+    const el = document.getElementById("offlineStat");
+    if (!el || !window.I18n || !I18n.u) return;
+    el.innerHTML = `<span class="offdot ${P.off.state && !P.off.running ? "ok" : P.off.running ? "busy" : ""}"></span>${I18n.esc(I18n.one(P.offlineLine()))}`;
+  };
+  P.paintOffline = paintOff;
+  const ask = (msg) => navigator.serviceWorker.controller && navigator.serviceWorker.controller.postMessage(msg);
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.addEventListener("message", (ev) => {
+      const d = ev.data || {};
+      if (d.type === "offline-progress") { P.off.running = true; P.off.done = d.done; P.off.total = d.total; }
+      else if (d.type === "offline-ready") {
+        const first = !P.off.state;
+        P.off.running = false; P.off.state = { saved: d.saved, total: d.total, build: myBuild() };
+        if (first && window.Motion) Motion.toast(I18n.u("offReadyToast"));
+      } else if (d.type === "offline-failed") { P.off.running = false; }
+      else if (d.type === "offline-state") {
+        P.off.state = d.state; P.off.running = d.running;
+        // nothing saved yet, or saved for an older version: (re)build the pack
+        if (!d.running && navigator.onLine !== false && (!d.state || d.state.build !== myBuild())) ask("offline-sync");
+      }
+      paintOff();
+    });
+    navigator.serviceWorker.ready.then(() => setTimeout(() => ask("offline-state"), 600));
+    window.addEventListener("online", () => ask("offline-state"));
+  }
+
   if ("serviceWorker" in navigator && location.protocol !== "file:") {
     window.addEventListener("load", () => {
       navigator.serviceWorker.register("/sw.js", { scope: "/" }).catch(() => {});

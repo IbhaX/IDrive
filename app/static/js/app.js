@@ -79,6 +79,7 @@ function applyStatic() {
   document.documentElement.lang = I18n.lang() === "ml" ? "ml" : "en";
   document.getElementById("subline").textContent = I18n.u("sub2");
   document.getElementById("foot").textContent = I18n.u("foot");
+  if (window.Pwa && Pwa.paintOffline) Pwa.paintOffline();
   document.getElementById("langs").innerHTML = langHtml();
   const sb = document.getElementById("searchBtn");
   if (sb) { sb.setAttribute("aria-label", I18n.u("searchAll")); sb.querySelector("span").textContent = I18n.u("search"); }

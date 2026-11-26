@@ -110,3 +110,12 @@ def test_bilingual_payload_pairs() -> None:
     lights = curriculum.lights_payload()
     assert all(isinstance(w["name"], list) for w in lights)
     assert curriculum.search("ഹെൽമെറ്റ്"), "Malayalam search returns results"
+
+
+def test_offline_manifest_and_search_index() -> None:
+    from app.services import offline
+    m = offline.manifest("b")
+    assert m["count"] == len(set(m["urls"])) and m["count"] > 250
+    assert not any("/api/exam" in u or "/api/quiz" in u or "/api/progress" in u for u in m["urls"])
+    idx = curriculum.search_index()
+    assert len(idx) > 300 and all(len(d["body"]) <= 1500 for d in idx)

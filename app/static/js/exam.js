@@ -109,7 +109,7 @@ E.startMock = async () => {
     window.scrollTo(0, 0);
   } catch (e) {
     if (e.code === "auth_required") { Auth.openModal("login"); Motion.toast(I18n.u("mockNeedAcct")); return; }
-    Motion.toast(I18n.u("networkErr"), "err");
+    Motion.toast(I18n.u(navigator.onLine === false ? "testsOffline" : "networkErr"), "err");
   }
 };
 
@@ -124,7 +124,7 @@ E.startPractice = async (t) => {
     window.scrollTo(0, 0);
   } catch (e) {
     if (e.code === "auth_required") { Auth.openModal("login"); Motion.toast(I18n.u("testsNeedAcct")); return; }
-    Motion.toast(I18n.u("networkErr"), "err");
+    Motion.toast(I18n.u(navigator.onLine === false ? "testsOffline" : "networkErr"), "err");
   }
 };
 
@@ -185,7 +185,7 @@ E.finish = async () => {
       save();
     } catch (e) {
       ex.stage = "play";
-      Motion.toast(I18n.u("networkErr"), "err");
+      Motion.toast(I18n.u(navigator.onLine === false ? "testsOffline" : "networkErr"), "err");
       E.view(document.getElementById("app"));
       return;
     }

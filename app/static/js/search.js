@@ -33,14 +33,50 @@ Q.run = async (q) => {
   const box = document.getElementById("sres");
   if (!box) return;
   if (q.trim().length < 2) { box.innerHTML = `<p class="muted">${e(u("searchHint"))}</p>`; results = []; return; }
-  let r;
-  try { r = await Api.get("/api/curriculum/search?q=" + encodeURIComponent(q.trim().slice(0, 80))); }
-  catch (err) { box.innerHTML = `<p class="muted">${e(u("networkErr"))}</p>`; return; }
+  let r, local = false;
+  try {
+    if (navigator.onLine === false) throw Object.assign(new Error("offline"), { code: "network" });
+    r = await Api.get("/api/curriculum/search?q=" + encodeURIComponent(q.trim().slice(0, 80)));
+  } catch (err) {
+    try { r = { results: await Q.local(q) }; local = true; }
+    catch (err2) { box.innerHTML = `<p class="muted">${e(u("networkErr"))}</p>`; return; }
+  }
   results = r.results; active = results.length ? 0 : -1;
-  box.innerHTML = results.length
+  box.innerHTML = (local ? `<p class="muted soff">${e(u("searchOffline"))}</p>` : "") + (results.length
     ? results.map((x, i) => `<a class="sr-item k-${x.kind} ${i === active ? "on" : ""}" role="option" aria-selected="${i === active}" href="${e(x.href)}" data-sclose="1"><span class="sk">${e(u("k_" + x.kind))}</span><span><b>${e(x.title)}</b><small>${e(x.group)}</small><em>${e(x.snippet)}</em></span></a>`).join("")
       + `<a class="sr-item ask" href="#ask" data-sclose="1" data-askq="${e(q)}"><span class="sk">AI</span><span><b>${e(u("askAbout", { q }))}</b></span></a>`
-    : `<p class="muted">${e(u("nomatch"))}</p><a class="btn" href="#ask" data-sclose="1" data-askq="${e(q)}">${e(u("askAbout", { q }))}</a>`;
+    : `<p class="muted">${e(u("nomatch"))}</p><a class="btn" href="#ask" data-sclose="1" data-askq="${e(q)}">${e(u("askAbout", { q }))}</a>`);
+};
+
+/* on-device search over the saved index (same scoring as the server) */
+const STOP = new Set("a an and are as at be by can do does for from how i if in is it me my of on or should the this to what when where which who why will with you your".split(" "));
+const KW = { lesson: 1.3, light: 1.2, part: 1.1, article: 1.0, sign: 0.9, term: 0.8 };
+Q.local = async (q, limit = 30) => {
+  if (!Q.idx) Q.idx = (await Api.get("/api/curriculum/search-index")).docs;
+  const qn = q.toLowerCase().normalize("NFC").replace(/\s+/g, " ").trim();
+  if (qn.length < 2) return [];
+  const words = (qn.match(/[a-z0-9\u0d00-\u0d7f]+/g) || []).filter((w) => w.length > 1 && !STOP.has(w));
+  if (!words.length) return [];
+  const ml = /[\u0d00-\u0d7f]/.test(qn), out = [];
+  for (const d of Q.idx) {
+    const title = (ml ? d.title_ml : d.title).toLowerCase(), body = (ml ? d.body_ml : d.body).toLowerCase();
+    let score = 0, matched = 0;
+    if (qn && title.includes(qn)) score += 10 + (title.startsWith(qn) ? 5 : 0);
+    if (body.includes(qn)) score += 4;
+    for (const w of words) {
+      if (title.includes(w) || body.includes(w)) matched++;
+      if (title.includes(w)) score += 3;
+      score += Math.min(body.split(w).length - 1, 5) * 0.6;
+    }
+    if (words.length > 1) score *= 0.4 + 0.6 * matched / words.length;
+    if (score <= 0) continue;
+    score *= KW[d.kind] || 1;
+    const src = ml ? d.body_ml : d.body, at = Math.max(0, src.toLowerCase().indexOf(words[0]));
+    const snip = (at > 60 ? "…" : "") + src.slice(Math.max(0, at - 60), at + 120).trim() + "…";
+    out.push([score, { kind: d.kind, id: d.id, href: d.href, title: d.title_ml ? [d.title, d.title_ml] : d.title,
+      group: d.group_ml ? [d.group, d.group_ml] : d.group, snippet: snip }]);
+  }
+  return out.sort((a, b) => b[0] - a[0]).slice(0, limit).map((x) => x[1]);
 };
 Q.keys = (ev) => {
   const items = [...document.querySelectorAll("#sres .sr-item")];

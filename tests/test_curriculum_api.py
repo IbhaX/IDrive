@@ -181,3 +181,23 @@ def test_model_route_serves_mirror_or_fetches_on_demand(client, tmp_path, monkey
     r = client.get(f"/models/{mm.MODEL_KEY}/Rib_N.webp")
     assert r.status_code == 200 and r.headers["content-type"] == "image/webp"
     assert "immutable" in r.headers["cache-control"]
+
+
+def test_offline_manifest_lists_all_public_content(client) -> None:
+    m = client.get("/api/offline/manifest").json()
+    urls = m["urls"]
+    assert m["count"] == len(urls) > 250
+    assert "/api/curriculum/search-index" in urls and "/api/library/scenarios" in urls
+    assert any(u.startswith("/api/curriculum/lessons/") for u in urls)
+    assert any(u.startswith("/api/content/signs/") for u in urls)
+    # nothing account-only is ever pre-cached
+    assert not any(u.startswith(("/api/exam", "/api/quiz", "/api/progress", "/api/instructor/ask", "/api/auth/me")) for u in urls)
+    for u in urls[:40]:
+        assert client.get(u).status_code == 200, u
+
+
+def test_search_index_supports_offline_search(client) -> None:
+    docs = client.get("/api/curriculum/search-index").json()["docs"]
+    kinds = {d["kind"] for d in docs}
+    assert {"lesson", "sign", "light", "part"} <= kinds
+    assert all(d["href"].startswith("#") and d["title"] for d in docs)
