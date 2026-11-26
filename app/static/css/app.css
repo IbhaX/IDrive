@@ -794,7 +794,12 @@ input[type=range]{width:100%;accent-color:var(--acc2);height:28px}
 .giveway{stroke:#e5e7eb;stroke-width:4;stroke-dasharray:8 6}.zb{fill:#f1f5f9;opacity:.85}.stopl{stroke:#f1f5f9;stroke-width:4}
 :root[data-theme="light"] .grass{fill:#cfdac8}:root[data-theme="light"] .walk{fill:#b8bec8}:root[data-theme="light"] .tarmac{fill:#4a505b}
 .glass{fill:#0b1220;opacity:.7}.tail{fill:#7f1d1d}.braking .tail{fill:#ef4444;filter:drop-shadow(0 0 6px #ef4444)}
-.rider{fill:#fbbf24}.ped{fill:#f97316}.pedh{fill:#fde68a}.cow{fill:#a16207}.cowspot{fill:#fef3c7}.dog{fill:#78716c}
+.rider{fill:#fbbf24}
+.pfoot{fill:#0f172a}.pskin{fill:#d6a77a}.pbody{stroke:rgba(0,0,0,.35);stroke-width:.8}.pvest{stroke:#e5e7eb;stroke-width:1.4}
+.walking .pf1,.walking .pa2{animation:hzstep .5s ease-in-out infinite alternate}
+.walking .pf2,.walking .pa1{animation:hzstep .5s ease-in-out infinite alternate-reverse}
+@keyframes hzstep{from{transform:translateY(-3px)}to{transform:translateY(3px)}}
+@media (prefers-reduced-motion:reduce){.walking .pfoot,.walking .parm{animation:none}}.cow{fill:#a16207}.cowspot{fill:#fef3c7}.dog{fill:#78716c}
 .egob{fill:var(--acc)}.beam{fill:#fde68a;opacity:.08}
 .hit{fill:transparent}
 .pick .actor{cursor:pointer}

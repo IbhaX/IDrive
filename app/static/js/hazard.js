@@ -48,6 +48,26 @@ const road = (layout) => {
   if (layout === "crossing") g += `<g class="zebra">${Array.from({ length: 8 }, (_, i) => `<rect x="${104 + i * 25}" y="222" width="14" height="30" class="zb"/>`).join("")}</g><line x1="100" y1="262" x2="200" y2="262" class="stopl"/>`;
   return g;
 };
+/* top-down person: feet, arms, shoulders, head (hair with a sliver of face in front) */
+const SHIRTS = ["#f97316", "#38bdf8", "#f43f5e", "#a3e635", "#e879f9", "#facc15", "#2dd4bf"];
+const HAIR = ["#1c1917", "#292524", "#44403c", "#78716c"];
+const pick = (arr, id) => arr[[...id].reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) >>> 0, 7) % arr.length];
+const person = (a) => {
+  const kid = /^kid/.test(a.id), worker = /^w\d*$/.test(a.id);
+  const shirt = a.color || (worker ? "#facc15" : pick(SHIRTS, a.id)), hair = pick(HAIR, a.id + "h");
+  return `<g class="person"${kid ? ' transform="scale(.78)"' : ""}>
+    <g class="pfeet"><ellipse class="pfoot pf1" cx="-3.6" cy="0" rx="2.3" ry="3.6"/><ellipse class="pfoot pf2" cx="3.6" cy="0" rx="2.3" ry="3.6"/></g>
+    <ellipse class="parm pa1" cx="-10" cy="0" rx="2.6" ry="4.4" fill="${shirt}"/><ellipse class="parm pa2" cx="10" cy="0" rx="2.6" ry="4.4" fill="${shirt}"/>
+    <ellipse rx="9.5" ry="5.6" fill="${shirt}" class="pbody"/>${worker ? '<path d="M-7 -2 L7 -2 M-7 2 L7 2" class="pvest"/>' : ""}
+    <circle r="4.6" cy="-0.6" class="pskin"/><circle r="4.4" cy="0.4" fill="${hair}"/></g>`;
+};
+/* people face the way they walk; vehicles keep their set rotation */
+const facing = (a, x0, y0, x1, y1) => {
+  if (a.kind !== "ped") return a.rot || 0;
+  const dx = x1 - x0, dy = y1 - y0;
+  return Math.hypot(dx, dy) < 2 ? (a.rot || 0) : Math.atan2(dx, -dy) * 180 / Math.PI;
+};
+const walk = (id, on) => { const g = document.getElementById("hzA-" + id); if (g) g.classList.toggle("walking", on); };
 const shape = (a) => {
   const c = a.color || "#94a3b8";
   switch (a.kind) {
@@ -55,7 +75,7 @@ const shape = (a) => {
     case "truck": return `<rect x="-20" y="-50" width="40" height="100" rx="6" fill="${c}"/><rect x="-18" y="-48" width="36" height="24" rx="4" class="glass"/>`;
     case "bus": return `<rect x="-20" y="-55" width="40" height="110" rx="8" fill="${c}"/><rect x="-16" y="-50" width="32" height="12" rx="3" class="glass"/><rect x="-15" y="50" width="8" height="4" class="tail"/><rect x="7" y="50" width="8" height="4" class="tail"/>`;
     case "bike": return `<rect x="-6" y="-20" width="12" height="40" rx="6" fill="${c}"/><circle cy="-4" r="7" class="rider"/>`;
-    case "ped": return `<circle r="9" class="ped"/><circle r="4" cy="-1" class="pedh"/>`;
+    case "ped": return person(a);
     case "cow": return `<ellipse rx="22" ry="12" class="cow"/><circle cx="-24" cy="0" r="7" class="cow"/><circle cx="6" cy="-3" r="4" class="cowspot"/>`;
     case "dog": return `<ellipse rx="12" ry="6" class="dog"/><circle cx="-13" r="4" class="dog"/>`;
     case "auto": return `<path d="M-14 -24 Q0 -34 14 -24 L15 22 Q15 26 11 26 L-11 26 Q-15 26 -15 22 Z" fill="${a.color || "#facc15"}"/><path d="M-12 -6 L12 -6 L12 22 L-12 22 Z" class="autotop"/><rect x="-10" y="-20" width="20" height="9" rx="3" class="glass"/><rect x="-12" y="23" width="6" height="3" class="tail"/><rect x="6" y="23" width="6" height="3" class="tail"/>`;
@@ -76,7 +96,7 @@ const mood = (m) => {
   return "";
 };
 const ego = `<g id="hzEgo" transform="translate(150,500)"><rect x="-17" y="-30" width="34" height="60" rx="9" class="egob"/><rect x="-13" y="-22" width="26" height="12" rx="3" class="glass"/><path d="M-12 -34 L-30 -150 L30 -150 L12 -34 Z" class="beam"/></g>`;
-const actorG = (a, pos) => `<g class="actor" id="hzA-${a.id}" data-hz="${a.id}" tabindex="-1" role="button" aria-label="${e(u("kind_" + a.kind))}" transform="translate(${pos[0]},${pos[1]}) rotate(${a.rot || 0})">${shape(a)}<circle r="34" class="hit"/></g>`;
+const actorG = (a, pos) => `<g class="actor" id="hzA-${a.id}" data-hz="${a.id}" tabindex="-1" role="button" aria-label="${e(u("kind_" + a.kind))}" transform="translate(${pos[0]},${pos[1]}) rotate(${facing(a, a.x, a.y, a.tx, a.ty)})">${shape(a)}<circle r="34" class="hit"/></g>`;
 const place = (id, x, y, rot) => { const g = document.getElementById("hzA-" + id); if (g) g.setAttribute("transform", `translate(${x},${y}) rotate(${rot || 0})`); };
 
 /* ---------- player ---------- */
@@ -112,21 +132,23 @@ H.nextId = () => { const i = H.all.indexOf(H.st.s); return H.all[i + 1] ? H.all[
 H.start = () => {
   const st = H.st, s = st.s, G = Motion.gsap;
   st.phase = "play"; H.panel();
-  s.actors.forEach(a => place(a.id, a.x, a.y, a.rot));
+  s.actors.forEach(a => place(a.id, a.x, a.y, facing(a, a.x, a.y, a.tx, a.ty)));
   const done = () => {
+    s.actors.forEach(a => walk(a.id, false));
     s.actors.forEach(a => { if (a.brake) { const g = document.getElementById("hzA-" + a.id); if (g) g.classList.add("braking"); } });
     st.phase = "spot";
     document.getElementById("hzSvg").classList.add("pick");
     H.panel();
   };
-  if (!G || Motion.reduced()) { s.actors.forEach(a => place(a.id, a.tx, a.ty, a.rot)); done(); return; }
+  if (!G || Motion.reduced()) { s.actors.forEach(a => place(a.id, a.tx, a.ty, facing(a, a.x, a.y, a.tx, a.ty))); done(); return; }
   Motion.scoped(() => {
     const dash = document.getElementById("hzDash");
     st.dashTl = G.fromTo(dash, { y: 0 }, { y: 80, duration: .45, ease: "none", repeat: -1 });
     const tl = G.timeline({ onComplete: done });
     s.actors.forEach(a => {
-      const o = { x: a.x, y: a.y };
-      tl.to(o, { x: a.tx, y: a.ty, duration: s.duration, ease: "sine.inOut", onUpdate: () => place(a.id, o.x, o.y, a.rot) }, 0);
+      const o = { x: a.x, y: a.y }, r = facing(a, a.x, a.y, a.tx, a.ty);
+      if (a.kind === "ped" && Math.hypot(a.tx - a.x, a.ty - a.y) > 2) walk(a.id, true);
+      tl.to(o, { x: a.tx, y: a.ty, duration: s.duration, ease: "sine.inOut", onUpdate: () => place(a.id, o.x, o.y, r) }, 0);
       if (a.brake) tl.add(() => { const g = document.getElementById("hzA-" + a.id); if (g) g.classList.add("braking"); }, s.duration * .55);
     });
     tl.to("#hzProg", { width: "100%", duration: s.duration, ease: "none" }, 0);
@@ -153,10 +175,13 @@ H.choose = (i) => {
   Course.touchDay(); save();
   H.panel();
   const hz = s.actors.find(a => a.id === s.hazard);
-  if (!G || Motion.reduced()) { place(hz.id, hz.then[0], hz.then[1], hz.rot); return; }
+  const hr = facing(hz, hz.tx, hz.ty, hz.then[0], hz.then[1]);
+  if (!G || Motion.reduced()) { place(hz.id, hz.then[0], hz.then[1], hr); return; }
   Motion.scoped(() => {
     const o = { x: hz.tx, y: hz.ty };
-    G.to(o, { x: hz.then[0], y: hz.then[1], duration: 1.6, ease: "power1.inOut", onUpdate: () => place(hz.id, o.x, o.y, hz.rot) });
+    const moves = hz.kind === "ped" && Math.hypot(hz.then[0] - hz.tx, hz.then[1] - hz.ty) > 2;
+    if (moves) walk(hz.id, true);
+    G.to(o, { x: hz.then[0], y: hz.then[1], duration: 1.6, ease: "power1.inOut", onUpdate: () => place(hz.id, o.x, o.y, hr), onComplete: () => walk(hz.id, false) });
     if (st.dashTl) G.to(st.dashTl, { timeScale: ok ? 0 : 1.4, duration: ok ? 1.2 : .3, ease: "power2.out" });
     if (ok) { Motion.confetti(); }
     else {
