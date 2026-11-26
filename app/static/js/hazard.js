@@ -143,7 +143,7 @@ H.play = (app, s) => {
   const cam = camPref();
   const camBtn = (k, label) => `<button data-act="hzcam" data-k="${k}" class="${cam === k ? "on" : ""}" aria-pressed="${cam === k}">${e(u(label))}</button>`;
   app.innerHTML = `${Course.crumbs([[u("tHazard"), "#hazard"], [s.title, "#hazard/" + s.id]])}
-  <div class="hzgrid"><section class="panel hzscene"><button type="button" class="scenebtn" id="hzPlay" data-act="hzplay">▶ <span>${e(u("hzStart"))}</span></button><div class="hz3" id="hz3"><canvas id="hzGl" role="img" aria-label="${I18n.attr(s.title)}"></canvas>
+  <div class="hzgrid"><section class="panel hzscene"><button type="button" class="scenebtn" id="hzPlay" data-act="hzplay" aria-label="${I18n.attr(u("hzStart"))}" title="${I18n.attr(u("hzStart"))}"><i aria-hidden="true">▶</i></button><div class="hz3" id="hz3"><canvas id="hzGl" role="img" aria-label="${I18n.attr(s.title)}"></canvas>
     <div class="hz3mir" id="hzMir" hidden aria-hidden="true"></div>
     <div class="hz3cam seg hzcam" role="group" aria-label="${I18n.attr(u("hzCamLabel"))}">${camBtn("drive", "hzCamDrive")}${camBtn("top", "hzCamTop")}</div>
     <div class="hz3spd" aria-hidden="true"><b id="hzKmh">0</b><small>km/h</small></div>
@@ -177,7 +177,7 @@ H.panel = () => {
 H.playBtn = (show, label) => {
   const b = document.getElementById("hzPlay");
   if (!b) return;
-  if (label) b.querySelector("span").innerHTML = e(u(label));
+  if (label) { b.setAttribute("aria-label", I18n.one(u(label))); b.title = I18n.one(u(label)); b.querySelector("i").textContent = label === "tryAgain" ? "↻" : "▶"; }
   b.hidden = !show;
 };
 H.playClick = () => {

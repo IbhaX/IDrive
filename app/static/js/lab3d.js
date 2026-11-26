@@ -95,7 +95,8 @@ L3.attach = (viz, id, get) => {
     <p class="lab3hint">${I18n.esc(I18n.one(I18n.u(sc.hint || "lab3Drag")))}</p>`;
   viz.prepend(wrap);
   viz.classList.add("has3d");
-  const playBtn = wrap.querySelector(".scenebtn");
+  const playBtn = wrap.querySelector(".scenebtn"), toolbar = wrap.querySelector(".lab3ctl"), hintEl = wrap.querySelector(".lab3hint");
+  setTimeout(() => hintEl.classList.add("gone"), 5000);
   const canvas = wrap.querySelector("canvas"), lblHost = wrap.querySelector(".lab3lbl"), resetBtn = wrap.querySelector(".lab3reset");
   const gl = canvas.getContext("webgl2", { antialias: true, alpha: false, preserveDrawingBuffer: false });
   if (!gl) { wrap.remove(); viz.classList.remove("has3d"); return null; }
@@ -231,10 +232,11 @@ L3.attach = (viz, id, get) => {
     const ctl = runCtl();
     if (!ctl) { playBtn.hidden = true; return; }
     const busy = runDur > 0 || Date.now() < playHold || (sc.playing && sc.playing());
-    if (!busy) { const html = ctl.innerHTML.replace(/❚❚[^<]*/, "▶ " + I18n.esc(I18n.one(I18n.u("play")))); if (playBtn._h !== html) { playBtn.innerHTML = html; playBtn._h = html; } }
+    if (!busy) { const name = (ctl.textContent || "").replace(/[▶▼❚]/g, "").trim(); if (playBtn._h !== name) { playBtn.innerHTML = `<i aria-hidden="true">${/▼/.test(ctl.textContent) ? "▼" : "▶"}</i>`; playBtn.setAttribute("aria-label", name); playBtn.title = name; playBtn._h = name; } }
     playBtn.hidden = busy;
   };
   playBtn.addEventListener("click", () => {
+    dirty = true;
     const ctl = runCtl(); if (!ctl) return;
     playBtn.hidden = true;
     if (sc.hold) playHold = Date.now() + sc.hold * 1000;
@@ -264,7 +266,7 @@ L3.attach = (viz, id, get) => {
     if (!drag) return;
     const dx = ev.clientX - drag.x, dy = ev.clientY - drag.y;
     if (!drag.moved && Math.hypot(dx, dy) < 6) return;
-    drag.moved = true;
+    drag.moved = true; hintEl.classList.add("gone");
     orbit.yaw = Math.max(-1.3, Math.min(1.3, drag.yaw - dx * 0.006));
     orbit.pitch = Math.max(-0.35, Math.min(0.55, drag.pitch + dy * 0.004));
     resetBtn.hidden = false; dirty = true;
@@ -378,16 +380,28 @@ L3.attach = (viz, id, get) => {
       el.style.display = "";
       shown.push({ el, x: (c[0] / c[3] * 0.5 + 0.5) * box.width, y: (1 - (c[1] / c[3] * 0.5 + 0.5)) * box.height, d: c[3] });
     });
-    shown.sort((a, b) => a.d - b.d).forEach((s) => {
+    /* keep the scene readable: while a run animates only the key label shows;
+       labels never cover the toolbar, the ▶ button or each other — when two
+       collide the less important (then the farther) one is hidden */
+    const prio = (el) => (/\b(bad|good|warn|big)\b/.test(el.className) ? 0 : /\btiny\b/.test(el.className) ? 2 : 1);
+    const small = box.width < 520, running = runDur > 0;
+    const keep = [];
+    const tb = toolbar.getBoundingClientRect(), pb = playBtn.hidden ? null : playBtn.getBoundingClientRect();
+    if (tb.width) keep.push({ x: tb.left - box.left + tb.width / 2, y: tb.top - box.top + tb.height / 2, w: tb.width + 8, h: tb.height + 8 });
+    if (pb && pb.width) keep.push({ x: pb.left - box.left + pb.width / 2, y: pb.top - box.top + pb.height / 2, w: pb.width + 10, h: pb.height + 10 });
+    shown.sort((a, b) => prio(a.el) - prio(b.el) || a.d - b.d).forEach((s) => {
+      const p = prio(s.el);
+      if ((running && p > 0) || (small && p === 2)) { s.el.style.display = "none"; return; }
       const w = s.el.offsetWidth || 60, h = s.el.offsetHeight || 20;
-      let y = s.y;
-      for (let k = 0; k < 8; k++) {
-        const hit = placed.find((p) => Math.abs(p.x - s.x) < (p.w + w) / 2 + 4 && Math.abs(p.y - y) < (p.h + h) / 2 + 2);
-        if (!hit) break;
-        y = hit.y - (hit.h + h) / 2 - 3;
-      }
-      placed.push({ x: s.x, y, w, h });
-      s.el.style.left = s.x + "px"; s.el.style.top = y + "px";
+      const clampX = (v) => Math.max(w / 2 + 4, Math.min(box.width - w / 2 - 4, v));
+      const free = (x, y) => !keep.concat(placed).some((q) => Math.abs(q.x - x) < (q.w + w) / 2 + 3 && Math.abs(q.y - y) < (q.h + h) / 2 + 2);
+      /* try the spot itself, then slide sideways, then just below */
+      const tries = [[0, 0], [-(w / 2 + 38), 0], [w / 2 + 38, 0], [0, h + 6], [-(w / 2 + 38), h + 6], [w / 2 + 38, h + 6]];
+      let spot = null;
+      for (const [dx, dy] of tries) { const x = clampX(s.x + dx), y = s.y - h * 0.55 + dy; if (y > h / 2 && y < box.height - h && free(x, y)) { spot = [x, y, dy]; break; } }
+      if (!spot) { s.el.style.display = "none"; return; }
+      placed.push({ x: spot[0], y: spot[1], w, h });
+      s.el.style.left = spot[0] + "px"; s.el.style.top = s.y + spot[2] + "px";
     });
   }
   /* scene-side lights (night labs) */
