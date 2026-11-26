@@ -202,3 +202,56 @@ def test_game_ids_match_games_js() -> None:
     assert len(seo.GAME_IDS) >= 30
     for gk, ids in seo.GAME_GROUPS:
         assert f'["{gk}", [{", ".join(chr(34) + i + chr(34) for i in ids)}]]' in src
+
+
+def test_parking_levels_are_valid_and_solvable() -> None:
+    """Car-park escape levels in games.js: no two cars share a square, every car is
+    on the 6×6 grid, the red car sits on the exit row, and the stored `min` is the
+    true fewest moves (one move = sliding one car any distance)."""
+    import json
+    import re
+    from collections import deque
+    from app.web import seo
+    src = (seo.BASE_DIR / "app" / "static" / "js" / "games.js").read_text(encoding="utf-8")
+    m = re.search(r"const PARK = (\[.*?\]);\n", src)
+    assert m
+    levels = json.loads(m.group(1))
+    assert len(levels) >= 6
+
+    def cells(car: tuple[int, int, int, bool]) -> list[tuple[int, int]]:
+        r, c, n, h = car
+        return [(r, c + k) if h else (r + k, c) for k in range(n)]
+
+    def fewest(cars: list[tuple[int, int, int, bool]]) -> int:
+        start = tuple(cars)
+        dist = {start: 0}
+        q = deque([start])
+        while q:
+            s = q.popleft()
+            if s[0][1] + s[0][2] == 6:
+                return dist[s]
+            occ = {cell: i for i, car in enumerate(s) for cell in cells(car)}
+            for i, (r, c, n, h) in enumerate(s):
+                for step in (-1, 1):
+                    k = 1
+                    while True:
+                        new = (r, c + step * k, n, h) if h else (r + step * k, c, n, h)
+                        if not all(0 <= a < 6 and 0 <= b < 6 and occ.get((a, b), i) == i for a, b in cells(new)):
+                            break
+                        ns = s[:i] + (new,) + s[i + 1:]
+                        if ns not in dist:
+                            dist[ns] = dist[s] + 1
+                            q.append(ns)
+                        k += 1
+        return -1
+
+    for n, lv in enumerate(levels, 1):
+        cars = [tuple(c) for c in lv["cars"]]
+        seen: set[tuple[int, int]] = set()
+        for car in cars:
+            for cell in cells(car):
+                assert 0 <= cell[0] < 6 and 0 <= cell[1] < 6, f"level {n}: car off the grid"
+                assert cell not in seen, f"level {n}: two cars overlap at {cell}"
+                seen.add(cell)
+        assert cars[0][0] == 2 and cars[0][3] is True and cars[0][2] == 2, f"level {n}: red car not on the exit row"
+        assert fewest(cars) == lv["min"], f"level {n}: stored min is wrong"
