@@ -190,3 +190,15 @@ def test_signup_attribution_is_cleaned_and_stored(client, db_path) -> None:
     row = sqlite3.connect(db_path).execute("select data from signup_attribution").fetchone()
     data = json.loads(row[0])
     assert data == {"first": {"gclid": "abc", "utm_source": "google"}}
+
+
+def test_game_ids_match_games_js() -> None:
+    """The server's list of game pages must match the games in games.js."""
+    import re
+    from app.web import seo
+    src = (seo.BASE_DIR / "app" / "static" / "js" / "games.js").read_text(encoding="utf-8")
+    defined = re.findall(r'^def\("(\w+)"', src, re.M)
+    assert sorted(defined) == sorted(seo.GAME_IDS)
+    assert len(seo.GAME_IDS) >= 30
+    for gk, ids in seo.GAME_GROUPS:
+        assert f'["{gk}", [{", ".join(chr(34) + i + chr(34) for i in ids)}]]' in src

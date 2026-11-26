@@ -7,7 +7,7 @@ const PKEY = "idrive-v1";
 
 function defaultProgress() {
   return { seen: {}, box: {}, wrong: {}, best: 0, played: 0, lang: "both", mock: { taken: 0, passed: 0, best: 0 }, tq: {},
-    les: {}, bm: {}, rec: [], days: {}, rq: {}, hz: {}, lab: {}, secs: 0, v: 1 };
+    les: {}, bm: {}, rec: [], days: {}, rq: {}, hz: {}, lab: {}, gm: {}, secs: 0, v: 1 };
 }
 window.defaultProgress = defaultProgress;
 
@@ -40,6 +40,7 @@ const TABS = [
   { id: "vehicle", k: "tVehicle", icon: '<path d="M5 16l1.5-5A2 2 0 0 1 8.4 9.5h7.2a2 2 0 0 1 1.9 1.5L19 16M3 16h18v3H3z"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/>' },
   { id: "science", k: "tScience", icon: '<path d="M9 3h6M10 3v6L4 19a1.5 1.5 0 0 0 1.3 2h13.4a1.5 1.5 0 0 0 1.3-2L14 9V3"/><path d="M7 15h10"/>' },
   { id: "hazard", k: "tHazard", icon: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>' },
+  { id: "games", k: "tGames", icon: '<rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3M15.5 12h.01M18 13.5h.01"/>' },
   { id: "exam", k: "tTests", icon: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 13l2 2 4-4"/>' },
   { id: "ask", k: "tAsk", icon: '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 10h6M9 13.5h4"/>' },
   { id: "progress", k: "tProg", icon: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>' },
@@ -98,6 +99,7 @@ const VIEWS = {
   vehicle: (app) => Vehicle.view(app),
   science: (app) => Labs.view(app),
   hazard: (app) => Hazard.view(app),
+  games: (app) => Games.view(app),
   theory: (app) => Theory.view(app),
   exam: (app) => Exam.view(app),
   quiz: (app) => Quiz.view(app),

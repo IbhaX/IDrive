@@ -561,6 +561,39 @@ def page_science(lab: Optional[str], lang: Lang) -> Optional[Page]:
                 description=clip(desc), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
 
 
+# Games (static/js/games.js): ids in hub order, grouped like Gm.GROUPS there.
+GAME_GROUPS: list[tuple[str, list[str]]] = [
+    ("gmReact", ["brakelight", "greenlight", "kidout", "gonogo", "indicator", "mirrors", "peripheral", "stopline", "dodge",
+                 "lanekeep", "speedkeep", "gapjudge", "animals", "fogspot", "nightped"]),
+    ("gmLogic", ["parking", "route", "rightofway", "roundabout", "sequence", "fuelplan", "stopguess", "gapcount", "speedmath",
+                 "plates", "blindspots", "overtake"]),
+    ("gmRules", ["signsprint", "signpairs", "oddsign", "dashlights"]),
+]
+GAME_IDS: list[str] = [g for _, ids in GAME_GROUPS for g in ids]
+
+
+def page_games(gid: Optional[str], lang: Lang) -> Optional[Page]:
+    gc = (ui("tGames", lang), "/games")
+    if gid is None:
+        crumbs = [home_crumb(lang), gc]
+        h1 = T(f"Driving games: {len(GAME_IDS)} games for reaction time and road logic",
+               f"ഡ്രൈവിങ് ഗെയിമുകൾ: പ്രതികരണ സമയത്തിനും റോഡ് യുക്തിക്കും {len(GAME_IDS)} ഗെയിമുകൾ", lang)
+        lede = ui("gmLede", lang)
+        parts = []
+        for gk, ids in GAME_GROUPS:
+            parts.append(f"<h2>{esc(ui(gk, lang))}</h2>" + ul([f'{a(f"/games/{k}", ui("gm_" + k, lang), lang)} — {esc(ui("gmSub_" + k, lang))}' for k in ids]))
+        body = f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>{"".join(parts)}</article>'
+        return Page(path="/games", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
+    if gid not in GAME_IDS:
+        return None
+    name, sub, how = ui("gm_" + gid, lang), ui("gmSub_" + gid, lang), ui("gmHow_" + gid, lang)
+    crumbs = [home_crumb(lang), gc, (name, f"/games/{gid}")]
+    body = f"""<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(name)}</h1><p class="answer">{esc(sub)}. {esc(how)}</p>
+<p>{a(f"/games/{gid}", T("Play the game", "ഗെയിം കളിക്കുക", lang), lang, "btn")}</p></article>"""
+    return Page(path=f"/games/{gid}", title=f"{name} — {T('driving game', 'ഡ്രൈവിങ് ഗെയിം', lang)} | iDrive",
+                description=clip(f"{name}: {sub}. {how}"), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
+
+
 def page_limits(lang: Lang) -> Optional[Page]:
     data = curriculum.speed_limits_payload()
     if not data:
@@ -649,6 +682,7 @@ def page_home(lang: Lang) -> Page:
         ("/theory/gloss", T("Glossary", "പദാവലി", lang), T(f"{n['gloss']} driving terms defined.", f"{n['gloss']} ഡ്രൈവിങ് പദങ്ങളുടെ നിർവചനം.", lang)),
         ("/hazard", ui("tHazard", lang), T(f"{n['scen']} hazard perception scenarios.", f"{n['scen']} അപകട തിരിച്ചറിവ് സാഹചര്യങ്ങൾ.", lang)),
         ("/science", ui("tScience", lang), T(f"{n['labs']} interactive physics labs.", f"{n['labs']} സംവേദനാത്മക ഭൗതികശാസ്ത്ര ലാബുകൾ.", lang)),
+        ("/games", ui("tGames", lang), T(f"{len(GAME_IDS)} driving games for reaction time and road logic.", f"പ്രതികരണ സമയത്തിനും റോഡ് യുക്തിക്കും {len(GAME_IDS)} ഡ്രൈവിങ് ഗെയിമുകൾ.", lang)),
         ("/vehicle", ui("tVehicle", lang), T("Car parts and dashboard warning lights.", "കാർ ഭാഗങ്ങളും ഡാഷ്ബോർഡ് മുന്നറിയിപ്പ് ലൈറ്റുകളും.", lang)),
         ("/exam", ui("tTests", lang), T("Learner licence mock test and practice.", "ലേണേഴ്സ് ലൈസൻസ് മോക്ക് ടെസ്റ്റും പരിശീലനവും.", lang)),
         ("/about", T("About iDrive", "iDrive-നെക്കുറിച്ച്", lang), T("Who makes iDrive and what it is — and is not.", "iDrive ആരാണ് നിർമിക്കുന്നത്, അത് എന്താണ് — എന്തല്ല.", lang)),
@@ -710,6 +744,8 @@ def resolve(path: str, lang: Lang) -> Optional[Page]:
         return None
     if head == "science" and len(rest) <= 1:
         return page_science(one, lang)
+    if head == "games" and len(rest) <= 1:
+        return page_games(one, lang)
     if head == "limits" and not rest:
         return page_limits(lang)
     if head in ("exam", "quiz", "cards", "ask", "progress") and not rest:
@@ -804,7 +840,7 @@ def _mtime_date(paths: list[Path]) -> str:
 
 CUR = DATA_DIR / "curriculum"
 SITEMAPS: dict[str, tuple[Callable[[], list[str]], list[Path]]] = {
-    "static": (lambda: ["/", "/learn", "/course", "/theory", "/hazard", "/science", "/vehicle", "/vehicle/lights",
+    "static": (lambda: ["/", "/learn", "/course", "/theory", "/hazard", "/science", "/games", "/vehicle", "/vehicle/lights",
                         "/vehicle/explore", "/limits", "/exam", "/quiz", "/cards", "/about", "/privacy", "/terms", "/install"],
                [DATA_DIR / "ui_extra.json", BASE_DIR / "app" / "web" / "trust.py"]),
     "signs": (lambda: [f"/sign/{s['id']}" for s in content.signs()], [DATA_DIR / "signs.json", CUR / "sign_details.json", CUR / "ml" / "sign_details.json"]),
@@ -816,6 +852,7 @@ SITEMAPS: dict[str, tuple[Callable[[], list[str]], list[Path]]] = {
     "lights": (lambda: [f"/vehicle/lights/{w.id}" for w in curriculum.warning_lights()], [CUR / "warning_lights.json", CUR / "ml" / "library.json"]),
     "parts": (lambda: [f"/vehicle/explore/{p.id}" for p in curriculum.vehicle_parts()], [CUR / "vehicle_parts.json", CUR / "ml" / "library.json"]),
     "labs": (lambda: [f"/science/{k}" for k in lab_ids()], [DATA_DIR / "ui_extra.json"]),
+    "games": (lambda: [f"/games/{k}" for k in GAME_IDS], [DATA_DIR / "ui_extra.json", BASE_DIR / "app" / "static" / "js" / "games.js"]),
 }
 
 
@@ -898,7 +935,8 @@ def llms_txt() -> str:
         "## Interactive practice",
         f"- [Mock test and practice]({base}/exam): learner licence-style mock test and topic practice.",
         f"- [Hazard scenarios]({base}/hazard): {cat['counts']['scenarios']} interactive situations.",
-        f"- [Science labs]({base}/science): stopping distance, reaction time, grip and more.", "",
+        f"- [Science labs]({base}/science): stopping distance, reaction time, grip and more.",
+        f"- [Driving games]({base}/games): {len(GAME_IDS)} games for reaction time, attention and road logic.", "",
         "## About",
         f"- [About iDrive]({base}/about)", f"- [Privacy]({base}/privacy)", f"- [Terms]({base}/terms)",
     ]

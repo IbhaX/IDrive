@@ -211,6 +211,7 @@ A.mergeProgress = (local, server) => {
     les, bm, lab, rec,
     days: union(s.days, l.days),
     hz: maxMap(l.hz, s.hz),
+    gm: maxMap(l.gm, s.gm),
     rq: maxMap(l.rq, s.rq),
     secs: Math.max(l.secs || 0, s.secs || 0),
     seen: union(s.seen, l.seen),
@@ -276,7 +277,7 @@ A.resetServer = async () => {
 /* progress blob to send — P minus nothing (same shape as source) */
 function blobOf(p) {
   return { seen: p.seen || {}, box: p.box || {}, wrong: p.wrong || {}, best: p.best || 0, played: p.played || 0, lang: p.lang || "both", mock: p.mock || { taken: 0, passed: 0, best: 0 }, tq: p.tq || {},
-    les: p.les || {}, bm: p.bm || {}, rec: p.rec || [], days: p.days || {}, rq: p.rq || {}, hz: p.hz || {}, lab: p.lab || {}, secs: p.secs || 0, v: p.v || 1 };
+    les: p.les || {}, bm: p.bm || {}, rec: p.rec || [], days: p.days || {}, rq: p.rq || {}, hz: p.hz || {}, lab: p.lab || {}, gm: p.gm || {}, secs: p.secs || 0, v: p.v || 1 };
 }
 
 window.Auth = A;

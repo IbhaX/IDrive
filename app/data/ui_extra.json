@@ -4046,5 +4046,945 @@
  "lab3TapPlace": [
   "Tap the road to place the rider · drag to look around",
   "റൈഡറെ വെക്കാൻ റോഡിൽ തൊടുക · ചുറ്റും കാണാൻ വലിച്ചുനീക്കുക"
+ ],
+ "tGames": [
+  "Games",
+  "ഗെയിമുകൾ"
+ ],
+ "gmTitle": [
+  "Driving brain games",
+  "ഡ്രൈവിങ് ബുദ്ധി ഗെയിമുകൾ"
+ ],
+ "gmLede": [
+  "31 short games that train what safe driving needs: fast reactions, wide attention, quick judgement of gaps and speeds, and road logic. Each takes a minute or two, and your best score is saved.",
+  "സുരക്ഷിത ഡ്രൈവിങ്ങിന് വേണ്ടത് പരിശീലിപ്പിക്കുന്ന 31 ചെറിയ ഗെയിമുകൾ: വേഗത്തിലുള്ള പ്രതികരണം, വിശാലമായ ശ്രദ്ധ, ഇടവേളകളും വേഗവും പെട്ടെന്ന് വിലയിരുത്തൽ, റോഡ് യുക്തി. ഓരോന്നിനും ഒന്നോ രണ്ടോ മിനിറ്റ്; നിങ്ങളുടെ മികച്ച സ്കോർ സൂക്ഷിക്കും."
+ ],
+ "gmPlayed": [
+  "You have played {n} of {t} games.",
+  "{t} ഗെയിമുകളിൽ {n} എണ്ണം നിങ്ങൾ കളിച്ചു."
+ ],
+ "gmReact": [
+  "Reaction and attention",
+  "പ്രതികരണവും ശ്രദ്ധയും"
+ ],
+ "gmLogic": [
+  "Road logic",
+  "റോഡ് യുക്തി"
+ ],
+ "gmRules": [
+  "Signs and rules",
+  "ചിഹ്നങ്ങളും നിയമങ്ങളും"
+ ],
+ "gmNoBest": [
+  "Not played yet",
+  "ഇതുവരെ കളിച്ചിട്ടില്ല"
+ ],
+ "gmBest": [
+  "Best",
+  "മികച്ചത്"
+ ],
+ "gmAll": [
+  "All games",
+  "എല്ലാ ഗെയിമുകളും"
+ ],
+ "gmStart": [
+  "Start game",
+  "ഗെയിം തുടങ്ങുക"
+ ],
+ "gmScore": [
+  "Your score",
+  "നിങ്ങളുടെ സ്കോർ"
+ ],
+ "gmNewBest": [
+  "New best!",
+  "പുതിയ മികച്ച സ്കോർ!"
+ ],
+ "gmRound": [
+  "Round",
+  "റൗണ്ട്"
+ ],
+ "gmAt60": [
+  "At 60 km/h your car travels about {m} m before you even touch the brake.",
+  "60 km/h-ൽ ബ്രേക്ക് തൊടുന്നതിന് മുമ്പുതന്നെ കാർ ഏകദേശം {m} മീ. സഞ്ചരിക്കും."
+ ],
+ "gmAt40": [
+  "At 40 km/h that is about {m} m travelled before braking starts.",
+  "40 km/h-ൽ ബ്രേക്കിങ് തുടങ്ങും മുമ്പ് ഏകദേശം {m} മീ. സഞ്ചരിക്കും."
+ ],
+ "gmTooSoon": [
+  "Too soon!",
+  "വളരെ നേരത്തേ!"
+ ],
+ "gmJump": [
+  "Jumped the light!",
+  "ലൈറ്റ് ചാടിക്കടന്നു!"
+ ],
+ "gmJumps": [
+  "False starts: {n}. Each one counts as 1000 ms.",
+  "തെറ്റായ തുടക്കങ്ങൾ: {n}. ഓരോന്നും 1000 ms ആയി കണക്കാക്കും."
+ ],
+ "gmMissed": [
+  "Missed",
+  "നഷ്ടപ്പെട്ടു"
+ ],
+ "gmCorrect": [
+  "Correct",
+  "ശരി"
+ ],
+ "gmWrong": [
+  "Wrong",
+  "തെറ്റ്"
+ ],
+ "gmAvgMs": [
+  "Average reaction on the arrows you took: {ms} ms.",
+  "നിങ്ങൾ എടുത്ത അമ്പടയാളങ്ങളിലെ ശരാശരി പ്രതികരണം: {ms} ms."
+ ],
+ "gmWrongN": [
+  "Wrong side: {n} (each adds 250 ms).",
+  "തെറ്റായ വശം: {n} (ഓരോന്നിനും 250 ms കൂട്ടും)."
+ ],
+ "gmLeft": [
+  "Left",
+  "ഇടത്"
+ ],
+ "gmRight": [
+  "Right",
+  "വലത്"
+ ],
+ "gmOutOf": [
+  "{n} out of {t}",
+  "{t}-ൽ {n}"
+ ],
+ "gmStopTip": [
+  "Average distance from the line. Braking hard and early beats braking late.",
+  "ലൈനിൽ നിന്നുള്ള ശരാശരി ദൂരം. വൈകി ബ്രേക്ക് ചെയ്യുന്നതിനേക്കാൾ നേരത്തേ ഉറച്ച് ബ്രേക്ക് ചെയ്യുന്നതാണ് നല്ലത്."
+ ],
+ "gmCrossed": [
+  "Over the line",
+  "ലൈൻ കടന്നു"
+ ],
+ "gmCrash": [
+  "Hit!",
+  "ഇടിച്ചു!"
+ ],
+ "gmGo": [
+  "Go",
+  "പോകുക"
+ ],
+ "gmSafe": [
+  "Safe gap",
+  "സുരക്ഷിത ഇടവേള"
+ ],
+ "gmUnsafe": [
+  "Unsafe — that car would hit you",
+  "സുരക്ഷിതമല്ല — ആ കാർ ഇടിക്കുമായിരുന്നു"
+ ],
+ "gmGapTip": [
+  "Points for safe gaps; waiting too long costs a little, pulling out into traffic scores nothing.",
+  "സുരക്ഷിത ഇടവേളകൾക്ക് പോയിന്റ്; അധികം കാത്തുനിന്നാൽ അല്പം കുറയും, ട്രാഫിക്കിലേക്ക് കയറിയാൽ ഒന്നുമില്ല."
+ ],
+ "gmBrake": [
+  "Brake",
+  "ബ്രേക്ക്"
+ ],
+ "gmCarryOn": [
+  "Carry on",
+  "തുടരുക"
+ ],
+ "gmFogTip": [
+  "In fog you see hazards late — slow down so you can stop within the distance you can see.",
+  "മഞ്ഞിൽ അപകടങ്ങൾ വൈകിയേ കാണൂ — കാണാവുന്ന ദൂരത്തിനുള്ളിൽ നിർത്താനാവുന്ന വേഗത്തിലേക്ക് കുറയ്ക്കുക."
+ ],
+ "gmNightTip": [
+  "Dark clothes at night are seen very late. Dip and slow down near people on the road.",
+  "രാത്രി ഇരുണ്ട വസ്ത്രം വളരെ വൈകിയേ കാണൂ. റോഡിൽ ആളുകളുണ്ടെങ്കിൽ ലൈറ്റ് താഴ്ത്തി വേഗം കുറയ്ക്കുക."
+ ],
+ "gmLevel": [
+  "Level",
+  "ലെവൽ"
+ ],
+ "gmMoves": [
+  "Moves",
+  "നീക്കങ്ങൾ"
+ ],
+ "gmMin": [
+  "best possible",
+  "സാധ്യമായ ഏറ്റവും കുറവ്"
+ ],
+ "gmSolved": [
+  "Out!",
+  "പുറത്തെത്തി!"
+ ],
+ "gmParkDone": [
+  "Score = levels solved. Fewer moves is the extra challenge.",
+  "സ്കോർ = പരിഹരിച്ച ലെവലുകൾ. കുറഞ്ഞ നീക്കങ്ങൾ അധിക വെല്ലുവിളി."
+ ],
+ "gmSkip": [
+  "Skip level",
+  "ലെവൽ ഒഴിവാക്കുക"
+ ],
+ "gmNoEntry": [
+  "No entry that way",
+  "ആ വഴി പ്രവേശനമില്ല"
+ ],
+ "gmShortest": [
+  "Shortest legal route!",
+  "ഏറ്റവും ചെറിയ നിയമപരമായ വഴി!"
+ ],
+ "gmLonger": [
+  "Arrived, but longer",
+  "എത്തി, പക്ഷേ നീളം കൂടുതൽ"
+ ],
+ "gmRouteHint": [
+  "Tap the next junction. Arrows are one-way streets, red roads are closed. Tap back to undo.",
+  "അടുത്ത ജംഗ്ഷൻ തൊടുക. അമ്പടയാളം വൺവേ, ചുവന്ന റോഡ് അടച്ചത്. തിരുത്താൻ പിന്നിലേക്ക് തൊടുക."
+ ],
+ "gmExit": [
+  "Exit {n}",
+  "എക്സിറ്റ് {n}"
+ ],
+ "gmExitWas": [
+  "It was exit {n}",
+  "എക്സിറ്റ് {n} ആയിരുന്നു"
+ ],
+ "gmRbHint": [
+  "In India you go round clockwise, keeping left. Count exits from your entry.",
+  "ഇന്ത്യയിൽ ഇടതുവശം ചേർന്ന് ഘടികാരദിശയിൽ ചുറ്റണം. നിങ്ങൾ കയറുന്നിടത്തു നിന്ന് എക്സിറ്റുകൾ എണ്ണുക."
+ ],
+ "gmWrongOrder": [
+  "Not quite — here is the right order",
+  "ശരിയല്ല — ശരിയായ ക്രമം ഇതാ"
+ ],
+ "gmRange": [
+  "Range on a full tank: {km} km",
+  "ഫുൾ ടാങ്കിൽ ദൂരം: {km} കി.മീ."
+ ],
+ "gmCheck": [
+  "Check plan",
+  "പ്ലാൻ പരിശോധിക്കുക"
+ ],
+ "gmRanDry": [
+  "You would run out of fuel (red stretch)",
+  "ഇന്ധനം തീരും (ചുവന്ന ഭാഗം)"
+ ],
+ "gmFewest": [
+  "Fewest stops — well planned",
+  "ഏറ്റവും കുറഞ്ഞ സ്റ്റോപ്പുകൾ — നല്ല പ്ലാൻ"
+ ],
+ "gmTooMany": [
+  "It works, but {n} stops are enough",
+  "ശരിയാകും, പക്ഷേ {n} സ്റ്റോപ്പ് മതി"
+ ],
+ "gmSquare": [
+  "Remember: double the speed and the braking distance becomes four times as long.",
+  "ഓർക്കുക: വേഗം ഇരട്ടിയായാൽ ബ്രേക്കിങ് ദൂരം നാലിരട്ടിയാകും."
+ ],
+ "gmReactS": [
+  "reaction {s} s",
+  "പ്രതികരണം {s} സെ."
+ ],
+ "gmGapCountTip": [
+  "Count from when the car ahead passes a fixed point until you pass it. Keep at least 2 seconds, more in rain.",
+  "മുന്നിലെ കാർ ഒരു സ്ഥിര അടയാളം കടക്കുന്നതു മുതൽ നിങ്ങൾ കടക്കും വരെ എണ്ണുക. കുറഞ്ഞത് 2 സെക്കൻഡ്, മഴയിൽ കൂടുതൽ."
+ ],
+ "gmGapCountQ": [
+  "How many seconds behind the red car is the blue car? Watch the post.",
+  "നീല കാർ ചുവന്ന കാറിന് എത്ര സെക്കൻഡ് പിന്നിലാണ്? തൂൺ ശ്രദ്ധിക്കുക."
+ ],
+ "gmQDist": [
+  "{v} km/h for {m} minutes — how far?",
+  "{v} km/h-ൽ {m} മിനിറ്റ് — എത്ര ദൂരം?"
+ ],
+ "gmQTime": [
+  "{d} km at {v} km/h — how long?",
+  "{v} km/h-ൽ {d} കി.മീ. — എത്ര സമയം?"
+ ],
+ "gmQMs": [
+  "{v} km/h is how many metres per second?",
+  "{v} km/h എന്നാൽ സെക്കൻഡിൽ എത്ര മീറ്റർ?"
+ ],
+ "gmQReact": [
+  "At {v} km/h, how far do you travel in a {t} s reaction?",
+  "{v} km/h-ൽ {t} സെ. പ്രതികരണ സമയത്ത് എത്ര ദൂരം പോകും?"
+ ],
+ "gmWhichPlate": [
+  "Which plate did you see?",
+  "ഏത് നമ്പർ പ്ലേറ്റാണ് കണ്ടത്?"
+ ],
+ "gmTapHidden": [
+  "Tap where a motorbike would be hidden",
+  "ബൈക്ക് കാണാതാകുന്നിടത്ത് തൊടുക"
+ ],
+ "gmHiddenHere": [
+  "Hidden — blind spot",
+  "കാണില്ല — ബ്ലൈൻഡ് സ്പോട്ട്"
+ ],
+ "gmSeenHere": [
+  "Visible from there",
+  "അവിടെ കാണാം"
+ ],
+ "gmBlindTip": [
+  "Red squares are the blind spots with standard mirrors. A quick look over the shoulder covers them.",
+  "ചുവന്ന ചതുരങ്ങൾ സാധാരണ കണ്ണാടികളിലെ ബ്ലൈൻഡ് സ്പോട്ടുകൾ. തോളിനു മുകളിലൂടെ ഒരു നോട്ടം അവ മറയ്ക്കും."
+ ],
+ "gmOvTip": [
+  "Overtaking needs far more clear road than it looks — when in doubt, don't.",
+  "ഓവർടേക്കിങ്ങിന് തോന്നുന്നതിലും വളരെയധികം തെളിഞ്ഞ റോഡ് വേണം — സംശയമുണ്ടെങ്കിൽ ചെയ്യരുത്."
+ ],
+ "gmYou": [
+  "You",
+  "നിങ്ങൾ"
+ ],
+ "gmLorry": [
+  "Lorry",
+  "ലോറി"
+ ],
+ "gmOncoming": [
+  "Oncoming car",
+  "എതിരെ വരുന്ന കാർ"
+ ],
+ "gmClearAhead": [
+  "gap to it {m} m",
+  "അതിലേക്കുള്ള ദൂരം {m} മീ."
+ ],
+ "gmOvertakeBtn": [
+  "Overtake",
+  "ഓവർടേക്ക്"
+ ],
+ "gmWaitBtn": [
+  "Wait",
+  "കാത്തിരിക്കുക"
+ ],
+ "gmNeedM": [
+  "needed about {m} m",
+  "ഏകദേശം {m} മീ. വേണമായിരുന്നു"
+ ],
+ "gmPairsTip": [
+  "Fewer moves is better — 8 is perfect.",
+  "നീക്കങ്ങൾ കുറയുന്നത് നല്ലത് — 8 ആണ് പൂർണം."
+ ],
+ "gmOddTip": [
+  "Shape and colour tell you the kind of sign before you can read it.",
+  "വായിക്കും മുമ്പേ ആകൃതിയും നിറവും ചിഹ്നത്തിന്റെ തരം പറയും."
+ ],
+ "gmOddQ": [
+  "Which sign is a different kind?",
+  "ഏത് ചിഹ്നമാണ് വ്യത്യസ്ത തരം?"
+ ],
+ "gmDashTip": [
+  "Red usually means stop safely now; amber means get it checked soon.",
+  "ചുവപ്പ് സാധാരണയായി ഇപ്പോൾ സുരക്ഷിതമായി നിർത്തുക; ആംബർ ഉടൻ പരിശോധിപ്പിക്കുക."
+ ],
+ "gmDashQ": [
+  "This light comes on while driving. What should you do?",
+  "ഡ്രൈവ് ചെയ്യുമ്പോൾ ഈ ലൈറ്റ് തെളിയുന്നു. എന്ത് ചെയ്യണം?"
+ ],
+ "rw1": [
+  "Uncontrolled junction, everyone going straight on. Who goes first?",
+  "നിയന്ത്രണമില്ലാത്ത ജംഗ്ഷൻ, എല്ലാവരും നേരെ പോകുന്നു. ആദ്യം ആര്?"
+ ],
+ "rw2": [
+  "A person is on the zebra crossing. Who goes first?",
+  "സീബ്ര ക്രോസിങ്ങിൽ ഒരാളുണ്ട്. ആദ്യം ആര്?"
+ ],
+ "rw3": [
+  "Your light is green, but the traffic police officer signals you to stop. What do you do?",
+  "നിങ്ങൾക്ക് പച്ച ലൈറ്റ്, പക്ഷേ ട്രാഫിക് പോലീസ് നിർത്താൻ സിഗ്നൽ നൽകുന്നു. എന്ത് ചെയ്യും?"
+ ],
+ "rwA": [
+  "A (you)",
+  "A (നിങ്ങൾ)"
+ ],
+ "rwB": [
+  "B",
+  "B"
+ ],
+ "rwC": [
+  "C",
+  "C"
+ ],
+ "rwYouGo": [
+  "You go first",
+  "നിങ്ങൾ ആദ്യം"
+ ],
+ "rwPedGo": [
+  "The pedestrian crosses first",
+  "കാൽനടക്കാരൻ ആദ്യം കടക്കും"
+ ],
+ "rwGoGreen": [
+  "Go — the light is green",
+  "പോകുക — ലൈറ്റ് പച്ചയാണ്"
+ ],
+ "rwObey": [
+  "Stop — the officer's signal overrides the light",
+  "നിർത്തുക — ഉദ്യോഗസ്ഥന്റെ സിഗ്നൽ ലൈറ്റിനെ മറികടക്കും"
+ ],
+ "rwWhy1": [
+  "B comes from your right. At an uncontrolled junction you give way to traffic on your right.",
+  "B നിങ്ങളുടെ വലത്തുനിന്ന് വരുന്നു. നിയന്ത്രണമില്ലാത്ത ജംഗ്ഷനിൽ വലത്തുനിന്നുള്ള ട്രാഫിക്കിന് വഴി നൽകണം."
+ ],
+ "rwWhy2": [
+  "B comes from your left, so B gives way to you — but still be ready in case B doesn't.",
+  "B ഇടത്തുനിന്ന് വരുന്നു, അതിനാൽ B നിങ്ങൾക്ക് വഴി നൽകണം — എന്നാലും B നൽകിയില്ലെങ്കിൽ തയ്യാറായിരിക്കുക."
+ ],
+ "rwWhy3": [
+  "You are on the side road at the give-way lines. Traffic on the main road goes first.",
+  "നിങ്ങൾ ഗിവ്-വേ വരകളുള്ള ഉപറോഡിലാണ്. പ്രധാന റോഡിലെ ട്രാഫിക് ആദ്യം."
+ ],
+ "rwWhy4": [
+  "An ambulance with siren and lights goes first, whichever side it comes from. Pull left and let it pass.",
+  "സൈറണും ലൈറ്റുമുള്ള ആംബുലൻസ് ഏത് വശത്തുനിന്നായാലും ആദ്യം. ഇടത്തോട്ട് മാറി കടത്തിവിടുക."
+ ],
+ "rwWhy5": [
+  "Pedestrians on a zebra crossing have priority. Stop before the crossing and wait.",
+  "സീബ്ര ക്രോസിങ്ങിലുള്ള കാൽനടക്കാർക്ക് മുൻഗണന. ക്രോസിങ്ങിന് മുമ്പ് നിർത്തി കാത്തിരിക്കുക."
+ ],
+ "rwWhy6": [
+  "You give way to B (on your right), B gives way to C (on B's right). Nobody is on C's right, so C goes first.",
+  "നിങ്ങൾ B-ക്ക് (വലത്ത്) വഴി നൽകണം, B, C-ക്ക് (B-യുടെ വലത്ത്). C-യുടെ വലത്ത് ആരുമില്ല, അതിനാൽ C ആദ്യം."
+ ],
+ "rwWhy7": [
+  "B is already on the roundabout, coming from your right. Traffic on the roundabout goes first.",
+  "B ഇതിനകം റൗണ്ടെബൗട്ടിലാണ്, നിങ്ങളുടെ വലത്തുനിന്ന് വരുന്നു. റൗണ്ടെബൗട്ടിലുള്ളവർ ആദ്യം."
+ ],
+ "rwWhy8": [
+  "A police officer directing traffic overrides the traffic lights. Stop.",
+  "ട്രാഫിക് നിയന്ത്രിക്കുന്ന പോലീസ് ഉദ്യോഗസ്ഥന്റെ നിർദേശം ട്രാഫിക് ലൈറ്റിനെ മറികടക്കും. നിർത്തുക."
+ ],
+ "sqPre": [
+  "Before you start the engine",
+  "എഞ്ചിൻ സ്റ്റാർട്ട് ചെയ്യും മുമ്പ്"
+ ],
+ "sqPre_1": [
+  "Close and check all doors",
+  "എല്ലാ വാതിലുകളും അടച്ച് പരിശോധിക്കുക"
+ ],
+ "sqPre_2": [
+  "Adjust the seat",
+  "സീറ്റ് ക്രമീകരിക്കുക"
+ ],
+ "sqPre_3": [
+  "Adjust the steering position",
+  "സ്റ്റിയറിങ് സ്ഥാനം ക്രമീകരിക്കുക"
+ ],
+ "sqPre_4": [
+  "Fasten your seat belt",
+  "സീറ്റ് ബെൽറ്റ് ഇടുക"
+ ],
+ "sqPre_5": [
+  "Adjust the mirrors",
+  "കണ്ണാടികൾ ക്രമീകരിക്കുക"
+ ],
+ "sqMoveOff": [
+  "Moving off from the kerb",
+  "റോഡരികിൽ നിന്ന് പുറപ്പെടൽ"
+ ],
+ "sqMoveOff_1": [
+  "Clutch down, select first gear",
+  "ക്ലച്ച് അമർത്തി ഒന്നാം ഗിയർ ഇടുക"
+ ],
+ "sqMoveOff_2": [
+  "Set a little gas and find the biting point",
+  "അല്പം ആക്സിലറേറ്റർ കൊടുത്ത് ബൈറ്റിങ് പോയിന്റ് കണ്ടെത്തുക"
+ ],
+ "sqMoveOff_3": [
+  "Check mirrors and the blind spot",
+  "കണ്ണാടികളും ബ്ലൈൻഡ് സ്പോട്ടും നോക്കുക"
+ ],
+ "sqMoveOff_4": [
+  "Signal if anyone could benefit",
+  "ആർക്കെങ്കിലും ഉപകാരപ്പെടുമെങ്കിൽ സിഗ്നൽ നൽകുക"
+ ],
+ "sqMoveOff_5": [
+  "Release the handbrake and move off smoothly",
+  "ഹാൻഡ്ബ്രേക്ക് വിട്ട് സുഗമമായി നീങ്ങുക"
+ ],
+ "sqOvertake": [
+  "Overtaking",
+  "ഓവർടേക്കിങ്"
+ ],
+ "sqOvertake_1": [
+  "Check the road ahead is clear for long enough",
+  "മുന്നിലെ റോഡ് ആവശ്യത്തിന് തെളിഞ്ഞതാണെന്ന് ഉറപ്പാക്കുക"
+ ],
+ "sqOvertake_2": [
+  "Check mirrors and the right blind spot",
+  "കണ്ണാടികളും വലത് ബ്ലൈൻഡ് സ്പോട്ടും നോക്കുക"
+ ],
+ "sqOvertake_3": [
+  "Signal right",
+  "വലത്തേക്ക് സിഗ്നൽ"
+ ],
+ "sqOvertake_4": [
+  "Move out and pass with a wide gap",
+  "പുറത്തേക്ക് മാറി വിശാലമായ ഇടവിട്ട് കടന്നുപോകുക"
+ ],
+ "sqOvertake_5": [
+  "Signal left and return once you see it in your inside mirror",
+  "അകത്തെ കണ്ണാടിയിൽ അത് കണ്ടശേഷം ഇടത് സിഗ്നൽ നൽകി തിരികെ വരിക"
+ ],
+ "sqTurnRight": [
+  "Turning right at a junction",
+  "ജംഗ്ഷനിൽ വലത്തേക്ക് തിരിയൽ"
+ ],
+ "sqTurnRight_1": [
+  "Check the mirrors",
+  "കണ്ണാടികൾ നോക്കുക"
+ ],
+ "sqTurnRight_2": [
+  "Signal right",
+  "വലത്തേക്ക് സിഗ്നൽ"
+ ],
+ "sqTurnRight_3": [
+  "Position near the centre of the road",
+  "റോഡിന്റെ മധ്യഭാഗത്തിനടുത്തേക്ക് നീങ്ങുക"
+ ],
+ "sqTurnRight_4": [
+  "Slow down and choose the gear",
+  "വേഗം കുറച്ച് ഗിയർ തിരഞ്ഞെടുക്കുക"
+ ],
+ "sqTurnRight_5": [
+  "Look, and turn when it is safe",
+  "നോക്കി, സുരക്ഷിതമാകുമ്പോൾ തിരിയുക"
+ ],
+ "sqHill": [
+  "Starting on an uphill slope",
+  "കയറ്റത്തിൽ വണ്ടി എടുക്കൽ"
+ ],
+ "sqHill_1": [
+  "Handbrake on, clutch down, first gear",
+  "ഹാൻഡ്ബ്രേക്ക് ഇട്ട്, ക്ലച്ച് അമർത്തി, ഒന്നാം ഗിയർ"
+ ],
+ "sqHill_2": [
+  "Give a little more gas than on the flat",
+  "നിരപ്പിലേക്കാൾ അല്പം കൂടുതൽ ആക്സിലറേറ്റർ"
+ ],
+ "sqHill_3": [
+  "Bring the clutch to the biting point and hold it",
+  "ക്ലച്ച് ബൈറ്റിങ് പോയിന്റിലെത്തിച്ച് പിടിക്കുക"
+ ],
+ "sqHill_4": [
+  "Check mirrors and the blind spot",
+  "കണ്ണാടികളും ബ്ലൈൻഡ് സ്പോട്ടും നോക്കുക"
+ ],
+ "sqHill_5": [
+  "Release the handbrake, add gas, ease the clutch up",
+  "ഹാൻഡ്ബ്രേക്ക് വിട്ട്, ആക്സിലറേറ്റർ കൂട്ടി, ക്ലച്ച് പതിയെ വിടുക"
+ ],
+ "sqTyre": [
+  "Changing a flat tyre",
+  "പഞ്ചറായ ടയർ മാറ്റൽ"
+ ],
+ "sqTyre_1": [
+  "Stop on firm, level ground away from traffic; hazard lights and handbrake on",
+  "ട്രാഫിക്കിൽ നിന്ന് മാറി ഉറച്ച നിരപ്പിൽ നിർത്തുക; ഹസാർഡ് ലൈറ്റും ഹാൻഡ്ബ്രേക്കും ഇടുക"
+ ],
+ "sqTyre_2": [
+  "Place the warning triangle behind the car",
+  "മുന്നറിയിപ്പ് ത്രികോണം കാറിന് പിന്നിൽ വയ്ക്കുക"
+ ],
+ "sqTyre_3": [
+  "Loosen the wheel nuts slightly while the wheel is on the ground",
+  "ചക്രം നിലത്തിരിക്കുമ്പോൾ വീൽ നട്ടുകൾ അല്പം അയയ്ക്കുക"
+ ],
+ "sqTyre_4": [
+  "Jack up at the jacking point, remove the nuts and the wheel",
+  "ജാക്കിങ് പോയിന്റിൽ ജാക്ക് വച്ച് ഉയർത്തി, നട്ടുകളും ചക്രവും ഊരുക"
+ ],
+ "sqTyre_5": [
+  "Fit the spare, lower the car, tighten the nuts in a cross pattern",
+  "സ്പെയർ ഘടിപ്പിച്ച്, കാർ താഴ്ത്തി, നട്ടുകൾ കുറുകെ ക്രമത്തിൽ മുറുക്കുക"
+ ],
+ "sqBreak": [
+  "Breaking down on a highway",
+  "ഹൈവേയിൽ വണ്ടി കേടാകുമ്പോൾ"
+ ],
+ "sqBreak_1": [
+  "Pull over as far left as you can, off the carriageway if possible",
+  "കഴിയുന്നത്ര ഇടത്തോട്ട്, സാധ്യമെങ്കിൽ റോഡിന് പുറത്ത്, നിർത്തുക"
+ ],
+ "sqBreak_2": [
+  "Switch on the hazard lights",
+  "ഹസാർഡ് ലൈറ്റ് ഓണാക്കുക"
+ ],
+ "sqBreak_3": [
+  "Get everyone out on the side away from traffic",
+  "എല്ലാവരെയും ട്രാഫിക്കിന് എതിർവശത്തുകൂടി പുറത്തിറക്കുക"
+ ],
+ "sqBreak_4": [
+  "Place the warning triangle well behind the car",
+  "മുന്നറിയിപ്പ് ത്രികോണം കാറിന് നന്നായി പിന്നിൽ വയ്ക്കുക"
+ ],
+ "gm_brakelight": [
+  "Brake lights",
+  "ബ്രേക്ക് ലൈറ്റുകൾ"
+ ],
+ "gmSub_brakelight": [
+  "Tap the moment the car ahead brakes",
+  "മുന്നിലെ കാർ ബ്രേക്ക് ചെയ്യുന്ന നിമിഷം തൊടുക"
+ ],
+ "gmHow_brakelight": [
+  "Follow the car ahead. Tap (or press Space) the moment its brake lights come on. Tapping early restarts the round. Five rounds; score is your average reaction time.",
+  "മുന്നിലെ കാറിനെ പിന്തുടരുക. അതിന്റെ ബ്രേക്ക് ലൈറ്റ് തെളിയുന്ന നിമിഷം തൊടുക (അല്ലെങ്കിൽ Space). നേരത്തേ തൊട്ടാൽ റൗണ്ട് വീണ്ടും. അഞ്ച് റൗണ്ട്; സ്കോർ ശരാശരി പ്രതികരണ സമയം."
+ ],
+ "gm_greenlight": [
+  "Green light",
+  "പച്ച ലൈറ്റ്"
+ ],
+ "gmSub_greenlight": [
+  "Go on green, never before",
+  "പച്ചയിൽ പോകുക, മുമ്പല്ല"
+ ],
+ "gmHow_greenlight": [
+  "Wait at the red light and tap as soon as it turns green. A tap on red is a jumped light and counts as a slow 1000 ms.",
+  "ചുവപ്പിൽ കാത്തിരുന്ന് പച്ചയാകുമ്പോൾ ഉടൻ തൊടുക. ചുവപ്പിൽ തൊട്ടാൽ ലൈറ്റ് ചാടിയതായി 1000 ms ആയി കണക്കാക്കും."
+ ],
+ "gm_kidout": [
+  "Child steps out",
+  "കുട്ടി ഇറങ്ങുന്നു"
+ ],
+ "gmSub_kidout": [
+  "Brake for a child between parked cars",
+  "പാർക്ക് ചെയ്ത കാറുകൾക്കിടയിലെ കുട്ടിക്കായി ബ്രേക്ക്"
+ ],
+ "gmHow_kidout": [
+  "You drive past parked cars. When a child steps out, tap to brake. The score is your average reaction time and how far you travel before braking.",
+  "പാർക്ക് ചെയ്ത കാറുകൾക്കരികിലൂടെ ഓടിക്കുന്നു. ഒരു കുട്ടി റോഡിലേക്ക് ഇറങ്ങുമ്പോൾ ബ്രേക്ക് ചെയ്യാൻ തൊടുക. സ്കോർ ശരാശരി പ്രതികരണ സമയം."
+ ],
+ "gm_gonogo": [
+  "Go / no-go",
+  "പോകണോ വേണ്ടയോ"
+ ],
+ "gmSub_gonogo": [
+  "Tap green arrows, ignore stop hands",
+  "പച്ച അമ്പിൽ തൊടുക, ചുവന്ന കൈ അവഗണിക്കുക"
+ ],
+ "gmHow_gonogo": [
+  "Green arrow: tap fast. Red hand: don't tap. 20 signals; the score is the percentage you got right.",
+  "പച്ച അമ്പടയാളം: വേഗം തൊടുക. ചുവന്ന കൈ: തൊടരുത്. 20 സിഗ്നലുകൾ; സ്കോർ ശരിയായതിന്റെ ശതമാനം."
+ ],
+ "gm_indicator": [
+  "Which way?",
+  "ഏത് വശത്തേക്ക്?"
+ ],
+ "gmSub_indicator": [
+  "Read the indicator of the car ahead",
+  "മുന്നിലെ കാറിന്റെ ഇൻഡിക്കേറ്റർ വായിക്കുക"
+ ],
+ "gmHow_indicator": [
+  "When the car ahead starts indicating, press Left or Right to match. Score is average time, with 250 ms added for each wrong side.",
+  "മുന്നിലെ കാർ ഇൻഡിക്കേറ്റർ ഇടുമ്പോൾ ഇടത് അല്ലെങ്കിൽ വലത് അമർത്തുക. സ്കോർ ശരാശരി സമയം; തെറ്റിയാൽ 250 ms കൂടും."
+ ],
+ "gm_mirrors": [
+  "Mirror check",
+  "കണ്ണാടി പരിശോധന"
+ ],
+ "gmSub_mirrors": [
+  "Spot the bike in your mirrors",
+  "കണ്ണാടികളിൽ ബൈക്ക് കണ്ടെത്തുക"
+ ],
+ "gmHow_mirrors": [
+  "A motorbike flashes in one mirror for a moment. Tap the mirror it appeared in. It gets quicker every round.",
+  "ഒരു കണ്ണാടിയിൽ നിമിഷനേരം ബൈക്ക് തെളിയും. അത് കണ്ട കണ്ണാടിയിൽ തൊടുക. ഓരോ റൗണ്ടിലും വേഗം കൂടും."
+ ],
+ "gm_peripheral": [
+  "Side vision",
+  "വശക്കാഴ്ച"
+ ],
+ "gmSub_peripheral": [
+  "Keep eyes ahead, catch the edges",
+  "മുന്നിൽ നോക്കി, വശങ്ങൾ ശ്രദ്ധിക്കുക"
+ ],
+ "gmHow_peripheral": [
+  "Keep your eyes on the + in the middle. Something appears briefly at the left or right edge — say which side.",
+  "മധ്യത്തിലെ + ൽ നോക്കിയിരിക്കുക. ഇടത്തോ വലത്തോ അരികിൽ എന്തെങ്കിലും നിമിഷനേരം തെളിയും — ഏത് വശമെന്ന് പറയുക."
+ ],
+ "gm_stopline": [
+  "Stop on the line",
+  "ലൈനിൽ നിർത്തുക"
+ ],
+ "gmSub_stopline": [
+  "Brake to stop exactly at the line",
+  "കൃത്യം ലൈനിൽ നിർത്താൻ ബ്രേക്ക്"
+ ],
+ "gmHow_stopline": [
+  "Your car comes towards the stop line at a random speed. Tap once to brake hard. Stop as close to the line as you can without crossing it.",
+  "നിങ്ങളുടെ കാർ ഒരു വേഗത്തിൽ സ്റ്റോപ്പ് ലൈനിലേക്ക് വരുന്നു. ഉറച്ച് ബ്രേക്ക് ചെയ്യാൻ ഒരിക്കൽ തൊടുക. ലൈൻ കടക്കാതെ കഴിയുന്നത്ര അടുത്ത് നിർത്തുക."
+ ],
+ "gm_dodge": [
+  "Pothole dodge",
+  "കുഴി ഒഴിവാക്കൽ"
+ ],
+ "gmSub_dodge": [
+  "Change lanes around potholes and cones",
+  "കുഴികളും കോണുകളും ഒഴിവാക്കി ലെയ്ൻ മാറുക"
+ ],
+ "gmHow_dodge": [
+  "Tap the left or right half (or use arrow keys) to change lane. Avoid potholes, cones and braking autos. It gets faster.",
+  "ലെയ്ൻ മാറാൻ ഇടതോ വലതോ പകുതിയിൽ തൊടുക (അല്ലെങ്കിൽ ആരോ കീകൾ). കുഴികൾ, കോണുകൾ, ബ്രേക്കിടുന്ന ഓട്ടോകൾ ഒഴിവാക്കുക. വേഗം കൂടിക്കൊണ്ടിരിക്കും."
+ ],
+ "gm_lanekeep": [
+  "Lane keeping",
+  "ലെയ്ൻ പാലിക്കൽ"
+ ],
+ "gmSub_lanekeep": [
+  "Stay in lane on a winding road",
+  "വളഞ്ഞ റോഡിൽ ലെയ്നിൽ തുടരുക"
+ ],
+ "gmHow_lanekeep": [
+  "Hold the left or right side of the screen (or arrow keys) to steer. Keep to the left lane for 30 seconds.",
+  "സ്റ്റിയർ ചെയ്യാൻ സ്ക്രീനിന്റെ ഇടത് അല്ലെങ്കിൽ വലത് ഭാഗം അമർത്തിപ്പിടിക്കുക (അല്ലെങ്കിൽ ആരോ കീകൾ). 30 സെക്കൻഡ് ഇടത് ലെയ്നിൽ തുടരുക."
+ ],
+ "gm_speedkeep": [
+  "Steady speed",
+  "സ്ഥിര വേഗം"
+ ],
+ "gmSub_speedkeep": [
+  "Hold 45–55 km/h over hills",
+  "കയറ്റിറക്കങ്ങളിൽ 45–55 km/h നിലനിർത്തുക"
+ ],
+ "gmHow_speedkeep": [
+  "Hold anywhere (or Space) to accelerate, let go to ease off. Keep the needle in the green band while the road goes up and down.",
+  "വേഗം കൂട്ടാൻ എവിടെയെങ്കിലും അമർത്തിപ്പിടിക്കുക (അല്ലെങ്കിൽ Space), വിട്ടാൽ കുറയും. റോഡ് കയറിയിറങ്ങുമ്പോഴും സൂചി പച്ചയിൽ നിർത്തുക."
+ ],
+ "gm_gapjudge": [
+  "Pull out safely",
+  "സുരക്ഷിതമായി കയറുക"
+ ],
+ "gmSub_gapjudge": [
+  "Pick a safe gap from a side road",
+  "ഉപറോഡിൽ നിന്ന് സുരക്ഷിത ഇടവേള തിരഞ്ഞെടുക്കുക"
+ ],
+ "gmHow_gapjudge": [
+  "You are waiting at a side road. Press Go when the gap in traffic is big enough to cross. Unsafe gaps score zero.",
+  "നിങ്ങൾ ഉപറോഡിൽ കാത്തിരിക്കുന്നു. കടക്കാൻ മതിയായ ഇടവേള കിട്ടുമ്പോൾ 'പോകുക' അമർത്തുക. സുരക്ഷിതമല്ലാത്ത ഇടവേളയ്ക്ക് പൂജ്യം."
+ ],
+ "gm_animals": [
+  "Animal ahead",
+  "മുന്നിൽ മൃഗം"
+ ],
+ "gmSub_animals": [
+  "Will it walk onto the road?",
+  "അത് റോഡിലേക്ക് കയറുമോ?"
+ ],
+ "gmHow_animals": [
+  "Watch the cow or dog at the roadside. Brake if it is heading onto the road, carry on if it is walking away.",
+  "റോഡരികിലെ പശുവിനെയോ നായയെയോ ശ്രദ്ധിക്കുക. റോഡിലേക്ക് വരികയാണെങ്കിൽ ബ്രേക്ക്, അകന്നുപോകുകയാണെങ്കിൽ തുടരുക."
+ ],
+ "gm_fogspot": [
+  "Fog spotter",
+  "മഞ്ഞിൽ കണ്ടെത്തൽ"
+ ],
+ "gmSub_fogspot": [
+  "Tap when you see the vehicle",
+  "വാഹനം കാണുമ്പോൾ തൊടുക"
+ ],
+ "gmHow_fogspot": [
+  "Drive into thick fog. Tap as soon as you can make out a vehicle or person ahead.",
+  "കനത്ത മഞ്ഞിലൂടെ ഓടിക്കുക. മുന്നിൽ വാഹനമോ ആളോ തിരിച്ചറിയുന്ന ഉടൻ തൊടുക."
+ ],
+ "gm_nightped": [
+  "Night walker",
+  "രാത്രി കാൽനടക്കാരൻ"
+ ],
+ "gmSub_nightped": [
+  "Find the person in dark clothes",
+  "ഇരുണ്ട വസ്ത്രധാരിയെ കണ്ടെത്തുക"
+ ],
+ "gmHow_nightped": [
+  "At night a person in dark clothes appears at the edge of your headlights. Tap on them as fast as you can.",
+  "രാത്രിയിൽ ഇരുണ്ട വസ്ത്രമിട്ട ഒരാൾ ഹെഡ്‌ലൈറ്റിന്റെ അരികിൽ തെളിയും. കഴിയുന്നത്ര വേഗം അയാളെ തൊടുക."
+ ],
+ "gm_parking": [
+  "Car park escape",
+  "പാർക്കിങ് രക്ഷപ്പെടൽ"
+ ],
+ "gmSub_parking": [
+  "Slide cars to free the red car",
+  "ചുവന്ന കാറിനെ പുറത്തെത്തിക്കാൻ കാറുകൾ നീക്കുക"
+ ],
+ "gmHow_parking": [
+  "Drag cars along their length to clear a path, then drive the red car out of the exit. Six levels, from easy to hard.",
+  "വഴിയൊരുക്കാൻ കാറുകളെ അവയുടെ നീളത്തിൽ വലിച്ചുനീക്കുക, പിന്നെ ചുവന്ന കാറിനെ എക്സിറ്റിലൂടെ പുറത്തെത്തിക്കുക. എളുപ്പം മുതൽ കഠിനം വരെ ആറ് ലെവലുകൾ."
+ ],
+ "gm_route": [
+  "One-way maze",
+  "വൺവേ വഴിക്കുരുക്ക്"
+ ],
+ "gmSub_route": [
+  "Find the shortest legal route",
+  "ഏറ്റവും ചെറിയ നിയമപരമായ വഴി കണ്ടെത്തുക"
+ ],
+ "gmHow_route": [
+  "Drive from A to the house by tapping junctions. Follow one-way arrows and avoid closed roads. Score a point for each shortest route.",
+  "ജംഗ്ഷനുകളിൽ തൊട്ട് A-യിൽ നിന്ന് വീട്ടിലേക്ക് ഓടിക്കുക. വൺവേ അമ്പടയാളങ്ങൾ പാലിക്കുക, അടച്ച റോഡുകൾ ഒഴിവാക്കുക. ഏറ്റവും ചെറിയ വഴിക്ക് ഒരു പോയിന്റ്."
+ ],
+ "gm_rightofway": [
+  "Who goes first?",
+  "ആദ്യം ആര്?"
+ ],
+ "gmSub_rightofway": [
+  "Right of way at junctions",
+  "ജംഗ്ഷനുകളിലെ മുൻഗണന"
+ ],
+ "gmHow_rightofway": [
+  "Look at the junction and decide who has the right of way. The explanation shows after each answer.",
+  "ജംഗ്ഷൻ നോക്കി ആർക്കാണ് മുൻഗണന എന്ന് തീരുമാനിക്കുക. ഓരോ ഉത്തരത്തിനും ശേഷം വിശദീകരണം കാണാം."
+ ],
+ "gm_roundabout": [
+  "Roundabout exits",
+  "റൗണ്ടെബൗട്ട് എക്സിറ്റുകൾ"
+ ],
+ "gmSub_roundabout": [
+  "Count the exits clockwise",
+  "ഘടികാരദിശയിൽ എക്സിറ്റുകൾ എണ്ണുക"
+ ],
+ "gmHow_roundabout": [
+  "Your car (blue) enters the roundabout. Which exit takes you to the town marked with the flag?",
+  "നിങ്ങളുടെ കാർ (നീല) റൗണ്ടെബൗട്ടിൽ കയറുന്നു. കൊടി അടയാളമുള്ള പട്ടണത്തിലേക്ക് ഏത് എക്സിറ്റ്?"
+ ],
+ "gm_sequence": [
+  "Right order",
+  "ശരിയായ ക്രമം"
+ ],
+ "gmSub_sequence": [
+  "Put driving procedures in order",
+  "ഡ്രൈവിങ് നടപടികൾ ക്രമത്തിലാക്കുക"
+ ],
+ "gmHow_sequence": [
+  "Tap the steps in the order you would do them. Five procedures per game.",
+  "ചെയ്യേണ്ട ക്രമത്തിൽ ഘട്ടങ്ങൾ തൊടുക. ഒരു ഗെയിമിൽ അഞ്ച് നടപടികൾ."
+ ],
+ "gm_fuelplan": [
+  "Fuel stops",
+  "ഇന്ധന സ്റ്റോപ്പുകൾ"
+ ],
+ "gmSub_fuelplan": [
+  "Plan the fewest fuel stops",
+  "ഏറ്റവും കുറഞ്ഞ ഇന്ധന സ്റ്റോപ്പ് പ്ലാൻ ചെയ്യുക"
+ ],
+ "gmHow_fuelplan": [
+  "Tap fuel stations to stop at. Never let a stretch be longer than your range, and use as few stops as possible.",
+  "നിർത്തേണ്ട പമ്പുകൾ തൊടുക. ഒരു ഭാഗവും നിങ്ങളുടെ ദൂരപരിധിയേക്കാൾ നീളരുത്; കഴിയുന്നത്ര കുറച്ച് സ്റ്റോപ്പുകൾ."
+ ],
+ "gm_stopguess": [
+  "Stopping distance",
+  "നിർത്താനുള്ള ദൂരം"
+ ],
+ "gmSub_stopguess": [
+  "Estimate the total stopping distance",
+  "ആകെ നിർത്താനുള്ള ദൂരം കണക്കാക്കുക"
+ ],
+ "gmHow_stopguess": [
+  "Given the speed, the road surface and the driver's reaction time, pick the total stopping distance.",
+  "വേഗം, റോഡ് പ്രതലം, ഡ്രൈവറുടെ പ്രതികരണ സമയം എന്നിവ നോക്കി ആകെ നിർത്താനുള്ള ദൂരം തിരഞ്ഞെടുക്കുക."
+ ],
+ "gm_gapcount": [
+  "Two-second rule",
+  "രണ്ട് സെക്കൻഡ് നിയമം"
+ ],
+ "gmSub_gapcount": [
+  "Judge the following gap in seconds",
+  "പിന്തുടരൽ ഇടവേള സെക്കൻഡിൽ വിലയിരുത്തുക"
+ ],
+ "gmHow_gapcount": [
+  "Watch two cars pass the post and judge how many seconds apart they are.",
+  "രണ്ട് കാറുകൾ തൂൺ കടക്കുന്നത് നോക്കി അവ തമ്മിൽ എത്ര സെക്കൻഡ് അകലമെന്ന് വിലയിരുത്തുക."
+ ],
+ "gm_speedmath": [
+  "Speed maths",
+  "വേഗ ഗണിതം"
+ ],
+ "gmSub_speedmath": [
+  "Quick speed, time and distance",
+  "വേഗം, സമയം, ദൂരം — വേഗത്തിൽ"
+ ],
+ "gmHow_speedmath": [
+  "Answer as many speed, time and distance questions as you can in 60 seconds.",
+  "60 സെക്കൻഡിനുള്ളിൽ കഴിയുന്നത്ര വേഗം-സമയം-ദൂരം ചോദ്യങ്ങൾക്ക് ഉത്തരം നൽകുക."
+ ],
+ "gm_plates": [
+  "Number plates",
+  "നമ്പർ പ്ലേറ്റുകൾ"
+ ],
+ "gmSub_plates": [
+  "Remember a plate at a glance",
+  "ഒറ്റനോട്ടത്തിൽ പ്ലേറ്റ് ഓർക്കുക"
+ ],
+ "gmHow_plates": [
+  "A number plate flashes up. Pick it from four similar ones. It shows for less time each round.",
+  "ഒരു നമ്പർ പ്ലേറ്റ് നിമിഷനേരം തെളിയും. സമാനമായ നാലെണ്ണത്തിൽ നിന്ന് അത് തിരഞ്ഞെടുക്കുക. ഓരോ റൗണ്ടിലും സമയം കുറയും."
+ ],
+ "gm_blindspots": [
+  "Blind spot hunt",
+  "ബ്ലൈൻഡ് സ്പോട്ട് തിരച്ചിൽ"
+ ],
+ "gmSub_blindspots": [
+  "Find where a bike would be hidden",
+  "ബൈക്ക് മറഞ്ഞുപോകുന്നിടം കണ്ടെത്തുക"
+ ],
+ "gmHow_blindspots": [
+  "Tap eight places around the car where you think a motorbike would not be seen in the mirrors or straight ahead.",
+  "കണ്ണാടികളിലോ നേരെ മുന്നിലോ ബൈക്ക് കാണാത്തതെന്ന് കരുതുന്ന എട്ട് സ്ഥലങ്ങൾ കാറിന് ചുറ്റും തൊടുക."
+ ],
+ "gm_overtake": [
+  "Overtake or wait?",
+  "ഓവർടേക്ക് ചെയ്യണോ കാത്തിരിക്കണോ?"
+ ],
+ "gmSub_overtake": [
+  "Is there enough road to pass?",
+  "കടക്കാൻ മതിയായ റോഡുണ്ടോ?"
+ ],
+ "gmHow_overtake": [
+  "Read the speeds and the gap to the oncoming car, then decide: overtake the lorry or wait.",
+  "വേഗങ്ങളും എതിരെ വരുന്ന കാറിലേക്കുള്ള ദൂരവും നോക്കി തീരുമാനിക്കുക: ലോറിയെ ഓവർടേക്ക് ചെയ്യണോ കാത്തിരിക്കണോ."
+ ],
+ "gm_signsprint": [
+  "Sign sprint",
+  "ചിഹ്ന ഓട്ടം"
+ ],
+ "gmSub_signsprint": [
+  "Name as many signs as you can",
+  "കഴിയുന്നത്ര ചിഹ്നങ്ങൾ തിരിച്ചറിയുക"
+ ],
+ "gmHow_signsprint": [
+  "A sign appears with three names. Pick the right one — as many as you can in 60 seconds.",
+  "ഒരു ചിഹ്നവും മൂന്ന് പേരുകളും തെളിയും. ശരിയായത് തിരഞ്ഞെടുക്കുക — 60 സെക്കൻഡിൽ കഴിയുന്നത്ര."
+ ],
+ "gm_signpairs": [
+  "Sign pairs",
+  "ചിഹ്ന ജോഡികൾ"
+ ],
+ "gmSub_signpairs": [
+  "Memory match with road signs",
+  "റോഡ് ചിഹ്നങ്ങളുമായി ഓർമ്മക്കളി"
+ ],
+ "gmHow_signpairs": [
+  "Turn over two cards at a time and find all eight matching pairs in as few moves as you can.",
+  "ഒരേസമയം രണ്ട് കാർഡുകൾ മറിച്ച്, കഴിയുന്നത്ര കുറഞ്ഞ നീക്കങ്ങളിൽ എട്ട് ജോഡികളും കണ്ടെത്തുക."
+ ],
+ "gm_oddsign": [
+  "Odd one out",
+  "വ്യത്യസ്തമായത്"
+ ],
+ "gmSub_oddsign": [
+  "Spot the different kind of sign",
+  "വ്യത്യസ്ത തരം ചിഹ്നം കണ്ടെത്തുക"
+ ],
+ "gmHow_oddsign": [
+  "Three signs are the same kind (mandatory, cautionary or informatory). Tap the one that isn't.",
+  "മൂന്ന് ചിഹ്നങ്ങൾ ഒരേ തരം (നിർബന്ധം, മുന്നറിയിപ്പ്, വിവരം). വ്യത്യസ്തമായത് തൊടുക."
+ ],
+ "gm_dashlights": [
+  "Dashboard lights",
+  "ഡാഷ്ബോർഡ് ലൈറ്റുകൾ"
+ ],
+ "gmSub_dashlights": [
+  "Stop now, check soon, or just info?",
+  "ഇപ്പോൾ നിർത്തണോ, ഉടൻ പരിശോധിക്കണോ, വെറും വിവരമോ?"
+ ],
+ "gmHow_dashlights": [
+  "A warning light comes on. Decide how urgent it is: stop safely now, get it checked soon, or it is just information.",
+  "ഒരു മുന്നറിയിപ്പ് ലൈറ്റ് തെളിയുന്നു. എത്ര അടിയന്തിരമെന്ന് തീരുമാനിക്കുക: ഇപ്പോൾ സുരക്ഷിതമായി നിർത്തുക, ഉടൻ പരിശോധിപ്പിക്കുക, അല്ലെങ്കിൽ വെറും വിവരം."
  ]
 }
