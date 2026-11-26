@@ -17,15 +17,15 @@
   --line2:rgba(255,255,255,.14);
 
   /* brand + semantic */
-  --acc:#7c6cff;          /* electric indigo */
-  --acc2:#38bdf8;         /* cyan */
+  --acc:#2d5a8b;          /* dark matte blue */
+  --acc2:#1c3d5e;         /* deep matte navy */
   --accink:#ffffff;
   --signal:#fbbf24;
   --good:#34d399; --goodbg:rgba(52,211,153,.13);
   --bad:#fb7185;  --badbg:rgba(251,113,133,.12);
   --focus:#a5b4ff;
   --grad:linear-gradient(135deg,var(--acc) 0%,var(--acc2) 100%);
-  --grad-soft:linear-gradient(135deg,rgba(124,108,255,.16),rgba(56,189,248,.10));
+  --grad-soft:linear-gradient(135deg,rgba(45,90,139,.16),rgba(28,61,94,.10));
 
   /* elevation + glow */
   --shadow-1:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.28);
