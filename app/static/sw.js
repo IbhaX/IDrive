@@ -28,10 +28,11 @@ const FONT_HOSTS = /^https:\/\/fonts\.(googleapis|gstatic)\.com\//;
 self.addEventListener("install", (event) => {
   event.waitUntil((async () => {
     const shell = await caches.open(SHELL);
-    const res = await fetch("/", { cache: "no-store" });
+    // the bare shell (no page content) is the offline fallback for every page URL
+    const res = await fetch("/shell", { cache: "no-store" });
     if (res.ok) {
       const html = await res.clone().text();
-      await shell.put("/", res);
+      await shell.put("/shell", res);
       // precache every versioned asset the shell references
       const urls = [...new Set([...html.matchAll(/(?:src|href)="(\/static\/[^"]+)"/g)].map((m) => m[1]))];
       urls.push("/manifest.webmanifest", "/static/img/icon-192.png", "/static/img/favicon.svg");
@@ -135,7 +136,9 @@ self.addEventListener("fetch", (event) => {
   if (url.origin !== self.location.origin) return;
 
   if (req.mode === "navigate") {
-    event.respondWith(networkFirst(req, SHELL, "/"));
+    // pages are server-rendered per URL: always ask the network; offline, the
+    // cached shell boots the app, which renders the route itself
+    event.respondWith(fetch(req).catch(async () => (await caches.open(SHELL)).match("/shell")));
     return;
   }
   if (url.pathname.startsWith("/models/")) {          // pinned 3D model files

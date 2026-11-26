@@ -27,7 +27,8 @@ Pr.view = async (app) => {
   <p class="muted">${esc(I18n.u("legend"))}</p></section>
   <section class="panel"><h3 class="lab">${esc(I18n.u("hardest"))}</h3>${weak.length ? `<div class="missed">${weak.map(d => `<button class="mrow" data-open="${d.id}" data-solo="1">${Learn.plate(d)}<span><b>${I18n.T(d, "name")}</b><br><span class="muted">${esc(I18n.u("missedN", { n: P.wrong[d.id] }))}</span></span></button>`).join("")}</div><div class="row"><button class="btn primary" data-act="reviseWeak">${esc(I18n.u("reviseWeak"))}</button></div>` : `<p class="muted">${esc(I18n.u("nothing"))}</p>`}</section>
   ${Pr.examProgress()}
-  <section class="panel"><h3 class="lab">${esc(I18n.u("reset"))}</h3><div id="resetbox"><button class="btn" data-act="reset1">${esc(I18n.u("resetBtn"))}</button></div></section>`;
+  <section class="panel"><h3 class="lab">${esc(I18n.u("reset"))}</h3><div id="resetbox"><button class="btn" data-act="reset1">${esc(I18n.u("resetBtn"))}</button></div></section>
+  ${Auth.signedIn() ? `<section class="panel"><h3 class="lab">${esc(I18n.u("delAcct"))}</h3><p class="muted">${esc(I18n.u("delAcctNote"))} <a href="/privacy">${esc(I18n.u("ftPrivacy"))}</a></p><div id="delbox"><button class="btn danger" data-act="del1">${esc(I18n.u("delAcct"))}</button></div></section>` : ""}`;
 
   Motion.rings(app);
   Motion.reveal(app);
@@ -118,6 +119,21 @@ Pr.resetAsk = () => {
   if (!box2) return;
   box2.innerHTML = `<p>${esc(I18n.u("resetAsk"))}</p><div class="row" style="margin-top:10px"><button class="holdbtn danger" id="holdReset"><i class="fill"></i><span>${esc(I18n.u("resetYes"))} — hold</span></button><button class="btn" data-act="reset0">${esc(I18n.u("resetNo"))}</button></div>`;
   Motion.holdToConfirm(document.getElementById("holdReset"), Pr.resetNow);
+};
+
+Pr.deleteAsk = () => {
+  const box = document.getElementById("delbox");
+  if (!box) return;
+  box.innerHTML = `<p>${esc(I18n.u("delAcctAsk"))}</p><div class="row" style="margin-top:10px"><button class="holdbtn danger" id="holdDel"><i class="fill"></i><span>${esc(I18n.u("delAcctYes"))} — ${esc(I18n.u("hold"))}</span></button><button class="btn" data-act="reset0">${esc(I18n.u("resetNo"))}</button></div>`;
+  Motion.holdToConfirm(document.getElementById("holdDel"), Pr.deleteNow);
+};
+
+Pr.deleteNow = async () => {
+  try { await Api.del("/api/auth/me"); }
+  catch (e) { Motion.toast(I18n.u("delAcctFail")); return; }
+  await Auth.forget();
+  Motion.toast(I18n.u("delAcctDone"));
+  render();
 };
 
 Pr.resetNow = async () => {

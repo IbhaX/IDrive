@@ -16,6 +16,8 @@ class RegisterIn(BaseModel):
     email: str = Field(min_length=3, max_length=254)
     password: str = Field(min_length=8, max_length=256)
     name: str = Field(default="", max_length=128)
+    # optional first/last-touch ad attribution from the browser
+    attr: Optional[dict[str, Any]] = None
 
 
 class LoginIn(BaseModel):
@@ -25,6 +27,7 @@ class LoginIn(BaseModel):
 
 class GoogleIn(BaseModel):
     credential: str = Field(min_length=20, max_length=4096)
+    attr: Optional[dict[str, Any]] = None
 
 
 class AuthConfigOut(BaseModel):

@@ -39,6 +39,7 @@ async def register(request: Request, body: RegisterIn, db: DbDep) -> AuthOut:
     except ValueError as e:
         code = "email_taken" if "registered" in str(e) else "invalid_email"
         raise HTTPException(status_code=400, detail={"detail": str(e), "code": code})
+    await auth_service.save_attribution(db, user.id, body.attr)
     token = await auth_service.create_session(
         db, user.id, request.headers.get("user-agent", "")
     )
@@ -76,6 +77,14 @@ async def me(user: CurrentUser) -> UserOut:
     return _user_out(user)
 
 
+@router.delete("/me", response_model=OkOut)
+@limiter.limit(lambda: get_settings().rate_limit_auth)
+async def delete_me(request: Request, user: CurrentUser, db: DbDep) -> OkOut:
+    """Delete the signed-in account, its sessions, progress and attribution."""
+    await auth_service.delete_account(db, user)
+    return OkOut()
+
+
 @router.get("/config", response_model=AuthConfigOut)
 async def auth_config() -> AuthConfigOut:
     """Public client-side auth config (GIS client id, or empty = disabled)."""
@@ -92,6 +101,7 @@ async def google_login(request: Request, payload: GoogleIn, db: DbDep) -> AuthOu
     except ValueError:
         raise HTTPException(401, "invalid google token")
     user = await auth_service.login_or_register_google(db, info["email"], info["name"])
+    await auth_service.save_attribution(db, user.id, payload.attr)
     token = await auth_service.create_session(
         db, user.id, request.headers.get("user-agent", "")
     )

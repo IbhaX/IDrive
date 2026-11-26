@@ -98,6 +98,7 @@ E.startMock = async () => {
   if (!Auth.signedIn()) { Auth.openModal("login"); Motion.toast(I18n.u("mockNeedAcct")); return; }
   try {
     const r = await Api.post("/api/exam/mock", {});
+    if (window.Analytics) Analytics.event("mock_test_start");
     S.exam = {
       mode: "mock", examId: r.exam_id, qs: r.questions, i: 0, ans: [],
       stage: "play", deadline: Date.now() + r.seconds_per_question * 1000,
@@ -166,6 +167,7 @@ E.finish = async () => {
       const r = await Api.post("/api/exam/" + encodeURIComponent(ex.examId) + "/submit", { answers: ex.ans.map(a => a === undefined ? null : a) });
       ex.score = r.score;
       ex.late = r.late;
+      if (window.Analytics) Analytics.event("mock_test_complete", { score: r.score, total: ex.qs.length, passed: !!r.passed });
       // server review becomes the question list (now with a/r)
       ex.qs = r.review.map(rv => ({ id: rv.id, t: rv.t, q: rv.q, o: rv.o, a: rv.a, r: rv.r, svg: rv.svg, io: rv.io }));
       ex.ans = r.review.map(rv => rv.picked);

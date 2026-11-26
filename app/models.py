@@ -96,3 +96,17 @@ class ExamAttempt(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)
 
     __table_args__ = (Index("ix_exam_attempts_user_created", "user_id", "created_at"),)
+
+
+class SignupAttribution(Base):
+    """Where a new account came from (first/last ad click and UTM tags), sent
+    by the browser at sign-up. Only filled when analytics/ads are in use and
+    the visitor arrived with such parameters. Deleted with the account."""
+
+    __tablename__ = "signup_attribution"
+
+    user_id: Mapped[int] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
+    )
+    data: Mapped[dict] = mapped_column(JSON, default=dict)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=utcnow)

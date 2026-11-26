@@ -91,6 +91,7 @@ Q.next = () => {
     q.stage = "done";
     P.played = (P.played || 0) + 1;
     P.best = Math.max(P.best || 0, Math.round(q.score / q.qs.length * 100));
+    if (window.Analytics) Analytics.event("quiz_complete", { score: Math.round(q.score / q.qs.length * 100) });
     save();
   }
   render();

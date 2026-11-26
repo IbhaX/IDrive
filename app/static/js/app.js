@@ -78,7 +78,8 @@ window.toggleTheme = () => {
 function applyStatic() {
   document.documentElement.lang = I18n.lang() === "ml" ? "ml" : "en";
   document.getElementById("subline").textContent = I18n.u("sub2");
-  document.getElementById("foot").textContent = I18n.u("foot");
+  const play = document.querySelector('meta[name="play-url"]');
+  document.getElementById("foot").innerHTML = `${esc(I18n.u("foot"))}<span class="footlinks"><a href="/about">${esc(I18n.u("ftAbout"))}</a><a href="/privacy">${esc(I18n.u("ftPrivacy"))}</a><a href="/terms">${esc(I18n.u("ftTerms"))}</a><a href="/install">${esc(I18n.u("ftInstall"))}</a>${play ? `<a href="${I18n.attr(play.content)}" rel="noopener" target="_blank">${esc(I18n.u("ftPlay"))}</a>` : ""}</span>`;
   if (window.Pwa && Pwa.paintOffline) Pwa.paintOffline();
   document.getElementById("langs").innerHTML = langHtml();
   const sb = document.getElementById("searchBtn");
@@ -104,15 +105,47 @@ const VIEWS = {
   ask: (app) => Instructor.view(app),
   progress: (app) => Progress.view(app),
   limits: (app) => SpeedLimits.view(app),
+  page: (app) => StaticPage.view(app),
 };
 const ALIASES = { sign: "learn" };
 
+/* Routes are "view/a/b" strings. Every route has a real address too
+   (/learn/mand, /sign/stop, /lesson/x …) that the server renders for
+   crawlers; old "#view/a" links still work and are rewritten to the path.
+   Links inside the app keep using href="#…" — the hashchange handler turns
+   each into a clean URL. */
+const STATIC_PAGES = ["about", "privacy", "terms", "install"];
+function isRouteHash(h) {
+  const v = decodeURIComponent((h || "").replace(/^#/, "")).split("/")[0];
+  return !!(v && (VIEWS[v] || ALIASES[v]));
+}
+function pathToRoute(path) {
+  const p = decodeURIComponent(path).replace(/^\/+|\/+$/g, "");
+  if (!p) return "home";
+  const [v, a] = p.split("/");
+  if (v === "glossary") return "theory/gloss" + (a ? "/" + a : "");
+  if (STATIC_PAGES.includes(v)) return "page/" + v;
+  return p;
+}
+function routeToPath(r) {
+  const [v, a, b] = (r || "home").split("/");
+  if (!v || v === "home") return "/";
+  if (v === "page") return "/" + (a || "about");
+  if (v === "theory" && a === "gloss" && b) return "/glossary/" + encodeURIComponent(b);
+  return "/" + r.split("/").map(encodeURIComponent).join("/");
+}
+function curRoute() {
+  if (document.querySelector('meta[name="app-notfound"]')) return "page/notfound";
+  return isRouteHash(location.hash) ? decodeURIComponent(location.hash.slice(1)) : pathToRoute(location.pathname);
+}
+window.routeToPath = routeToPath;
+
 function parseHash() {
-  const raw = decodeURIComponent((location.hash || "#home").slice(1));
+  const raw = curRoute();
   const [v, a, b, c] = raw.split("/");
   let view = ALIASES[v] || v;
   if (!VIEWS[view]) view = "home";
-  return { view, a: a || null, b: b || null, c: c || null, raw: v };
+  return { view, a: a || null, b: b || null, c: c || null, raw: v, route: raw };
 }
 let lastRoute = "";
 function applyRoute() {
@@ -123,13 +156,23 @@ function applyRoute() {
   if (r.view === "learn" && r.raw === "learn" && r.a) S.cat = Data.catById[r.a] || r.a === "all" ? r.a : "all";
   return r;
 }
+/* address bar → clean path for the current route, keeping ?lang if present */
+function urlFor(r) {
+  const q = P.lang === "ml" ? "?lang=ml" : "";
+  return routeToPath(r) + q;
+}
 function setHash(v) {
-  const h = "#" + v;
-  if (location.hash !== h) history.replaceState(null, "", h);
-  lastRoute = location.hash;
+  const u = urlFor(v);
+  if (location.pathname + location.search + location.hash !== u) history.replaceState(null, "", u);
+  lastRoute = v;
 }
 window.setHash = setHash;
-window.go = (h) => { if (location.hash === h) route(); else location.hash = h; };
+window.go = (h) => {
+  const r = String(h).replace(/^#/, "") || "home";
+  const u = urlFor(r);
+  if (location.pathname + location.search !== u || location.hash) history.pushState(null, "", u);
+  route();
+};
 
 function render() {
   Exam.stopTimer();
@@ -187,10 +230,16 @@ window.addEventListener("resize", () => { clearTimeout(fitT); fitT = setTimeout(
 if (window.ResizeObserver) new ResizeObserver(measureChrome).observe(document.querySelector(".topnav"));
 
 async function route() {
+  // an old-style #view link (or one clicked inside the app): show the clean path
+  if (isRouteHash(location.hash)) history.replaceState(null, "", urlFor(decodeURIComponent(location.hash.slice(1))));
+  const first = !lastRoute;
+  if (!first) { const nf = document.querySelector('meta[name="app-notfound"]'); if (nf) nf.remove(); }
   const r = applyRoute();
-  lastRoute = location.hash;
+  lastRoute = r.route;
   render();
   window.scrollTo(0, 0);
+  if (!first) { const t = TABS.find(x => x.id === curTab()); document.title = (t ? I18n.one(I18n.u(t.k)) + " | " : "") + "iDrive"; }
+  if (window.Analytics) Analytics.page();
   // deep links that need an action after the view renders
   if (r.raw === "sign" && r.a && Data.byId[r.a]) { await Data.ensureSvgIds([r.a]); Learn.openSheet(r.a, [r.a]); }
   if (r.view === "exam" && r.a === "practice" && r.b && Data.topicById[r.b]) Exam.startPractice(r.b);
@@ -218,6 +267,14 @@ document.addEventListener("click", (e) => {
   if (e.target === document.getElementById("searchOv")) { Search.close(); return; }
   if (e.target === document.getElementById("pwaSheet")) { Pwa.closeHelp(); return; }
   if (!e.target.closest("#moreMenu,.morebtn")) closeMore();
+  // plain path links (server-rendered pages, footer): navigate inside the app
+  const pl = e.target.closest('a[href^="/"]');
+  if (pl && !pl.target && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey && e.button === 0) {
+    const u = new URL(pl.href, location.href);
+    if (u.origin === location.origin && !/^\/(static|api|models|sitemaps?|llms|robots)/.test(u.pathname) && !/\.\w+$/.test(u.pathname)) {
+      e.preventDefault(); go(pathToRoute(u.pathname)); return;
+    }
+  }
   const t = e.target.closest("[data-go],[data-art],[data-etopic],[data-ans],[data-lang],[data-open],[data-act],[data-cat],[data-qcat],[data-qlen],[data-ccat],[data-opt],[data-amode],[data-kc],[data-vgroup],[data-vsev],[data-light],[data-part],[data-hz],[data-hzc],[data-ask],[data-sclose],#sClose");
   if (!t) return;
   if (t.id === "sClose") { Learn.closeSheet(); return; }
@@ -231,7 +288,7 @@ document.addEventListener("click", (e) => {
   if (ds.art !== undefined) { go("#theory" + (ds.art ? "/" + ds.art : "")); return; }
   if (ds.etopic) { Exam.startPractice(ds.etopic); return; }
   if (ds.ans !== undefined) { Exam.select(+ds.ans); return; }
-  if (ds.lang) { P.lang = ds.lang; save(); render(); if (!document.getElementById("sheet").hidden) Learn.renderSheet(); return; }
+  if (ds.lang) { P.lang = ds.lang; save(); setHash(lastRoute); render(); if (!document.getElementById("sheet").hidden) Learn.renderSheet(); return; }
   if (ds.open) {
     const solo = ds.solo || ds.today;
     Learn.openSheet(ds.open, solo ? [ds.open] : (S.view === "learn" ? S.list : null));
@@ -279,6 +336,7 @@ document.addEventListener("click", (e) => {
     case "snext": Learn.sheetNav(1); break;
     case "slearn": Learn.sheetLearn(); break;
     case "reset1": Progress.resetAsk(); break;
+    case "del1": Progress.deleteAsk(); break;
     case "reset0": render(); break;
     case "signin": Auth.openModal("login"); break;
     case "theme": toggleTheme(); break;
@@ -298,7 +356,7 @@ document.addEventListener("click", (e) => {
     case "hzstart": Hazard.start(); break;
     case "hzreplay": Hazard.replay(); break;
     case "hzcat": Hazard.filter(ds.k || ""); break;
-    case "spOpen": Learn.closeSheet(); location.hash = "#limits"; break;
+    case "spOpen": Learn.closeSheet(); go("#limits"); break;
     case "spRegion": case "spVeh": case "spRoad": case "spCell": SpeedLimits.act(ds.act, ds.k || ""); break;
     default: if (ds.act && ds.act.startsWith("lab.")) Labs.act(ds.act.slice(4), t);
   }
@@ -333,12 +391,14 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-window.addEventListener("hashchange", () => {
-  if (location.hash === lastRoute) return;
+function onNav() {
+  if (curRoute() === lastRoute && !isRouteHash(location.hash)) return;
   route().then(() => {
     if (S.view === "ask" && Instructor.pending) { const q = Instructor.pending; Instructor.pending = null; setTimeout(() => Instructor.send(q), 50); }
   });
-});
+}
+window.addEventListener("hashchange", () => { if (isRouteHash(location.hash)) onNav(); });
+window.addEventListener("popstate", () => { if (!isRouteHash(location.hash)) onNav(); });
 
 window.addEventListener("visibilitychange", () => {
   if (document.hidden && Auth.putTimer) { clearTimeout(Auth.putTimer); Auth.putToServer(); }
@@ -361,6 +421,10 @@ window.hideSplash = () => {
 
 (async function boot() {
   const app = document.getElementById("app");
+  // the server-rendered page for this URL; static pages reuse it as-is
+  StaticPage.keep(location.pathname, app.innerHTML);
+  const ql = new URLSearchParams(location.search).get("lang");
+  if (ql === "ml" || ql === "en") { P.lang = ql; save(); }
   app.innerHTML = `<section class="panel"><div class="skel"><i style="height:26px;width:34%"></i><i style="height:16px"></i><i style="height:16px;width:80%"></i><i style="height:16px;width:60%"></i></div></section>`;
   try {
     await Data.loadIndex();

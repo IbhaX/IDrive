@@ -75,7 +75,8 @@ def importmap_hashes(static_dir: Path) -> tuple[str, ...]:
     )
 
 
-def render_page(name: str, static_dir: Path) -> HTMLResponse:
+def shell_markup(static_dir: Path, name: str = "index.html") -> str:
+    """index.html with versioned asset URLs and the build meta."""
     path = (static_dir / name).resolve()
     if not path.is_relative_to(static_dir.resolve()) or path.suffix != ".html":
         raise ValueError("Invalid page path")
@@ -89,7 +90,11 @@ def render_page(name: str, static_dir: Path) -> HTMLResponse:
     markup = markup.replace(
         "</head>", f'<meta name="app-build" content="{app_build(static_dir)}">\n</head>', 1
     )
-    return HTMLResponse(markup, headers={"Cache-Control": "no-cache"})
+    return markup
+
+
+def render_page(name: str, static_dir: Path) -> HTMLResponse:
+    return HTMLResponse(shell_markup(static_dir, name), headers={"Cache-Control": "no-cache"})
 
 
 class VersionedStaticFiles(StaticFiles):

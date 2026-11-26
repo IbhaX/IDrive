@@ -100,6 +100,7 @@ const Pwa = (() => {
   });
   window.addEventListener("appinstalled", () => {
     deferred = null;
+    if (window.Analytics) Analytics.event("pwa_install");
     refresh();
     if (window.Motion) Motion.toast(I18n.u("installDone"));
   });

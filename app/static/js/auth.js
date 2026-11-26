@@ -91,7 +91,7 @@ A.gconfig = () => {
 A.onGoogle = async (resp) => {
   const err = document.querySelector("#acard .aerr");
   try {
-    const r = await Api.post("/api/auth/google", { credential: resp.credential });
+    const r = await Api.post("/api/auth/google", { credential: resp.credential, attr: window.Analytics ? Analytics.attribution() : null });
     await A.finishAuth(r);
   } catch (e) {
     if (err) err.textContent = I18n.u("networkErr");
@@ -132,7 +132,8 @@ A.submit = async (isLogin) => {
   try {
     const r = isLogin
       ? await Api.post("/api/auth/login", { email, password })
-      : await Api.post("/api/auth/register", { email, password, name: nameEl ? nameEl.value.trim() : "" });
+      : await Api.post("/api/auth/register", { email, password, name: nameEl ? nameEl.value.trim() : "", attr: window.Analytics ? Analytics.attribution() : null });
+    if (!isLogin) if (window.Analytics) Analytics.event("sign_up", { method: "email" });
     await A.finishAuth(r);
   } catch (e) {
     err.textContent = e.code === "rate_limited" ? I18n.u("tooMany") : (e.code === "email_taken" ? I18n.u("emailTaken") : I18n.u("badLogin"));
@@ -148,6 +149,15 @@ A.signOut = async () => {
   A.renderChip();
   Motion.toast(I18n.u("signedOut"));
   render();
+};
+
+/* local sign-out without calling the server (the account is gone) */
+A.forget = async () => {
+  Api.setToken("");
+  A.user = null;
+  keepUser(null);
+  A.version = 0;
+  A.renderChip();
 };
 
 A.restore = async () => {

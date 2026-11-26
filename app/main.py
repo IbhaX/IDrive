@@ -11,7 +11,7 @@ from pathlib import Path
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
-from fastapi.responses import FileResponse, JSONResponse, Response
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, PlainTextResponse, RedirectResponse, Response
 from slowapi import Limiter
 from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
@@ -28,7 +28,8 @@ from app.db import close_db, get_session_factory, init_db
 from app.logging_config import setup_logging
 from app.services import content, curriculum, model_mirror
 from app.services.auth import cleanup_expired
-from app.web.pages import VersionedStaticFiles, app_build, importmap_hashes, render_page
+from app.web import seo
+from app.web.pages import VersionedStaticFiles, app_build, importmap_hashes, render_page, shell_markup
 
 
 @asynccontextmanager
@@ -84,8 +85,22 @@ app.add_middleware(
 async def html_headers(
     request: Request, call_next: Callable[[Request], Awaitable[Response]]
 ) -> Response:
-    """HTML must revalidate; add basic security headers to every response."""
+    """HTML must revalidate; add security headers to every response; send
+    www and (optionally) plain-http requests to the canonical origin."""
+    settings = get_settings()
+    host = request.headers.get("host", "")
+    proto = request.headers.get("x-forwarded-proto", request.url.scheme)
+    if settings.redirect_www and host.startswith("www."):
+        target = f"https://{host[4:]}{request.url.path}" + (f"?{request.url.query}" if request.url.query else "")
+        return RedirectResponse(target, status_code=301)
+    if settings.force_https and proto == "http" and not host.startswith(("localhost", "127.0.0.1")):
+        target = f"https://{host}{request.url.path}" + (f"?{request.url.query}" if request.url.query else "")
+        return RedirectResponse(target, status_code=301)
     resp = await call_next(request)
+    if proto == "https":
+        resp.headers.setdefault("Strict-Transport-Security", "max-age=31536000; includeSubDomains")
+    resp.headers.setdefault("X-Frame-Options", "DENY")
+    resp.headers.setdefault("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=()")
     ctype = resp.headers.get("content-type", "")
     if "text/html" in ctype:
         resp.headers["Cache-Control"] = "no-cache"
@@ -94,17 +109,20 @@ async def html_headers(
         resp.headers["X-App-Build"] = app_build(BASE_DIR / "app" / "static")
     resp.headers.setdefault("Referrer-Policy", "strict-origin-when-cross-origin")
     if "text/html" in ctype:
+        _gtag = bool(settings.ga_measurement_id or settings.ads_id)
         resp.headers["Content-Security-Policy"] = (
             "default-src 'self'; "
-            "img-src 'self' data: blob:; "
+            "img-src 'self' data: blob:" + (" https://*.google-analytics.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com https://www.google.co.in" if _gtag else "") + "; "
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://accounts.google.com; "
             "font-src 'self' https://fonts.gstatic.com; "
             # three.js (original addons via the hashed import map) comes from jsDelivr
             "script-src 'self' "
             + " ".join(importmap_hashes(BASE_DIR / "app" / "static"))
-            + " https://accounts.google.com https://cdn.jsdelivr.net; "
-            "frame-src https://accounts.google.com; "
+            + " https://accounts.google.com https://cdn.jsdelivr.net" + (" https://www.googletagmanager.com" if _gtag else "") + "; "
+            "frame-src https://accounts.google.com" + (" https://td.doubleclick.net https://www.googletagmanager.com" if _gtag else "") + "; "
             "connect-src 'self' https://accounts.google.com https://cdn.jsdelivr.net"
+            + (" https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.g.doubleclick.net https://www.google.com https://googleads.g.doubleclick.net" if _gtag else "")
+            + "; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://accounts.google.com"
         )
     return resp
 
@@ -147,11 +165,6 @@ static_dir.mkdir(parents=True, exist_ok=True)
 app.mount("/static", VersionedStaticFiles(directory=static_dir), name="static")
 
 
-@app.get("/", include_in_schema=False)
-async def spa() -> Response:
-    return render_page(static_dir=static_dir, name="index.html")
-
-
 # Icons and the web-app manifest at the conventional root paths (browsers and
 # home-screen installers ask for these without reading the page first).
 _ROOT_FILES: dict[str, tuple[str, str]] = {
@@ -184,8 +197,59 @@ async def service_worker() -> Response:
     )
 
 
-# Hash-routed SPA: every app path serves the shell.
-for _path in ("home", "course", "lesson", "learn", "vehicle", "science", "hazard", "theory", "exam", "quiz", "cards", "ask", "progress", "limits"):
-    app.get("/" + _path, include_in_schema=False)(
-        lambda: render_page(static_dir=static_dir, name="index.html")
-    )
+# ---------- crawler files ----------
+
+_XML = "application/xml; charset=utf-8"
+
+
+@app.get("/robots.txt", include_in_schema=False)
+async def robots() -> Response:
+    return PlainTextResponse(seo.robots_txt(), headers={"Cache-Control": "public, max-age=3600"})
+
+
+@app.get("/sitemap.xml", include_in_schema=False)
+async def sitemap_index() -> Response:
+    return Response(seo.sitemap_index(), media_type=_XML, headers={"Cache-Control": "public, max-age=3600"})
+
+
+@app.get("/sitemaps/{name}.xml", include_in_schema=False)
+async def sitemap_part(name: str) -> Response:
+    body = seo.sitemap(name)
+    if body is None:
+        return Response("not found", status_code=404, media_type="text/plain")
+    return Response(body, media_type=_XML, headers={"Cache-Control": "public, max-age=3600"})
+
+
+@app.get("/llms.txt", include_in_schema=False)
+async def llms() -> Response:
+    return PlainTextResponse(seo.llms_txt(), headers={"Cache-Control": "public, max-age=3600"})
+
+
+@app.get("/llms-full.txt", include_in_schema=False)
+async def llms_full() -> Response:
+    return PlainTextResponse(seo.llms_full_txt(), headers={"Cache-Control": "public, max-age=3600"})
+
+
+@app.get("/shell", include_in_schema=False)
+async def shell() -> Response:
+    """The bare app shell (no page content) — the service worker caches this
+    as its offline fallback for every page URL."""
+    resp = render_page(static_dir=static_dir, name="index.html")
+    resp.headers["X-Robots-Tag"] = "noindex"
+    return resp
+
+
+# ---------- every page: server-rendered content inside the app shell ----------
+
+@app.get("/{path:path}", include_in_schema=False)
+async def page(path: str, request: Request) -> Response:
+    if path.startswith(("api/", "static/", "models/")):
+        return JSONResponse({"detail": "Not Found"}, status_code=404)
+    lang = "ml" if request.query_params.get("lang") == "ml" else "en"
+    clean = "/" + path.strip("/")
+    if path.endswith("/") and clean != "/":
+        q = f"?{request.url.query}" if request.url.query else ""
+        return RedirectResponse(clean + q, status_code=301)
+    pg = seo.resolve(clean, lang) or seo.not_found(lang)
+    return HTMLResponse(seo.inject(shell_markup(static_dir), pg, lang), status_code=pg.status,
+                        headers={"Cache-Control": "no-cache"})

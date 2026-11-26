@@ -56,6 +56,22 @@ class Settings(BaseSettings):
     # keep a same-origin copy of the 3D car (downloaded in the background at startup)
     mirror_3d: bool = True
 
+    # Public site: canonical URLs, sitemaps, robots, llms.txt, JSON-LD.
+    site_url: str = "https://idrive.ibhax.com"
+    # Shown on About/Privacy/Terms; empty hides the contact line.
+    contact_email: str = ""
+    # Google Play listing (shown on /install and in JSON-LD sameAs); empty hides it.
+    play_store_url: str = ""
+    # Optional Google Analytics 4 / Google Ads. Empty = no analytics script at all.
+    ga_measurement_id: str = ""
+    ads_id: str = ""
+    ads_signup_label: str = ""
+    # Redirect plain-http requests to https (only behind a proxy that sets
+    # X-Forwarded-Proto; Cloudflare "Always Use HTTPS" is the better place).
+    force_https: bool = False
+    # Redirect www.<host> to the apex host.
+    redirect_www: bool = True
+
 
 @lru_cache
 def get_settings() -> Settings:

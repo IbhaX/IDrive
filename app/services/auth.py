@@ -141,3 +141,47 @@ async def cleanup_expired(db: AsyncSession) -> int:
     )
     await db.commit()
     return (res.rowcount or 0) + (res2.rowcount or 0)
+
+
+_ATTR_KEYS = ("gclid", "gbraid", "wbraid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "landing", "ts")
+
+
+def clean_attribution(raw: object) -> dict[str, dict[str, str]]:
+    """Keep only known keys, as short strings, for `first` and `last` touch."""
+    out: dict[str, dict[str, str]] = {}
+    if not isinstance(raw, dict):
+        return out
+    for touch in ("first", "last"):
+        t = raw.get(touch)
+        if isinstance(t, dict):
+            kept = {k: str(t[k])[:200] for k in _ATTR_KEYS if k in t and t[k] not in (None, "")}
+            if kept:
+                out[touch] = kept
+    return out
+
+
+async def save_attribution(db: AsyncSession, user_id: int, raw: object) -> None:
+    from app.models import SignupAttribution
+
+    data = clean_attribution(raw)
+    if not data or await db.get(SignupAttribution, user_id) is not None:
+        return
+    db.add(SignupAttribution(user_id=user_id, data=data))
+    await db.commit()
+
+
+async def delete_account(db: AsyncSession, user: User) -> None:
+    """Delete the user and everything tied to them. Exam papers and attempts
+    are kept for aggregate stats but detached (user_id set to NULL)."""
+    from sqlalchemy import update
+
+    from app.models import ExamAttempt, ExamPaper, SignupAttribution, UserProgress
+
+    uid = user.id
+    await db.execute(delete(Session).where(Session.user_id == uid))
+    await db.execute(delete(UserProgress).where(UserProgress.user_id == uid))
+    await db.execute(delete(SignupAttribution).where(SignupAttribution.user_id == uid))
+    await db.execute(update(ExamPaper).where(ExamPaper.user_id == uid).values(user_id=None))
+    await db.execute(update(ExamAttempt).where(ExamAttempt.user_id == uid).values(user_id=None))
+    await db.execute(delete(User).where(User.id == uid))
+    await db.commit()

@@ -304,6 +304,7 @@ C.kcNext = () => {
     P.les = P.les || {};
     const prev = P.les[st.id] || {};
     P.les[st.id] = { d: pct >= 70 ? (prev.d || Date.now()) : (prev.d || 0), s: Math.max(prev.s || 0, pct), n: (prev.n || 0) + 1 };
+    if (pct >= 70 && !prev.d) if (window.Analytics) Analytics.event("lesson_complete", { lesson_id: st.id, score: pct });
     C.touchDay();
     save();
   }
