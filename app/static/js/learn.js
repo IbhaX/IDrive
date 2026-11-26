@@ -58,7 +58,7 @@ L.view = (app) => {
   <section class="heroAnim" id="heroAnim" aria-hidden="true"></section>
   <button class="today" data-open="${t.id}" data-today="1"><span class="plate">${Data.SVG[t.id] || ""}</span><span><span class="eyebrow">${esc(I18n.u("today"))}</span><h2>${I18n.T(t, "name")}</h2><p>${I18n.T(t, "meaning")}</p></span></button>
   <details class="primer"><summary>${esc(I18n.u("primer"))}</summary><div class="rows">${prim.join("")}</div></details>
-  <div class="tools"><label class="sr" for="q">${esc(I18n.u("searchLab"))}</label><input id="q" type="search" placeholder="${esc(I18n.u("searchPh", { t: Data.D.length }))}" value="${esc(S.q || "")}" autocomplete="off"><div class="chips" id="chips"></div></div>
+  <div class="tools"><label class="sr" for="q">${esc(I18n.u("searchLab"))}</label><input id="q" type="search" placeholder="${I18n.attr(I18n.u("searchPh", { t: Data.D.length }))}" value="${esc(S.q || "")}" autocomplete="off"><div class="chips" id="chips"></div></div>
   <p class="blurb" id="blurb"></p><div class="grid" id="grid"></div>`;
   L.renderGrid();
   Motion.roadScene(document.getElementById("heroAnim"));
@@ -99,7 +99,7 @@ L.renderSheet = () => {
   save();
   const c = Data.catOf(d.cat);
   document.getElementById("sheetCard").innerHTML = `
-  <div class="shead"><span class="cat"><i style="background:${c.dot}"></i>${esc(I18n.cn(c))}</span><button class="x" id="sClose" aria-label="${esc(I18n.u("close"))}">✕</button></div>
+  <div class="shead"><span class="cat"><i style="background:${c.dot}"></i>${esc(I18n.cn(c))}</span><button class="x" id="sClose" aria-label="${I18n.attr(I18n.u("close"))}">✕</button></div>
   ${L.plate(d, "big")}<h2>${I18n.T(d, "name")}</h2><p>${I18n.T(d, "meaning")}</p>
   <div class="do"><b>${esc(I18n.u("do"))}</b>${I18n.T(d, "action")}</div>
   <div class="row"><button class="btn" data-act="sprev" ${sIdx === 0 ? "disabled" : ""}>${esc(I18n.u("prev"))}</button><button class="btn" data-act="snext" ${sIdx === sList.length - 1 ? "disabled" : ""}>${esc(I18n.u("next"))}</button><button class="btn ${L.known(d) ? "" : "primary"}" data-act="slearn">${esc(L.known(d) ? I18n.u("unknow") : I18n.u("know"))}</button></div>

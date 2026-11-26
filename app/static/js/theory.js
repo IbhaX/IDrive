@@ -55,7 +55,7 @@ Th.glossView = async (app) => {
       ? L.map(g => `<div class="g"><b>${I18n.BP(g.term)}</b><div>${I18n.BP(g.definition)}</div></div>`).join("")
       : `<p class="muted">${esc(I18n.u("glNone"))}</p>`;
   };
-  app.innerHTML = `<div class="art"><div class="row"><button class="btn" data-art="">← ${esc(I18n.u("artBack"))}</button></div><section class="panel"><h2>${esc(I18n.u("glTitle"))}</h2><p class="lede">${esc(I18n.u("glSub"))} · ${entries.length}</p><input id="gq" class="gsearch" type="search" placeholder="${esc(I18n.u("glSearch"))}" value="${esc(S.gq || "")}"></section><div class="gl" id="glist">${list()}</div></div>`;
+  app.innerHTML = `<div class="art"><div class="row"><button class="btn" data-art="">← ${esc(I18n.u("artBack"))}</button></div><section class="panel"><h2>${esc(I18n.u("glTitle"))}</h2><p class="lede">${esc(I18n.u("glSub"))} · ${entries.length}</p><input id="gq" class="gsearch" type="search" placeholder="${I18n.attr(I18n.u("glSearch"))}" value="${esc(S.gq || "")}"></section><div class="gl" id="glist">${list()}</div></div>`;
   const inp = document.getElementById("gq");
   if (inp) inp.addEventListener("input", () => {
     S.gq = inp.value;

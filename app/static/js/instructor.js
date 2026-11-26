@@ -39,8 +39,8 @@ A.view = async (app) => {
   app.innerHTML = `${Course.crumbs([[u("home"), "#home"], [u("tAsk"), "#ask"]])}
   <section class="panel askhead rvl"><span class="fi">${Course.icon("brain")}</span><div><h2>${e(u("askTitle"))}</h2><p class="lede">${e(u(mode === "ai" ? "askLedeAi" : "askLedeSearch"))}</p>
   ${mode === "search" ? `<p class="muted">${A.cfg.ai ? `<button class="btn small" data-act="signin">${e(u("signIn"))}</button> ${e(u("askSignin"))}` : e(u("askDisabled"))}</p>` : ""}</div></section>
-  <section class="panel chat"><div class="chatlog" id="chatLog" aria-live="polite">${A.log.length ? A.log.map(A.msgHtml).join("") : `<div class="sugg">${sugg.map(k => `<button class="chip" data-ask="${e(u(k))}">${e(u(k))}</button>`).join("")}</div>`}</div>
-  <form class="chatin" id="chatForm"><label class="sr" for="chatQ">${e(u("askPlaceholder"))}</label><textarea id="chatQ" rows="2" maxlength="600" placeholder="${e(u("askPlaceholder"))}"></textarea><button class="btn primary" type="submit" ${A.busy ? "disabled" : ""}>${e(u("send"))}</button></form>
+  <section class="panel chat"><div class="chatlog" id="chatLog" aria-live="polite">${A.log.length ? A.log.map(A.msgHtml).join("") : `<div class="sugg">${sugg.map(k => `<button class="chip" data-ask="${I18n.attr(u(k))}">${e(u(k))}</button>`).join("")}</div>`}</div>
+  <form class="chatin" id="chatForm"><label class="sr" for="chatQ">${e(u("askPlaceholder"))}</label><textarea id="chatQ" rows="2" maxlength="600" placeholder="${I18n.attr(u("askPlaceholder"))}"></textarea><button class="btn primary" type="submit" ${A.busy ? "disabled" : ""}>${e(u("send"))}</button></form>
   <p class="muted fine">${e(u("askSafety"))}</p></section>`;
   const f = document.getElementById("chatForm"), q = document.getElementById("chatQ");
   f.addEventListener("submit", (ev) => { ev.preventDefault(); A.send(q.value); });

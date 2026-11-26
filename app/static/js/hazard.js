@@ -96,7 +96,7 @@ const mood = (m) => {
   return "";
 };
 const ego = `<g id="hzEgo" transform="translate(150,500)"><rect x="-17" y="-30" width="34" height="60" rx="9" class="egob"/><rect x="-13" y="-22" width="26" height="12" rx="3" class="glass"/><path d="M-12 -34 L-30 -150 L30 -150 L12 -34 Z" class="beam"/></g>`;
-const actorG = (a, pos) => `<g class="actor" id="hzA-${a.id}" data-hz="${a.id}" tabindex="-1" role="button" aria-label="${e(u("kind_" + a.kind))}" transform="translate(${pos[0]},${pos[1]}) rotate(${facing(a, a.x, a.y, a.tx, a.ty)})">${shape(a)}<circle r="34" class="hit"/></g>`;
+const actorG = (a, pos) => `<g class="actor" id="hzA-${a.id}" data-hz="${a.id}" tabindex="-1" role="button" aria-label="${I18n.attr(u("kind_" + a.kind))}" transform="translate(${pos[0]},${pos[1]}) rotate(${facing(a, a.x, a.y, a.tx, a.ty)})">${shape(a)}<circle r="34" class="hit"/></g>`;
 const place = (id, x, y, rot) => { const g = document.getElementById("hzA-" + id); if (g) g.setAttribute("transform", `translate(${x},${y}) rotate(${rot || 0})`); };
 
 /* ---------- player ---------- */

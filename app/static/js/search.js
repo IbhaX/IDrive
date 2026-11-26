@@ -12,9 +12,9 @@ Q.open = () => {
   if (!ov) return;
   lastFocus = document.activeElement;
   ov.hidden = false;
-  ov.innerHTML = `<div class="sbox" role="dialog" aria-modal="true" aria-label="${e(u("searchAll"))}">
+  ov.innerHTML = `<div class="sbox" role="dialog" aria-modal="true" aria-label="${I18n.attr(u("searchAll"))}">
     <div class="sin"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-    <input id="sq" type="search" autocomplete="off" placeholder="${e(u("searchPh2"))}" aria-label="${e(u("searchAll"))}" aria-controls="sres"><kbd>Esc</kbd></div>
+    <input id="sq" type="search" autocomplete="off" placeholder="${I18n.attr(u("searchPh2"))}" aria-label="${I18n.attr(u("searchAll"))}" aria-controls="sres"><kbd>Esc</kbd></div>
     <div class="sres" id="sres" role="listbox"><p class="muted">${e(u("searchHint"))}</p></div></div>`;
   const inp = document.getElementById("sq");
   inp.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(() => Q.run(inp.value), 140); });

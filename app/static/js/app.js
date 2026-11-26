@@ -50,7 +50,7 @@ const LANGS = [["en", "EN", "English"], ["ml", "മല", "മലയാളം"], 
 const curTab = () => TAB_OF[S.view] || S.view;
 
 const tabHtml = (ids) => TABS.filter(t => !ids || ids.includes(t.id)).map(t =>
-  `<a href="#${t.id}" ${t.id === curTab() ? 'aria-current="page"' : ""} title="${esc(I18n.u(t.k))}">${I(t.icon)}<span>${esc(I18n.u(t.k))}</span></a>`).join("");
+  `<a href="#${t.id}" ${t.id === curTab() ? 'aria-current="page"' : ""} title="${I18n.attr(I18n.u(t.k))}">${I(t.icon)}<span>${esc(I18n.u(t.k))}</span></a>`).join("");
 const dockHtml = () => tabHtml(DOCK) + `<button class="morebtn ${DOCK.includes(curTab()) ? "" : "cur"}" data-act="more" aria-haspopup="true" aria-expanded="false">${I('<circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/>')}<span>${esc(I18n.u("more"))}</span></button>`;
 const langHtml = () => LANGS.map(l =>
   `<button class="lg ${I18n.lang() === l[0] ? "on" : ""}" data-lang="${l[0]}" aria-pressed="${I18n.lang() === l[0]}" aria-label="${l[2]}" title="${l[2]}">${l[1]}</button>`).join("");

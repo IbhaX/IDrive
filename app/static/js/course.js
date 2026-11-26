@@ -123,9 +123,9 @@ C.itemHref = (it) => {
 C.itemRow = (it) => {
   const done = it.type === "lesson" && C.done(it.id);
   const meta = it.type === "lesson" ? `${it.minutes} ${u("min")} · ${u(it.level)}` : u(TYPE_KEY[it.type] || "itLesson");
-  return `<a class="irow ${done ? "done" : ""}" href="${C.itemHref(it)}"><span class="ibadge t-${it.type}" aria-hidden="true"></span><span class="itxt"><b>${e(it.title)}</b><small>${e(meta)}</small></span>${done ? `<span class="ok" aria-label="${e(u("completed"))}">✓</span>` : '<span class="chev" aria-hidden="true">›</span>'}</a>`;
+  return `<a class="irow ${done ? "done" : ""}" href="${C.itemHref(it)}"><span class="ibadge t-${it.type}" aria-hidden="true"></span><span class="itxt"><b>${e(it.title)}</b><small>${e(meta)}</small></span>${done ? `<span class="ok" aria-label="${I18n.attr(u("completed"))}">✓</span>` : '<span class="chev" aria-hidden="true">›</span>'}</a>`;
 };
-C.crumbs = (parts) => `<nav class="crumbs" aria-label="${e(u("breadcrumb"))}">${parts.map((p, i) => i < parts.length - 1 ? `<a href="${p[1]}">${esc(I18n.one(p[0]))}</a><span aria-hidden="true">/</span>` : `<span aria-current="page">${esc(I18n.one(p[0]))}</span>`).join("")}</nav>`;
+C.crumbs = (parts) => `<nav class="crumbs" aria-label="${I18n.attr(u("breadcrumb"))}">${parts.map((p, i) => i < parts.length - 1 ? `<a href="${p[1]}">${esc(I18n.one(p[0]))}</a><span aria-hidden="true">/</span>` : `<span aria-current="page">${esc(I18n.one(p[0]))}</span>`).join("")}</nav>`;
 const fail = (app) => { app.innerHTML = `<section class="panel"><p class="empty">${e(u("networkErr"))}</p></section>`; };
 const skel = (app) => { app.innerHTML = `<section class="panel"><div class="skel"><i style="height:26px;width:40%"></i><i style="height:14px"></i><i style="height:14px;width:80%"></i><i style="height:14px;width:60%"></i></div></section>`; };
 
@@ -232,11 +232,11 @@ C.lessonView = async (app) => {
   const bm = C.bookmarked(id);
   app.innerHTML = `${C.crumbs([[u("tCourse"), "#course"], [u("moduleN", { n: M.n }) + " · " + I18n.one(M.title), "#course/" + M.id], [L.title, "#lesson/" + id]])}
   <div class="lgrid">
-  <aside class="ltoc" aria-label="${e(u("onThisPage"))}"><h3 class="lab">${e(u("onThisPage"))}</h3>${toc}<a href="#lesson/${id}" data-toc="kc">${e(u("knowledgeCheck"))}</a></aside>
+  <aside class="ltoc" aria-label="${I18n.attr(u("onThisPage"))}"><h3 class="lab">${e(u("onThisPage"))}</h3>${toc}<a href="#lesson/${id}" data-toc="kc">${e(u("knowledgeCheck"))}</a></aside>
   <article class="lmain">
   <section class="panel lhead rvl" style="--accent:${M.accent}">
     <div class="lmeta"><span class="tagc">${e(u(L.level))}</span><span class="tagc">${L.minutes} ${e(u("min"))}</span>${C.done(id) ? `<span class="tagc good">✓ ${e(u("completed"))}</span>` : ""}
-      <button class="iconbtn ${bm ? "on" : ""}" data-act="bookmark" data-id="${id}" aria-pressed="${bm}" aria-label="${e(u(bm ? "unbookmark" : "bookmark"))}" title="${e(u(bm ? "unbookmark" : "bookmark"))}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z" fill="${bm ? "currentColor" : "none"}" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></button></div>
+      <button class="iconbtn ${bm ? "on" : ""}" data-act="bookmark" data-id="${id}" aria-pressed="${bm}" aria-label="${I18n.attr(u(bm ? "unbookmark" : "bookmark"))}" title="${I18n.attr(u(bm ? "unbookmark" : "bookmark"))}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z" fill="${bm ? "currentColor" : "none"}" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></button></div>
     <h2>${e(L.title)}</h2>
     <p class="lede">${e(L.intro)}</p>
     <div class="objs"><h3 class="lab">${e(u("objectives"))}</h3><ul>${L.objectives.map(x => `<li>${e(x)}</li>`).join("")}</ul></div>

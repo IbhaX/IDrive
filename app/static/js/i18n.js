@@ -4,16 +4,30 @@
 (() => {
 "use strict";
 const I = {};
-I.esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const escP = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+/* In "both" mode a UI string is a Bi: it behaves as the plain text "ml / en"
+   (titles, toasts, string ops) but renders as Malayalam with English beneath
+   when it goes through esc() or X() into HTML. The span class is unquoted so
+   even a stray use inside an attribute cannot break the markup. */
+class Bi extends String {
+  constructor(en, ml) { super(ml + " / " + en); this.en = en; this.ml = ml; }
+}
+I.Bi = Bi;
+const biHtml = (b) => escP(b.ml) + `<span class=en>${escP(b.en)}</span>`;
+I.esc = s => (s instanceof Bi ? biHtml(s) : escP(s));
+/* plain text for attributes: one language (Malayalam in ml/both modes) */
+I.attr = s => escP(s instanceof Bi ? s.ml : s);
 I.FI = { name: 0, meaning: 1, action: 2 };
 
 I.lang = () => (["en", "ml", "both"].includes(window.P && P.lang) ? P.lang : "both");
 
+const fill = (s, o) => { if (o) for (const x in o) s = s.split("{" + x + "}").join(String(o[x] instanceof Bi ? o[x].ml : o[x])); return s; };
+const fillEn = (s, o) => { if (o) for (const x in o) s = s.split("{" + x + "}").join(String(o[x] instanceof Bi ? o[x].en : o[x])); return s; };
 I.u = (k, o) => {
-  const pair = Data.UI[k];
-  let s = pair ? pair[I.lang() === "ml" ? 1 : 0] : k;
-  if (o) for (const x in o) s = s.split("{" + x + "}").join(o[x]);
-  return s;
+  const pair = Data.UI[k], L = I.lang();
+  if (!pair) return fill(k, o);
+  if (L === "both" && pair[1] && pair[1] !== pair[0]) return new Bi(fillEn(pair[0], o), fill(pair[1], o));
+  return fill(pair[L === "ml" ? 1 : 0], o);
 };
 
 /* sign field as HTML: both mode shows Malayalam first, English beneath */
@@ -32,7 +46,7 @@ I.TP = (d) => {
 
 /* category name per language */
 I.cn = (c) => {
-  const ml = c.id === "all" ? I.u("all") : (c.ml || [])[0];
+  const ml = c.id === "all" ? (Data.UI.all || [])[1] : (c.ml || [])[0];
   const en = c.id === "all" ? (Data.UI.all || ["Everything"])[0] : c.name;
   const L = I.lang();
   if (L === "en") return en;
@@ -50,6 +64,7 @@ I.cb = (c) => {
 
 /* bilingual part: [en,ml] | "str" | {svg,n:[en,ml]} -> HTML */
 I.BP = (p) => {
+  if (p instanceof Bi) return biHtml(p);
   if (typeof p === "string") return I.esc(p);
   if (p && p.svg) return `<span class="optimg"><span class="plate mini">${p.svg}</span><span>${I.BP(p.n)}</span></span>`;
   const L = I.lang();
@@ -58,6 +73,7 @@ I.BP = (p) => {
 
 /* bilingual part -> plain text */
 I.BPP = (p) => {
+  if (p instanceof Bi) return String(p);
   if (typeof p === "string") return p;
   if (p && p.svg) return I.BPP(p.n);
   const L = I.lang();
@@ -67,12 +83,13 @@ I.BPP = (p) => {
 /* bilingual part -> one language only (crumbs, attributes): ml in ml/both modes */
 I.one = (p) => {
   if (p == null) return "";
+  if (p instanceof Bi) return p.ml;
   if (typeof p === "string") return p;
   if (p && p.svg) return I.one(p.n);
   return I.lang() === "en" ? p[0] : (p[1] || p[0]);
 };
 /* HTML for a value that may be a plain string or an [en, ml] pair */
-I.X = (p) => (p == null ? "" : (Array.isArray(p) ? I.BP(p) : I.esc(p)));
+I.X = (p) => (p == null ? "" : (Array.isArray(p) || p instanceof Bi ? I.BP(p) : I.esc(p)));
 
 /* topic/chip helpers */
 I.topN = (id) => {

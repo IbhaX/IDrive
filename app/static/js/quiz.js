@@ -39,7 +39,7 @@ Q.view = (app) => {
   } else {
     body = `<h2 class="qtext">${I18n.BP(it.q)}</h2><div class="signopts">${it.o.map((o, j) => {
       const cls = answered ? (j === it.a ? "right" : (j === q.picked ? "wrong" : "")) : "";
-      return `<button class="opt ${cls}" data-opt="${j}" aria-label="${esc(I18n.u("option"))}" ${answered ? "disabled" : ""}>${`<span class="plate">${o.svg}</span>`}${answered ? `<span class="tname">${I18n.BP(o.n)}</span>` : ""}</button>`;
+      return `<button class="opt ${cls}" data-opt="${j}" aria-label="${I18n.attr(I18n.u("option"))}" ${answered ? "disabled" : ""}>${`<span class="plate">${o.svg}</span>`}${answered ? `<span class="tname">${I18n.BP(o.n)}</span>` : ""}</button>`;
     }).join("")}</div>`;
   }
   const ok = q.picked === it.a;
@@ -129,7 +129,7 @@ Q.cardsView = async (app) => {
     ? `<span class="cat"><i style="background:${Data.catOf(d.cat).dot}"></i>${esc(I18n.cn(Data.catOf(d.cat)))}</span><h2>${I18n.T(d, "name")}</h2><p>${I18n.T(d, "meaning")}</p><div class="do"><b>${esc(I18n.u("do"))}</b>${I18n.T(d, "action")}</div>`
     : `${Learn.plate(d, "mid")}<span class="hint">${esc(I18n.u("hint"))}</span>`;
   app.innerHTML = head + `<div class="qhead"><span>${esc(I18n.u("cardN", { i: c.i + 1, n: c.q.length }))}</span><div class="bar"><i style="width:${Math.round(c.i / c.q.length * 100)}%"></i></div></div>
-  <button class="flip" data-act="flip" aria-label="${esc(I18n.u("showAns"))}">${face}</button>
+  <button class="flip" data-act="flip" aria-label="${I18n.attr(I18n.u("showAns"))}">${face}</button>
   <div class="row" style="justify-content:center"><button class="btn" data-act="again" ${c.flip ? "" : "disabled"}>${esc(I18n.u("showAgain"))}</button><button class="btn primary" data-act="got" ${c.flip ? "" : "disabled"}>${esc(I18n.u("knewIt"))}</button></div>`;
   if (c.flip) Motion.pop(app.querySelector(".flip"));
 };

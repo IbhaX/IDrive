@@ -99,7 +99,7 @@ Pr.dashboard = () => {
   </div>
   <section class="panel rvl"><h3 class="lab">${u("recommended")}</h3><div class="ilist">${pending.map(row).join("") || `<p class="muted">${u("allDone")}</p>`}</div></section>
   ${bms.length ? `<section class="panel rvl"><h3 class="lab">${u("bookmarks")}</h3><div class="ilist">${bms.map(row).join("")}</div></section>` : ""}
-  <section class="panel rvl"><h3 class="lab">${u("achievements")}</h3><div class="achs">${ach.map(a => `<span class="ach ${a[1] ? "on" : ""}" title="${u(a[0] + "Sub")}"><i aria-hidden="true">${a[1] ? "★" : "☆"}</i>${u(a[0])}</span>`).join("")}</div></section>`;
+  <section class="panel rvl"><h3 class="lab">${u("achievements")}</h3><div class="achs">${ach.map(a => `<span class="ach ${a[1] ? "on" : ""}" title="${I18n.attr(I18n.u(a[0] + "Sub"))}"><i aria-hidden="true">${a[1] ? "★" : "☆"}</i>${u(a[0])}</span>`).join("")}</div></section>`;
 };
 
 Pr.examProgress = () => {

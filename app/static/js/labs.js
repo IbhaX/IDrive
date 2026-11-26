@@ -66,11 +66,11 @@ Lb.stopping = (host) => {
     <div class="controls">
       <label class="ctl"><span>${e(u("speed"))} <b id="vKmh">${st.kmh}</b> km/h</span><input type="range" id="inKmh" min="20" max="120" step="5" value="${st.kmh}"></label>
       <label class="ctl"><span>${e(u("reactionTime"))} <b id="vRt">${st.rt.toFixed(1)}</b> s</span><input type="range" id="inRt" min="0.5" max="3" step="0.1" value="${st.rt}"></label>
-      <label class="ctl"><span>${e(u("compareSurface"))}</span><select id="inSurf">${Object.keys(SURF).filter(k => k !== "dry").map(k => `<option value="${k}" ${st.surf === k ? "selected" : ""}>${e(u("surf_" + k))} (μ ≈ ${SURF[k]})</option>`).join("")}</select></label>
+      <label class="ctl"><span>${e(u("compareSurface"))}</span><select id="inSurf">${Object.keys(SURF).filter(k => k !== "dry").map(k => `<option value="${k}" ${st.surf === k ? "selected" : ""}>${I18n.esc(String(u("surf_" + k)))} (μ ≈ ${SURF[k]})</option>`).join("")}</select></label>
       <label class="ctl"><span>${e(u("hazardAt"))} <b id="vHz">${st.hz}</b> m</span><input type="range" id="inHz" min="5" max="120" step="1" value="${st.hz}"></label>
       <button class="btn primary mag" data-act="labrun">▶ ${e(u("runTest"))}</button>
     </div>
-    <div class="labviz"><svg id="stopSvg" viewBox="0 0 720 230" role="img" aria-label="${e(u("lab_stopping"))}"></svg><div class="readout" id="stopOut" aria-live="polite"></div></div>
+    <div class="labviz"><svg id="stopSvg" viewBox="0 0 720 230" role="img" aria-label="${I18n.attr(u("lab_stopping"))}"></svg><div class="readout" id="stopOut" aria-live="polite"></div></div>
   </div>
   <aside class="lnote n-model"><b>${e(u("noteModel"))}</b><p>${e(u("stopModelNote"))}</p></aside>
   </section>`;
@@ -177,7 +177,7 @@ const STROKES = ["intake", "compression", "power", "exhaust"];
 Lb.eng = { tl: null, theta: 0 };
 Lb.engine = (host) => {
   host.innerHTML = `<section class="panel lab rvl"><div class="labgrid">
-  <div class="engviz"><svg id="engSvg" viewBox="0 0 260 360" role="img" aria-label="${e(u("lab_engine"))}">
+  <div class="engviz"><svg id="engSvg" viewBox="0 0 260 360" role="img" aria-label="${I18n.attr(u("lab_engine"))}">
     <defs><linearGradient id="cyl" x1="0" x2="1"><stop offset="0" stop-color="#2a3150"/><stop offset=".5" stop-color="#3a4370"/><stop offset="1" stop-color="#2a3150"/></linearGradient></defs>
     <rect x="70" y="40" width="120" height="170" rx="6" fill="url(#cyl)" class="cylwall"/>
     <rect id="gas" x="76" y="48" width="108" height="40" class="gas"/>

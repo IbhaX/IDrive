@@ -29,7 +29,7 @@ V.view = async (app) => {
 /* ---------- explorer ---------- */
 const GROUPS = ["all", "powertrain", "transmission", "chassis", "electrical", "safety"];
 V.group = "all";
-V.carSvg = (parts, sel) => `<svg viewBox="0 0 800 340" class="carx" role="group" aria-label="${e(u("fVehicle"))}">
+V.carSvg = (parts, sel) => `<svg viewBox="0 0 800 340" class="carx" role="group" aria-label="${I18n.attr(u("fVehicle"))}">
   <defs>
     <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--acc)" stop-opacity=".22"/><stop offset="1" stop-color="var(--acc2)" stop-opacity=".08"/></linearGradient>
   </defs>
@@ -113,7 +113,7 @@ V.lightsView = (host, sel) => {
   if (d) { d.scrollIntoView({ block: "nearest", behavior: Motion.reduced() ? "auto" : "smooth" }); Motion.rise(d); }
 };
 V.lightDetail = (w) => `<section class="panel ldetail sev-${w.severity}" id="lightDetail" aria-live="polite">
-  <div class="ldh"><span class="dashico big ${w.severity === "stop" ? "blink" : ""}">${Data.SVG[w.sign] || ""}</span><div><span class="sv ${w.severity}">${e(u("sev_" + w.severity))}</span><h3 class="xh">${e(w.name)}</h3></div><a class="iconbtn" href="#vehicle/lights" aria-label="${e(u("close"))}">✕</a></div>
+  <div class="ldh"><span class="dashico big ${w.severity === "stop" ? "blink" : ""}">${Data.SVG[w.sign] || ""}</span><div><span class="sv ${w.severity}">${e(u("sev_" + w.severity))}</span><h3 class="xh">${e(w.name)}</h3></div><a class="iconbtn" href="#vehicle/lights" aria-label="${I18n.attr(u("close"))}">✕</a></div>
   <div class="lfields">
     <div class="kv"><h4>1 · ${e(u("lMeans"))}</h4><p>${e(w.means)}</p></div>
     <div class="kv"><h4>2 · ${e(u("lWhy"))}</h4><p>${e(w.why)}</p></div>
