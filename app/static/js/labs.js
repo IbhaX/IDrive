@@ -10,16 +10,21 @@ const G = () => Motion.gsap;
 
 Lb.GROUPS = [
   ["lgStop", ["stopping", "reaction", "following", "cornering", "slope", "abs", "aquaplaning", "tyrepressure", "weighttransfer"]],
-  ["lgSee", ["headlights", "fog", "blindspot", "truckzones", "eyesoff"]],
-  ["lgCrash", ["energy", "seatbelt", "helmet", "rollover"]],
-  ["lgCar", ["engine", "gears", "economy", "drag", "regen", "ghat"]],
+  ["lgSee", ["headlights", "fog", "blindspot", "truckzones", "eyesoff", "microsleep", "glare", "reversezone"]],
+  ["lgRoad", ["gap", "bendsight", "banking", "speedbump", "hillstart", "signal", "crosswind"]],
+  ["lgTwo", ["lean", "bikebrake", "doorzone"]],
+  ["lgCrash", ["energy", "seatbelt", "helmet", "rollover", "childseat", "airbag", "hotcar"]],
+  ["lgCar", ["engine", "gears", "economy", "drag", "regen", "ghat", "evrange", "idling", "coasting", "tyresize"]],
   ["lgTraffic", ["overtaking", "offtracking", "traveltime", "trafficwave"]],
 ];
 Lb.LABS = Lb.GROUPS.flatMap(([, ids]) => ids);
 const LAB_ICON = { stopping: "atom", reaction: "brain", engine: "engine", following: "gauge", cornering: "wheel", energy: "alert", headlights: "eye", blindspot: "eye",
   slope: "mountain", abs: "wheel", aquaplaning: "drop", tyrepressure: "wheel", weighttransfer: "gauge", fog: "cloud", truckzones: "truck", eyesoff: "phone",
   seatbelt: "shield", helmet: "shield", rollover: "alert", gears: "gauge", economy: "fuel", drag: "wind", regen: "bolt", ghat: "mountain",
-  overtaking: "truck", offtracking: "truck", traveltime: "clock", trafficwave: "wind" };
+  overtaking: "truck", offtracking: "truck", traveltime: "clock", trafficwave: "wind",
+  microsleep: "brain", glare: "eye", reversezone: "eye", gap: "clock", bendsight: "eye", banking: "wheel", speedbump: "mountain", hillstart: "mountain",
+  signal: "sign", crosswind: "wind", lean: "wheel", bikebrake: "wheel", doorzone: "alert", childseat: "shield", airbag: "shield", hotcar: "alert",
+  evrange: "bolt", idling: "fuel", coasting: "gauge", tyresize: "wheel" };
 Lb.view = (app) => {
   const id = Lb.LABS.includes(S.param) && typeof Lb[S.param] === "function" ? S.param : null;
   if (!id) {

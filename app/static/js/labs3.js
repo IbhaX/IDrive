@@ -593,4 +593,6 @@ def("trafficwave", {
 
 /* make `this` inside live() the spec so it can register changed/onRun */
 Object.values(D).forEach((sp) => { if (sp.live) sp.live = sp.live.bind(sp); });
+/* shared with labs4.js */
+Lb.L3 = { def, BG, T, R, Ln, car, plot, hbar, fx, clamp, stopD, vmaxFor, MU, SURF3, SURF2, YESNO, t1, g };
 })();

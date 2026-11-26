@@ -1163,6 +1163,11 @@ html.splashing,html.splashing body{overflow:hidden}
 .l3kerb{fill:none;stroke:#e5e7eb;stroke-width:4}
 .l3pathF,.l3pathR{fill:none;stroke-width:4;stroke-dasharray:10 7}.l3pathF{stroke:#38bdf8}.l3pathR{stroke:#fb7185}
 .l3pathFk{fill:#38bdf8}.l3pathRk{fill:#fb7185}
+.l3bendroad{fill:none;stroke:#3a3f49;stroke-width:34}.l3hedge{fill:#166534;fill-opacity:.55}
+.l3sight{stroke:#fbbf24;stroke-width:2.5;stroke-dasharray:7 5;fill:none}.l3blink{fill:#f59e0b;filter:drop-shadow(0 0 4px #f59e0b)}
+.l3wind{stroke:#7dd3fc;stroke-width:3;stroke-linecap:round;opacity:.75}.l3door{stroke:#e5e7eb;stroke-width:6;stroke-linecap:round}
+.l3bag{fill:#f8fafc;fill-opacity:.85;stroke:#cbd5e1}.l3belt{stroke:#0f172a;stroke-width:6;stroke-linecap:round}
+.l3glare{fill:#fde68a;opacity:.55}.l3ghostwheel{fill:none;stroke:#fbbf24;stroke-width:3;stroke-dasharray:6 5}
 .l3ring{fill:none;stroke:color-mix(in srgb,var(--ink) 14%,transparent);stroke-width:22}
 .l3pave{fill:color-mix(in srgb,var(--ink) 16%,transparent);stroke:#e5e7eb;stroke-width:3}
 
