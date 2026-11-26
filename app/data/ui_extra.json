@@ -3870,5 +3870,97 @@
  "sdMistake": [
   "Common mistake",
   "സാധാരണ തെറ്റ്"
+ ],
+ "tLimits": [
+  "Speed limits",
+  "വേഗപരിധി"
+ ],
+ "spTitle": [
+  "Speed limits by vehicle and road",
+  "വാഹനവും റോഡും അനുസരിച്ചുള്ള വേഗപരിധി"
+ ],
+ "spLede": [
+  "Pick your vehicle and the kind of road to see the maximum speed. Kerala's limits come from the state notification; the all-India table shows the central maximums.",
+  "പരമാവധി വേഗം കാണാൻ നിങ്ങളുടെ വാഹനവും റോഡിന്റെ തരവും തിരഞ്ഞെടുക്കുക. കേരളത്തിലെ പരിധികൾ സംസ്ഥാന വിജ്ഞാപനത്തിൽ നിന്നാണ്; അഖിലേന്ത്യാ പട്ടിക കേന്ദ്രം നിശ്ചയിച്ച പരമാവധികൾ കാണിക്കുന്നു."
+ ],
+ "spKerala": [
+  "Kerala",
+  "കേരളം"
+ ],
+ "spIndia": [
+  "All India (central)",
+  "അഖിലേന്ത്യ (കേന്ദ്രം)"
+ ],
+ "spVehicle": [
+  "Vehicle",
+  "വാഹനം"
+ ],
+ "spRoad": [
+  "Road",
+  "റോഡ്"
+ ],
+ "spMax": [
+  "Maximum speed",
+  "പരമാവധി വേഗം"
+ ],
+ "spNA": [
+  "Not allowed on this road type",
+  "ഈ തരം റോഡിൽ അനുവദനീയമല്ല"
+ ],
+ "spTable": [
+  "Full table (km/h)",
+  "പൂർണ പട്ടിക (km/h)"
+ ],
+ "spTapHint": [
+  "Tap a number to see it above. Swipe the table sideways on a phone.",
+  "മുകളിൽ കാണാൻ ഒരു സംഖ്യ തൊടുക. ഫോണിൽ പട്ടിക വശത്തേക്ക് നീക്കുക."
+ ],
+ "spNotes": [
+  "Good to know",
+  "അറിഞ്ഞിരിക്കേണ്ടത്"
+ ],
+ "spN1": [
+  "A posted speed-limit sign wins. Lower limits are often posted near schools, hospitals, ghat roads, bridges, junctions and road works — follow the lowest limit that applies to you.",
+  "സ്ഥാപിച്ച വേഗപരിധി ചിഹ്നമാണ് പ്രധാനം. സ്കൂളുകൾ, ആശുപത്രികൾ, ചുരം റോഡുകൾ, പാലങ്ങൾ, ജംഗ്ഷനുകൾ, റോഡ് പണികൾ എന്നിവയ്ക്കടുത്ത് പലപ്പോഴും കുറഞ്ഞ പരിധി സ്ഥാപിച്ചിരിക്കും — നിങ്ങൾക്ക് ബാധകമായ ഏറ്റവും കുറഞ്ഞ പരിധി പാലിക്കുക."
+ ],
+ "spN2": [
+  "These are maximums for good conditions, not targets. Slow down for rain, darkness, crowds, bends and heavy traffic.",
+  "ഇവ നല്ല സാഹചര്യങ്ങൾക്കുള്ള പരമാവധിയാണ്, ലക്ഷ്യമല്ല. മഴ, ഇരുട്ട്, ആൾക്കൂട്ടം, വളവുകൾ, കനത്ത ഗതാഗതം എന്നിവയിൽ വേഗം കുറയ്ക്കുക."
+ ],
+ "spN3k": [
+  "Kerala's table is from the 2023 state notification, as amended in 2024: on six-lane national highways the limit was set at 100 km/h for cars and 90 km/h for buses.",
+  "കേരളത്തിന്റെ പട്ടിക 2023-ലെ സംസ്ഥാന വിജ്ഞാപനത്തിൽ നിന്നാണ്, 2024-ലെ ഭേദഗതിയോടെ: ആറുവരി ദേശീയപാതകളിൽ കാറുകൾക്ക് 100 km/h, ബസ്സുകൾക്ക് 90 km/h ആയി നിശ്ചയിച്ചു."
+ ],
+ "spN3i": [
+  "The all-India table is the central notification of April 2018. States notify their own limits for their roads, so in a state the posted signs and that state's notification apply.",
+  "അഖിലേന്ത്യാ പട്ടിക 2018 ഏപ്രിലിലെ കേന്ദ്ര വിജ്ഞാപനമാണ്. സംസ്ഥാനങ്ങൾ അവരുടെ റോഡുകൾക്ക് സ്വന്തം പരിധികൾ വിജ്ഞാപനം ചെയ്യുന്നു; ഒരു സംസ്ഥാനത്ത് സ്ഥാപിച്ച ചിഹ്നങ്ങളും ആ സംസ്ഥാനത്തിന്റെ വിജ്ഞാപനവുമാണ് ബാധകം."
+ ],
+ "spN4": [
+  "Not sure which row your vehicle is in? The vehicle category is shown on its registration certificate (RC).",
+  "നിങ്ങളുടെ വാഹനം ഏത് വരിയിലാണെന്ന് ഉറപ്പില്ലേ? വാഹനത്തിന്റെ തരം രജിസ്ട്രേഷൻ സർട്ടിഫിക്കറ്റിൽ (RC) കാണാം."
+ ],
+ "spN5": [
+  "Limits change from time to time. If a sign on the road differs from this page, follow the sign.",
+  "പരിധികൾ കാലാകാലങ്ങളിൽ മാറാം. റോഡിലെ ചിഹ്നം ഈ പേജിൽ നിന്ന് വ്യത്യസ്തമാണെങ്കിൽ ചിഹ്നം പാലിക്കുക."
+ ],
+ "spSources": [
+  "Sources",
+  "ഉറവിടങ്ങൾ"
+ ],
+ "spVerified": [
+  "checked {d}",
+  "പരിശോധിച്ചത് {d}"
+ ],
+ "spLink": [
+  "Speed limits for every road",
+  "എല്ലാ റോഡുകളിലെയും വേഗപരിധി"
+ ],
+ "spLinkSub": [
+  "Kerala and all-India limits for each vehicle and road",
+  "ഓരോ വാഹനത്തിനും റോഡിനും കേരളത്തിലെയും അഖിലേന്ത്യാ തലത്തിലെയും പരിധികൾ"
+ ],
+ "k_library": [
+  "Reference",
+  "റഫറൻസ്"
  ]
 }

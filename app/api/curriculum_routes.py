@@ -84,6 +84,12 @@ async def sign_details(response: Response) -> dict[str, Any]:
     return {"details": curriculum.sign_details_payload()}
 
 
+@router.get("/api/library/speed-limits")
+async def speed_limits(response: Response) -> dict[str, Any]:
+    response.headers["Cache-Control"] = _CACHE
+    return {"limits": curriculum.speed_limits_payload()}
+
+
 @router.get("/api/library/references")
 async def references(response: Response) -> dict[str, Any]:
     response.headers["Cache-Control"] = _CACHE

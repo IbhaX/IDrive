@@ -58,6 +58,7 @@ L.view = (app) => {
   <section class="heroAnim" id="heroAnim" aria-hidden="true"></section>
   <button class="today" data-open="${t.id}" data-today="1"><span class="plate">${Data.SVG[t.id] || ""}</span><span><span class="eyebrow">${esc(I18n.u("today"))}</span><h2>${I18n.T(t, "name")}</h2><p>${I18n.T(t, "meaning")}</p></span></button>
   <details class="primer"><summary>${esc(I18n.u("primer"))}</summary><div class="rows">${prim.join("")}</div></details>
+  <a class="splink" href="#limits"><span class="spmini" aria-hidden="true">50</span><span><b>${esc(I18n.u("tLimits"))}</b><small>${esc(I18n.u("spLinkSub"))}</small></span><span aria-hidden="true">→</span></a>
   <div class="tools"><label class="sr" for="q">${esc(I18n.u("searchLab"))}</label><input id="q" type="search" placeholder="${I18n.attr(I18n.u("searchPh", { t: Data.D.length }))}" value="${esc(S.q || "")}" autocomplete="off"><div class="chips" id="chips"></div></div>
   <p class="blurb" id="blurb"></p><div class="grid" id="grid"></div>`;
   L.renderGrid();
@@ -123,7 +124,7 @@ L.detailHtml = (id) => {
   return `<h3 class="sdh">${esc(I18n.u("sdAbout"))}</h3><p>${X(x.more)}</p>
   <h3 class="sdh">${esc(I18n.u("sdWhere"))}</h3><ul class="sdwhere">${x.where.map(w => `<li>${X(w)}</li>`).join("")}</ul>
   <h3 class="sdh">${esc(I18n.u("sdWhen"))}</h3><div class="sdwhen">${x.when.map(w => `<div class="sdcase"><b>${X(w.s)}</b><p>${X(w.d)}</p></div>`).join("")}</div>
-  <div class="sdmis"><b>${esc(I18n.u("sdMistake"))}</b><p>${X(x.mistake)}</p></div>`;
+  <div class="sdmis"><b>${esc(I18n.u("sdMistake"))}</b><p>${X(x.mistake)}</p></div>${["speed", "x2_minspeed", "x2_endspeed", "x2_speedcam"].includes(id) ? `<button type="button" class="btn sdlimits" data-act="spOpen">${esc(I18n.u("spLink"))} →</button>` : ""}`;
 };
 
 L.sheetNav = (dir) => {

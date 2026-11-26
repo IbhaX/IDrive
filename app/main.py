@@ -185,7 +185,7 @@ async def service_worker() -> Response:
 
 
 # Hash-routed SPA: every app path serves the shell.
-for _path in ("home", "course", "lesson", "learn", "vehicle", "science", "hazard", "theory", "exam", "quiz", "cards", "ask", "progress"):
+for _path in ("home", "course", "lesson", "learn", "vehicle", "science", "hazard", "theory", "exam", "quiz", "cards", "ask", "progress", "limits"):
     app.get("/" + _path, include_in_schema=False)(
         lambda: render_page(static_dir=static_dir, name="index.html")
     )

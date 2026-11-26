@@ -45,7 +45,7 @@ const TABS = [
   { id: "progress", k: "tProg", icon: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>' },
 ];
 const DOCK = ["home", "course", "learn", "exam"];
-const TAB_OF = { lesson: "course", theory: "course", quiz: "exam", cards: "exam" };
+const TAB_OF = { lesson: "course", theory: "course", quiz: "exam", cards: "exam", limits: "learn" };
 const LANGS = [["en", "EN", "English"], ["ml", "മല", "മലയാളം"], ["both", "EN+മല", "English + മലയാളം"]];
 const curTab = () => TAB_OF[S.view] || S.view;
 
@@ -103,6 +103,7 @@ const VIEWS = {
   cards: (app) => Quiz.cardsView(app),
   ask: (app) => Instructor.view(app),
   progress: (app) => Progress.view(app),
+  limits: (app) => SpeedLimits.view(app),
 };
 const ALIASES = { sign: "learn" };
 
@@ -204,7 +205,7 @@ function toggleMore(btn) {
   const m = document.getElementById("moreMenu");
   if (!m) return;
   if (!m.hidden) { closeMore(); return; }
-  m.innerHTML = `<div class="moregrid">${TABS.filter(t => !DOCK.includes(t.id)).map(t => `<a href="#${t.id}" ${t.id === curTab() ? 'aria-current="page"' : ""}>${I(t.icon)}<span>${esc(I18n.u(t.k))}</span></a>`).join("")}<a href="#theory">${I('<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5"/>')}<span>${esc(I18n.u("tTheory"))}</span></a><button data-act="search">${I('<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>')}<span>${esc(I18n.u("search"))}</span></button>${Pwa.menuHtml()}</div>`;
+  m.innerHTML = `<div class="moregrid">${TABS.filter(t => !DOCK.includes(t.id)).map(t => `<a href="#${t.id}" ${t.id === curTab() ? 'aria-current="page"' : ""}>${I(t.icon)}<span>${esc(I18n.u(t.k))}</span></a>`).join("")}<a href="#theory">${I('<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5"/>')}<span>${esc(I18n.u("tTheory"))}</span></a><a href="#limits">${I('<circle cx="12" cy="12" r="9"/><path d="M12 12l4-3M8 16h8"/>')}<span>${esc(I18n.u("tLimits"))}</span></a><button data-act="search">${I('<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>')}<span>${esc(I18n.u("search"))}</span></button>${Pwa.menuHtml()}</div>`;
   m.hidden = false;
   btn.setAttribute("aria-expanded", "true");
   Motion.rise(m.querySelectorAll("a,button"));
@@ -297,6 +298,8 @@ document.addEventListener("click", (e) => {
     case "hzstart": Hazard.start(); break;
     case "hzreplay": Hazard.replay(); break;
     case "hzcat": Hazard.filter(ds.k || ""); break;
+    case "spOpen": Learn.closeSheet(); location.hash = "#limits"; break;
+    case "spRegion": case "spVeh": case "spRoad": case "spCell": SpeedLimits.act(ds.act, ds.k || ""); break;
     default: if (ds.act && ds.act.startsWith("lab.")) Labs.act(ds.act.slice(4), t);
   }
 });

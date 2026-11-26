@@ -97,5 +97,32 @@
     "scope": "kerala",
     "verified": "2026-11-25",
     "note": "Secondary source reporting a court ruling. Confirm current practice with your RTO."
+  },
+  "morth-speed-2018": {
+    "title": "S.O. 1522(E), 6 April 2018 — maximum speed of motor vehicles",
+    "publisher": "Ministry of Road Transport and Highways, Government of India",
+    "url": "https://morth.gov.in/en/motor-vehicle-legislation?page=10",
+    "kind": "law",
+    "scope": "national",
+    "verified": "2026-11-26",
+    "note": "Central maximums by vehicle class and road type; states may notify their own limits for roads in the state."
+  },
+  "kl-speed-2023": {
+    "title": "G.O.(P) No. 15/2023/Tran., 23 June 2023 (S.R.O. No. 707/2023) — maximum speeds on roads in Kerala",
+    "publisher": "Transport (B) Department, Government of Kerala",
+    "url": "https://mvd.kerala.gov.in/en/downloads",
+    "kind": "law",
+    "scope": "kerala",
+    "verified": "2026-11-26",
+    "note": "In force from 1 July 2023."
+  },
+  "kl-speed-2024": {
+    "title": "G.O.(P) No. 9/2024/Trans., 17 April 2024 (S.R.O. No. 448/2024, Kerala Gazette 20 May 2024) — six-lane NH limits refixed",
+    "publisher": "Transport (B) Department, Government of Kerala",
+    "url": "https://mvd.kerala.gov.in/en/downloads",
+    "kind": "law",
+    "scope": "kerala",
+    "verified": "2026-11-26",
+    "note": "Six-lane-and-above NH: cars 100 km/h, buses 90 km/h."
   }
 }

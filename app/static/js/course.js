@@ -113,7 +113,7 @@ C.itemHref = (it) => {
     case "article": return "#theory/" + id;
     case "lab": return "#science/" + id;
     case "scenario": return "#hazard/" + id;
-    case "library": return id === "lights" ? "#vehicle/lights" : "#vehicle/explore";
+    case "library": return id === "lights" ? "#vehicle/lights" : id === "speed-limits" ? "#limits" : "#vehicle/explore";
     case "signs": return "#learn/" + id;
     case "practice": return id === "signs" ? "#quiz" : "#exam/practice/" + id;
     case "exam": return "#exam";

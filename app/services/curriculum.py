@@ -639,6 +639,22 @@ def sign_details_missing_ml() -> list[str]:
     return out
 
 
+@lru_cache(maxsize=1)
+def speed_limits() -> dict[str, Any]:
+    """Maximum speeds by vehicle class and road type (Kerala and the central
+    notification), with [en, ml] labels inline. Checked by the linter."""
+    p = CURRICULUM_DIR / "speed_limits.json"
+    return json.loads(p.read_text(encoding="utf-8")) if p.is_file() else {}
+
+
+def speed_limits_payload() -> dict[str, Any]:
+    refs = references()
+    out: dict[str, Any] = {}
+    for region, d in speed_limits().items():
+        out[region] = {**d, "refs": [{"id": r, **refs[r].model_dump()} for r in d.get("refs", []) if r in refs]}
+    return out
+
+
 def scenarios_payload() -> list[Any]:
     lib = _ml_library().get("scenarios", {})
     return [bilingual(sc.model_dump(), lib.get(sc.id), SCEN_SKIP) for sc in scenarios()]
@@ -700,6 +716,11 @@ def _search_docs() -> list[dict[str, str]]:  # noqa: C901 — flat list builder
     for g in c.glossary():
         docs.append({"kind": "term", "id": g[0], "title": g[0], "title_ml": g[1], "group": "Glossary",
                      "body": g[2], "body_ml": g[3], "href": "#theory/gloss"})
+    if speed_limits():
+        docs.append({"kind": "library", "id": "speed-limits", "title": "Speed limits in Kerala and India",
+                     "title_ml": "കേരളത്തിലെയും ഇന്ത്യയിലെയും വേഗപരിധികൾ", "group": "Speed limits",
+                     "body": "maximum speed limit km/h national highway state highway city expressway car two-wheeler bus lorry auto school bus",
+                     "body_ml": "വേഗപരിധി പരമാവധി വേഗം ദേശീയപാത സംസ്ഥാന പാത നഗരം കാർ ഇരുചക്രവാഹനം ബസ് ലോറി ഓട്ടോ", "href": "#limits"})
     lib = _ml_library()
     for w in warning_lights():
         mw = lib.get("lights", {}).get(w.id, {})
@@ -720,7 +741,8 @@ _STOP: frozenset[str] = frozenset(
 
 _KIND_WEIGHT: dict[str, float] = {"lesson": 1.3, "light": 1.2, "part": 1.1, "article": 1.0, "sign": 0.9, "term": 0.8}
 _GROUP_ML: dict[str, str] = {"Theory article": "തിയറി ലേഖനം", "Road sign": "റോഡ് ചിഹ്നം", "Glossary": "പദാവലി",
-                             "Warning light": "മുന്നറിയിപ്പ് ലൈറ്റ്", "Vehicle part": "വാഹന ഭാഗം"}
+                             "Warning light": "മുന്നറിയിപ്പ് ലൈറ്റ്", "Vehicle part": "വാഹന ഭാഗം",
+                             "Speed limits": "വേഗപരിധി"}
 _ML_CHARS = re.compile(r"[\u0d00-\u0d7f]")
 
 
@@ -802,6 +824,21 @@ def validate() -> list[str]:
             errs.append(f"reference {r_id}: bad verified date")
         if not r.url.startswith("https://"):
             errs.append(f"reference {r_id}: url must be https")
+    for region, d in speed_limits().items():
+        n = len(d.get("roads", []))
+        for r_id in d.get("refs", []):
+            if r_id not in refs:
+                errs.append(f"speed limits {region}: unknown reference {r_id}")
+        for v in d.get("vehicles", []):
+            if len(v.get("lim", [])) != n:
+                errs.append(f"speed limits {region}/{v.get('id')}: needs {n} limits")
+            for lab in (v.get("t"), v.get("sub")):
+                if not (isinstance(lab, list) and len(lab) == 2 and all(isinstance(x, str) and x.strip() for x in lab)):
+                    errs.append(f"speed limits {region}/{v.get('id')}: label needs [en, ml]")
+        for rd in d.get("roads", []):
+            t = rd.get("t")
+            if not (isinstance(t, list) and len(t) == 2 and all(isinstance(x, str) and x.strip() for x in t)):
+                errs.append(f"speed limits {region}/{rd.get('id')}: road label needs [en, ml]")
     seen_modules: set[int] = set()
     for m in modules():
         if m.n in seen_modules:
