@@ -1724,8 +1724,8 @@
   "കാഴ്ച പുനഃസജ്ജമാക്കുക"
  ],
  "v3dHint": [
-  "Drag to turn the car, pinch or scroll to zoom, tap a dot to open a part. X-ray shows the parts inside — they are simplified shapes in a typical front-engine layout; real cars differ.",
-  "കാർ തിരിക്കാൻ വലിക്കുക, സൂം ചെയ്യാൻ പിഞ്ച്/സ്ക്രോൾ ചെയ്യുക, ഭാഗം തുറക്കാൻ ബിന്ദുവിൽ തൊടുക. എക്സ്-റേ ഉള്ളിലെ ഭാഗങ്ങൾ കാണിക്കുന്നു — സാധാരണ മുൻ-എൻജിൻ ക്രമീകരണത്തിലെ ലളിതമാക്കിയ രൂപങ്ങളാണ് അവ; യഥാർത്ഥ കാറുകൾ വ്യത്യസ്തമാകും."
+  "Drag to turn the car, pinch or scroll to zoom, tap a dot to open a part. X-ray shows the parts inside — they are simplified models of each part, placed in a typical front-engine layout; real cars differ.",
+  "കാർ തിരിക്കാൻ വലിക്കുക, സൂം ചെയ്യാൻ പിഞ്ച്/സ്ക്രോൾ ചെയ്യുക, ഭാഗം തുറക്കാൻ ബിന്ദുവിൽ തൊടുക. എക്സ്-റേ ഉള്ളിലെ ഭാഗങ്ങൾ കാണിക്കുന്നു — ഓരോ ഭാഗത്തിന്റെയും ലളിതമാക്കിയ മാതൃകകൾ, സാധാരണ മുൻ-എൻജിൻ ക്രമീകരണത്തിൽ; യഥാർത്ഥ കാറുകൾ വ്യത്യസ്തമാകും."
  ],
  "v3dCredit": [
   "3D model: “Car Concept” by Eric Chadwick, from a CC0 model by Unity Fan — Khronos glTF Sample Assets",

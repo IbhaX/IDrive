@@ -220,54 +220,231 @@ function build(root) {
   // car-frame helper: u along length (+front), y up, w across (+driver's right)
   const P = (u0, y0, w0) => new T.Vector3().addScaledVector(L, u0).addScaledVector(H, y0).addScaledVector(Rt, w0);
   const orient = (obj) => { obj.quaternion.setFromRotationMatrix(new T.Matrix4().makeBasis(L, H, Rt)); return obj; };
-  const mat = (pid) => {
-    const p = C.parts.find(x => x.id === pid), col = GROUP_COL[p ? p.group : "chassis"] || 0x38bdf8;
-    return new T.MeshStandardMaterial({ color: col, emissive: col, emissiveIntensity: 0.25, metalness: 0.35, roughness: 0.45, transparent: true, opacity: 0.95 });
+  /* ---- the inner parts: mechanical shapes built from three.js primitives ----
+     Each part is a Group in its own local frame (x = forward, y = up,
+     z = driver's right), sized in metres for a ~4.4 m car and scaled to the
+     model. Real-looking materials; the system colour is only used as the
+     selection glow (emissive). */
+  const S = len / 4.4, half = wid / 2;
+  const KIND = {
+    steel: [0x8f979f, .85, .35], dark: [0x30353d, .6, .55], alu: [0xb9c0c8, .9, .28], rubber: [0x141619, 0, .9],
+    plastic: [0x1f2329, .05, .6], red: [0xb32630, .3, .45], chrome: [0xe5e9ee, 1, .12], rust: [0x6e4a39, .6, .65],
+    copper: [0xb87333, .9, .35], fabric: [0xeae6dc, 0, .95], friction: [0x4d3d30, .1, .9], blue: [0x2b4c7e, .3, .5],
   };
-  const add = (pid, geo, pos, opt = {}) => {
-    const m = new T.Mesh(geo, mat(pid));
-    m.position.copy(pos);
-    orient(m);
-    if (opt.rot) m.rotateOnAxis(opt.rot[0], opt.rot[1]);
+  const matCache = {};
+  const mat = (pid, kind) => {
+    const key = pid + ":" + kind;
+    if (matCache[key]) return matCache[key];
+    const p = C.parts.find(x => x.id === pid), glow = GROUP_COL[p ? p.group : "chassis"] || 0x38bdf8, k = KIND[kind] || KIND.steel;
+    return (matCache[key] = new T.MeshStandardMaterial({ color: k[0], metalness: k[1], roughness: k[2], emissive: glow, emissiveIntensity: 0, transparent: true, opacity: 1 }));
+  };
+  const HALF = Math.PI / 2;
+  // add a mesh to a part group: position (x,y,z) and rotation (rx,ry,rz) in the part's frame
+  const mk = (g, pid, geo, kind, x = 0, y = 0, z = 0, rx = 0, ry = 0, rz = 0) => {
+    const m = new T.Mesh(geo, mat(pid, kind));
+    m.position.set(x, y, z); m.rotation.set(rx, ry, rz);
     m.userData.part = pid; m.userData.synthetic = true; m.renderOrder = 2;
-    car.add(m);
+    g.add(m);
     (meshesFor[pid] = meshesFor[pid] || []).push(m);
     return m;
   };
-  const box3 = (l, h, w) => new T.BoxGeometry(l, h, w);
-  const X = new T.Vector3(1, 0, 0), Y = new T.Vector3(0, 1, 0), Z = new T.Vector3(0, 0, 1);
-  const bay = fa + (len / 2 - fa) * 0.15, half = wid / 2;
-
-  add("engine", box3(len * .15, hgt * .28, wid * .42), P(bay, R * 1.35, 0));
-  add("radiator", box3(len * .02, hgt * .26, wid * .58), P(fa + (len / 2 - fa) * .62, R * 1.2, 0));
-  add("battery", box3(len * .055, hgt * .1, wid * .12), P(fa - len * .01, R * 1.75, -half * .55));
-  add("abs", box3(len * .04, hgt * .06, wid * .08), P(fa - len * .05, R * 1.75, half * .55));
-  add("clutch", new T.CylinderGeometry(hgt * .1, hgt * .1, len * .02, 32), P(fa - len * .1, R * 1.05, 0), { rot: [Z, Math.PI / 2] });
-  add("gearbox", box3(len * .12, hgt * .15, wid * .18), P(fa - len * .17, R * .95, 0));
-  const shaftLen = (fa - len * .23) - ra;
-  add("driveshaft", new T.CylinderGeometry(hgt * .02, hgt * .02, shaftLen, 16), P(ra + shaftLen / 2, R * .62, 0), { rot: [Z, Math.PI / 2] });
-  add("differential", new T.SphereGeometry(hgt * .085, 24, 16), P(ra, R, 0));
-  add("fuel", box3(len * .14, hgt * .08, wid * .5), P(ra + len * .13, R * .72, 0));
-  // exhaust: pipe under the floor to the back, with a silencer
-  const exLen = (fa - len * .12) - (-len / 2 + len * .02);
-  add("exhaust", new T.CylinderGeometry(hgt * .022, hgt * .022, exLen, 12), P(fa - len * .12 - exLen / 2, R * .42, half * .28), { rot: [Z, Math.PI / 2] });
-  add("exhaust", new T.CapsuleGeometry(hgt * .05, len * .07, 6, 12), P(ra - len * .08, R * .45, half * .28), { rot: [Z, Math.PI / 2] });
-  // steering: wheel in front of the driver (India: right-hand drive) + column
-  const drvU = fa - (fa - ra) * .42, drvW = half * .42;
-  add("steering", new T.TorusGeometry(len * .042, len * .006, 10, 40), P(drvU, hgt * .64, drvW), { rot: [Y, Math.PI / 2] }).rotateOnAxis(X, -0.35);
-  add("steering", new T.CylinderGeometry(len * .005, len * .005, len * .14, 8), P(drvU + len * .07, hgt * .56, drvW * .95), { rot: [Z, Math.PI / 2 - 0.45] });
-  // airbags: in the steering wheel and the passenger dashboard
-  add("airbags", new T.SphereGeometry(len * .035, 20, 14), P(drvU - len * .005, hgt * .64, drvW));
-  add("airbags", new T.SphereGeometry(len * .04, 20, 14), P(drvU + len * .02, hgt * .62, -drvW));
-  // suspension coils at each corner
-  const coil = () => {
-    const pts = [], turns = 6, r = wid * .045, h = hgt * .26;
-    for (let i = 0; i <= 120; i++) { const t = i / 120, a = t * turns * Math.PI * 2; pts.push(new T.Vector3(Math.cos(a) * r, t * h, Math.sin(a) * r)); }
-    return new T.TubeGeometry(new T.CatmullRomCurve3(pts), 160, wid * .008, 6, false);
+  const part = (pid, pos, scale = S) => {
+    const g = new T.Group();
+    g.position.copy(pos); orient(g); g.scale.setScalar(scale);
+    car.add(g);
+    return g;
   };
-  [fa, ra].forEach(a => [-1, 1].forEach(s => add("suspension", coil(), P(a, R * .95, s * (half - wid * .2)))));
+  const cylX = (r1, r2, l, seg = 20) => new T.CylinderGeometry(r1, r2, l, seg);   // rotate rz = -HALF to lie along x
+  const tube = (pts, r, closed = false, seg = 64) => new T.TubeGeometry(new T.CatmullRomCurve3(pts, closed), seg, r, 8, closed);
+  const V = (x, y, z) => new T.Vector3(x, y, z);
+  const roundRect = (w, d, r) => {
+    const sh = new T.Shape(), x = -w / 2, y = -d / 2;
+    sh.moveTo(x + r, y); sh.lineTo(x + w - r, y); sh.quadraticCurveTo(x + w, y, x + w, y + r);
+    sh.lineTo(x + w, y + d - r); sh.quadraticCurveTo(x + w, y + d, x + w - r, y + d);
+    sh.lineTo(x + r, y + d); sh.quadraticCurveTo(x, y + d, x, y + d - r);
+    sh.lineTo(x, y + r); sh.quadraticCurveTo(x, y, x + r, y);
+    return sh;
+  };
+  const bay = fa + (len / 2 - fa) * 0.15;
+
+  // ENGINE — inline-four, mounted lengthways: block, head, red cam cover with
+  // coil packs, intake runners + plenum, exhaust manifold, belt drive, flywheel
+  {
+    const g = part("engine", P(bay, R * 1.3, 0)), e = "engine";
+    mk(g, e, new T.BoxGeometry(.56, .36, .40), "alu");
+    mk(g, e, new T.BoxGeometry(.50, .10, .32), "dark", 0, -.23, 0);
+    mk(g, e, new T.BoxGeometry(.56, .12, .36), "alu", 0, .24, 0);
+    mk(g, e, new T.BoxGeometry(.52, .07, .26), "red", 0, .335, 0);
+    [-.18, -.06, .06, .18].forEach(x => {
+      mk(g, e, new T.CylinderGeometry(.028, .028, .07, 12), "plastic", x, .39, 0);
+      mk(g, e, tube([V(x, .29, -.18), V(x, .30, -.30), V(x, .2, -.36)], .024, false, 16), "alu");
+      mk(g, e, tube([V(x, .2, .2), V(x, .15, .27), V(x * .5, -.02, .3)], .022, false, 16), "rust");
+    });
+    mk(g, e, new T.CapsuleGeometry(.05, .44, 6, 12), "alu", 0, .2, -.38, 0, 0, HALF);
+    mk(g, e, new T.CylinderGeometry(.035, .03, .16, 12), "rust", -.05, -.06, .32, HALF, 0, 0);
+    mk(g, e, cylX(.085, .085, .04), "steel", .30, -.12, 0, 0, 0, -HALF);       // crank pulley
+    mk(g, e, cylX(.05, .05, .04), "steel", .30, .07, .07, 0, 0, -HALF);        // water pump
+    mk(g, e, cylX(.045, .045, .05), "steel", .30, .14, -.16, 0, 0, -HALF);     // alternator pulley
+    mk(g, e, new T.CylinderGeometry(.06, .06, .12, 16), "alu", .26, .14, -.16, 0, 0, -HALF);
+    mk(g, e, tube([V(.33, -.2, 0), V(.33, -.05, .1), V(.33, .12, .12), V(.33, .19, -.16), V(.33, .07, -.22), V(.33, -.12, -.09)], .008, true, 48), "rubber");
+    mk(g, e, cylX(.15, .15, .03, 32), "steel", -.31, -.05, 0, 0, 0, -HALF);    // flywheel
+  }
+
+  // RADIATOR — core with fins, side tanks, fan and shroud, hoses
+  {
+    const g = part("radiator", P(fa + (len / 2 - fa) * .62, R * 1.2, 0)), r = "radiator";
+    mk(g, r, new T.BoxGeometry(.04, .36, .62), "dark");
+    for (let i = -6; i <= 6; i++) mk(g, r, new T.BoxGeometry(.046, .006, .6), "alu", 0, i * .026, 0);
+    mk(g, r, new T.BoxGeometry(.06, .40, .05), "plastic", 0, 0, -.335);
+    mk(g, r, new T.BoxGeometry(.06, .40, .05), "plastic", 0, 0, .335);
+    mk(g, r, new T.CylinderGeometry(.16, .16, .05, 32, 1, true), "plastic", -.06, 0, 0, 0, 0, -HALF);
+    mk(g, r, cylX(.035, .035, .05), "plastic", -.07, 0, 0, 0, 0, -HALF);
+    for (let i = 0; i < 7; i++) {
+      const a = i / 7 * Math.PI * 2;
+      mk(g, r, new T.BoxGeometry(.012, .11, .045), "plastic", -.07, Math.sin(a) * .08, Math.cos(a) * .08, a, 0, 0);
+    }
+    mk(g, r, tube([V(-.02, .16, -.3), V(-.12, .17, -.3), V(-.25, .1, -.2)], .022, false, 16), "rubber");
+  }
+
+  // BATTERY — case, lid, red (+) and black (−) terminals with cables
+  {
+    const g = part("battery", P(fa - len * .01, R * 1.75, -half * .55)), b = "battery";
+    mk(g, b, new T.BoxGeometry(.26, .18, .17), "plastic");
+    mk(g, b, new T.BoxGeometry(.25, .025, .16), "dark", 0, .1, 0);
+    mk(g, b, new T.CylinderGeometry(.016, .018, .035, 12), "red", .085, .13, .045);
+    mk(g, b, new T.CylinderGeometry(.016, .018, .035, 12), "plastic", -.085, .13, .045);
+    mk(g, b, tube([V(.085, .15, .045), V(.12, .2, .1), V(.25, .15, .25)], .012, false, 12), "red");
+    mk(g, b, tube([V(-.085, .15, .045), V(-.12, .19, .1), V(-.25, .05, .2)], .012, false, 12), "plastic");
+  }
+
+  // ABS / ESC — hydraulic block with pump motor, brake-line ports and the ECU connector
+  {
+    const g = part("abs", P(fa - len * .05, R * 1.75, half * .55)), a = "abs";
+    mk(g, a, new T.BoxGeometry(.12, .08, .10), "alu");
+    mk(g, a, new T.CylinderGeometry(.035, .035, .08, 16), "plastic", 0, 0, -.09, HALF, 0, 0);
+    mk(g, a, new T.BoxGeometry(.11, .07, .03), "plastic", 0, 0, .065);
+    [-.035, 0, .035].forEach(x => [-.02, .02].forEach(z => mk(g, a, new T.CylinderGeometry(.007, .007, .03, 8), "copper", x, .055, z)));
+  }
+
+  // CLUTCH — flywheel side: pressure plate with diaphragm fingers and the friction disc
+  {
+    const g = part("clutch", P(fa - len * .1, R * 1.1, 0)), c = "clutch";
+    mk(g, c, cylX(.13, .13, .035, 32), "steel", 0, 0, 0, 0, 0, -HALF);
+    mk(g, c, cylX(.12, .12, .012, 32), "friction", .028, 0, 0, 0, 0, -HALF);
+    for (let i = 0; i < 12; i++) {
+      const a = i / 12 * Math.PI * 2;
+      mk(g, c, new T.BoxGeometry(.01, .07, .018), "chrome", -.024, Math.sin(a) * .06, Math.cos(a) * .06, a, 0, 0);
+    }
+    mk(g, c, new T.TorusGeometry(.13, .008, 6, 40), "dark", -.018, 0, 0, 0, HALF, 0);
+  }
+
+  // GEARBOX — bell housing, ribbed case, tail housing and the gear lever
+  {
+    const g = part("gearbox", P(fa - len * .19, R * 1.0, 0)), x = "gearbox";
+    mk(g, x, cylX(.11, .17, .16, 28), "alu", .2, .02, 0, 0, 0, -HALF);
+    mk(g, x, new T.BoxGeometry(.32, .19, .2), "alu");
+    [-.1, 0, .1].forEach(dx => mk(g, x, new T.BoxGeometry(.012, .2, .21), "dark", dx, 0, 0));
+    mk(g, x, cylX(.05, .065, .22, 20), "alu", -.26, -.02, 0, 0, 0, -HALF);
+    mk(g, x, new T.CylinderGeometry(.012, .012, .3, 10), "chrome", -.08, .24, 0, 0, 0, .25);
+    mk(g, x, new T.SphereGeometry(.035, 16, 12), "plastic", -.12, .39, 0);
+  }
+
+  // DRIVESHAFT — tube between the gearbox and the differential with universal joints
+  {
+    const start = fa - len * .19 - .37 * S, end = ra + .16 * S, mid = (start + end) / 2, L0 = (start - end) / S;
+    const g = part("driveshaft", P(mid, R * .78, 0)), d = "driveshaft";
+    mk(g, d, cylX(.033, .033, L0 - .08, 20), "steel", 0, 0, 0, 0, 0, -HALF);
+    [L0 / 2 - .03, -L0 / 2 + .03].forEach(x0 => {
+      mk(g, d, new T.TorusGeometry(.03, .009, 8, 20), "dark", x0, 0, 0, 0, HALF, 0);
+      mk(g, d, new T.BoxGeometry(.012, .08, .012), "chrome", x0, 0, 0);
+      mk(g, d, new T.BoxGeometry(.012, .012, .08), "chrome", x0, 0, 0);
+    });
+  }
+
+  // DIFFERENTIAL — the "pumpkin", rear cover, pinion nose and axle tubes to both wheels
+  {
+    const g = part("differential", P(ra, R, 0)), d = "differential", ax = half / S * .82;
+    mk(g, d, new T.SphereGeometry(.14, 28, 20), "dark");
+    mk(g, d, cylX(.12, .12, .03, 28), "steel", -.12, 0, 0, 0, 0, -HALF);
+    mk(g, d, cylX(.05, .07, .14, 18), "dark", .15, 0, 0, 0, 0, -HALF);
+    mk(g, d, new T.CylinderGeometry(.04, .045, ax * 2, 16), "dark", 0, 0, 0, HALF, 0, 0);
+  }
+
+  // FUEL TANK — moulded tank under the rear seat, filler neck to the side, pump flange on top
+  {
+    const g = part("fuel", P(ra + len * .14, R * .75, 0)), f = "fuel";
+    const geo = new T.ExtrudeGeometry(roundRect(.55, 1.0, .12), { depth: .2, bevelEnabled: true, bevelThickness: .03, bevelSize: .03, bevelSegments: 3, curveSegments: 8 });
+    geo.translate(0, 0, -.1);
+    mk(g, f, geo, "plastic", 0, 0, 0, -HALF, 0, 0);
+    mk(g, f, new T.CylinderGeometry(.07, .07, .03, 24), "steel", .05, .14, -.15);
+    mk(g, f, tube([V(-.1, .08, .45), V(-.2, .25, .6), V(-.35, .45, .82)], .03, false, 20), "rubber");
+  }
+
+  // EXHAUST — down-pipe, catalytic converter, middle pipe, silencer and tailpipe
+  {
+    const g = part("exhaust", P(0, 0, 0), 1), x = "exhaust", wE = half * .3;
+    const pts = [P(bay, R * 1.05, half * .16), P(bay - len * .06, R * .5, wE), P(bay - len * .2, R * .42, wE), P(ra + len * .2, R * .45, wE), P(ra - len * .12, R * .5, wE), P(-len / 2 + len * .02, R * .55, wE * 1.2)];
+    // the group is in car space here (scale 1), so points are converted back to its local frame
+    const toLocal = (v) => V(v.dot(L), v.y, v.dot(Rt));
+    mk(g, x, tube(pts.map(toLocal), .025 * S, false, 80), "rust");
+    const at = (u, y) => [u, y, wE];
+    const cat = mk(g, x, new T.CapsuleGeometry(.07 * S, .22 * S, 6, 16), "steel", ...at(bay - len * .13, R * .43), 0, 0, HALF);
+    cat.scale.set(1, 1, .8);
+    const muf = mk(g, x, new T.CapsuleGeometry(.11 * S, .3 * S, 6, 20), "steel", ...at(ra - len * .06, R * .5), 0, 0, HALF);
+    muf.scale.set(1, .7, 1.25);
+    mk(g, x, cylX(.035 * S, .035 * S, .1 * S, 16), "chrome", -len / 2 + len * .01, R * .55, wE * 1.2, 0, 0, -HALF);
+  }
+
+  // STEERING — wheel (three spokes) in front of the driver on the right, column, rack and tie rods
+  {
+    const drvU = fa - (fa - ra) * .42, drvW = half * .42;
+    const g = part("steering", P(drvU, hgt * .62, drvW)), s = "steering";
+    const w = new T.Group(); w.rotation.set(0, 0, .4); g.add(w);
+    const wm = (geo, kind, x, y, z, rx, ry, rz) => mk(w, s, geo, kind, x, y, z, rx, ry, rz);
+    wm(new T.TorusGeometry(.19, .018, 12, 48), "rubber", 0, 0, 0, 0, HALF, 0);
+    wm(new T.CylinderGeometry(.065, .065, .05, 24), "plastic", 0, 0, 0, 0, 0, HALF);
+    [HALF, HALF + 2.2, HALF - 2.2].forEach(a => wm(new T.BoxGeometry(.02, .17, .04), "plastic", 0, Math.sin(a) * .09, Math.cos(a) * .09, a - HALF, 0, 0));
+    mk(g, s, new T.CylinderGeometry(.022, .022, .62, 12), "steel", .27, -.2, 0, 0, 0, HALF + .4);
+    const rack = part("steering", P(fa - len * .04, R * 1.05, 0)), rw = half / S * .62;
+    mk(rack, s, new T.CylinderGeometry(.03, .03, rw * 2, 16), "alu", 0, 0, 0, HALF, 0, 0);
+    [-1, 1].forEach(k => {
+      mk(rack, s, new T.CylinderGeometry(.012, .012, .25, 8), "steel", 0, 0, k * (rw + .12), HALF, 0, 0);
+      mk(rack, s, new T.CylinderGeometry(.03, .022, .07, 12), "rubber", 0, 0, k * (rw - .02), HALF, 0, 0);
+    });
+  }
+
+  // AIRBAGS — inflated cushions: steering wheel, passenger dashboard and side curtains
+  {
+    const drvU = fa - (fa - ra) * .42, drvW = half * .42;
+    const g = part("airbags", P(drvU - len * .03, hgt * .64, drvW)), a = "airbags";
+    mk(g, a, new T.SphereGeometry(.2, 24, 16), "fabric").scale.set(.45, 1, 1);
+    const pg = part("airbags", P(drvU + len * .01, hgt * .62, -drvW));
+    mk(pg, a, new T.SphereGeometry(.26, 24, 16), "fabric").scale.set(.7, .8, 1.1);
+    [-1, 1].forEach(k => {
+      const cg = part("airbags", P(fa - (fa - ra) * .6, hgt * .7, k * half * .88));
+      mk(cg, a, new T.BoxGeometry(1.4, .3, .03), "fabric");
+    });
+  }
+
+  // SUSPENSION — at each corner: coil spring around a damper, top mount and a lower arm
+  {
+    const coil = () => {
+      const pts = [];
+      for (let i = 0; i <= 140; i++) { const t = i / 140, an = t * 6.5 * Math.PI * 2; pts.push(V(Math.cos(an) * .075, t * .32, Math.sin(an) * .075)); }
+      return new T.TubeGeometry(new T.CatmullRomCurve3(pts), 180, .011, 6, false);
+    };
+    [fa, ra].forEach(ax => [-1, 1].forEach(k => {
+      const g = part("suspension", P(ax, R * .95, k * (half - wid * .2))), s = "suspension";
+      mk(g, s, coil(), "red");
+      mk(g, s, new T.CylinderGeometry(.03, .03, .3, 14), "dark", 0, .15, 0);
+      mk(g, s, new T.CylinderGeometry(.011, .011, .18, 10), "chrome", 0, .38, 0);
+      mk(g, s, new T.CylinderGeometry(.075, .075, .03, 20), "rubber", 0, .46, 0);
+      mk(g, s, new T.BoxGeometry(.06, .025, .34), "steel", 0, -.04, -k * .14);
+    }));
+  }
 
   // anchors (hotspot positions)
+  car.updateMatrixWorld(true);
   const centreParts = (pid) => { const b = new T.Box3(); (meshesFor[pid] || []).forEach(m => b.expandByObject(m)); return b.isEmpty() ? null : b.getCenter(new T.Vector3()); };
   for (const p of C.parts) anchors[p.id] = centreParts(p.id);
   // tyres/brakes: front wheel on the camera's side
@@ -307,7 +484,7 @@ C.select = (id, fly = true) => {
     mats.forEach(mm => {
       if (!mm.userData.e0) mm.userData.e0 = { c: mm.emissive ? mm.emissive.clone() : null, i: mm.emissiveIntensity ?? 1 };
       const on = pid === C.sel;
-      if (o.userData.synthetic) { mm.opacity = C.sel && !on ? 0.28 : 0.95; mm.emissiveIntensity = on ? 1 : 0.25; }
+      if (o.userData.synthetic) { mm.opacity = C.sel && !on ? 0.3 : 1; mm.emissiveIntensity = on ? 0.5 : 0; }
       else if (mm.emissive) { mm.emissive.copy(on ? new T.Color(GROUP_COL.chassis) : mm.userData.e0.c); mm.emissiveIntensity = on ? 0.8 : mm.userData.e0.i; }
     });
   });
@@ -383,7 +560,7 @@ function loop() {
   if (!C.el || !C.el.isConnected || document.hidden) return;   // stops itself off-screen
   controls.update();
   if (C.sel) {
-    const t = clock.getElapsedTime(), k = 0.65 + Math.sin(t * 4) * 0.35;
+    const t = clock.getElapsedTime(), k = 0.3 + (Math.sin(t * 4) + 1) * 0.2;
     (meshesFor[C.sel] || []).forEach(o => { if (o.userData.synthetic) o.material.emissiveIntensity = k; });
     dirty = true;
   }
