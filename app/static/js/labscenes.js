@@ -83,7 +83,9 @@ def("stopping", {
     if (st.surf !== "dry") S.strip(0.05, sc.z(span), 3.5, 20, st.surf === "wet" ? "#7dd3fc" : st.surf === "gravel" ? "#a8a29e" : "#78716c", st.surf === "wet" ? 0.28 : 0.35, 0.015);
     lanes.forEach((l, i) => {
       const x = i ? LR : LL, cc = calcs[i], tau = p * tMax, a = l[1] * 9.81;
-      const m = tau < st.rt ? cc.v * tau : Math.min(cc.total, cc.react + cc.v * (tau - st.rt) - a * (tau - st.rt) ** 2 / 2);
+      const imp0 = Labs.impact(st.kmh, st.rt, l[1], st.hz);
+      let m = tau < st.rt ? cc.v * tau : Math.min(cc.total, cc.react + cc.v * (tau - st.rt) - a * (tau - st.rt) ** 2 / 2);
+      if (imp0 > 0) m = Math.min(m, st.hz - 0.3 / sc.k);          // contact with the child, not through her
       distStrip(S, x + 1.15, sc.z(0), sc.z(cc.react), REACT); distStrip(S, x + 1.15, sc.z(cc.react), sc.z(cc.total), BRAKE);
       S.strip(x - 1.5, sc.z(cc.total) - 0.12, x + 1.5, sc.z(cc.total) + 0.12, "#f8fafc", 0.95);
       S.car(x, sc.z(m) + 2.1, { color: i ? "#0ea5e9" : YOU, brake: tau >= st.rt && p > 0 });
@@ -118,8 +120,8 @@ def("following", {
     const span = Math.max(r.d + 15, last.xl + 12, 40), sc = scaler(span, 75);
     const f = c.idle ? r.frames[0] : r.frames[Math.round(c.t * (r.frames.length - 1))];
     const gapM = f.xl - f.xy;
-    S.strip(LL - 0.25, sc.z(f.xl) + 2.15, LL + 0.25, sc.z(f.xy) - 2.15, gapM < r.v * 1 ? BAD : GOOD, 0.75);
-    S.car(LL, sc.z(f.xl) - 0.3, { color: "#dc2626", brake: !c.idle });
+    S.strip(LL - 0.25, sc.z(f.xl), LL + 0.25, sc.z(f.xy), gapM < r.v * 1 ? BAD : GOOD, 0.75);
+    S.car(LL, sc.z(f.xl) - 2.2, { color: "#dc2626", brake: !c.idle });
     S.car(LL, sc.z(f.xy) + 2.15, { color: YOU, brake: !c.idle && f.t >= c.st.rt });
     distStrip(S, LL + 1.2, sc.z(0) + 2.15, sc.z(r.react) + 2.15, REACT);
     S.label("gap", [LL, 1.9, (sc.z(f.xl) + sc.z(f.xy)) / 2], `${fx(Math.max(0, gapM))} m`, gapM < 1 ? "bad big" : "tag");
@@ -199,7 +201,7 @@ def("abs", {
     S.cone(LL, 0, -16, 0.35, 0.8, "#f97316"); S.cyl(LL, 0.35, -16, 0.28, 0.12, "#f8fafc");
     const path = (q) => { const z = 6 - q * 30, x = ok ? LL + Math.sin(clamp((q - 0.25) / 0.5, 0, 1) * Math.PI / 2) * 3.4 * (q > 0.25 ? 1 : 0) : LL; return [x, z]; };
     for (let i = 0; i <= 30; i += 2) { const [x, z] = path(i / 30); S.cyl(x, 0.01, z, 0.12, 0.02, ok ? GOOD : BAD, 0.6); }
-    const qEnd = ok ? 0.9 : 0.68, q = qEnd * (1 - (1 - p) ** 2), [cx, cz] = path(q), [nx, nz] = path(Math.min(1, q + 0.02));
+    const qEnd = ok ? 0.9 : 0.648, q = qEnd * (1 - (1 - p) ** 2), [cx, cz] = path(q), [nx, nz] = path(Math.min(1, q + 0.02));
     if (st.pedal > 0) {
       if (locked) [-0.8, 0.8].forEach((dx) => S.strip(LL + dx - 0.12, cz + 1.3, LL + dx + 0.12, 4.5, "#111111", 0.6, 0.014));
       else if (st.abs === "on" && st.pedal >= 30) for (let z = 4; z > cz + 1.3; z -= 1.4) [-0.8, 0.8].forEach((dx) => S.strip(LL + dx - 0.12, z - 0.6, LL + dx + 0.12, z, "#111111", 0.35, 0.014));
@@ -271,7 +273,7 @@ def("headlights", {
   scene(S, c) {
     S.mood("labnight");
     const st = c.st, cc = Labs.hlCalc(st), span = Math.max(cc.D, cc.stop, 60) * 1.12, sc = scaler(span, 80);
-    const end = Math.min(cc.stop, cc.D + 2), p = c.idle ? 0 : c.t;
+    const end = Math.min(cc.stop, cc.D - 0.35 / Math.min(1, 80 / span)), p = c.idle ? 0 : c.t;
     const m = p < 0.42 ? cc.react * (p / 0.42) : cc.react + (end - cc.react) * ease((p - 0.42) / 0.58);
     const z = sc.z(m) + 2.1, reach = cc.D * sc.k;
     S.car(LL, z, { color: YOU, brake: p > 0.42 });
@@ -294,13 +296,15 @@ def("fog", {
   scene(S, c) {
     const st = c.st, r = c.r, p = c.idle ? 0 : c.t;
     S.fog(st.vis * 0.75);
-    S.car(LL, -st.vis + 1, { color: "#94a3b8" });
+    const lz = 4 - st.vis - 2.2;
+    S.car(LL, lz, { color: "#94a3b8" });
     const blink = Math.sin(c.time * 7) > 0; S.live();
-    if (blink) [-0.64, 0.64].forEach((dx) => S.glow([LL + dx, 0.8, -st.vis + 3.2], 0.9, [1, 0.55, 0.05]));
-    const z = -Math.min(r.stop, st.vis) * p + 6;
+    if (blink) [-0.64, 0.64].forEach((dx) => S.glow([LL + dx, 0.8, lz + 2.2], 0.9, [1, 0.55, 0.05]));
+    const z = 4 + 2.2 - Math.min(r.stop, st.vis - 0.3) * p;
+    if (p >= 1 && r.stop > st.vis && !c.idle) S.glow([LL, 0.8, 4 - st.vis], 2.4, [1, 0.25, 0.1]);
     S.car(LL, z, { color: YOU, brake: p > 0.3 });
     distStrip(S, LL + 1.25, 4, 4 - r.stop, r.stop <= st.vis ? GOOD : BAD);
-    S.label("vis", [LL, 2.4, -st.vis + 1], `${tt("fgStopped")} · ${st.vis} m`, "tag");
+    S.label("vis", [LL, 2.4, lz], `${tt("fgStopped")} · ${st.vis} m`, "tag");
     S.label("stop", [LL + 1.3, 0.3, 4 - r.stop], `${tt("totalDist")} <b>${fx(r.stop)} m</b>`, r.stop <= st.vis ? "good" : "bad");
     S.cam([LL + 3.5, 3.4, z + 11], [LL, 1, z - 30], 40);
   },
@@ -336,7 +340,12 @@ def("truckzones", {
     S.label("b", [st.x, 2, -by], tt(hid ? "tzHidden" : "tzSeen"), hid ? "bad" : "good");
     S.cam([9, 24, 16], [0, 0, -3], 44);
   },
-  click(q, c) { c.set({ x: clamp(Math.round(q[0] * 2) / 2, -6, 6), y: clamp(Math.round(-q[1] * 2) / 2, -16, 9) }); },
+  click(q, c) {
+    const v = TZ[c.st.veh];
+    let x = clamp(Math.round(q[0] * 2) / 2, -6, 6); const y = clamp(Math.round(-q[1] * 2) / 2, -16, 9);
+    if (Math.abs(x) < v.W / 2 + 0.6 && Math.abs(y) < v.L / 2 + 1) x = (x < 0 ? -1 : 1) * (v.W / 2 + 1);   // a rider can't be inside the lorry
+    c.set({ x, y });
+  },
 });
 
 def("blindspot", {
@@ -507,10 +516,12 @@ def("gap", {
       for (let x = -220; x < 120; x += 9) b.flat(x, -w / 2 - 0.07, x + 4.5, -w / 2 + 0.07, 0.012, K.C.white, 0, 0.2);
       for (let x = -3.4; x < 3.4; x += 0.9) b.flat(x, 0.2, x + 0.5, 0.35, 0.013, K.C.white, 0, 0.2);
       return b; }, M.t(0, 0, 0));
-    const T = Math.max(r.tta, r.need) + 1.5, tau = P0(c) * T, v = st.dist / r.tta;
-    const ox = -st.dist + v * tau, cross = clamp(tau / r.need, 0, 1), cz = 3 - (w + 6) * sm(cross);
-    const yourZone = cz < 1 && cz > -w - 1, theirZone = Math.abs(ox) < 4;
-    const crash = !c.idle && yourZone && theirZone;
+    const T = Math.max(r.tta, r.need) + 1.5, v = st.dist / r.tta;
+    const at = (tau) => { const ox = -st.dist + v * tau, cz = 3 - (w + 6) * sm(clamp(tau / r.need, 0, 1)); return [ox, cz]; };
+    const touching = ([ox, cz]) => Math.abs(cz - (-w * 0.72)) < 0.95 + 2.25 && Math.abs(ox - LL) < 2.25 + 0.95;
+    let tc = Infinity; for (let k = 0; k <= 400; k++) { const tk = T * k / 400; if (touching(at(tk))) { tc = tk; break; } }
+    const tau = Math.min(P0(c) * T, tc), [ox, cz] = at(tau);
+    const crash = !c.idle && tau >= tc;
     S.car(LL, cz, { color: YOU });
     S.car(ox, -w * 0.72, { yaw: Math.PI / 2, color: "#dc2626", brake: crash });
     if (crash) S.glow([LL, 0.8, -w * 0.72], 2.6, [1, 0.25, 0.1]);
@@ -596,9 +607,9 @@ def("doorzone", {
     if (open > 0.3) S.box(x0 + 0.9, 0, -1.6, x0 + 1.9, 1.2, 0.4, BAD, 0.18);
     const bx = x0 + 0.9 + st.gap + 0.3, hit = st.gap < 0.6 && open > 0.6;
     let bz = 9 - 18 * p;
-    if (hit && bz < 0.2) bz = 0.2;
-    S.car(bx, bz, { kind: "cycle", id: "dzc", roll: hit && bz <= 0.2 ? 0.5 : 0 });
-    if (hit && bz <= 0.2 && !c.idle) S.glow([bx, 1, 0], 2, [1, 0.25, 0.1]);
+    if (hit && bz < 1.05) bz = 1.05;
+    S.car(bx, bz, { kind: "cycle", id: "dzc", roll: hit && bz <= 1.05 ? 0.5 : 0, solid: false });
+    if (hit && bz <= 1.05 && !c.idle) S.glow([bx, 1, 0.3], 2, [1, 0.25, 0.1]);
     S.ring(bx, bz, 1, lvl(cls), 0.95);
     S.rod([x0 + 0.9, 0.05, -4], [bx, 0.05, -4], 0.03, "#facc15");
     S.label("g", [(x0 + 0.9 + bx) / 2, 0.5, -4], `<b>${fx(st.gap, 1)} m</b>`, sayCls(c.r));
@@ -632,8 +643,8 @@ def("seatbelt", {
     const st = c.st, r = c.r, p = c.idle ? 1 : c.t, hit = clamp(p / 0.55, 0, 1), after = clamp((p - 0.55) / 0.45, 0, 1);
     S.box(-4, 0, -6.2, 4, 1.6, -5.4, "#9ca3af");
     [[-1.4, true], [1.4, false]].forEach(([x, belted], i) => {
-      const z = 2 - 5.85 * hit + 3.8 + (hit >= 1 ? -(st.crumple) * after * 0.3 : 0);
-      S.car(x, z - 3.8, { color: belted ? "#0ea5e9" : "#f97316", alpha: 0.38, id: "sb" + i, shadow: true });
+      const crush = (st.crumple + 0.25) * 0.6 * after, z = 2 - 5.25 * hit + 3.8 - crush / 2;
+      S.car(x, z - 3.8, { color: belted ? "#0ea5e9" : "#f97316", alpha: 0.38, id: "sb" + i, shadow: true, post: M.s(1, 1, 1 - crush / 4.4) });
       const dz = belted ? -0.18 * after : -1.1 * after, dy = belted ? 0 : 0.25 * after;
       S.person(x + 0.36, z - 3.8 + 0.25 + dz, { id: "dummy" + i, color: "#fde047", sit: true, y: -0.45 + dy, lean: belted ? -0.25 * after : -0.7 * after });
       if (belted) S.rod([x + 0.62, 1.38, z - 3.8 + 0.35 + dz], [x + 0.12, 0.65, z - 3.8 + 0.15 + dz], 0.03, "#f97316");
@@ -651,7 +662,7 @@ def("helmet", {
   env: { kind: "studio" }, dur: 2.2,
   scene(S, c) {
     const st = c.st, r = c.r, ph = P1(c), fall = ph < 0.6 ? 1 - (ph / 0.6) ** 2 : 0, squash = ph >= 0.6 && ph < 0.8 ? Math.sin((ph - 0.6) / 0.2 * Math.PI) : 0;
-    const y = 0.42 + fall * 1.4, hr = 0.2, crush = r.on ? 0.12 * squash : 0.02 * squash;
+    const rest = st.helmet === "yes" ? 0.275 : 0.2, y = rest + fall * 1.4, hr = 0.2, crush = r.on ? 0.12 * squash : 0.02 * squash;
     S.sph(0, y - crush * 0.5, 0, hr, "#c68642");
     if (st.helmet === "yes") {
       const tilt = st.strap === "loose" ? 0.5 * squash + 0.2 : 0;
@@ -698,7 +709,7 @@ def("childseat", {
     const n = Math.min(24, Math.max(1, Math.round(r.w / 50)));
     for (let i = 0; i < n; i++) {
       const drop = clamp(p * n * 1.1 - i, 0, 1); if (drop <= 0) continue;
-      const col = i % 4, row = Math.floor(i / 4) % 3, lay = Math.floor(i / 12), y = lay * 0.36 + (1 - sm(drop)) * 2.5;
+      const col = i % 4, row = Math.floor(i / 4) % 3, lay = Math.floor(i / 12), y = lay * 0.33 + (1 - sm(drop)) * 2.5;
       S.box(0.6 + col * 0.62, y, -0.9 + row * 0.62, 1.15 + col * 0.62, y + 0.33, -0.4 + row * 0.62, "#f1efe6");
     }
     S.label("w", [1.8, 1.2, -0.3], `= <b>${Math.round(r.w * p)} kg</b>`, "bad big");
@@ -963,27 +974,33 @@ def("tyresize", {
 /* =================== TRAFFIC & PLANNING =================== */
 
 def("overtaking", {
-  env: { kind: "road", length: 200 }, dur: 4.5,
+  env: { kind: "road", length: 220 }, dur: 5,
   scene(S, c) {
-    const st = c.st, r = c.r, tl = st.len / 8;
+    const st = c.st, r = c.r, tl = st.len / 8, TL = st.len / 2, CL = 2.2;   // half lengths (m)
     if (r.never) {
-      S.car(LL, -2, { kind: "truck", color: "#a16207", id: "ov", post: M.s(1, 1, tl), shadow: false });
-      S.car(LL, 2 + st.len / 2 + 6, { color: YOU });
+      S.car(LL, -2, { kind: "truck", color: "#a16207", id: "ov", post: M.s(1, 1, tl), lenScale: tl, shadow: false });
+      S.shadow(LL, -2, 1.6, 4.8 * tl);
+      S.car(LL, -2 + TL + 20 + CL, { color: YOU });
       S.label("n", [LL, 3, 0], `✕ ${tt("ovNever")}`, "bad big"); along(S, 20, -40); return;
     }
-    const sc = scaler(Math.max(r.need, 120) * 1.05, 80), p = P0(c), tau = r.t * p;
-    const vt = st.truck / 3.6, vy = st.you / 3.6, vo = st.onc / 3.6;
-    const gap0 = 20 + st.len / 2 + 2.2;
-    const truckM = vt * tau, youM = vy * tau - gap0, oncM = r.need - vo * tau;
-    const rel = youM - (truckM - gap0), q = clamp(rel / (r.dy - vt * r.t || 1), 0, 1);
-    const lane = q < 0.15 ? q / 0.15 : q > 0.85 ? (1 - q) / 0.15 : 1;
-    const z0 = 8;
-    S.car(LL, z0 - truckM * sc.k - 2, { kind: "truck", color: "#a16207", id: "ov", post: M.s(1, 1, tl), shadow: false });
-    S.car(LL + (LR - LL) * sm(clamp(lane, 0, 1)), z0 - youM * sc.k, { color: YOU, yaw: (q < 0.15 ? 0.15 : q > 0.85 ? -0.15 : 0) * (p > 0 && p < 1 ? 1 : 0) });
-    S.car(LR, z0 - oncM * sc.k, { yaw: Math.PI, color: "#e2e8f0" });
-    S.strip(LR - 0.35, z0 - r.need * sc.k, LR + 0.35, z0, r.need > 400 ? BAD : GOOD, 0.6);
+    /* the manoeuvre in real metres relative to the lorry: start 20 m behind
+       it, finish 20 m ahead of it; out in the right lane only while
+       alongside (plus a safety margin) */
+    const p = P0(c), tau = r.t * p, vt = st.truck / 3.6, vo = st.onc / 3.6, dv = (st.you - st.truck) / 3.6;
+    const start = -(20 + TL + CL), rel = start + dv * tau;                 // our centre minus lorry centre (m, +ahead)
+    const clear = TL + CL + 4, lane = 1 - sm((Math.abs(rel) - clear) / 9);
+    const sc = scaler(Math.max(r.need, 120) * 1.05, 80), z0 = 2;
+    const truckZ = z0 - vt * tau * sc.k - TL, youZ = truckZ - rel, x = LL + (LR - LL) * lane;
+    const head = !c.idle && p > 0 && p < 1 ? (Math.abs(rel) > clear ? 0.12 * Math.sign(-rel) * (lane > 0.02 && lane < 0.98 ? 1 : 0) : 0) : 0;
+    S.car(LL, truckZ, { kind: "truck", color: "#a16207", id: "ov", post: M.s(1, 1, tl), lenScale: tl, shadow: false });
+    S.shadow(LL, truckZ, 1.6, 4.8 * tl);
+    S.car(x, youZ, { color: YOU, yaw: head });
+    const vy = st.you / 3.6, D = Math.max(0, r.need - (vy + vo) * tau);   // real gap to the oncoming car
+    const oncZ = youZ - 2 * CL - 0.3 - D * sc.k;
+    S.car(LR, oncZ, { yaw: Math.PI, color: "#e2e8f0" });
+    S.strip(LR - 0.35, z0 - r.need * sc.k, LR + 0.35, z0, r.need > 400 ? BAD : GOOD, 0.55);
     S.label("n", [LR, 2.3, z0 - r.need * sc.k], `${tt("ovNeed")} <b>${Math.round(r.need)} m</b> · ${fx(r.t)} s`, sayCls(r));
-    along(S, 22, z0 - r.need * sc.k);
+    S.cam([9, 9, youZ + 16], [0, 0, youZ - 18], 44);
   },
 });
 

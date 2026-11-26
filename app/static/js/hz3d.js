@@ -594,6 +594,50 @@ const MOODS = {
 };
 const THEME = { ped: "town", town: "town", junc: "town", two: "suburb", heavy: "suburb", hwy: "highway", rural: "rural", wx: "rural" };
 
+/* ---------- contact physics ----------
+   Bodies are oriented rectangles on the ground (half length/width in metres,
+   plus a small clearance). Scene data moves actors along scripted paths; this
+   keeps solid bodies from passing into each other: when two overlap, the one
+   that is moving (the faster) is held back along its own path until they
+   just touch — it has braked to a stop behind, or it is in contact. */
+const FOOT = { car: [2.2, 0.92], bus: [5.3, 1.28], truck: [4.1, 1.24], auto: [1.4, 0.7], bike: [1.0, 0.38], cycle: [0.92, 0.3], ped: [0.22, 0.24], cow: [1.0, 0.36], dog: [0.45, 0.16], ball: [0.11, 0.11], ego: [2.2, 0.92] };
+const CLEAR = 0.03;
+function obb(o) { const f = FOOT[o.kind] || FOOT.car, s = o.sc || 1; return { x: o.X, z: o.Z, y: o.Y, hl: f[0] * s * (o.ls || 1) + CLEAR, hw: f[1] * s + CLEAR }; }
+function overlap(a, b) {
+  const ax = [[Math.sin(a.y), -Math.cos(a.y)], [Math.cos(a.y), Math.sin(a.y)]], bx = [[Math.sin(b.y), -Math.cos(b.y)], [Math.cos(b.y), Math.sin(b.y)]];
+  const dx = b.x - a.x, dz = b.z - a.z;
+  for (const n of ax.concat(bx)) {
+    const d = Math.abs(dx * n[0] + dz * n[1]);
+    const ra = a.hl * Math.abs(ax[0][0] * n[0] + ax[0][1] * n[1]) + a.hw * Math.abs(ax[1][0] * n[0] + ax[1][1] * n[1]);
+    const rb = b.hl * Math.abs(bx[0][0] * n[0] + bx[0][1] * n[1]) + b.hw * Math.abs(bx[1][0] * n[0] + bx[1][1] * n[1]);
+    if (d > ra + rb) return false;
+  }
+  return true;
+}
+/* bodies: [{X, Z, Y, kind, sc, vx, vz, fixed}] — moves X/Z of the movers in place */
+function resolveContacts(bodies) {
+  for (let pass = 0; pass < 3; pass++) {
+    let any = false;
+    for (let i = 0; i < bodies.length; i++) for (let j = i + 1; j < bodies.length; j++) {
+      const A = bodies[i], Bd = bodies[j];
+      if ((A.kind === "ball" && Bd.kind === "ped") || (Bd.kind === "ball" && A.kind === "ped")) continue;   // a child may reach the ball
+      if (!overlap(obb(A), obb(Bd))) continue;
+      any = true;
+      const sa = A.fixed ? -1 : Math.hypot(A.vx || 0, A.vz || 0), sb = Bd.fixed ? -1 : Math.hypot(Bd.vx || 0, Bd.vz || 0);
+      const m = sb > sa || (sb === sa && !Bd.fixed) ? Bd : A, other = m === A ? Bd : A;
+      if (m.fixed) continue;
+      const sp = Math.hypot(m.vx || 0, m.vz || 0);
+      const u = sp > 1e-4 ? [-(m.vx) / sp, -(m.vz) / sp] : [-Math.sin(m.Y), Math.cos(m.Y)];
+      const x0 = m.X, z0 = m.Z, oo = obb(other);
+      let lo = 0, hi = 2 * (FOOT[m.kind] || FOOT.car)[0] + 2 * (FOOT[other.kind] || FOOT.car)[0] + 3;
+      for (let k = 0; k < 18; k++) { const mid = (lo + hi) / 2; m.X = x0 + u[0] * mid; m.Z = z0 + u[1] * mid; if (overlap(obb(m), oo)) lo = mid; else hi = mid; }
+      m.X = x0 + u[0] * hi; m.Z = z0 + u[1] * hi; m.contact = true; other.contact = true;
+    }
+    if (!any) break;
+  }
+  return bodies;
+}
+
 /* ---------- the renderer ---------- */
 const H3 = {};
 H3.supported = () => {
@@ -722,7 +766,8 @@ H3.mount = (canvas, scen, state, opts = {}) => {
       default: model = carModel(a.color);
     }
     const o = { a, id: a.id, kind: a.kind, yaw: null, phase: 0, last: null };
-    if (model) { o.m = mk(model.b); o.lights = model.lights; o.r = model.r; o.h = model.h; }
+    o.ls = a.kind === "bus" ? 0.73 : a.kind === "truck" && !/trac/.test(a.id) ? 0.86 : 1;
+    if (model) { o.m = mk(model.b); o.lights = { head: model.lights.head.map((l) => [l[0], l[1], l[2] * o.ls]), tail: model.lights.tail.map((l) => [l[0], l[1], l[2] * o.ls]) }; o.r = model.r * o.ls; o.h = model.h; }
     else {
       o.body = mk(parts.body); o.leg = mk(parts.leg); o.arm = parts.arm ? mk(parts.arm) : null;
       o.legs = parts.legs; o.sc = parts.scale || 1; o.r = parts.r; o.h = parts.h;
@@ -794,7 +839,7 @@ H3.mount = (canvas, scen, state, opts = {}) => {
   };
   const wrapZ = (z0) => { const t = ((z0 + scroll - Z0) % SPAN + SPAN) % SPAN; return t + Z0; };
 
-  const egoPos = () => ({ X: EGO.x, Z: EGO.z + ((state.ego && state.ego.y) || 0) * SZ });
+  const egoPos = () => ({ X: EGO.x, Z: egoShown != null ? egoShown : EGO.z + ((state.ego && state.ego.y) || 0) * SZ });
 
   /* per-frame actor transforms */
   const actorFrames = () => actors.map((o) => {
@@ -809,10 +854,21 @@ H3.mount = (canvas, scen, state, opts = {}) => {
       if (o.yaw == null) o.yaw = yaw;
       yaw = o.yaw;
     }
+    o.vx = o.last ? p.X - o.last.X : 0; o.vz = o.last ? p.Z - o.last.Z : 0;
     o.last = p;
-    o.X = p.X; o.Z = p.Z; o.Y = yaw;
+    o.X = p.X; o.Z = p.Z; o.Y = yaw; o.contact = false;
     return o;
   });
+  /* no body passes through another: actors and our car are solid */
+  let egoLastZ = null, egoShown = null;
+  const solveContacts = () => {
+    const raw = EGO.z + ((state.ego && state.ego.y) || 0) * SZ;
+    const egoB = { kind: "ego", X: EGO.x, Z: raw, Y: 0, vx: 0, vz: egoLastZ == null ? 0 : raw - egoLastZ, fixed: false };
+    egoLastZ = raw;
+    if (Math.abs(egoB.vz) < 1e-5) egoB.fixed = true;      // standing still: others yield to it
+    resolveContacts(actors.concat([egoB]));
+    egoShown = egoB.Z;
+  };
 
   const lightWorld = (o, l, X, Zz, yaw) => { const c = Math.cos(yaw), s = Math.sin(yaw); return [X + l[0] * c - l[2] * s, l[1], Zz + l[0] * s + l[2] * c]; };
 
@@ -844,7 +900,7 @@ H3.mount = (canvas, scen, state, opts = {}) => {
       if (opt.cullZ != null && o.Z - o.r * 0.55 > opt.cullZ) return;   // behind the camera: it's in the mirror
       const hz = state.hazard === o.id, tint = hz ? 0.18 + 0.12 * Math.sin(time * 6) : 0, brake = (state.brake || {})[o.id] ? 1 : 0;
       const base = M.trs(o.X, 0, o.Z, o.Y);
-      if (o.m) { drawMesh(o.m, base, brake, tint); return; }
+      if (o.m) { drawMesh(o.m, o.ls !== 1 ? M.mul(base, M.s(1, 1, o.ls)) : base, brake, tint); return; }
       if (o.kind === "ped") {
         const swing = o.moving || (state.walk || {})[o.id] ? Math.sin(o.phase) * 0.55 : 0, bob = Math.abs(Math.sin(o.phase)) * 0.025 * (swing ? 1 : 0);
         const root = M.mul(base, M.mul(M.t(0, bob, 0), M.s(o.sc, o.sc, o.sc)));
@@ -874,7 +930,7 @@ H3.mount = (canvas, scen, state, opts = {}) => {
     actors.forEach((o) => {
       if (opt.cullZ != null && o.Z - o.r * 0.55 > opt.cullZ) return;
       const big = { car: [1.35, 2.75], bus: [1.6, 5.9], truck: [1.6, 4.8], auto: [0.9, 1.6], bike: [0.45, 1.1], cycle: [0.35, 0.9], ped: [0.32, 0.32], cow: [0.55, 1.1], dog: [0.25, 0.45], ball: [0.16, 0.16] }[o.kind] || [1, 1];
-      shadow(o.X, o.Z, o.Y, big[0] * (o.sc || 1), big[1] * (o.sc || 1), md.shadow);
+      shadow(o.X, o.Z, o.Y, big[0] * (o.sc || 1), big[1] * (o.sc || 1) * (o.ls || 1), md.shadow);
     });
     if (!opt.mirror) { const e = egoPos(); shadow(e.X, e.Z, 0, 1.25, 2.6, md.shadow); }
     if (state.hazard && state.ring !== false) {
@@ -937,7 +993,7 @@ H3.mount = (canvas, scen, state, opts = {}) => {
     if (camT < 1) camT = Math.min(1, camT + dt / 0.8);
     if (shakeT > 0) shakeT = Math.max(0, shakeT - dt);
     if (opts.onSpeed) opts.onSpeed(spd);
-    actorFrames();
+    actorFrames(); solveContacts();
     if (RAIN) {
       const fall = 22 * dt, arr = new Float32Array(RAIN * 10);
       rainPts.forEach((p, i) => {
@@ -1033,6 +1089,8 @@ H3.mount = (canvas, scen, state, opts = {}) => {
       }
       return best;
     },
+    /* actors currently held in contact by the solid-body rule (tests) */
+    contacts() { return actors.filter((o) => o.contact).map((o) => o.id); },
     /* client coordinates of an actor in the main view (tests, keyboard focus rings) */
     where(id) {
       const o = actors.find((x) => x.id === id); if (!o || !lastVP) return null;
@@ -1053,7 +1111,7 @@ H3.mount = (canvas, scen, state, opts = {}) => {
   return api;
 };
 /* the toolkit, shared with the science-lab stage (lab3d.js) */
-H3.kit = { M, B, C, lin, mixc, shade, rng, hashStr, norm, cross, dot, sub, SHIRTS, PANTS,
+H3.kit = { resolveContacts, overlap, FOOT, M, B, C, lin, mixc, shade, rng, hashStr, norm, cross, dot, sub, SHIRTS, PANTS,
   carModel, busModel, truckModel, autoModel, bikeModel, cycleModel, personParts, cowModel, dogModel, ballModel,
   palm, broadTree, shrub, lamp, ePole, shop, keralaHouse, flats, signPost, signal, hill, milestone, barrierPost,
   VS, FS, VS2, FS2, VSKY, FSKY, prog, upload, MOODS };

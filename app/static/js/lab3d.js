@@ -145,7 +145,8 @@ L3.attach = (viz, id, get) => {
       for (let i = 0; i < 5; i++) envItems.push({ m: upload(gl, K.hill(77 + i)), M: M.trs((i - 2) * 120, 0, -260 - r() * 120, r() * 3) }); } }
 
   /* per-frame draw lists */
-  let opaque = [], trans = [], decals = [], glows = [], lines = [], labelsUsed = new Set(), live = false;
+  let opaque = [], trans = [], decals = [], glows = [], lines = [], bodies = [], labelsUsed = new Set(), live = false;
+  const prevPos = new Map();
   let moodName = envOpt.mood || (envOpt.kind === "studio" ? "studio" : "day"), fogVis = 0;
   const camTarget = { eye: [12, 8, 14], at: [0, 0.8, 0], fov: 42 }, camNow = { eye: [12, 8, 14], at: [0, 0.8, 0], fov: 42 };
   let camInit = false, orbit = { yaw: 0, pitch: 0, zoom: 1 };
@@ -186,8 +187,12 @@ L3.attach = (viz, id, get) => {
       }
       if (o.base) Mx = M.mul(o.base, Mx);
       if (o.post) Mx = M.mul(Mx, o.post);
-      (o.alpha != null && o.alpha < 1 ? trans : opaque).push({ m: model, M: Mx, o: { brake: o.brake ? 1 : 0, tint: o.tint || 0, tintC: o.tintC, mul: o.alpha != null ? [1, 1, 1, o.alpha] : null } });
-      if (o.shadow !== false && !o.base && !(o.alpha < 1)) { const sz = { car: [1.35, 2.75], bus: [1.6, 5.9], truck: [1.6, 4.8], auto: [0.9, 1.6], bike: [0.45, 1.1], cycle: [0.35, 0.9] }[kind] || [1.3, 2.7]; S.shadow(x, z, sz[0] * (o.scale || 1), sz[1] * (o.scale || 1), o.yaw || 0); }
+      const solid = !o.base && !(o.alpha < 1) && o.solid !== false;
+      const item = { m: model, M: Mx, o: null };
+      if (solid) bodies.push({ item, key: o.id || key + "#" + bodies.length, kind, X: x, Z: z, Y: o.yaw || 0, x0: x, z0: z, sc: o.scale || 1, ls: o.lenScale || 1, decal: decals.length });
+      item.o = { brake: o.brake ? 1 : 0, tint: o.tint || 0, tintC: o.tintC, mul: o.alpha != null ? [1, 1, 1, o.alpha] : null };
+      (o.alpha != null && o.alpha < 1 ? trans : opaque).push(item);
+      if (o.shadow !== false && !o.base && !(o.alpha < 1)) { const sz = { car: [1.35, 2.75], bus: [1.6, 5.9], truck: [1.6, 4.8], auto: [0.9, 1.6], bike: [0.45, 1.1], cycle: [0.35, 0.9] }[kind] || [1.3, 2.7]; S.shadow(x, z, sz[0] * (o.scale || 1), sz[1] * (o.scale || 1) * (o.lenScale || 1), o.yaw || 0); }
       return Mx;
     },
     person(x, z, o = {}) {
@@ -246,7 +251,7 @@ L3.attach = (viz, id, get) => {
   });
 
   /* run clock */
-  let runT = 1, runDur = 0, idle = true, dirty = true, alive = true, raf = 0, last = performance.now(), time = 0, lastCam = null;
+  let lastContacts = [], runT = 1, runDur = 0, idle = true, dirty = true, alive = true, raf = 0, last = performance.now(), time = 0, lastCam = null;
   const W = { w: 2, h: 2 };
   const resize = () => {
     const r = canvas.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -304,9 +309,24 @@ L3.attach = (viz, id, get) => {
 
   function render(dt) {
     dirty = false; live = false;
-    opaque = []; trans = []; decals = []; glows = []; lines = []; labelsUsed = new Set();
+    opaque = []; trans = []; decals = []; glows = []; lines = []; bodies = []; labelsUsed = new Set();
     const g0 = get();
     try { sc.scene(S, Object.assign({ t: runT, idle, time, running: runDur > 0 }, g0)); } catch (err) { console.warn("lab3d scene", id, err); }
+    /* solid bodies: no vehicle passes through another — the mover is held
+       back along its path until they touch (shared rule with the hazards) */
+    if (bodies.length > 1) {
+      bodies.forEach((b) => { const pv = prevPos.get(b.key); b.vx = pv ? b.X - pv[0] : 0; b.vz = pv ? b.Z - pv[1] : 0; });
+      K.resolveContacts(bodies);
+      bodies.forEach((b) => {
+        const dx = b.X - b.x0, dz = b.Z - b.z0;
+        if (Math.abs(dx) + Math.abs(dz) > 1e-6) {
+          const m = new Float32Array(b.item.M); m[12] += dx; m[14] += dz; b.item.M = m;
+          const d = decals[b.decal]; if (d && d.mode === 0) { const dm = new Float32Array(d.M); dm[12] += dx; dm[14] += dz; d.M = dm; }
+        }
+      });
+      lastContacts = bodies.filter((b) => b.contact).map((b) => b.key);
+    } else lastContacts = [];
+    bodies.forEach((b) => prevPos.set(b.key, [b.x0, b.z0]));
     /* camera: ease towards the scene's target, then orbit around the look-at point */
     if (!camInit) { camNow.eye = camTarget.eye.slice(); camNow.at = camTarget.at.slice(); camNow.fov = camTarget.fov; camInit = true; }
     const k = Math.min(1, dt * 5);
@@ -413,6 +433,7 @@ L3.attach = (viz, id, get) => {
   setTimeout(syncPlay, 0);
   const api = {
     dirty() { dirty = true; },
+    contacts() { return lastContacts.slice(); },
     /* a state change: show the settled picture */
     changed() { const was = runDur > 0; runT = 1; runDur = 0; idle = true; dirty = true; if (was || playBtn.hidden) syncPlay(); },
     run(dur = 2.2) { idle = false; if (!Motion.gsap || Motion.reduced()) { runT = 1; runDur = 0; dirty = true; syncPlay(); return; } runT = 0; runDur = dur; dirty = true; playBtn.hidden = true; },
@@ -422,6 +443,7 @@ L3.attach = (viz, id, get) => {
       const lc = gl.getExtension("WEBGL_lose_context"); if (lc) lc.loseContext();
     },
   };
+  L3.last = api;
   canvas.addEventListener("webglcontextlost", (ev) => { ev.preventDefault(); api.destroy(); wrap.remove(); viz.classList.remove("has3d", "show2d"); });
   return api;
 };
