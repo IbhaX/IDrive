@@ -213,7 +213,8 @@ function play(app, id) {
   const run = makeRunner(id, stage, (value, detail) => {
     const pts = points(id, value), prevPts = (P.gm || {})[id], isBest = prevPts == null || pts > prevPts;
     if (value != null && isFinite(value)) { P.gm = P.gm || {}; if (isBest) P.gm[id] = pts; Course.touchDay(); save(); }
-    res.innerHTML = `<div class="gresin"><span class="eyebrow">${e(u("gmScore"))}</span><b class="gval">${value == null ? "—" : fmt(id, value)}</b>${isBest && value != null ? `<span class="gnew">★ ${e(u("gmNewBest"))}</span>` : ""}${detail ? `<p>${detail}</p>` : ""}</div>`;
+    const prevV = prevPts == null ? null : fromPoints(id, prevPts);
+    res.innerHTML = `<div class="gresin"><span class="eyebrow">${e(u("gmScore"))} · ${e(u(DEF[id].lo ? "gmLowBetter" : "gmHighBetter"))}</span><b class="gval">${value == null ? "—" : fmt(id, value)}</b>${isBest && value != null ? `<span class="gnew">★ ${e(u("gmNewBest"))}</span>` : prevV != null ? `<span class="gprev">${e(u("gmBest"))}: ${fmt(id, prevV)}</span>` : ""}${detail ? `<p>${detail}</p>` : ""}</div>`;
     res.hidden = false; btn.querySelector("i").textContent = "↻"; btn.setAttribute("aria-label", I18n.one(u("tryAgain"))); btn.hidden = false;
     showBest();
     if (isBest && value != null && window.Motion && Motion.confetti) Motion.confetti();
@@ -225,6 +226,8 @@ function play(app, id) {
 /* ---------- shared bits for games ---------- */
 const rounds = (g, n, label) => g.hud(`${e(u(label || "gmRound"))} <b>${n}</b>`);
 const avg = (a) => a.reduce((s, x) => s + x, 0) / Math.max(1, a.length);
+const chips = (list) => `<span class="gchips">${list.map(([t, cls]) => `<span class="gchip ${cls || ""}">${t}</span>`).join("")}</span>`;
+const msChips = (times) => chips(times.map((ms) => [`${Math.round(ms)} ms`]));
 const metresAt = (ms, kmh = 60) => fx(kmh / 3.6 * ms / 1000, 1);
 
 /* =========================== REACTION =========================== */
@@ -241,7 +244,7 @@ def("brakelight", {
       if (state === "wait") { g.msg(t1("gmTooSoon"), "bad"); arm(); return; }
       if (state !== "go") return;
       const ms = g.now() - t0; times.push(ms); state = "done"; g.msg(`${Math.round(ms)} ms`, ms < 400 ? "good" : "", 800);
-      if (++n > R) g.after(700, () => g.end(avg(times), e(u("gmAt60", { m: metresAt(avg(times)) }))));
+      if (++n > R) g.after(700, () => g.end(avg(times), `${e(u("gmAvgOf"))} ${msChips(times)}${e(u("gmAt60", { m: metresAt(avg(times)) }))}`));
       else g.after(800, arm);
     };
     g.on("tap", hit); g.on("key", (k) => { if (k === " " || k === "Enter") hit(); });
@@ -258,10 +261,10 @@ def("greenlight", {
     const arm = () => { state = "red"; rounds(g, n + " / " + R); g.after(rnd(1500, 4200), () => { state = "green"; t0 = g.now(); }); };
     g.loop(() => g.draw((c) => { D.sky(c, "#1e293b", "#475569"); D.tlight(c, W / 2, 180, 1.05, state === "green" || state === "done" ? "green" : "red"); }));
     const hit = () => {
-      if (state === "red") { state = "done"; jumps++; g.msg(t1("gmJump"), "bad", 1100); times.push(1000); n++; if (n > R) return g.after(600, () => g.end(avg(times), e(u("gmJumps", { n: jumps })))); return g.after(900, arm); }
+      if (state === "red") { state = "done"; jumps++; g.msg(t1("gmJump"), "bad", 1100); times.push(1000); n++; if (n > R) return g.after(600, () => g.end(avg(times), `${e(u("gmAvgOf"))} ${msChips(times)}${jumps ? e(u("gmJumps", { n: jumps })) : ""}`)); return g.after(900, arm); }
       if (state !== "green") return;
       const ms = g.now() - t0; times.push(ms); state = "done"; g.msg(`${Math.round(ms)} ms`, "good", 700);
-      if (++n > R) g.after(600, () => g.end(avg(times), e(u("gmJumps", { n: jumps })))); else g.after(800, arm);
+      if (++n > R) g.after(600, () => g.end(avg(times), `${e(u("gmAvgOf"))} ${msChips(times)}${jumps ? e(u("gmJumps", { n: jumps })) : ""}`)); else g.after(800, arm);
     };
     g.on("tap", hit); g.on("key", (k) => { if (k === " " || k === "Enter") hit(); });
     arm();
@@ -289,7 +292,7 @@ def("kidout", {
       if (state === "drive") { g.msg(t1("gmTooSoon"), "bad"); return; }
       if (state !== "go") return;
       const ms = g.now() - t0; times.push(ms); state = "done"; g.msg(`${Math.round(ms)} ms · ${metresAt(ms, 40)} m`, ms < 700 ? "good" : "bad", 1000);
-      if (++n > R) g.after(900, () => g.end(avg(times), e(u("gmAt40", { m: metresAt(avg(times), 40) })))); else g.after(1100, arm);
+      if (++n > R) g.after(900, () => g.end(avg(times), `${e(u("gmAvgOf"))} ${msChips(times)}${e(u("gmAt40", { m: metresAt(avg(times), 40) }))}`)); else g.after(1100, arm);
     };
     g.on("tap", hit); g.on("key", (k) => { if (k === " " || k === "Enter") hit(); });
     arm();
@@ -321,7 +324,7 @@ def("indicator", {
   preview(g) { g.draw((c) => { D.persp(c, 170, 0); D.carRear(c, W / 2, 250, 1, "#0f766e", { ind: "l", on: true }); }); },
   start(g) {
     const R = 10; let n = 0, side = null, t0 = 0, times = [], wrong = 0;
-    const arm = () => { side = null; if (n >= R) return g.end(avg(times) + wrong * 250, e(u("gmWrongN", { n: wrong }))); n++; rounds(g, n + " / " + R); g.after(rnd(800, 2200), () => { side = pick(["l", "r"]); t0 = g.now(); }); };
+    const arm = () => { side = null; if (n >= R) return g.end(avg(times) + wrong * 250, `${e(u("gmAvgOf"))} ${msChips(times)}${wrong ? e(u("gmWrongN", { n: wrong })) : ""}`); n++; rounds(g, n + " / " + R); g.after(rnd(800, 2200), () => { side = pick(["l", "r"]); t0 = g.now(); }); };
     g.loop((dt, now) => g.draw((c) => { D.persp(c, 170, 0); D.carRear(c, W / 2, 250, 1, "#0f766e", { ind: side, on: Math.floor(now / 330) % 2 === 0 }); }));
     const ans = (s) => {
       if (!side) { g.msg(t1("gmTooSoon"), "bad", 500); return; }
@@ -400,10 +403,10 @@ def("stopline", {
   icon: "🛑", lo: true, unit: "cm",
   preview(g) { g.draw((c) => { D.roadV(c, W / 2, 1, 120, 0); c.fillStyle = "#fff"; c.fillRect(W / 2 - 60, 80, 120, 8); D.carTop(c, W / 2, 330, 50, 90, "#2563eb"); }); },
   start(g) {
-    const R = 4, errs = []; let n = 0, car = null;
+    const R = 4, errs = [], rec = []; let n = 0, car = null;
     const PX = 5;   // px per metre
     const arm = () => {
-      if (n >= R) return g.end(avg(errs), e(u("gmStopTip")));
+      if (n >= R) return g.end(avg(errs), `${e(u("gmAvgOf"))} ${chips(rec)}${e(u("gmStopTip"))}`);
       n++; const kmh = ri(30, 60); rounds(g, `${n} / ${R} · ${kmh} km/h`);
       car = { m: -((kmh / 3.6) ** 2) / (2 * 6.9) - rnd(16, 28), v: kmh / 3.6, braking: false, done: false };
     };
@@ -412,8 +415,8 @@ def("stopline", {
         if (car.braking) car.v = Math.max(0, car.v - 6.9 * dt);
         car.m += car.v * dt;
         if (car.v === 0 && car.braking) { car.done = true; const err = Math.abs(car.m) * 100; const crossed = car.m > 0.05;
-          errs.push(crossed ? Math.max(err, 300) : err); g.msg(crossed ? `${t1("gmCrossed")} ${Math.round(err)} cm` : `${Math.round(err)} cm`, crossed ? "bad" : err < 100 ? "good" : "", 1200); g.after(1300, arm); }
-        if (car.m > 12) { car.done = true; errs.push(1200); g.msg(t1("gmCrossed"), "bad", 1000); g.after(1200, arm); }
+          errs.push(crossed ? Math.max(err, 300) : err); rec.push([crossed ? `${Math.round(err)} cm ${t1("gmOver")}${err < 300 ? " → 300 cm" : ""}` : `${Math.round(err)} cm ${t1("gmShort")}`, crossed ? "bad" : err < 100 ? "good" : ""]); g.msg(crossed ? `${t1("gmCrossed")} ${Math.round(err)} cm` : `${Math.round(err)} cm`, crossed ? "bad" : err < 100 ? "good" : "", 1200); g.after(1300, arm); }
+        if (car.m > 12) { car.done = true; errs.push(1200); rec.push([`${t1("gmOver")} → 1200 cm`, "bad"]); g.msg(t1("gmCrossed"), "bad", 1000); g.after(1200, arm); }
       }
       g.draw((c) => {
         const off = car ? car.m * PX : 0;
@@ -582,7 +585,7 @@ def("fogspot", {
   preview(g) { g.draw((c) => { D.persp(c, 170, 0); D.fog(c, 0.85); }); },
   start(g) {
     const R = 5, times = []; let n = 0, obj = null, scroll = 0, t0 = 0;
-    const arm = () => { obj = null; if (n >= R) return g.end(avg(times), e(u("gmFogTip"))); n++; rounds(g, n + " / " + R); g.after(rnd(1000, 3000), () => { obj = { k: pick(["car", "ped", "truck"]), t: 0, x: W / 2 + pick([-60, -40, 40]) }; t0 = g.now(); }); };
+    const arm = () => { obj = null; if (n >= R) return g.end(avg(times), `${e(u("gmAvgOf"))} ${msChips(times)}${e(u("gmFogTip"))}`); n++; rounds(g, n + " / " + R); g.after(rnd(1000, 3000), () => { obj = { k: pick(["car", "ped", "truck"]), t: 0, x: W / 2 + pick([-60, -40, 40]) }; t0 = g.now(); }); };
     g.loop((dt) => { scroll += dt; if (obj) obj.t += dt; g.draw((c) => {
       D.persp(c, 170, scroll);
       if (obj) { const sc = 0.35 + obj.t * 0.35; if (obj.k === "ped") D.ped(c, obj.x, 230 + obj.t * 30, sc * 1.6); else D.carRear(c, obj.x, 220 + obj.t * 30, sc * 0.8, obj.k === "truck" ? "#a16207" : "#64748b", { brake: true }); }
@@ -601,7 +604,7 @@ def("nightped", {
   preview(g) { g.draw((c) => drawNight(c, 0, null)); },
   start(g) {
     const R = 6, times = []; let n = 0, ped = null, scroll = 0, t0 = 0, misses = 0;
-    const arm = () => { ped = null; if (n >= R) return g.end(avg(times) + misses * 300, e(u("gmNightTip"))); n++; rounds(g, n + " / " + R); g.after(rnd(900, 2800), () => { ped = { x: pick([210, 260, 380, 430]), y: rnd(210, 250), t: 0 }; t0 = g.now(); }); };
+    const arm = () => { ped = null; if (n >= R) return g.end(avg(times) + misses * 300, `${e(u("gmAvgOf"))} ${msChips(times)}${misses ? e(u("gmMissTaps", { n: misses })) + " " : ""}${e(u("gmNightTip"))}`); n++; rounds(g, n + " / " + R); g.after(rnd(900, 2800), () => { ped = { x: pick([210, 260, 380, 430]), y: rnd(210, 250), t: 0 }; t0 = g.now(); }); };
     g.loop((dt) => { scroll += dt * 1.2; if (ped) ped.t += dt; g.draw((c) => drawNight(c, scroll, ped)); });
     g.on("tap", (x, y) => {
       if (!ped) { g.msg(t1("gmTooSoon"), "bad", 500); return; }

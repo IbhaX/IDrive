@@ -4708,8 +4708,8 @@
   "കൃത്യം ലൈനിൽ നിർത്താൻ ബ്രേക്ക്"
  ],
  "gmHow_stopline": [
-  "Your car comes towards the stop line at a random speed. Tap once to brake hard. Stop as close to the line as you can without crossing it.",
-  "നിങ്ങളുടെ കാർ ഒരു വേഗത്തിൽ സ്റ്റോപ്പ് ലൈനിലേക്ക് വരുന്നു. ഉറച്ച് ബ്രേക്ക് ചെയ്യാൻ ഒരിക്കൽ തൊടുക. ലൈൻ കടക്കാതെ കഴിയുന്നത്ര അടുത്ത് നിർത്തുക."
+  "Your car comes towards the stop line at a random speed. Tap once to brake hard and stop as close to the line as you can without crossing it. The score is the average distance over 4 rounds (lower is better); going over the line counts as at least 300 cm.",
+  "നിങ്ങളുടെ കാർ ഒരു വേഗത്തിൽ സ്റ്റോപ്പ് ലൈനിലേക്ക് വരുന്നു. ഉറച്ച് ബ്രേക്ക് ചെയ്യാൻ ഒരിക്കൽ തൊട്ട്, ലൈൻ കടക്കാതെ കഴിയുന്നത്ര അടുത്ത് നിർത്തുക. സ്കോർ 4 റൗണ്ടുകളിലെ ശരാശരി ദൂരം (കുറവാണ് നല്ലത്); ലൈൻ കടന്നാൽ കുറഞ്ഞത് 300 സെ.മീ. ആയി കണക്കാക്കും."
  ],
  "gm_dodge": [
   "Pothole dodge",
@@ -4986,5 +4986,29 @@
  "gmHow_dashlights": [
   "A warning light comes on. Decide how urgent it is: stop safely now, get it checked soon, or it is just information.",
   "ഒരു മുന്നറിയിപ്പ് ലൈറ്റ് തെളിയുന്നു. എത്ര അടിയന്തിരമെന്ന് തീരുമാനിക്കുക: ഇപ്പോൾ സുരക്ഷിതമായി നിർത്തുക, ഉടൻ പരിശോധിപ്പിക്കുക, അല്ലെങ്കിൽ വെറും വിവരം."
+ ],
+ "gmLowBetter": [
+  "lower is better",
+  "കുറവാണ് നല്ലത്"
+ ],
+ "gmHighBetter": [
+  "higher is better",
+  "കൂടുതലാണ് നല്ലത്"
+ ],
+ "gmAvgOf": [
+  "Average of these rounds:",
+  "ഈ റൗണ്ടുകളുടെ ശരാശരി:"
+ ],
+ "gmMissTaps": [
+  "Taps that missed the person: {n} (each adds 300 ms).",
+  "ആളെ തൊടാതെ പോയ ടാപ്പുകൾ: {n} (ഓരോന്നിനും 300 ms കൂടും)."
+ ],
+ "gmOver": [
+  "over",
+  "കടന്നു"
+ ],
+ "gmShort": [
+  "short",
+  "മുമ്പേ"
  ]
 }
