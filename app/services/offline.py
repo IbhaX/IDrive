@@ -2,7 +2,7 @@
 
 The service worker fetches every URL in the manifest in the background and
 keeps it in its data cache. Anything that needs an account (tests, progress
-sync, the AI instructor) is deliberately left out — those need the network.
+sync, the AI instructor) is deliberately left out - those need the network.
 """
 
 from __future__ import annotations

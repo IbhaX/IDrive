@@ -1,4 +1,4 @@
-/* iDrive games2.js — "decide and watch" games. Each round sets up a real
+/* iDrive games2.js - "decide and watch" games. Each round sets up a real
    situation (speeds, distances, road surface), you choose what to do, and the
    choice plays out live at true scale; then a card shows the working.
    Shared physics (simple, stated in every card):
@@ -103,7 +103,7 @@ function drawActor(c, X, Y, px, a) {
   else if (a.k === "cow") { c.rotate(-(a.a || 0)); D.cow(c, 0, 0, 0.55, a.face || 1); }
   c.restore();
 }
-/* the bend renderer: road is a circle of radius R centred at (0, R) — you start at (0,0) heading +x */
+/* the bend renderer: road is a circle of radius R centred at (0, R) - you start at (0,0) heading +x */
 function bendScene(c, s) {
   const px = s.px, X = (x) => 320 + (x - s.cam[0]) * px, Y = (y) => 210 + (y - s.cam[1]) * px;
   c.fillStyle = "#4d7c34"; c.fillRect(0, 0, W, H);

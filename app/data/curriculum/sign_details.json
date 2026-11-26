@@ -1,6 +1,6 @@
 {
   "stop": {
-    "more": "Stop is the only eight-sided sign, so you can recognise it even from behind or when it is dirty. It is used where a rolling 'slow down and look' is not enough — the view is blocked or cross traffic is fast.",
+    "more": "Stop is the only eight-sided sign, so you can recognise it even from behind or when it is dirty. It is used where a rolling 'slow down and look' is not enough - the view is blocked or cross traffic is fast.",
     "where": [
       "Where a village road meets a busy highway",
       "At a railway crossing approach or a blind junction in town"
@@ -15,10 +15,10 @@
         "d": "Stop at the line first, then creep forward slowly until you can see, ready to stop again."
       }
     ],
-    "mistake": "Rolling slowly over the line without stopping — a 'rolling stop' is not a stop."
+    "mistake": "Rolling slowly over the line without stopping - a 'rolling stop' is not a stop."
   },
   "giveway": {
-    "more": "The point-down triangle means other traffic has priority over you. Unlike Stop, you need not stop if the way is clearly free — but you must be ready to.",
+    "more": "The point-down triangle means other traffic has priority over you. Unlike Stop, you need not stop if the way is clearly free - but you must be ready to.",
     "where": [
       "Where a side road joins a main road",
       "At the entry to a roundabout"
@@ -44,7 +44,7 @@
     "when": [
       {
         "s": "Your map app tells you to go in",
-        "d": "Trust the sign, not the app — take the next legal route."
+        "d": "Trust the sign, not the app - take the next legal route."
       },
       {
         "s": "You've already entered by mistake",
@@ -69,7 +69,7 @@
         "d": "Look mainly towards the traffic, but check the other way for wrong-way riders."
       }
     ],
-    "mistake": "Riding a scooter a short distance against the arrow — oncoming drivers won't expect you."
+    "mistake": "Riding a scooter a short distance against the arrow - oncoming drivers won't expect you."
   },
   "allprohib": {
     "more": "A plain red-ringed white circle closes the road to all vehicles in both directions, often temporarily for repairs, events or a pedestrian zone.",
@@ -84,7 +84,7 @@
       },
       {
         "s": "A local says it's fine to drive through",
-        "d": "Follow the sign — it is there for people on foot or workers inside."
+        "d": "Follow the sign - it is there for people on foot or workers inside."
       }
     ],
     "mistake": "Squeezing a two-wheeler past the board because 'it is only for cars'."
@@ -102,7 +102,7 @@
       },
       {
         "s": "Traffic police wave you straight on",
-        "d": "A police officer's direction overrides the sign — go carefully as directed."
+        "d": "A police officer's direction overrides the sign - go carefully as directed."
       }
     ],
     "mistake": "Darting straight across when the junction looks empty."
@@ -138,7 +138,7 @@
       },
       {
         "s": "A free-left lane is painted but this sign is up",
-        "d": "The sign wins — don't turn left here."
+        "d": "The sign wins - don't turn left here."
       }
     ],
     "mistake": "Assuming 'left turns are always free'."
@@ -156,7 +156,7 @@
       },
       {
         "s": "The road looks empty",
-        "d": "The ban still applies — fast traffic can appear in seconds."
+        "d": "The ban still applies - fast traffic can appear in seconds."
       }
     ],
     "mistake": "Making a U-turn in two or three movements across all lanes."
@@ -174,7 +174,7 @@
       },
       {
         "s": "The vehicle ahead waves you past",
-        "d": "Don't go — the sign applies to you whatever the other driver signals."
+        "d": "Don't go - the sign applies to you whatever the other driver signals."
       }
     ],
     "mistake": "Overtaking on a short straight inside the restricted stretch."
@@ -188,7 +188,7 @@
     "when": [
       {
         "s": "A pedestrian steps out in front of you",
-        "d": "Brake — slowing down is the safe answer here, not the horn."
+        "d": "Brake - slowing down is the safe answer here, not the horn."
       },
       {
         "s": "A real emergency needs a warning",
@@ -228,7 +228,7 @@
       },
       {
         "s": "Your vehicle breaks down",
-        "d": "Stopping is unavoidable — switch on hazard lights, get people to safety and set out a warning triangle if you have one."
+        "d": "Stopping is unavoidable - switch on hazard lights, get people to safety and set out a warning triangle if you have one."
       }
     ],
     "mistake": "Stopping on a flyover to make a phone call or check directions."
@@ -242,7 +242,7 @@
     "when": [
       {
         "s": "You are walking and the bridge is far",
-        "d": "Use it anyway — crossing a fast road on foot is one of the commonest ways people are killed."
+        "d": "Use it anyway - crossing a fast road on foot is one of the commonest ways people are killed."
       },
       {
         "s": "You are driving and see someone walking there",
@@ -300,7 +300,7 @@
       },
       {
         "s": "You meet a cart on the road anyway",
-        "d": "Slow down, give it a wide berth and don't hoot — animals can bolt."
+        "d": "Slow down, give it a wide berth and don't hoot - animals can bolt."
       }
     ],
     "mistake": "Honking loudly to make the animal move faster."
@@ -324,7 +324,7 @@
     "mistake": "Pushing a heavily loaded cart up a flyover against fast traffic."
   },
   "nomotor": {
-    "more": "Only non-motorised traffic — people on foot, cycles and carts — may use this road. Common in pedestrian zones, parks and heritage areas.",
+    "more": "Only non-motorised traffic - people on foot, cycles and carts - may use this road. Common in pedestrian zones, parks and heritage areas.",
     "where": [
       "Park roads and beach promenades",
       "Heritage streets and campus roads"
@@ -332,7 +332,7 @@
     "when": [
       {
         "s": "You ride an electric scooter or e-bike with a motor",
-        "d": "Treat it as a motor vehicle — keep out unless a sign says otherwise."
+        "d": "Treat it as a motor vehicle - keep out unless a sign says otherwise."
       },
       {
         "s": "You need to deliver something inside",
@@ -350,7 +350,7 @@
     "when": [
       {
         "s": "Your lorry is fully loaded and may be over the limit",
-        "d": "Don't risk it — take the alternative route even if it is longer."
+        "d": "Don't risk it - take the alternative route even if it is longer."
       },
       {
         "s": "You drive a car",
@@ -378,7 +378,7 @@
     "mistake": "Thinking that being under the total load limit is enough."
   },
   "height": {
-    "more": "Warns of a low bridge, underpass, arch or overhead structure. The height includes anything on the roof — luggage, ladders, water tanks.",
+    "more": "Warns of a low bridge, underpass, arch or overhead structure. The height includes anything on the roof - luggage, ladders, water tanks.",
     "where": [
       "Railway under-bridges and old arches",
       "Entrances of multi-storey car parks and petrol pump canopies"
@@ -390,7 +390,7 @@
       },
       {
         "s": "You aren't sure you'll fit",
-        "d": "Stop before the structure and check, or find another way — never 'try it slowly'."
+        "d": "Stop before the structure and check, or find another way - never 'try it slowly'."
       }
     ],
     "mistake": "Forgetting the extra height of a roof rack or a raised load."
@@ -440,7 +440,7 @@
     "when": [
       {
         "s": "It's raining or foggy",
-        "d": "Drive well below the limit — the number is for good conditions."
+        "d": "Drive well below the limit - the number is for good conditions."
       },
       {
         "s": "Traffic around you is going faster",
@@ -450,7 +450,7 @@
     "mistake": "Braking hard at a speed camera and speeding up again straight after."
   },
   "endrestr": {
-    "more": "The grey or black diagonal stripes cancel the restriction shown before — such as a speed limit or no overtaking. General rules still apply.",
+    "more": "The grey or black diagonal stripes cancel the restriction shown before - such as a speed limit or no overtaking. General rules still apply.",
     "where": [
       "After a school zone or road works",
       "At the end of a ghat section or town limits"
@@ -462,13 +462,13 @@
       },
       {
         "s": "A low speed limit ends",
-        "d": "Build up speed gradually to suit the road — not to the maximum straight away."
+        "d": "Build up speed gradually to suit the road - not to the maximum straight away."
       }
     ],
     "mistake": "Treating it as 'no limits at all'."
   },
   "cahead": {
-    "more": "Blue circles give orders. This one forbids turning at the next junction — usually because the side roads are one-way or turning would block traffic.",
+    "more": "Blue circles give orders. This one forbids turning at the next junction - usually because the side roads are one-way or turning would block traffic.",
     "where": [
       "Approach lanes at signal junctions",
       "Flyover ramps and underpass entries"
@@ -486,7 +486,7 @@
     "mistake": "Cutting across at the last moment to make a turn."
   },
   "cleft": {
-    "more": "Every vehicle at this point must turn left — straight on and right are not allowed, often because the road ahead is one-way against you.",
+    "more": "Every vehicle at this point must turn left - straight on and right are not allowed, often because the road ahead is one-way against you.",
     "where": [
       "One-way systems in town centres",
       "Slip roads that lead off a junction"
@@ -498,7 +498,7 @@
       },
       {
         "s": "Pedestrians are crossing the road you're turning into",
-        "d": "Wait for them — turning traffic gives way to people crossing."
+        "d": "Wait for them - turning traffic gives way to people crossing."
       }
     ],
     "mistake": "Going straight on because 'the road ahead looks open'."
@@ -519,7 +519,7 @@
         "d": "Look past it before you commit to the turn."
       }
     ],
-    "mistake": "Waiting with the wheels already turned — a shunt from behind pushes you into oncoming traffic."
+    "mistake": "Waiting with the wheels already turned - a shunt from behind pushes you into oncoming traffic."
   },
   "caheadleft": {
     "more": "Two permitted directions; turning right is banned. Pick your lane early so you aren't forced to cut across.",
@@ -534,13 +534,13 @@
       },
       {
         "s": "You're in the left lane and want to go straight",
-        "d": "Check the lane arrows — some left lanes are turn-only."
+        "d": "Check the lane arrows - some left lanes are turn-only."
       }
     ],
     "mistake": "Turning right from the straight lane."
   },
   "caheadright": {
-    "more": "Straight on or right only; left is banned — perhaps the left road is one-way towards you.",
+    "more": "Straight on or right only; left is banned - perhaps the left road is one-way towards you.",
     "where": [
       "Junctions with a one-way road on the left",
       "Service road entries"
@@ -584,7 +584,7 @@
     "when": [
       {
         "s": "Oncoming traffic could be on the right",
-        "d": "Check carefully — on a two-way road give way before moving out."
+        "d": "Check carefully - on a two-way road give way before moving out."
       },
       {
         "s": "Workers are on the left",
@@ -594,7 +594,7 @@
     "mistake": "Squeezing through on the left because it seems shorter."
   },
   "chorn": {
-    "more": "Tells you to give a short horn warning where others can't see you coming — blind bends and crests on hill roads.",
+    "more": "Tells you to give a short horn warning where others can't see you coming - blind bends and crests on hill roads.",
     "where": [
       "Blind hairpins on ghat roads",
       "Narrow hill roads with walls or rock on the inside"
@@ -624,7 +624,7 @@
       },
       {
         "s": "A two-wheeler is riding on the track",
-        "d": "Don't follow it — it's only for cycles."
+        "d": "Don't follow it - it's only for cycles."
       }
     ],
     "mistake": "Parking a car or scooter on the cycle track 'for a minute'."
@@ -645,7 +645,7 @@
         "d": "Change to a low gear before the bend and brake gently on the straight, not in the turn."
       }
     ],
-    "mistake": "Cutting the inside of the hairpin to save time — that's where oncoming vehicles swing."
+    "mistake": "Cutting the inside of the hairpin to save time - that's where oncoming vehicles swing."
   },
   "hairL": {
     "more": "A hairpin bends back on itself to the left, common on ghat roads. Large vehicles need the whole width of the road to get round, and you can't see what's coming.",
@@ -663,10 +663,10 @@
         "d": "Change to a low gear before the bend and brake gently on the straight, not in the turn."
       }
     ],
-    "mistake": "Cutting the inside of the hairpin to save time — that's where oncoming vehicles swing."
+    "mistake": "Cutting the inside of the hairpin to save time - that's where oncoming vehicles swing."
   },
   "curveR": {
-    "more": "A gentle curve to the right. Gentle doesn't mean you can keep any speed — at night or in rain, grip and sight are reduced.",
+    "more": "A gentle curve to the right. Gentle doesn't mean you can keep any speed - at night or in rain, grip and sight are reduced.",
     "where": [
       "Highways through plantations and paddy fields",
       "Rural roads following a river or hill"
@@ -684,7 +684,7 @@
     "mistake": "Braking hard in the middle of the curve."
   },
   "curveL": {
-    "more": "A gentle curve to the left. Gentle doesn't mean you can keep any speed — at night or in rain, grip and sight are reduced.",
+    "more": "A gentle curve to the left. Gentle doesn't mean you can keep any speed - at night or in rain, grip and sight are reduced.",
     "where": [
       "Highways through plantations and paddy fields",
       "Rural roads following a river or hill"
@@ -782,7 +782,7 @@
     "when": [
       {
         "s": "A loaded lorry ahead is crawling",
-        "d": "Keep a bigger gap — it may stop or roll back slightly when changing gear."
+        "d": "Keep a bigger gap - it may stop or roll back slightly when changing gear."
       },
       {
         "s": "You must stop on the slope",
@@ -810,7 +810,7 @@
     "mistake": "Coasting in neutral to 'save fuel'."
   },
   "narrow": {
-    "more": "The carriageway gets narrower — two lanes may become one, or the shoulders disappear.",
+    "more": "The carriageway gets narrower - two lanes may become one, or the shoulders disappear.",
     "where": [
       "Where a widened highway meets an old section",
       "Village roads between buildings"
@@ -828,7 +828,7 @@
     "mistake": "Speeding up to get through before the oncoming vehicle."
   },
   "widen": {
-    "more": "The road becomes wider — often from two lanes to four. Vehicles behind may start overtaking and others may change lanes.",
+    "more": "The road becomes wider - often from two lanes to four. Vehicles behind may start overtaking and others may change lanes.",
     "where": [
       "Start of a four-lane section on a highway",
       "Approaches to a town bypass"
@@ -858,7 +858,7 @@
       },
       {
         "s": "You're both arriving at the same time",
-        "d": "Slow down; the vehicle nearer the bridge or with the clearer path usually goes first — don't race."
+        "d": "Slow down; the vehicle nearer the bridge or with the clearer path usually goes first - don't race."
       }
     ],
     "mistake": "Overtaking on the approach to the bridge."
@@ -876,7 +876,7 @@
       },
       {
         "s": "You want to overtake near the junction",
-        "d": "Don't — a vehicle may turn out or in just as you're alongside."
+        "d": "Don't - a vehicle may turn out or in just as you're alongside."
       }
     ],
     "mistake": "Holding full speed because you 'have priority'."
@@ -894,7 +894,7 @@
       },
       {
         "s": "You want to overtake near the junction",
-        "d": "Don't — a vehicle may turn out or in just as you're alongside."
+        "d": "Don't - a vehicle may turn out or in just as you're alongside."
       }
     ],
     "mistake": "Holding full speed because you 'have priority'."
@@ -962,7 +962,7 @@
     "when": [
       {
         "s": "You think you have priority",
-        "d": "Slow down anyway and look both ways — the other driver may not agree."
+        "d": "Slow down anyway and look both ways - the other driver may not agree."
       },
       {
         "s": "Hedges or buildings hide the side roads",
@@ -984,7 +984,7 @@
       },
       {
         "s": "A bus is going round beside you",
-        "d": "Don't ride alongside it — let it exit first."
+        "d": "Don't ride alongside it - let it exit first."
       }
     ],
     "mistake": "Entering without looking right, or stopping on the roundabout to read signs."
@@ -1016,7 +1016,7 @@
     "when": [
       {
         "s": "You can't see the bottom of the dip",
-        "d": "Slow down and keep left — an oncoming vehicle may be hidden there."
+        "d": "Slow down and keep left - an oncoming vehicle may be hidden there."
       },
       {
         "s": "Water is lying in the dip",
@@ -1110,13 +1110,13 @@
       },
       {
         "s": "It's dusk or dark",
-        "d": "Slow down — dark animals are very hard to see and their eyes may not reflect."
+        "d": "Slow down - dark animals are very hard to see and their eyes may not reflect."
       }
     ],
-    "mistake": "Honking loudly — startled animals may run into your path."
+    "mistake": "Honking loudly - startled animals may run into your path."
   },
   "pedx": {
-    "more": "Warns of a zebra crossing ahead that you may not see yet — over a crest, round a bend or in busy streets.",
+    "more": "Warns of a zebra crossing ahead that you may not see yet - over a crest, round a bend or in busy streets.",
     "where": [
       "Town roads near bus stops and markets",
       "Highways passing through villages"
@@ -1128,13 +1128,13 @@
       },
       {
         "s": "A vehicle has stopped at the crossing in the next lane",
-        "d": "Assume someone is crossing in front of it — stop too."
+        "d": "Assume someone is crossing in front of it - stop too."
       }
     ],
     "mistake": "Overtaking a vehicle that has stopped at a crossing."
   },
   "school": {
-    "more": "A school is close by. Children are small, hard to see between parked vehicles and may run out without looking — especially at start and end of school.",
+    "more": "A school is close by. Children are small, hard to see between parked vehicles and may run out without looking - especially at start and end of school.",
     "where": [
       "Roads outside schools in towns and villages",
       "Near school bus stops on highways"
@@ -1146,7 +1146,7 @@
       },
       {
         "s": "A school bus has stopped",
-        "d": "Pass very slowly or wait — children may cross in front of it."
+        "d": "Pass very slowly or wait - children may cross in front of it."
       }
     ],
     "mistake": "Keeping normal speed because school seems over for the day."
@@ -1170,7 +1170,7 @@
     "mistake": "Speeding through the work zone once you're past the flagman."
   },
   "ferry": {
-    "more": "The road leads to a ferry or jankar — common on Kerala's backwaters. There may be a queue, a ramp and a drop into water.",
+    "more": "The road leads to a ferry or jankar - common on Kerala's backwaters. There may be a queue, a ramp and a drop into water.",
     "where": [
       "Backwater crossings such as those in Alappuzha and Kochi",
       "River crossings without a bridge"
@@ -1214,7 +1214,7 @@
     "when": [
       {
         "s": "A vehicle is waiting in the gap",
-        "d": "Ease off and move away from the median lane if you can — it may pull out."
+        "d": "Ease off and move away from the median lane if you can - it may pull out."
       },
       {
         "s": "You want to use the gap",
@@ -1236,7 +1236,7 @@
       },
       {
         "s": "Your vehicle stalls on the track",
-        "d": "Get everyone out and well away at once, then call for help — don't try to restart."
+        "d": "Get everyone out and well away at once, then call for help - don't try to restart."
       }
     ],
     "mistake": "Following the vehicle ahead across without looking yourself."
@@ -1250,7 +1250,7 @@
     "when": [
       {
         "s": "The bell is ringing and the gate is coming down",
-        "d": "Stop behind the line — never speed up to get through."
+        "d": "Stop behind the line - never speed up to get through."
       },
       {
         "s": "The gate is closed and the queue is long",
@@ -1314,7 +1314,7 @@
     "mistake": "Keeping highway speed until the signal comes into view."
   },
   "bullock": {
-    "more": "Slow animal-drawn carts use this road — they may be heavily loaded, wide and without lights.",
+    "more": "Slow animal-drawn carts use this road - they may be heavily loaded, wide and without lights.",
     "where": [
       "Farming areas and village markets",
       "Sugarcane and paddy belts at harvest time"
@@ -1340,7 +1340,7 @@
     "when": [
       {
         "s": "The bays are full",
-        "d": "Don't double-park or block the entrance — find another legal spot."
+        "d": "Don't double-park or block the entrance - find another legal spot."
       },
       {
         "s": "You're leaving the bay",
@@ -1358,7 +1358,7 @@
     "when": [
       {
         "s": "The bays are full",
-        "d": "Don't double-park or block the entrance — find another legal spot."
+        "d": "Don't double-park or block the entrance - find another legal spot."
       },
       {
         "s": "You're leaving the bay",
@@ -1376,7 +1376,7 @@
     "when": [
       {
         "s": "The bays are full",
-        "d": "Don't double-park or block the entrance — find another legal spot."
+        "d": "Don't double-park or block the entrance - find another legal spot."
       },
       {
         "s": "You're leaving the bay",
@@ -1394,7 +1394,7 @@
     "when": [
       {
         "s": "The bays are full",
-        "d": "Don't double-park or block the entrance — find another legal spot."
+        "d": "Don't double-park or block the entrance - find another legal spot."
       },
       {
         "s": "You're leaving the bay",
@@ -1466,7 +1466,7 @@
     "when": [
       {
         "s": "A bus is stopped at the stop",
-        "d": "Pass slowly — passengers may walk out in front of it."
+        "d": "Pass slowly - passengers may walk out in front of it."
       },
       {
         "s": "You want to drop someone off",
@@ -1512,7 +1512,7 @@
     "mistake": "Braking suddenly from the fast lane to swerve into the pump."
   },
   "hospital": {
-    "more": "A hospital is nearby — expect ambulances, patients crossing and vehicles stopping at the gate. It's usually also a silence zone.",
+    "more": "A hospital is nearby - expect ambulances, patients crossing and vehicles stopping at the gate. It's usually also a silence zone.",
     "where": [
       "Town roads near medical colleges",
       "Highways near district hospitals"
@@ -1548,7 +1548,7 @@
     "mistake": "Moving an injured person with a possible neck or back injury without need."
   },
   "phone": {
-    "more": "A public telephone is available — useful where mobile coverage is poor, such as forests and ghats.",
+    "more": "A public telephone is available - useful where mobile coverage is poor, such as forests and ghats.",
     "where": [
       "Forest and ghat roads",
       "Remote stretches of highway"
@@ -1584,7 +1584,7 @@
     "mistake": "Parking half on the road in front of the eatery."
   },
   "refresh": {
-    "more": "Tea, snacks or cold drinks are available — a good place for a short break.",
+    "more": "Tea, snacks or cold drinks are available - a good place for a short break.",
     "where": [
       "Highways between towns",
       "Near towns and junctions"
@@ -1646,7 +1646,7 @@
     "when": [
       {
         "s": "You're just looking for a shortcut",
-        "d": "Don't go in — you'll have to turn round in a narrow space."
+        "d": "Don't go in - you'll have to turn round in a narrow space."
       },
       {
         "s": "You must go in to reach an address",
@@ -1668,7 +1668,7 @@
       },
       {
         "s": "Vehicles come out of the dead-end lane",
-        "d": "They may be turning round — expect slow, awkward manoeuvres."
+        "d": "They may be turning round - expect slow, awkward manoeuvres."
       }
     ],
     "mistake": "Turning in and then reversing out onto the main road."
@@ -1704,7 +1704,7 @@
       },
       {
         "s": "You've missed your exit",
-        "d": "Carry on to the next exit — never stop, reverse or cut across the gore area."
+        "d": "Carry on to the next exit - never stop, reverse or cut across the gore area."
       }
     ],
     "mistake": "Reading the board so late that you swerve across lanes."
@@ -1736,7 +1736,7 @@
     "when": [
       {
         "s": "You're following the brown signs",
-        "d": "Slow down near the entrance — visitors often walk on the road and park badly."
+        "d": "Slow down near the entrance - visitors often walk on the road and park badly."
       },
       {
         "s": "The road becomes narrow and crowded",
@@ -1754,7 +1754,7 @@
     "when": [
       {
         "s": "You need to tell someone where you've broken down",
-        "d": "Read the nearest kilometre stone and the road number — it pinpoints your location."
+        "d": "Read the nearest kilometre stone and the road number - it pinpoints your location."
       },
       {
         "s": "You're checking your speedometer",
@@ -1776,13 +1776,13 @@
       },
       {
         "s": "The dashes become longer and closer together",
-        "d": "A hazard is coming — don't start an overtake now."
+        "d": "A hazard is coming - don't start an overtake now."
       }
     ],
     "mistake": "Driving along the centre line instead of on your side."
   },
   "centreSolid": {
-    "more": "A continuous centre line where overtaking is unsafe — bends, crests, junction approaches and bridges.",
+    "more": "A continuous centre line where overtaking is unsafe - bends, crests, junction approaches and bridges.",
     "where": [
       "Approaches to bends and hill crests",
       "Near junctions and narrow bridges"
@@ -1844,7 +1844,7 @@
     "when": [
       {
         "s": "The light is red",
-        "d": "Stop with your front bumper behind the line — not on the crossing."
+        "d": "Stop with your front bumper behind the line - not on the crossing."
       },
       {
         "s": "You can't see from the line",
@@ -1890,7 +1890,7 @@
     "mistake": "Stopping beyond the line with your nose in the traffic lane."
   },
   "edge": {
-    "more": "A line along the edge of the carriageway showing where the road ends and the shoulder begins — vital at night and in rain.",
+    "more": "A line along the edge of the carriageway showing where the road ends and the shoulder begins - vital at night and in rain.",
     "where": [
       "Highways and expressways",
       "Roads with soft or dropped shoulders"
@@ -2046,7 +2046,7 @@
       },
       {
         "s": "You drive over a row of studs",
-        "d": "You're crossing a lane line or the edge — check your position."
+        "d": "You're crossing a lane line or the edge - check your position."
       }
     ],
     "mistake": "Relying on studs alone and driving too fast for what you can see."
@@ -2060,7 +2060,7 @@
     "when": [
       {
         "s": "The bay is tight",
-        "d": "Reverse in if you can — it's easier and safer to drive out."
+        "d": "Reverse in if you can - it's easier and safer to drive out."
       },
       {
         "s": "Your car is over the line",
@@ -2106,7 +2106,7 @@
     "mistake": "Creeping over the stop line while waiting."
   },
   "amber": {
-    "more": "Amber comes before red. It means stop — unless you're so close that braking would be unsafe.",
+    "more": "Amber comes before red. It means stop - unless you're so close that braking would be unsafe.",
     "where": [
       "Every signal junction",
       "Before pedestrian crossings"
@@ -2124,7 +2124,7 @@
     "mistake": "Accelerating to beat the red."
   },
   "green": {
-    "more": "Green means you may go if the way is clear — not that it is clear.",
+    "more": "Green means you may go if the way is clear - not that it is clear.",
     "where": [
       "Signal junctions",
       "Pedestrian crossing signals"
@@ -2154,13 +2154,13 @@
       },
       {
         "s": "The arrow goes out",
-        "d": "Stop — the movement is no longer allowed."
+        "d": "Stop - the movement is no longer allowed."
       }
     ],
     "mistake": "Going straight on because the arrow beside you is green."
   },
   "flashred": {
-    "more": "A flashing red light works like a Stop sign — common at night when signals switch to flashing mode, and at some crossings.",
+    "more": "A flashing red light works like a Stop sign - common at night when signals switch to flashing mode, and at some crossings.",
     "where": [
       "Junctions at night",
       "Minor roads meeting a main road"
@@ -2172,13 +2172,13 @@
       },
       {
         "s": "The other road has flashing amber",
-        "d": "They may not stop — wait for a real gap."
+        "d": "They may not stop - wait for a real gap."
       }
     ],
     "mistake": "Treating it as 'signal not working'."
   },
   "flashamber": {
-    "more": "Flashing amber means proceed with caution — often on main roads at night or when signals are off.",
+    "more": "Flashing amber means proceed with caution - often on main roads at night or when signals are off.",
     "where": [
       "Junctions late at night",
       "School zones and minor crossings"
@@ -2204,7 +2204,7 @@
     "when": [
       {
         "s": "You're walking and see a gap in traffic",
-        "d": "Wait for the green figure — drivers aren't expecting you."
+        "d": "Wait for the green figure - drivers aren't expecting you."
       },
       {
         "s": "You're driving and someone crosses on their red",
@@ -2214,7 +2214,7 @@
     "mistake": "Starting to cross as the figure turns red."
   },
   "pedgreen": {
-    "more": "The green walking figure lets pedestrians cross. It may flash before turning red — don't start crossing then.",
+    "more": "The green walking figure lets pedestrians cross. It may flash before turning red - don't start crossing then.",
     "where": [
       "Signal junctions",
       "Mid-block crossings on busy roads"
@@ -2240,7 +2240,7 @@
     "when": [
       {
         "s": "Green shows 3 seconds left and you're far away",
-        "d": "Prepare to stop — don't race it."
+        "d": "Prepare to stop - don't race it."
       },
       {
         "s": "Red shows 5 seconds left",
@@ -2250,7 +2250,7 @@
     "mistake": "Starting off before green because the timer is near zero."
   },
   "hsright": {
-    "more": "A driver's right arm held straight out, palm forward, says 'I'm turning right' — used when indicators fail or aren't visible.",
+    "more": "A driver's right arm held straight out, palm forward, says 'I'm turning right' - used when indicators fail or aren't visible.",
     "where": [
       "Bullock carts, cycles and old vehicles",
       "Any vehicle whose indicators have failed"
@@ -2280,7 +2280,7 @@
       },
       {
         "s": "You're on a two-wheeler beside it",
-        "d": "Hold back — it may cut across your path."
+        "d": "Hold back - it may cut across your path."
       }
     ],
     "mistake": "Mistaking the circle for a wave to overtake."
@@ -2294,7 +2294,7 @@
     "when": [
       {
         "s": "The vehicle ahead raises its arm",
-        "d": "Brake smoothly and leave room — it's stopping."
+        "d": "Brake smoothly and leave room - it's stopping."
       },
       {
         "s": "You're too close to stop gently",
@@ -2394,7 +2394,7 @@
     "mistake": "Accelerating hard as soon as you're waved on."
   },
   "dash_engine": {
-    "more": "The engine computer has stored a fault — anything from a loose fuel cap to a misfire. Steady means 'get it checked soon'; flashing means a serious misfire that can damage the catalytic converter.",
+    "more": "The engine computer has stored a fault - anything from a loose fuel cap to a misfire. Steady means 'get it checked soon'; flashing means a serious misfire that can damage the catalytic converter.",
     "where": [
       "For a second or two at start-up, as a bulb check",
       "While driving, after a fault is detected"
@@ -2424,13 +2424,13 @@
       },
       {
         "s": "The oil level is fine but the light stays on",
-        "d": "Don't drive — call for help or a tow."
+        "d": "Don't drive - call for help or a tow."
       }
     ],
     "mistake": "Driving 'just to the next town' with the light on."
   },
   "dash_battery": {
-    "more": "The battery isn't being charged — usually an alternator or belt fault. The car runs on battery alone until it goes flat.",
+    "more": "The battery isn't being charged - usually an alternator or belt fault. The car runs on battery alone until it goes flat.",
     "where": [
       "For a second or two at start-up, as a bulb check",
       "While driving, when charging stops"
@@ -2442,13 +2442,13 @@
       },
       {
         "s": "The temperature gauge also rises",
-        "d": "The belt may have snapped and the water pump stopped — pull over and switch off."
+        "d": "The belt may have snapped and the water pump stopped - pull over and switch off."
       }
     ],
-    "mistake": "Stopping the engine in a remote place — it may not restart."
+    "mistake": "Stopping the engine in a remote place - it may not restart."
   },
   "dash_coolant": {
-    "more": "The engine is overheating. Common causes are low coolant, a leak, a stuck thermostat or a failed fan — often in traffic jams or on ghat climbs.",
+    "more": "The engine is overheating. Common causes are low coolant, a leak, a stuck thermostat or a failed fan - often in traffic jams or on ghat climbs.",
     "where": [
       "For a second or two at start-up, as a bulb check",
       "In slow traffic, on long climbs or after a coolant leak"
@@ -2463,7 +2463,7 @@
         "d": "Switch off the AC and turn the heater to full to draw heat away."
       }
     ],
-    "mistake": "Opening the hot radiator cap — boiling coolant can spray out."
+    "mistake": "Opening the hot radiator cap - boiling coolant can spray out."
   },
   "dash_brake": {
     "more": "The handbrake is on, brake fluid is low, or the brake system has a fault.",
@@ -2478,7 +2478,7 @@
       },
       {
         "s": "The pedal also feels soft or goes low",
-        "d": "Don't continue — call for help."
+        "d": "Don't continue - call for help."
       }
     ],
     "mistake": "Topping up fluid repeatedly without finding the leak."
@@ -2492,7 +2492,7 @@
     "when": [
       {
         "s": "The car feels sluggish as you move off",
-        "d": "Check this light — the handbrake may be partly on."
+        "d": "Check this light - the handbrake may be partly on."
       },
       {
         "s": "It stays on with the handbrake fully down",
@@ -2514,7 +2514,7 @@
       },
       {
         "s": "Both ABS and brake lights are on",
-        "d": "Treat it as a serious brake fault — stop safely and get help."
+        "d": "Treat it as a serious brake fault - stop safely and get help."
       }
     ],
     "mistake": "Braking as hard as usual on wet roads after the light comes on."
@@ -2546,7 +2546,7 @@
     "when": [
       {
         "s": "A passenger says it's a short trip",
-        "d": "Belts are for every trip — most crashes happen close to home."
+        "d": "Belts are for every trip - most crashes happen close to home."
       },
       {
         "s": "The light stays on with everyone belted",
@@ -2556,7 +2556,7 @@
     "mistake": "Plugging in a dummy buckle to silence the chime."
   },
   "dash_fuel": {
-    "more": "The tank is low — typically enough for some tens of kilometres, but it varies by car, road and load.",
+    "more": "The tank is low - typically enough for some tens of kilometres, but it varies by car, road and load.",
     "where": [
       "Long highway trips",
       "Hill and forest roads with few pumps"
@@ -2592,7 +2592,7 @@
     "mistake": "Continuing at highway speed on a soft tyre."
   },
   "dash_door": {
-    "more": "A door isn't fully latched — it could fly open while moving, and a child could fall out.",
+    "more": "A door isn't fully latched - it could fly open while moving, and a child could fall out.",
     "where": [
       "Moving off after passengers get in",
       "After loading through a rear door"
@@ -2664,7 +2664,7 @@
     "mistake": "Keeping high beam on in town or behind other vehicles."
   },
   "dash_low": {
-    "more": "Dipped headlights are on — the normal setting for night driving, rain and poor light.",
+    "more": "Dipped headlights are on - the normal setting for night driving, rain and poor light.",
     "where": [
       "From dusk to dawn",
       "In rain, tunnels and heavy shade"
@@ -2690,7 +2690,7 @@
     "when": [
       {
         "s": "The fog clears",
-        "d": "Switch them off — in clear weather they dazzle others."
+        "d": "Switch them off - in clear weather they dazzle others."
       },
       {
         "s": "Fog is thick",
@@ -2730,7 +2730,7 @@
       },
       {
         "s": "It keeps flashing after the turn",
-        "d": "Cancel it — a forgotten indicator misleads others."
+        "d": "Cancel it - a forgotten indicator misleads others."
       }
     ],
     "mistake": "Signalling only as you start to turn."
@@ -2766,7 +2766,7 @@
       },
       {
         "s": "It's raining and you're driving slowly",
-        "d": "Don't use them while moving in rain — they hide your indicators."
+        "d": "Don't use them while moving in rain - they hide your indicators."
       }
     ],
     "mistake": "Using hazard lights to park illegally or to go straight through a junction."
@@ -2780,7 +2780,7 @@
     "when": [
       {
         "s": "It flickers in a bend",
-        "d": "You're near the grip limit — ease off and steer smoothly."
+        "d": "You're near the grip limit - ease off and steer smoothly."
       },
       {
         "s": "It stays on",
@@ -2862,7 +2862,7 @@
     "mistake": "Repeatedly cranking until the battery is flat."
   },
   "dash_cruise": {
-    "more": "Cruise control is holding a set speed. It's meant for steady, open roads — not traffic, rain or hills with bends.",
+    "more": "Cruise control is holding a set speed. It's meant for steady, open roads - not traffic, rain or hills with bends.",
     "where": [
       "Expressways with light traffic",
       "Long straight highways"
@@ -2874,7 +2874,7 @@
       },
       {
         "s": "You need to slow down quickly",
-        "d": "Brake normally — that cancels cruise control."
+        "d": "Brake normally - that cancels cruise control."
       }
     ],
     "mistake": "Using cruise on wet or winding roads, or relaxing your attention."
@@ -2924,7 +2924,7 @@
     "when": [
       {
         "s": "The car is 'ready' but makes no sound",
-        "d": "Watch for pedestrians — they can't hear you moving off."
+        "d": "Watch for pedestrians - they can't hear you moving off."
       },
       {
         "s": "It's charging",
@@ -2946,7 +2946,7 @@
       },
       {
         "s": "The blades smear or judder",
-        "d": "Replace them — worn blades are dangerous in monsoon rain at night."
+        "d": "Replace them - worn blades are dangerous in monsoon rain at night."
       }
     ],
     "mistake": "Running wipers on a dry, dusty windscreen without washer fluid."
@@ -2978,7 +2978,7 @@
     "when": [
       {
         "s": "Mud from a lorry covers the glass",
-        "d": "Drop back first, then use the washer — wiping dry mud smears it."
+        "d": "Drop back first, then use the washer - wiping dry mud smears it."
       },
       {
         "s": "Sun is low and the glass is dirty",
@@ -3042,7 +3042,7 @@
     "mistake": "Sleeping in a parked car with the engine and AC running."
   },
   "ctrl_recirc": {
-    "more": "Recirculation reuses cabin air and keeps outside air out — good for smoke, dust and fast cooling, bad for long use.",
+    "more": "Recirculation reuses cabin air and keeps outside air out - good for smoke, dust and fast cooling, bad for long use.",
     "where": [
       "Behind smoky lorries and buses",
       "In tunnels and traffic jams"
@@ -3054,7 +3054,7 @@
       },
       {
         "s": "You feel drowsy on a long drive",
-        "d": "Switch to fresh air — stale air with rising carbon dioxide makes you sleepy."
+        "d": "Switch to fresh air - stale air with rising carbon dioxide makes you sleepy."
       }
     ],
     "mistake": "Leaving recirculation on for hours with the windows closed."
@@ -3096,7 +3096,7 @@
     "mistake": "Driving through junctions with hazards on, so nobody knows which way you're going."
   },
   "ctrl_horn": {
-    "more": "The horn is for warning others of danger — not for expressing impatience.",
+    "more": "The horn is for warning others of danger - not for expressing impatience.",
     "where": [
       "Centre pad of the steering wheel",
       "Some two-wheelers: a button on the left switch block"
@@ -3108,13 +3108,13 @@
       },
       {
         "s": "You're in a silence zone or the traffic is jammed",
-        "d": "Don't honk — it achieves nothing and disturbs others."
+        "d": "Don't honk - it achieves nothing and disturbs others."
       }
     ],
     "mistake": "Continuous honking at signals or behind slow vehicles."
   },
   "ctrl_headlamp": {
-    "more": "The headlamp switch (often on the indicator stalk) turns on parking lights, low beam and — by pushing or pulling the stalk — high beam.",
+    "more": "The headlamp switch (often on the indicator stalk) turns on parking lights, low beam and - by pushing or pulling the stalk - high beam.",
     "where": [
       "Rotary switch on the stalk or dashboard",
       "Auto setting on newer cars"
@@ -3198,7 +3198,7 @@
       },
       {
         "s": "You're closing a window with a child nearby",
-        "d": "Watch until it's fully shut — some windows don't stop for fingers."
+        "d": "Watch until it's fully shut - some windows don't stop for fingers."
       }
     ],
     "mistake": "Letting children stick their heads or hands out of the window."
@@ -3234,7 +3234,7 @@
       },
       {
         "s": "You need to stop the engine in an emergency while moving",
-        "d": "Most push-button cars stop the engine if you hold the button for a few seconds — steering stays, but becomes heavier."
+        "d": "Most push-button cars stop the engine if you hold the button for a few seconds - steering stays, but becomes heavier."
       }
     ],
     "mistake": "Turning the key to 'lock' while the car is still moving."
@@ -3252,7 +3252,7 @@
       },
       {
         "s": "You see one on the road anyway",
-        "d": "Give it room and patience — it may be looking for a way off."
+        "d": "Give it room and patience - it may be looking for a way off."
       }
     ],
     "mistake": "Thinking a short stretch 'doesn't matter'."
@@ -3270,7 +3270,7 @@
       },
       {
         "s": "You see one on the road anyway",
-        "d": "Give it room and patience — it may be looking for a way off."
+        "d": "Give it room and patience - it may be looking for a way off."
       }
     ],
     "mistake": "Thinking a short stretch 'doesn't matter'."
@@ -3288,7 +3288,7 @@
       },
       {
         "s": "You see one on the road anyway",
-        "d": "Give it room and patience — it may be looking for a way off."
+        "d": "Give it room and patience - it may be looking for a way off."
       }
     ],
     "mistake": "Thinking a short stretch 'doesn't matter'."
@@ -3306,7 +3306,7 @@
       },
       {
         "s": "You see one on the road anyway",
-        "d": "Give it room and patience — it may be looking for a way off."
+        "d": "Give it room and patience - it may be looking for a way off."
       }
     ],
     "mistake": "Thinking a short stretch 'doesn't matter'."
@@ -3324,7 +3324,7 @@
       },
       {
         "s": "You see one on the road anyway",
-        "d": "Give it room and patience — it may be looking for a way off."
+        "d": "Give it room and patience - it may be looking for a way off."
       }
     ],
     "mistake": "Thinking a short stretch 'doesn't matter'."
@@ -3342,7 +3342,7 @@
       },
       {
         "s": "You see one on the road anyway",
-        "d": "Give it room and patience — it may be looking for a way off."
+        "d": "Give it room and patience - it may be looking for a way off."
       }
     ],
     "mistake": "Thinking a short stretch 'doesn't matter'."
@@ -3360,7 +3360,7 @@
       },
       {
         "s": "Traffic is jammed",
-        "d": "You can drive slower than the minimum — it never forces you to be unsafe."
+        "d": "You can drive slower than the minimum - it never forces you to be unsafe."
       }
     ],
     "mistake": "Crawling in the right lane on an expressway."
@@ -3378,13 +3378,13 @@
       },
       {
         "s": "Weather is poor",
-        "d": "Stay slow — ending a limit doesn't make the road safer."
+        "d": "Stay slow - ending a limit doesn't make the road safer."
       }
     ],
     "mistake": "Accelerating hard the moment you pass the sign."
   },
   "x2_endovertake": {
-    "more": "Marks where a no-overtaking stretch ends. Overtaking becomes allowed — not automatically safe.",
+    "more": "Marks where a no-overtaking stretch ends. Overtaking becomes allowed - not automatically safe.",
     "where": [
       "After a ghat section or a series of bends",
       "Past a narrow bridge or a school zone"
@@ -3402,7 +3402,7 @@
     "mistake": "Pulling out the instant you see the sign without checking ahead."
   },
   "x2_giveoncoming": {
-    "more": "On a single-lane stretch — narrow bridge, culvert or road works — traffic from the other side goes first. The opposite end usually has a 'priority over oncoming' sign.",
+    "more": "On a single-lane stretch - narrow bridge, culvert or road works - traffic from the other side goes first. The opposite end usually has a 'priority over oncoming' sign.",
     "where": [
       "Narrow bridges on village roads",
       "Single-lane stretches through road works"
@@ -3420,7 +3420,7 @@
     "mistake": "Racing an oncoming vehicle to the narrow section."
   },
   "x2_passeither": {
-    "more": "Both sides of the island or obstruction are open in your direction — common on one-way roads and divided carriageways.",
+    "more": "Both sides of the island or obstruction are open in your direction - common on one-way roads and divided carriageways.",
     "where": [
       "Islands on one-way roads",
       "Toll plaza approaches and bridge piers"
@@ -3450,13 +3450,13 @@
       },
       {
         "s": "You were planning to overtake",
-        "d": "Wait — you now share the road with oncoming traffic."
+        "d": "Wait - you now share the road with oncoming traffic."
       }
     ],
     "mistake": "Staying in the right lane out of habit after the divider ends."
   },
   "x2_winding": {
-    "more": "A run of bends one after another — typical on ghat roads. The plate below may show the length of the winding stretch.",
+    "more": "A run of bends one after another - typical on ghat roads. The plate below may show the length of the winding stretch.",
     "where": [
       "Ghat roads to Munnar, Wayanad, Ponmudi and Sabarimala",
       "Roads through rubber and tea estates"
@@ -3500,7 +3500,7 @@
     "when": [
       {
         "s": "An animal crosses ahead",
-        "d": "Slow down and wait — more may follow."
+        "d": "Slow down and wait - more may follow."
       },
       {
         "s": "An animal freezes in your headlights",
@@ -3572,7 +3572,7 @@
     "when": [
       {
         "s": "Potholes are full of water",
-        "d": "Slow right down — you can't tell how deep they are."
+        "d": "Slow right down - you can't tell how deep they are."
       },
       {
         "s": "You're on a two-wheeler",
@@ -3608,7 +3608,7 @@
     "when": [
       {
         "s": "You're walking and the subway is a little out of the way",
-        "d": "Use it — the detour is short compared with the risk."
+        "d": "Use it - the detour is short compared with the risk."
       },
       {
         "s": "You're driving past the entrance",
@@ -3626,7 +3626,7 @@
     "when": [
       {
         "s": "You're walking with heavy bags",
-        "d": "Still use the bridge — vehicles on a highway can't stop in time."
+        "d": "Still use the bridge - vehicles on a highway can't stop in time."
       },
       {
         "s": "You're driving under it",
@@ -3636,7 +3636,7 @@
     "mistake": "Climbing over the median below the bridge."
   },
   "x2_toll": {
-    "more": "A toll plaza ahead. Lanes split into booths — FASTag lanes, cash lanes and lanes for oversized vehicles — and traffic slows suddenly.",
+    "more": "A toll plaza ahead. Lanes split into booths - FASTag lanes, cash lanes and lanes for oversized vehicles - and traffic slows suddenly.",
     "where": [
       "National highways and expressways",
       "Bridge and bypass entries"
@@ -3648,13 +3648,13 @@
       },
       {
         "s": "The queue is long",
-        "d": "Stay in your lane — weaving between booths causes many small crashes."
+        "d": "Stay in your lane - weaving between booths causes many small crashes."
       }
     ],
     "mistake": "Changing lanes at the last moment inside the plaza."
   },
   "x2_uturn": {
-    "more": "A place where turning round is allowed — usually a median gap or a dedicated U-turn bay.",
+    "more": "A place where turning round is allowed - usually a median gap or a dedicated U-turn bay.",
     "where": [
       "Median openings on divided highways",
       "Under flyovers"
@@ -3666,7 +3666,7 @@
       },
       {
         "s": "Large vehicles are using the U-turn",
-        "d": "Give them room — they may need several attempts."
+        "d": "Give them room - they may need several attempts."
       }
     ],
     "mistake": "Starting the U-turn from the left lane across all the traffic."
@@ -3698,7 +3698,7 @@
     "when": [
       {
         "s": "You've been driving fast for a long time",
-        "d": "Check your speedometer — after long fast stretches, slower speeds feel like crawling."
+        "d": "Check your speedometer - after long fast stretches, slower speeds feel like crawling."
       },
       {
         "s": "A junction comes up soon after",
@@ -3762,7 +3762,7 @@
     "mistake": "Stopping on the carriageway near the sign."
   },
   "x2_police": {
-    "more": "A police post or station is nearby — a safe place to report a crash, a theft or harassment.",
+    "more": "A police post or station is nearby - a safe place to report a crash, a theft or harassment.",
     "where": [
       "Highways between towns",
       "Near towns and junctions"
@@ -3842,7 +3842,7 @@
     "when": [
       {
         "s": "You realise you're over the limit",
-        "d": "Ease off smoothly — harsh braking can cause a rear-end crash."
+        "d": "Ease off smoothly - harsh braking can cause a rear-end crash."
       },
       {
         "s": "Average-speed cameras are used",
@@ -3870,7 +3870,7 @@
     "mistake": "Using an empty bus lane to skip a queue."
   },
   "x2_parkbus": {
-    "more": "Parking set aside for buses — tourist coaches, school and staff buses. Cars parked here force buses onto the road.",
+    "more": "Parking set aside for buses - tourist coaches, school and staff buses. Cars parked here force buses onto the road.",
     "where": [
       "Town centres, malls and stations",
       "Hospitals, offices and tourist spots"
@@ -3878,7 +3878,7 @@
     "when": [
       {
         "s": "The bays are full",
-        "d": "Don't double-park or block the entrance — find another legal spot."
+        "d": "Don't double-park or block the entrance - find another legal spot."
       },
       {
         "s": "You're leaving the bay",
@@ -3900,7 +3900,7 @@
       },
       {
         "s": "The bay is empty and parking is full",
-        "d": "Still keep out — an ambulance may arrive any moment."
+        "d": "Still keep out - an ambulance may arrive any moment."
       }
     ],
     "mistake": "Parking in the bay 'only for a few minutes'."
@@ -3936,13 +3936,13 @@
       },
       {
         "s": "Everyone else is parked on it",
-        "d": "Don't join them — find a legal spot."
+        "d": "Don't join them - find a legal spot."
       }
     ],
     "mistake": "Parking along the yellow line 'only for a minute'."
   },
   "x3_rumble": {
-    "more": "Raised bars that make the vehicle rumble and shake, waking you up to a hazard ahead — or warning that you're drifting off the road.",
+    "more": "Raised bars that make the vehicle rumble and shake, waking you up to a hazard ahead - or warning that you're drifting off the road.",
     "where": [
       "Before toll plazas, junctions and sharp bends",
       "Along highway edges"
@@ -3954,7 +3954,7 @@
       },
       {
         "s": "You hit edge rumble strips",
-        "d": "You're drifting — steer back gently, and if you're tired, stop and rest."
+        "d": "You're drifting - steer back gently, and if you're tired, stop and rest."
       }
     ],
     "mistake": "Driving on the rumble strips' edge to avoid the vibration."
@@ -3986,7 +3986,7 @@
     "when": [
       {
         "s": "You're about to miss your exit",
-        "d": "Don't cut across the chevrons — take the next exit."
+        "d": "Don't cut across the chevrons - take the next exit."
       },
       {
         "s": "You're merging from a slip road",
@@ -4008,7 +4008,7 @@
       },
       {
         "s": "Traffic is jammed next to the empty bus lane",
-        "d": "Stay out — it keeps buses on time for everyone."
+        "d": "Stay out - it keeps buses on time for everyone."
       }
     ],
     "mistake": "Stopping in the bus lane to drop passengers."
@@ -4058,7 +4058,7 @@
     "when": [
       {
         "s": "You see SLOW and nothing obvious ahead",
-        "d": "Slow down anyway — the hazard may be just out of sight."
+        "d": "Slow down anyway - the hazard may be just out of sight."
       },
       {
         "s": "It's raining",
@@ -4086,7 +4086,7 @@
     "mistake": "Slowing down without actually stopping."
   },
   "x3_studCol": {
-    "more": "Coloured reflective studs help you read the road at night. A common pattern is white between lanes, yellow along the median side and red at the left edge — but follow the painted lines where they differ.",
+    "more": "Coloured reflective studs help you read the road at night. A common pattern is white between lanes, yellow along the median side and red at the left edge - but follow the painted lines where they differ.",
     "where": [
       "Expressways and national highways",
       "Bridges and flyovers"
@@ -4098,7 +4098,7 @@
       },
       {
         "s": "You cross a row of red studs",
-        "d": "You're at the road edge — steer back."
+        "d": "You're at the road edge - steer back."
       }
     ],
     "mistake": "Mistaking the edge studs for a lane line."
@@ -4130,7 +4130,7 @@
     "when": [
       {
         "s": "Cones taper your lane away",
-        "d": "Merge early and in turn — don't race to the last cone."
+        "d": "Merge early and in turn - don't race to the last cone."
       },
       {
         "s": "A cone has been knocked into your lane",
@@ -4140,7 +4140,7 @@
     "mistake": "Moving cones aside to drive through a closed lane."
   },
   "x3_barricade": {
-    "more": "Red-and-white striped boards close the road or part of it — for works, a hole, a collapse or an event.",
+    "more": "Red-and-white striped boards close the road or part of it - for works, a hole, a collapse or an event.",
     "where": [
       "Road works and trench digging",
       "Closed bridges and flooded roads"
@@ -4206,7 +4206,7 @@
       },
       {
         "s": "The posts curve sharply",
-        "d": "Slow down early — the bend is tighter than the road suggests."
+        "d": "Slow down early - the bend is tighter than the road suggests."
       }
     ],
     "mistake": "Driving too fast for the visibility and relying only on the posts."
@@ -4224,7 +4224,7 @@
       },
       {
         "s": "The mirror is empty",
-        "d": "It may be dirty or have a blind area — still go slowly and sound the horn on hill bends."
+        "d": "It may be dirty or have a blind area - still go slowly and sound the horn on hill bends."
       }
     ],
     "mistake": "Trusting the mirror completely and pulling out quickly."
@@ -4242,7 +4242,7 @@
       },
       {
         "s": "You see a damaged section",
-        "d": "Slow down — the protection there is gone."
+        "d": "Slow down - the protection there is gone."
       }
     ],
     "mistake": "Leaning or standing on the rail at a viewpoint near traffic."
@@ -4274,7 +4274,7 @@
     "when": [
       {
         "s": "You need to report a vehicle after a hit-and-run",
-        "d": "Note the full number, colour and model — the state and RTO code come first."
+        "d": "Note the full number, colour and model - the state and RTO code come first."
       },
       {
         "s": "Your own plate is dirty or cracked",
@@ -4284,7 +4284,7 @@
     "mistake": "Using fancy fonts or stickers that make the number hard to read."
   },
   "x3_plCommercial": {
-    "more": "Black on yellow marks a commercial vehicle — taxis, autos, buses and goods carriers used for hire or reward.",
+    "more": "Black on yellow marks a commercial vehicle - taxis, autos, buses and goods carriers used for hire or reward.",
     "where": [
       "Taxis, autos and tourist cabs",
       "Lorries, pickups and private buses"
@@ -4292,7 +4292,7 @@
     "when": [
       {
         "s": "You're hiring a taxi",
-        "d": "Check it has a yellow plate — it means it's registered for carrying passengers for hire."
+        "d": "Check it has a yellow plate - it means it's registered for carrying passengers for hire."
       },
       {
         "s": "A yellow-plate vehicle is ahead",
@@ -4302,7 +4302,7 @@
     "mistake": "Using a private car as a regular taxi."
   },
   "x3_plRental": {
-    "more": "Yellow on black marks a self-drive rental vehicle — you hire the car and drive it yourself.",
+    "more": "Yellow on black marks a self-drive rental vehicle - you hire the car and drive it yourself.",
     "where": [
       "Self-drive rental cars and scooters",
       "Tourist areas, airports and stations"
@@ -4328,7 +4328,7 @@
     "when": [
       {
         "s": "You're walking in a car park",
-        "d": "Look as well as listen — an EV may be moving without a sound."
+        "d": "Look as well as listen - an EV may be moving without a sound."
       },
       {
         "s": "You're driving an EV near pedestrians",
@@ -4338,7 +4338,7 @@
     "mistake": "Assuming a silent vehicle isn't moving."
   },
   "x3_plEVcomm": {
-    "more": "Yellow on green marks an electric vehicle used for hire — e-autos, e-buses and electric taxis.",
+    "more": "Yellow on green marks an electric vehicle used for hire - e-autos, e-buses and electric taxis.",
     "where": [
       "Electric autos and city e-buses",
       "App-based electric taxis"
@@ -4350,7 +4350,7 @@
       },
       {
         "s": "You're crossing near a bus stop with e-buses",
-        "d": "Look carefully — the bus may pull away almost silently."
+        "d": "Look carefully - the bus may pull away almost silently."
       }
     ],
     "mistake": "Not hearing an e-bus and stepping out in front of it."
@@ -4377,7 +4377,7 @@
     "more": "The Bharat (BH) series starts with the year of registration, then BH, a number and letters. It's meant for people who move between states for work.",
     "where": [
       "Vehicles of people in transferable jobs",
-      "Any state — the plate doesn't show a state code"
+      "Any state - the plate doesn't show a state code"
     ],
     "when": [
       {
@@ -4404,7 +4404,7 @@
       },
       {
         "s": "You see a plate with HSRP features missing",
-        "d": "It may be a fake — note other details if you need to report the vehicle."
+        "d": "It may be a fake - note other details if you need to report the vehicle."
       }
     ],
     "mistake": "Replacing an HSRP with a decorative plate."
@@ -4418,7 +4418,7 @@
     "when": [
       {
         "s": "You're behind a learner who stalls at a signal",
-        "d": "Be patient — don't hoot or overtake dangerously."
+        "d": "Be patient - don't hoot or overtake dangerously."
       },
       {
         "s": "You're the learner",
@@ -4436,7 +4436,7 @@
     "when": [
       {
         "s": "You see tape low and wide ahead at night",
-        "d": "It's likely a slow lorry or trailer — slow down early."
+        "d": "It's likely a slow lorry or trailer - slow down early."
       },
       {
         "s": "A trailer has no tape",
@@ -4454,7 +4454,7 @@
     "when": [
       {
         "s": "The bus stops with children getting off",
-        "d": "Slow right down or stop — a child may run round the front of the bus."
+        "d": "Slow right down or stop - a child may run round the front of the bus."
       },
       {
         "s": "You're behind it on a narrow road",
@@ -4494,13 +4494,13 @@
       },
       {
         "s": "You park near a hydrant or fire station gate",
-        "d": "Don't — keep those spaces clear at all times."
+        "d": "Don't - keep those spaces clear at all times."
       }
     ],
     "mistake": "Parking across the fire station exit."
   },
   "x3_laneCtl": {
-    "more": "Signals above each lane open or close it — common on tunnels, toll plazas, bridges and tidal-flow roads.",
+    "more": "Signals above each lane open or close it - common on tunnels, toll plazas, bridges and tidal-flow roads.",
     "where": [
       "Tunnels and toll plazas",
       "Bridges with reversible lanes"
@@ -4512,7 +4512,7 @@
       },
       {
         "s": "An amber diagonal arrow appears",
-        "d": "Change lanes in the direction shown — your lane is closing ahead."
+        "d": "Change lanes in the direction shown - your lane is closing ahead."
       }
     ],
     "mistake": "Staying in a red-cross lane because it's empty."
@@ -4530,13 +4530,13 @@
       },
       {
         "s": "A train has passed but the lights keep flashing",
-        "d": "Wait — another train may be coming."
+        "d": "Wait - another train may be coming."
       }
     ],
     "mistake": "Zigzagging round half-down barriers."
   },
   "x3_schoolFlash": {
-    "more": "A flashing amber light on a school sign shows that the school zone is active — children are arriving or leaving.",
+    "more": "A flashing amber light on a school sign shows that the school zone is active - children are arriving or leaving.",
     "where": [
       "Outside schools on main roads",
       "Near school bus stops"
@@ -4562,7 +4562,7 @@
     "when": [
       {
         "s": "You're walking",
-        "d": "Press once and wait for the green figure — pressing again doesn't speed it up."
+        "d": "Press once and wait for the green figure - pressing again doesn't speed it up."
       },
       {
         "s": "You're driving and the light turns amber",
@@ -4572,7 +4572,7 @@
     "mistake": "Crossing before the signal changes because the button 'takes too long'."
   },
   "x3_countRed": {
-    "more": "A countdown under the red light tells you how long you'll wait — useful for deciding to switch off the engine.",
+    "more": "A countdown under the red light tells you how long you'll wait - useful for deciding to switch off the engine.",
     "where": [
       "Long signal cycles at city junctions",
       "Major highway signals"

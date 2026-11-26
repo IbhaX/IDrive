@@ -45,7 +45,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     ):
         raise RuntimeError("SECRET_PEPPER must be set in production (.env)")
     if settings.secret_pepper == "change-me-in-production":
-        log.warning("SECRET_PEPPER is the default — set a real value in .env")
+        log.warning("SECRET_PEPPER is the default - set a real value in .env")
     await init_db()
     async with get_session_factory()() as session:
         removed = await cleanup_expired(session)
@@ -53,7 +53,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
             log.info("cleaned up %d expired rows", removed)
     content.warm()
     curriculum.warm()
-    log.info("IDrive ready — content version %s", content.version())
+    log.info("IDrive ready - content version %s", content.version())
     mirror_task: Optional[asyncio.Task[bool]] = None
     if settings.mirror_3d and model_mirror.missing():
         mirror_task = asyncio.create_task(model_mirror.ensure())
@@ -66,7 +66,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
 app = FastAPI(
     title="IDrive",
     version="2.0.0",
-    description="Indian road signs, markings, signals and driving theory — learn, quiz, mock-test.",
+    description="Indian road signs, markings, signals and driving theory - learn, quiz, mock-test.",
     lifespan=lifespan,
 )
 
@@ -148,7 +148,7 @@ async def _rate_limited(request: Request, exc: RateLimitExceeded) -> JSONRespons
     return JSONResponse(
         status_code=429,
         content={
-            "detail": "rate limit exceeded — slow down and retry",
+            "detail": "rate limit exceeded - slow down and retry",
             "code": "rate_limited",
         },
     )
@@ -232,7 +232,7 @@ async def llms_full() -> Response:
 
 @app.get("/shell", include_in_schema=False)
 async def shell() -> Response:
-    """The bare app shell (no page content) — the service worker caches this
+    """The bare app shell (no page content) - the service worker caches this
     as its offline fallback for every page URL."""
     resp = render_page(static_dir=static_dir, name="index.html")
     resp.headers["X-Robots-Tag"] = "noindex"

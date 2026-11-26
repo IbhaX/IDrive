@@ -186,7 +186,7 @@ def test_mock_pass_boundary(client, db_path, auth_headers) -> None:
         exam_id = client.post("/api/exam/mock", headers=auth_headers).json()["exam_id"]
         key = answer_key(db_path, exam_id)
         ans = key[:correct] + [None] * (30 - correct)
-        # None where the key points elsewhere could collide — force wrong pick
+        # None where the key points elsewhere could collide - force wrong pick
         for i in range(correct, 30):
             ans[i] = (key[i] + 1) % 4
         body = client.post(f"/api/exam/{exam_id}/submit", json={"answers": ans}, headers=auth_headers).json()

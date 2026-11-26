@@ -1,4 +1,4 @@
-/* iDrive labs.js — Driving-science laboratory: stopping distance,
+/* iDrive labs.js - Driving-science laboratory: stopping distance,
    reaction time, four-stroke engine. All physics are simplified
    educational models and are labelled as such in the UI. */
 (() => {

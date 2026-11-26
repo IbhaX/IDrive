@@ -2,7 +2,7 @@
   "id": "m05",
   "n": 5,
   "title": "Traffic rules and road regulations",
-  "summary": "The Motor Vehicles Act, the Central Motor Vehicles Rules and Kerala-specific practice — with sections cited and dates verified.",
+  "summary": "The Motor Vehicles Act, the Central Motor Vehicles Rules and Kerala-specific practice - with sections cited and dates verified.",
   "accent": "#34d399",
   "icon": "law",
   "level": "foundation",
@@ -50,7 +50,7 @@
         {
           "h": "Central rules and regulations",
           "p": [
-            "The Central Motor Vehicles Rules, 1989 (CMVR) fill in the detail: licence tests, vehicle safety equipment, seat belts, pollution certificates and more. Driving regulations — how to keep left, overtake, and behave at junctions — are made by the Central Government under s. 118 of the Act."
+            "The Central Motor Vehicles Rules, 1989 (CMVR) fill in the detail: licence tests, vehicle safety equipment, seat belts, pollution certificates and more. Driving regulations - how to keep left, overtake, and behave at junctions - are made by the Central Government under s. 118 of the Act."
           ]
         },
         {
@@ -62,7 +62,7 @@
         }
       ],
       "terms": [
-        ["Act", "A law passed by Parliament — here, the Motor Vehicles Act, 1988."],
+        ["Act", "A law passed by Parliament - here, the Motor Vehicles Act, 1988."],
         ["Rules", "Detailed provisions made by government under the powers an Act gives it."],
         ["Compounding", "Settling certain offences by paying an amount instead of going to court."],
         ["Notification", "An official publication in the Gazette that brings a rule or limit into force."]
@@ -130,7 +130,7 @@
         {
           "h": "Mobile phones",
           "p": [
-            "Since the 2019 amendment, s. 184 (driving dangerously) specifically includes the use of hand-held communication devices while driving. A phone call — even hands-free — divides attention; texting takes your eyes off the road for seconds at a time."
+            "Since the 2019 amendment, s. 184 (driving dangerously) specifically includes the use of hand-held communication devices while driving. A phone call - even hands-free - divides attention; texting takes your eyes off the road for seconds at a time."
           ]
         },
         {
@@ -150,7 +150,7 @@
         "Answering a call with the phone held to your ear while waiting at a red signal is still using a hand-held device while driving."
       ],
       "mistakes": [
-        "Wearing a helmet with the strap undone — it can fly off on impact.",
+        "Wearing a helmet with the strap undone - it can fly off on impact.",
         "Believing rear passengers do not need belts.",
         "Thinking 'just one drink' is safe because it is probably under the limit."
       ],
@@ -202,29 +202,29 @@
         {
           "h": "The vehicle",
           "p": [
-            "Registration certificate (RC): every vehicle used in a public place must be registered (s. 39). Insurance: s. 146 makes at least third-party insurance compulsory — it pays for injury, death or property damage you cause to others. Pollution Under Control (PUC) certificate: required under the CMVR and renewed at intervals. Fitness certificate: transport vehicles need one to be deemed validly registered (s. 56), and older private vehicles need fitness renewal when their registration is renewed. Permit: transport vehicles carrying passengers or goods for hire need one."
+            "Registration certificate (RC): every vehicle used in a public place must be registered (s. 39). Insurance: s. 146 makes at least third-party insurance compulsory - it pays for injury, death or property damage you cause to others. Pollution Under Control (PUC) certificate: required under the CMVR and renewed at intervals. Fitness certificate: transport vehicles need one to be deemed validly registered (s. 56), and older private vehicles need fitness renewal when their registration is renewed. Permit: transport vehicles carrying passengers or goods for hire need one."
           ]
         },
         {
           "h": "Digital documents",
           "p": [
-            "Documents stored in DigiLocker or mParivahan are recognised by the authorities. Keep the app logged in and the phone charged — but never handle the phone while driving."
+            "Documents stored in DigiLocker or mParivahan are recognised by the authorities. Keep the app logged in and the phone charged - but never handle the phone while driving."
           ],
           "note": { "kind": "tip", "text": "Set calendar reminders for insurance and PUC expiry dates the day you renew them." }
         }
       ],
       "terms": [
-        ["RC", "Registration certificate — proof the vehicle is registered."],
+        ["RC", "Registration certificate - proof the vehicle is registered."],
         ["Third-party insurance", "Insurance covering your liability to other people for injury, death or damage."],
         ["PUC", "Pollution Under Control certificate, showing emissions are within limits."],
         ["Permit", "Authorisation for a transport vehicle to carry passengers or goods for hire."]
       ],
       "examples": [
-        "If your insurance has lapsed and you injure a pedestrian, you may personally have to pay the compensation a tribunal awards — which can run to many times the vehicle's value."
+        "If your insurance has lapsed and you injure a pedestrian, you may personally have to pay the compensation a tribunal awards - which can run to many times the vehicle's value."
       ],
       "mistakes": [
         "Letting insurance lapse 'for a week' until the next salary.",
-        "Assuming a comprehensive policy is optional — only the own-damage part is; third-party cover is compulsory."
+        "Assuming a comprehensive policy is optional - only the own-damage part is; third-party cover is compulsory."
       ],
       "safety": [
         "Valid insurance is what lets a victim of a crash you cause get compensation quickly."
@@ -268,10 +268,10 @@
         {
           "h": "The revised driving test",
           "p": [
-            "In 2024 the Kerala Transport Commissionerate issued Circular 4/2024, revising the light-motor-vehicle driving test to include angular parking, parallel parking, zig-zag driving and a gradient test, in addition to a road test. The rollout met protests and venue shortages. In July 2025 the Kerala High Court partly quashed the circular — holding, among other things, that the state cannot bar automatic or electric cars from the test — while upholding the angular, parallel and gradient elements and daily caps on tests.",
+            "In 2024 the Kerala Transport Commissionerate issued Circular 4/2024, revising the light-motor-vehicle driving test to include angular parking, parallel parking, zig-zag driving and a gradient test, in addition to a road test. The rollout met protests and venue shortages. In July 2025 the Kerala High Court partly quashed the circular - holding, among other things, that the state cannot bar automatic or electric cars from the test - while upholding the angular, parallel and gradient elements and daily caps on tests.",
             "Exactly how your test is run can depend on your RTO and its test ground. Ask your RTO or driving school what the current format is before you prepare."
           ],
-          "note": { "kind": "law", "text": "State-level practice; sources are news reports of the circular and the court ruling. Verified 2026-11-25 — confirm current practice with your RTO." }
+          "note": { "kind": "law", "text": "State-level practice; sources are news reports of the circular and the court ruling. Verified 2026-11-25 - confirm current practice with your RTO." }
         },
         {
           "h": "Kerala road conditions",
@@ -281,7 +281,7 @@
         }
       ],
       "terms": [
-        ["MVD", "Motor Vehicles Department — the state body for licensing, registration and enforcement."],
+        ["MVD", "Motor Vehicles Department - the state body for licensing, registration and enforcement."],
         ["RTO / SRTO", "Regional / Sub-Regional Transport Office."],
         ["Gradient test", "A test of starting and controlling the vehicle on a slope without rolling back."]
       ],
@@ -304,7 +304,7 @@
         },
         {
           "q": "According to the 2025 Kerala High Court ruling, can automatic cars be used for the LMV driving test?",
-          "o": ["No, never", "Yes — the state cannot bar them", "Only for women", "Only electric cars"],
+          "o": ["No, never", "Yes - the state cannot bar them", "Only for women", "Only electric cars"],
           "a": 1,
           "r": "The court held that the state could not restrict the use of automatic or electric vehicles for the test."
         }

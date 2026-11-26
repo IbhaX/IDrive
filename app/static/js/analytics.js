@@ -1,4 +1,4 @@
-/* IDrive analytics.js — optional Google Analytics 4 / Google Ads.
+/* IDrive analytics.js - optional Google Analytics 4 / Google Ads.
    Does nothing unless the server put <meta name="ga-id"> or <meta name="ads-id">
    in the page (GA_MEASUREMENT_ID / ADS_ID settings). Then it loads gtag.js,
    sends a page_view per route, named events, and keeps first/last-touch ad

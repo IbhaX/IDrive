@@ -51,7 +51,7 @@ async def register(request: Request, body: RegisterIn, db: DbDep) -> AuthOut:
 async def login(request: Request, body: LoginIn, db: DbDep) -> AuthOut:
     user = await auth_service.login(db, body.email, body.password)
     if user is None:
-        # Same message either way — never reveal whether the email exists.
+        # Same message either way - never reveal whether the email exists.
         raise HTTPException(
             status_code=401,
             detail={"detail": "invalid email or password", "code": "bad_credentials"},

@@ -1,4 +1,4 @@
-"""Sign-quiz endpoint — server-built practice sets with answers included."""
+"""Sign-quiz endpoint - server-built practice sets with answers included."""
 
 from __future__ import annotations
 

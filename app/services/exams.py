@@ -1,4 +1,4 @@
-"""Question-set engine — ports the source app's signQ/prep/buildMock/
+"""Question-set engine - ports the source app's signQ/prep/buildMock/
 buildPractice logic to run server-side with a seeded RNG per paper."""
 
 from __future__ import annotations
@@ -31,7 +31,7 @@ def _svg(d: dict) -> str:
 
 
 def _pick_options(d: dict, rng: random.Random, n: int = 3) -> list[dict]:
-    """Same-category distractors first, then others — as in the source."""
+    """Same-category distractors first, then others - as in the source."""
     signs = content.signs()
     same = [x for x in signs if x["cat"] == d["cat"] and x["id"] != d["id"]]
     rest = [x for x in signs if x["cat"] != d["cat"]]
@@ -156,7 +156,7 @@ def _shuffled(xs: list, rng: random.Random) -> list:
 
 def build_sign_quiz(cat: str, length: int, rng: random.Random) -> list[dict]:
     """The Learn-tab sign quiz: each item is s2n (sign→name) or n2s
-    (name→sign) with 4 sign options. Answers included — instant feedback
+    (name→sign) with 4 sign options. Answers included - instant feedback
     is the learning feature."""
     pool = content.signs_in_category(cat)
     rng.shuffle(pool)
@@ -192,7 +192,7 @@ def build_sign_quiz(cat: str, length: int, rng: random.Random) -> list[dict]:
 
 
 def strip_answers(qs: list[dict]) -> list[dict]:
-    """Client copy of a mock paper — no answer keys, no reasoning."""
+    """Client copy of a mock paper - no answer keys, no reasoning."""
     return [
         {k: v for k, v in q.items() if k not in ("a", "r")}
         for q in qs

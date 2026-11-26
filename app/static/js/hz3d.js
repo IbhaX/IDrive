@@ -1,4 +1,4 @@
-/* iDrive hz3d.js — 3D renderer for the hazard-perception scenes.
+/* iDrive hz3d.js - 3D renderer for the hazard-perception scenes.
    A small self-contained WebGL2 engine (no CDN, works offline): procedural
    low-poly vehicles, people and roadside scenery, sun + sky lighting, night
    lamps and headlights, rain and fog, soft contact shadows, a rear-view mirror
@@ -49,7 +49,7 @@ const M = {
     let x = norm(cross(up, z)); const y = cross(z, x);
     return new Float32Array([x[0], y[0], z[0], 0, x[1], y[1], z[1], 0, x[2], y[2], z[2], 0, -dot(x, e), -dot(y, e), -dot(z, e), 1]);
   },
-  /* T · Ry · S — yaw 0 faces −Z, positive yaw turns towards +X */
+  /* T · Ry · S - yaw 0 faces −Z, positive yaw turns towards +X */
   trs(x, y, z, yaw, s = 1) {
     const c = Math.cos(yaw) * s, n = Math.sin(yaw) * s;
     return new Float32Array([c, 0, n, 0, 0, s, 0, 0, -n, 0, c, 0, x, y, z, 1]);
@@ -599,7 +599,7 @@ const THEME = { ped: "town", town: "town", junc: "town", two: "suburb", heavy: "
    plus a small clearance). Scene data moves actors along scripted paths; this
    keeps solid bodies from passing into each other: when two overlap, the one
    that is moving (the faster) is held back along its own path until they
-   just touch — it has braked to a stop behind, or it is in contact. */
+   just touch - it has braked to a stop behind, or it is in contact. */
 const FOOT = { car: [2.2, 0.92], bus: [5.3, 1.28], truck: [4.1, 1.24], auto: [1.4, 0.7], bike: [1.0, 0.38], cycle: [0.92, 0.3], ped: [0.22, 0.24], cow: [1.0, 0.36], dog: [0.45, 0.16], ball: [0.11, 0.11], ego: [2.2, 0.92] };
 const CLEAR = 0.03;
 function obb(o) { const f = FOOT[o.kind] || FOOT.car, s = o.sc || 1; return { x: o.X, z: o.Z, y: o.Y, hl: f[0] * s * (o.ls || 1) + CLEAR, hw: f[1] * s + CLEAR }; }
@@ -614,7 +614,7 @@ function overlap(a, b) {
   }
   return true;
 }
-/* bodies: [{X, Z, Y, kind, sc, vx, vz, fixed}] — moves X/Z of the movers in place */
+/* bodies: [{X, Z, Y, kind, sc, vx, vz, fixed}] - moves X/Z of the movers in place */
 function resolveContacts(bodies) {
   for (let pass = 0; pass < 3; pass++) {
     let any = false;

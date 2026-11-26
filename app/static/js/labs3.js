@@ -1,7 +1,7 @@
-/* iDrive labs3.js — 20 more driving-science labs on one small engine.
+/* iDrive labs3.js - 20 more driving-science labs on one small engine.
    A lab declares its state, controls, a calc(st) → readout and a
    draw(st, r, t) → SVG markup (t = 0..1 for animated runs). Every number is
-   a simplified, labelled educational model — no legal limits, no fines. */
+   a simplified, labelled educational model - no legal limits, no fines. */
 (() => {
 "use strict";
 const Lb = window.Labs;
@@ -163,7 +163,7 @@ def("slope", {
     s += T(cx, 230, `${st.grade > 0 ? "+" : ""}${st.grade}%`, "hlab", "middle");
     const max = Math.max(r.flat, isFinite(r.dist) ? r.dist : r.flat * 2.5) * 1.1;
     s += hbar(330, 80, 280, 16, r.flat, max, "l3okbar", t1("slFlat")) + hbar(330, 150, 280, 16, isFinite(r.dist) ? r.dist : max, max, isFinite(r.dist) ? (r.dist > r.flat ? "l3badbar" : "l3okbar") : "l3badbar", t1("slThis"));
-    s += T(612, 113, `${fx(r.flat)} m`, "axis", "end") + T(612, 183, isFinite(r.dist) ? `${fx(r.dist)} m` : "—", "axis", "end");
+    s += T(612, 113, `${fx(r.flat)} m`, "axis", "end") + T(612, 183, isFinite(r.dist) ? `${fx(r.dist)} m` : "-", "axis", "end");
     return s;
   },
 });
@@ -178,7 +178,7 @@ def("abs", {
     const stop = br > .02 ? v * v / (2 * br * g) : Infinity;
     return { s, muS, br, lat, mup, stop,
       say: s >= .9 ? ["abLocked", {}, "bad"] : st.abs === "on" && st.pedal >= 30 ? ["abWorking", {}, "good"] : ["abLight", {}, ""],
-      rows: [["abBrake", `${Math.round(br / mup * 100)}%`], ["abSteer", `${Math.round(lat / mup * 100)}%`], ["abStop", isFinite(stop) ? `${fx(stop)} m` : "—"]], tip: "abTip" };
+      rows: [["abBrake", `${Math.round(br / mup * 100)}%`], ["abSteer", `${Math.round(lat / mup * 100)}%`], ["abStop", isFinite(stop) ? `${fx(stop)} m` : "-"]], tip: "abTip" };
   },
   draw(st, r) {
     const X = (x) => 60 + x * 340, Y = (y) => 210 - y * 150;

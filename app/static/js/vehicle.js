@@ -1,4 +1,4 @@
-/* iDrive vehicle.js — interactive vehicle explorer (clickable cut-away)
+/* iDrive vehicle.js - interactive vehicle explorer (clickable cut-away)
    and the dashboard warning-light encyclopedia. */
 (() => {
 "use strict";

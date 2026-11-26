@@ -1,4 +1,4 @@
-/* IDrive quiz.js — sign quiz (server-built sets, instant feedback) and
+/* IDrive quiz.js - sign quiz (server-built sets, instant feedback) and
    Leitner flashcards. Markup mirrors the source app. */
 (() => {
 "use strict";

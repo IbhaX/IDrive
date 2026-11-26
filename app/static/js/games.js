@@ -1,4 +1,4 @@
-/* iDrive games.js — driving games that train reaction time, attention and
+/* iDrive games.js - driving games that train reaction time, attention and
    road logic. One small engine (stage, centre ▶, HUD, result card, best
    scores in P.gm) and 31 games. Canvas games draw in a 640×400 logical
    space; logic games mostly use DOM buttons in the stage's layer.
@@ -37,7 +37,7 @@ const playedGame = (id) => (DEF[id].levels ? DEF[id].levels.some((lv) => (P.gm |
 const bestLine = (id) => {
   const sp = DEF[id];
   if (!sp.levels) { const b = bestOf(id); return b == null ? e(u("gmNoBest")) : `${e(u("gmBest"))}: <b>${fmt(id, b)}</b>`; }
-  return sp.levels.map((lv) => { const b = bestOf(id, lv); return `${e(u("gmLvl_" + lv))}: <b>${b == null ? "—" : fmt(id, b)}</b>`; }).join(" · ");
+  return sp.levels.map((lv) => { const b = bestOf(id, lv); return `${e(u("gmLvl_" + lv))}: <b>${b == null ? "-" : fmt(id, b)}</b>`; }).join(" · ");
 };
 
 /* ---------- drawing helpers (logical 640×400) ---------- */
@@ -230,7 +230,7 @@ function play(app, id) {
     if (value != null && isFinite(value)) { P.gm = P.gm || {}; if (isBest) P.gm[key] = pts; Course.touchDay(); save(); }
     const prevV = prevPts == null ? null : fromPoints(id, prevPts);
     app.querySelector(".glevels")?.classList.remove("busy");
-    res.innerHTML = `<div class="gresin"><span class="eyebrow">${lv ? `${e(u("gmLvl_" + lv))} · ` : ""}${e(u("gmScore"))} · ${e(u(DEF[id].lo ? "gmLowBetter" : "gmHighBetter"))}</span><b class="gval">${value == null ? "—" : fmt(id, value)}</b>${isBest && value != null ? `<span class="gnew">★ ${e(u("gmNewBest"))}</span>` : prevV != null ? `<span class="gprev">${e(u("gmBest"))}: ${fmt(id, prevV)}</span>` : ""}${detail ? `<p>${detail}</p>` : ""}</div>`;
+    res.innerHTML = `<div class="gresin"><span class="eyebrow">${lv ? `${e(u("gmLvl_" + lv))} · ` : ""}${e(u("gmScore"))} · ${e(u(DEF[id].lo ? "gmLowBetter" : "gmHighBetter"))}</span><b class="gval">${value == null ? "-" : fmt(id, value)}</b>${isBest && value != null ? `<span class="gnew">★ ${e(u("gmNewBest"))}</span>` : prevV != null ? `<span class="gprev">${e(u("gmBest"))}: ${fmt(id, prevV)}</span>` : ""}${detail ? `<p>${detail}</p>` : ""}</div>`;
     res.hidden = false; btn.querySelector("i").textContent = "↻"; btn.setAttribute("aria-label", I18n.one(u("tryAgain"))); btn.hidden = false;
     showBest();
     if (isBest && value != null && window.Motion && Motion.confetti) Motion.confetti();
@@ -726,7 +726,7 @@ function drawNight(c, scroll, ped) {
 
 /* =========================== LOGIC =========================== */
 
-/* slide the cars out of the way — levels generated and BFS-solved offline;
+/* slide the cars out of the way - levels generated and BFS-solved offline;
    tests/test_seo.py checks no overlaps and that min = fewest moves */
 const PARK = [{"cars": [[2, 1, 2, true], [0, 4, 3, false], [3, 3, 2, true], [4, 3, 2, true], [0, 1, 2, false], [3, 0, 2, false], [1, 2, 2, true]], "min": 4}, {"cars": [[2, 0, 2, true], [5, 0, 2, true], [4, 4, 2, true], [0, 4, 3, false], [1, 5, 3, false], [1, 3, 2, false], [3, 3, 2, true]], "min": 6}, {"cars": [[2, 0, 2, true], [0, 5, 2, false], [1, 3, 2, true], [4, 2, 2, false], [4, 5, 2, false], [2, 3, 2, false], [3, 0, 2, false], [0, 2, 3, true], [1, 0, 2, true], [1, 2, 2, false]], "min": 9}, {"cars": [[2, 0, 2, true], [4, 4, 2, true], [1, 0, 3, true], [3, 0, 2, false], [0, 4, 2, false], [1, 3, 2, false], [2, 2, 2, false], [2, 4, 2, false]], "min": 12}, {"cars": [[2, 2, 2, true], [4, 1, 2, false], [3, 3, 3, false], [1, 4, 3, false], [3, 0, 2, true], [3, 2, 2, false], [4, 4, 2, true]], "min": 15}, {"cars": [[2, 0, 2, true], [5, 1, 2, true], [3, 3, 3, false], [0, 4, 3, false], [2, 5, 2, false], [4, 4, 2, true], [4, 0, 2, false], [2, 2, 3, false], [3, 0, 2, true]], "min": 17}];
 def("parking", {
@@ -1113,7 +1113,7 @@ def("blindspots", {
   },
 });
 
-/* overtake or wait? — after the choice the manoeuvre plays out in real metres:
+/* overtake or wait? - after the choice the manoeuvre plays out in real metres:
    you start 20 m behind the lorry, pull out, pass, and are done 20 m ahead of it;
    all speeds constant. Needed road = (your speed + oncoming speed) × time to pass. */
 const smooth = (x) => { x = clamp(x, 0, 1); return x * x * (3 - 2 * x); };

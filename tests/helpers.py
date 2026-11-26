@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 def answer_key(db_path: Path, exam_id: str) -> list[int]:
-    """Read a mock paper's stored answer key straight from SQLite — tests can
+    """Read a mock paper's stored answer key straight from SQLite - tests can
     see it, real clients cannot."""
     con = sqlite3.connect(db_path)
     try:

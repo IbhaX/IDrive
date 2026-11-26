@@ -1,7 +1,7 @@
-/* iDrive car3d.js — real 3D car for the vehicle explorer.
+/* iDrive car3d.js - real 3D car for the vehicle explorer.
 
    Model: "Car Concept" by Eric Chadwick (Darmstadt Graphics Group), from a
-   CC0 model by Unity Fan — CC BY 4.0, Khronos glTF Sample Assets. Khronos
+   CC0 model by Unity Fan - CC BY 4.0, Khronos glTF Sample Assets. Khronos
    logos are not covered by that licence, so badge/plate meshes are hidden.
    three.js (MIT, via the import map) and the model (our own server) load on demand and
    cached by the service worker.
@@ -86,7 +86,7 @@ C.load = async () => {
   msg(`<div class="x3dload"><i></i></div><p>${I18n.esc(u("v3dLoading"))}</p><b class="x3dpct">0%</b><small class="x3dfile"></small>`);
   /* progress: 0–15 % for the 3D library, 15–100 % by files of the model.
      (Byte counts are unreliable here: the CDN gzips, so "loaded" can exceed
-     the compressed "total" — that is what produced readings over 100 %.) */
+     the compressed "total" - that is what produced readings over 100 %.) */
   let shown = 0;
   const pct = (v) => {
     shown = Math.max(shown, Math.min(99, Math.round(v)));
@@ -141,7 +141,7 @@ C.load = async () => {
     Motion.rise && Motion.rise(C.el.querySelector(".x3dstage"));
   } catch (err) {
     console.warn("3D car failed to load", err);
-    C.state = "error"; C.lastErr = (String((err && err.message) || err) + (C.pending && C.pending().length ? " — " + C.pending().join(", ") : "")).slice(0, 200); showError();
+    C.state = "error"; C.lastErr = (String((err && err.message) || err) + (C.pending && C.pending().length ? " - " + C.pending().join(", ") : "")).slice(0, 200); showError();
   }
 };
 
@@ -267,7 +267,7 @@ function build(root) {
   };
   const bay = fa + (len / 2 - fa) * 0.15;
 
-  // ENGINE — inline-four, mounted lengthways: block, head, red cam cover with
+  // ENGINE - inline-four, mounted lengthways: block, head, red cam cover with
   // coil packs, intake runners + plenum, exhaust manifold, belt drive, flywheel
   {
     const g = part("engine", P(bay, R * 1.3, 0)), e = "engine";
@@ -290,7 +290,7 @@ function build(root) {
     mk(g, e, cylX(.15, .15, .03, 32), "steel", -.31, -.05, 0, 0, 0, -HALF);    // flywheel
   }
 
-  // RADIATOR — core with fins, side tanks, fan and shroud, hoses
+  // RADIATOR - core with fins, side tanks, fan and shroud, hoses
   {
     const g = part("radiator", P(fa + (len / 2 - fa) * .62, R * 1.2, 0)), r = "radiator";
     mk(g, r, new T.BoxGeometry(.04, .36, .62), "dark");
@@ -306,7 +306,7 @@ function build(root) {
     mk(g, r, tube([V(-.02, .16, -.3), V(-.12, .17, -.3), V(-.25, .1, -.2)], .022, false, 16), "rubber");
   }
 
-  // BATTERY — case, lid, red (+) and black (−) terminals with cables
+  // BATTERY - case, lid, red (+) and black (−) terminals with cables
   {
     const g = part("battery", P(fa - len * .01, R * 1.75, -half * .55)), b = "battery";
     mk(g, b, new T.BoxGeometry(.26, .18, .17), "plastic");
@@ -317,7 +317,7 @@ function build(root) {
     mk(g, b, tube([V(-.085, .15, .045), V(-.12, .19, .1), V(-.25, .05, .2)], .012, false, 12), "plastic");
   }
 
-  // ABS / ESC — hydraulic block with pump motor, brake-line ports and the ECU connector
+  // ABS / ESC - hydraulic block with pump motor, brake-line ports and the ECU connector
   {
     const g = part("abs", P(fa - len * .05, R * 1.75, half * .55)), a = "abs";
     mk(g, a, new T.BoxGeometry(.12, .08, .10), "alu");
@@ -326,7 +326,7 @@ function build(root) {
     [-.035, 0, .035].forEach(x => [-.02, .02].forEach(z => mk(g, a, new T.CylinderGeometry(.007, .007, .03, 8), "copper", x, .055, z)));
   }
 
-  // CLUTCH — flywheel side: pressure plate with diaphragm fingers and the friction disc
+  // CLUTCH - flywheel side: pressure plate with diaphragm fingers and the friction disc
   {
     const g = part("clutch", P(fa - len * .1, R * 1.1, 0)), c = "clutch";
     mk(g, c, cylX(.13, .13, .035, 32), "steel", 0, 0, 0, 0, 0, -HALF);
@@ -338,7 +338,7 @@ function build(root) {
     mk(g, c, new T.TorusGeometry(.13, .008, 6, 40), "dark", -.018, 0, 0, 0, HALF, 0);
   }
 
-  // GEARBOX — bell housing, ribbed case, tail housing and the gear lever
+  // GEARBOX - bell housing, ribbed case, tail housing and the gear lever
   {
     const g = part("gearbox", P(fa - len * .19, R * 1.0, 0)), x = "gearbox";
     mk(g, x, cylX(.11, .17, .16, 28), "alu", .2, .02, 0, 0, 0, -HALF);
@@ -349,7 +349,7 @@ function build(root) {
     mk(g, x, new T.SphereGeometry(.035, 16, 12), "plastic", -.12, .39, 0);
   }
 
-  // DRIVESHAFT — tube between the gearbox and the differential with universal joints
+  // DRIVESHAFT - tube between the gearbox and the differential with universal joints
   {
     const start = fa - len * .19 - .37 * S, end = ra + .16 * S, mid = (start + end) / 2, L0 = (start - end) / S;
     const g = part("driveshaft", P(mid, R * .78, 0)), d = "driveshaft";
@@ -361,7 +361,7 @@ function build(root) {
     });
   }
 
-  // DIFFERENTIAL — the "pumpkin", rear cover, pinion nose and axle tubes to both wheels
+  // DIFFERENTIAL - the "pumpkin", rear cover, pinion nose and axle tubes to both wheels
   {
     const g = part("differential", P(ra, R, 0)), d = "differential", ax = half / S * .82;
     mk(g, d, new T.SphereGeometry(.14, 28, 20), "dark");
@@ -370,7 +370,7 @@ function build(root) {
     mk(g, d, new T.CylinderGeometry(.04, .045, ax * 2, 16), "dark", 0, 0, 0, HALF, 0, 0);
   }
 
-  // FUEL TANK — moulded tank under the rear seat, filler neck to the side, pump flange on top
+  // FUEL TANK - moulded tank under the rear seat, filler neck to the side, pump flange on top
   {
     const g = part("fuel", P(ra + len * .14, R * .75, 0)), f = "fuel";
     const geo = new T.ExtrudeGeometry(roundRect(.55, 1.0, .12), { depth: .2, bevelEnabled: true, bevelThickness: .03, bevelSize: .03, bevelSegments: 3, curveSegments: 8 });
@@ -380,7 +380,7 @@ function build(root) {
     mk(g, f, tube([V(-.1, .08, .45), V(-.2, .25, .6), V(-.35, .45, .82)], .03, false, 20), "rubber");
   }
 
-  // EXHAUST — down-pipe, catalytic converter, middle pipe, silencer and tailpipe
+  // EXHAUST - down-pipe, catalytic converter, middle pipe, silencer and tailpipe
   {
     const g = part("exhaust", P(0, 0, 0), 1), x = "exhaust", wE = half * .3;
     const pts = [P(bay, R * 1.05, half * .16), P(bay - len * .06, R * .5, wE), P(bay - len * .2, R * .42, wE), P(ra + len * .2, R * .45, wE), P(ra - len * .12, R * .5, wE), P(-len / 2 + len * .02, R * .55, wE * 1.2)];
@@ -395,7 +395,7 @@ function build(root) {
     mk(g, x, cylX(.035 * S, .035 * S, .1 * S, 16), "chrome", -len / 2 + len * .01, R * .55, wE * 1.2, 0, 0, -HALF);
   }
 
-  // STEERING — wheel (three spokes) in front of the driver on the right, column, rack and tie rods
+  // STEERING - wheel (three spokes) in front of the driver on the right, column, rack and tie rods
   {
     const drvU = fa - (fa - ra) * .42, drvW = half * .42;
     const g = part("steering", P(drvU, hgt * .62, drvW)), s = "steering";
@@ -413,7 +413,7 @@ function build(root) {
     });
   }
 
-  // AIRBAGS — inflated cushions: steering wheel, passenger dashboard and side curtains
+  // AIRBAGS - inflated cushions: steering wheel, passenger dashboard and side curtains
   {
     const drvU = fa - (fa - ra) * .42, drvW = half * .42;
     const g = part("airbags", P(drvU - len * .03, hgt * .64, drvW)), a = "airbags";
@@ -426,7 +426,7 @@ function build(root) {
     });
   }
 
-  // SUSPENSION — at each corner: coil spring around a damper, top mount and a lower arm
+  // SUSPENSION - at each corner: coil spring around a damper, top mount and a lower arm
   {
     const coil = () => {
       const pts = [];

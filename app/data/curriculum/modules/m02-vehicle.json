@@ -2,7 +2,7 @@
   "id": "m02",
   "n": 2,
   "title": "Understanding the vehicle",
-  "summary": "How engines, gearboxes, drivetrains, controls and safety systems work — and what it feels like when they fail.",
+  "summary": "How engines, gearboxes, drivetrains, controls and safety systems work - and what it feels like when they fail.",
   "accent": "#7c6cff",
   "icon": "engine",
   "level": "foundation",
@@ -41,13 +41,13 @@
         {
           "h": "The four-stroke cycle",
           "p": [
-            "Each cylinder holds a piston that slides up and down. The piston is linked by a connecting rod to the crankshaft, which turns the up-and-down motion into rotation — like your legs pushing bicycle pedals.",
+            "Each cylinder holds a piston that slides up and down. The piston is linked by a connecting rod to the crankshaft, which turns the up-and-down motion into rotation - like your legs pushing bicycle pedals.",
             "The cycle takes two full turns of the crankshaft and four movements (strokes) of the piston. Only one of the four strokes produces power; the heavy flywheel and the other cylinders keep the engine turning through the rest."
           ],
           "steps": [
             "Intake: the piston moves down, the intake valve opens, and air (with fuel, in most petrol engines) is drawn in.",
             "Compression: both valves close and the piston moves up, squeezing the mixture into a small space.",
-            "Power: the mixture burns — lit by a spark plug in petrol engines, or by the heat of compression in diesels — and the expanding gas forces the piston down.",
+            "Power: the mixture burns - lit by a spark plug in petrol engines, or by the heat of compression in diesels - and the expanding gas forces the piston down.",
             "Exhaust: the exhaust valve opens and the piston moves up, pushing the burnt gases out to the exhaust system."
           ],
           "note": { "kind": "model", "text": "Open the engine lab to watch the cycle step by step. The animation is a simplified educational model." }
@@ -62,7 +62,7 @@
         {
           "h": "Petrol versus diesel",
           "p": [
-            "A petrol engine compresses the mixture moderately and ignites it with a spark. A diesel compresses air much more strongly — enough to make it very hot — then injects fuel, which ignites by itself. This is why diesels need glow plugs to help cold starts, are more efficient, produce more pulling force (torque) at low speed, and need a particulate filter (DPF) to trap soot."
+            "A petrol engine compresses the mixture moderately and ignites it with a spark. A diesel compresses air much more strongly - enough to make it very hot - then injects fuel, which ignites by itself. This is why diesels need glow plugs to help cold starts, are more efficient, produce more pulling force (torque) at low speed, and need a particulate filter (DPF) to trap soot."
           ]
         },
         {
@@ -76,7 +76,7 @@
         {
           "h": "Exhaust and emissions",
           "p": [
-            "The exhaust manifold collects gases from each cylinder. A catalytic converter turns the most harmful gases into less harmful ones. Diesels add a particulate filter. The silencer reduces noise. A leaking exhaust can let carbon monoxide into the cabin — a colourless, odourless and deadly gas."
+            "The exhaust manifold collects gases from each cylinder. A catalytic converter turns the most harmful gases into less harmful ones. Diesels add a particulate filter. The silencer reduces noise. A leaking exhaust can let carbon monoxide into the cabin - a colourless, odourless and deadly gas."
           ]
         }
       ],
@@ -85,12 +85,12 @@
         ["Crankshaft", "Turns the pistons' up-and-down motion into rotation."],
         ["Camshaft", "Opens and closes the valves in time with the pistons."],
         ["Compression ratio", "How much the mixture is squeezed before it burns; higher in diesels."],
-        ["ECU", "Engine control unit — the computer that controls fuel, ignition and many sensors."],
-        ["Torque", "Twisting force at the crankshaft — what you feel as pulling power."]
+        ["ECU", "Engine control unit - the computer that controls fuel, ignition and many sensors."],
+        ["Torque", "Twisting force at the crankshaft - what you feel as pulling power."]
       ],
       "examples": [
         "A diesel car that starts reluctantly on a cold morning, with the glow-plug light staying on for a long time, may have a failing glow plug.",
-        "A rhythmic knocking that rises with engine speed and gets worse when the oil light flickers is a sign of low oil pressure — stop and switch off."
+        "A rhythmic knocking that rises with engine speed and gets worse when the oil light flickers is a sign of low oil pressure - stop and switch off."
       ],
       "mistakes": [
         "Topping up coolant with plain water for months, losing corrosion protection.",
@@ -161,7 +161,7 @@
         {
           "h": "Using an automatic well",
           "p": [
-            "Keep your left foot off the pedals; use the right foot for both accelerator and brake. Most automatics creep forward in D when you lift off the brake — use that for gentle manoeuvres. On long descents, select a lower gear (L, 2, or manual mode) so engine braking helps and the brakes do not overheat."
+            "Keep your left foot off the pedals; use the right foot for both accelerator and brake. Most automatics creep forward in D when you lift off the brake - use that for gentle manoeuvres. On long descents, select a lower gear (L, 2, or manual mode) so engine braking helps and the brakes do not overheat."
           ]
         }
       ],
@@ -175,7 +175,7 @@
         "Climbing a ghat road in an AMT car, the gearbox may shift up too early. Using manual mode to hold a lower gear keeps pulling power and engine braking."
       ],
       "mistakes": [
-        "Coasting downhill in neutral — you lose engine braking and control.",
+        "Coasting downhill in neutral - you lose engine braking and control.",
         "Resting your foot on the clutch pedal while driving.",
         "Shifting an automatic into R or P while still rolling."
       ],
@@ -247,7 +247,7 @@
         ["Oversteer", "The rear tyres lose grip and the back of the car swings out."]
       ],
       "examples": [
-        "A FWD car entering a wet bend too fast pushes straight on. Easing off the accelerator — not steering harder — helps the front tyres regain grip."
+        "A FWD car entering a wet bend too fast pushes straight on. Easing off the accelerator - not steering harder - helps the front tyres regain grip."
       ],
       "mistakes": [
         "Driving faster in rain because the vehicle is 4WD.",
@@ -265,7 +265,7 @@
         },
         {
           "q": "Does all-wheel drive shorten your braking distance on a wet road?",
-          "o": ["Yes, a lot", "Yes, a little", "No — braking depends on tyre grip, not drive layout", "Only above 80 km/h"],
+          "o": ["Yes, a lot", "Yes, a little", "No - braking depends on tyre grip, not drive layout", "Only above 80 km/h"],
           "a": 2,
           "r": "All vehicles brake with all four wheels. Driving all four wheels helps acceleration, not stopping."
         }
@@ -295,7 +295,7 @@
         {
           "h": "Regenerative braking",
           "p": [
-            "When you lift off the accelerator or press the brake gently, the motor works as a generator, slowing the car and sending energy back to the battery. Some EVs allow one-pedal driving: lifting off slows the car almost to a stop. The friction brakes still do the hard stopping, so they still need checks — and they can corrode if they are rarely used."
+            "When you lift off the accelerator or press the brake gently, the motor works as a generator, slowing the car and sending energy back to the battery. Some EVs allow one-pedal driving: lifting off slows the car almost to a stop. The friction brakes still do the hard stopping, so they still need checks - and they can corrode if they are rarely used."
           ]
         },
         {
@@ -307,7 +307,7 @@
         {
           "h": "EV safety points",
           "p": [
-            "EVs are nearly silent at low speed, so pedestrians may not hear you; many have an acoustic warning, but you must still watch for people stepping out. Quick acceleration can surprise new drivers. High-voltage cables are orange — never touch damaged ones. After a crash, a battery can overheat hours later; tell responders the vehicle is electric."
+            "EVs are nearly silent at low speed, so pedestrians may not hear you; many have an acoustic warning, but you must still watch for people stepping out. Quick acceleration can surprise new drivers. High-voltage cables are orange - never touch damaged ones. After a crash, a battery can overheat hours later; tell responders the vehicle is electric."
           ],
           "note": { "kind": "safety", "text": "Do not drive through deep water in any vehicle. Follow the owner's manual for an EV's wading limit and charging precautions." }
         }
@@ -318,7 +318,7 @@
         ["State of charge", "How full the battery is, shown as a percentage."]
       ],
       "examples": [
-        "Driving down a long ghat in an EV, strong regeneration holds your speed and adds range — but plan for a full battery not accepting much regeneration."
+        "Driving down a long ghat in an EV, strong regeneration holds your speed and adds range - but plan for a full battery not accepting much regeneration."
       ],
       "mistakes": [
         "Assuming pedestrians can hear you coming.",
@@ -360,13 +360,13 @@
         {
           "h": "Primary controls",
           "p": [
-            "Steering wheel: hold it at 'quarter to three' or 'ten to two' with both hands, thumbs resting on the rim, not hooked inside. Accelerator (right pedal): controls engine power. Brake (middle pedal in a manual, left of the accelerator in an automatic): slows the car; use the right foot. Clutch (left pedal, manual only): use the left foot. Gear lever: selects gears. Parking brake: holds the car when parked — a hand lever, a button (electronic parking brake), or a foot pedal in some vehicles."
+            "Steering wheel: hold it at 'quarter to three' or 'ten to two' with both hands, thumbs resting on the rim, not hooked inside. Accelerator (right pedal): controls engine power. Brake (middle pedal in a manual, left of the accelerator in an automatic): slows the car; use the right foot. Clutch (left pedal, manual only): use the left foot. Gear lever: selects gears. Parking brake: holds the car when parked - a hand lever, a button (electronic parking brake), or a foot pedal in some vehicles."
           ]
         },
         {
           "h": "Secondary controls",
           "p": [
-            "Indicators: on the stalk beside the steering wheel; signal in good time and cancel after use. Headlights: off, parking lamps, low beam, high beam; flash with the stalk. Hazard lights: the red triangle button, for when your vehicle is stopped and a danger to others — not for parking illegally. Wipers and washers: usually on the opposite stalk. Horn: to warn others of your presence, not to express frustration. Demisters and AC: to keep glass clear in the rain."
+            "Indicators: on the stalk beside the steering wheel; signal in good time and cancel after use. Headlights: off, parking lamps, low beam, high beam; flash with the stalk. Hazard lights: the red triangle button, for when your vehicle is stopped and a danger to others - not for parking illegally. Wipers and washers: usually on the opposite stalk. Horn: to warn others of your presence, not to express frustration. Demisters and AC: to keep glass clear in the rain."
           ],
           "note": { "kind": "tip", "text": "Before your first drive in any car, sit for two minutes and find each control by touch. Do it again in the dark." }
         },
@@ -385,7 +385,7 @@
         "In heavy rain at night, the AC with fresh air and the front demister clears fogged glass far faster than wiping it with a cloth."
       ],
       "mistakes": [
-        "Using hazard lights while driving in rain or fog — it hides your indicators.",
+        "Using hazard lights while driving in rain or fog - it hides your indicators.",
         "Leaving the indicator on after a turn, misleading others.",
         "Using high beam towards oncoming traffic."
       ],
@@ -401,7 +401,7 @@
         },
         {
           "q": "A red warning light on the cluster usually means:",
-          "o": ["A system is switched on", "Service due in the next month", "A serious problem — stop safely as soon as you can", "Nothing important"],
+          "o": ["A system is switched on", "Service due in the next month", "A serious problem - stop safely as soon as you can", "Nothing important"],
           "a": 2,
           "r": "Red warnings indicate safety-critical faults or conditions. Amber means get it checked; green/blue means a system is active."
         }
@@ -419,15 +419,15 @@
         "Explain how ABS keeps you able to steer while braking hard.",
         "Describe EBD, traction control, ESC and hill-hold assist.",
         "Use seat belts and airbags correctly together.",
-        "Understand what ADAS features do — and their limits."
+        "Understand what ADAS features do - and their limits."
       ],
       "intro": "Modern vehicles carry electronic systems that help in an emergency. They are remarkable, but they work within the laws of physics. Knowing what each one does helps you use it properly and not lean on it too much.",
       "sections": [
         {
-          "h": "ABS — anti-lock braking",
+          "h": "ABS - anti-lock braking",
           "p": [
             "If you brake so hard that a wheel stops turning, the tyre skids. A skidding tyre has less grip and cannot steer the car. ABS watches each wheel's speed. When it sees a wheel about to lock, it briefly releases and reapplies the brake on that wheel many times a second.",
-            "In an emergency with ABS: press the brake firmly and keep pressing, even when you feel the pedal pulse and hear grinding. Steer around the hazard. Do not pump the pedal — the system is doing that for you."
+            "In an emergency with ABS: press the brake firmly and keep pressing, even when you feel the pedal pulse and hear grinding. Steer around the hazard. Do not pump the pedal - the system is doing that for you."
           ],
           "note": { "kind": "safety", "text": "ABS keeps you able to steer. It does not always shorten stopping distance, especially on gravel or loose surfaces." }
         },
@@ -446,7 +446,7 @@
         {
           "h": "Seat belts, pretensioners and airbags",
           "p": [
-            "In a crash, the seat belt holds you against the seat so your body slows down with the car. A pretensioner fires a small charge to pull the belt tight in the first milliseconds. A load limiter lets the belt give slightly to reduce chest injury. Airbags inflate in a fraction of a second to cushion your head and chest — they are designed to work with a belt, not instead of one.",
+            "In a crash, the seat belt holds you against the seat so your body slows down with the car. A pretensioner fires a small charge to pull the belt tight in the first milliseconds. A load limiter lets the belt give slightly to reduce chest injury. Airbags inflate in a fraction of a second to cushion your head and chest - they are designed to work with a belt, not instead of one.",
             "An airbag inflates with great force. Sit at least about 25 cm from the steering wheel, never put a rear-facing child seat in front of an active passenger airbag, and keep feet off the dashboard."
           ],
           "note": { "kind": "law", "text": "CMVR rule 138(3) requires the driver, front passenger and occupants of front-facing rear seats to wear seat belts where they are fitted; MV Act s. 194B makes not wearing one an offence. Verified 2026-11-25." }
@@ -459,9 +459,9 @@
         }
       ],
       "terms": [
-        ["ABS", "Anti-lock braking system — prevents wheels locking under hard braking."],
-        ["EBD", "Electronic brakeforce distribution — balances braking between axles."],
-        ["ESC / ESP", "Electronic stability control — brakes individual wheels to stop a skid."],
+        ["ABS", "Anti-lock braking system - prevents wheels locking under hard braking."],
+        ["EBD", "Electronic brakeforce distribution - balances braking between axles."],
+        ["ESC / ESP", "Electronic stability control - brakes individual wheels to stop a skid."],
         ["Pretensioner", "Device that tightens the seat belt at the start of a crash."],
         ["ADAS", "Advanced driver-assistance systems such as automatic braking and lane-keep."]
       ],

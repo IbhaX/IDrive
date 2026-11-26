@@ -1,4 +1,4 @@
-/* iDrive app.js — shell: progress state, navigation, hash routing,
+/* iDrive app.js - shell: progress state, navigation, hash routing,
    event delegation, keyboard, boot. Keeps the source app's data-* event
    contract and adds the curriculum/lab/vehicle/hazard/instructor routes. */
 (() => {
@@ -26,7 +26,7 @@ window.saveLocal = saveLocal;
 function save() { P.v = (P.v || 0) + 1; saveLocal(); Auth.queuePut(); }
 window.save = save;
 
-/* progress helpers — same semantics as the source (Leitner boxes 0-4) */
+/* progress helpers - same semantics as the source (Leitner boxes 0-4) */
 window.box = (id) => (P.box || {})[id] || 0;
 window.setBox = (id, v) => { P.box[id] = Math.max(0, Math.min(4, v)); P.seen[id] = 1; };
 window.shuffle = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
@@ -114,7 +114,7 @@ const ALIASES = { sign: "learn" };
 /* Routes are "view/a/b" strings. Every route has a real address too
    (/learn/mand, /sign/stop, /lesson/x …) that the server renders for
    crawlers; old "#view/a" links still work and are rewritten to the path.
-   Links inside the app keep using href="#…" — the hashchange handler turns
+   Links inside the app keep using href="#…" - the hashchange handler turns
    each into a clean URL. */
 const STATIC_PAGES = ["about", "privacy", "terms", "install"];
 function isRouteHash(h) {
@@ -433,7 +433,7 @@ window.hideSplash = () => {
   try {
     await Data.loadIndex();
   } catch (e) {
-    app.innerHTML = `<section class="panel"><h2>iDrive</h2><p class="muted">Failed to load content — is the server running?</p></section>`;
+    app.innerHTML = `<section class="panel"><h2>iDrive</h2><p class="muted">Failed to load content - is the server running?</p></section>`;
     window.hideSplash();
     return;
   }

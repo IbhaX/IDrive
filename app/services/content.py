@@ -118,7 +118,7 @@ def content_index() -> dict:
     return {
         "version": version(),
         "categories": cats,
-        "signs": signs(),  # text only — SVGs are fetched lazily
+        "signs": signs(),  # text only - SVGs are fetched lazily
         "topics": topics(),
         "ui": ui(),
         "primer": primer_svgs(),

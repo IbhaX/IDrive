@@ -1,4 +1,4 @@
-"""Exam endpoints — server-built papers; mock answers stay on the server."""
+"""Exam endpoints - server-built papers; mock answers stay on the server."""
 
 from __future__ import annotations
 

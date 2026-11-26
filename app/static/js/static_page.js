@@ -1,4 +1,4 @@
-/* IDrive static_page.js — About, Privacy, Terms, Install (route "page/<name>",
+/* IDrive static_page.js - About, Privacy, Terms, Install (route "page/<name>",
    address /<name>). The server renders these pages; the first visit reuses
    that HTML, later visits fetch the page and take its <main id="app">. */
 (() => {

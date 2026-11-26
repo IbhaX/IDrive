@@ -2,7 +2,7 @@
   "id": "m10",
   "n": 10,
   "title": "Vehicle dynamics and driving science",
-  "summary": "Friction, inertia, stopping distance, weight transfer, grip, understeer and gearing — with labs you can experiment in.",
+  "summary": "Friction, inertia, stopping distance, weight transfer, grip, understeer and gearing - with labs you can experiment in.",
   "accent": "#a3e635",
   "icon": "atom",
   "level": "advanced",
@@ -47,20 +47,20 @@
         {
           "h": "The square law",
           "p": [
-            "Because speed is squared, doubling speed makes braking distance four times longer. Going from 50 to 60 km/h — just 20% faster — makes braking distance 44% longer. And the energy that must be absorbed in a crash also grows with the square of speed."
+            "Because speed is squared, doubling speed makes braking distance four times longer. Going from 50 to 60 km/h - just 20% faster - makes braking distance 44% longer. And the energy that must be absorbed in a crash also grows with the square of speed."
           ],
           "note": { "kind": "model", "text": "The lab uses this simplified model with typical friction values (dry asphalt ≈ 0.7, wet ≈ 0.4, gravel ≈ 0.35). Real vehicles vary with tyres, brakes, load and slope. It is an educational model, not a performance guarantee." }
         },
         {
           "h": "What a few km/h means",
           "p": [
-            "Suppose a child steps out 30 m ahead. At 40 km/h with a 1.5 s reaction on a dry road, you need about 16.7 m to react plus about 9 m to brake — you stop with room to spare. At 60 km/h you need 25 m to react and about 20 m to brake: you are still travelling at close to your original speed when you reach the child. That is the difference between a near miss and a fatal crash."
+            "Suppose a child steps out 30 m ahead. At 40 km/h with a 1.5 s reaction on a dry road, you need about 16.7 m to react plus about 9 m to brake - you stop with room to spare. At 60 km/h you need 25 m to react and about 20 m to brake: you are still travelling at close to your original speed when you reach the child. That is the difference between a near miss and a fatal crash."
           ]
         },
         {
           "h": "Reaction time",
           "p": [
-            "An alert driver who is expecting a hazard might react in under a second. Surprise, distraction, fatigue or alcohol easily push it beyond two seconds. Reaction distance grows in direct proportion — so a phone glance at 80 km/h can mean 40 m travelled blind."
+            "An alert driver who is expecting a hazard might react in under a second. Surprise, distraction, fatigue or alcohol easily push it beyond two seconds. Reaction distance grows in direct proportion - so a phone glance at 80 km/h can mean 40 m travelled blind."
           ]
         }
       ],
@@ -88,12 +88,12 @@
         "Describe weight transfer under braking, acceleration and cornering.",
         "Understand the friction circle and why combining braking and steering is risky."
       ],
-      "intro": "Every movement you ask of a vehicle — slowing, speeding up or turning — is a force the tyres must produce through friction. Each tyre has only so much grip to share.",
+      "intro": "Every movement you ask of a vehicle - slowing, speeding up or turning - is a force the tyres must produce through friction. Each tyre has only so much grip to share.",
       "sections": [
         {
           "h": "Inertia and momentum",
           "p": [
-            "Newton's first law: a moving object keeps moving in a straight line unless a force acts on it. That is inertia. Momentum (mass × velocity) is how hard it is to stop. A loaded lorry has enormous momentum at modest speeds; that is why it needs far longer to stop. Unbelted occupants and loose objects also keep moving when the vehicle stops — a 1 kg phone in a 50 km/h crash hits with many times its weight."
+            "Newton's first law: a moving object keeps moving in a straight line unless a force acts on it. That is inertia. Momentum (mass × velocity) is how hard it is to stop. A loaded lorry has enormous momentum at modest speeds; that is why it needs far longer to stop. Unbelted occupants and loose objects also keep moving when the vehicle stops - a 1 kg phone in a 50 km/h crash hits with many times its weight."
           ]
         },
         {
@@ -105,13 +105,13 @@
         {
           "h": "Weight transfer and centre of gravity",
           "p": [
-            "Braking shifts weight forward: front tyres press down harder and gain grip, rears lose grip. Acceleration shifts weight back. Cornering shifts weight to the outside wheels. A high centre of gravity — SUVs, loaded vans — means more weight transfer and more body roll, and in extreme cases a rollover risk."
+            "Braking shifts weight forward: front tyres press down harder and gain grip, rears lose grip. Acceleration shifts weight back. Cornering shifts weight to the outside wheels. A high centre of gravity - SUVs, loaded vans - means more weight transfer and more body roll, and in extreme cases a rollover risk."
           ]
         },
         {
           "h": "The friction circle",
           "p": [
-            "Picture each tyre's grip as a circle. It can use all of it for braking, all of it for turning, or a combination — but not more than the circle. Braking hard while turning sharply asks for more than the tyre has. This is why you should brake in a straight line before a bend and then turn, and why smooth inputs keep you inside the circle."
+            "Picture each tyre's grip as a circle. It can use all of it for braking, all of it for turning, or a combination - but not more than the circle. Braking hard while turning sharply asks for more than the tyre has. This is why you should brake in a straight line before a bend and then turn, and why smooth inputs keep you inside the circle."
           ],
           "note": { "kind": "tip", "text": "Slow in, smooth through: finish braking before you turn in to a bend." }
         },

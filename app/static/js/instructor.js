@@ -1,4 +1,4 @@
-/* iDrive instructor.js — AI driving instructor chat (grounded, cited) with a
+/* iDrive instructor.js - AI driving instructor chat (grounded, cited) with a
    search-only fallback for guests and keyless deployments. */
 (() => {
 "use strict";

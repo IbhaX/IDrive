@@ -1,4 +1,4 @@
-/* IDrive api.js — fetch client with bearer token and uniform errors. */
+/* IDrive api.js - fetch client with bearer token and uniform errors. */
 (() => {
 "use strict";
 const TOKEN_KEY = "idrive-auth";

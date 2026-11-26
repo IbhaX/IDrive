@@ -1,4 +1,4 @@
-/* iDrive course.js — Home, curriculum outline, module pages, lesson reader,
+/* iDrive course.js - Home, curriculum outline, module pages, lesson reader,
    knowledge checks and the revision queue. Content comes from
    /api/curriculum/*; nothing educational is hard-coded here. */
 (() => {

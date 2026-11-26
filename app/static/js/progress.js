@@ -1,4 +1,4 @@
-/* IDrive progress.js — dashboard: learned/viewed stats, per-category bars,
+/* IDrive progress.js - dashboard: learned/viewed stats, per-category bars,
    hardest signs, exam stats, reset. Markup mirrors the source app. */
 (() => {
 "use strict";
@@ -117,14 +117,14 @@ Pr.examProgress = () => {
 Pr.resetAsk = () => {
   const box2 = document.getElementById("resetbox");
   if (!box2) return;
-  box2.innerHTML = `<p>${esc(I18n.u("resetAsk"))}</p><div class="row" style="margin-top:10px"><button class="holdbtn danger" id="holdReset"><i class="fill"></i><span>${esc(I18n.u("resetYes"))} — hold</span></button><button class="btn" data-act="reset0">${esc(I18n.u("resetNo"))}</button></div>`;
+  box2.innerHTML = `<p>${esc(I18n.u("resetAsk"))}</p><div class="row" style="margin-top:10px"><button class="holdbtn danger" id="holdReset"><i class="fill"></i><span>${esc(I18n.u("resetYes"))} - hold</span></button><button class="btn" data-act="reset0">${esc(I18n.u("resetNo"))}</button></div>`;
   Motion.holdToConfirm(document.getElementById("holdReset"), Pr.resetNow);
 };
 
 Pr.deleteAsk = () => {
   const box = document.getElementById("delbox");
   if (!box) return;
-  box.innerHTML = `<p>${esc(I18n.u("delAcctAsk"))}</p><div class="row" style="margin-top:10px"><button class="holdbtn danger" id="holdDel"><i class="fill"></i><span>${esc(I18n.u("delAcctYes"))} — ${esc(I18n.u("hold"))}</span></button><button class="btn" data-act="reset0">${esc(I18n.u("resetNo"))}</button></div>`;
+  box.innerHTML = `<p>${esc(I18n.u("delAcctAsk"))}</p><div class="row" style="margin-top:10px"><button class="holdbtn danger" id="holdDel"><i class="fill"></i><span>${esc(I18n.u("delAcctYes"))} - ${esc(I18n.u("hold"))}</span></button><button class="btn" data-act="reset0">${esc(I18n.u("resetNo"))}</button></div>`;
   Motion.holdToConfirm(document.getElementById("holdDel"), Pr.deleteNow);
 };
 

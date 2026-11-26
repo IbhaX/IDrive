@@ -4,7 +4,7 @@
     "means": "The engine's oil pressure has dropped too low to protect its moving parts.",
     "why": "Low oil level, a failing oil pump, a blocked pick-up, a leak, or a faulty pressure sensor.",
     "drive": "No. Stop as soon as it is safe and switch the engine off.",
-    "action": ["Pull off the carriageway and switch off the engine.", "Wait a few minutes, then check the oil level with the dipstick on level ground.", "If the level is low, top up with the oil grade in your manual and look for leaks.", "If the light returns, or the level was fine, do not restart — call for assistance."],
+    "action": ["Pull off the carriageway and switch off the engine.", "Wait a few minutes, then check the oil level with the dipstick on level ground.", "If the level is low, top up with the oil grade in your manual and look for leaks.", "If the light returns, or the level was fine, do not restart - call for assistance."],
     "ignored": "Within minutes, bearings and the camshaft can seize, destroying the engine.",
     "causes": ["Low oil level", "Oil leak", "Worn oil pump", "Wrong oil grade", "Faulty sensor"],
     "pro": "Always, unless topping up to the correct level fixes it and no leak is visible."
@@ -15,7 +15,7 @@
     "why": "Low coolant, a leak, a failed fan, a stuck thermostat, a broken water-pump belt or a blocked radiator.",
     "drive": "No. Stop safely and switch off.",
     "action": ["Stop safely and switch off the engine.", "Do not open the radiator or expansion-tank cap while hot.", "Let the engine cool for at least 30 minutes.", "Check the coolant level in the expansion tank; top up only when cold.", "Look for leaks or a broken belt. Call for help if unsure."],
-    "ignored": "A warped cylinder head or blown head gasket — repairs can cost more than the engine is worth.",
+    "ignored": "A warped cylinder head or blown head gasket - repairs can cost more than the engine is worth.",
     "causes": ["Coolant leak", "Radiator fan failure", "Stuck thermostat", "Water-pump failure", "Air lock after a repair"],
     "pro": "Yes, unless it was simply low coolant with no leak."
   },
@@ -24,7 +24,7 @@
     "means": "The parking brake is on, the brake-fluid level is low, or the braking system has a fault.",
     "why": "Parking brake still applied, worn pads lowering the fluid level, a fluid leak, or an EBD fault.",
     "drive": "Only if releasing the parking brake turns it off. Otherwise stop and do not drive.",
-    "action": ["Check that the parking brake is fully released.", "If the light stays on, stop safely and test the pedal: a soft or sinking pedal is an emergency.", "Check the brake-fluid reservoir level.", "Do not drive with low fluid or a soft pedal — call for assistance."],
+    "action": ["Check that the parking brake is fully released.", "If the light stays on, stop safely and test the pedal: a soft or sinking pedal is an emergency.", "Check the brake-fluid reservoir level.", "Do not drive with low fluid or a soft pedal - call for assistance."],
     "ignored": "Total or partial loss of braking.",
     "causes": ["Parking brake on", "Low brake fluid", "Fluid leak", "Worn pads", "EBD/ABS module fault"],
     "pro": "Yes, unless it was only the parking brake."
@@ -34,7 +34,7 @@
     "means": "The charging system is not charging the battery. The car is running on stored battery power.",
     "why": "A broken or slipping alternator belt, a failed alternator, or a loose or corroded battery connection.",
     "drive": "Only a short distance to a safe place. The engine may stop when the battery runs flat.",
-    "action": ["Switch off non-essential electrics: AC, music, heated screens.", "Drive directly to a safe place or workshop if it is very close.", "If the steering becomes heavy or the temperature rises, stop immediately — the same belt may drive the water pump and steering pump."],
+    "action": ["Switch off non-essential electrics: AC, music, heated screens.", "Drive directly to a safe place or workshop if it is very close.", "If the steering becomes heavy or the temperature rises, stop immediately - the same belt may drive the water pump and steering pump."],
     "ignored": "The engine will cut out when the battery is drained, possibly in traffic.",
     "causes": ["Broken drive belt", "Failed alternator", "Loose battery terminal", "Wiring fault"],
     "pro": "Yes."
@@ -44,7 +44,7 @@
     "means": "Power steering assistance has a fault or has been lost.",
     "why": "Electric power steering motor or sensor fault, low voltage, or low fluid in hydraulic systems.",
     "drive": "Steering still works but can be very heavy. Slow down and stop safely.",
-    "action": ["Hold the wheel firmly with both hands and slow down.", "Stop safely, switch off, wait, and restart — some faults reset.", "If the steering is still heavy, do not continue; call for assistance."],
+    "action": ["Hold the wheel firmly with both hands and slow down.", "Stop safely, switch off, wait, and restart - some faults reset.", "If the steering is still heavy, do not continue; call for assistance."],
     "ignored": "Sudden loss of assistance during a turn can cause a crash.",
     "causes": ["EPS motor or sensor fault", "Low system voltage", "Low hydraulic fluid", "Broken belt (hydraulic)"],
     "pro": "Yes."
@@ -53,17 +53,17 @@
     "id": "engine", "sign": "dash_engine", "name": "Check engine (malfunction indicator)", "colour": "amber", "severity": "soon",
     "means": "The engine-management system has found a fault that may affect emissions or running.",
     "why": "Anything from a loose fuel cap to a failing sensor, misfire or catalytic converter problem.",
-    "drive": "If steady: yes, carefully, to a workshop soon. If flashing: no — reduce speed and stop safely.",
+    "drive": "If steady: yes, carefully, to a workshop soon. If flashing: no - reduce speed and stop safely.",
     "action": ["Note whether it is steady or flashing and whether the engine runs differently.", "If flashing or the engine is shaking, stop and call for help.", "If steady and the car drives normally, check the fuel cap and book a diagnostic scan soon."],
     "ignored": "Higher fuel use, a failed emissions test, or catalytic converter damage.",
     "causes": ["Loose fuel cap", "Oxygen-sensor fault", "Misfire", "Ignition coil or spark plug", "Catalytic converter"],
-    "pro": "Yes — a diagnostic scan reads the stored fault code."
+    "pro": "Yes - a diagnostic scan reads the stored fault code."
   },
   {
     "id": "abs", "sign": "dash_abs", "name": "ABS warning", "colour": "amber", "severity": "soon",
     "means": "The anti-lock braking system has a fault and is switched off. Normal brakes still work.",
     "why": "A dirty or failed wheel-speed sensor, damaged wiring, or an ABS module fault.",
-    "drive": "Yes, carefully. Leave bigger gaps — the wheels can lock under hard braking.",
+    "drive": "Yes, carefully. Leave bigger gaps - the wheels can lock under hard braking.",
     "action": ["Drive gently and increase your following distance.", "If the red brake light is also on, stop: braking balance may be affected.", "Have the system checked soon."],
     "ignored": "In an emergency stop the wheels can lock and you lose the ability to steer.",
     "causes": ["Wheel-speed sensor", "Sensor wiring", "ABS pump/module", "Low voltage"],
@@ -77,7 +77,7 @@
     "action": ["Make sure everyone wears a seat belt.", "Do not try to repair airbag wiring yourself.", "Book an inspection soon."],
     "ignored": "Airbags may not deploy in a crash, or could deploy unexpectedly.",
     "causes": ["Seat connector", "Clock spring", "Crash sensor", "Control unit"],
-    "pro": "Always — airbag systems need trained technicians."
+    "pro": "Always - airbag systems need trained technicians."
   },
   {
     "id": "tpms", "sign": "dash_tpms", "name": "Tyre pressure (TPMS) warning", "colour": "amber", "severity": "soon",
@@ -93,7 +93,7 @@
     "id": "esc", "sign": "dash_esp", "name": "Traction / stability control (ESC)", "colour": "amber", "severity": "info",
     "means": "Flashing: the system is actively controlling wheel spin or a skid. Steady: the system is off or has a fault.",
     "why": "Flashing on slippery roads is normal. Steady means it was switched off or a sensor has failed.",
-    "drive": "Flashing: yes, but ease off — you are near the limit of grip. Steady: carefully, and get it checked.",
+    "drive": "Flashing: yes, but ease off - you are near the limit of grip. Steady: carefully, and get it checked.",
     "action": ["If flashing, reduce speed and be smoother with steering and throttle.", "If steady, check whether the ESC-off button was pressed.", "If it stays on, have it checked."],
     "ignored": "You lose protection against skids, especially in the wet.",
     "causes": ["Slippery road (normal)", "ESC switched off", "Wheel-speed or steering-angle sensor fault"],
@@ -135,7 +135,7 @@
     "why": "Low key-fob battery, a damaged key chip, a spare key not programmed, or a system fault.",
     "drive": "Usually it will not start. If it does, the light should go out within seconds.",
     "action": ["Try your spare key.", "Hold the key fob against the start button or steering column as the manual describes.", "Replace the fob battery.", "If nothing works, contact an authorised service centre."],
-    "ignored": "You may be stranded — the car is protecting itself from theft.",
+    "ignored": "You may be stranded - the car is protecting itself from theft.",
     "causes": ["Flat fob battery", "Damaged transponder", "Unprogrammed key", "Immobiliser fault"],
     "pro": "If a working spare key also fails."
   },
@@ -164,7 +164,7 @@
     "means": "The parking brake is on.",
     "why": "It was not fully released before moving off.",
     "drive": "Release it fully before driving.",
-    "action": ["Release the parking brake completely.", "If the light stays on, check the brake-fluid level — the same light often signals low fluid."],
+    "action": ["Release the parking brake completely.", "If the light stays on, check the brake-fluid level - the same light often signals low fluid."],
     "ignored": "Overheated rear brakes, worn pads and reduced braking when you need it.",
     "causes": ["Parking brake on", "Low brake fluid"],
     "pro": "If the light stays on after release."

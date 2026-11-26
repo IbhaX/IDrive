@@ -1,4 +1,4 @@
-/* iDrive labscenes.js — a 3D scene for every driving-science lab (lab3d.js).
+/* iDrive labscenes.js - a 3D scene for every driving-science lab (lab3d.js).
    Scenes only draw: the physics stays in each lab's calc(); `ctx` carries
    the lab state (st), its result (r), the run clock (t 0..1, idle) and time.
    Roads run along −Z (forward); our lane is x = −1.8 (India drives on the left). */
@@ -210,7 +210,7 @@ def("abs", {
     if (!ok && p >= 1 && !c.idle) S.glow([LL, 0.6, -15], 2.2, [1, 0.3, 0.1]);
     S.label("s", [cx, 2.2, cz], `${tt(ok ? "abCanSteer" : "abNoSteer")}`, ok ? "good" : "bad");
     S.label("c", [LL, 1.3, -16], "⚠", "bad");
-    S.label("d", [cx + 1.5, 0.4, cz - 4], `${tt("abStop")}: <b>${isFinite(r.stop) ? fx(r.stop) + " m" : "—"}</b>`, "tag");
+    S.label("d", [cx + 1.5, 0.4, cz - 4], `${tt("abStop")}: <b>${isFinite(r.stop) ? fx(r.stop) + " m" : "-"}</b>`, "tag");
     S.cam([13, 11, 14], [0.5, 0, -8], 42);
   },
 });

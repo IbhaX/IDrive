@@ -1,4 +1,4 @@
-# IDrive — single-container build.
+# IDrive - single-container build.
 #   docker build -t idrive .
 #   docker run -p 8000:8000 -v idrive-data:/app/data idrive
 FROM python:3.12-slim

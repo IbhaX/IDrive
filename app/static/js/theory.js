@@ -1,4 +1,4 @@
-/* IDrive theory.js — theory topics, deep articles, glossary.
+/* IDrive theory.js - theory topics, deep articles, glossary.
    Markup mirrors the source app. */
 (() => {
 "use strict";

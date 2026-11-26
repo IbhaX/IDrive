@@ -43,7 +43,7 @@ def verify_password(password: str, stored: str) -> bool:
 
 
 def new_session_token() -> str:
-    """Raw bearer token — shown to the client exactly once."""
+    """Raw bearer token - shown to the client exactly once."""
     return secrets.token_urlsafe(32)
 
 

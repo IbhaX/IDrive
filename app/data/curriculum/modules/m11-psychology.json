@@ -35,12 +35,12 @@
         "Recognise the early signs of fatigue and microsleep.",
         "Reduce cognitive load before and during a drive."
       ],
-      "intro": "Your eyes can be pointed at the road while your mind is elsewhere. Psychologists call it 'looking but not seeing'. Most distraction crashes happen to drivers who never took their eyes off the road for long — their attention simply was not there.",
+      "intro": "Your eyes can be pointed at the road while your mind is elsewhere. Psychologists call it 'looking but not seeing'. Most distraction crashes happen to drivers who never took their eyes off the road for long - their attention simply was not there.",
       "sections": [
         {
           "h": "Attention is limited",
           "p": [
-            "The brain switches between tasks rather than doing them at once. Each switch costs time. A phone conversation — even hands-free — draws attention away from scanning and predicting, so drivers react later and miss signs and signals. Texting is far worse: eyes, hands and mind all leave the road."
+            "The brain switches between tasks rather than doing them at once. Each switch costs time. A phone conversation - even hands-free - draws attention away from scanning and predicting, so drivers react later and miss signs and signals. Texting is far worse: eyes, hands and mind all leave the road."
           ]
         },
         {
@@ -52,7 +52,7 @@
         {
           "h": "Fatigue and microsleep",
           "p": [
-            "Tiredness slows reactions, narrows attention and dulls judgement. A microsleep is a few seconds of sleep without realising it — at 80 km/h, three seconds is over 65 m with nobody in control. Warning signs: yawning, heavy eyelids, drifting in the lane, missing an exit, not remembering the last few kilometres.",
+            "Tiredness slows reactions, narrows attention and dulls judgement. A microsleep is a few seconds of sleep without realising it - at 80 km/h, three seconds is over 65 m with nobody in control. Warning signs: yawning, heavy eyelids, drifting in the lane, missing an exit, not remembering the last few kilometres.",
             "The only cure for tiredness is sleep. Open windows, loud music and coffee give a brief boost at most. Plan breaks every two hours, avoid driving at times you would normally be asleep, and if you feel drowsy, stop somewhere safe and take a 15–20 minute nap."
           ],
           "note": { "kind": "safety", "text": "Early-morning hours and the post-lunch dip are peak times for fatigue crashes." }
@@ -80,12 +80,12 @@
         "Know the legal threshold and why it is not a safe amount.",
         "Check medicines for drowsiness warnings before driving."
       ],
-      "intro": "Alcohol is a depressant. It slows the brain's processing, dulls the senses and — most dangerously — makes people feel more confident while they become less capable.",
+      "intro": "Alcohol is a depressant. It slows the brain's processing, dulls the senses and - most dangerously - makes people feel more confident while they become less capable.",
       "sections": [
         {
           "h": "How alcohol impairs",
           "p": [
-            "Even small amounts lengthen reaction time, narrow the field of vision, reduce the ability to judge speed and distance, and make it harder to track several things at once. Larger amounts affect balance, coordination and consciousness. The effect lasts as long as alcohol is in the blood; the body removes it slowly, and nothing — coffee, a cold shower, food — speeds that up. You can still be over the limit the morning after a heavy night."
+            "Even small amounts lengthen reaction time, narrow the field of vision, reduce the ability to judge speed and distance, and make it harder to track several things at once. Larger amounts affect balance, coordination and consciousness. The effect lasts as long as alcohol is in the blood; the body removes it slowly, and nothing - coffee, a cold shower, food - speeds that up. You can still be over the limit the morning after a heavy night."
           ]
         },
         {
@@ -103,12 +103,12 @@
         }
       ],
       "terms": [["Blood alcohol concentration", "The amount of alcohol in the blood, here measured in mg per 100 ml."], ["Depressant", "A substance that slows brain activity."]],
-      "examples": ["After a late celebration, you feel fine at 7 am but slept only four hours after the last drink. You may still have alcohol in your blood, and you are also fatigued — take a cab."],
+      "examples": ["After a late celebration, you feel fine at 7 am but slept only four hours after the last drink. You may still have alcohol in your blood, and you are also fatigued - take a cab."],
       "mistakes": ["Believing you drive better after a drink.", "Thinking food or coffee sobers you up.", "Ignoring the drowsiness warning on a cold medicine."],
       "safety": ["Never get into a vehicle with a driver who has been drinking."],
       "check": [
-        { "q": "What speeds up the removal of alcohol from the blood?", "o": ["Coffee", "A cold shower", "Food", "Nothing — only time"], "a": 3, "r": "The liver removes alcohol at a roughly fixed rate; nothing meaningfully speeds it up." },
-        { "q": "Are some legal medicines dangerous before driving?", "o": ["No, they are tested", "Yes — some cause drowsiness or blurred vision", "Only injections", "Only in large doses"], "a": 1, "r": "Check labels and ask a pharmacist; s. 185 also covers drugs that impair control." }
+        { "q": "What speeds up the removal of alcohol from the blood?", "o": ["Coffee", "A cold shower", "Food", "Nothing - only time"], "a": 3, "r": "The liver removes alcohol at a roughly fixed rate; nothing meaningfully speeds it up." },
+        { "q": "Are some legal medicines dangerous before driving?", "o": ["No, they are tested", "Yes - some cause drowsiness or blurred vision", "Only injections", "Only in large doses"], "a": 1, "r": "Check labels and ask a pharmacist; s. 185 also covers drugs that impair control." }
       ],
       "related": ["lesson:safety-laws", "lesson:attention-fatigue"],
       "refs": ["mvact"],
@@ -124,7 +124,7 @@
         "De-escalate conflict with other road users.",
         "Explain optimism bias and overconfidence."
       ],
-      "intro": "Driving puts you among strangers who make mistakes, often at speed. How you handle your own emotions — and other people's — is a safety skill like any other.",
+      "intro": "Driving puts you among strangers who make mistakes, often at speed. How you handle your own emotions - and other people's - is a safety skill like any other.",
       "sections": [
         {
           "h": "Stress and anger",
@@ -135,13 +135,13 @@
         {
           "h": "Dealing with aggressive drivers",
           "p": [
-            "Do not respond to gestures, horns or flashing lights. Avoid eye contact. Let them pass. If someone follows you, drive to a busy public place or a police station — do not go home. Keep doors locked and windows up, and call 112 if you feel threatened."
+            "Do not respond to gestures, horns or flashing lights. Avoid eye contact. Let them pass. If someone follows you, drive to a busy public place or a police station - do not go home. Keep doors locked and windows up, and call 112 if you feel threatened."
           ]
         },
         {
           "h": "Risk perception",
           "p": [
-            "Most drivers rate themselves above average — which cannot be true for all of us. Optimism bias makes people believe crashes happen to others. Familiar routes feel safe, so attention drops. Good drivers accept they can make mistakes and leave a margin for them."
+            "Most drivers rate themselves above average - which cannot be true for all of us. Optimism bias makes people believe crashes happen to others. Familiar routes feel safe, so attention drops. Good drivers accept they can make mistakes and leave a margin for them."
           ]
         },
         {

@@ -43,7 +43,7 @@
         "why": "A pedestrian stepping onto a zebra crossing has priority. Slowing early lets you stop smoothly before the stop line."
       },
       {
-        "t": "Sound the horn and continue — they will wait.",
+        "t": "Sound the horn and continue - they will wait.",
         "ok": false,
         "why": "The horn is a warning, not a right of way. The pedestrian may step out anyway, and you are legally required to give way at a zebra crossing."
       },
@@ -167,7 +167,7 @@
         "why": "Two-wheelers easily hide in the blind spot beside your rear pillar. The shoulder check is what finds them."
       },
       {
-        "t": "Move across — your indicator is on.",
+        "t": "Move across - your indicator is on.",
         "ok": false,
         "why": "A signal is information, not permission. The rider may not have seen it, and you would cut across their path."
       },
@@ -214,7 +214,7 @@
         "why": "Animals move unpredictably. Slowing early keeps every option open; a sharp swerve can roll a car or send it into a ditch or oncoming traffic."
       },
       {
-        "t": "Sound the horn and keep going — it will move away.",
+        "t": "Sound the horn and keep going - it will move away.",
         "ok": false,
         "why": "A frightened animal may run in any direction, including into your path."
       },
@@ -258,12 +258,12 @@
     "question": "The car's nose creeps past the give-way line. What do you do?",
     "choices": [
       {
-        "t": "Ease off, cover the brake and be ready to stop — assume they may pull out.",
+        "t": "Ease off, cover the brake and be ready to stop - assume they may pull out.",
         "ok": true,
         "why": "A car creeping forward may not have seen you. Being ready to stop costs a second; being wrong costs a crash."
       },
       {
-        "t": "Continue — you have priority on the main road.",
+        "t": "Continue - you have priority on the main road.",
         "ok": false,
         "why": "Priority is given, not taken. Plenty of side-impact crashes involve a driver who was legally in the right."
       },
@@ -365,7 +365,7 @@
     "question": "A child leaves the group near the kerb. What do you do?",
     "choices": [
       {
-        "t": "Keep your speed — they are on the footpath, not the road.",
+        "t": "Keep your speed - they are on the footpath, not the road.",
         "ok": false,
         "why": "A child can be in front of you in a second; being on the footpath now means nothing."
       },
@@ -375,7 +375,7 @@
         "why": "The horn can startle a child into running the wrong way, and it does not slow you down."
       },
       {
-        "t": "Slow right down and be ready to stop — children can dart out without looking.",
+        "t": "Slow right down and be ready to stop - children can dart out without looking.",
         "ok": true,
         "why": "Children judge speed and distance poorly and act on impulse; low speed gives you time to stop."
       },
@@ -450,7 +450,7 @@
     "question": "A ball bounces out from between parked cars. What should you expect?",
     "choices": [
       {
-        "t": "Nothing — steer around the ball and carry on.",
+        "t": "Nothing - steer around the ball and carry on.",
         "ok": false,
         "why": "The ball is rarely the danger; the child chasing it is."
       },
@@ -460,7 +460,7 @@
         "why": "Speeding up cuts the time you have to react if a child steps out."
       },
       {
-        "t": "A child may run out after it — brake now and be ready to stop.",
+        "t": "A child may run out after it - brake now and be ready to stop.",
         "ok": true,
         "why": "Where a ball goes, a child often follows without looking. Treat the ball as a warning."
       },
@@ -497,12 +497,12 @@
     "question": "He drifts towards the road edge. What do you do?",
     "choices": [
       {
-        "t": "Keep going — pedestrians must look before stepping out.",
+        "t": "Keep going - pedestrians must look before stepping out.",
         "ok": false,
         "why": "Being right does not stop a collision. Drivers have to allow for others' mistakes."
       },
       {
-        "t": "Slow down and move out a little if it's clear — he may step off without looking.",
+        "t": "Slow down and move out a little if it's clear - he may step off without looking.",
         "ok": true,
         "why": "Someone absorbed in a phone has not seen you. Space and lower speed cover their mistake."
       },
@@ -559,7 +559,7 @@
         "why": "Moving off before she reaches the kerb leaves no margin if she slows."
       },
       {
-        "t": "Stop before the line and wait until she has fully crossed — don't edge forward or hoot.",
+        "t": "Stop before the line and wait until she has fully crossed - don't edge forward or hoot.",
         "ok": true,
         "why": "Older pedestrians need more time and may stop or turn back. Pressure from you can make them stumble."
       }
@@ -606,17 +606,17 @@
     "question": "A man on your left starts running towards the bus. What do you do?",
     "choices": [
       {
-        "t": "Hold your speed — the bus is on the other side, not yours.",
+        "t": "Hold your speed - the bus is on the other side, not yours.",
         "ok": false,
         "why": "To reach the bus he has to cross your lane first."
       },
       {
         "t": "Speed up to pass before he reaches the road.",
         "ok": false,
-        "why": "You arrive sooner and faster — the worst combination if he runs out."
+        "why": "You arrive sooner and faster - the worst combination if he runs out."
       },
       {
-        "t": "Slow down and be ready to stop — he is likely to dash across without looking.",
+        "t": "Slow down and be ready to stop - he is likely to dash across without looking.",
         "ok": true,
         "why": "People rushing for a bus look at the bus, not the traffic."
       },
@@ -653,19 +653,19 @@
     "question": "He steps off the median into your carriageway. What do you do?",
     "choices": [
       {
-        "t": "Keep going — pedestrians should not be on a highway.",
+        "t": "Keep going - pedestrians should not be on a highway.",
         "ok": false,
         "why": "They often are; a collision at highway speed is rarely survivable."
       },
       {
-        "t": "Brake firmly and check your mirror — he is likely to keep walking across both lanes into your path.",
+        "t": "Brake firmly and check your mirror - he is likely to keep walking across both lanes into your path.",
         "ok": true,
         "why": "People often cross highways at median gaps and misjudge fast traffic."
       },
       {
         "t": "Swerve right into the other lane without checking.",
         "ok": false,
-        "why": "A vehicle may be overtaking you in the right lane — and he is walking into it."
+        "why": "A vehicle may be overtaking you in the right lane - and he is walking into it."
       },
       {
         "t": "Flash your lights and hold your speed.",
@@ -841,7 +841,7 @@
         "why": "Passing on the side it is about to turn towards is the classic crash."
       },
       {
-        "t": "Hold back and slow down — it may U-turn or stop without signalling.",
+        "t": "Hold back and slow down - it may U-turn or stop without signalling.",
         "ok": true,
         "why": "Autos often turn or stop suddenly for passengers or gaps; give them room and time."
       },
@@ -891,7 +891,7 @@
     "question": "What do you do?",
     "choices": [
       {
-        "t": "Ease off and leave room — it will probably pull over and stop sharply.",
+        "t": "Ease off and leave room - it will probably pull over and stop sharply.",
         "ok": true,
         "why": "A waving passenger is a strong clue the auto will stop or swerve to the kerb."
       },
@@ -903,7 +903,7 @@
       {
         "t": "Overtake on the left between the auto and the kerb.",
         "ok": false,
-        "why": "That is exactly where it is heading — and where the passenger is."
+        "why": "That is exactly where it is heading - and where the passenger is."
       },
       {
         "t": "Sound the horn so the driver doesn't stop.",
@@ -944,12 +944,12 @@
         "why": "The danger in a left turn is on your left."
       },
       {
-        "t": "Nothing — your indicator is on, so others will wait.",
+        "t": "Nothing - your indicator is on, so others will wait.",
         "ok": false,
         "why": "An indicator tells others what you plan; it does not make the space clear."
       },
       {
-        "t": "Left mirror and a look over your left shoulder — a bike may be filtering up your left side.",
+        "t": "Left mirror and a look over your left shoulder - a bike may be filtering up your left side.",
         "ok": true,
         "why": "Two-wheelers often pass on the left in slow traffic and sit right in your blind spot."
       },
@@ -993,7 +993,7 @@
         "why": "Pushing out risks the oncoming lane and leaves the rider nowhere to go."
       },
       {
-        "t": "Slow down, keep a steady line and give it room — expect it to stay on your side.",
+        "t": "Slow down, keep a steady line and give it room - expect it to stay on your side.",
         "ok": true,
         "why": "Wrong-side riders rarely move across; predictable, slower movement from you helps both of you."
       },
@@ -1051,7 +1051,7 @@
       {
         "t": "Squeeze past now between the cyclist and the oncoming car.",
         "ok": false,
-        "why": "No room for a wobble — a small swerve and you hit the cyclist or the car."
+        "why": "No room for a wobble - a small swerve and you hit the cyclist or the car."
       },
       {
         "t": "Sound the horn so the cyclist moves further left.",
@@ -1124,7 +1124,7 @@
         "why": "You can't outrun a door; speed only makes the impact worse."
       },
       {
-        "t": "Slow down and leave about a door's width — the door may open or they may step out.",
+        "t": "Slow down and leave about a door's width - the door may open or they may step out.",
         "ok": true,
         "why": "Someone inside a parked car is a clue that a door could swing open into your path."
       }
@@ -1159,10 +1159,10 @@
       {
         "t": "Indicate and move across in one smooth movement.",
         "ok": false,
-        "why": "Indicating doesn't clear the space — a bike may already be there."
+        "why": "Indicating doesn't clear the space - a bike may already be there."
       },
       {
-        "t": "Check the left mirror and look over your left shoulder — a motorcycle may be coming up on your left.",
+        "t": "Check the left mirror and look over your left shoulder - a motorcycle may be coming up on your left.",
         "ok": true,
         "why": "Two-wheelers often pass on the left; your mirror alone can miss them."
       },
@@ -1205,17 +1205,17 @@
     "question": "What should you expect?",
     "choices": [
       {
-        "t": "The rider will swerve around the pothole — hold back and leave room on both sides.",
+        "t": "The rider will swerve around the pothole - hold back and leave room on both sides.",
         "ok": true,
         "why": "Riders steer around potholes at the last moment, often towards the centre of the lane."
       },
       {
-        "t": "Nothing — overtake now while the rider is close to the edge.",
+        "t": "Nothing - overtake now while the rider is close to the edge.",
         "ok": false,
         "why": "You'd be alongside exactly when the rider swerves out."
       },
       {
-        "t": "The rider will brake — so close up and wait.",
+        "t": "The rider will brake - so close up and wait.",
         "ok": false,
         "why": "Closing up removes your space whichever way the rider moves."
       },
@@ -1340,7 +1340,7 @@
     "question": "As you get close, what is the main danger?",
     "choices": [
       {
-        "t": "The bus pulling out — so speed up to get past.",
+        "t": "The bus pulling out - so speed up to get past.",
         "ok": false,
         "why": "Speeding past a bus is exactly when a hidden pedestrian appears."
       },
@@ -1350,7 +1350,7 @@
         "why": "A stopped bus hides everything in front of it."
       },
       {
-        "t": "People stepping out from in front of the bus — slow right down and pass with care.",
+        "t": "People stepping out from in front of the bus - slow right down and pass with care.",
         "ok": true,
         "why": "Passengers who just got off often cross in front of the bus, hidden until they step out."
       },
@@ -1456,7 +1456,7 @@
         "why": "The oncoming car has priority because the obstruction is on your side."
       },
       {
-        "t": "Pull out now — the oncoming car will slow for you.",
+        "t": "Pull out now - the oncoming car will slow for you.",
         "ok": false,
         "why": "It may not, and you'd meet head-on beside the truck."
       },
@@ -1601,7 +1601,7 @@
         "why": "Racing a bus side by side leaves neither of you room."
       },
       {
-        "t": "Ease off, keep left and let it pass — then keep your distance.",
+        "t": "Ease off, keep left and let it pass - then keep your distance.",
         "ok": true,
         "why": "Matching or blocking a racing bus turns a nuisance into a crash risk."
       },
@@ -1660,7 +1660,7 @@
     "question": "What do you do?",
     "choices": [
       {
-        "t": "Turn quickly — the truck driver has waved you through.",
+        "t": "Turn quickly - the truck driver has waved you through.",
         "ok": false,
         "why": "The truck driver can't see that lane for you."
       },
@@ -1675,7 +1675,7 @@
         "why": "A rider at speed won't have time to react."
       },
       {
-        "t": "Edge forward slowly and look past the truck — a motorcycle may be overtaking it.",
+        "t": "Edge forward slowly and look past the truck - a motorcycle may be overtaking it.",
         "ok": true,
         "why": "A courteous wave doesn't clear the lane beside the truck, where a bike can be hidden."
       }
@@ -1719,7 +1719,7 @@
         "why": "You'd reach the junction at the same moment, faster."
       },
       {
-        "t": "Ease off and cover the brake — be ready for it to pull out.",
+        "t": "Ease off and cover the brake - be ready for it to pull out.",
         "ok": true,
         "why": "You have priority, but a rider going too fast to stop will come out anyway."
       },
@@ -1758,7 +1758,7 @@
     "question": "A car is approaching fast from the left. What do you do?",
     "choices": [
       {
-        "t": "Move off immediately — it's your green.",
+        "t": "Move off immediately - it's your green.",
         "ok": false,
         "why": "A driver rushing the red won't stop for your green."
       },
@@ -1768,7 +1768,7 @@
         "why": "The other driver may not hear or react in time."
       },
       {
-        "t": "Wait and look both ways before moving — that car may run the red.",
+        "t": "Wait and look both ways before moving - that car may run the red.",
         "ok": true,
         "why": "Green means you may go if the way is clear, not that it is clear."
       },
@@ -1881,7 +1881,7 @@
     "question": "A car's bonnet appears past the truck. What do you do?",
     "choices": [
       {
-        "t": "Keep your speed — you have priority on the main road.",
+        "t": "Keep your speed - you have priority on the main road.",
         "ok": false,
         "why": "Priority doesn't help if the other driver can't see you."
       },
@@ -1891,7 +1891,7 @@
         "why": "You'd arrive faster just as it nudges out."
       },
       {
-        "t": "Slow down, move out a little if it's clear and be ready to stop — the driver can't see you either.",
+        "t": "Slow down, move out a little if it's clear and be ready to stop - the driver can't see you either.",
         "ok": true,
         "why": "A blocked view works both ways; the emerging driver may pull out blind."
       },
@@ -2039,7 +2039,7 @@
     "question": "A car appears over the crest. Should you overtake?",
     "choices": [
       {
-        "t": "Yes — go now before the car gets closer.",
+        "t": "Yes - go now before the car gets closer.",
         "ok": false,
         "why": "You'd be alongside the lorry when you meet it."
       },
@@ -2054,7 +2054,7 @@
         "why": "Half out puts you in the oncoming car's path."
       },
       {
-        "t": "No — stay behind until you can see a long, clear stretch.",
+        "t": "No - stay behind until you can see a long, clear stretch.",
         "ok": true,
         "why": "Over a crest you can't see what's coming; here a car appeared just as you'd be alongside the lorry."
       }
@@ -2107,7 +2107,7 @@
         "why": "Reducing the closing speed and making space is the only way to avoid a head-on crash."
       },
       {
-        "t": "Hold your line and flash — it's in your lane.",
+        "t": "Hold your line and flash - it's in your lane.",
         "ok": false,
         "why": "Being in the right won't make the impact any less."
       },
@@ -2151,7 +2151,7 @@
     "question": "What do you do?",
     "choices": [
       {
-        "t": "Keep your speed — joining traffic must give way.",
+        "t": "Keep your speed - joining traffic must give way.",
         "ok": false,
         "why": "It should, but it may not have room to stop on a short slip road."
       },
@@ -2404,7 +2404,7 @@
       {
         "t": "Slow down, look towards the left edge of the road and be ready to stop.",
         "ok": true,
-        "why": "When dazzled you can't see what's in your lane — like this unlit cyclist."
+        "why": "When dazzled you can't see what's in your lane - like this unlit cyclist."
       }
     ],
     "lesson": "adverse-conditions"
@@ -2437,22 +2437,22 @@
     "question": "What should you have done already, and what now?",
     "choices": [
       {
-        "t": "Kept the normal gap — now brake as hard as possible.",
+        "t": "Kept the normal gap - now brake as hard as possible.",
         "ok": false,
         "why": "Harsh braking on water risks a skid, and a normal gap is too short."
       },
       {
-        "t": "Kept close to see its brake lights — now swerve.",
+        "t": "Kept close to see its brake lights - now swerve.",
         "ok": false,
         "why": "Swerving on a wet road can make you lose control."
       },
       {
-        "t": "Nothing — ABS will stop you in the same distance.",
+        "t": "Nothing - ABS will stop you in the same distance.",
         "ok": false,
         "why": "ABS helps you steer; it doesn't shorten wet stopping distance much."
       },
       {
-        "t": "Kept at least double the dry-weather gap — now brake smoothly and firmly.",
+        "t": "Kept at least double the dry-weather gap - now brake smoothly and firmly.",
         "ok": true,
         "why": "Wet roads can double stopping distances; a bigger gap lets you brake without skidding."
       }
@@ -2486,7 +2486,7 @@
     "question": "What should your speed have been?",
     "choices": [
       {
-        "t": "Slow enough to stop within the distance you can see — now brake and follow at a safe gap.",
+        "t": "Slow enough to stop within the distance you can see - now brake and follow at a safe gap.",
         "ok": true,
         "why": "In fog you must be able to stop within what you can see; slow vehicles appear suddenly."
       },
@@ -2534,7 +2534,7 @@
     "question": "She steps towards the crossing. What do you do?",
     "choices": [
       {
-        "t": "Keep going — she'll see you and wait.",
+        "t": "Keep going - she'll see you and wait.",
         "ok": false,
         "why": "She may not see you at all under the umbrella."
       },
@@ -2544,7 +2544,7 @@
         "why": "She may step back or forward unpredictably."
       },
       {
-        "t": "Slow down early and be ready to stop — her umbrella blocks her view of you.",
+        "t": "Slow down early and be ready to stop - her umbrella blocks her view of you.",
         "ok": true,
         "why": "Umbrellas and rain hoods hide traffic from pedestrians, and wet roads need longer to stop."
       },
@@ -2586,7 +2586,7 @@
         "why": "A sudden swerve can put you off the road or into oncoming traffic."
       },
       {
-        "t": "Slow down and be ready to stop — it may run across without warning.",
+        "t": "Slow down and be ready to stop - it may run across without warning.",
         "ok": true,
         "why": "Animals don't judge traffic; slowing early is safer than a late swerve."
       },
@@ -2700,12 +2700,12 @@
     "question": "What do you do?",
     "choices": [
       {
-        "t": "Keep going — the cyclist has to give way.",
+        "t": "Keep going - the cyclist has to give way.",
         "ok": false,
         "why": "They may not be able to, or may not look."
       },
       {
-        "t": "Slow down and be ready to stop — the cyclist may roll straight out.",
+        "t": "Slow down and be ready to stop - the cyclist may roll straight out.",
         "ok": true,
         "why": "Cyclists on lanes often don't stop at the main road, and may have weak brakes."
       },
@@ -2748,7 +2748,7 @@
     "question": "You want to overtake. What do you do?",
     "choices": [
       {
-        "t": "Wait — it may turn left or right at the entrance; overtake only once it's clear what it's doing.",
+        "t": "Wait - it may turn left or right at the entrance; overtake only once it's clear what it's doing.",
         "ok": true,
         "why": "Farm vehicles often turn into fields without signals and may swing out first."
       },
@@ -2802,7 +2802,7 @@
         "why": "If it pulls out as you arrive, there's no time to stop."
       },
       {
-        "t": "Keep your speed — parked cars must wait.",
+        "t": "Keep your speed - parked cars must wait.",
         "ok": false,
         "why": "They should, but the driver may not have seen you."
       },
@@ -2851,12 +2851,12 @@
         "why": "The driver may keep reversing into your path."
       },
       {
-        "t": "Keep going — it must wait for you.",
+        "t": "Keep going - it must wait for you.",
         "ok": false,
         "why": "It should, but it may not have seen you."
       },
       {
-        "t": "Slow down or stop and let it finish — the driver's view behind is poor.",
+        "t": "Slow down or stop and let it finish - the driver's view behind is poor.",
         "ok": true,
         "why": "Reversing drivers see little; giving them time avoids a collision."
       },

@@ -78,7 +78,7 @@ async def verify_google_id_token(credential: str) -> dict[str, str]:
 
 async def login_or_register_google(db: AsyncSession, email: str, name: str) -> User:
     """Find a user by verified email or create a passwordless account.
-    Accounts merge on email — Google-verified addresses are trusted."""
+    Accounts merge on email - Google-verified addresses are trusted."""
     user = await db.scalar(select(User).where(User.email == email))
     if user is None:
         user = User(email=email, password_hash="", name=name or email.split("@")[0])

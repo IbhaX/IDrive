@@ -251,7 +251,7 @@ console.log("extracted:", JSON.stringify({
   questions: QB.length,
   glossary: GL.length,
 }, null, 1));
-console.log(`content version ${sha.slice(0, 12)} — wrote ${OUT}`);
+console.log(`content version ${sha.slice(0, 12)} - wrote ${OUT}`);
 
 function fail(msg) {
   console.error("extract_data: " + msg);

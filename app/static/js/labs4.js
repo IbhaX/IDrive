@@ -1,4 +1,4 @@
-/* iDrive labs4.js — 20 more labs on the labs3.js engine (Labs.L3).
+/* iDrive labs4.js - 20 more labs on the labs3.js engine (Labs.L3).
    Same rules: simplified, labelled models; no legal limits, no fines. */
 (() => {
 "use strict";

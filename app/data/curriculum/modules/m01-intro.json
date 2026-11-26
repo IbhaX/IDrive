@@ -54,7 +54,7 @@
           "h": "Control, observation and judgement",
           "p": [
             "Driving skill has three layers. Vehicle control is moving the car where you mean it to go. Observation is seeing what matters. Judgement is choosing well with what you have seen.",
-            "Crashes are rarely caused by a driver who could not physically stop or steer. They are usually caused by a driver who did not look, looked but did not understand, or understood but chose badly — going too fast for the view, following too closely, or overtaking without enough room."
+            "Crashes are rarely caused by a driver who could not physically stop or steer. They are usually caused by a driver who did not look, looked but did not understand, or understood but chose badly - going too fast for the view, following too closely, or overtaking without enough room."
           ],
           "note": { "kind": "tip", "text": "When you review a near miss, ask which layer failed: control, observation or judgement. It is almost always the last two." }
         },
@@ -68,14 +68,14 @@
         }
       ],
       "terms": [
-        ["Hazard", "Anything that could make you change speed or direction — a person, a vehicle, the road surface, or the weather."],
+        ["Hazard", "Anything that could make you change speed or direction - a person, a vehicle, the road surface, or the weather."],
         ["Vehicle control", "The physical skills of steering, braking, accelerating and changing gear."],
         ["Judgement", "Choosing a safe speed, position and action from what you observe."],
-        ["Public place", "In the MV Act, any road, street or place the public has a right of access to — including many parking areas."]
+        ["Public place", "In the MV Act, any road, street or place the public has a right of access to - including many parking areas."]
       ],
       "examples": [
         "You see a ball roll into the road between parked cars. Control lets you brake; observation spotted the ball; judgement tells you a child may follow it, so you slow right down even after the ball has passed.",
-        "On a clear highway, the skill load is low but the speed is high. Judgement — gap, speed, fatigue — matters more than control."
+        "On a clear highway, the skill load is low but the speed is high. Judgement - gap, speed, fatigue - matters more than control."
       ],
       "mistakes": [
         "Looking only a car-length ahead instead of 10–15 seconds up the road.",
@@ -91,11 +91,11 @@
           "q": "Which part of driving causes most crashes?",
           "o": ["Weak steering technique", "Poor observation and judgement", "Old vehicles", "Bad luck"],
           "a": 1,
-          "r": "Most crashes follow a failure to see a hazard or a poor choice about speed, gap or overtaking — not an inability to physically control the vehicle."
+          "r": "Most crashes follow a failure to see a hazard or a poor choice about speed, gap or overtaking - not an inability to physically control the vehicle."
         },
         {
           "q": "What should you do right after you act on a hazard?",
-          "o": ["Relax — the danger has passed", "Speed up to make up time", "Search the scene again", "Turn on the hazard lights"],
+          "o": ["Relax - the danger has passed", "Speed up to make up time", "Search the scene again", "Turn on the hazard lights"],
           "a": 2,
           "r": "Driving is a continuous loop. Acting is followed by searching again, because a new hazard can appear at any time."
         },
@@ -139,7 +139,7 @@
           "h": "One system, three languages",
           "p": [
             "Traffic signals give the order of movement at junctions. Signs give orders, warnings and information. Road markings guide where you place the vehicle. When they disagree, follow this order: a police officer's directions first, then traffic signals, then signs, then markings.",
-            "The system only works if everyone follows it. When you drive predictably — in lane, signalling, stopping where expected — you make everyone else's job easier."
+            "The system only works if everyone follows it. When you drive predictably - in lane, signalling, stopping where expected - you make everyone else's job easier."
           ],
           "note": { "kind": "tip", "text": "At a junction with a working signal and a police officer giving different directions, follow the officer." }
         }
@@ -155,7 +155,7 @@
       ],
       "mistakes": [
         "Overtaking on the left using the shoulder.",
-        "Assuming a divided highway has no pedestrians — people cross medians, especially near villages and bus stops."
+        "Assuming a divided highway has no pedestrians - people cross medians, especially near villages and bus stops."
       ],
       "safety": [
         "Expect pedestrians, animals and stopped vehicles on any road, at any hour."
@@ -169,7 +169,7 @@
         },
         {
           "q": "A traffic signal shows green, but a police officer signals you to stop. What do you do?",
-          "o": ["Go — the signal is green", "Stop — follow the officer", "Sound the horn and go slowly", "Turn left instead"],
+          "o": ["Go - the signal is green", "Stop - follow the officer", "Sound the horn and go slowly", "Turn left instead"],
           "a": 1,
           "r": "Directions from a police officer controlling traffic override signals, signs and markings."
         }
@@ -193,7 +193,7 @@
         {
           "h": "Common licence classes",
           "p": [
-            "MCWOG — motorcycle without gear (scooters and mopeds). MCWG — motorcycle with gear. LMV — light motor vehicle, which covers cars, jeeps and small vans. Transport vehicles — taxis, autorickshaws, buses and goods carriers used for hire or reward — need a transport endorsement. Heavier classes cover medium and heavy goods and passenger vehicles."
+            "MCWOG - motorcycle without gear (scooters and mopeds). MCWG - motorcycle with gear. LMV - light motor vehicle, which covers cars, jeeps and small vans. Transport vehicles - taxis, autorickshaws, buses and goods carriers used for hire or reward - need a transport endorsement. Heavier classes cover medium and heavy goods and passenger vehicles."
           ]
         },
         {
@@ -213,7 +213,7 @@
       "terms": [
         ["MCWOG", "Motorcycle without gear."],
         ["MCWG", "Motorcycle with gear."],
-        ["LMV", "Light motor vehicle — most private cars, jeeps and small vans."],
+        ["LMV", "Light motor vehicle - most private cars, jeeps and small vans."],
         ["Transport vehicle", "A vehicle used to carry passengers or goods for hire or reward."]
       ],
       "examples": [

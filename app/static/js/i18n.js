@@ -1,4 +1,4 @@
-/* IDrive i18n.js — bilingual helpers, ported verbatim from the source app.
+/* IDrive i18n.js - bilingual helpers, ported verbatim from the source app.
    Sign Malayalam lives on each sign as d.ml=[name,meaning,action];
    category Malayalam on each category as c.ml=[name,blurb]. */
 (() => {

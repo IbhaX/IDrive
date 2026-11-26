@@ -1,4 +1,4 @@
-"""`idrive` console entry point — runs the uvicorn server."""
+"""`idrive` console entry point - runs the uvicorn server."""
 
 from __future__ import annotations
 

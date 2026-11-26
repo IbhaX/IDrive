@@ -1,4 +1,4 @@
-/* iDrive search.js — global search overlay (Ctrl/⌘+K or "/") across
+/* iDrive search.js - global search overlay (Ctrl/⌘+K or "/") across
    lessons, theory articles, signs, warning lights, vehicle parts, glossary. */
 (() => {
 "use strict";

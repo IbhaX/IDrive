@@ -24,7 +24,7 @@ log = logging.getLogger("idrive.models")
 
 MODEL_SHA = "e124e8d8d7330a5372bc2b4d00d39a4a9d7997ea"
 # The URL path carries the variant and pinned commit. Files are served as
-# immutable, so a new model version MUST get a new key — otherwise browsers
+# immutable, so a new model version MUST get a new key - otherwise browsers
 # mix cached files of the old version with the new one (that broke loading
 # when the model switched from KTX2/Draco to WebP under the same names).
 MODEL_KEY = f"carconcept-webp-{MODEL_SHA[:8]}"
@@ -87,7 +87,7 @@ def missing() -> list[str]:
 
 
 def status() -> dict[str, object]:
-    """What the mirror holds — used by the client and for troubleshooting."""
+    """What the mirror holds - used by the client and for troubleshooting."""
     left = missing()
     return {"complete": not left, "missing": left, "files": len(FILES)}
 
@@ -148,7 +148,7 @@ async def ensure(client: Optional[httpx.AsyncClient] = None, timeout: float = 60
                 await cl.aclose()
     left = missing()
     if left:
-        log.info("3D model mirror incomplete (%d files missing) — serving redirects", len(left))
+        log.info("3D model mirror incomplete (%d files missing) - serving redirects", len(left))
     else:
         log.info("3D model mirror ready in %s", MODEL_DIR)
     return not left

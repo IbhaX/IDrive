@@ -47,7 +47,7 @@
         {
           "h": "Driving licence",
           "p": [
-            "Within the learner's licence validity, book a driving test slot. You test in a vehicle of the class you are applying for. If you pass, the licence is issued and posted or made available digitally. For non-transport vehicles, s. 14(2) as amended in 2019 sets validity by age at issue or renewal: issued before 30 — valid until you turn 40; between 30 and 50 — ten years; between 50 and 55 — until you turn 60; above 55 — five years. A transport-vehicle licence is valid for five years."
+            "Within the learner's licence validity, book a driving test slot. You test in a vehicle of the class you are applying for. If you pass, the licence is issued and posted or made available digitally. For non-transport vehicles, s. 14(2) as amended in 2019 sets validity by age at issue or renewal: issued before 30 - valid until you turn 40; between 30 and 50 - ten years; between 50 and 55 - until you turn 60; above 55 - five years. A transport-vehicle licence is valid for five years."
           ]
         },
         {
@@ -66,7 +66,7 @@
       "terms": [["LL", "Learner's licence."], ["DL", "Driving licence."], ["Sarathi", "The national online portal for licence services."], ["IDP", "International Driving Permit."]],
       "examples": ["Riya gets her LL on 1 March. She can take her driving test from 31 March and must pass before 1 September, when the LL expires."],
       "mistakes": ["Letting the LL expire while waiting for a test slot.", "Driving alone on a learner's licence.", "Assuming there is a grace period after the DL expires."],
-      "safety": ["Use the learner period to practise in many conditions — rain, night, highways — with an experienced driver."],
+      "safety": ["Use the learner period to practise in many conditions - rain, night, highways - with an experienced driver."],
       "check": [
         { "q": "How long is a learner's licence valid?", "o": ["30 days", "Six months", "One year", "Five years"], "a": 1, "r": "MV Act s. 14(1) makes it effective for six months from the date of issue." },
         { "q": "How soon after getting an LL can you take the driving test?", "o": ["Immediately", "After at least 30 days", "After six months", "After one year"], "a": 1, "r": "The Central Motor Vehicles Rules require holding the LL for at least 30 days." },
@@ -105,12 +105,12 @@
           "p": [
             "Not checking mirrors or blind spots. Rolling back on the gradient. Touching or knocking a pole or line. Stalling repeatedly. Not signalling, or signalling too late. Ignoring a STOP or GIVE WAY. Driving too fast or too hesitantly. Not giving way to pedestrians."
           ],
-          "note": { "kind": "tip", "text": "Exaggerate your head movements for mirror and shoulder checks in the test — the examiner needs to see them." }
+          "note": { "kind": "tip", "text": "Exaggerate your head movements for mirror and shoulder checks in the test - the examiner needs to see them." }
         },
         {
           "h": "On the day",
           "p": [
-            "Carry your learner's licence and required documents, arrive early, and make sure the test vehicle has valid papers and an 'L' plate. Sleep well, eat beforehand, and if you make a mistake, carry on calmly — one error does not always mean failure."
+            "Carry your learner's licence and required documents, arrive early, and make sure the test vehicle has valid papers and an 'L' plate. Sleep well, eat beforehand, and if you make a mistake, carry on calmly - one error does not always mean failure."
           ]
         }
       ],

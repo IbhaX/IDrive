@@ -1,4 +1,4 @@
-/* iDrive hazard.js — interactive hazard-perception scenarios.
+/* iDrive hazard.js - interactive hazard-perception scenarios.
    Top-down animated scene → pause → tap the hazard → choose a response →
    explanation + outcome animation. Scenes are data (scenarios.json). */
 (() => {
@@ -168,7 +168,7 @@ H.panel = () => {
     const c = s.choices[st.choice], right = s.choices.find(x => x.ok);
     box.innerHTML = `<div class="fb ${c.ok ? "ok" : "no"}"><b>${e(u(c.ok ? "right" : "notQuite"))}</b> ${e(c.why)}</div>
     ${c.ok ? "" : `<div class="kv"><h4>${e(u("hzSafest"))}</h4><p>${e(right.t)}</p><p class="muted">${e(right.why)}</p></div>`}
-    <details class="primer"><summary>${e(u("hzWhyOthers"))}</summary><div class="lbody"><ul>${s.choices.filter(x => !x.ok && x !== c).map(x => `<li><b>${e(x.t)}</b> — ${e(x.why)}</li>`).join("")}</ul></div></details>
+    <details class="primer"><summary>${e(u("hzWhyOthers"))}</summary><div class="lbody"><ul>${s.choices.filter(x => !x.ok && x !== c).map(x => `<li><b>${e(x.t)}</b> - ${e(x.why)}</li>`).join("")}</ul></div></details>
     <div class="row"><button class="btn" data-act="hzreplay">↻ ${e(u("tryAgain"))}</button>${H.nextId() ? `<a class="btn primary" href="#hazard/${H.nextId()}">${e(u("next"))} →</a>` : `<a class="btn primary" href="#hazard">${e(u("allScenarios"))}</a>`}${s.lesson ? `<a class="btn ghost" href="#lesson/${s.lesson}">${e(u("readLesson"))}</a>` : ""}</div>`;
   }
 };

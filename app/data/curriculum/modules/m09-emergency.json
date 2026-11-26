@@ -2,7 +2,7 @@
   "id": "m09",
   "n": 9,
   "title": "Emergency situations and first response",
-  "summary": "Step-by-step responses to brake failure, blowouts, stuck throttles, skids, fire, flooding and crashes — and your legal duties at an accident.",
+  "summary": "Step-by-step responses to brake failure, blowouts, stuck throttles, skids, fire, flooding and crashes - and your legal duties at an accident.",
   "accent": "#fb7185",
   "icon": "alert",
   "level": "advanced",
@@ -35,17 +35,17 @@
           "h": "Brake failure",
           "p": ["If the pedal goes soft or to the floor:"],
           "steps": [
-            "Pump the brake pedal quickly several times — it may build pressure in a partly failed system.",
+            "Pump the brake pedal quickly several times - it may build pressure in a partly failed system.",
             "Switch on hazard lights and sound the horn to warn others.",
             "Change down through the gears one at a time (or select L/manual low in an automatic) to use engine braking. Do not jump to first gear at speed.",
-            "Apply the parking brake gradually and firmly — not with a yank, which can lock the rear wheels and cause a spin. Keep the release button pressed so you can ease off if the rear starts to slide.",
+            "Apply the parking brake gradually and firmly - not with a yank, which can lock the rear wheels and cause a spin. Keep the release button pressed so you can ease off if the rear starts to slide.",
             "Steer towards a safe run-off: an uphill road, a wide shoulder, or rubbing along a kerb or soft verge as a last resort.",
             "Once stopped, do not drive again until the vehicle is repaired."
           ]
         },
         {
           "h": "Tyre blowout",
-          "p": ["A blowout feels like a bang followed by a pull to one side (front tyre) or a wobbling rear (rear tyre). The instinct is to brake hard — that is the most dangerous response."],
+          "p": ["A blowout feels like a bang followed by a pull to one side (front tyre) or a wobbling rear (rear tyre). The instinct is to brake hard - that is the most dangerous response."],
           "steps": [
             "Grip the wheel firmly with both hands and keep the car straight.",
             "Do not brake hard. Ease off the accelerator gently.",
@@ -60,7 +60,7 @@
           "steps": [
             "Press the clutch (manual) or shift to N (automatic). The engine will rev hard but the car will lose drive.",
             "Brake firmly and steer to a safe place.",
-            "Once stopped, switch off the engine. On push-button cars you usually need to press and hold the start button for a few seconds while moving — check your manual.",
+            "Once stopped, switch off the engine. On push-button cars you usually need to press and hold the start button for a few seconds while moving - check your manual.",
             "Check for a floor mat trapping the pedal before driving again."
           ],
           "p": ["Do not switch off the ignition while moving unless there is no other way: steering lock may engage on key-type cars, and power steering and brake assist are lost."]
@@ -97,7 +97,7 @@
         {
           "h": "Skids",
           "p": [
-            "Front-wheel skid (understeer): the car goes straight on despite steering. Ease off the accelerator, unwind the steering slightly so the tyres can grip again, then steer gently. Rear-wheel skid (oversteer): the rear swings out. Look and steer in the direction you want to go — this is what 'steer into the skid' means — and ease off the accelerator. Be ready to correct the other way as the rear comes back.",
+            "Front-wheel skid (understeer): the car goes straight on despite steering. Ease off the accelerator, unwind the steering slightly so the tyres can grip again, then steer gently. Rear-wheel skid (oversteer): the rear swings out. Look and steer in the direction you want to go - this is what 'steer into the skid' means - and ease off the accelerator. Be ready to correct the other way as the rear comes back.",
             "The best skid response is prevention: brake before the bend, not in it, and drive slower on wet or loose surfaces."
           ]
         },
@@ -172,8 +172,8 @@
         {
           "h": "Your legal duties and protection",
           "p": [
-            "Section 134 requires the driver of a vehicle involved in an accident causing injury to take reasonable steps to secure medical attention for the injured — including taking them to the nearest medical practitioner or hospital, unless it is not practicable — and to give information to the police and the insurer as required.",
-            "Section 134A, added in 2019, protects a Good Samaritan — a person who in good faith, voluntarily and without expecting reward gives emergency care or takes a victim to hospital — from civil or criminal liability for injury or death resulting from their negligence in acting or failing to act while helping. The Central Government has made rules on how such helpers may be questioned and their personal information protected."
+            "Section 134 requires the driver of a vehicle involved in an accident causing injury to take reasonable steps to secure medical attention for the injured - including taking them to the nearest medical practitioner or hospital, unless it is not practicable - and to give information to the police and the insurer as required.",
+            "Section 134A, added in 2019, protects a Good Samaritan - a person who in good faith, voluntarily and without expecting reward gives emergency care or takes a victim to hospital - from civil or criminal liability for injury or death resulting from their negligence in acting or failing to act while helping. The Central Government has made rules on how such helpers may be questioned and their personal information protected."
           ],
           "note": { "kind": "law", "text": "MV Act ss. 134 and 134A; Good Samaritan rules notified in CMVR in 2020. Hospitals should not detain a Good Samaritan or demand payment from them. Verified 2026-11-25." }
         }

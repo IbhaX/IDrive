@@ -45,7 +45,7 @@ async def sign(sign_id: str, response: Response) -> dict[str, Any]:
 
 @router.get("/svgs")
 async def svgs(response: Response, cat: Optional[str] = Query(default=None)) -> dict[str, str]:
-    """SVG strings for one category (or all) — cacheable, fetched lazily."""
+    """SVG strings for one category (or all) - cacheable, fetched lazily."""
     wanted = {d["id"] for d in content.signs_in_category(cat or "all")}
     out = {k: v for k, v in content.sign_svgs().items() if k in wanted}
     response.headers["Cache-Control"] = _LONG_CACHE

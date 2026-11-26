@@ -66,7 +66,7 @@ _IMPORTMAP = re.compile(r'<script type="importmap">(.*?)</script>', re.S)
 
 @lru_cache(maxsize=4)
 def importmap_hashes(static_dir: Path) -> tuple[str, ...]:
-    """CSP hash sources for the inline import map(s) in index.html — the only
+    """CSP hash sources for the inline import map(s) in index.html - the only
     inline script the policy allows (no 'unsafe-inline')."""
     markup = (static_dir / "index.html").read_text(encoding="utf-8")
     return tuple(

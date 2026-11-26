@@ -1,4 +1,4 @@
-/* IDrive learn.js — Learn view: today card, primer, chips, search, grid,
+/* IDrive learn.js - Learn view: today card, primer, chips, search, grid,
    detail sheet. Markup mirrors the source app so the original CSS applies. */
 (() => {
 "use strict";

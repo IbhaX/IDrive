@@ -1,4 +1,4 @@
-/* IDrive data.js — content store over /api/content/*. */
+/* IDrive data.js - content store over /api/content/*. */
 (() => {
 "use strict";
 const Data = {

@@ -77,7 +77,7 @@ def run(base: str, out: Path, browser_path: Optional[str]) -> int:
                     page.goto(f"{base}/#{route}")
                     try:
                         _wait(page)
-                    except Exception as e:  # noqa: BLE001 — report and continue
+                    except Exception as e:  # noqa: BLE001 - report and continue
                         failures.append(f"[{vp_name}/{theme}] #{route}: did not render ({e})")
                         continue
                     _scroll_through(page)

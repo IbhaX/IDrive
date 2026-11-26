@@ -43,7 +43,7 @@
         },
         {
           "h": "Moving off",
-          "p": ["Use the sequence Mirrors – Signal – Manoeuvre. Check the interior and right mirror, signal right if anyone could benefit, then look over your right shoulder at the blind spot — a motorcycle can hide there. Only move when there is a safe gap, and cancel the signal once you are moving."],
+          "p": ["Use the sequence Mirrors – Signal – Manoeuvre. Check the interior and right mirror, signal right if anyone could benefit, then look over your right shoulder at the blind spot - a motorcycle can hide there. Only move when there is a safe gap, and cancel the signal once you are moving."],
           "steps": ["Press the clutch and select first gear (or D).", "Set a little engine power and find the biting point.", "Check mirrors and the blind spot.", "Signal if needed.", "Release the parking brake and ease off the clutch while adding a little power."]
         },
         {
@@ -78,7 +78,7 @@
         "Change gear smoothly up and down.",
         "Start on a slope without rolling back, with and without hill-hold."
       ],
-      "intro": "Clutch control is the skill that makes manual driving feel smooth. It matters most at walking pace — in traffic, while parking and on hills — and it is what the gradient test checks.",
+      "intro": "Clutch control is the skill that makes manual driving feel smooth. It matters most at walking pace - in traffic, while parking and on hills - and it is what the gradient test checks.",
       "sections": [
         {
           "h": "Using the biting point",
@@ -91,18 +91,18 @@
         {
           "h": "Hill start",
           "p": ["On an uphill slope, gravity will roll the car back as soon as the brakes are released. The aim is to have the clutch at the biting point and enough power before the parking brake comes off."],
-          "steps": ["Parking brake on, first gear selected.", "Set a little more engine power than on the flat.", "Lift the clutch to the biting point and hold it still; you may feel the car's nose rise slightly.", "Check mirrors and blind spot.", "Release the parking brake — the car should hold or creep forward.", "Lift the clutch a little more and add power as you move off."],
-          "note": { "kind": "tip", "text": "With hill-hold assist, the car holds for about a second after you release the foot brake. Use it, but practise the parking-brake method too — test vehicles may not have it." }
+          "steps": ["Parking brake on, first gear selected.", "Set a little more engine power than on the flat.", "Lift the clutch to the biting point and hold it still; you may feel the car's nose rise slightly.", "Check mirrors and blind spot.", "Release the parking brake - the car should hold or creep forward.", "Lift the clutch a little more and add power as you move off."],
+          "note": { "kind": "tip", "text": "With hill-hold assist, the car holds for about a second after you release the foot brake. Use it, but practise the parking-brake method too - test vehicles may not have it." }
         }
       ],
       "terms": [
         ["Biting point", "Where the clutch plates begin to connect engine and gearbox."],
         ["Stall", "When the engine stops because the clutch was released without enough power."],
-        ["Roll-back", "Moving backwards on a slope when starting — a fault in a driving test."]
+        ["Roll-back", "Moving backwards on a slope when starting - a fault in a driving test."]
       ],
       "examples": ["Stopped in a queue on a steep ghat road, use the parking brake each time the queue halts rather than holding the car on the clutch."],
-      "mistakes": ["Holding the car on a hill with the clutch for long periods — it overheats and wears.", "Looking down at the gear lever.", "Releasing the parking brake before reaching the biting point."],
-      "safety": ["Leave a gap to the vehicle ahead on a hill — it may roll back when it moves off."],
+      "mistakes": ["Holding the car on a hill with the clutch for long periods - it overheats and wears.", "Looking down at the gear lever.", "Releasing the parking brake before reaching the biting point."],
+      "safety": ["Leave a gap to the vehicle ahead on a hill - it may roll back when it moves off."],
       "check": [
         { "q": "On a hill start, when should you release the parking brake?", "o": ["Before finding the biting point", "Once the clutch is at the biting point with some power set", "After the car starts rolling", "Never"], "a": 1, "r": "The clutch must be holding the car before the parking brake comes off, or it will roll back." },
         { "q": "Why should you not hold the car on a slope using only the clutch?", "o": ["It is illegal", "It overheats and wears the clutch", "It drains the battery", "It damages the tyres"], "a": 1, "r": "Slipping the clutch to hold the car generates heat and rapid wear." }
@@ -121,11 +121,11 @@
         "Parallel park using reference points.",
         "Park in an angled bay and turn in the road safely."
       ],
-      "intro": "Low-speed manoeuvres rarely cause serious injuries, but they cause countless scrapes — and they make up a large part of the Kerala ground test. The secret is to go slowly enough that you have time to look.",
+      "intro": "Low-speed manoeuvres rarely cause serious injuries, but they cause countless scrapes - and they make up a large part of the Kerala ground test. The secret is to go slowly enough that you have time to look.",
       "sections": [
         {
           "h": "Reversing",
-          "p": ["Turn your body to look through the rear window, with your left hand on the top of the wheel or holding the passenger seat if you need to. Use the mirrors and camera as aids, not the only view. Move at walking pace using clutch control. Look all around before and during the manoeuvre — children and animals can appear behind the car."]
+          "p": ["Turn your body to look through the rear window, with your left hand on the top of the wheel or holding the passenger seat if you need to. Use the mirrors and camera as aids, not the only view. Move at walking pace using clutch control. Look all around before and during the manoeuvre - children and animals can appear behind the car."]
         },
         {
           "h": "Parallel parking",
@@ -181,10 +181,10 @@
           "p": ["On a slip road, use its length to match the speed of traffic on the main carriageway, find a gap, signal, and merge without forcing anyone to brake. Drivers on the main road should, where safe, move over or adjust speed to help."]
         }
       ],
-      "terms": [["Closing speed", "The speed at which two vehicles approach each other — the sum of their speeds when head-on."], ["Slip road", "A road joining or leaving a highway, used to match speed."]],
+      "terms": [["Closing speed", "The speed at which two vehicles approach each other - the sum of their speeds when head-on."], ["Slip road", "A road joining or leaving a highway, used to match speed."]],
       "examples": ["Behind a bus on a winding state highway, you can see 200 m ahead but a bend hides the rest. Wait for a straight with a clear view; the few minutes saved are not worth a head-on crash."],
       "mistakes": ["Following too closely before overtaking, so you cannot see ahead.", "Cutting in too early in front of the overtaken vehicle.", "Overtaking a queue of vehicles in one go."],
-      "safety": ["If you start an overtake and see danger, slow down and return behind — do not race it."],
+      "safety": ["If you start an overtake and see danger, slow down and return behind - do not race it."],
       "check": [
         { "q": "Two cars drive towards each other, each at 80 km/h. What is the closing speed?", "o": ["80 km/h", "120 km/h", "160 km/h", "0 km/h"], "a": 2, "r": "Head-on, speeds add. That is why misjudged overtakes are so dangerous." },
         { "q": "When should you return to the left after overtaking?", "o": ["Immediately after passing the front bumper", "When you can see the overtaken vehicle in your interior mirror", "After 5 seconds", "When the other driver flashes"], "a": 1, "r": "Seeing it in your interior mirror means you have left enough room not to cut in." }
@@ -216,7 +216,7 @@
         {
           "h": "Roundabouts",
           "p": ["Give way to traffic already on the roundabout, which comes from your right. Choose your lane early: usually the left lane to turn left or go straight on, the right lane to turn right or go full circle, unless markings say otherwise. Signal left as you pass the exit before the one you want."],
-          "note": { "kind": "tip", "text": "Watch the front wheels and the driver's head of vehicles on the roundabout — they show what the vehicle will do better than its indicator." }
+          "note": { "kind": "tip", "text": "Watch the front wheels and the driver's head of vehicles on the roundabout - they show what the vehicle will do better than its indicator." }
         },
         {
           "h": "U-turns",
@@ -224,9 +224,9 @@
         }
       ],
       "terms": [["Uncontrolled junction", "A junction with no signals, signs or officer controlling it."], ["Major road", "The road with priority at a junction, often wider or marked with a GIVE WAY or STOP on the minor road."]],
-      "examples": ["Turning right at a signal, a scooter comes straight through from the opposite side. Wait in the junction with wheels straight until it passes — if you are hit from behind, straight wheels stop you being pushed into oncoming traffic."],
+      "examples": ["Turning right at a signal, a scooter comes straight through from the opposite side. Wait in the junction with wheels straight until it passes - if you are hit from behind, straight wheels stop you being pushed into oncoming traffic."],
       "mistakes": ["Cutting the corner when turning right.", "Forgetting to look for pedestrians in the road you are turning into.", "Signalling the wrong way on roundabouts."],
-      "safety": ["Never wave a pedestrian across a road — another vehicle may not stop."],
+      "safety": ["Never wave a pedestrian across a road - another vehicle may not stop."],
       "check": [
         { "q": "At a roundabout, you usually give way to:", "o": ["Traffic joining from your left", "Traffic already on the roundabout, coming from your right", "Nobody", "Larger vehicles only"], "a": 1, "r": "Traffic already circulating has priority; in India it approaches from your right." },
         { "q": "Waiting to turn right in a junction, how should your wheels be?", "o": ["Turned right, ready to go", "Straight", "Turned left", "It does not matter"], "a": 1, "r": "If you are rear-ended with wheels turned, you are pushed into oncoming traffic." }

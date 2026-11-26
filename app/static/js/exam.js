@@ -1,4 +1,4 @@
-/* IDrive exam.js — mock exam (server-built paper + server scoring) and
+/* IDrive exam.js - mock exam (server-built paper + server scoring) and
    per-topic practice. Markup mirrors the source app. */
 (() => {
 "use strict";

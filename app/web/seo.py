@@ -73,7 +73,7 @@ def clip(s: str, n: int = 158) -> str:
     if len(s) <= n:
         return s
     cut = s[: n - 1].rsplit(" ", 1)[0]
-    return cut.rstrip(",;:—- ") + "…"
+    return cut.rstrip(",;:-- ") + "…"
 
 
 def site_url() -> str:
@@ -106,7 +106,7 @@ class Page:
 
 
 def faq(question: str, answer: str) -> dict[str, Any]:
-    """FAQPage with one question — the answer string must be the visible one."""
+    """FAQPage with one question - the answer string must be the visible one."""
     return {
         "@context": "https://schema.org", "@type": "FAQPage",
         "mainEntity": {"@type": "Question", "name": question,
@@ -209,7 +209,7 @@ def page_sign(sid: str, lang: Lang) -> Optional[Page]:
     body = f"""<article class="panel seo">
 {crumbs_html(crumbs, lang)}
 <h1>{esc(q)}</h1>
-<p class="answer"><strong>{esc(name)}</strong> — {esc(ans)}</p>
+<p class="answer"><strong>{esc(name)}</strong> - {esc(ans)}</p>
 <figure class="plate seoplate" aria-hidden="true">{svg}</figure>
 <dl class="facts"><dt>{esc(T('Category', 'വിഭാഗം', lang))}</dt><dd>{a(f"/learn/{c['id']}", cat_name(c, lang), lang)}</dd>
 <dt>{esc(T('Meaning', 'അർത്ഥം', lang))}</dt><dd>{esc(meaning)}</dd>
@@ -217,12 +217,12 @@ def page_sign(sid: str, lang: Lang) -> Optional[Page]:
 {rich}
 <h2>{esc(T('More signs in this group', 'ഈ വിഭാഗത്തിലെ മറ്റ് ചിഹ്നങ്ങൾ', lang))}</h2>{more}
 </article>"""
-    # the visible answer paragraph is "<name> — <answer>"; the FAQ text matches it exactly
-    visible = f"{name} — {ans}"
+    # the visible answer paragraph is "<name> - <answer>"; the FAQ text matches it exactly
+    visible = f"{name} - {ans}"
     shared = d["name"].lower() in _shared_sign_names()
     return Page(
         path=f"/sign/{sid}",
-        title=f"{name}{' (' + cat_name(c, lang) + ')' if shared else ''} — {T('meaning and what to do', 'അർത്ഥവും ചെയ്യേണ്ടതും', lang)} | iDrive",
+        title=f"{name}{' (' + cat_name(c, lang) + ')' if shared else ''} - {T('meaning and what to do', 'അർത്ഥവും ചെയ്യേണ്ടതും', lang)} | iDrive",
         description=clip(visible),
         body=body, crumbs=crumbs, og_type="article",
         jsonld=[faq(q, visible), breadcrumb_ld(crumbs, lang)],
@@ -237,8 +237,8 @@ def page_learn(cat: Optional[str], lang: Lang) -> Optional[Page]:
             return None
         signs = content.signs_in_category(cat)
         crumbs = [home_crumb(lang), (ui("tSigns", lang), "/learn"), (cat_name(c, lang), f"/learn/{cat}")]
-        items = [f'{a(f"/sign/{s["id"]}", sign_name(s, lang), lang)} — {esc(sign_text(s, lang)[0])}' for s in signs]
-        h1 = T(f"{c['name']} — {len(signs)} signs explained", f"{cat_name(c, lang)} — {len(signs)} ചിഹ്നങ്ങൾ വിശദമായി", lang)
+        items = [f'{a(f"/sign/{s["id"]}", sign_name(s, lang), lang)} - {esc(sign_text(s, lang)[0])}' for s in signs]
+        h1 = T(f"{c['name']} - {len(signs)} signs explained", f"{cat_name(c, lang)} - {len(signs)} ചിഹ്നങ്ങൾ വിശദമായി", lang)
         body = f"""<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1>
 <p class="answer">{esc(cat_blurb(c, lang))}</p>{ul(items)}</article>"""
         return Page(path=f"/learn/{cat}", title=f"{h1} | iDrive", description=clip(cat_blurb(c, lang)),
@@ -247,8 +247,8 @@ def page_learn(cat: Optional[str], lang: Lang) -> Optional[Page]:
     crumbs = [home_crumb(lang), (ui("tSigns", lang), "/learn")]
     h1 = T(f"Indian road signs: all {total} signs with meanings", f"ഇന്ത്യൻ റോഡ് ചിഹ്നങ്ങൾ: അർത്ഥത്തോടെ എല്ലാ {total} ചിഹ്നങ്ങളും", lang)
     lede = T(
-        f"Every road sign, marking, signal, hand signal, dashboard light, vehicle control and number plate a learner in India needs — {total} in all, each with what it means and what to do, in English and Malayalam.",
-        f"ഇന്ത്യയിലെ ഒരു പഠിതാവിന് വേണ്ട എല്ലാ റോഡ് ചിഹ്നങ്ങളും അടയാളങ്ങളും സിഗ്നലുകളും കൈ സൂചനകളും ഡാഷ്ബോർഡ് ലൈറ്റുകളും നിയന്ത്രണങ്ങളും നമ്പർ പ്ലേറ്റുകളും — ആകെ {total}, ഓരോന്നിന്റെയും അർത്ഥവും ചെയ്യേണ്ടതും ഇംഗ്ലീഷിലും മലയാളത്തിലും.", lang)
+        f"Every road sign, marking, signal, hand signal, dashboard light, vehicle control and number plate a learner in India needs - {total} in all, each with what it means and what to do, in English and Malayalam.",
+        f"ഇന്ത്യയിലെ ഒരു പഠിതാവിന് വേണ്ട എല്ലാ റോഡ് ചിഹ്നങ്ങളും അടയാളങ്ങളും സിഗ്നലുകളും കൈ സൂചനകളും ഡാഷ്ബോർഡ് ലൈറ്റുകളും നിയന്ത്രണങ്ങളും നമ്പർ പ്ലേറ്റുകളും - ആകെ {total}, ഓരോന്നിന്റെയും അർത്ഥവും ചെയ്യേണ്ടതും ഇംഗ്ലീഷിലും മലയാളത്തിലും.", lang)
     secs = "".join(
         f'<h2>{a(f"/learn/{c["id"]}", cat_name(c, lang), lang)}</h2><p>{esc(cat_blurb(c, lang))}</p>'
         + ul([a(f"/sign/{s['id']}", sign_name(s, lang), lang) for s in content.signs_in_category(c["id"])])
@@ -307,7 +307,7 @@ def page_theory(topic: Optional[str], lang: Lang) -> Optional[Page]:
         intro = pts[0] if pts else name
         parts.append(ul([esc(x) for x in pts[1:]]))
     body = f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(name)}</h1><p class="answer">{esc(intro)}</p>{"".join(parts)}</article>'
-    return Page(path=f"/theory/{topic}", title=f"{name} — {T('driving theory', 'ഡ്രൈവിങ് തിയറി', lang)} | iDrive",
+    return Page(path=f"/theory/{topic}", title=f"{name} - {T('driving theory', 'ഡ്രൈവിങ് തിയറി', lang)} | iDrive",
                 description=clip(intro), body=body, crumbs=crumbs, og_type="article",
                 jsonld=[{"@context": "https://schema.org", "@type": "Article", "headline": name, "description": clip(intro, 300),
                          "inLanguage": lang, "publisher": {"@type": "Organization", "name": "iDrive", "url": site_url()}},
@@ -356,7 +356,7 @@ def page_glossary(slug: Optional[str], lang: Lang) -> Optional[Page]:
 <h2>{esc(T('More driving terms', 'മറ്റ് ഡ്രൈവിങ് പദങ്ങൾ', lang))}</h2>{ul([a(f"/glossary/{s}", gl[s][1] if lang == 'ml' else gl[s][0], lang) for s in near])}
 <p>{a("/theory/gloss", T("All glossary terms", "എല്ലാ പദങ്ങളും", lang), lang)}</p></article>"""
     visible = f"{term}: {defin}"
-    return Page(path=f"/glossary/{slug}", title=f"{term} — {T('meaning in driving', 'ഡ്രൈവിങ്ങിലെ അർത്ഥം', lang)} | iDrive",
+    return Page(path=f"/glossary/{slug}", title=f"{term} - {T('meaning in driving', 'ഡ്രൈവിങ്ങിലെ അർത്ഥം', lang)} | iDrive",
                 description=clip(visible), body=body, crumbs=crumbs, og_type="article",
                 jsonld=[faq(q, visible),
                         {"@context": "https://schema.org", "@type": "DefinedTerm", "name": term, "description": defin,
@@ -371,8 +371,8 @@ def page_course(lang: Lang) -> Page:
     crumbs = [home_crumb(lang), (ui("tCourse", lang), "/course")]
     h1 = T("A complete driving course for India, from first lesson to licence test",
            "ആദ്യ പാഠം മുതൽ ലൈസൻസ് ടെസ്റ്റ് വരെ ഇന്ത്യയ്ക്കായുള്ള സമ്പൂർണ ഡ്രൈവിങ് കോഴ്സ്", lang)
-    lede = T(f"{cat['counts']['modules']} modules and {cat['counts']['lessons']} lessons — vehicle science, road signs, traffic law, hazard perception, emergencies and the licence test — each with a short knowledge check.",
-             f"{cat['counts']['modules']} മൊഡ്യൂളുകളും {cat['counts']['lessons']} പാഠങ്ങളും — വാഹന ശാസ്ത്രം, റോഡ് ചിഹ്നങ്ങൾ, ഗതാഗത നിയമം, അപകട തിരിച്ചറിവ്, അടിയന്തരാവസ്ഥകൾ, ലൈസൻസ് ടെസ്റ്റ് — ഓരോന്നിനും ഒരു ചെറിയ പരിശോധന.", lang)
+    lede = T(f"{cat['counts']['modules']} modules and {cat['counts']['lessons']} lessons - vehicle science, road signs, traffic law, hazard perception, emergencies and the licence test - each with a short knowledge check.",
+             f"{cat['counts']['modules']} മൊഡ്യൂളുകളും {cat['counts']['lessons']} പാഠങ്ങളും - വാഹന ശാസ്ത്രം, റോഡ് ചിഹ്നങ്ങൾ, ഗതാഗത നിയമം, അപകട തിരിച്ചറിവ്, അടിയന്തരാവസ്ഥകൾ, ലൈസൻസ് ടെസ്റ്റ് - ഓരോന്നിനും ഒരു ചെറിയ പരിശോധന.", lang)
     secs = []
     for m in cat["modules"]:
         items = []
@@ -413,7 +413,7 @@ def page_lesson(lid: str, lang: Lang) -> Optional[Page]:
             out.append(f"<h2>{esc(T(en, ml, lang))}</h2>{_pairs_ul(L[key], lang)}")
     if pl["references"]:
         out.append(f"<h2>{esc(T('Sources', 'ഉറവിടങ്ങൾ', lang))}</h2>" + ul(
-            [f'<a href="{esc(r["url"])}" rel="noopener">{esc(r["title"])}</a> — {esc(r["publisher"])}' for r in pl["references"]]))
+            [f'<a href="{esc(r["url"])}" rel="noopener">{esc(r["title"])}</a> - {esc(r["publisher"])}' for r in pl["references"]]))
     nav = []
     if pl["prev"]:
         nav.append(a(f"/lesson/{pl['prev']}", "← " + T("Previous lesson", "മുമ്പത്തെ പാഠം", lang), lang))
@@ -441,7 +441,7 @@ def page_hazard(sid: Optional[str], lang: Lang) -> Optional[Page]:
         h1 = T(f"Hazard perception practice: {len(scen)} road scenarios", f"അപകട തിരിച്ചറിവ് പരിശീലനം: {len(scen)} റോഡ് സാഹചര്യങ്ങൾ", lang)
         lede = T("Watch a short scene, spot the developing hazard, then choose the safest response. Covers pedestrians, two-wheelers, buses, junctions, highways, night, rain, fog and rural roads in India.",
                  "ഒരു ചെറിയ രംഗം കണ്ട്, രൂപപ്പെടുന്ന അപകടം കണ്ടെത്തി, ഏറ്റവും സുരക്ഷിതമായ പ്രതികരണം തിരഞ്ഞെടുക്കുക. കാൽനടക്കാർ, ഇരുചക്രവാഹനങ്ങൾ, ബസ്സുകൾ, ജംഗ്ഷനുകൾ, ഹൈവേ, രാത്രി, മഴ, മഞ്ഞ്, ഗ്രാമ റോഡുകൾ എന്നിവ ഉൾപ്പെടുന്നു.", lang)
-        items = [f'{a(f"/hazard/{s["id"]}", pick(s["title"], lang), lang)} — {esc(pick(s["brief"], lang))}' for s in scen]
+        items = [f'{a(f"/hazard/{s["id"]}", pick(s["title"], lang), lang)} - {esc(pick(s["brief"], lang))}' for s in scen]
         body = f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>{ul(items)}</article>'
         return Page(path="/hazard", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
     s = next((x for x in scen if x["id"] == sid), None)
@@ -452,12 +452,12 @@ def page_hazard(sid: Optional[str], lang: Lang) -> Optional[Page]:
     ok = next((c for c in s["choices"] if c.get("ok")), None)
     q = pick(s["question"], lang)
     answer = f"{pick(ok['t'], lang)} {pick(ok['why'], lang)}" if ok else ""
-    wrong = [f"<strong>{esc(pick(c['t'], lang))}</strong> — {esc(pick(c['why'], lang))}" for c in s["choices"] if not c.get("ok")]
+    wrong = [f"<strong>{esc(pick(c['t'], lang))}</strong> - {esc(pick(c['why'], lang))}" for c in s["choices"] if not c.get("ok")]
     body = f"""<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(title)}</h1>
 <p>{esc(pick(s['brief'], lang))}</p><h2>{esc(q)}</h2><p class="answer">{esc(answer)}</p>
 <h3>{esc(T('Why the other choices are risky', 'മറ്റ് ഉത്തരങ്ങൾ അപകടകരമാകുന്നത് എന്തുകൊണ്ട്', lang))}</h3>{ul(wrong)}
 <p>{a(f"/hazard/{sid}", T("Play this scenario", "ഈ സാഹചര്യം പരീക്ഷിക്കുക", lang), lang, "btn")}</p></article>"""
-    return Page(path=f"/hazard/{sid}", title=f"{title} — {T('hazard perception', 'അപകട തിരിച്ചറിവ്', lang)} | iDrive",
+    return Page(path=f"/hazard/{sid}", title=f"{title} - {T('hazard perception', 'അപകട തിരിച്ചറിവ്', lang)} | iDrive",
                 description=clip(f"{pick(s['brief'], lang)} {q}"), body=body, crumbs=crumbs, og_type="article",
                 jsonld=[faq(f"{pick(s['brief'], lang)} {q}", answer), breadcrumb_ld(crumbs, lang)])
 
@@ -468,8 +468,8 @@ def page_vehicle(kind: Optional[str], item: Optional[str], lang: Lang) -> Option
     if kind is None:
         crumbs = [home_crumb(lang), vc]
         h1 = T("How a car works: parts, systems and warning lights", "കാർ എങ്ങനെ പ്രവർത്തിക്കുന്നു: ഭാഗങ്ങൾ, സംവിധാനങ്ങൾ, മുന്നറിയിപ്പ് ലൈറ്റുകൾ", lang)
-        lede = T("Explore the main parts of a car — what each does, how it works and how it fails — and look up any dashboard warning light.",
-                 "കാറിന്റെ പ്രധാന ഭാഗങ്ങൾ — ഓരോന്നും എന്ത് ചെയ്യുന്നു, എങ്ങനെ പ്രവർത്തിക്കുന്നു, എങ്ങനെ തകരാറിലാകുന്നു — പരിശോധിക്കുക; ഏത് ഡാഷ്ബോർഡ് ലൈറ്റും നോക്കുക.", lang)
+        lede = T("Explore the main parts of a car - what each does, how it works and how it fails - and look up any dashboard warning light.",
+                 "കാറിന്റെ പ്രധാന ഭാഗങ്ങൾ - ഓരോന്നും എന്ത് ചെയ്യുന്നു, എങ്ങനെ പ്രവർത്തിക്കുന്നു, എങ്ങനെ തകരാറിലാകുന്നു - പരിശോധിക്കുക; ഏത് ഡാഷ്ബോർഡ് ലൈറ്റും നോക്കുക.", lang)
         body = (f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>'
                 f'<h2>{a("/vehicle/explore", T("Vehicle parts", "വാഹന ഭാഗങ്ങൾ", lang), lang)}</h2>'
                 + ul([a(f"/vehicle/explore/{p['id']}", pick(p["name"], lang), lang) for p in parts])
@@ -484,7 +484,7 @@ def page_vehicle(kind: Optional[str], item: Optional[str], lang: Lang) -> Option
             lede = T("Red means stop safely now, amber means get it checked soon, green and blue are information. Each light below explains what it means, whether you can keep driving and what to do.",
                      "ചുവപ്പ് എന്നാൽ ഇപ്പോൾ സുരക്ഷിതമായി നിർത്തുക, ആമ്പർ എന്നാൽ ഉടൻ പരിശോധിപ്പിക്കുക, പച്ചയും നീലയും വിവരം മാത്രം. ഓരോ ലൈറ്റിന്റെയും അർത്ഥവും തുടർന്ന് ഓടിക്കാമോ എന്നതും ചെയ്യേണ്ടതും താഴെ.", lang)
             body = (f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>'
-                    + ul([f'{a(f"/vehicle/lights/{w["id"]}", pick(w["name"], lang), lang)} — {esc(pick(w["means"], lang))}' for w in lights]) + "</article>")
+                    + ul([f'{a(f"/vehicle/lights/{w["id"]}", pick(w["name"], lang), lang)} - {esc(pick(w["means"], lang))}' for w in lights]) + "</article>")
             return Page(path="/vehicle/lights", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
         w = next((x for x in lights if x["id"] == item), None)
         if not w:
@@ -499,7 +499,7 @@ def page_vehicle(kind: Optional[str], item: Optional[str], lang: Lang) -> Option
 <h2>{esc(T('Common causes', 'സാധാരണ കാരണങ്ങൾ', lang))}</h2>{_pairs_ul(w['causes'], lang)}
 <h2>{esc(T('If you ignore it', 'അവഗണിച്ചാൽ', lang))}</h2><p>{esc(pick(w['ignored'], lang))}</p>
 <h2>{esc(T('What a mechanic checks', 'മെക്കാനിക്ക് പരിശോധിക്കുന്നത്', lang))}</h2><p>{esc(pick(w['pro'], lang))}</p></article>"""
-        return Page(path=f"/vehicle/lights/{item}", title=f"{name} — {T('warning light meaning', 'മുന്നറിയിപ്പ് ലൈറ്റിന്റെ അർത്ഥം', lang)} | iDrive",
+        return Page(path=f"/vehicle/lights/{item}", title=f"{name} - {T('warning light meaning', 'മുന്നറിയിപ്പ് ലൈറ്റിന്റെ അർത്ഥം', lang)} | iDrive",
                     description=clip(ans), body=body, crumbs=crumbs, og_type="article", jsonld=[faq(q, ans), breadcrumb_ld(crumbs, lang)])
     if kind == "explore":
         pc = (T("Vehicle parts", "വാഹന ഭാഗങ്ങൾ", lang), "/vehicle/explore")
@@ -509,7 +509,7 @@ def page_vehicle(kind: Optional[str], item: Optional[str], lang: Lang) -> Option
             lede = T("What each major part of a car does, how it works, when you use it and how it fails.",
                      "കാറിന്റെ ഓരോ പ്രധാന ഭാഗവും എന്ത് ചെയ്യുന്നു, എങ്ങനെ പ്രവർത്തിക്കുന്നു, എപ്പോൾ ഉപയോഗിക്കുന്നു, എങ്ങനെ തകരാറിലാകുന്നു.", lang)
             body = (f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>'
-                    + ul([f'{a(f"/vehicle/explore/{p["id"]}", pick(p["name"], lang), lang)} — {esc(pick(p["what"], lang))}' for p in parts]) + "</article>")
+                    + ul([f'{a(f"/vehicle/explore/{p["id"]}", pick(p["name"], lang), lang)} - {esc(pick(p["what"], lang))}' for p in parts]) + "</article>")
             return Page(path="/vehicle/explore", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
         p = next((x for x in parts if x["id"] == item), None)
         if not p:
@@ -522,7 +522,7 @@ def page_vehicle(kind: Optional[str], item: Optional[str], lang: Lang) -> Option
 <h2>{esc(T('How it works', 'എങ്ങനെ പ്രവർത്തിക്കുന്നു', lang))}</h2><p>{esc(pick(p['how'], lang))}</p>
 <h2>{esc(T('When it matters to you', 'നിങ്ങൾക്ക് എപ്പോൾ പ്രധാനം', lang))}</h2><p>{esc(pick(p['when'], lang))}</p>
 <h2>{esc(T('How it fails', 'എങ്ങനെ തകരാറിലാകുന്നു', lang))}</h2><p>{esc(pick(p['fails'], lang))}</p></article>"""
-        return Page(path=f"/vehicle/explore/{item}", title=f"{name} — {T('how it works', 'എങ്ങനെ പ്രവർത്തിക്കുന്നു', lang)} | iDrive",
+        return Page(path=f"/vehicle/explore/{item}", title=f"{name} - {T('how it works', 'എങ്ങനെ പ്രവർത്തിക്കുന്നു', lang)} | iDrive",
                     description=clip(f"{ans} {pick(p['how'], lang)}"), body=body, crumbs=crumbs, og_type="article", jsonld=[faq(q, ans), breadcrumb_ld(crumbs, lang)])
     return None
 
@@ -538,7 +538,7 @@ def page_science(lab: Optional[str], lang: Lang) -> Optional[Page]:
         h1 = T(f"Driving science labs: {len(lab_ids())} interactive experiments", f"ഡ്രൈവിങ് ശാസ്ത്ര ലാബുകൾ: {len(lab_ids())} സംവേദനാത്മക പരീക്ഷണങ്ങൾ", lang)
         lede = T("Move the sliders and see the physics behind safe driving: stopping distance, reaction time, grip in bends, crash energy, visibility, fuel use and more.",
                  "സ്ലൈഡറുകൾ നീക്കി സുരക്ഷിത ഡ്രൈവിങ്ങിന് പിന്നിലെ ഭൗതികശാസ്ത്രം കാണുക: നിർത്താനുള്ള ദൂരം, പ്രതികരണ സമയം, വളവിലെ ഗ്രിപ്പ്, ഇടിയുടെ ഊർജം, കാഴ്ച, ഇന്ധന ഉപയോഗം എന്നിവയും മറ്റും.", lang)
-        items = [f'{a(f"/science/{k}", ui("lab_" + k, lang), lang)} — {esc(ui("labSub_" + k, lang))}' for k in lab_ids()]
+        items = [f'{a(f"/science/{k}", ui("lab_" + k, lang), lang)} - {esc(ui("labSub_" + k, lang))}' for k in lab_ids()]
         body = f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>{ul(items)}</article>'
         return Page(path="/science", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
     if lab not in curriculum.LABS:
@@ -557,7 +557,7 @@ def page_science(lab: Optional[str], lang: Lang) -> Optional[Page]:
     desc = f"{name}: {sub}. " + (pick(model, lang) if model else T(
         "An interactive iDrive lab: move the sliders and watch the numbers and the road picture change.",
         "ഒരു സംവേദനാത്മക iDrive ലാബ്: സ്ലൈഡറുകൾ നീക്കി സംഖ്യകളും റോഡ് ചിത്രവും മാറുന്നത് കാണുക.", lang))
-    return Page(path=f"/science/{lab}", title=f"{name} — {T('interactive driving lab', 'സംവേദനാത്മക ഡ്രൈവിങ് ലാബ്', lang)} | iDrive",
+    return Page(path=f"/science/{lab}", title=f"{name} - {T('interactive driving lab', 'സംവേദനാത്മക ഡ്രൈവിങ് ലാബ്', lang)} | iDrive",
                 description=clip(desc), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
 
 
@@ -583,7 +583,7 @@ def page_games(gid: Optional[str], lang: Lang) -> Optional[Page]:
         lede = ui("gmLede", lang).replace("{n}", str(len(GAME_IDS)))
         parts = []
         for gk, ids in GAME_GROUPS:
-            parts.append(f"<h2>{esc(ui(gk, lang))}</h2>" + ul([f'{a(f"/games/{k}", ui("gm_" + k, lang), lang)} — {esc(ui("gmSub_" + k, lang))}' for k in ids]))
+            parts.append(f"<h2>{esc(ui(gk, lang))}</h2>" + ul([f'{a(f"/games/{k}", ui("gm_" + k, lang), lang)} - {esc(ui("gmSub_" + k, lang))}' for k in ids]))
         body = f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>{"".join(parts)}</article>'
         return Page(path="/games", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
     if gid not in GAME_IDS:
@@ -592,7 +592,7 @@ def page_games(gid: Optional[str], lang: Lang) -> Optional[Page]:
     crumbs = [home_crumb(lang), gc, (name, f"/games/{gid}")]
     body = f"""<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(name)}</h1><p class="answer">{esc(sub)}. {esc(how)}</p>
 <p>{a(f"/games/{gid}", T("Play the game", "ഗെയിം കളിക്കുക", lang), lang, "btn")}</p></article>"""
-    return Page(path=f"/games/{gid}", title=f"{name} — {T('driving game', 'ഡ്രൈവിങ് ഗെയിം', lang)} | iDrive",
+    return Page(path=f"/games/{gid}", title=f"{name} - {T('driving game', 'ഡ്രൈവിങ് ഗെയിം', lang)} | iDrive",
                 description=clip(f"{name}: {sub}. {how}"), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
 
 
@@ -617,13 +617,13 @@ def page_limits(lang: Lang) -> Optional[Page]:
         th = "".join(f'<th scope="col">{esc(pick(r["t"], lang))}</th>' for r in R["roads"])
         rows = "".join(
             f'<tr><th scope="row">{esc(pick(v["t"], lang))}<br><small>{esc(pick(v["sub"], lang))}</small></th>'
-            + "".join(f"<td>{'—' if x is None else x}</td>" for x in v["lim"]) + "</tr>" for v in R["vehicles"])
-        refs = ul([f'<a href="{esc(r["url"])}" rel="noopener">{esc(r["title"])}</a> — {esc(r["publisher"])}, {esc(ui("spVerified", lang, d=r["verified"]))}' for r in R["refs"]])
+            + "".join(f"<td>{'-' if x is None else x}</td>" for x in v["lim"]) + "</tr>" for v in R["vehicles"])
+        refs = ul([f'<a href="{esc(r["url"])}" rel="noopener">{esc(r["title"])}</a> - {esc(r["publisher"])}, {esc(ui("spVerified", lang, d=r["verified"]))}' for r in R["refs"]])
         tables.append(f'<h2>{esc(head)} (km/h)</h2><div class="sptable"><table><thead><tr><th scope="col">{esc(ui("spVehicle", lang))}</th>{th}</tr></thead><tbody>{rows}</tbody></table></div>{refs}')
     notes = ul([esc(ui(k, lang)) for k in ("spN1", "spN2", "spN3k", "spN3i", "spN4", "spN5")])
     body = f"""<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(ui("spTitle", lang))}</h1>
 <h2>{esc(q)}</h2><p class="answer">{esc(ans)}</p>{"".join(tables)}<h2>{esc(ui("spNotes", lang))}</h2>{notes}</article>"""
-    return Page(path="/limits", title=f"{T('Speed limits in Kerala and India by vehicle and road', 'കേരളത്തിലെയും ഇന്ത്യയിലെയും വേഗപരിധി — വാഹനവും റോഡും അനുസരിച്ച്', lang)} | iDrive",
+    return Page(path="/limits", title=f"{T('Speed limits in Kerala and India by vehicle and road', 'കേരളത്തിലെയും ഇന്ത്യയിലെയും വേഗപരിധി - വാഹനവും റോഡും അനുസരിച്ച്', lang)} | iDrive",
                 description=clip(ans), body=body, crumbs=crumbs, jsonld=[faq(q, ans), breadcrumb_ld(crumbs, lang)])
 
 
@@ -636,7 +636,7 @@ def page_tool(view: str, lang: Lang) -> Page:
     info = {
         "exam": (T("Free learner licence mock test and practice questions", "സൗജന്യ ലേണേഴ്സ് ലൈസൻസ് മോക്ക് ടെസ്റ്റും പരിശീലന ചോദ്യങ്ങളും", lang),
                  T(f"Take a timed mock test in the style of the learner licence test, or practise topic by topic from {nq} questions with explanations, in English and Malayalam. Sign in to save results and sync across devices.",
-                   f"ലേണേഴ്സ് ലൈസൻസ് ടെസ്റ്റിന്റെ രീതിയിൽ സമയബന്ധിതമായ മോക്ക് ടെസ്റ്റ് എഴുതുക, അല്ലെങ്കിൽ വിശദീകരണങ്ങളോടെ {nq} ചോദ്യങ്ങളിൽ നിന്ന് വിഷയം തിരിച്ച് പരിശീലിക്കുക — ഇംഗ്ലീഷിലും മലയാളത്തിലും. ഫലങ്ങൾ സൂക്ഷിക്കാനും ഉപകരണങ്ങളിൽ സമന്വയിപ്പിക്കാനും സൈൻ ഇൻ ചെയ്യുക.", lang), True),
+                   f"ലേണേഴ്സ് ലൈസൻസ് ടെസ്റ്റിന്റെ രീതിയിൽ സമയബന്ധിതമായ മോക്ക് ടെസ്റ്റ് എഴുതുക, അല്ലെങ്കിൽ വിശദീകരണങ്ങളോടെ {nq} ചോദ്യങ്ങളിൽ നിന്ന് വിഷയം തിരിച്ച് പരിശീലിക്കുക - ഇംഗ്ലീഷിലും മലയാളത്തിലും. ഫലങ്ങൾ സൂക്ഷിക്കാനും ഉപകരണങ്ങളിൽ സമന്വയിപ്പിക്കാനും സൈൻ ഇൻ ചെയ്യുക.", lang), True),
         "quiz": (T("Road sign quiz", "റോഡ് ചിഹ്ന ക്വിസ്", lang),
                  T(f"Test yourself on {len(content.signs())} Indian road signs, markings and signals.", f"{len(content.signs())} ഇന്ത്യൻ റോഡ് ചിഹ്നങ്ങളിലും അടയാളങ്ങളിലും സിഗ്നലുകളിലും സ്വയം പരിശോധിക്കുക.", lang), True),
         "cards": (T("Road sign flashcards", "റോഡ് ചിഹ്ന ഫ്ലാഷ്കാർഡുകൾ", lang),
@@ -661,7 +661,7 @@ def org_ld() -> list[dict[str, Any]]:
                            "url": site_url(), "logo": site_url() + "/static/img/icon-512.png"}
     if same:
         org["sameAs"] = same
-    app = {"@context": "https://schema.org", "@type": "WebApplication", "name": "iDrive — the interactive driving school",
+    app = {"@context": "https://schema.org", "@type": "WebApplication", "name": "iDrive - the interactive driving school",
            "url": site_url(), "applicationCategory": "EducationalApplication", "operatingSystem": "Any (web, Android, iOS, desktop)",
            "inLanguage": ["en", "ml"], "isAccessibleForFree": True,
            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}
@@ -673,9 +673,9 @@ def page_home(lang: Lang) -> Page:
     cat = curriculum.catalogue()
     n = {"signs": len(content.signs()), "q": sum(content.question_counts().values()), "lessons": cat["counts"]["lessons"],
          "scen": cat["counts"]["scenarios"], "gloss": len(content.glossary()), "labs": len(lab_ids())}
-    h1 = T("iDrive — learn to drive in India, properly explained", "iDrive — ഇന്ത്യയിൽ ഡ്രൈവിങ് പഠിക്കാം, ശരിയായി വിശദീകരിച്ച്", lang)
-    lede = T(f"A free, interactive driving-theory school for India and Kerala: {n['lessons']} lessons, {n['signs']} road signs, {n['q']} practice questions, {n['scen']} hazard scenarios, {n['labs']} science labs and a learner licence mock test — every explanation in English and Malayalam.",
-             f"ഇന്ത്യയ്ക്കും കേരളത്തിനുമുള്ള സൗജന്യ, സംവേദനാത്മക ഡ്രൈവിങ് തിയറി സ്കൂൾ: {n['lessons']} പാഠങ്ങൾ, {n['signs']} റോഡ് ചിഹ്നങ്ങൾ, {n['q']} പരിശീലന ചോദ്യങ്ങൾ, {n['scen']} അപകട സാഹചര്യങ്ങൾ, {n['labs']} ശാസ്ത്ര ലാബുകൾ, ലേണേഴ്സ് ലൈസൻസ് മോക്ക് ടെസ്റ്റ് — എല്ലാ വിശദീകരണവും ഇംഗ്ലീഷിലും മലയാളത്തിലും.", lang)
+    h1 = T("iDrive - learn to drive in India, properly explained", "iDrive - ഇന്ത്യയിൽ ഡ്രൈവിങ് പഠിക്കാം, ശരിയായി വിശദീകരിച്ച്", lang)
+    lede = T(f"A free, interactive driving-theory school for India and Kerala: {n['lessons']} lessons, {n['signs']} road signs, {n['q']} practice questions, {n['scen']} hazard scenarios, {n['labs']} science labs and a learner licence mock test - every explanation in English and Malayalam.",
+             f"ഇന്ത്യയ്ക്കും കേരളത്തിനുമുള്ള സൗജന്യ, സംവേദനാത്മക ഡ്രൈവിങ് തിയറി സ്കൂൾ: {n['lessons']} പാഠങ്ങൾ, {n['signs']} റോഡ് ചിഹ്നങ്ങൾ, {n['q']} പരിശീലന ചോദ്യങ്ങൾ, {n['scen']} അപകട സാഹചര്യങ്ങൾ, {n['labs']} ശാസ്ത്ര ലാബുകൾ, ലേണേഴ്സ് ലൈസൻസ് മോക്ക് ടെസ്റ്റ് - എല്ലാ വിശദീകരണവും ഇംഗ്ലീഷിലും മലയാളത്തിലും.", lang)
     sec = [
         ("/course", ui("tCourse", lang), T("Structured lessons from vehicle basics to the licence test.", "വാഹന അടിസ്ഥാനങ്ങൾ മുതൽ ലൈസൻസ് ടെസ്റ്റ് വരെ ക്രമീകരിച്ച പാഠങ്ങൾ.", lang)),
         ("/learn", ui("tSigns", lang), T(f"All {n['signs']} signs, markings and signals with meanings.", f"അർത്ഥത്തോടെ എല്ലാ {n['signs']} ചിഹ്നങ്ങളും അടയാളങ്ങളും സിഗ്നലുകളും.", lang)),
@@ -687,13 +687,13 @@ def page_home(lang: Lang) -> Page:
         ("/games", ui("tGames", lang), T(f"{len(GAME_IDS)} driving games for reaction time and road logic.", f"പ്രതികരണ സമയത്തിനും റോഡ് യുക്തിക്കും {len(GAME_IDS)} ഡ്രൈവിങ് ഗെയിമുകൾ.", lang)),
         ("/vehicle", ui("tVehicle", lang), T("Car parts and dashboard warning lights.", "കാർ ഭാഗങ്ങളും ഡാഷ്ബോർഡ് മുന്നറിയിപ്പ് ലൈറ്റുകളും.", lang)),
         ("/exam", ui("tTests", lang), T("Learner licence mock test and practice.", "ലേണേഴ്സ് ലൈസൻസ് മോക്ക് ടെസ്റ്റും പരിശീലനവും.", lang)),
-        ("/about", T("About iDrive", "iDrive-നെക്കുറിച്ച്", lang), T("Who makes iDrive and what it is — and is not.", "iDrive ആരാണ് നിർമിക്കുന്നത്, അത് എന്താണ് — എന്തല്ല.", lang)),
+        ("/about", T("About iDrive", "iDrive-നെക്കുറിച്ച്", lang), T("Who makes iDrive and what it is - and is not.", "iDrive ആരാണ് നിർമിക്കുന്നത്, അത് എന്താണ് - എന്തല്ല.", lang)),
     ]
     cats = ul([a(f"/learn/{c['id']}", cat_name(c, lang), lang) for c in content.categories()])
     body = f"""<article class="panel seo"><h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>
-{ul([f"{a(p, l, lang)} — {esc(d)}" for p, l, d in sec])}
+{ul([f"{a(p, l, lang)} - {esc(d)}" for p, l, d in sec])}
 <h2>{esc(T('Road sign groups', 'റോഡ് ചിഹ്ന വിഭാഗങ്ങൾ', lang))}</h2>{cats}</article>"""
-    return Page(path="/", title=T("iDrive — the interactive driving school for India and Kerala", "iDrive — ഇന്ത്യയ്ക്കും കേരളത്തിനുമുള്ള സംവേദനാത്മക ഡ്രൈവിങ് സ്കൂൾ", lang),
+    return Page(path="/", title=T("iDrive - the interactive driving school for India and Kerala", "iDrive - ഇന്ത്യയ്ക്കും കേരളത്തിനുമുള്ള സംവേദനാത്മക ഡ്രൈവിങ് സ്കൂൾ", lang),
                 description=clip(lede), body=body, crumbs=[home_crumb(lang)], jsonld=org_ld())
 
 
@@ -896,7 +896,7 @@ def robots_txt() -> str:
                 "Bytespider", "cohere-ai", "cohere-training-data-crawler", "Meta-ExternalAgent", "meta-externalagent",
                 "Amazonbot", "MistralAI-Training", "PanguBot", "Timpibot", "ImagesiftBot", "omgili", "Diffbot"]
     scrapers = ["AhrefsBot", "SemrushBot", "SemrushBot-SWA", "BLEXBot", "DotBot", "MJ12bot", "PetalBot"]
-    lines = ["# iDrive — robots.txt",
+    lines = ["# iDrive - robots.txt",
              "# Search and AI answer engines may read and cite iDrive; model training is declined.",
              "", "User-agent: *", "Content-Signal: search=yes, ai-input=yes, ai-train=no",
              "Allow: /", "Disallow: /api/", "Allow: /api/curriculum", "Allow: /api/library/", "Allow: /api/content/", ""]
@@ -919,7 +919,7 @@ def llms_txt() -> str:
     n_signs, n_q = len(content.signs()), sum(content.question_counts().values())
     s = get_settings()
     lines = [
-        "# iDrive — the interactive driving school", "",
+        "# iDrive - the interactive driving school", "",
         f"> iDrive is a free, interactive driving-theory app for India and Kerala. It teaches road signs, traffic law, "
         f"hazard perception and vehicle science, with every explanation in English and Malayalam: {n_signs} road signs, "
         f"{n_q} practice questions, {cat['counts']['lessons']} lessons, {cat['counts']['scenarios']} hazard scenarios, "
@@ -951,7 +951,7 @@ def llms_txt() -> str:
 
 def llms_full_txt() -> str:
     base = site_url()
-    out = ["# iDrive — full text (English)", "", f"Source: {base}. Malayalam versions: add ?lang=ml to any page URL.", ""]
+    out = ["# iDrive - full text (English)", "", f"Source: {base}. Malayalam versions: add ?lang=ml to any page URL.", ""]
     out.append("## Road signs")
     for d in content.signs():
         out.append(f"### {d['name']} ({base}/sign/{d['id']})\n{d['meaning']} What to do: {d['action']}")

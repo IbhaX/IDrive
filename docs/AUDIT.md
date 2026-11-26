@@ -1,4 +1,4 @@
-# iDrive — repository audit and transformation plan
+# iDrive - repository audit and transformation plan
 
 Audit date: 2026-11-25 · Base commit: `bf8954d`
 
@@ -19,7 +19,7 @@ Audit date: 2026-11-25 · Base commit: `bf8954d`
 
 1. **No curriculum structure.** Content is a flat list of 18 articles; no modules → chapters → lessons, no learning objectives, no knowledge checks inside lessons, no references or verification dates.
 2. **Vehicle knowledge is shallow.** One "Know your vehicle" article; no engine, transmission, drivetrain, EV or safety-system lessons; no clickable vehicle diagram.
-3. **Dashboard lights** exist only as sign tiles (name/meaning/action) — no severity model (stop now vs. get checked), causes, "if ignored", or "when to call a mechanic".
+3. **Dashboard lights** exist only as sign tiles (name/meaning/action) - no severity model (stop now vs. get checked), causes, "if ignored", or "when to call a mechanic".
 4. **No interactive learning beyond quizzes.** No science lab, no mechanical animations, no hazard-perception scenarios, no reaction-time exercises.
 5. **No AI instructor.**
 6. **Progress** tracks signs and quizzes only; no lesson completion, levels, streaks, bookmarks, recently viewed or readiness.
@@ -41,14 +41,14 @@ Audit date: 2026-11-25 · Base commit: `bf8954d`
 | --- | --- | --- |
 | 1 | Audit (this file) | done |
 | 2 | Navigation: Home, Learn, Signs, Vehicle, Science, Hazards, Tests, Instructor, Progress; global search; breadcrumbs; design-system extensions | done (first pass) |
-| 3 | `Motion` extensions: scoped view contexts, scroll reveals, progress rings, magnetic buttons — all with reduced-motion paths | done |
+| 3 | `Motion` extensions: scoped view contexts, scroll reveals, progress rings, magnetic buttons - all with reduced-motion paths | done |
 | 4 | Curriculum architecture: `app/data/curriculum/*.json`, validated service, `/api/curriculum/*`, search index, tests | done |
-| 5 | Curriculum content: 12 modules, verified lessons, references | first tranche — see `content_review.md` |
+| 5 | Curriculum content: 12 modules, verified lessons, references | first tranche - see `content_review.md` |
 | 6 | Interactive: stopping-distance lab, reaction test, four-stroke engine, vehicle explorer, warning-light library, hazard perception | done (first pass) |
 | 7 | AI instructor: retrieval over curriculum, OpenAI-compatible provider, citations, search-only fallback | done |
 | 8 | Dashboard: lesson completion, levels, streak, bookmarks, recent, readiness | done |
 | 9 | Accessibility/performance pass | partial |
-| 10 | Playwright visual checks (desktop/mobile, dark/light) | partial — `tools/visual_check.py` |
+| 10 | Playwright visual checks (desktop/mobile, dark/light) | partial - `tools/visual_check.py` |
 
 ## 5. Known issues found during the audit (not yet fixed)
 

@@ -1,4 +1,4 @@
-/* iDrive speed.js — speed limits by vehicle and road (#limits).
+/* iDrive speed.js - speed limits by vehicle and road (#limits).
    Data: /api/library/speed-limits (Kerala notification + central maximums),
    labels are [en, ml] pairs. Pick a vehicle and a road to see the limit. */
 (() => {
@@ -32,7 +32,7 @@ Sp.render = (app) => {
   const seg = ["kerala", "india"].map(k => `<button type="button" role="tab" class="${Sp.region === k ? "on" : ""}" aria-selected="${Sp.region === k}" data-act="spRegion" data-k="${k}">${e(u(k === "kerala" ? "spKerala" : "spIndia"))}</button>`).join("");
   const table = `<div class="sptable" tabindex="0" role="region" aria-label="${I18n.attr(u("spTable"))}"><table>
     <thead><tr><th scope="col">${e(u("spVehicle"))}</th>${R.roads.map((r, j) => `<th scope="col" class="${j === ri ? "cur" : ""}">${e(r.t)}</th>`).join("")}</tr></thead>
-    <tbody>${R.vehicles.map((v, i) => `<tr class="${i === vi ? "cur" : ""}"><th scope="row">${e(v.t)}<small>${e(v.sub)}</small></th>${v.lim.map((x, j) => `<td><button type="button" class="spcell${i === vi && j === ri ? " on" : ""}" data-act="spCell" data-k="${v.id}|${R.roads[j].id}" aria-label="${I18n.attr(v.t)} — ${I18n.attr(R.roads[j].t)}: ${x == null ? I18n.attr(u("spNA")) : x + " km/h"}">${x == null ? "—" : x}</button></td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+    <tbody>${R.vehicles.map((v, i) => `<tr class="${i === vi ? "cur" : ""}"><th scope="row">${e(v.t)}<small>${e(v.sub)}</small></th>${v.lim.map((x, j) => `<td><button type="button" class="spcell${i === vi && j === ri ? " on" : ""}" data-act="spCell" data-k="${v.id}|${R.roads[j].id}" aria-label="${I18n.attr(v.t)} - ${I18n.attr(R.roads[j].t)}: ${x == null ? I18n.attr(u("spNA")) : x + " km/h"}">${x == null ? "-" : x}</button></td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
   const notes = ["spN1", "spN2", Sp.region === "kerala" ? "spN3k" : "spN3i", "spN4", "spN5"];
   const refs = R.refs.map(r => `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a><small>${esc(r.publisher)} · ${e(u("spVerified", { d: r.verified }))}</small></li>`).join("");
   app.innerHTML = `${Course.crumbs([[u("home"), "#home"], [u("tLimits"), "#limits"]])}

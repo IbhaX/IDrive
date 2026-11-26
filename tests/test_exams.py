@@ -25,7 +25,7 @@ def test_sign_q_every_kind(rng) -> None:
         assert len(q["r"]) == 2 and all(q["r"]), "reasoning must be bilingual"
         if "svg" in q:  # "find" kind shows the name, not an image
             assert q["svg"].startswith("<svg")
-        # option distinctness — by serialised form
+        # option distinctness - by serialised form
         import json
 
         assert len({json.dumps(o, ensure_ascii=False) for o in q["o"]}) == 4

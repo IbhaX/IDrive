@@ -1,4 +1,4 @@
-/* iDrive labs2.js — more driving-science labs:
+/* iDrive labs2.js - more driving-science labs:
    following distance (+ gap-counting drill), cornering grip (friction circle),
    crash energy (equivalent fall height), headlight reach, mirrors & blind spots.
    Every number comes from a simplified, labelled educational model. */
@@ -48,7 +48,7 @@ Lb.act = (name, el) => {
 const ACT = {};
 
 /* =====================================================================
-   1. FOLLOWING DISTANCE — lead car brakes hard; do you stop in time?
+   1. FOLLOWING DISTANCE - lead car brakes hard; do you stop in time?
    ===================================================================== */
 const FOL = { kmh: 60, gap: 2, rt: 1.2, surf: "dry", lead: "same" };
 Lb.folSim = (st) => {
@@ -173,7 +173,7 @@ ACT.drill = () => {
 };
 
 /* =====================================================================
-   2. CORNERING — friction circle: steering + braking share one grip budget
+   2. CORNERING - friction circle: steering + braking share one grip budget
    ===================================================================== */
 const CO = { kmh: 50, r: 60, surf: "dry", brake: 0 };
 Lb.coCalc = (st) => {
@@ -257,7 +257,7 @@ Lb.coDraw = (animate) => {
 };
 
 /* =====================================================================
-   3. CRASH ENERGY — hitting something at v is like falling v²/2g
+   3. CRASH ENERGY - hitting something at v is like falling v²/2g
    ===================================================================== */
 const EN = { kmh: 50, veh: "car" };
 const MASS = { scooter: 250, car: 1200, suv: 2200 };
@@ -309,7 +309,7 @@ Lb.enDraw = (animate) => {
 };
 
 /* =====================================================================
-   4. HEADLIGHTS — can you stop inside the distance you can see?
+   4. HEADLIGHTS - can you stop inside the distance you can see?
    ===================================================================== */
 const HL = { kmh: 70, beam: "low", rt: 1.5, surf: "dry", clothes: "dark", glare: "no" };
 const BEAM = { low: 50, high: 110 };
@@ -375,7 +375,7 @@ Lb.hlDraw = (animate) => {
 };
 
 /* =====================================================================
-   5. MIRRORS & BLIND SPOTS — top-down, right-hand drive (India)
+   5. MIRRORS & BLIND SPOTS - top-down, right-hand drive (India)
    ===================================================================== */
 const BS = { lane: "right", dist: -3, rAdj: 0, lAdj: 0, look: "none" };
 const M2PX = 20, VW = 300, VH = 400, OX = 150, OY = 120; // metres → px; car centre at (OX, OY); forward = up
@@ -442,7 +442,7 @@ Lb.bsBindDrag = () => {
   svg.addEventListener("click", (ev) => { if (!ev.target.closest(".bshit")) moveTo(ev); });
 };
 
-/* put the bike at (x right, y forward) metres — used by the diagram and the 3D view */
+/* put the bike at (x right, y forward) metres - used by the diagram and the 3D view */
 Lb.BSG = BSG;
 Lb.bsSet = (x, y) => {
   const lane = x >= 0 ? "right" : "left";

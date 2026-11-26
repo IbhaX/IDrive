@@ -2,7 +2,7 @@
   "id": "m07",
   "n": 7,
   "title": "Road situations and defensive driving",
-  "summary": "How experienced drivers see trouble coming: hazard perception, gaps, blind spots, night, rain, fog, ghats and highways — with interactive scenarios.",
+  "summary": "How experienced drivers see trouble coming: hazard perception, gaps, blind spots, night, rain, fog, ghats and highways - with interactive scenarios.",
   "accent": "#e879f9",
   "icon": "eye",
   "level": "intermediate",
@@ -39,7 +39,7 @@
       "sections": [
         {
           "h": "Scanning",
-          "p": ["Look far ahead — 12 to 15 seconds of travel — to plan. Bring your eyes back to the middle distance, then the near road, then the mirrors, every few seconds. At junctions and crossings look left and right. Avoid fixing your gaze on any one thing for long."]
+          "p": ["Look far ahead - 12 to 15 seconds of travel - to plan. Bring your eyes back to the middle distance, then the near road, then the mirrors, every few seconds. At junctions and crossings look left and right. Avoid fixing your gaze on any one thing for long."]
         },
         {
           "h": "Clues",
@@ -47,7 +47,7 @@
         },
         {
           "h": "Responding early",
-          "p": ["An early response is usually small: ease off the accelerator, cover the brake, move slightly away from the hazard, sound a short horn if it will help. A late response is large: hard braking or swerving — which create new dangers."],
+          "p": ["An early response is usually small: ease off the accelerator, cover the brake, move slightly away from the hazard, sound a short horn if it will help. A late response is large: hard braking or swerving - which create new dangers."],
           "note": { "kind": "model", "text": "Try the hazard-perception scenarios. They pause at the moment a hazard develops and ask you for the safest response." }
         }
       ],
@@ -78,7 +78,7 @@
       "sections": [
         {
           "h": "The time-gap method",
-          "p": ["When the vehicle ahead passes a fixed point — a pole, a tree, a shadow — start counting 'one thousand and one, one thousand and two, one thousand and three'. If you reach the point before you finish, you are too close. Three seconds is a sensible minimum on a dry road; double it in rain, and leave more for heavy vehicles, motorcycles and poor visibility."]
+          "p": ["When the vehicle ahead passes a fixed point - a pole, a tree, a shadow - start counting 'one thousand and one, one thousand and two, one thousand and three'. If you reach the point before you finish, you are too close. Three seconds is a sensible minimum on a dry road; double it in rain, and leave more for heavy vehicles, motorcycles and poor visibility."]
         },
         {
           "h": "Why time works better than distance",
@@ -90,7 +90,7 @@
         }
       ],
       "terms": [["Time gap", "The time between the vehicle ahead passing a point and you passing it."], ["A-pillar", "The windscreen pillar, which can hide pedestrians and two-wheelers at junctions."]],
-      "examples": ["At 90 km/h you travel 25 m every second. A one-second gap is 25 m — far shorter than the distance you need to react and stop."],
+      "examples": ["At 90 km/h you travel 25 m every second. A one-second gap is 25 m - far shorter than the distance you need to react and stop."],
       "mistakes": ["Tailgating to stop others cutting in.", "Leaving a big gap in the dry but not increasing it in rain."],
       "safety": ["If someone tailgates you, increase the gap in front so that you can brake more gently."],
       "check": [
@@ -124,7 +124,7 @@
         },
         {
           "h": "Fog and mist",
-          "p": ["Use low beam and fog lamps if fitted; high beam reflects off the fog and blinds you. Slow down so you can stop within the distance you can see. Do not follow tail-lights closely — if that vehicle stops, you will hit it. Do not use hazard lights while moving."]
+          "p": ["Use low beam and fog lamps if fitted; high beam reflects off the fog and blinds you. Slow down so you can stop within the distance you can see. Do not follow tail-lights closely - if that vehicle stops, you will hit it. Do not use hazard lights while moving."]
         },
         {
           "h": "Ghat roads",

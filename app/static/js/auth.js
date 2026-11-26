@@ -1,4 +1,4 @@
-/* IDrive auth.js — sign-in modal, token handling, progress sync.
+/* IDrive auth.js - sign-in modal, token handling, progress sync.
    Progress blob merge rules (documented):
    - seen: union; box/wrong: per-key max; best/played/mock fields: max;
    - tq: per-topic [max correct, max total]; lang: local wins; v: bumped.
@@ -250,7 +250,7 @@ A.putToServer = async () => {
     A.version = r.version;
   } catch (e) {
     if (e.status === 409 && e.data && e.data.server) {
-      // another device wrote meanwhile — re-merge and retry once
+      // another device wrote meanwhile - re-merge and retry once
       const merged = A.mergeProgress(P, e.data.server.data);
       Object.assign(P, merged);
       saveLocal();
@@ -274,7 +274,7 @@ A.resetServer = async () => {
   try { const r = await Api.post("/api/progress/reset"); A.version = r.version; } catch (e) {}
 };
 
-/* progress blob to send — P minus nothing (same shape as source) */
+/* progress blob to send - P minus nothing (same shape as source) */
 function blobOf(p) {
   return { seen: p.seen || {}, box: p.box || {}, wrong: p.wrong || {}, best: p.best || 0, played: p.played || 0, lang: p.lang || "both", mock: p.mock || { taken: 0, passed: 0, best: 0 }, tq: p.tq || {},
     les: p.les || {}, bm: p.bm || {}, rec: p.rec || [], days: p.days || {}, rq: p.rq || {}, hz: p.hz || {}, lab: p.lab || {}, gm: p.gm || {}, secs: p.secs || 0, v: p.v || 1 };

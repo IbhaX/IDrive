@@ -29,7 +29,7 @@
         {
           "h": "Red, amber, green and blue",
           "p": [
-            "Red: a serious fault or a dangerous condition. Stop as soon as it is safe and switch off, or do not drive until it is sorted. Amber (yellow or orange): something needs attention soon. You can usually continue carefully to a workshop, but find out what it means first. Green or blue: a system is working as intended — headlights on, indicator flashing, cruise control active."
+            "Red: a serious fault or a dangerous condition. Stop as soon as it is safe and switch off, or do not drive until it is sorted. Amber (yellow or orange): something needs attention soon. You can usually continue carefully to a workshop, but find out what it means first. Green or blue: a system is working as intended - headlights on, indicator flashing, cruise control active."
           ]
         },
         {
@@ -37,18 +37,18 @@
           "p": [
             "Oil pressure, coolant temperature, brake system, charging (battery), and power steering on some cars are the lights that most often mean stop. A flashing check-engine light also means stop or slow right down: it usually signals a misfire that can overheat and destroy the catalytic converter."
           ],
-          "note": { "kind": "safety", "text": "Stopping safely means signalling, moving off the carriageway, and switching on hazards — not braking hard in a live lane." }
+          "note": { "kind": "safety", "text": "Stopping safely means signalling, moving off the carriageway, and switching on hazards - not braking hard in a live lane." }
         },
         {
           "h": "The start-up check",
           "p": [
-            "When you turn the key to ignition (or press start without your foot on the brake), most lights come on for a moment to show the bulbs and systems work. They should go out within a few seconds of the engine starting. A light that does not come on at all during this check may be a fault too — for example, an airbag light that never shows."
+            "When you turn the key to ignition (or press start without your foot on the brake), most lights come on for a moment to show the bulbs and systems work. They should go out within a few seconds of the engine starting. A light that does not come on at all during this check may be a fault too - for example, an airbag light that never shows."
           ]
         }
       ],
       "terms": [
         ["Bulb check", "The brief self-test when ignition is switched on, during which most warnings light up."],
-        ["MIL", "Malfunction indicator lamp — the check-engine light."]
+        ["MIL", "Malfunction indicator lamp - the check-engine light."]
       ],
       "examples": [
         "The amber TPMS light comes on during a highway drive. Slow down, stop at the next safe place, look at all four tyres, and check pressures at the next fuel station."
@@ -69,7 +69,7 @@
         },
         {
           "q": "The check-engine light is flashing, not steady. What does that usually indicate?",
-          "o": ["Service due", "A severe misfire — slow down and stop safely", "Fuel cap loose", "Nothing — it is a bulb test"],
+          "o": ["Service due", "A severe misfire - slow down and stop safely", "Fuel cap loose", "Nothing - it is a bulb test"],
           "a": 1,
           "r": "A flashing MIL usually means a misfire that can overheat the catalytic converter. Reduce load and get it checked immediately."
         }

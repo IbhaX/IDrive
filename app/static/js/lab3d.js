@@ -1,4 +1,4 @@
-/* iDrive lab3d.js — 3D stage for the driving-science labs.
+/* iDrive lab3d.js - 3D stage for the driving-science labs.
    Built on the hazard engine's toolkit (Hz3D.kit, WebGL2, no CDN). A lab
    scene is a function called every frame that draws in immediate mode:
 
@@ -312,7 +312,7 @@ L3.attach = (viz, id, get) => {
     opaque = []; trans = []; decals = []; glows = []; lines = []; bodies = []; labelsUsed = new Set();
     const g0 = get();
     try { sc.scene(S, Object.assign({ t: runT, idle, time, running: runDur > 0 }, g0)); } catch (err) { console.warn("lab3d scene", id, err); }
-    /* solid bodies: no vehicle passes through another — the mover is held
+    /* solid bodies: no vehicle passes through another - the mover is held
        back along its path until they touch (shared rule with the hazards) */
     if (bodies.length > 1) {
       bodies.forEach((b) => { const pv = prevPos.get(b.key); b.vx = pv ? b.X - pv[0] : 0; b.vz = pv ? b.Z - pv[1] : 0; });
@@ -402,7 +402,7 @@ L3.attach = (viz, id, get) => {
       shown.push({ el, x: (c[0] / c[3] * 0.5 + 0.5) * box.width, y: (1 - (c[1] / c[3] * 0.5 + 0.5)) * box.height, d: c[3] });
     });
     /* keep the scene readable: while a run animates only the key label shows;
-       labels never cover the toolbar, the ▶ button or each other — when two
+       labels never cover the toolbar, the ▶ button or each other - when two
        collide the less important (then the farther) one is hidden */
     const prio = (el) => (/\b(bad|good|warn|big)\b/.test(el.className) ? 0 : /\btiny\b/.test(el.className) ? 2 : 1);
     const small = box.width < 520, running = runDur > 0;

@@ -1,4 +1,4 @@
-/* IDrive motion.js — micro-interaction helpers over GSAP (vendored).
+/* IDrive motion.js - micro-interaction helpers over GSAP (vendored).
    Views call these; they never touch GSAP directly. Every set piece has a
    reduced-motion path and animates transforms/opacity only. */
 (() => {
@@ -102,7 +102,7 @@ M.toast = (msg, kind = "") => {
   setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 300); }, 2600);
 };
 
-/* confetti — pooled particles on one canvas, removed after use */
+/* confetti - pooled particles on one canvas, removed after use */
 M.confetti = () => {
   const cv = document.getElementById("confetti");
   if (!cv || M.reduced()) return;
@@ -145,7 +145,7 @@ M.drawSign = (scope) => {
   if (!strokes.length || strokes.length > 40) return;
   try {
     G.fromTo(strokes, { drawSVG: "0%" }, { drawSVG: "100%", duration: .9, ease: "power2.inOut", stagger: .06 });
-  } catch (e) { /* non-stroke geometry — skip silently */ }
+  } catch (e) { /* non-stroke geometry - skip silently */ }
 };
 
 /* press-and-hold to confirm */
@@ -167,7 +167,7 @@ M.holdToConfirm = (btn, onDone, ms = 1200) => {
   btn.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") end(true); });
 };
 
-/* pointer tilt: 3D card response on tiles (delegated — tiles re-render) */
+/* pointer tilt: 3D card response on tiles (delegated - tiles re-render) */
 let tiltBound = false;
 M.bindTilt = () => {
   if (tiltBound) return;
@@ -190,7 +190,7 @@ M.bindTilt = () => {
 
 /* immersive night drive: parallax layers, glowing skyline, streaming
    dashes, car with headlight beam, floating signs. Light-theme keeps
-   the same scene (it reads as dusk) — surfaces adapt via CSS. */
+   the same scene (it reads as dusk) - surfaces adapt via CSS. */
 M.roadScene = (host) => {
   if (!host) return;
   const dashX = [0, 80, 160, 240, 320, 400, 480, 560, 640];
@@ -238,7 +238,7 @@ M.roadScene = (host) => {
 
 /* ---------- view-scoped animation (ScrollTriggers, timelines) ----------
    Everything created through M.scoped() lives in the current view context
-   and is reverted by M.resetView() on every route change — no leaks. */
+   and is reverted by M.resetView() on every route change - no leaks. */
 M.resetView = () => {
   if (ctx) { ctx.revert(); ctx = null; }
   if (G) ctx = G.context(() => {});

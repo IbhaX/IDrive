@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "idrive"
 version = "2.0.0"
-description = "iDrive — interactive driving-theory school for India and Kerala (English/Malayalam)"
+description = "iDrive - interactive driving-theory school for India and Kerala (English/Malayalam)"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }

@@ -1,4 +1,4 @@
-/* IDrive — "Aurora" design system.
+/* IDrive - "Aurora" design system.
    Deep-midnight glassmorphism: near-black indigo canvas, ambient light,
    layered translucent surfaces, indigo→cyan accents, CSS-3D depth.
    Same class contract as the source app; only the skin changed. */
@@ -289,7 +289,7 @@ details.primer[open] summary::after{transform:rotate(225deg)}
        box-shadow:0 0 10px rgba(124,108,255,.5);transition:width .25s}
 .qtext{text-align:center}
 .qq{text-align:left;font-size:24px;line-height:1.25;overflow-wrap:anywhere;min-width:0}
-/* Malayalam compounds have no break points — let text wrap anywhere */
+/* Malayalam compounds have no break points - let text wrap anywhere */
 .opt,.fb,.do,.mrow span,.rq,.tcard b,.tcard small,.prow p,.art h2,.art h3,
 .art p,.flip h2,.flip p,.verdict,.today h2,.today p,.cat,.crow span,
 .dd li,.recap li,.pts li,.gl .g,.myth,.story,.qtext{overflow-wrap:anywhere;min-width:0}
@@ -508,7 +508,7 @@ details.rv summary{display:flex;gap:10px;padding:12px 14px;cursor:pointer;align-
       transition:transform var(--dur-fast) var(--ease-out);will-change:transform}
 
 /* =====================================================================
-   iDrive 2 — "Instrument" layer
+   iDrive 2 - "Instrument" layer
    Graphite canvas, cyan instrument light + signal amber accents, layered
    panels, tabular numerals. Extends the Aurora tokens; nothing above is
    renamed, so every existing view keeps its look.
