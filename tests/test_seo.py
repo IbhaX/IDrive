@@ -139,8 +139,8 @@ def test_pages_serve_rendered_content(client, path: str) -> None:
     assert r.status_code == 200
     assert 'rel="canonical"' in r.text and '<html lang="en">' in r.text
     assert len(_text(r.text.split('<main class="wrap" id="app"', 1)[1].split("</main>", 1)[0])) > 100
-    assert r.headers["X-Frame-Options"] == "DENY"
-    assert "frame-ancestors 'none'" in r.headers["Content-Security-Policy"]
+    assert "X-Frame-Options" not in r.headers
+    assert "frame-ancestors 'self' https://ibhax.com" in r.headers["Content-Security-Policy"]
 
 
 def test_http_404_and_api_404(client) -> None:

@@ -100,7 +100,7 @@ async def html_headers(
     resp = await call_next(request)
     if proto == "https":
         resp.headers.setdefault("Strict-Transport-Security", "max-age=31536000; includeSubDomains")
-    resp.headers.setdefault("X-Frame-Options", "DENY")
+    # framing is governed by CSP frame-ancestors (self + the ibhax.com homepage previews)
     resp.headers.setdefault("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=()")
     ctype = resp.headers.get("content-type", "")
     if "text/html" in ctype:
@@ -123,7 +123,7 @@ async def html_headers(
             "frame-src https://accounts.google.com" + (" https://td.doubleclick.net https://www.googletagmanager.com" if _gtag else "") + "; "
             "connect-src 'self' https://accounts.google.com https://cdn.jsdelivr.net"
             + (" https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.g.doubleclick.net https://www.google.com https://googleads.g.doubleclick.net" if _gtag else "")
-            + "; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://accounts.google.com"
+            + "; frame-ancestors 'self' https://ibhax.com; base-uri 'self'; form-action 'self' https://accounts.google.com"
         )
     return resp
 
