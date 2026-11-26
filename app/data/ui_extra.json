@@ -4030,5 +4030,21 @@
  "hzTapHazard": [
   "Paused — tap the hazard in the scene or the mirror",
   "നിർത്തി — ദൃശ്യത്തിലോ കണ്ണാടിയിലോ അപകടത്തിൽ തൊടുക"
+ ],
+ "lab3Diagram": [
+  "Diagram",
+  "രേഖാചിത്രം"
+ ],
+ "lab3Reset": [
+  "Reset view",
+  "കാഴ്ച പുനഃസജ്ജമാക്കുക"
+ ],
+ "lab3Drag": [
+  "Drag to look around",
+  "ചുറ്റും കാണാൻ വലിച്ചുനീക്കുക"
+ ],
+ "lab3TapPlace": [
+  "Tap the road to place the rider · drag to look around",
+  "റൈഡറെ വെക്കാൻ റോഡിൽ തൊടുക · ചുറ്റും കാണാൻ വലിച്ചുനീക്കുക"
  ]
 }

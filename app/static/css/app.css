@@ -1262,3 +1262,28 @@ html.splashing,html.splashing body{overflow:hidden}
 @media (prefers-reduced-motion:reduce){.hz3tap{animation:none}}
 .hz3flash{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0;background:radial-gradient(ellipse at center,transparent 35%,rgba(225,29,72,.85))}
 .hz3::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 60%,rgba(0,0,0,.28))}
+
+/* ---------- science labs in 3D (lab3d.js) ---------- */
+.lab3{position:relative;border-radius:var(--r-md);overflow:hidden;background:#0b0c14;aspect-ratio:16/10;margin-bottom:12px;isolation:isolate}
+@media (max-width:620px){.lab3{aspect-ratio:4/3.4}}
+.lab3 canvas{display:block;width:100%;height:100%;touch-action:pan-y;cursor:grab}
+.lab3 canvas:active{cursor:grabbing}
+.lab3lbl{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.l3l{position:absolute;transform:translate(-50%,-110%);white-space:nowrap;font:500 12px/1.25 var(--body);color:#f8fafc;background:rgba(10,12,20,.72);backdrop-filter:blur(6px);padding:3px 8px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.l3l b{font-weight:700}
+.l3l.big{font-size:15px;padding:5px 11px}
+.l3l.tiny{font-size:10.5px;padding:1px 6px;background:rgba(10,12,20,.5)}
+.l3l.good{background:rgba(21,128,61,.86)}.l3l.bad{background:rgba(190,18,60,.88)}.l3l.warn{background:rgba(180,83,9,.88)}
+.lab3ctl{position:absolute;right:10px;top:10px;z-index:2;backdrop-filter:blur(8px);background:rgba(10,12,20,.55);border-radius:999px;padding:3px}
+.lab3ctl button{color:#e5e7eb;font-size:12px;padding:5px 11px}
+.lab3ctl button.on{background:rgba(255,255,255,.92);color:#0b0c14}
+.lab3reset{position:absolute;right:10px;bottom:10px;z-index:2;width:34px;height:34px;border-radius:50%;border:0;background:rgba(10,12,20,.6);color:#fff;font-size:17px;cursor:pointer}
+.lab3hint{position:absolute;left:10px;bottom:8px;margin:0;font-size:11px;color:rgba(255,255,255,.75);pointer-events:none;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.has3d:not(.show2d) > svg,.has3d:not(.show2d) .cowrap,.has3d:not(.show2d) .enwrap > svg,.has3d:not(.show2d) .bsstage{display:none}
+.has3d:not(.show2d) .enwrap{display:block}
+.show2d .lab3{aspect-ratio:auto;height:44px;background:none;overflow:visible}
+.show2d .lab3 canvas,.show2d .lab3 .lab3lbl,.show2d .lab3hint,.show2d .lab3reset{display:none}
+.show2d .lab3ctl{background:var(--panel2)}.show2d .lab3ctl button{color:var(--ink)}.show2d .lab3ctl button.on{background:var(--acc);color:var(--accink)}
+.rtviz .lab3{aspect-ratio:16/8}
+.engviz .lab3{aspect-ratio:3/4}
+@media (max-width:420px){.lab3ctl button{font-size:11px;padding:4px 8px}}

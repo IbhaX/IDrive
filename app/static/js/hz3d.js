@@ -500,7 +500,7 @@ const FS = `#version 300 es
 precision highp float;
 in vec3 vW, vN, vC; in vec2 vM;
 uniform vec3 uCam, uSunDir, uSunCol, uSky, uGnd, uFog, uTint;
-uniform float uFogDen, uWet, uNight, uBrake, uScroll, uTintAmt, uFade;
+uniform float uFogDen, uWet, uNight, uBrake, uScroll, uTintAmt, uFade; uniform vec4 uMul;
 uniform int uNL; uniform vec4 uLP[10], uLC[10], uLD[10];
 out vec4 o;
 ${TONE}
@@ -508,7 +508,7 @@ float h21(vec2 p){ p=fract(p*vec2(123.34,456.21)); p+=dot(p,p+45.32); return fra
 float vn(vec2 p){ vec2 i=floor(p), f=fract(p); f=f*f*(3.-2.*f);
   return mix(mix(h21(i),h21(i+vec2(1,0)),f.x), mix(h21(i+vec2(0,1)),h21(i+vec2(1,1)),f.x), f.y); }
 void main(){
-  vec3 base=vC; float em=vM.x, spec=vM.y;
+  vec3 base=vC*uMul.rgb; float em=vM.x, spec=vM.y;
   vec2 g=vec2(vW.x, vW.z+uScroll);
   if(em<-.5){
     if(em>-1.5){ base = mod(floor(g.y*1.0),2.)<1. ? base : vec3(.012); }                 // kerb stripes
@@ -537,11 +537,11 @@ void main(){
   }
   if(vW.y>.03) col*=mix(.62,1.,smoothstep(0.,1.4,vW.y));          // ground contact occlusion
   if(em>0.){ float lv = em<.4 ? .9 : em<.6 ? uNight*1.6 : em<.9 ? .35+uNight*2.2 : .1+uNight*1.2+uBrake*2.6;
-    col+=vC*lv*2.; }
+    col+=base*lv*2.; }
   col+=uTint*uTintAmt;
   float d=length(uCam-vW); float f=1.-exp(-pow(d*uFogDen,1.6));
   col=mix(col,uFog,clamp(f,0.,1.));
-  o=vec4(tone(col),uFade);
+  o=vec4(tone(col),uFade*uMul.a);
 }`;
 const VS2 = `#version 300 es
 layout(location=0) in vec3 aP; layout(location=1) in vec2 aU; uniform mat4 uVP, uModel; out vec2 vU;
@@ -823,7 +823,7 @@ H3.mount = (canvas, scen, state, opts = {}) => {
     gl.uniform3fv(P1.u.uCam, eye); gl.uniform3fv(P1.u.uSunDir, md.sun); gl.uniform3fv(P1.u.uSunCol, md.sunC);
     gl.uniform3fv(P1.u.uSky, md.sky); gl.uniform3fv(P1.u.uGnd, md.gnd); gl.uniform3fv(P1.u.uFog, md.fog);
     gl.uniform1f(P1.u.uFogDen, md.den); gl.uniform1f(P1.u.uWet, md.wet); gl.uniform1f(P1.u.uNight, md.night);
-    gl.uniform1f(P1.u.uScroll, scroll); gl.uniform1f(P1.u.uFade, 1);
+    gl.uniform1f(P1.u.uScroll, scroll); gl.uniform1f(P1.u.uFade, 1); gl.uniform4f(P1.u.uMul, 1, 1, 1, 1);
     gl.uniform1i(P1.u.uNL, lights.length);
     if (lights.length) {
       const LP = new Float32Array(40), LC = new Float32Array(40), LD = new Float32Array(40);
@@ -1052,5 +1052,10 @@ H3.mount = (canvas, scen, state, opts = {}) => {
   };
   return api;
 };
+/* the toolkit, shared with the science-lab stage (lab3d.js) */
+H3.kit = { M, B, C, lin, mixc, shade, rng, hashStr, norm, cross, dot, sub, SHIRTS, PANTS,
+  carModel, busModel, truckModel, autoModel, bikeModel, cycleModel, personParts, cowModel, dogModel, ballModel,
+  palm, broadTree, shrub, lamp, ePole, shop, keralaHouse, flats, signPost, signal, hill, milestone, barrierPost,
+  VS, FS, VS2, FS2, VSKY, FSKY, prog, upload, MOODS };
 window.Hz3D = H3;
 })();

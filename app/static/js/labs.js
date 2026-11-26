@@ -79,12 +79,14 @@ Lb.stopping = (host) => {
     el.addEventListener("input", () => { st[key] = key === "surf" ? el.value : +el.value; Lb.drawStop(false); });
   };
   bind("inKmh", "kmh"); bind("inRt", "rt"); bind("inSurf", "surf"); bind("inHz", "hz");
+  if (window.Lab3D) Lab3D.mount("stopping", host.querySelector(".labviz"), () => ({ st: Lb.st }));
   Lb.drawStop(false);
   Motion.reveal(host);
 };
 Lb.drawStop = (animate) => {
   const st = Lb.st, svg = document.getElementById("stopSvg");
   if (!svg) return;
+  if (window.Lab3D) Lab3D.touch("stopping", animate ? 2.8 : 0);
   document.getElementById("vKmh").textContent = st.kmh;
   document.getElementById("vRt").textContent = st.rt.toFixed(1);
   document.getElementById("vHz").textContent = st.hz;
@@ -133,20 +135,23 @@ Lb.rt = { state: "idle", t0: 0, timer: null, tries: [] };
 Lb.reaction = (host) => {
   Lb.rt = { state: "idle", t0: 0, timer: null, tries: [] };
   host.innerHTML = `<section class="panel lab rvl"><p class="lede">${e(u("rtLede"))}</p>
+  <div class="labviz rtviz"></div>
   <button class="rtpad idle" id="rtPad" data-act="rtpad" aria-live="assertive">${e(u("rtStart"))}</button>
   <div class="rtres" id="rtRes"></div>
   <aside class="lnote n-model"><b>${e(u("noteModel"))}</b><p>${e(u("rtNote"))}</p></aside></section>`;
   Lb.rtRender();
+  if (window.Lab3D) Lab3D.mount("reaction", host.querySelector(".rtviz"), () => ({ state: Lb.rt.state }));
   Motion.reveal(host);
 };
 Lb.rtPress = () => {
   const r = Lb.rt, pad = document.getElementById("rtPad");
   if (!pad) return;
+  if (window.Lab3D) setTimeout(() => Lab3D.touch("reaction"), 0);
   if (r.state === "idle" || r.state === "done" || r.state === "early") {
     r.state = "wait";
     pad.className = "rtpad wait"; pad.textContent = u("rtWait");
     clearTimeout(r.timer);
-    r.timer = setTimeout(() => { r.state = "go"; r.t0 = performance.now(); pad.className = "rtpad go"; pad.textContent = u("rtGo"); }, 1500 + Math.random() * 2500);
+    r.timer = setTimeout(() => { r.state = "go"; r.t0 = performance.now(); pad.className = "rtpad go"; pad.textContent = u("rtGo"); if (window.Lab3D) Lab3D.touch("reaction"); }, 1500 + Math.random() * 2500);
   } else if (r.state === "wait") {
     clearTimeout(r.timer);
     r.state = "early"; pad.className = "rtpad early"; pad.textContent = u("rtEarly");
@@ -201,6 +206,7 @@ Lb.engine = (host) => {
   </div></div>
   <aside class="lnote n-model"><b>${e(u("noteModel"))}</b><p>${e(u("engModel"))}</p></aside></section>`;
   Lb.eng = { tl: null, theta: 0 };
+  if (window.Lab3D) Lab3D.mount("engine", host.querySelector(".engviz"), () => ({ theta: Lb.eng.theta }));
   Lb.engSet(90);
   const rpm = document.getElementById("engRpm");
   rpm.addEventListener("input", () => { if (Lb.eng.tl) Lb.eng.tl.timeScale(+rpm.value); });
@@ -208,6 +214,7 @@ Lb.engine = (host) => {
 };
 Lb.engSet = (theta) => {
   Lb.eng.theta = theta;
+  if (window.Lab3D) Lab3D.touch("engine");
   const r = 44, l = 150, cx = 130, cy = 290;
   const a = (theta % 360) * Math.PI / 180;        // 0 = piston at top (TDC)
   const px = cx + r * Math.sin(a), py = cy - r * Math.cos(a);

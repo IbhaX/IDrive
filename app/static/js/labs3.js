@@ -46,8 +46,19 @@ function mount(id, host) {
     <div class="labviz"><svg class="l3svg" viewBox="${sp.vb || "0 0 640 260"}" role="img" aria-label="${t1("lab_" + id)}"></svg><div class="readout" aria-live="polite"></div></div></div>
     <aside class="lnote n-model"><b>${e(u("noteModel"))}</b><p>${e(u("m_" + id))}</p></aside></section>`;
   const svg = host.querySelector(".l3svg"), out = host.querySelector(".readout");
-  const draw = (t = 1) => { const r = sp.calc(st); svg.innerHTML = sp.draw(st, r, t); return r; };
-  const redraw = () => { if (sp.live) { sp.changed && sp.changed(st); return; } out.innerHTML = readout(draw(1)); };
+  let lastR = null;
+  const draw = (t = 1) => { const r = sp.calc(st); lastR = r; svg.innerHTML = sp.draw(st, r, t); return r; };
+  const syncCtl = (keys) => keys.forEach((k) => {
+    const c = sp.ctl.find((x) => x[1] === k), i = host.querySelector(`[data-l3r="${k}"]`);
+    if (i && c) { i.value = st[k]; host.querySelector(`[data-v="${k}"]`).textContent = fx(st[k], c[7] || 0); }
+    host.querySelectorAll(`[data-l3k="${k}"]`).forEach((b) => { const on = b.dataset.l3v === String(st[k]); b.classList.toggle("on", on); b.setAttribute("aria-checked", on); });
+  });
+  /* 3D stage above the diagram (labscenes.js); the diagram stays one tap away */
+  const stage = window.Lab3D && Lab3D.has(id) ? Lab3D.attach(host.querySelector(".labviz"), id, () => ({
+    st, r: lastR || (sp.live ? {} : sp.calc(st)), cars: sp.cars,
+    set: (o) => { Object.assign(st, o); syncCtl(Object.keys(o)); redraw(); },
+  })) : null;
+  const redraw = () => { if (stage) stage.changed(); if (sp.live) { sp.changed && sp.changed(st); return; } out.innerHTML = readout(draw(1)); };
   host.querySelectorAll("[data-l3r]").forEach((inp) => inp.addEventListener("input", () => {
     const k = inp.dataset.l3r, c = sp.ctl.find((x) => x[1] === k);
     st[k] = +inp.value;
@@ -64,6 +75,7 @@ function mount(id, host) {
       return;
     }
     if (ev.target.closest("[data-l3run]")) {
+      if (stage && !sp.live) stage.run(sp.dur || 2.2);
       if (sp.onRun) { sp.onRun(st); return; }
       const gs = Motion.gsap;
       if (!gs || Motion.reduced()) { draw(1); return; }
@@ -573,6 +585,7 @@ def("trafficwave", {
       const avg = cars.reduce((t, c) => t + c.v, 0) / cars.length * 3.6, stopped = cars.filter((c) => c.v < 1.5).length;
       s += T(cx, cy - 6, `${Math.round(avg)} km/h`, "l3big", "middle") + T(cx, cy + 16, t1("twAvg"), "tiny", "middle");
       svg.innerHTML = s;
+      this.cars = cars;
       return { avg, stopped };
     };
     let tick = 0;

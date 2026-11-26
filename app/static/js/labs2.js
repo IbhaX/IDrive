@@ -89,6 +89,7 @@ Lb.following = (host) => {
       <div class="row"><button class="btn primary" data-act="lab.drill" id="drBtn">${e(u("drillStart"))}</button><span id="drOut" class="drout" aria-live="polite"></span></div></section>`);
   const re = () => Lb.folDraw(false);
   bindRange("folKmh", FOL, "kmh", 0, re); bindRange("folGap", FOL, "gap", 1, re); bindRange("folRt", FOL, "rt", 1, re);
+  if (window.Lab3D) Lab3D.mount("following", host.querySelector(".labviz"), () => ({ st: FOL }));
   Lb.folDraw(false);
   Lb.drillIdle();
   Motion.reveal(host);
@@ -100,6 +101,7 @@ Lb.folDraw = (animate) => {
   const svg = $("folSvg");
   if (!svg) return;
   const r = Lb.folSim(FOL), last = r.frames[r.frames.length - 1];
+  if (window.Lab3D) Lab3D.touch("following", animate ? Math.min(4, Math.max(1.4, last.t * 0.55)) : 0);
   const span = Math.max(r.d + 15, last.xl + 12, 40);
   const X0 = 60, W = 630, sx = (m) => X0 + (m / span) * W, Y = 95;
   const tick = span > 200 ? 50 : span > 90 ? 20 : 10;
@@ -193,6 +195,7 @@ Lb.cornering = (host) => {
     "coModel");
   const re = () => Lb.coDraw(false);
   bindRange("coKmh", CO, "kmh", 0, re); bindRange("coR", CO, "r", 0, re); bindRange("coBrake", CO, "brake", 0, re);
+  if (window.Lab3D) Lab3D.mount("cornering", host.querySelector(".labviz"), () => ({ st: CO }));
   Lb.coDraw(false);
   Motion.reveal(host);
 };
@@ -201,6 +204,7 @@ Lb.coDraw = (animate) => {
   const svg = $("coSvg"), fc = $("coFc");
   if (!svg) return;
   const c = Lb.coCalc(CO);
+  if (window.Lab3D) Lab3D.touch("cornering", animate ? 2.6 * (55 / Math.max(25, CO.kmh)) ** 0.5 : 0);
   const R = 70 + (CO.r - 20) / 280 * 150;        // drawn radius grows with the real one
   const Y0 = 300, Cx = 170, Cy = Y0 - R;           // left-hand bend
   const pt = (a) => [Cx + R * Math.cos(a), Cy + R * Math.sin(a)]; // a: π/2 → 0 sweeps up the bend
@@ -266,6 +270,7 @@ Lb.energy = (host) => {
     `<div class="enwrap"><svg id="enSvg" viewBox="0 0 300 440" role="img" aria-label="${I18n.esc(I18n.one(u("lab_energy")))}"></svg><div id="enOut" class="readout one" aria-live="polite"></div></div>`,
     "enModel");
   bindRange("enKmh", EN, "kmh", 0, () => Lb.enDraw(false));
+  if (window.Lab3D) Lab3D.mount("energy", host.querySelector(".labviz"), () => ({ st: EN }));
   Lb.enDraw(false);
   Motion.reveal(host);
 };
@@ -273,6 +278,7 @@ ACT.endrop = () => Lb.enDraw(true);
 Lb.enDraw = (animate) => {
   const svg = $("enSvg");
   if (!svg) return;
+  if (window.Lab3D) Lab3D.touch("energy", animate ? 1.3 : 0);
   const v = EN.kmh / 3.6, h = v * v / (2 * g), floors = h / 3, kj = 0.5 * MASS[EN.veh] * v * v / 1000;
   const top = 30, ground = 410, maxH = 60, py = (m) => ground - (m / maxH) * (ground - top);
   let s = `<rect width="300" height="440" rx="14" class="labbg"/><rect x="0" y="${ground}" width="300" height="30" class="groundr"/>`;
@@ -333,6 +339,7 @@ Lb.headlights = (host) => {
     `<svg id="hlSvg" viewBox="0 0 720 220" role="img" aria-label="${I18n.esc(I18n.one(u("lab_headlights")))}"></svg><div class="readout" id="hlOut" aria-live="polite"></div>`,
     "hlModel");
   bindRange("hlKmh", HL, "kmh", 0, after); bindRange("hlRt", HL, "rt", 1, after);
+  if (window.Lab3D) Lab3D.mount("headlights", host.querySelector(".labviz"), () => ({ st: HL }));
   Lb.hlDraw(false);
   Motion.reveal(host);
 };
@@ -341,6 +348,7 @@ Lb.hlDraw = (animate) => {
   const svg = $("hlSvg");
   if (!svg) return;
   const c = Lb.hlCalc(HL);
+  if (window.Lab3D) Lab3D.touch("headlights", animate ? 2.4 : 0);
   const span = Math.max(c.D, c.stop, 60) * 1.12, X0 = 70, W = 620, sx = (m) => X0 + (m / span) * W, Y = 120;
   const tick = span > 150 ? 25 : span > 80 ? 20 : 10;
   let s = `<defs><linearGradient id="beamG" x1="0" x2="1"><stop offset="0" stop-color="#fff6c8" stop-opacity=".55"/><stop offset="1" stop-color="#fff6c8" stop-opacity="0"/></linearGradient></defs>
@@ -407,6 +415,7 @@ Lb.blindspot = (host) => {
     `<div class="bswrap"><div class="bsstage"><svg id="bsSvg" viewBox="0 0 ${VW} ${VH}" role="img" aria-label="${t1("lab_blindspot")}"></svg><p class="bsdrag">${e(u("bsDrag"))}</p></div><div id="bsOut" class="readout one" aria-live="polite"></div></div>`,
     "bsModel");
   bindRange("bsDist", BS, "dist", 1, after); bindRange("bsR", BS, "rAdj", 0, after); bindRange("bsL", BS, "lAdj", 0, after);
+  if (window.Lab3D) Lab3D.mount("blindspot", host.querySelector(".labviz"), () => ({ st: BS, set: (x, y) => Lb.bsSet(x, y) }));
   Lb.bsDraw();
   Lb.bsBindDrag();
   Motion.reveal(host);
@@ -421,16 +430,7 @@ Lb.bsBindDrag = () => {
     const p = pt.matrixTransform(svg.getScreenCTM().inverse());
     return [(p.x - OX) / M2PX, (OY - p.y) / M2PX];
   };
-  const moveTo = (ev) => {
-    const [x, y] = toM(ev);
-    const lane = x >= 0 ? "right" : "left";
-    const dist = Math.round(Math.min(5, Math.max(-14, y)) * 2) / 2;
-    if (lane === BS.lane && dist === BS.dist) return;
-    BS.lane = lane; BS.dist = dist;
-    const r = $("bsDist"); if (r) { r.value = dist; $("bsDistV").textContent = fx(dist); }
-    document.querySelectorAll('[data-g="bsLane"]').forEach(b => { const on = b.dataset.v === lane; b.classList.toggle("on", on); b.setAttribute("aria-checked", on); });
-    Lb.bsDraw();
-  };
+  const moveTo = (ev) => { const [x, y] = toM(ev); Lb.bsSet(x, y); };
   let dragging = false;
   svg.addEventListener("pointerdown", (ev) => {
     if (!ev.target.closest(".bshit")) return;
@@ -442,9 +442,21 @@ Lb.bsBindDrag = () => {
   svg.addEventListener("click", (ev) => { if (!ev.target.closest(".bshit")) moveTo(ev); });
 };
 
+/* put the bike at (x right, y forward) metres — used by the diagram and the 3D view */
+Lb.BSG = BSG;
+Lb.bsSet = (x, y) => {
+  const lane = x >= 0 ? "right" : "left";
+  const dist = Math.round(Math.min(5, Math.max(-14, y)) * 2) / 2;
+  if (lane === BS.lane && dist === BS.dist) return;
+  BS.lane = lane; BS.dist = dist;
+  const r = $("bsDist"); if (r) { r.value = dist; $("bsDistV").textContent = fx(dist); }
+  document.querySelectorAll('[data-g="bsLane"]').forEach(b => { const on = b.dataset.v === lane; b.classList.toggle("on", on); b.setAttribute("aria-checked", on); });
+  Lb.bsDraw();
+};
 Lb.bsDraw = () => {
   const svg = $("bsSvg");
   if (!svg) return;
+  if (window.Lab3D) Lab3D.touch("blindspot");
   const P2 = (x, y) => [OX + x * M2PX, OY - y * M2PX];
   const f1 = (n) => n.toFixed(1);
   const wedge = (at, centre, fov, len, cls) => {
