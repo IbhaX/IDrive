@@ -158,7 +158,7 @@ def test_csp_allows_3d_assets_but_no_inline_scripts(client) -> None:
     script = next(p for p in csp.split(";") if p.strip().startswith("script-src"))
     assert "'unsafe-inline'" not in script and "https://cdn.jsdelivr.net" in script
     assert "'wasm-unsafe-eval'" in script and "worker-src 'self' blob:" in csp
-    assert "https://raw.githubusercontent.com" in csp
+    assert "'sha256-" in script                         # the hashed import map, nothing else inline
     assert "<script>" not in client.get("/").text
 
 

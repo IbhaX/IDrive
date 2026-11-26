@@ -4,6 +4,7 @@ immutable caching)."""
 
 from __future__ import annotations
 
+import base64
 import hashlib
 import re
 from functools import lru_cache
@@ -58,6 +59,20 @@ def app_build(static_dir: Path) -> str:
                 h.update(str(f.relative_to(root)).encode())
                 h.update(f.read_bytes())
     return h.hexdigest()[:16]
+
+
+_IMPORTMAP = re.compile(r'<script type="importmap">(.*?)</script>', re.S)
+
+
+@lru_cache(maxsize=4)
+def importmap_hashes(static_dir: Path) -> tuple[str, ...]:
+    """CSP hash sources for the inline import map(s) in index.html — the only
+    inline script the policy allows (no 'unsafe-inline')."""
+    markup = (static_dir / "index.html").read_text(encoding="utf-8")
+    return tuple(
+        "'sha256-" + base64.b64encode(hashlib.sha256(m.group(1).encode()).digest()).decode() + "'"
+        for m in _IMPORTMAP.finditer(markup)
+    )
 
 
 def render_page(name: str, static_dir: Path) -> HTMLResponse:

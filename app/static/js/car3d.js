@@ -13,13 +13,7 @@
 "use strict";
 const THREE_V = "0.170.0";
 const CDN = `https://cdn.jsdelivr.net/npm/three@${THREE_V}`;
-const MODEL_SHA = "e124e8d8d7330a5372bc2b4d00d39a4a9d7997ea";
-const MODEL_PATH = "Models/CarConcept/glTF-KTX-BasisU-Draco/CarConcept.gltf";
-const MODEL_URLS = [
-  "/models/carconcept/CarConcept.gltf",   // same-origin mirror (fast, not blocked by ISPs)
-  `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/${MODEL_SHA}/${MODEL_PATH}`,
-  `https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/${MODEL_PATH}`,
-];
+const MODEL_URLS = ["/models/carconcept/CarConcept.gltf"];   // served by our own server (see model_mirror.py)
 const GROUP_COL = { powertrain: 0xf5b83d, transmission: 0xa78bfa, chassis: 0x38bdf8, electrical: 0x34d399, safety: 0xfb7185 };
 const MODEL_PARTS = { tyres: /^(tiretread|tireside|rim1|rim2)$/i, brakes: /^(brake|disc)$/i };
 const HIDE_MATS = /^license$/i;
@@ -102,27 +96,29 @@ C.load = async () => {
   const step = (pr) => pr.then((m) => { libs++; pct(libs / 6 * 15); return m; });
   try {
     const [three, gltf, draco, ktx2, orbit, room] = await Promise.all([
-      step(import(`${CDN}/+esm`)),
-      step(import(`${CDN}/examples/jsm/loaders/GLTFLoader.js/+esm`)),
-      step(import(`${CDN}/examples/jsm/loaders/DRACOLoader.js/+esm`)),
-      step(import(`${CDN}/examples/jsm/loaders/KTX2Loader.js/+esm`)),
-      step(import(`${CDN}/examples/jsm/controls/OrbitControls.js/+esm`)),
-      step(import(`${CDN}/examples/jsm/environments/RoomEnvironment.js/+esm`)),]);
+      step(import("three")),
+      step(import("three/addons/loaders/GLTFLoader.js")),
+      step(import("three/addons/loaders/DRACOLoader.js")),
+      step(import("three/addons/loaders/KTX2Loader.js")),
+      step(import("three/addons/controls/OrbitControls.js")),
+      step(import("three/addons/environments/RoomEnvironment.js")),]);
     T = three;
     pct(15);
     setup(orbit.OrbitControls, room.RoomEnvironment);
     const manager = new T.LoadingManager();
     // track which files are still in flight so a stall can say what it is waiting for
-    const pend = new Set(); let lastTick = Date.now(), counts = "";
+    // (the same URL can be open twice: once for the download, once while GLTFLoader parses it)
+    const open = new Map(); let lastTick = Date.now(), counts = "";
+    const pend = { get size() { return open.size; }, [Symbol.iterator]: () => open.keys() };
     const s0 = manager.itemStart.bind(manager), e0 = manager.itemEnd.bind(manager);
-    manager.itemStart = (url) => { pend.add(url); s0(url); };
-    manager.itemEnd = (url) => { pend.delete(url); e0(url); };
+    manager.itemStart = (url) => { open.set(url, (open.get(url) || 0) + 1); s0(url); };
+    manager.itemEnd = (url) => { const n = (open.get(url) || 1) - 1; n ? open.set(url, n) : open.delete(url); e0(url); };
     const fileLine = () => {
       const f = C.el && C.el.querySelector(".x3dfile");
       if (!f) return;
       const stalled = Date.now() - lastTick > 6000;
-      const names = [...pend].map(x => x.split("/").pop().split("?")[0]).slice(0, 2).join(", ");
-      f.textContent = counts + (stalled && names ? ` · ${u("v3dWaiting")} ${names}` : stalled && counts && !pend.size ? ` · ${u("v3dPreparing")}` : "");
+      const names = [...pend].map(x => x.split("/").pop().split("?")[0]).filter(n => !/\.gltf$/i.test(n)).slice(0, 2).join(", ");
+      f.textContent = counts + (stalled && names ? ` · ${u("v3dWaiting")} ${names}` : stalled && counts ? ` · ${u("v3dPreparing")}` : "");
     };
     manager.onProgress = (url, done, total) => { lastTick = Date.now(); if (total) { pct(15 + done / total * 85); counts = `${done} / ${total}`; fileLine(); } };
     const ticker = setInterval(() => { if (C.state !== "loading") { clearInterval(ticker); return; } fileLine(); }, 1000);
@@ -135,7 +131,7 @@ C.load = async () => {
     for (const url of MODEL_URLS) {
       try {
         // never spin forever: give up after 90 s and offer a retry
-        res = await Promise.race([loader.loadAsync(url), new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), 90000))]);
+        res = await Promise.race([loader.loadAsync(url), new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), 75000))]);
         break;
       } catch (e) { lastErr = e; }
     }

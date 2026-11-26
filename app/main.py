@@ -27,7 +27,7 @@ from app.db import close_db, get_session_factory, init_db
 from app.logging_config import setup_logging
 from app.services import content, curriculum, model_mirror
 from app.services.auth import cleanup_expired
-from app.web.pages import VersionedStaticFiles, app_build, render_page
+from app.web.pages import VersionedStaticFiles, app_build, importmap_hashes, render_page
 
 
 @asynccontextmanager
@@ -96,12 +96,14 @@ async def html_headers(
             "img-src 'self' data: blob:; "
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://accounts.google.com; "
             "font-src 'self' https://fonts.gstatic.com; "
-            # three.js + loaders for the 3D car come from jsDelivr; the Draco/Basis
-            # decoders run as WebAssembly in blob: workers.
-            "script-src 'self' 'wasm-unsafe-eval' https://accounts.google.com https://cdn.jsdelivr.net; "
+            # three.js (original, unminified addons via the hashed import map) comes
+            # from jsDelivr; the Draco/Basis decoders run as WebAssembly in blob: workers.
+            "script-src 'self' 'wasm-unsafe-eval' "
+            + " ".join(importmap_hashes(BASE_DIR / "app" / "static"))
+            + " https://accounts.google.com https://cdn.jsdelivr.net; "
             "worker-src 'self' blob:; "
             "frame-src https://accounts.google.com; "
-            "connect-src 'self' https://accounts.google.com https://cdn.jsdelivr.net https://raw.githubusercontent.com"
+            "connect-src 'self' https://accounts.google.com https://cdn.jsdelivr.net"
         )
     return resp
 
