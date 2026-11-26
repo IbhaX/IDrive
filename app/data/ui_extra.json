@@ -2918,5 +2918,69 @@
  "askOffline": [
   "You're offline, so the AI instructor can't answer right now. These saved lessons match your question:",
   "നിങ്ങൾ ഓഫ്‌ലൈനിലാണ്, അതിനാൽ AI ഇൻസ്ട്രക്ടർക്ക് ഇപ്പോൾ മറുപടി നൽകാനാവില്ല. നിങ്ങളുടെ ചോദ്യവുമായി യോജിക്കുന്ന സൂക്ഷിച്ച പാഠങ്ങൾ:"
+ ],
+ "kind_auto": [
+  "Auto-rickshaw",
+  "ഓട്ടോറിക്ഷ"
+ ],
+ "kind_cycle": [
+  "Cyclist",
+  "സൈക്കിൾ യാത്രക്കാരൻ"
+ ],
+ "kind_ball": [
+  "Ball",
+  "പന്ത്"
+ ],
+ "hzCats": [
+  "Filter scenarios by type",
+  "തരം അനുസരിച്ച് സാഹചര്യങ്ങൾ തിരിക്കുക"
+ ],
+ "hzCatAll": [
+  "All",
+  "എല്ലാം"
+ ],
+ "hzCat_ped": [
+  "Pedestrians",
+  "കാൽനടക്കാർ"
+ ],
+ "hzCat_two": [
+  "Two-wheelers & autos",
+  "ഇരുചക്രവാഹനങ്ങളും ഓട്ടോയും"
+ ],
+ "hzCat_junc": [
+  "Junctions",
+  "ജംഗ്ഷനുകൾ"
+ ],
+ "hzCat_hwy": [
+  "Highway & overtaking",
+  "ഹൈവേയും ഓവർടേക്കിങ്ങും"
+ ],
+ "hzCat_heavy": [
+  "Buses & lorries",
+  "ബസ്സും ലോറിയും"
+ ],
+ "hzCat_rural": [
+  "Rural & animals",
+  "ഗ്രാമവും മൃഗങ്ങളും"
+ ],
+ "hzCat_wx": [
+  "Night & weather",
+  "രാത്രിയും കാലാവസ്ഥയും"
+ ],
+ "hzCat_town": [
+  "Town streets",
+  "നഗര തെരുവുകൾ"
+ ],
+ "hzMood_night": [
+  "Night",
+  "രാത്രി"
+ ],
+ "hzMood_rain": [
+  "Rain",
+  "മഴ"
+ ],
+ "hzMood_fog": [
+  "Fog",
+  "മൂടൽമഞ്ഞ്"
  ]
 }

@@ -214,7 +214,7 @@ class VehiclePart(BaseModel):
 class Actor(BaseModel):
     model_config = ConfigDict(extra="forbid")
     id: str
-    kind: Literal["car", "bike", "ped", "truck", "bus", "cow", "dog"]
+    kind: Literal["car", "bike", "ped", "truck", "bus", "cow", "dog", "auto", "cycle", "ball"]
     color: Optional[str] = None
     x: float
     y: float
@@ -237,6 +237,8 @@ class Scenario(BaseModel):
     id: str
     title: str
     layout: Literal["straight", "crossing", "junction", "dual"]
+    cat: Literal["ped", "two", "junc", "hwy", "heavy", "rural", "wx", "town"] = "town"
+    mood: Optional[Literal["night", "rain", "fog"]] = None
     brief: str
     duration: float = Field(gt=0, le=10)
     actors: list[Actor] = Field(min_length=1)
@@ -444,7 +446,7 @@ def lesson_payload(lesson_id: str) -> Optional[dict[str, Any]]:
 LESSON_SKIP: frozenset[str] = frozenset({"id", "level", "minutes", "a", "related", "refs", "verified", "lab", "scenario", "kind"})
 LIGHT_SKIP: frozenset[str] = frozenset({"id", "sign", "colour", "severity"})
 PART_SKIP: frozenset[str] = frozenset({"id", "group", "x", "y", "related", "lessons"})
-SCEN_SKIP: frozenset[str] = frozenset({"id", "layout", "duration", "actors", "hazard", "ok", "lesson"})
+SCEN_SKIP: frozenset[str] = frozenset({"id", "layout", "cat", "mood", "duration", "actors", "hazard", "ok", "lesson"})
 
 
 @lru_cache(maxsize=1)

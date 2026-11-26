@@ -801,6 +801,13 @@ input[type=range]{width:100%;accent-color:var(--acc2);height:28px}
 .pick .actor .hit{fill:rgba(251,191,36,.12);stroke:var(--amber);stroke-width:2;stroke-dasharray:4 4}
 .actor.hazard .hit{fill:rgba(251,113,133,.15);stroke:#fb7185;stroke-width:3}
 .flash{fill:#fb7185;pointer-events:none}
+.autotop{fill:#111827;opacity:.85}.cyc{stroke:#cbd5e1;stroke-width:3;stroke-linecap:round}.cycr{stroke:#0b1220;stroke-width:1}
+.ball{fill:#ef4444;stroke:#fff;stroke-width:1.5}.ballseam{fill:none;stroke:#fff;stroke-width:1.2}
+.mood{pointer-events:none}.mnight{fill:#020617;opacity:.52}.m-night .beam{opacity:.32}
+.mrainsky{fill:#1e293b;opacity:.25}.mrain{stroke:#bfdbfe;stroke-width:1.4;opacity:.55;animation:hzrain .7s linear infinite}
+@keyframes hzrain{to{transform:translateY(600px)}}
+@media (prefers-reduced-motion:reduce){.mrain{animation:none}}
+.hzcats{margin-top:12px}@media (max-width:620px){.hzcats{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-4px;padding:2px 4px 6px}.hzcats .chip{flex:none}}.hzcats .chip small{opacity:.65;margin-left:2px}.hzmood{margin-left:6px;opacity:.8}.hzmood::before{content:"· "}
 .hzbar{height:6px;border-radius:3px;background:var(--panel2);overflow:hidden;margin-top:12px}.hzbar i{display:block;height:100%;width:0;background:var(--grad)}
 .hzpanel h2{margin:6px 0 8px}
 

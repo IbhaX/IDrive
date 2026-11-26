@@ -3,19 +3,60 @@
     "id": "ped-crossing",
     "title": "A pedestrian approaches the zebra crossing",
     "layout": "crossing",
+    "cat": "ped",
     "brief": "Town road, 40 km/h, light traffic. A zebra crossing is ahead.",
     "duration": 3.6,
     "actors": [
-      { "id": "ped", "kind": "ped", "x": 70, "y": 236, "tx": 118, "ty": 236, "then": [330, 236] },
-      { "id": "onc", "kind": "car", "color": "#64748b", "x": 250, "y": -60, "tx": 250, "ty": 110, "then": [250, 110], "rot": 180 }
+      {
+        "id": "ped",
+        "kind": "ped",
+        "x": 70,
+        "y": 236,
+        "tx": 118,
+        "ty": 236,
+        "then": [
+          330,
+          236
+        ]
+      },
+      {
+        "id": "onc",
+        "kind": "car",
+        "color": "#64748b",
+        "x": 250,
+        "y": -60,
+        "tx": 250,
+        "ty": 110,
+        "then": [
+          250,
+          110
+        ],
+        "rot": 180
+      }
     ],
     "hazard": "ped",
     "question": "What is the safest response?",
     "choices": [
-      { "t": "Slow down and stop before the crossing to let them cross.", "ok": true, "why": "A pedestrian stepping onto a zebra crossing has priority. Slowing early lets you stop smoothly before the stop line." },
-      { "t": "Sound the horn and continue — they will wait.", "ok": false, "why": "The horn is a warning, not a right of way. The pedestrian may step out anyway, and you are legally required to give way at a zebra crossing." },
-      { "t": "Speed up to pass before they reach your lane.", "ok": false, "why": "Accelerating towards a crossing removes your margin. If they keep walking, you hit them at a higher speed." },
-      { "t": "Swerve into the right lane to go around them.", "ok": false, "why": "Swerving puts you into oncoming traffic and still crosses the pedestrian's path." }
+      {
+        "t": "Slow down and stop before the crossing to let them cross.",
+        "ok": true,
+        "why": "A pedestrian stepping onto a zebra crossing has priority. Slowing early lets you stop smoothly before the stop line."
+      },
+      {
+        "t": "Sound the horn and continue — they will wait.",
+        "ok": false,
+        "why": "The horn is a warning, not a right of way. The pedestrian may step out anyway, and you are legally required to give way at a zebra crossing."
+      },
+      {
+        "t": "Speed up to pass before they reach your lane.",
+        "ok": false,
+        "why": "Accelerating towards a crossing removes your margin. If they keep walking, you hit them at a higher speed."
+      },
+      {
+        "t": "Swerve into the right lane to go around them.",
+        "ok": false,
+        "why": "Swerving puts you into oncoming traffic and still crosses the pedestrian's path."
+      }
     ],
     "lesson": "hazard-perception-basics"
   },
@@ -23,19 +64,62 @@
     "id": "sudden-brake",
     "title": "The car ahead brakes hard",
     "layout": "straight",
+    "cat": "hwy",
     "brief": "Two-lane road, 60 km/h. You are following a car.",
     "duration": 3.2,
     "actors": [
-      { "id": "lead", "kind": "car", "color": "#ef4444", "x": 150, "y": 250, "tx": 150, "ty": 330, "then": [150, 340], "brake": true },
-      { "id": "onc", "kind": "truck", "color": "#a16207", "x": 250, "y": -80, "tx": 250, "ty": 160, "then": [250, 640], "rot": 180 }
+      {
+        "id": "lead",
+        "kind": "car",
+        "color": "#ef4444",
+        "x": 150,
+        "y": 250,
+        "tx": 150,
+        "ty": 330,
+        "then": [
+          150,
+          340
+        ],
+        "brake": true
+      },
+      {
+        "id": "onc",
+        "kind": "truck",
+        "color": "#a16207",
+        "x": 250,
+        "y": -80,
+        "tx": 250,
+        "ty": 160,
+        "then": [
+          250,
+          640
+        ],
+        "rot": 180
+      }
     ],
     "hazard": "lead",
     "question": "The brake lights come on suddenly. What do you do?",
     "choices": [
-      { "t": "Brake firmly and progressively, keeping straight in your lane.", "ok": true, "why": "Braking in a straight line uses all your tyres' grip for stopping. With a three-second gap you have room to do it smoothly." },
-      { "t": "Swerve right to go past.", "ok": false, "why": "A lorry is coming the other way. Swerving into the oncoming lane turns a rear-end risk into a head-on one." },
-      { "t": "Sound the horn and keep your speed.", "ok": false, "why": "The horn does not stop you. You will close the gap at full speed." },
-      { "t": "Pull the parking brake hard.", "ok": false, "why": "The foot brake is far more powerful and stable; yanking the parking brake can lock the rear wheels and spin the car." }
+      {
+        "t": "Brake firmly and progressively, keeping straight in your lane.",
+        "ok": true,
+        "why": "Braking in a straight line uses all your tyres' grip for stopping. With a three-second gap you have room to do it smoothly."
+      },
+      {
+        "t": "Swerve right to go past.",
+        "ok": false,
+        "why": "A lorry is coming the other way. Swerving into the oncoming lane turns a rear-end risk into a head-on one."
+      },
+      {
+        "t": "Sound the horn and keep your speed.",
+        "ok": false,
+        "why": "The horn does not stop you. You will close the gap at full speed."
+      },
+      {
+        "t": "Pull the parking brake hard.",
+        "ok": false,
+        "why": "The foot brake is far more powerful and stable; yanking the parking brake can lock the rear wheels and spin the car."
+      }
     ],
     "lesson": "following-distance"
   },
@@ -43,19 +127,60 @@
     "id": "bike-blindspot",
     "title": "A motorcycle in your blind spot",
     "layout": "dual",
+    "cat": "two",
     "brief": "Divided city road, two lanes your way. You want to move to the right lane.",
     "duration": 3.4,
     "actors": [
-      { "id": "bike", "kind": "bike", "color": "#22c55e", "x": 250, "y": 640, "tx": 250, "ty": 470, "then": [250, 120] },
-      { "id": "lead", "kind": "bus", "color": "#0ea5e9", "x": 150, "y": 160, "tx": 150, "ty": 200, "then": [150, 200] }
+      {
+        "id": "bike",
+        "kind": "bike",
+        "color": "#22c55e",
+        "x": 250,
+        "y": 640,
+        "tx": 250,
+        "ty": 470,
+        "then": [
+          250,
+          120
+        ]
+      },
+      {
+        "id": "lead",
+        "kind": "bus",
+        "color": "#0ea5e9",
+        "x": 150,
+        "y": 160,
+        "tx": 150,
+        "ty": 200,
+        "then": [
+          150,
+          200
+        ]
+      }
     ],
     "hazard": "bike",
     "question": "You have checked your mirror and signalled right. What next?",
     "choices": [
-      { "t": "Look over your right shoulder, see the motorcycle, and wait until it has passed.", "ok": true, "why": "Two-wheelers easily hide in the blind spot beside your rear pillar. The shoulder check is what finds them." },
-      { "t": "Move across — your indicator is on.", "ok": false, "why": "A signal is information, not permission. The rider may not have seen it, and you would cut across their path." },
-      { "t": "Brake hard and stay where you are.", "ok": false, "why": "Hard braking without need risks a rear-end crash. Hold your speed and simply wait for the gap." },
-      { "t": "Accelerate hard and change lanes ahead of it.", "ok": false, "why": "Racing a vehicle you have not properly seen is guesswork, and it closes up on the bus ahead." }
+      {
+        "t": "Look over your right shoulder, see the motorcycle, and wait until it has passed.",
+        "ok": true,
+        "why": "Two-wheelers easily hide in the blind spot beside your rear pillar. The shoulder check is what finds them."
+      },
+      {
+        "t": "Move across — your indicator is on.",
+        "ok": false,
+        "why": "A signal is information, not permission. The rider may not have seen it, and you would cut across their path."
+      },
+      {
+        "t": "Brake hard and stay where you are.",
+        "ok": false,
+        "why": "Hard braking without need risks a rear-end crash. Hold your speed and simply wait for the gap."
+      },
+      {
+        "t": "Accelerate hard and change lanes ahead of it.",
+        "ok": false,
+        "why": "Racing a vehicle you have not properly seen is guesswork, and it closes up on the bus ahead."
+      }
     ],
     "lesson": "following-distance"
   },
@@ -63,18 +188,46 @@
     "id": "animal",
     "title": "Cattle near the road at dusk",
     "layout": "straight",
+    "cat": "rural",
     "brief": "Rural road at dusk, 50 km/h. A cow is grazing at the right edge.",
     "duration": 3.6,
     "actors": [
-      { "id": "cow", "kind": "cow", "x": 335, "y": 210, "tx": 262, "ty": 228, "then": [150, 240] }
+      {
+        "id": "cow",
+        "kind": "cow",
+        "x": 335,
+        "y": 210,
+        "tx": 262,
+        "ty": 228,
+        "then": [
+          150,
+          240
+        ]
+      }
     ],
     "hazard": "cow",
     "question": "The cow starts drifting towards the road. What do you do?",
     "choices": [
-      { "t": "Ease off, brake gently and be ready to stop; do not swerve sharply.", "ok": true, "why": "Animals move unpredictably. Slowing early keeps every option open; a sharp swerve can roll a car or send it into a ditch or oncoming traffic." },
-      { "t": "Sound the horn and keep going — it will move away.", "ok": false, "why": "A frightened animal may run in any direction, including into your path." },
-      { "t": "Swerve hard left onto the shoulder.", "ok": false, "why": "Violent steering at speed can cause a loss of control, especially on a rough shoulder." },
-      { "t": "Flash high beam to scare it.", "ok": false, "why": "Bright light can freeze or confuse animals rather than move them." }
+      {
+        "t": "Ease off, brake gently and be ready to stop; do not swerve sharply.",
+        "ok": true,
+        "why": "Animals move unpredictably. Slowing early keeps every option open; a sharp swerve can roll a car or send it into a ditch or oncoming traffic."
+      },
+      {
+        "t": "Sound the horn and keep going — it will move away.",
+        "ok": false,
+        "why": "A frightened animal may run in any direction, including into your path."
+      },
+      {
+        "t": "Swerve hard left onto the shoulder.",
+        "ok": false,
+        "why": "Violent steering at speed can cause a loss of control, especially on a rough shoulder."
+      },
+      {
+        "t": "Flash high beam to scare it.",
+        "ok": false,
+        "why": "Bright light can freeze or confuse animals rather than move them."
+      }
     ],
     "lesson": "adverse-conditions"
   },
@@ -82,18 +235,48 @@
     "id": "side-road",
     "title": "A car edges out of a side road",
     "layout": "junction",
+    "cat": "junc",
     "brief": "Main road, 50 km/h. A side road joins from the left.",
     "duration": 3.4,
     "actors": [
-      { "id": "side", "kind": "car", "color": "#f59e0b", "x": 20, "y": 228, "tx": 82, "ty": 228, "then": [150, 228], "rot": 90 }
+      {
+        "id": "side",
+        "kind": "car",
+        "color": "#f59e0b",
+        "x": 20,
+        "y": 228,
+        "tx": 82,
+        "ty": 228,
+        "then": [
+          150,
+          228
+        ],
+        "rot": 90
+      }
     ],
     "hazard": "side",
     "question": "The car's nose creeps past the give-way line. What do you do?",
     "choices": [
-      { "t": "Ease off, cover the brake and be ready to stop — assume they may pull out.", "ok": true, "why": "A car creeping forward may not have seen you. Being ready to stop costs a second; being wrong costs a crash." },
-      { "t": "Continue — you have priority on the main road.", "ok": false, "why": "Priority is given, not taken. Plenty of side-impact crashes involve a driver who was legally in the right." },
-      { "t": "Speed up to get past before they move.", "ok": false, "why": "If they pull out, you will hit them harder and have less time to brake." },
-      { "t": "Move into the oncoming lane to give them space.", "ok": false, "why": "You cannot see what is coming the other way, and a sudden lane change surprises everyone." }
+      {
+        "t": "Ease off, cover the brake and be ready to stop — assume they may pull out.",
+        "ok": true,
+        "why": "A car creeping forward may not have seen you. Being ready to stop costs a second; being wrong costs a crash."
+      },
+      {
+        "t": "Continue — you have priority on the main road.",
+        "ok": false,
+        "why": "Priority is given, not taken. Plenty of side-impact crashes involve a driver who was legally in the right."
+      },
+      {
+        "t": "Speed up to get past before they move.",
+        "ok": false,
+        "why": "If they pull out, you will hit them harder and have less time to brake."
+      },
+      {
+        "t": "Move into the oncoming lane to give them space.",
+        "ok": false,
+        "why": "You cannot see what is coming the other way, and a sudden lane change surprises everyone."
+      }
     ],
     "lesson": "junctions-roundabouts"
   },
@@ -101,19 +284,2588 @@
     "id": "lane-cut",
     "title": "A car suddenly changes lanes in front of you",
     "layout": "dual",
+    "cat": "hwy",
     "brief": "Divided highway, 80 km/h. A car is in the right lane slightly ahead.",
     "duration": 3.0,
     "actors": [
-      { "id": "cut", "kind": "car", "color": "#a855f7", "x": 250, "y": 380, "tx": 172, "ty": 330, "then": [150, 260] }
+      {
+        "id": "cut",
+        "kind": "car",
+        "color": "#a855f7",
+        "x": 250,
+        "y": 380,
+        "tx": 172,
+        "ty": 330,
+        "then": [
+          150,
+          260
+        ]
+      }
     ],
     "hazard": "cut",
     "question": "It swings into your lane without signalling. What do you do?",
     "choices": [
-      { "t": "Ease off and brake gently to rebuild a safe gap.", "ok": true, "why": "Opening the gap restores your stopping margin. Their mistake does not need to become your crash." },
-      { "t": "Sound the horn and hold your speed to make a point.", "ok": false, "why": "Holding speed keeps you too close. Showing them their mistake does not make you any safer." },
-      { "t": "Accelerate and overtake them on the left.", "ok": false, "why": "Overtaking on the left is unsafe and illegal, and angry overtakes are how road rage starts." },
-      { "t": "Swerve onto the shoulder.", "ok": false, "why": "A sudden swerve at 80 km/h is more dangerous than braking, and the shoulder may hold stopped vehicles or people." }
+      {
+        "t": "Ease off and brake gently to rebuild a safe gap.",
+        "ok": true,
+        "why": "Opening the gap restores your stopping margin. Their mistake does not need to become your crash."
+      },
+      {
+        "t": "Sound the horn and hold your speed to make a point.",
+        "ok": false,
+        "why": "Holding speed keeps you too close. Showing them their mistake does not make you any safer."
+      },
+      {
+        "t": "Accelerate and overtake them on the left.",
+        "ok": false,
+        "why": "Overtaking on the left is unsafe and illegal, and angry overtakes are how road rage starts."
+      },
+      {
+        "t": "Swerve onto the shoulder.",
+        "ok": false,
+        "why": "A sudden swerve at 80 km/h is more dangerous than braking, and the shoulder may hold stopped vehicles or people."
+      }
     ],
     "lesson": "lane-change-overtake"
+  },
+  {
+    "id": "school-zone",
+    "title": "Children at a school gate",
+    "layout": "crossing",
+    "cat": "ped",
+    "brief": "Town road, 40 km/h. School is just finishing; children are at the gate beside a crossing.",
+    "duration": 3.6,
+    "actors": [
+      {
+        "id": "kid",
+        "kind": "ped",
+        "x": 80,
+        "y": 170,
+        "tx": 96,
+        "ty": 200,
+        "then": [
+          170,
+          214
+        ]
+      },
+      {
+        "id": "kid2",
+        "kind": "ped",
+        "x": 72,
+        "y": 140,
+        "tx": 74,
+        "ty": 150,
+        "then": [
+          76,
+          150
+        ]
+      }
+    ],
+    "hazard": "kid",
+    "question": "A child leaves the group near the kerb. What do you do?",
+    "choices": [
+      {
+        "t": "Keep your speed — they are on the footpath, not the road.",
+        "ok": false,
+        "why": "A child can be in front of you in a second; being on the footpath now means nothing."
+      },
+      {
+        "t": "Sound the horn continuously as you pass.",
+        "ok": false,
+        "why": "The horn can startle a child into running the wrong way, and it does not slow you down."
+      },
+      {
+        "t": "Slow right down and be ready to stop — children can dart out without looking.",
+        "ok": true,
+        "why": "Children judge speed and distance poorly and act on impulse; low speed gives you time to stop."
+      },
+      {
+        "t": "Overtake the car ahead to get past the school quickly.",
+        "ok": false,
+        "why": "Overtaking near a school puts you closer to the kerb side children at higher speed."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "ball-child",
+    "title": "A ball rolls into the road",
+    "layout": "straight",
+    "cat": "ped",
+    "brief": "Residential street, 30 km/h, cars parked along the left.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "car1",
+        "kind": "car",
+        "x": 118,
+        "y": 170,
+        "tx": 118,
+        "ty": 180,
+        "then": [
+          118,
+          180
+        ],
+        "color": "#475569"
+      },
+      {
+        "id": "car2",
+        "kind": "car",
+        "x": 118,
+        "y": 300,
+        "tx": 118,
+        "ty": 310,
+        "then": [
+          118,
+          310
+        ],
+        "color": "#334155"
+      },
+      {
+        "id": "ball",
+        "kind": "ball",
+        "x": 96,
+        "y": 244,
+        "tx": 146,
+        "ty": 246,
+        "then": [
+          210,
+          250
+        ]
+      },
+      {
+        "id": "kid",
+        "kind": "ped",
+        "x": 84,
+        "y": 240,
+        "tx": 96,
+        "ty": 244,
+        "then": [
+          160,
+          246
+        ]
+      }
+    ],
+    "hazard": "ball",
+    "question": "A ball bounces out from between parked cars. What should you expect?",
+    "choices": [
+      {
+        "t": "Nothing — steer around the ball and carry on.",
+        "ok": false,
+        "why": "The ball is rarely the danger; the child chasing it is."
+      },
+      {
+        "t": "Speed up to clear the area before anyone appears.",
+        "ok": false,
+        "why": "Speeding up cuts the time you have to react if a child steps out."
+      },
+      {
+        "t": "A child may run out after it — brake now and be ready to stop.",
+        "ok": true,
+        "why": "Where a ball goes, a child often follows without looking. Treat the ball as a warning."
+      },
+      {
+        "t": "Sound the horn and keep your speed.",
+        "ok": false,
+        "why": "A child focused on a ball may not react to the horn at all."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "phone-pedestrian",
+    "title": "A pedestrian looking at a phone",
+    "layout": "straight",
+    "cat": "ped",
+    "brief": "Busy town road, 40 km/h. A man walks along the kerb, eyes on his phone.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "ped",
+        "kind": "ped",
+        "x": 84,
+        "y": 190,
+        "tx": 100,
+        "ty": 206,
+        "then": [
+          180,
+          214
+        ]
+      }
+    ],
+    "hazard": "ped",
+    "question": "He drifts towards the road edge. What do you do?",
+    "choices": [
+      {
+        "t": "Keep going — pedestrians must look before stepping out.",
+        "ok": false,
+        "why": "Being right does not stop a collision. Drivers have to allow for others' mistakes."
+      },
+      {
+        "t": "Slow down and move out a little if it's clear — he may step off without looking.",
+        "ok": true,
+        "why": "Someone absorbed in a phone has not seen you. Space and lower speed cover their mistake."
+      },
+      {
+        "t": "Brake hard to a stop in the lane.",
+        "ok": false,
+        "why": "An unnecessary emergency stop risks a rear-end crash; easing off early is enough."
+      },
+      {
+        "t": "Pass as close as possible to the centre line at the same speed.",
+        "ok": false,
+        "why": "Moving out without slowing can bring you into oncoming traffic and still leaves little margin."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "elderly-crossing",
+    "title": "An elderly person on the crossing",
+    "layout": "crossing",
+    "cat": "ped",
+    "brief": "Town road, 30 km/h. An elderly woman is crossing slowly from the right.",
+    "duration": 3.6,
+    "actors": [
+      {
+        "id": "ped",
+        "kind": "ped",
+        "x": 230,
+        "y": 236,
+        "tx": 190,
+        "ty": 236,
+        "then": [
+          84,
+          236
+        ]
+      }
+    ],
+    "hazard": "ped",
+    "question": "Traffic behind you is impatient. What do you do?",
+    "choices": [
+      {
+        "t": "Drive behind her once she has passed the centre line.",
+        "ok": false,
+        "why": "She is still crossing your lane; she might hesitate or step back."
+      },
+      {
+        "t": "Sound the horn gently so she hurries.",
+        "ok": false,
+        "why": "Hurrying someone unsteady on their feet makes a fall more likely."
+      },
+      {
+        "t": "Wave her across and then move off immediately.",
+        "ok": false,
+        "why": "Moving off before she reaches the kerb leaves no margin if she slows."
+      },
+      {
+        "t": "Stop before the line and wait until she has fully crossed — don't edge forward or hoot.",
+        "ok": true,
+        "why": "Older pedestrians need more time and may stop or turn back. Pressure from you can make them stumble."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "bus-rush",
+    "title": "Running for the bus",
+    "layout": "straight",
+    "cat": "ped",
+    "brief": "Town road, 40 km/h. A bus has stopped on the other side.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "bus",
+        "kind": "bus",
+        "x": 250,
+        "y": 90,
+        "tx": 250,
+        "ty": 170,
+        "then": [
+          250,
+          170
+        ],
+        "rot": 180,
+        "color": "#b45309",
+        "brake": true
+      },
+      {
+        "id": "ped",
+        "kind": "ped",
+        "x": 80,
+        "y": 260,
+        "tx": 124,
+        "ty": 256,
+        "then": [
+          236,
+          250
+        ]
+      }
+    ],
+    "hazard": "ped",
+    "question": "A man on your left starts running towards the bus. What do you do?",
+    "choices": [
+      {
+        "t": "Hold your speed — the bus is on the other side, not yours.",
+        "ok": false,
+        "why": "To reach the bus he has to cross your lane first."
+      },
+      {
+        "t": "Speed up to pass before he reaches the road.",
+        "ok": false,
+        "why": "You arrive sooner and faster — the worst combination if he runs out."
+      },
+      {
+        "t": "Slow down and be ready to stop — he is likely to dash across without looking.",
+        "ok": true,
+        "why": "People rushing for a bus look at the bus, not the traffic."
+      },
+      {
+        "t": "Move right towards the bus to give him room on the left.",
+        "ok": false,
+        "why": "You would drive towards the bus and the people around it."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "median-crosser",
+    "title": "Someone crossing a highway",
+    "layout": "dual",
+    "cat": "ped",
+    "brief": "Four-lane highway, 70 km/h, you are in the left lane. A man stands in a gap in the median.",
+    "duration": 3.6,
+    "actors": [
+      {
+        "id": "ped",
+        "kind": "ped",
+        "x": 304,
+        "y": 246,
+        "tx": 262,
+        "ty": 246,
+        "then": [
+          110,
+          246
+        ]
+      }
+    ],
+    "hazard": "ped",
+    "question": "He steps off the median into your carriageway. What do you do?",
+    "choices": [
+      {
+        "t": "Keep going — pedestrians should not be on a highway.",
+        "ok": false,
+        "why": "They often are; a collision at highway speed is rarely survivable."
+      },
+      {
+        "t": "Brake firmly and check your mirror — he is likely to keep walking across both lanes into your path.",
+        "ok": true,
+        "why": "People often cross highways at median gaps and misjudge fast traffic."
+      },
+      {
+        "t": "Swerve right into the other lane without checking.",
+        "ok": false,
+        "why": "A vehicle may be overtaking you in the right lane — and he is walking into it."
+      },
+      {
+        "t": "Flash your lights and hold your speed.",
+        "ok": false,
+        "why": "Flashing does not stop you, and he may freeze in your path."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "road-worker",
+    "title": "Road works ahead",
+    "layout": "straight",
+    "cat": "ped",
+    "brief": "Main road, 50 km/h. Workers are repairing the road; one stands in your lane with a red flag.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "w",
+        "kind": "ped",
+        "x": 176,
+        "y": 120,
+        "tx": 176,
+        "ty": 250,
+        "then": [
+          176,
+          250
+        ]
+      },
+      {
+        "id": "w2",
+        "kind": "ped",
+        "x": 270,
+        "y": 110,
+        "tx": 270,
+        "ty": 240,
+        "then": [
+          270,
+          240
+        ]
+      }
+    ],
+    "hazard": "w",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Keep going slowly around the worker on the right.",
+        "ok": false,
+        "why": "You would drive into the oncoming lane without being waved through."
+      },
+      {
+        "t": "Sound the horn so the worker moves aside.",
+        "ok": false,
+        "why": "The worker is there to stop traffic; the horn changes nothing."
+      },
+      {
+        "t": "Slow down early and follow the flag signal; stop if shown.",
+        "ok": true,
+        "why": "A worker controlling traffic has to be obeyed, and workers may step back without looking."
+      },
+      {
+        "t": "Speed up before the worker raises the flag.",
+        "ok": false,
+        "why": "Rushing a work zone is how workers get hurt."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "festival-crowd",
+    "title": "A procession on the road at night",
+    "layout": "straight",
+    "cat": "ped",
+    "mood": "night",
+    "brief": "Town road at night, 30 km/h. A temple procession is walking in your lane.",
+    "duration": 3.6,
+    "actors": [
+      {
+        "id": "p1",
+        "kind": "ped",
+        "x": 132,
+        "y": 90,
+        "tx": 132,
+        "ty": 250,
+        "then": [
+          132,
+          300
+        ]
+      },
+      {
+        "id": "p2",
+        "kind": "ped",
+        "x": 118,
+        "y": 60,
+        "tx": 118,
+        "ty": 220,
+        "then": [
+          118,
+          270
+        ]
+      },
+      {
+        "id": "p3",
+        "kind": "ped",
+        "x": 146,
+        "y": 40,
+        "tx": 146,
+        "ty": 200,
+        "then": [
+          146,
+          250
+        ]
+      }
+    ],
+    "hazard": "p1",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Use the horn and lights to make them move aside.",
+        "ok": false,
+        "why": "It can cause panic in a crowd and does not create a safe gap."
+      },
+      {
+        "t": "Overtake on the right at normal speed.",
+        "ok": false,
+        "why": "You cannot see who may step out from the group or oncoming traffic."
+      },
+      {
+        "t": "Slow to walking pace and follow at a distance, or wait; pass only when there is clear room.",
+        "ok": true,
+        "why": "Crowds spread unpredictably and people may not see you in the dark."
+      },
+      {
+        "t": "Follow closely so they know you want to pass.",
+        "ok": false,
+        "why": "Close following leaves no room if someone stops or falls."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "auto-uturn",
+    "title": "An auto-rickshaw near a median gap",
+    "layout": "straight",
+    "cat": "two",
+    "brief": "City road, 40 km/h. An auto-rickshaw ahead slows near a gap in the centre.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "auto",
+        "kind": "auto",
+        "x": 150,
+        "y": 250,
+        "tx": 176,
+        "ty": 226,
+        "then": [
+          250,
+          180
+        ]
+      }
+    ],
+    "hazard": "auto",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Overtake it on the left while it slows.",
+        "ok": false,
+        "why": "If it swings left first to make a U-turn, you are in its path."
+      },
+      {
+        "t": "Overtake on the right before it turns.",
+        "ok": false,
+        "why": "Passing on the side it is about to turn towards is the classic crash."
+      },
+      {
+        "t": "Hold back and slow down — it may U-turn or stop without signalling.",
+        "ok": true,
+        "why": "Autos often turn or stop suddenly for passengers or gaps; give them room and time."
+      },
+      {
+        "t": "Follow closely so it cannot cut across.",
+        "ok": false,
+        "why": "Following closely gives you no time to react to its next move."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "auto-stop",
+    "title": "An auto stops for a passenger",
+    "layout": "straight",
+    "cat": "two",
+    "brief": "Town road, 40 km/h. An auto-rickshaw is just ahead; someone waves from the kerb.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "auto",
+        "kind": "auto",
+        "x": 150,
+        "y": 300,
+        "tx": 128,
+        "ty": 290,
+        "then": [
+          122,
+          290
+        ],
+        "brake": true
+      },
+      {
+        "id": "ped",
+        "kind": "ped",
+        "x": 80,
+        "y": 250,
+        "tx": 86,
+        "ty": 256,
+        "then": [
+          110,
+          284
+        ]
+      }
+    ],
+    "hazard": "auto",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Ease off and leave room — it will probably pull over and stop sharply.",
+        "ok": true,
+        "why": "A waving passenger is a strong clue the auto will stop or swerve to the kerb."
+      },
+      {
+        "t": "Close up so you can pass the moment it stops.",
+        "ok": false,
+        "why": "Too close and you have no space if it stops in the lane."
+      },
+      {
+        "t": "Overtake on the left between the auto and the kerb.",
+        "ok": false,
+        "why": "That is exactly where it is heading — and where the passenger is."
+      },
+      {
+        "t": "Sound the horn so the driver doesn't stop.",
+        "ok": false,
+        "why": "The driver will stop anyway; you need the gap, not the horn."
+      }
+    ],
+    "lesson": "following-distance"
+  },
+  {
+    "id": "bike-left-turn",
+    "title": "Turning left with bikes around",
+    "layout": "junction",
+    "cat": "two",
+    "brief": "Town junction, slowing to 15 km/h to turn left into the side road.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "bike",
+        "kind": "bike",
+        "x": 112,
+        "y": 640,
+        "tx": 112,
+        "ty": 430,
+        "then": [
+          96,
+          228
+        ],
+        "color": "#0ea5e9"
+      }
+    ],
+    "hazard": "bike",
+    "question": "What do you check before turning?",
+    "choices": [
+      {
+        "t": "Only the right mirror for traffic behind.",
+        "ok": false,
+        "why": "The danger in a left turn is on your left."
+      },
+      {
+        "t": "Nothing — your indicator is on, so others will wait.",
+        "ok": false,
+        "why": "An indicator tells others what you plan; it does not make the space clear."
+      },
+      {
+        "t": "Left mirror and a look over your left shoulder — a bike may be filtering up your left side.",
+        "ok": true,
+        "why": "Two-wheelers often pass on the left in slow traffic and sit right in your blind spot."
+      },
+      {
+        "t": "Cut the corner quickly to get ahead of any bikes.",
+        "ok": false,
+        "why": "Cutting the corner sweeps across the path of anything on your left."
+      }
+    ],
+    "lesson": "junctions-roundabouts"
+  },
+  {
+    "id": "bike-wrongway",
+    "title": "A motorcycle on the wrong side",
+    "layout": "straight",
+    "cat": "two",
+    "brief": "Two-lane road, 40 km/h. A motorcycle is coming towards you in your lane, close to the edge.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "bike",
+        "kind": "bike",
+        "x": 122,
+        "y": 40,
+        "tx": 122,
+        "ty": 250,
+        "then": [
+          122,
+          620
+        ],
+        "rot": 180,
+        "color": "#dc2626"
+      }
+    ],
+    "hazard": "bike",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Move to the centre line to show you have priority.",
+        "ok": false,
+        "why": "Pushing out risks the oncoming lane and leaves the rider nowhere to go."
+      },
+      {
+        "t": "Slow down, keep a steady line and give it room — expect it to stay on your side.",
+        "ok": true,
+        "why": "Wrong-side riders rarely move across; predictable, slower movement from you helps both of you."
+      },
+      {
+        "t": "Swerve onto the footpath.",
+        "ok": false,
+        "why": "You might hit pedestrians or lose control on the kerb."
+      },
+      {
+        "t": "Speed up and pass it quickly.",
+        "ok": false,
+        "why": "A head-on encounter at higher speed is far more dangerous."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "cycle-wobble",
+    "title": "A cyclist wobbling ahead",
+    "layout": "straight",
+    "cat": "two",
+    "brief": "Two-lane road, 40 km/h. A cyclist with a heavy load wobbles near the edge; a car is coming the other way.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "cyc",
+        "kind": "cycle",
+        "x": 120,
+        "y": 200,
+        "tx": 132,
+        "ty": 250,
+        "then": [
+          150,
+          250
+        ]
+      },
+      {
+        "id": "onc",
+        "kind": "car",
+        "x": 250,
+        "y": -40,
+        "tx": 250,
+        "ty": 220,
+        "then": [
+          250,
+          620
+        ],
+        "rot": 180,
+        "color": "#64748b"
+      }
+    ],
+    "hazard": "cyc",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Squeeze past now between the cyclist and the oncoming car.",
+        "ok": false,
+        "why": "No room for a wobble — a small swerve and you hit the cyclist or the car."
+      },
+      {
+        "t": "Sound the horn so the cyclist moves further left.",
+        "ok": false,
+        "why": "A startled, loaded cyclist may wobble even more or fall."
+      },
+      {
+        "t": "Wait behind until the oncoming car has passed, then overtake with a wide gap.",
+        "ok": true,
+        "why": "A loaded cyclist can swerve without warning; you need space on both sides, which you don't have yet."
+      },
+      {
+        "t": "Follow very close until you can pass.",
+        "ok": false,
+        "why": "If the cyclist falls, you need room to stop."
+      }
+    ],
+    "lesson": "lane-change-overtake"
+  },
+  {
+    "id": "door-zone",
+    "title": "Passing parked cars",
+    "layout": "straight",
+    "cat": "two",
+    "brief": "Narrow town road, 30 km/h, a row of parked cars on your left.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "pk",
+        "kind": "car",
+        "x": 118,
+        "y": 160,
+        "tx": 118,
+        "ty": 240,
+        "then": [
+          118,
+          240
+        ],
+        "color": "#475569"
+      },
+      {
+        "id": "door",
+        "kind": "ped",
+        "x": 134,
+        "y": 200,
+        "tx": 138,
+        "ty": 262,
+        "then": [
+          160,
+          262
+        ]
+      }
+    ],
+    "hazard": "door",
+    "question": "You notice someone in the driver's seat of a parked car. What do you do?",
+    "choices": [
+      {
+        "t": "Pass as close to the parked cars as possible to stay away from the centre line.",
+        "ok": false,
+        "why": "Staying tight to parked cars puts you exactly where a door opens."
+      },
+      {
+        "t": "Sound the horn as you pass every parked car.",
+        "ok": false,
+        "why": "Constant horn use doesn't create space and annoys everyone."
+      },
+      {
+        "t": "Speed past before the door can open.",
+        "ok": false,
+        "why": "You can't outrun a door; speed only makes the impact worse."
+      },
+      {
+        "t": "Slow down and leave about a door's width — the door may open or they may step out.",
+        "ok": true,
+        "why": "Someone inside a parked car is a clue that a door could swing open into your path."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "bike-undertake",
+    "title": "Pulling in to the left",
+    "layout": "straight",
+    "cat": "two",
+    "brief": "Busy city road, 30 km/h in slow traffic. You want to pull in to the kerb on your left to stop.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "bike",
+        "kind": "bike",
+        "x": 112,
+        "y": 640,
+        "tx": 114,
+        "ty": 440,
+        "then": [
+          120,
+          120
+        ],
+        "color": "#16a34a"
+      }
+    ],
+    "hazard": "bike",
+    "question": "What must you do before moving left?",
+    "choices": [
+      {
+        "t": "Indicate and move across in one smooth movement.",
+        "ok": false,
+        "why": "Indicating doesn't clear the space — a bike may already be there."
+      },
+      {
+        "t": "Check the left mirror and look over your left shoulder — a motorcycle may be coming up on your left.",
+        "ok": true,
+        "why": "Two-wheelers often pass on the left; your mirror alone can miss them."
+      },
+      {
+        "t": "Check only your interior mirror.",
+        "ok": false,
+        "why": "The interior mirror doesn't show the space beside you."
+      },
+      {
+        "t": "Move left slowly so anyone there can get out of the way.",
+        "ok": false,
+        "why": "Drifting into an occupied space forces a rider to brake or crash."
+      }
+    ],
+    "lesson": "lane-change-overtake"
+  },
+  {
+    "id": "bike-pothole",
+    "title": "A rider ahead and a pothole",
+    "layout": "straight",
+    "cat": "two",
+    "brief": "Town road after rain, 40 km/h. A motorcycle is ahead; there is a large pothole in front of it.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "bike",
+        "kind": "bike",
+        "x": 132,
+        "y": 250,
+        "tx": 166,
+        "ty": 232,
+        "then": [
+          172,
+          200
+        ],
+        "color": "#7c3aed"
+      }
+    ],
+    "hazard": "bike",
+    "question": "What should you expect?",
+    "choices": [
+      {
+        "t": "The rider will swerve around the pothole — hold back and leave room on both sides.",
+        "ok": true,
+        "why": "Riders steer around potholes at the last moment, often towards the centre of the lane."
+      },
+      {
+        "t": "Nothing — overtake now while the rider is close to the edge.",
+        "ok": false,
+        "why": "You'd be alongside exactly when the rider swerves out."
+      },
+      {
+        "t": "The rider will brake — so close up and wait.",
+        "ok": false,
+        "why": "Closing up removes your space whichever way the rider moves."
+      },
+      {
+        "t": "Sound the horn to stop the rider moving out.",
+        "ok": false,
+        "why": "The rider still has to avoid the pothole; the horn can cause a wobble."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "rider-group",
+    "title": "A group of riders weaving",
+    "layout": "dual",
+    "cat": "two",
+    "brief": "Four-lane road, 50 km/h. A group of young riders is weaving between both lanes ahead.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "b1",
+        "kind": "bike",
+        "x": 150,
+        "y": 250,
+        "tx": 176,
+        "ty": 230,
+        "then": [
+          220,
+          200
+        ],
+        "color": "#0ea5e9"
+      },
+      {
+        "id": "b2",
+        "kind": "bike",
+        "x": 250,
+        "y": 300,
+        "tx": 230,
+        "ty": 280,
+        "then": [
+          170,
+          240
+        ],
+        "color": "#f97316"
+      },
+      {
+        "id": "b3",
+        "kind": "bike",
+        "x": 120,
+        "y": 320,
+        "tx": 140,
+        "ty": 300,
+        "then": [
+          160,
+          280
+        ],
+        "color": "#16a34a"
+      }
+    ],
+    "hazard": "b2",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Overtake them as fast as you can.",
+        "ok": false,
+        "why": "You'd be alongside riders who can cut across at any moment."
+      },
+      {
+        "t": "Use the horn repeatedly to break up the group.",
+        "ok": false,
+        "why": "It can provoke or startle them into a fall."
+      },
+      {
+        "t": "Drop back, keep a large gap and don't try to pass until they settle into one lane.",
+        "ok": true,
+        "why": "Riders in a group react to each other, not to you; their next move is impossible to predict."
+      },
+      {
+        "t": "Stay close behind so you can pass at the first gap.",
+        "ok": false,
+        "why": "At close range any fall happens right in front of you."
+      }
+    ],
+    "lesson": "following-distance"
+  },
+  {
+    "id": "bus-stop-peds",
+    "title": "Passing a stopped bus",
+    "layout": "straight",
+    "cat": "heavy",
+    "brief": "Town road, 40 km/h. A bus has stopped at a stop on your side.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "bus",
+        "kind": "bus",
+        "x": 122,
+        "y": 140,
+        "tx": 122,
+        "ty": 240,
+        "then": [
+          122,
+          240
+        ],
+        "color": "#b45309",
+        "brake": true
+      },
+      {
+        "id": "ped",
+        "kind": "ped",
+        "x": 126,
+        "y": 176,
+        "tx": 150,
+        "ty": 176,
+        "then": [
+          260,
+          176
+        ]
+      }
+    ],
+    "hazard": "ped",
+    "question": "As you get close, what is the main danger?",
+    "choices": [
+      {
+        "t": "The bus pulling out — so speed up to get past.",
+        "ok": false,
+        "why": "Speeding past a bus is exactly when a hidden pedestrian appears."
+      },
+      {
+        "t": "Nothing, the bus is stopped.",
+        "ok": false,
+        "why": "A stopped bus hides everything in front of it."
+      },
+      {
+        "t": "People stepping out from in front of the bus — slow right down and pass with care.",
+        "ok": true,
+        "why": "Passengers who just got off often cross in front of the bus, hidden until they step out."
+      },
+      {
+        "t": "Oncoming traffic only.",
+        "ok": false,
+        "why": "Check oncoming traffic too, but the hidden pedestrian is the bigger risk."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "bus-pullout",
+    "title": "A bus pulling out",
+    "layout": "straight",
+    "cat": "heavy",
+    "brief": "Town road, 40 km/h. A bus at a stop ahead on your left has its right indicator on.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "bus",
+        "kind": "bus",
+        "x": 112,
+        "y": 250,
+        "tx": 138,
+        "ty": 220,
+        "then": [
+          150,
+          140
+        ],
+        "color": "#b45309"
+      }
+    ],
+    "hazard": "bus",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Speed up to get past before it moves.",
+        "ok": false,
+        "why": "If it moves while you're alongside, it will squeeze you towards oncoming traffic."
+      },
+      {
+        "t": "Sound the horn so it waits for you.",
+        "ok": false,
+        "why": "A bus driver may not hear you, and the horn does not create space."
+      },
+      {
+        "t": "Slow down and let it pull out if you safely can.",
+        "ok": true,
+        "why": "A bus moving off is slow and big; giving way early is safer and keeps traffic flowing."
+      },
+      {
+        "t": "Overtake it on the right without checking oncoming traffic.",
+        "ok": false,
+        "why": "You'd be in the oncoming lane beside a moving bus."
+      }
+    ],
+    "lesson": "following-distance"
+  },
+  {
+    "id": "broken-truck",
+    "title": "A broken-down truck in your lane",
+    "layout": "straight",
+    "cat": "heavy",
+    "brief": "Two-lane road, 50 km/h. A truck has broken down in your lane; a car is coming the other way.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "trk",
+        "kind": "truck",
+        "x": 150,
+        "y": 120,
+        "tx": 150,
+        "ty": 200,
+        "then": [
+          150,
+          200
+        ],
+        "color": "#64748b",
+        "brake": true
+      },
+      {
+        "id": "onc",
+        "kind": "car",
+        "x": 250,
+        "y": -60,
+        "tx": 250,
+        "ty": 250,
+        "then": [
+          250,
+          640
+        ],
+        "rot": 180,
+        "color": "#1d4ed8"
+      }
+    ],
+    "hazard": "onc",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Slow down and wait behind the truck until the oncoming car has passed, then go round it.",
+        "ok": true,
+        "why": "The oncoming car has priority because the obstruction is on your side."
+      },
+      {
+        "t": "Pull out now — the oncoming car will slow for you.",
+        "ok": false,
+        "why": "It may not, and you'd meet head-on beside the truck."
+      },
+      {
+        "t": "Flash your lights and pull out.",
+        "ok": false,
+        "why": "Flashing doesn't give you the right of way."
+      },
+      {
+        "t": "Drive onto the left shoulder at speed to pass.",
+        "ok": false,
+        "why": "The shoulder may be soft or hide people working on the truck."
+      }
+    ],
+    "lesson": "lane-change-overtake"
+  },
+  {
+    "id": "truck-left-turn",
+    "title": "A truck turning left",
+    "layout": "junction",
+    "cat": "heavy",
+    "brief": "Town junction, 20 km/h. A long truck ahead is turning left into the side road and swings out to the right first.",
+    "duration": 3.6,
+    "actors": [
+      {
+        "id": "trk",
+        "kind": "truck",
+        "x": 150,
+        "y": 330,
+        "tx": 150,
+        "ty": 250,
+        "then": [
+          80,
+          226
+        ],
+        "color": "#0f766e"
+      }
+    ],
+    "hazard": "trk",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Pass on the left while it swings right.",
+        "ok": false,
+        "why": "As it turns, the trailer sweeps over exactly that space."
+      },
+      {
+        "t": "Pass on the right because it is going left.",
+        "ok": false,
+        "why": "It may need part of your lane to complete the turn."
+      },
+      {
+        "t": "Stay well back and don't try to pass on either side until it has completed the turn.",
+        "ok": true,
+        "why": "Long vehicles swing wide and their rear wheels cut in; the space beside them disappears."
+      },
+      {
+        "t": "Sound the horn and keep moving.",
+        "ok": false,
+        "why": "The driver can't make the truck turn any tighter."
+      }
+    ],
+    "lesson": "junctions-roundabouts"
+  },
+  {
+    "id": "hairpin-bus",
+    "title": "A bus on a hairpin bend",
+    "layout": "straight",
+    "cat": "heavy",
+    "brief": "Ghat road, 30 km/h, climbing a tight hairpin. A bus is coming down and cutting across the centre.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "bus",
+        "kind": "bus",
+        "x": 230,
+        "y": -40,
+        "tx": 196,
+        "ty": 230,
+        "then": [
+          250,
+          640
+        ],
+        "rot": 180,
+        "color": "#b91c1c"
+      }
+    ],
+    "hazard": "bus",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Slow down, keep left and stop if needed to let it round the bend.",
+        "ok": true,
+        "why": "Large vehicles need the whole road on hairpins; going uphill you can stop and restart more easily."
+      },
+      {
+        "t": "Keep to the centre so it has to stay on its side.",
+        "ok": false,
+        "why": "There is no room for it to do that; you'd meet head-on."
+      },
+      {
+        "t": "Speed up to get round the bend first.",
+        "ok": false,
+        "why": "You'd meet the bus mid-bend at a higher speed."
+      },
+      {
+        "t": "Sound the horn and keep going.",
+        "ok": false,
+        "why": "Sounding the horn before a blind bend is useful; it doesn't replace giving way."
+      }
+    ],
+    "lesson": "adverse-conditions"
+  },
+  {
+    "id": "bus-race",
+    "title": "A private bus overtaking you",
+    "layout": "straight",
+    "cat": "heavy",
+    "brief": "Two-lane road, 50 km/h. A private bus behind is overtaking close as it races to the next stop.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "bus",
+        "kind": "bus",
+        "x": 150,
+        "y": 640,
+        "tx": 176,
+        "ty": 420,
+        "then": [
+          150,
+          120
+        ],
+        "color": "#b45309"
+      }
+    ],
+    "hazard": "bus",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Speed up so it can't get in front.",
+        "ok": false,
+        "why": "Racing a bus side by side leaves neither of you room."
+      },
+      {
+        "t": "Ease off, keep left and let it pass — then keep your distance.",
+        "ok": true,
+        "why": "Matching or blocking a racing bus turns a nuisance into a crash risk."
+      },
+      {
+        "t": "Brake hard so it has to pull back.",
+        "ok": false,
+        "why": "A sudden stop may cause a crash behind or beside you."
+      },
+      {
+        "t": "Move to the centre to stop it passing.",
+        "ok": false,
+        "why": "It's already alongside; moving right pushes into it."
+      }
+    ],
+    "lesson": "emotion-decisions"
+  },
+  {
+    "id": "hidden-bike",
+    "title": "A motorcycle hidden by a truck",
+    "layout": "junction",
+    "cat": "junc",
+    "brief": "Town road, 20 km/h. You want to turn right into a petrol station; an oncoming truck has stopped to let you across.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "trk",
+        "kind": "truck",
+        "x": 250,
+        "y": 60,
+        "tx": 250,
+        "ty": 150,
+        "then": [
+          250,
+          150
+        ],
+        "rot": 180,
+        "color": "#64748b",
+        "brake": true
+      },
+      {
+        "id": "bike",
+        "kind": "bike",
+        "x": 276,
+        "y": -40,
+        "tx": 284,
+        "ty": 214,
+        "then": [
+          200,
+          300
+        ],
+        "rot": 180,
+        "color": "#dc2626"
+      }
+    ],
+    "hazard": "bike",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Turn quickly — the truck driver has waved you through.",
+        "ok": false,
+        "why": "The truck driver can't see that lane for you."
+      },
+      {
+        "t": "Turn normally; the road beyond the truck is clear.",
+        "ok": false,
+        "why": "You can't see past the truck to know that."
+      },
+      {
+        "t": "Sound the horn and turn.",
+        "ok": false,
+        "why": "A rider at speed won't have time to react."
+      },
+      {
+        "t": "Edge forward slowly and look past the truck — a motorcycle may be overtaking it.",
+        "ok": true,
+        "why": "A courteous wave doesn't clear the lane beside the truck, where a bike can be hidden."
+      }
+    ],
+    "lesson": "junctions-roundabouts"
+  },
+  {
+    "id": "side-road-bike",
+    "title": "A scooter at a side road",
+    "layout": "junction",
+    "cat": "junc",
+    "brief": "Main road, 40 km/h. A scooter is coming fast up the side road on your left.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "bike",
+        "kind": "bike",
+        "x": 30,
+        "y": 228,
+        "tx": 80,
+        "ty": 228,
+        "then": [
+          170,
+          228
+        ],
+        "rot": 90,
+        "color": "#16a34a"
+      }
+    ],
+    "hazard": "bike",
+    "question": "It doesn't look like slowing. What do you do?",
+    "choices": [
+      {
+        "t": "Keep your speed; you're on the main road.",
+        "ok": false,
+        "why": "Priority doesn't protect you from someone who doesn't stop."
+      },
+      {
+        "t": "Speed up to pass before it arrives.",
+        "ok": false,
+        "why": "You'd reach the junction at the same moment, faster."
+      },
+      {
+        "t": "Ease off and cover the brake — be ready for it to pull out.",
+        "ok": true,
+        "why": "You have priority, but a rider going too fast to stop will come out anyway."
+      },
+      {
+        "t": "Swerve into the oncoming lane early.",
+        "ok": false,
+        "why": "You might meet oncoming traffic for a hazard that may not happen."
+      }
+    ],
+    "lesson": "junctions-roundabouts"
+  },
+  {
+    "id": "red-light-runner",
+    "title": "Moving off at a green light",
+    "layout": "crossing",
+    "cat": "junc",
+    "brief": "Signal junction. Your light has just turned green.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "car",
+        "kind": "car",
+        "x": -30,
+        "y": 236,
+        "tx": 60,
+        "ty": 236,
+        "then": [
+          420,
+          236
+        ],
+        "rot": 90,
+        "color": "#dc2626"
+      }
+    ],
+    "hazard": "car",
+    "question": "A car is approaching fast from the left. What do you do?",
+    "choices": [
+      {
+        "t": "Move off immediately — it's your green.",
+        "ok": false,
+        "why": "A driver rushing the red won't stop for your green."
+      },
+      {
+        "t": "Sound the horn and move off.",
+        "ok": false,
+        "why": "The other driver may not hear or react in time."
+      },
+      {
+        "t": "Wait and look both ways before moving — that car may run the red.",
+        "ok": true,
+        "why": "Green means you may go if the way is clear, not that it is clear."
+      },
+      {
+        "t": "Move off quickly to clear the junction before it arrives.",
+        "ok": false,
+        "why": "You'd be in the middle of the junction when it arrives."
+      }
+    ],
+    "lesson": "junctions-roundabouts"
+  },
+  {
+    "id": "amber-light",
+    "title": "The light turns amber",
+    "layout": "crossing",
+    "cat": "junc",
+    "brief": "Signal junction, 50 km/h. The light turns amber just before the stop line; a car is close behind you.",
+    "duration": 3.0,
+    "actors": [
+      {
+        "id": "car",
+        "kind": "car",
+        "x": 150,
+        "y": 640,
+        "tx": 150,
+        "ty": 560,
+        "then": [
+          150,
+          560
+        ],
+        "color": "#7c3aed"
+      },
+      {
+        "id": "ped",
+        "kind": "ped",
+        "x": 320,
+        "y": 236,
+        "tx": 300,
+        "ty": 236,
+        "then": [
+          84,
+          236
+        ]
+      }
+    ],
+    "hazard": "car",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Stop if you can do so safely; go on only if you're too close to stop.",
+        "ok": true,
+        "why": "Amber means stop unless stopping would be unsafe. A tailgater is a reason to brake early and smoothly, not to race."
+      },
+      {
+        "t": "Speed up to beat the red.",
+        "ok": false,
+        "why": "Pedestrians and cross traffic start moving as the light changes."
+      },
+      {
+        "t": "Brake as hard as possible.",
+        "ok": false,
+        "why": "A sudden stop with a car close behind risks a rear-end crash."
+      },
+      {
+        "t": "Keep the same speed and decide at the line.",
+        "ok": false,
+        "why": "Waiting leaves you too close to stop safely."
+      }
+    ],
+    "lesson": "stopping-distance-physics"
+  },
+  {
+    "id": "blocked-view",
+    "title": "A side road hidden by a parked truck",
+    "layout": "junction",
+    "cat": "junc",
+    "brief": "Main road, 40 km/h. A truck is parked just before a side road on your left, hiding it from view.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "pk",
+        "kind": "truck",
+        "x": 76,
+        "y": 330,
+        "tx": 76,
+        "ty": 330,
+        "then": [
+          76,
+          330
+        ],
+        "color": "#64748b"
+      },
+      {
+        "id": "car",
+        "kind": "car",
+        "x": 30,
+        "y": 228,
+        "tx": 96,
+        "ty": 228,
+        "then": [
+          110,
+          228
+        ],
+        "rot": 90,
+        "color": "#0ea5e9",
+        "brake": true
+      }
+    ],
+    "hazard": "car",
+    "question": "A car's bonnet appears past the truck. What do you do?",
+    "choices": [
+      {
+        "t": "Keep your speed — you have priority on the main road.",
+        "ok": false,
+        "why": "Priority doesn't help if the other driver can't see you."
+      },
+      {
+        "t": "Speed up to pass the junction before it comes out.",
+        "ok": false,
+        "why": "You'd arrive faster just as it nudges out."
+      },
+      {
+        "t": "Slow down, move out a little if it's clear and be ready to stop — the driver can't see you either.",
+        "ok": true,
+        "why": "A blocked view works both ways; the emerging driver may pull out blind."
+      },
+      {
+        "t": "Sound the horn and keep going at the same speed.",
+        "ok": false,
+        "why": "The horn may help, but only slowing gives you time to stop."
+      }
+    ],
+    "lesson": "junctions-roundabouts"
+  },
+  {
+    "id": "ambulance",
+    "title": "An ambulance behind you",
+    "layout": "dual",
+    "cat": "hwy",
+    "brief": "Four-lane road, 60 km/h. An ambulance with lights and siren is coming up behind you in your lane.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "amb",
+        "kind": "car",
+        "x": 150,
+        "y": 660,
+        "tx": 150,
+        "ty": 560,
+        "then": [
+          250,
+          200
+        ],
+        "color": "#f8fafc"
+      }
+    ],
+    "hazard": "amb",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Brake hard and stop where you are.",
+        "ok": false,
+        "why": "Stopping in its lane blocks it and risks being hit from behind."
+      },
+      {
+        "t": "Speed up to stay ahead of it.",
+        "ok": false,
+        "why": "That doesn't clear its path and makes you a hazard at speed."
+      },
+      {
+        "t": "Check mirrors, signal and move out of its path smoothly when it's safe, then let it pass.",
+        "ok": true,
+        "why": "Make room calmly and predictably; a sudden stop or swerve can cause another crash."
+      },
+      {
+        "t": "Follow closely behind it after it passes.",
+        "ok": false,
+        "why": "It may brake suddenly; slipstreaming an ambulance is dangerous."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "tailgater",
+    "title": "A car close behind you",
+    "layout": "dual",
+    "cat": "hwy",
+    "brief": "Four-lane road, 70 km/h. A car is driving very close behind you.",
+    "duration": 3.0,
+    "actors": [
+      {
+        "id": "tg",
+        "kind": "car",
+        "x": 150,
+        "y": 680,
+        "tx": 150,
+        "ty": 568,
+        "then": [
+          150,
+          568
+        ],
+        "color": "#dc2626"
+      }
+    ],
+    "hazard": "tg",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Tap the brakes to warn it.",
+        "ok": false,
+        "why": "Brake-checking can cause the very crash you fear."
+      },
+      {
+        "t": "Increase the gap ahead of you so you can brake gently, and let it pass if you can.",
+        "ok": true,
+        "why": "More space in front means you won't need to brake hard, which protects you from the car behind."
+      },
+      {
+        "t": "Speed up to get away.",
+        "ok": false,
+        "why": "It will likely follow, and you'll both be going faster with no gap."
+      },
+      {
+        "t": "Ignore it and keep the same gap ahead.",
+        "ok": false,
+        "why": "If you brake hard, the car behind can't stop in time."
+      }
+    ],
+    "lesson": "following-distance"
+  },
+  {
+    "id": "overtake-blind",
+    "title": "Overtaking a lorry before a crest",
+    "layout": "straight",
+    "cat": "hwy",
+    "brief": "Two-lane road, 50 km/h, behind a slow lorry. The road rises to a crest ahead.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "lorry",
+        "kind": "truck",
+        "x": 150,
+        "y": 330,
+        "tx": 150,
+        "ty": 300,
+        "then": [
+          150,
+          300
+        ],
+        "color": "#0f766e"
+      },
+      {
+        "id": "onc",
+        "kind": "car",
+        "x": 250,
+        "y": -80,
+        "tx": 250,
+        "ty": 160,
+        "then": [
+          250,
+          640
+        ],
+        "rot": 180,
+        "color": "#f59e0b"
+      }
+    ],
+    "hazard": "onc",
+    "question": "A car appears over the crest. Should you overtake?",
+    "choices": [
+      {
+        "t": "Yes — go now before the car gets closer.",
+        "ok": false,
+        "why": "You'd be alongside the lorry when you meet it."
+      },
+      {
+        "t": "Yes, if you flash your lights first.",
+        "ok": false,
+        "why": "Flashing doesn't make room on a two-lane road."
+      },
+      {
+        "t": "Pull out halfway to look.",
+        "ok": false,
+        "why": "Half out puts you in the oncoming car's path."
+      },
+      {
+        "t": "No — stay behind until you can see a long, clear stretch.",
+        "ok": true,
+        "why": "Over a crest you can't see what's coming; here a car appeared just as you'd be alongside the lorry."
+      }
+    ],
+    "lesson": "lane-change-overtake"
+  },
+  {
+    "id": "oncoming-overtaker",
+    "title": "An oncoming car overtaking towards you",
+    "layout": "straight",
+    "cat": "hwy",
+    "brief": "Two-lane road, 60 km/h. An oncoming car pulls out to overtake a truck and is coming into your lane.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "trk",
+        "kind": "truck",
+        "x": 250,
+        "y": 40,
+        "tx": 250,
+        "ty": 200,
+        "then": [
+          250,
+          640
+        ],
+        "rot": 180,
+        "color": "#64748b"
+      },
+      {
+        "id": "car",
+        "kind": "car",
+        "x": 250,
+        "y": -120,
+        "tx": 190,
+        "ty": 230,
+        "then": [
+          250,
+          640
+        ],
+        "rot": 180,
+        "color": "#dc2626"
+      }
+    ],
+    "hazard": "car",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Brake firmly and move left to give it room.",
+        "ok": true,
+        "why": "Reducing the closing speed and making space is the only way to avoid a head-on crash."
+      },
+      {
+        "t": "Hold your line and flash — it's in your lane.",
+        "ok": false,
+        "why": "Being in the right won't make the impact any less."
+      },
+      {
+        "t": "Swerve right into its lane.",
+        "ok": false,
+        "why": "It may pull back in at the same moment."
+      },
+      {
+        "t": "Speed up to pass the truck before it gets there.",
+        "ok": false,
+        "why": "Higher closing speed makes any collision far worse."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "slip-merge",
+    "title": "A car joining from a slip road",
+    "layout": "dual",
+    "cat": "hwy",
+    "brief": "Four-lane highway, 70 km/h, left lane. A car is joining from a slip road on your left.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "mrg",
+        "kind": "car",
+        "x": 60,
+        "y": 420,
+        "tx": 96,
+        "ty": 420,
+        "then": [
+          130,
+          300
+        ],
+        "rot": 30,
+        "color": "#0ea5e9"
+      }
+    ],
+    "hazard": "mrg",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Keep your speed — joining traffic must give way.",
+        "ok": false,
+        "why": "It should, but it may not have room to stop on a short slip road."
+      },
+      {
+        "t": "Check mirrors and move right if it's clear, or adjust speed so it can merge.",
+        "ok": true,
+        "why": "Helping traffic merge keeps everyone moving and avoids a squeeze."
+      },
+      {
+        "t": "Speed up to close the gap.",
+        "ok": false,
+        "why": "You'd force it to stop at the end of the slip road or squeeze in."
+      },
+      {
+        "t": "Brake hard to let it in.",
+        "ok": false,
+        "why": "A sudden stop on a highway invites a rear-end crash."
+      }
+    ],
+    "lesson": "lane-change-overtake"
+  },
+  {
+    "id": "queue-end",
+    "title": "Traffic stopped ahead",
+    "layout": "dual",
+    "cat": "hwy",
+    "brief": "Highway, 80 km/h. Over a bend, traffic ahead has stopped in a queue.",
+    "duration": 3.0,
+    "actors": [
+      {
+        "id": "q1",
+        "kind": "car",
+        "x": 150,
+        "y": 150,
+        "tx": 150,
+        "ty": 190,
+        "then": [
+          150,
+          190
+        ],
+        "color": "#64748b",
+        "brake": true
+      },
+      {
+        "id": "q2",
+        "kind": "car",
+        "x": 150,
+        "y": 90,
+        "tx": 150,
+        "ty": 130,
+        "then": [
+          150,
+          130
+        ],
+        "color": "#475569",
+        "brake": true
+      },
+      {
+        "id": "q3",
+        "kind": "truck",
+        "x": 250,
+        "y": 120,
+        "tx": 250,
+        "ty": 160,
+        "then": [
+          250,
+          160
+        ],
+        "color": "#0f766e",
+        "brake": true
+      }
+    ],
+    "hazard": "q1",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Brake at the last moment to keep your place.",
+        "ok": false,
+        "why": "Late braking leaves no margin and surprises drivers behind."
+      },
+      {
+        "t": "Swerve onto the shoulder to get past the queue.",
+        "ok": false,
+        "why": "The shoulder may be blocked or have people on it."
+      },
+      {
+        "t": "Brake early and firmly, and switch on hazard lights to warn drivers behind.",
+        "ok": true,
+        "why": "Stopping early leaves room and the flashing lights warn the traffic behind you."
+      },
+      {
+        "t": "Change lanes to the one that is moving.",
+        "ok": false,
+        "why": "Every lane ahead has stopped."
+      }
+    ],
+    "lesson": "following-distance"
+  },
+  {
+    "id": "wrong-side-car",
+    "title": "A car driving the wrong way",
+    "layout": "dual",
+    "cat": "hwy",
+    "brief": "Divided highway, 70 km/h, left lane. A car is coming towards you in the right lane of your carriageway.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "ws",
+        "kind": "car",
+        "x": 250,
+        "y": -60,
+        "tx": 250,
+        "ty": 240,
+        "then": [
+          250,
+          640
+        ],
+        "rot": 180,
+        "color": "#dc2626"
+      }
+    ],
+    "hazard": "ws",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Slow down, stay in the left lane and keep well clear; warn others with lights if safe.",
+        "ok": true,
+        "why": "The wrong-way driver may weave; keeping to the far side and slowing gives you the most room."
+      },
+      {
+        "t": "Move to the right lane to block it.",
+        "ok": false,
+        "why": "You'd put yourself directly in its path."
+      },
+      {
+        "t": "Stop in the lane and wait.",
+        "ok": false,
+        "why": "Traffic behind may not stop, and the car may still come your way."
+      },
+      {
+        "t": "Speed up to get past it quickly.",
+        "ok": false,
+        "why": "A head-on at higher speed is far more dangerous."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "dark-pedestrian",
+    "title": "A pedestrian in dark clothes",
+    "layout": "straight",
+    "cat": "wx",
+    "mood": "night",
+    "brief": "Unlit road at night, 50 km/h. Someone in dark clothes is walking on the road edge in your direction.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "ped",
+        "kind": "ped",
+        "x": 104,
+        "y": 170,
+        "tx": 112,
+        "ty": 250,
+        "then": [
+          112,
+          320
+        ]
+      }
+    ],
+    "hazard": "ped",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Switch to high beam and keep your speed.",
+        "ok": false,
+        "why": "High beam helps you see but doesn't give you more stopping room."
+      },
+      {
+        "t": "Sound the horn as you pass.",
+        "ok": false,
+        "why": "It can startle them into stepping the wrong way."
+      },
+      {
+        "t": "Pass close; they're walking away from you.",
+        "ok": false,
+        "why": "They can't see you and may step out round a puddle or pothole."
+      },
+      {
+        "t": "Slow down and give plenty of room as you pass.",
+        "ok": true,
+        "why": "Pedestrians in dark clothes are seen late; you need extra margin."
+      }
+    ],
+    "lesson": "adverse-conditions"
+  },
+  {
+    "id": "high-beam-glare",
+    "title": "Dazzled by oncoming lights",
+    "layout": "straight",
+    "cat": "wx",
+    "mood": "night",
+    "brief": "Night, 50 km/h. An oncoming car has its high beam on and you're dazzled; there's a cyclist with no light near your side.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "onc",
+        "kind": "car",
+        "x": 250,
+        "y": -40,
+        "tx": 250,
+        "ty": 260,
+        "then": [
+          250,
+          640
+        ],
+        "rot": 180,
+        "color": "#f8fafc"
+      },
+      {
+        "id": "cyc",
+        "kind": "cycle",
+        "x": 112,
+        "y": 200,
+        "tx": 112,
+        "ty": 250,
+        "then": [
+          112,
+          250
+        ]
+      }
+    ],
+    "hazard": "cyc",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Put your own high beam on to dazzle them back.",
+        "ok": false,
+        "why": "Two dazzled drivers is worse than one."
+      },
+      {
+        "t": "Keep your speed and look at the lights.",
+        "ok": false,
+        "why": "Looking into the lights makes the dazzle worse and you're driving blind."
+      },
+      {
+        "t": "Close your eyes for a moment until it passes.",
+        "ok": false,
+        "why": "Even a second without seeing at speed covers many metres."
+      },
+      {
+        "t": "Slow down, look towards the left edge of the road and be ready to stop.",
+        "ok": true,
+        "why": "When dazzled you can't see what's in your lane — like this unlit cyclist."
+      }
+    ],
+    "lesson": "adverse-conditions"
+  },
+  {
+    "id": "rain-braking",
+    "title": "The car ahead brakes in rain",
+    "layout": "straight",
+    "cat": "wx",
+    "mood": "rain",
+    "brief": "Heavy rain, 50 km/h. The car ahead suddenly brakes.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "lead",
+        "kind": "car",
+        "x": 150,
+        "y": 250,
+        "tx": 150,
+        "ty": 280,
+        "then": [
+          150,
+          320
+        ],
+        "color": "#475569",
+        "brake": true
+      }
+    ],
+    "hazard": "lead",
+    "question": "What should you have done already, and what now?",
+    "choices": [
+      {
+        "t": "Kept the normal gap — now brake as hard as possible.",
+        "ok": false,
+        "why": "Harsh braking on water risks a skid, and a normal gap is too short."
+      },
+      {
+        "t": "Kept close to see its brake lights — now swerve.",
+        "ok": false,
+        "why": "Swerving on a wet road can make you lose control."
+      },
+      {
+        "t": "Nothing — ABS will stop you in the same distance.",
+        "ok": false,
+        "why": "ABS helps you steer; it doesn't shorten wet stopping distance much."
+      },
+      {
+        "t": "Kept at least double the dry-weather gap — now brake smoothly and firmly.",
+        "ok": true,
+        "why": "Wet roads can double stopping distances; a bigger gap lets you brake without skidding."
+      }
+    ],
+    "lesson": "skids-water"
+  },
+  {
+    "id": "fog-tractor",
+    "title": "A slow vehicle in fog",
+    "layout": "straight",
+    "cat": "wx",
+    "mood": "fog",
+    "brief": "Thick fog, 50 km/h. A slow tractor with weak lights appears ahead in your lane.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "trac",
+        "kind": "truck",
+        "x": 150,
+        "y": 60,
+        "tx": 150,
+        "ty": 250,
+        "then": [
+          150,
+          300
+        ],
+        "color": "#16a34a"
+      }
+    ],
+    "hazard": "trac",
+    "question": "What should your speed have been?",
+    "choices": [
+      {
+        "t": "Slow enough to stop within the distance you can see — now brake and follow at a safe gap.",
+        "ok": true,
+        "why": "In fog you must be able to stop within what you can see; slow vehicles appear suddenly."
+      },
+      {
+        "t": "Normal speed with high beam on.",
+        "ok": false,
+        "why": "High beam reflects off fog and makes it harder to see."
+      },
+      {
+        "t": "Close behind other cars to follow their lights.",
+        "ok": false,
+        "why": "You'd have no room to stop if they braked."
+      },
+      {
+        "t": "Fast, to get out of the fog sooner.",
+        "ok": false,
+        "why": "Speed in fog leaves no time to react."
+      }
+    ],
+    "lesson": "adverse-conditions"
+  },
+  {
+    "id": "umbrella-ped",
+    "title": "A pedestrian under an umbrella",
+    "layout": "crossing",
+    "cat": "wx",
+    "mood": "rain",
+    "brief": "Rain, town road, 40 km/h, approaching a crossing. A woman holds an umbrella low over her head.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "ped",
+        "kind": "ped",
+        "x": 84,
+        "y": 236,
+        "tx": 110,
+        "ty": 236,
+        "then": [
+          320,
+          236
+        ]
+      }
+    ],
+    "hazard": "ped",
+    "question": "She steps towards the crossing. What do you do?",
+    "choices": [
+      {
+        "t": "Keep going — she'll see you and wait.",
+        "ok": false,
+        "why": "She may not see you at all under the umbrella."
+      },
+      {
+        "t": "Sound the horn to warn her.",
+        "ok": false,
+        "why": "She may step back or forward unpredictably."
+      },
+      {
+        "t": "Slow down early and be ready to stop — her umbrella blocks her view of you.",
+        "ok": true,
+        "why": "Umbrellas and rain hoods hide traffic from pedestrians, and wet roads need longer to stop."
+      },
+      {
+        "t": "Brake hard only when she steps onto the road.",
+        "ok": false,
+        "why": "On a wet road that may be too late."
+      }
+    ],
+    "lesson": "adverse-conditions"
+  },
+  {
+    "id": "stray-dog",
+    "title": "A dog at the roadside",
+    "layout": "straight",
+    "cat": "rural",
+    "brief": "Village road, 50 km/h. A dog is sniffing at the edge and looks up as you approach.",
+    "duration": 3.0,
+    "actors": [
+      {
+        "id": "dog",
+        "kind": "dog",
+        "x": 70,
+        "y": 240,
+        "tx": 110,
+        "ty": 248,
+        "then": [
+          240,
+          240
+        ]
+      }
+    ],
+    "hazard": "dog",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Swerve hard if it runs out.",
+        "ok": false,
+        "why": "A sudden swerve can put you off the road or into oncoming traffic."
+      },
+      {
+        "t": "Slow down and be ready to stop — it may run across without warning.",
+        "ok": true,
+        "why": "Animals don't judge traffic; slowing early is safer than a late swerve."
+      },
+      {
+        "t": "Sound the horn and keep your speed.",
+        "ok": false,
+        "why": "The horn can make a dog bolt in any direction, including towards you."
+      },
+      {
+        "t": "Keep going; it's on the edge.",
+        "ok": false,
+        "why": "It can be in front of you in a moment."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "cattle-herd",
+    "title": "Cattle being herded",
+    "layout": "straight",
+    "cat": "rural",
+    "brief": "Rural road, 40 km/h. A herder is moving cattle along the road towards you.",
+    "duration": 3.6,
+    "actors": [
+      {
+        "id": "c1",
+        "kind": "cow",
+        "x": 120,
+        "y": 120,
+        "tx": 130,
+        "ty": 230,
+        "then": [
+          130,
+          280
+        ]
+      },
+      {
+        "id": "c2",
+        "kind": "cow",
+        "x": 200,
+        "y": 90,
+        "tx": 190,
+        "ty": 200,
+        "then": [
+          190,
+          250
+        ]
+      },
+      {
+        "id": "herd",
+        "kind": "ped",
+        "x": 250,
+        "y": 60,
+        "tx": 240,
+        "ty": 170,
+        "then": [
+          240,
+          220
+        ]
+      }
+    ],
+    "hazard": "c1",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Sound the horn to move the cattle aside.",
+        "ok": false,
+        "why": "Startled cattle can charge or scatter into your path."
+      },
+      {
+        "t": "Drive slowly through the middle of the herd.",
+        "ok": false,
+        "why": "An animal may turn into the car without warning."
+      },
+      {
+        "t": "Slow right down or stop, and wait for the herder to clear a way.",
+        "ok": true,
+        "why": "Cattle startle easily and move unpredictably; the herder knows how to move them safely."
+      },
+      {
+        "t": "Turn on your headlights and drive on.",
+        "ok": false,
+        "why": "Lights don't move cattle and may unsettle them."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "village-cyclist",
+    "title": "A cyclist from a village lane",
+    "layout": "junction",
+    "cat": "rural",
+    "brief": "Rural road, 50 km/h. A cyclist is rolling down a lane on your left without slowing.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "cyc",
+        "kind": "cycle",
+        "x": 30,
+        "y": 228,
+        "tx": 70,
+        "ty": 228,
+        "then": [
+          180,
+          228
+        ],
+        "rot": 90
+      }
+    ],
+    "hazard": "cyc",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Keep going — the cyclist has to give way.",
+        "ok": false,
+        "why": "They may not be able to, or may not look."
+      },
+      {
+        "t": "Slow down and be ready to stop — the cyclist may roll straight out.",
+        "ok": true,
+        "why": "Cyclists on lanes often don't stop at the main road, and may have weak brakes."
+      },
+      {
+        "t": "Sound the horn and keep your speed.",
+        "ok": false,
+        "why": "The cyclist may not be able to stop even if they hear you."
+      },
+      {
+        "t": "Swerve towards the centre now.",
+        "ok": false,
+        "why": "You may need that space for oncoming traffic, and the cyclist may still come out."
+      }
+    ],
+    "lesson": "junctions-roundabouts"
+  },
+  {
+    "id": "tractor-turn",
+    "title": "A slow tractor ahead",
+    "layout": "junction",
+    "cat": "rural",
+    "brief": "Rural road, 30 km/h behind a slow tractor. There's a field entrance on the left; its indicator isn't working.",
+    "duration": 3.4,
+    "actors": [
+      {
+        "id": "trac",
+        "kind": "truck",
+        "x": 150,
+        "y": 260,
+        "tx": 140,
+        "ty": 240,
+        "then": [
+          70,
+          226
+        ],
+        "color": "#16a34a"
+      }
+    ],
+    "hazard": "trac",
+    "question": "You want to overtake. What do you do?",
+    "choices": [
+      {
+        "t": "Wait — it may turn left or right at the entrance; overtake only once it's clear what it's doing.",
+        "ok": true,
+        "why": "Farm vehicles often turn into fields without signals and may swing out first."
+      },
+      {
+        "t": "Overtake now on the right.",
+        "ok": false,
+        "why": "If it swings out right to turn left, you'll be hit."
+      },
+      {
+        "t": "Overtake on the left.",
+        "ok": false,
+        "why": "It may be turning left into exactly that space."
+      },
+      {
+        "t": "Sound the horn and overtake.",
+        "ok": false,
+        "why": "The driver may not hear over the engine."
+      }
+    ],
+    "lesson": "lane-change-overtake"
+  },
+  {
+    "id": "parked-pullout",
+    "title": "A parked car pulling out",
+    "layout": "straight",
+    "cat": "town",
+    "brief": "Town road, 40 km/h. A parked car ahead has its wheels turned out and exhaust smoke showing.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "pk",
+        "kind": "car",
+        "x": 116,
+        "y": 300,
+        "tx": 128,
+        "ty": 262,
+        "then": [
+          150,
+          180
+        ],
+        "rot": -15,
+        "color": "#0ea5e9"
+      }
+    ],
+    "hazard": "pk",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Speed up to pass before it moves.",
+        "ok": false,
+        "why": "If it pulls out as you arrive, there's no time to stop."
+      },
+      {
+        "t": "Keep your speed — parked cars must wait.",
+        "ok": false,
+        "why": "They should, but the driver may not have seen you."
+      },
+      {
+        "t": "Slow down and be ready for it to pull out in front of you.",
+        "ok": true,
+        "why": "Turned wheels, exhaust and a driver inside are all clues it's about to move."
+      },
+      {
+        "t": "Move into the oncoming lane early without checking.",
+        "ok": false,
+        "why": "You're swapping one hazard for a bigger one."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
+  },
+  {
+    "id": "reversing-car",
+    "title": "A car reversing out of a gate",
+    "layout": "straight",
+    "cat": "town",
+    "brief": "Residential road, 30 km/h. A car is reversing out of a house gate on your left.",
+    "duration": 3.2,
+    "actors": [
+      {
+        "id": "rev",
+        "kind": "car",
+        "x": 96,
+        "y": 180,
+        "tx": 114,
+        "ty": 252,
+        "then": [
+          130,
+          290
+        ],
+        "rot": 200,
+        "color": "#f59e0b"
+      }
+    ],
+    "hazard": "rev",
+    "question": "What do you do?",
+    "choices": [
+      {
+        "t": "Sound the horn and drive past quickly.",
+        "ok": false,
+        "why": "The driver may keep reversing into your path."
+      },
+      {
+        "t": "Keep going — it must wait for you.",
+        "ok": false,
+        "why": "It should, but it may not have seen you."
+      },
+      {
+        "t": "Slow down or stop and let it finish — the driver's view behind is poor.",
+        "ok": true,
+        "why": "Reversing drivers see little; giving them time avoids a collision."
+      },
+      {
+        "t": "Pass on the right without checking oncoming traffic.",
+        "ok": false,
+        "why": "You'd trade one risk for a head-on one."
+      }
+    ],
+    "lesson": "hazard-perception-basics"
   }
 ]

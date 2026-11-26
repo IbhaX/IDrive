@@ -15,15 +15,26 @@ H.view = async (app) => {
   H.all = d.scenarios;
   const s = H.all.find(x => x.id === S.param);
   if (s) { H.play(app, s); return; }
+  H.index(app);
+};
+H.CATS = ["ped", "two", "junc", "hwy", "heavy", "rural", "wx", "town"];
+H.cat = "";
+H.index = (app) => {
   const score = H.all.filter(x => (P.hz || {})[x.id] > 0).length;
+  const n = (c) => H.all.filter(x => x.cat === c).length;
+  const chip = (c, label, cnt) => `<button class="chip${H.cat === c ? " on" : ""}" data-act="hzcat" data-k="${c}" aria-pressed="${H.cat === c}">${e(label)} <small>${cnt}</small></button>`;
   app.innerHTML = `${Course.crumbs([[u("home"), "#home"], [u("tHazard"), "#hazard"]])}
-  <section class="panel rvl"><h2>${e(u("hazTitle"))}</h2><p class="lede">${e(u("hazLede"))}</p><p class="muted">${e(u("hazScore", { n: score, t: H.all.length }))}</p></section>
-  <div class="feat">${H.all.map((x, i) => {
+  <section class="panel rvl"><h2>${e(u("hazTitle"))}</h2><p class="lede">${e(u("hazLede"))}</p><p class="muted">${e(u("hazScore", { n: score, t: H.all.length }))}</p>
+  <div class="plist hzcats" role="group" aria-label="${esc(I18n.one(u("hzCats")))}">${chip("", u("hzCatAll"), H.all.length)}${H.CATS.filter(n).map(c => chip(c, u("hzCat_" + c), n(c))).join("")}</div></section>
+  <div class="feat" id="hzList">${H.all.map((x, i) => {
+    if (H.cat && x.cat !== H.cat) return "";
     const v = (P.hz || {})[x.id] || 0;
-    return `<a class="fcard tiltc rvl hz-${v >= 2 ? "perfect" : v > 0 ? "ok" : "new"}" href="#hazard/${x.id}"><span class="fi">${i + 1}</span><b>${e(x.title)}</b><small>${e(x.brief)}</small><span class="mfoot">${e(u(v >= 2 ? "hzPerfect" : v > 0 ? "hzPassed" : "hzNew"))}</span></a>`;
+    const mood = x.mood ? `<span class="hzmood">${e(u("hzMood_" + x.mood))}</span>` : "";
+    return `<a class="fcard tiltc rvl hz-${v >= 2 ? "perfect" : v > 0 ? "ok" : "new"}" href="#hazard/${x.id}"><span class="fi">${i + 1}</span><b>${e(x.title)}</b><small>${e(x.brief)}</small><span class="mfoot">${e(u("hzCat_" + x.cat))}${mood} · ${e(u(v >= 2 ? "hzPerfect" : v > 0 ? "hzPassed" : "hzNew"))}</span></a>`;
   }).join("")}</div>`;
   Motion.reveal(app);
 };
+H.filter = (c) => { H.cat = H.cat === c ? "" : c; const app = document.getElementById("app"); if (app && S.view === "hazard" && !S.param) H.index(app); };
 
 /* ---------- scene drawing ---------- */
 const road = (layout) => {
@@ -47,6 +58,20 @@ const shape = (a) => {
     case "ped": return `<circle r="9" class="ped"/><circle r="4" cy="-1" class="pedh"/>`;
     case "cow": return `<ellipse rx="22" ry="12" class="cow"/><circle cx="-24" cy="0" r="7" class="cow"/><circle cx="6" cy="-3" r="4" class="cowspot"/>`;
     case "dog": return `<ellipse rx="12" ry="6" class="dog"/><circle cx="-13" r="4" class="dog"/>`;
+    case "auto": return `<path d="M-14 -24 Q0 -34 14 -24 L15 22 Q15 26 11 26 L-11 26 Q-15 26 -15 22 Z" fill="${a.color || "#facc15"}"/><path d="M-12 -6 L12 -6 L12 22 L-12 22 Z" class="autotop"/><rect x="-10" y="-20" width="20" height="9" rx="3" class="glass"/><rect x="-12" y="23" width="6" height="3" class="tail"/><rect x="6" y="23" width="6" height="3" class="tail"/>`;
+    case "cycle": return `<line x1="0" y1="-18" x2="0" y2="18" class="cyc"/><line x1="-8" y1="-12" x2="8" y2="-12" class="cyc"/><circle cy="2" r="6" class="cycr" fill="${a.color || "#22c55e"}"/>`;
+    case "ball": return `<circle r="7" class="ball"/><path d="M-7 0 Q0 -4 7 0 M0 -7 Q-3 0 0 7" class="ballseam"/>`;
+  }
+  return "";
+};
+const mood = (m) => {
+  if (m === "night") return `<rect width="400" height="600" class="mood mnight"/>`;
+  if (m === "fog") return `<defs><linearGradient id="hzFogG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cbd5e1" stop-opacity=".95"/><stop offset=".45" stop-color="#cbd5e1" stop-opacity=".7"/><stop offset=".8" stop-color="#cbd5e1" stop-opacity=".18"/><stop offset="1" stop-color="#cbd5e1" stop-opacity=".05"/></linearGradient></defs><rect width="400" height="600" fill="url(#hzFogG)" class="mood mfog"/>`;
+  if (m === "rain") {
+    let r = "", seed = 7;
+    const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+    for (let i = 0; i < 70; i++) { const x = rnd() * 420, y = rnd() * 600; r += `<line x1="${x.toFixed(0)}" y1="${y.toFixed(0)}" x2="${(x - 6).toFixed(0)}" y2="${(y + 18).toFixed(0)}"/>`; }
+    return `<rect width="400" height="600" class="mood mrainsky"/><g class="mood mrain"><g>${r}</g><g transform="translate(0,-600)">${r}</g></g>`;
   }
   return "";
 };
@@ -59,7 +84,7 @@ H.st = null;
 H.play = (app, s) => {
   H.st = { s, phase: "intro", spotted: null, choice: null, tl: null };
   app.innerHTML = `${Course.crumbs([[u("tHazard"), "#hazard"], [s.title, "#hazard/" + s.id]])}
-  <div class="hzgrid"><section class="panel hzscene"><svg id="hzSvg" viewBox="0 0 400 600" role="img" aria-label="${esc(I18n.one(s.title))}">${road(s.layout)}${s.actors.map(a => actorG(a, [a.x, a.y])).join("")}${ego}<rect id="hzFlash" width="400" height="600" class="flash" opacity="0"/></svg></section>
+  <div class="hzgrid"><section class="panel hzscene"><svg id="hzSvg" class="${s.mood ? "m-" + s.mood : ""}" viewBox="0 0 400 600" role="img" aria-label="${esc(I18n.one(s.title))}">${road(s.layout)}${s.actors.map(a => actorG(a, [a.x, a.y])).join("")}${mood(s.mood)}${ego}<rect id="hzFlash" width="400" height="600" class="flash" opacity="0"/></svg></section>
   <section class="panel hzpanel" id="hzPanel" aria-live="polite"></section></div>`;
   H.panel();
 };
@@ -71,7 +96,7 @@ H.panel = () => {
   } else if (st.phase === "play") {
     box.innerHTML = `<p class="lede">${e(u("hzWatch"))}</p><div class="hzbar"><i id="hzProg"></i></div>`;
   } else if (st.phase === "spot") {
-    box.innerHTML = `<h3 class="sh">${e(u("hzSpot"))}</h3><p class="muted">${e(u("hzSpotSub"))}</p><div class="plist">${s.actors.map(a => `<button class="chip" data-hz="${a.id}">${e(u("kind_" + a.kind))}</button>`).join("")}</div>`;
+    box.innerHTML = `<h3 class="sh">${e(u("hzSpot"))}</h3><p class="muted">${e(u("hzSpotSub"))}</p><div class="plist">${s.actors.filter((a, i, all) => all.findIndex(b => b.kind === a.kind) === i).map(a => `<button class="chip" data-hz="${a.id}">${e(u("kind_" + a.kind))}</button>`).join("")}</div>`;
   } else if (st.phase === "choose") {
     box.innerHTML = `${st.spotted !== null ? `<div class="fb ${st.spotted ? "ok" : "no"}">${e(u(st.spotted ? "hzSpotRight" : "hzSpotWrong", { k: u("kind_" + s.actors.find(a => a.id === s.hazard).kind) }))}</div>` : ""}<h3 class="sh">${e(s.question)}</h3><div class="opts">${s.choices.map((c, i) => `<button class="opt" data-hzc="${i}">${e(c.t)}</button>`).join("")}</div>`;
   } else {
@@ -111,7 +136,8 @@ H.start = () => {
 H.spot = (id) => {
   const st = H.st;
   if (!st || st.phase !== "spot") return;
-  st.spotted = id === st.s.hazard;
+  const hk = st.s.actors.find(a => a.id === st.s.hazard).kind, pk = (st.s.actors.find(a => a.id === id) || {}).kind;
+  st.spotted = id === st.s.hazard || pk === hk;
   document.getElementById("hzSvg").classList.remove("pick");
   const g = document.getElementById("hzA-" + st.s.hazard);
   if (g) g.classList.add("hazard");
