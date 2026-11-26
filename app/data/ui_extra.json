@@ -6162,5 +6162,145 @@
  "gmPairsScore": [
   "Time {t} s + {x} extra moves × 2 s = +{p} s.",
   "സമയം {t} സെ. + {x} അധിക നീക്കങ്ങൾ × 2 സെ. = +{p} സെ."
+ ],
+ "labAbout_stopping": [
+  "Stopping distance is reaction distance (speed × reaction time) plus braking distance (v² ÷ 2 × deceleration). Double the speed and the first part doubles while the second becomes four times as long; a wet road cuts the deceleration and stretches it further.",
+  "നിർത്താനുള്ള ദൂരം = പ്രതികരണ ദൂരം (വേഗം × പ്രതികരണ സമയം) + ബ്രേക്കിങ് ദൂരം (v² ÷ 2 × വേഗക്കുറവ്). വേഗം ഇരട്ടിയായാൽ ആദ്യ ഭാഗം ഇരട്ടിയാകും, രണ്ടാമത്തേത് നാലിരട്ടിയാകും; നനഞ്ഞ റോഡ് വേഗക്കുറവ് കുറച്ച് ദൂരം ഇനിയും കൂട്ടും."
+ ],
+ "labAbout_reaction": [
+  "Measures how fast you respond to a signal. Alert drivers usually take about 0.7–1.5 s to start braking; tiredness, phones and alcohol make it longer, and every extra 0.1 s at 60 km/h is about 1.7 m more before the brakes even start.",
+  "ഒരു സിഗ്നലിനോട് എത്ര വേഗം പ്രതികരിക്കുന്നു എന്ന് അളക്കുന്നു. ശ്രദ്ധയുള്ള ഡ്രൈവർമാർക്ക് ബ്രേക്ക് ചെയ്തുതുടങ്ങാൻ സാധാരണ 0.7–1.5 സെ. വേണം; ക്ഷീണം, ഫോൺ, മദ്യം എന്നിവ ഇത് കൂട്ടും; 60 km/h-ൽ ഓരോ 0.1 സെ.-ക്കും ബ്രേക്ക് തുടങ്ങും മുമ്പ് ഏകദേശം 1.7 മീ. കൂടുതൽ."
+ ],
+ "labAbout_following": [
+  "Shows the gap you need behind another vehicle. While you react, the gap shrinks by your speed × reaction time - a 2-second gap at 60 km/h is about 33 m, and rain or a heavy vehicle ahead needs more.",
+  "മുന്നിലെ വാഹനത്തിന് പിന്നിൽ വേണ്ട അകലം കാണിക്കുന്നു. നിങ്ങൾ പ്രതികരിക്കുമ്പോൾ അകലം വേഗം × പ്രതികരണ സമയം കുറയും - 60 km/h-ൽ 2 സെക്കൻഡ് അകലം ഏകദേശം 33 മീ.; മഴയിലോ മുന്നിൽ വലിയ വാഹനമെങ്കിലോ കൂടുതൽ വേണം."
+ ],
+ "labAbout_cornering": [
+  "Tyres share one budget of grip between braking, accelerating and turning - the friction circle. A bend needs sideways grip of v² ÷ r, so braking hard in the middle of a bend can leave too little grip to steer.",
+  "ബ്രേക്കിങ്, ആക്സിലറേഷൻ, തിരിയൽ എന്നിവയ്ക്കിടയിൽ ടയറുകൾ ഒരേ ഗ്രിപ്പ് പങ്കിടുന്നു - ഘർഷണ വൃത്തം. വളവിന് v² ÷ r പാർശ്വ ഗ്രിപ്പ് വേണം; അതിനാൽ വളവിന്റെ നടുവിൽ ശക്തമായി ബ്രേക്ക് ചെയ്താൽ സ്റ്റിയർ ചെയ്യാൻ ഗ്രിപ്പ് തികയാതെ വരാം."
+ ],
+ "labAbout_headlights": [
+  "Compares how far dipped and main beams light the road with the distance you need to stop. If you can't stop within the lit distance, you are driving faster than your headlights allow.",
+  "താഴ്ത്തിയതും ഉയർത്തിയതുമായ ലൈറ്റുകൾ റോഡ് എത്ര ദൂരം പ്രകാശിപ്പിക്കുന്നു എന്നത് നിർത്താൻ വേണ്ട ദൂരവുമായി താരതമ്യം ചെയ്യുന്നു. പ്രകാശിക്കുന്ന ദൂരത്തിനുള്ളിൽ നിർത്താനാകുന്നില്ലെങ്കിൽ ലൈറ്റുകൾ അനുവദിക്കുന്നതിലും വേഗത്തിലാണ് നിങ്ങൾ."
+ ],
+ "labAbout_blindspot": [
+  "Maps what each mirror and a direct look can see around the car, and the zones none of them cover - exactly where a motorcycle can disappear. Move the mirrors and the rider to see the gaps change.",
+  "ഓരോ കണ്ണാടിയും നേരിട്ടുള്ള നോട്ടവും കാറിന് ചുറ്റും എന്ത് കാണുന്നു എന്നും ഒന്നും കാണാത്ത ഭാഗങ്ങളും കാണിക്കുന്നു - ബൈക്ക് മറഞ്ഞുപോകുന്നത് അവിടെയാണ്. കണ്ണാടികളും റൈഡറെയും നീക്കി മാറ്റം കാണുക."
+ ],
+ "labAbout_energy": [
+  "Crash energy is ½ m v², so it grows with the square of speed: a crash at 60 km/h carries four times the energy of one at 30 km/h - like falling from about 14 m.",
+  "ഇടിയുടെ ഊർജം ½ m v² ആണ്, അതിനാൽ വേഗത്തിന്റെ വർഗത്തിനനുസരിച്ച് കൂടും: 60 km/h-ലെ ഇടിക്ക് 30 km/h-ലേതിന്റെ നാലിരട്ടി ഊർജം - ഏകദേശം 14 മീ. ഉയരത്തിൽ നിന്ന് വീഴുന്നതുപോലെ."
+ ],
+ "labAbout_engine": [
+  "Shows the four strokes of a petrol engine - intake, compression, power and exhaust - and how the crankshaft turns twice for every power stroke in each cylinder.",
+  "പെട്രോൾ എഞ്ചിന്റെ നാല് സ്ട്രോക്കുകൾ - ഇൻടേക്ക്, കംപ്രഷൻ, പവർ, എക്സ്ഹോസ്റ്റ് - കാണിക്കുന്നു; ഓരോ സിലിണ്ടറിലും ഓരോ പവർ സ്ട്രോക്കിനും ക്രാങ്ക്ഷാഫ്റ്റ് രണ്ട് തവണ കറങ്ങുന്നതും."
+ ],
+ "gmWhy_brakelight": [
+  "Most rear-end crashes happen because a driver noticed the brake lights ahead too late; every 0.1 s you save is about 1.7 m at 60 km/h.",
+  "മുന്നിലെ ബ്രേക്ക് ലൈറ്റ് വൈകി ശ്രദ്ധിക്കുന്നതാണ് പിന്നിൽ ഇടിക്കുന്ന അപകടങ്ങളുടെ പ്രധാന കാരണം; 60 km/h-ൽ ഓരോ 0.1 സെ.-ഉം ഏകദേശം 1.7 മീ. ആണ്."
+ ],
+ "gmWhy_greenlight": [
+  "Trains you to react quickly while waiting for the signal instead of guessing - jumping a light is how junction crashes start.",
+  "ഊഹിക്കാതെ സിഗ്നലിനായി കാത്ത് വേഗം പ്രതികരിക്കാൻ പരിശീലിപ്പിക്കുന്നു - ലൈറ്റ് ചാടുന്നതാണ് ജംഗ്ഷൻ അപകടങ്ങളുടെ തുടക്കം."
+ ],
+ "gmWhy_kidout": [
+  "Children step out between parked cars with no warning; how fast you react decides whether you stop in time.",
+  "പാർക്ക് ചെയ്ത കാറുകൾക്കിടയിൽ നിന്ന് കുട്ടികൾ മുന്നറിയിപ്പില്ലാതെ ഇറങ്ങും; സമയത്ത് നിർത്താനാകുമോ എന്നത് പ്രതികരണ വേഗത്തെ ആശ്രയിക്കുന്നു."
+ ],
+ "gmWhy_gonogo": [
+  "Driving is full of signals you must ignore as well as ones you must act on; this trains fast responses without false starts.",
+  "പ്രതികരിക്കേണ്ടതും അവഗണിക്കേണ്ടതുമായ സിഗ്നലുകൾ നിറഞ്ഞതാണ് ഡ്രൈവിങ്; തെറ്റായ തുടക്കമില്ലാതെ വേഗത്തിൽ പ്രതികരിക്കാൻ ഇത് പരിശീലിപ്പിക്കുന്നു."
+ ],
+ "gmWhy_indicator": [
+  "Reading other drivers' indicators early tells you where they are about to go, so you can hold back or make room.",
+  "മറ്റ് ഡ്രൈവർമാരുടെ ഇൻഡിക്കേറ്റർ നേരത്തേ വായിച്ചാൽ അവർ എങ്ങോട്ട് പോകുമെന്ന് അറിയാം; പിന്നോട്ട് നിൽക്കാനോ ഇടം നൽകാനോ കഴിയും."
+ ],
+ "gmWhy_mirrors": [
+  "Good drivers check a mirror every few seconds; spotting a bike in a quick glance is the skill that makes lane changes safe.",
+  "നല്ല ഡ്രൈവർമാർ ഏതാനും സെക്കൻഡ് കൂടുമ്പോൾ കണ്ണാടി നോക്കും; ഒറ്റനോട്ടത്തിൽ ബൈക്ക് കാണുന്നതാണ് ലെയ്ൻ മാറ്റം സുരക്ഷിതമാക്കുന്നത്."
+ ],
+ "gmWhy_peripheral": [
+  "Pedestrians, animals and bikes usually appear at the edge of your vision first; noticing them there buys valuable time.",
+  "കാൽനടക്കാരും മൃഗങ്ങളും ബൈക്കുകളും സാധാരണ ആദ്യം കാഴ്ചയുടെ അരികിലാണ് തെളിയുക; അവിടെ ശ്രദ്ധിച്ചാൽ വിലപ്പെട്ട സമയം കിട്ടും."
+ ],
+ "gmWhy_dodge": [
+  "Kerala roads have potholes, cones and sudden obstacles; reading the lane ahead and moving early is safer than a late swerve.",
+  "കേരളത്തിലെ റോഡുകളിൽ കുഴികളും കോണുകളും പെട്ടെന്നുള്ള തടസ്സങ്ങളുമുണ്ട്; മുന്നിലെ ലെയ്ൻ വായിച്ച് നേരത്തേ മാറുന്നത് വൈകിയുള്ള വെട്ടിക്കലിനേക്കാൾ സുരക്ഷിതം."
+ ],
+ "gmWhy_lanekeep": [
+  "Small, early steering corrections keep you in your lane on winding roads; drifting over the centre line is a head-on risk.",
+  "ചെറിയ, നേരത്തേയുള്ള സ്റ്റിയറിങ് തിരുത്തലുകൾ വളഞ്ഞ റോഡിൽ ലെയ്നിൽ നിർത്തും; മധ്യരേഖ കടക്കുന്നത് നേർക്കുനേർ അപകടസാധ്യതയാണ്."
+ ],
+ "gmWhy_animals": [
+  "Cows and dogs on the road are common in Kerala; judging where an animal is heading tells you whether to brake.",
+  "കേരളത്തിൽ റോഡിൽ പശുക്കളും നായ്ക്കളും സാധാരണമാണ്; മൃഗം എങ്ങോട്ട് പോകുന്നു എന്ന് വിലയിരുത്തിയാൽ ബ്രേക്ക് വേണോ എന്ന് അറിയാം."
+ ],
+ "gmWhy_parking": [
+  "Planning moves before you make them is the same skill as getting out of a tight car park without scraping anyone.",
+  "നീക്കങ്ങൾ ചെയ്യും മുമ്പ് ആസൂത്രണം ചെയ്യുന്നത് ഇടുങ്ങിയ പാർക്കിങ്ങിൽ നിന്ന് ആരെയും ഉരസാതെ പുറത്തിറങ്ങുന്ന അതേ കഴിവാണ്."
+ ],
+ "gmWhy_route": [
+  "One-way streets and closed roads are everywhere in towns; planning a legal route ahead saves wrong turns and illegal U-turns.",
+  "പട്ടണങ്ങളിൽ വൺവേകളും അടച്ച റോഡുകളും എല്ലായിടത്തുമുണ്ട്; നിയമപരമായ വഴി മുൻകൂട്ടി ആസൂത്രണം ചെയ്താൽ തെറ്റായ തിരിവുകളും നിയമവിരുദ്ധ യു-ടേണുകളും ഒഴിവാക്കാം."
+ ],
+ "gmWhy_rightofway": [
+  "Most junction crashes happen when two drivers both think they have priority; knowing who goes first removes the guesswork.",
+  "രണ്ട് ഡ്രൈവർമാരും തങ്ങൾക്കാണ് മുൻഗണന എന്ന് കരുതുമ്പോഴാണ് മിക്ക ജംഗ്ഷൻ അപകടങ്ങളും; ആര് ആദ്യം എന്ന് അറിഞ്ഞാൽ ഊഹം വേണ്ട."
+ ],
+ "gmWhy_roundabout": [
+  "Choosing your exit before you enter lets you pick the right lane and signal in good time.",
+  "കയറും മുമ്പ് എക്സിറ്റ് തീരുമാനിച്ചാൽ ശരിയായ ലെയ്ൻ തിരഞ്ഞെടുത്ത് സമയത്ത് സിഗ്നൽ നൽകാം."
+ ],
+ "gmWhy_sequence": [
+  "Doing routine checks in the same order every time means nothing gets missed, even when you are nervous.",
+  "പതിവ് പരിശോധനകൾ എപ്പോഴും ഒരേ ക്രമത്തിൽ ചെയ്താൽ പരിഭ്രമത്തിലും ഒന്നും വിട്ടുപോകില്ല."
+ ],
+ "gmWhy_fuelplan": [
+  "Running out of fuel on a highway leaves you stranded somewhere dangerous; planning stops is part of a safe long trip.",
+  "ഹൈവേയിൽ ഇന്ധനം തീർന്നാൽ അപകടകരമായ സ്ഥലത്ത് കുടുങ്ങും; സ്റ്റോപ്പുകൾ ആസൂത്രണം ചെയ്യുന്നത് സുരക്ഷിത ദീർഘയാത്രയുടെ ഭാഗമാണ്."
+ ],
+ "gmWhy_stopguess": [
+  "Most drivers underestimate how far they need to stop, especially at higher speed or on wet roads.",
+  "മിക്ക ഡ്രൈവർമാരും നിർത്താൻ വേണ്ട ദൂരം കുറച്ചുകാണുന്നു - പ്രത്യേകിച്ച് ഉയർന്ന വേഗത്തിലും നനഞ്ഞ റോഡിലും."
+ ],
+ "gmWhy_speedmath": [
+  "Quick sums about speed, time and distance help you judge gaps, overtakes and journey times on the move.",
+  "വേഗം, സമയം, ദൂരം എന്നിവയെക്കുറിച്ചുള്ള പെട്ടെന്നുള്ള കണക്കുകൾ ഇടവേളകളും ഓവർടേക്കുകളും യാത്രാസമയവും വിലയിരുത്താൻ സഹായിക്കും."
+ ],
+ "gmWhy_plates": [
+  "After a hit-and-run or a dangerous incident, remembering the number plate at a glance can matter.",
+  "ഇടിച്ചിട്ട് പോകൽ പോലുള്ള സംഭവത്തിനു ശേഷം നമ്പർ പ്ലേറ്റ് ഒറ്റനോട്ടത്തിൽ ഓർക്കുന്നത് പ്രധാനമാകാം."
+ ],
+ "gmWhy_signsprint": [
+  "You only get a second or two to read a sign at speed; recognising it instantly leaves your attention for the road.",
+  "വേഗത്തിൽ പോകുമ്പോൾ ഒരു ചിഹ്നം വായിക്കാൻ ഒന്നോ രണ്ടോ സെക്കൻഡേ കിട്ടൂ; പെട്ടെന്ന് തിരിച്ചറിഞ്ഞാൽ ശ്രദ്ധ റോഡിൽ നിലനിർത്താം."
+ ],
+ "gmWhy_signpairs": [
+  "Matching signs from memory builds the quick recognition you need for the licence test and the road.",
+  "ഓർമയിൽ നിന്ന് ചിഹ്നങ്ങൾ ചേർക്കുന്നത് ലൈസൻസ് ടെസ്റ്റിനും റോഡിനും വേണ്ട പെട്ടെന്നുള്ള തിരിച്ചറിവ് വളർത്തും."
+ ],
+ "gmWhatTrains": [
+  "Why it matters",
+  "എന്തുകൊണ്ട് പ്രധാനം"
+ ],
+ "gmRelated": [
+  "More games like this",
+  "ഇതുപോലുള്ള മറ്റ് ഗെയിമുകൾ"
+ ],
+ "gmRelLabs": [
+  "The science behind it",
+  "പിന്നിലെ ശാസ്ത്രം"
+ ],
+ "labRelLessons": [
+  "Lessons that use this lab",
+  "ഈ ലാബ് ഉപയോഗിക്കുന്ന പാഠങ്ങൾ"
+ ],
+ "labRelGames": [
+  "Practise it in a game",
+  "ഗെയിമിൽ പരിശീലിക്കുക"
+ ],
+ "labRelOther": [
+  "More labs in this group",
+  "ഈ വിഭാഗത്തിലെ മറ്റ് ലാബുകൾ"
  ]
 }

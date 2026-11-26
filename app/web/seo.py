@@ -114,6 +114,32 @@ def faq(question: str, answer: str) -> dict[str, Any]:
     }
 
 
+def item_list(items: list[tuple[str, str]], lang: Lang) -> dict[str, Any]:
+    """ItemList of (name, path) - the links shown on a collection page."""
+    return {"@type": "ItemList", "numberOfItems": len(items),
+            "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "url": site_url() + href(p, lang)}
+                                for i, (n, p) in enumerate(items)]}
+
+
+def collection_ld(name: str, desc: str, path: str, items: list[tuple[str, str]], lang: Lang) -> dict[str, Any]:
+    return {"@context": "https://schema.org", "@type": "CollectionPage", "name": name, "description": desc,
+            "url": site_url() + href(path, lang), "inLanguage": lang, "isPartOf": {"@type": "WebSite", "name": "iDrive", "url": site_url()},
+            "mainEntity": item_list(items, lang)}
+
+
+def resource_ld(name: str, desc: str, path: str, lang: Lang, kind: str, teaches: str = "", **extra: Any) -> dict[str, Any]:
+    """LearningResource for an interactive lab, game or tool."""
+    d: dict[str, Any] = {"@context": "https://schema.org", "@type": "LearningResource", "name": name, "description": desc,
+                         "url": site_url() + href(path, lang), "inLanguage": lang, "learningResourceType": kind,
+                         "interactivityType": "active", "isAccessibleForFree": True, "educationalLevel": "Beginner",
+                         "audience": {"@type": "EducationalAudience", "educationalRole": "student"},
+                         "provider": {"@type": "Organization", "name": "iDrive", "url": site_url()}}
+    if teaches:
+        d["teaches"] = teaches
+    d.update(extra)
+    return d
+
+
 def breadcrumb_ld(crumbs: list[tuple[str, str]], lang: Lang) -> dict[str, Any]:
     return {
         "@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -242,7 +268,8 @@ def page_learn(cat: Optional[str], lang: Lang) -> Optional[Page]:
         body = f"""<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1>
 <p class="answer">{esc(cat_blurb(c, lang))}</p>{ul(items)}</article>"""
         return Page(path=f"/learn/{cat}", title=f"{h1} | iDrive", description=clip(cat_blurb(c, lang)),
-                    body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
+                    body=body, crumbs=crumbs, jsonld=[collection_ld(h1, cat_blurb(c, lang), f"/learn/{cat}", [(sign_name(s, lang), f"/sign/{s['id']}") for s in signs], lang),
+                                                       breadcrumb_ld(crumbs, lang)])
     total = len(content.signs())
     crumbs = [home_crumb(lang), (ui("tSigns", lang), "/learn")]
     h1 = T(f"Indian road signs: all {total} signs with meanings", f"ഇന്ത്യൻ റോഡ് ചിഹ്നങ്ങൾ: അർത്ഥത്തോടെ എല്ലാ {total} ചിഹ്നങ്ങളും", lang)
@@ -256,7 +283,7 @@ def page_learn(cat: Optional[str], lang: Lang) -> Optional[Page]:
     body = f"""<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>
 <p>{a("/limits", ui("tLimits", lang), lang)}</p>{secs}</article>"""
     return Page(path="/learn", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs,
-                jsonld=[breadcrumb_ld(crumbs, lang)])
+                jsonld=[collection_ld(h1, lede, "/learn", [(cat_name(c, lang), f"/learn/{c['id']}") for c in cats], lang), breadcrumb_ld(crumbs, lang)])
 
 
 # ---------- theory & glossary ----------
@@ -274,8 +301,9 @@ def page_theory(topic: Optional[str], lang: Lang) -> Optional[Page]:
         items = [a(f"/theory/{t['id']}", pick(t["name"], lang), lang) for t in content.topics()]
         items.append(a("/theory/gloss", T("Glossary of driving terms", "ഡ്രൈവിങ് പദാവലി", lang), lang))
         body = f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>{ul(items)}</article>'
+        links = [(pick(t["name"], lang), f"/theory/{t['id']}") for t in content.topics()] + [(T("Glossary of driving terms", "ഡ്രൈവിങ് പദാവലി", lang), "/theory/gloss")]
         return Page(path="/theory", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs,
-                    jsonld=[breadcrumb_ld(crumbs, lang)])
+                    jsonld=[collection_ld(h1, lede, "/theory", links, lang), breadcrumb_ld(crumbs, lang)])
     if topic == "gloss":
         return page_glossary(None, lang)
     t = content.topic_by_id().get(topic)
@@ -306,11 +334,25 @@ def page_theory(topic: Optional[str], lang: Lang) -> Optional[Page]:
         pts = [pick(x, lang) for x in t.get("lessons", [])]
         intro = pts[0] if pts else name
         parts.append(ul([esc(x) for x in pts[1:]]))
+    # related reading: neighbouring topics, practice questions on this topic, glossary
+    tops = content.topics()
+    ti = next((i for i, x in enumerate(tops) if x["id"] == topic), 0)
+    near = [tops[(ti + k) % len(tops)] for k in (1, 2, 3) if len(tops) > k]
+    nq = content.question_counts().get(topic, 0)
+    rel = [a(f"/theory/{x['id']}", pick(x["name"], lang), lang) for x in near]
+    if nq:
+        rel.append(a("/exam", T(f"Practise {nq} questions on this topic", f"ഈ വിഷയത്തിൽ {nq} ചോദ്യങ്ങൾ പരിശീലിക്കുക", lang), lang))
+    rel += [a("/theory/gloss", T("Glossary of driving terms", "ഡ്രൈവിങ് പദാവലി", lang), lang), a("/course", ui("tCourse", lang), lang)]
+    parts.append(f"<h2>{esc(T('Keep reading', 'തുടർന്ന് വായിക്കുക', lang))}</h2>{ul(rel)}")
     body = f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(name)}</h1><p class="answer">{esc(intro)}</p>{"".join(parts)}</article>'
+    modified = _mtime_date([DATA_DIR / "articles", DATA_DIR / "topics.json"])
     return Page(path=f"/theory/{topic}", title=f"{name} - {T('driving theory', 'ഡ്രൈവിങ് തിയറി', lang)} | iDrive",
                 description=clip(intro), body=body, crumbs=crumbs, og_type="article",
                 jsonld=[{"@context": "https://schema.org", "@type": "Article", "headline": name, "description": clip(intro, 300),
-                         "inLanguage": lang, "publisher": {"@type": "Organization", "name": "iDrive", "url": site_url()}},
+                         "inLanguage": lang, "dateModified": modified, "mainEntityOfPage": site_url() + href(f"/theory/{topic}", lang),
+                         "image": site_url() + "/static/img/og.png",
+                         "author": {"@type": "Organization", "name": "iDrive", "url": site_url()},
+                         "publisher": {"@type": "Organization", "name": "iDrive", "url": site_url(), "logo": {"@type": "ImageObject", "url": site_url() + "/static/img/icon-512.png"}}},
                         breadcrumb_ld(crumbs, lang)])
 
 
@@ -340,7 +382,11 @@ def page_glossary(slug: Optional[str], lang: Lang) -> Optional[Page]:
         body = f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p><dl class="gloss">{rows}</dl></article>'
         return Page(path="/theory/gloss", title=f"{h1} | iDrive",
                     description=clip(lede),
-                    body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
+                    body=body, crumbs=crumbs,
+                    jsonld=[{"@context": "https://schema.org", "@type": "DefinedTermSet", "name": h1, "description": lede, "inLanguage": lang,
+                             "url": site_url() + href("/theory/gloss", lang),
+                             "hasDefinedTerm": [{"@type": "DefinedTerm", "name": g[1] if lang == "ml" else g[0], "url": site_url() + href(f"/glossary/{s}", lang)} for s, g in gl.items()]},
+                            breadcrumb_ld(crumbs, lang)])
     g = gl.get(slug)
     if not g:
         return None
@@ -353,6 +399,7 @@ def page_glossary(slug: Optional[str], lang: Lang) -> Optional[Page]:
     body = f"""<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(q)}</h1>
 <p class="answer"><strong>{esc(term)}</strong>: {esc(defin)}</p>
 <p>{esc(T('In Malayalam:', 'ഇംഗ്ലീഷിൽ:', lang))} <span lang="{'en' if lang == 'ml' else 'ml'}">{esc(g[0] if lang == 'ml' else g[1])}</span></p>
+{_term_lessons(g[0], lang)}
 <h2>{esc(T('More driving terms', 'മറ്റ് ഡ്രൈവിങ് പദങ്ങൾ', lang))}</h2>{ul([a(f"/glossary/{s}", gl[s][1] if lang == 'ml' else gl[s][0], lang) for s in near])}
 <p>{a("/theory/gloss", T("All glossary terms", "എല്ലാ പദങ്ങളും", lang), lang)}</p></article>"""
     visible = f"{term}: {defin}"
@@ -362,6 +409,29 @@ def page_glossary(slug: Optional[str], lang: Lang) -> Optional[Page]:
                         {"@context": "https://schema.org", "@type": "DefinedTerm", "name": term, "description": defin,
                          "inDefinedTermSet": site_url() + "/theory/gloss"},
                         breadcrumb_ld(crumbs, lang)])
+
+
+@lru_cache(maxsize=1)
+def _lessons_text() -> list[tuple[str, Any, str, Optional[str]]]:
+    """(lesson id, title pair, lower-case English text, lab id) for every lesson - used to link
+    glossary terms and labs back to the lessons that teach them."""
+    out = []
+    for lid in curriculum.catalogue()["lessonOrder"]:
+        pl = curriculum.lesson_payload(lid)
+        if not pl:
+            continue
+        L = pl["lesson"]
+        out.append((lid, L["title"], json.dumps(L, ensure_ascii=False).lower(), L.get("lab")))
+    return out
+
+
+def _term_lessons(term_en: str, lang: Lang) -> str:
+    """Up to four lessons whose text uses the glossary term."""
+    word = re.compile(r"\b" + re.escape(term_en.lower()) + r"\b")
+    hits = [(lid, title) for lid, title, text, _ in _lessons_text() if word.search(text)][:4]
+    if not hits:
+        return ""
+    return f"<h2>{esc(T('Lessons that use this term', 'ഈ പദം ഉപയോഗിക്കുന്ന പാഠങ്ങൾ', lang))}</h2>" + ul([a(f"/lesson/{lid}", pick(t, lang), lang) for lid, t in hits])
 
 
 # ---------- course & lessons ----------
@@ -443,7 +513,8 @@ def page_hazard(sid: Optional[str], lang: Lang) -> Optional[Page]:
                  "ഒരു ചെറിയ രംഗം കണ്ട്, രൂപപ്പെടുന്ന അപകടം കണ്ടെത്തി, ഏറ്റവും സുരക്ഷിതമായ പ്രതികരണം തിരഞ്ഞെടുക്കുക. കാൽനടക്കാർ, ഇരുചക്രവാഹനങ്ങൾ, ബസ്സുകൾ, ജംഗ്ഷനുകൾ, ഹൈവേ, രാത്രി, മഴ, മഞ്ഞ്, ഗ്രാമ റോഡുകൾ എന്നിവ ഉൾപ്പെടുന്നു.", lang)
         items = [f'{a(f"/hazard/{s["id"]}", pick(s["title"], lang), lang)} - {esc(pick(s["brief"], lang))}' for s in scen]
         body = f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>{ul(items)}</article>'
-        return Page(path="/hazard", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
+        return Page(path="/hazard", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs,
+                    jsonld=[collection_ld(h1, lede, "/hazard", [(pick(s["title"], lang), f"/hazard/{s['id']}") for s in scen], lang), breadcrumb_ld(crumbs, lang)])
     s = next((x for x in scen if x["id"] == sid), None)
     if not s:
         return None
@@ -459,7 +530,9 @@ def page_hazard(sid: Optional[str], lang: Lang) -> Optional[Page]:
 <p>{a(f"/hazard/{sid}", T("Play this scenario", "ഈ സാഹചര്യം പരീക്ഷിക്കുക", lang), lang, "btn")}</p></article>"""
     return Page(path=f"/hazard/{sid}", title=f"{title} - {T('hazard perception', 'അപകട തിരിച്ചറിവ്', lang)} | iDrive",
                 description=clip(f"{pick(s['brief'], lang)} {q}"), body=body, crumbs=crumbs, og_type="article",
-                jsonld=[faq(f"{pick(s['brief'], lang)} {q}", answer), breadcrumb_ld(crumbs, lang)])
+                jsonld=[faq(f"{pick(s['brief'], lang)} {q}", answer),
+                        resource_ld(title, clip(f"{pick(s['brief'], lang)} {q}", 300), f"/hazard/{sid}", lang, "hazard perception scenario", T("Spotting developing hazards and choosing the safest response", "രൂപപ്പെടുന്ന അപകടങ്ങൾ കണ്ടെത്തി ഏറ്റവും സുരക്ഷിതമായ പ്രതികരണം തിരഞ്ഞെടുക്കൽ", lang)),
+                        breadcrumb_ld(crumbs, lang)])
 
 
 def page_vehicle(kind: Optional[str], item: Optional[str], lang: Lang) -> Optional[Page]:
@@ -475,7 +548,8 @@ def page_vehicle(kind: Optional[str], item: Optional[str], lang: Lang) -> Option
                 + ul([a(f"/vehicle/explore/{p['id']}", pick(p["name"], lang), lang) for p in parts])
                 + f'<h2>{a("/vehicle/lights", T("Warning lights", "മുന്നറിയിപ്പ് ലൈറ്റുകൾ", lang), lang)}</h2>'
                 + ul([a(f"/vehicle/lights/{w['id']}", pick(w["name"], lang), lang) for w in lights]) + "</article>")
-        return Page(path="/vehicle", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
+        return Page(path="/vehicle", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs,
+                    jsonld=[collection_ld(h1, lede, "/vehicle", [(pick(p["name"], lang), f"/vehicle/explore/{p['id']}") for p in parts] + [(pick(w["name"], lang), f"/vehicle/lights/{w['id']}") for w in lights], lang), breadcrumb_ld(crumbs, lang)])
     if kind == "lights":
         lc = (T("Warning lights", "മുന്നറിയിപ്പ് ലൈറ്റുകൾ", lang), "/vehicle/lights")
         if item is None:
@@ -485,7 +559,8 @@ def page_vehicle(kind: Optional[str], item: Optional[str], lang: Lang) -> Option
                      "ചുവപ്പ് എന്നാൽ ഇപ്പോൾ സുരക്ഷിതമായി നിർത്തുക, ആമ്പർ എന്നാൽ ഉടൻ പരിശോധിപ്പിക്കുക, പച്ചയും നീലയും വിവരം മാത്രം. ഓരോ ലൈറ്റിന്റെയും അർത്ഥവും തുടർന്ന് ഓടിക്കാമോ എന്നതും ചെയ്യേണ്ടതും താഴെ.", lang)
             body = (f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>'
                     + ul([f'{a(f"/vehicle/lights/{w["id"]}", pick(w["name"], lang), lang)} - {esc(pick(w["means"], lang))}' for w in lights]) + "</article>")
-            return Page(path="/vehicle/lights", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
+            return Page(path="/vehicle/lights", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs,
+                        jsonld=[collection_ld(h1, lede, "/vehicle/lights", [(pick(w["name"], lang), f"/vehicle/lights/{w['id']}") for w in lights], lang), breadcrumb_ld(crumbs, lang)])
         w = next((x for x in lights if x["id"] == item), None)
         if not w:
             return None
@@ -506,11 +581,12 @@ def page_vehicle(kind: Optional[str], item: Optional[str], lang: Lang) -> Option
         if item is None:
             crumbs = [home_crumb(lang), vc, pc]
             h1 = T("Parts of a car explained", "കാറിന്റെ ഭാഗങ്ങൾ വിശദമായി", lang)
-            lede = T("What each major part of a car does, how it works, when you use it and how it fails.",
-                     "കാറിന്റെ ഓരോ പ്രധാന ഭാഗവും എന്ത് ചെയ്യുന്നു, എങ്ങനെ പ്രവർത്തിക്കുന്നു, എപ്പോൾ ഉപയോഗിക്കുന്നു, എങ്ങനെ തകരാറിലാകുന്നു.", lang)
+            lede = T(f"The {len(parts)} main parts of a car explained in plain words: what each one does, how it works, when it matters to you as a driver and how it fails.",
+                     f"കാറിന്റെ {len(parts)} പ്രധാന ഭാഗങ്ങൾ ലളിതമായി: ഓരോന്നും എന്ത് ചെയ്യുന്നു, എങ്ങനെ പ്രവർത്തിക്കുന്നു, ഡ്രൈവർ എന്ന നിലയിൽ എപ്പോൾ പ്രധാനം, എങ്ങനെ തകരാറിലാകുന്നു.", lang)
             body = (f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>'
                     + ul([f'{a(f"/vehicle/explore/{p["id"]}", pick(p["name"], lang), lang)} - {esc(pick(p["what"], lang))}' for p in parts]) + "</article>")
-            return Page(path="/vehicle/explore", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
+            return Page(path="/vehicle/explore", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs,
+                        jsonld=[collection_ld(h1, lede, "/vehicle/explore", [(pick(p["name"], lang), f"/vehicle/explore/{p['id']}") for p in parts], lang), breadcrumb_ld(crumbs, lang)])
         p = next((x for x in parts if x["id"] == item), None)
         if not p:
             return None
@@ -531,6 +607,69 @@ def lab_ids() -> list[str]:
     return list(curriculum.LABS)
 
 
+# Lab groups, in the order of static/js/labs.js Lb.GROUPS (test keeps them in sync).
+LAB_GROUPS: list[tuple[str, list[str]]] = [
+    ("lgStop", ["stopping", "reaction", "following", "cornering", "slope", "abs", "aquaplaning", "tyrepressure", "weighttransfer"]),
+    ("lgSee", ["headlights", "fog", "blindspot", "truckzones", "eyesoff", "microsleep", "glare", "reversezone"]),
+    ("lgRoad", ["gap", "bendsight", "banking", "speedbump", "hillstart", "signal", "crosswind"]),
+    ("lgTwo", ["lean", "bikebrake", "doorzone"]),
+    ("lgCrash", ["energy", "seatbelt", "helmet", "rollover", "childseat", "airbag", "hotcar"]),
+    ("lgCar", ["engine", "gears", "economy", "drag", "regen", "ghat", "evrange", "idling", "coasting", "tyresize"]),
+    ("lgTraffic", ["overtaking", "offtracking", "traveltime", "trafficwave"]),
+]
+# The on-the-road tip each lab shows (keys in ui_extra.json).
+LAB_TIPS: dict[str, list[str]] = {
+    "aquaplaning": ["aqTip"], "tyrepressure": ["tpTip", "tpLoadTip"], "slope": ["slTip"], "abs": ["abTip"], "weighttransfer": ["wtTip"],
+    "fog": ["fgTip"], "eyesoff": ["eoTip"], "truckzones": ["tzTip"], "seatbelt": ["sbTip"], "helmet": ["hmTip"], "rollover": ["roTip"],
+    "gears": ["grTip"], "economy": ["ecTip"], "drag": ["drTip"], "regen": ["rgTip"], "ghat": ["ghTip"], "overtaking": ["ovTip"],
+    "traveltime": ["ttTip"], "offtracking": ["otTip"], "trafficwave": ["twTip"], "speedbump": ["sbHumpTip"], "hillstart": ["hsTip"],
+    "banking": ["bkTip"], "bendsight": ["bsiTip"], "gap": ["gpTip"], "signal": ["sgTip"], "crosswind": ["cwTip"], "lean": ["lnTip"],
+    "bikebrake": ["bbTip"], "doorzone": ["dzTip"], "childseat": ["csTip"], "airbag": ["abgTip"], "hotcar": ["hcTip"], "microsleep": ["msTip"],
+    "glare": ["glTip"], "reversezone": ["rzTip"], "evrange": ["evTip"], "idling": ["idTip"], "coasting": ["coTip"], "tyresize": ["tsTip"],
+    "headlights": ["hlTip"], "blindspot": ["bsTip"],
+}
+# Games that practise what a lab explains (used both ways: lab → games, game → labs).
+GAME_LABS: dict[str, list[str]] = {
+    "brakelight": ["reaction", "stopping"], "greenlight": ["reaction", "signal"], "kidout": ["stopping", "reaction"], "gonogo": ["reaction"],
+    "indicator": ["reaction"], "mirrors": ["blindspot"], "peripheral": ["eyesoff", "blindspot"], "stopline": ["stopping", "abs"],
+    "dodge": ["eyesoff"], "lanekeep": ["eyesoff", "microsleep"], "speedkeep": ["gears", "economy", "ghat"], "gapjudge": ["gap"],
+    "animals": ["stopping"], "fogspot": ["fog"], "nightped": ["headlights", "glare"], "parking": ["reversezone"], "route": ["traveltime"],
+    "rightofway": ["signal"], "roundabout": ["offtracking"], "sequence": ["hillstart"], "fuelplan": ["economy", "evrange"],
+    "stopguess": ["stopping"], "gapcount": ["following"], "speedmath": ["traveltime", "stopping"], "plates": ["eyesoff"],
+    "blindspots": ["blindspot", "truckzones"], "overtake": ["overtaking"], "dashlights": ["engine"],
+    "amber": ["signal", "stopping"], "gapkeep": ["following"], "bendspeed": ["cornering", "banking"], "schoolzone": ["stopping"],
+    "fogspeed": ["fog"], "nightdip": ["headlights"], "rightturn": ["gap"], "sideroad": ["gap"], "merge": ["gap"], "tailgater": ["following"],
+    "seatbelt": ["seatbelt", "energy"], "cowswerve": ["stopping", "abs"], "blindbike": ["blindspot"], "laneright": ["blindspot"],
+    "crest": ["overtaking", "bendsight"], "cyclist": ["overtaking", "doorzone"], "brakepoint": ["stopping", "signal"], "abs": ["abs"],
+    "lefthook": ["truckzones", "blindspot"],
+}
+# "Why it matters" line for each game: its own tip where it has one, otherwise gmWhy_<id>.
+GAME_WHY: dict[str, str] = {
+    "stopline": "gmStopTip", "speedkeep": "gmSpeedTip", "gapjudge": "gmGapTip", "fogspot": "gmFogTip", "nightped": "gmNightTip",
+    "gapcount": "gmGapCountTip", "blindspots": "gmBlindTip", "overtake": "gmOvTip", "oddsign": "gmOddTip", "dashlights": "gmDashTip",
+    "amber": "sTAmber", "gapkeep": "sTGap", "bendspeed": "sTBend", "schoolzone": "sTSchool", "fogspeed": "sTFog", "nightdip": "sTNight",
+    "levelx": "sTRail", "rightturn": "sTRight", "sideroad": "sTSide", "merge": "sTMerge", "tailgater": "sTTail", "seatbelt": "sTBelt",
+    "cowswerve": "sTCow", "blindbike": "sTBike", "laneright": "sTLane", "crest": "sTCrest", "cyclist": "sTCyc", "brakepoint": "sTBp",
+    "abs": "sTAbs", "lefthook": "sTHook",
+}
+
+
+def _ui_has(key: str) -> bool:
+    return key in content.ui()
+
+
+def lab_group(lab: str) -> tuple[str, list[str]]:
+    return next(((g, ids) for g, ids in LAB_GROUPS if lab in ids), ("", []))
+
+
+def lab_text(lab: str, lang: Lang) -> str:
+    """The lab's model explanation (m_<id>, or labAbout_<id> for the hand-built labs)."""
+    for k in ("m_" + lab, "labAbout_" + lab):
+        if _ui_has(k):
+            return ui(k, lang)
+    return ""
+
+
 def page_science(lab: Optional[str], lang: Lang) -> Optional[Page]:
     sc = (ui("tScience", lang), "/science")
     if lab is None:
@@ -538,30 +677,41 @@ def page_science(lab: Optional[str], lang: Lang) -> Optional[Page]:
         h1 = T(f"Driving science labs: {len(lab_ids())} interactive experiments", f"ഡ്രൈവിങ് ശാസ്ത്ര ലാബുകൾ: {len(lab_ids())} സംവേദനാത്മക പരീക്ഷണങ്ങൾ", lang)
         lede = T("Move the sliders and see the physics behind safe driving: stopping distance, reaction time, grip in bends, crash energy, visibility, fuel use and more.",
                  "സ്ലൈഡറുകൾ നീക്കി സുരക്ഷിത ഡ്രൈവിങ്ങിന് പിന്നിലെ ഭൗതികശാസ്ത്രം കാണുക: നിർത്താനുള്ള ദൂരം, പ്രതികരണ സമയം, വളവിലെ ഗ്രിപ്പ്, ഇടിയുടെ ഊർജം, കാഴ്ച, ഇന്ധന ഉപയോഗം എന്നിവയും മറ്റും.", lang)
-        items = [f'{a(f"/science/{k}", ui("lab_" + k, lang), lang)} - {esc(ui("labSub_" + k, lang))}' for k in lab_ids()]
-        body = f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>{ul(items)}</article>'
-        return Page(path="/science", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
+        secs = "".join(f"<h2>{esc(ui(g, lang))}</h2>" + ul([f'{a(f"/science/{k}", ui("lab_" + k, lang), lang)} - {esc(ui("labSub_" + k, lang))}' for k in ids])
+                       for g, ids in LAB_GROUPS)
+        body = f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>{secs}</article>'
+        return Page(path="/science", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs,
+                    jsonld=[collection_ld(h1, lede, "/science", [(ui("lab_" + k, lang), f"/science/{k}") for k in lab_ids()], lang), breadcrumb_ld(crumbs, lang)])
     if lab not in curriculum.LABS:
         return None
     name, sub = ui("lab_" + lab, lang), ui("labSub_" + lab, lang)
-    model = content.ui().get("m_" + lab)
+    g, gids = lab_group(lab)
     crumbs = [home_crumb(lang), sc, (name, f"/science/{lab}")]
-    tip = content.ui().get({"speedbump": "sbHumpTip", "bendsight": "bsiTip"}.get(lab, ""))
+    model = lab_text(lab, lang)
+    answer = f"{sub}. {model}".strip() if model else f"{sub}."
     extra = ""
-    if model:
-        extra += f"<h2>{esc(T('How the model works', 'മാതൃക എങ്ങനെ പ്രവർത്തിക്കുന്നു', lang))}</h2><p>{esc(pick(model, lang))}</p>"
-    if tip:
-        extra += f"<h2>{esc(T('On the road', 'റോഡിൽ', lang))}</h2><p>{esc(pick(tip, lang))}</p>"
-    body = f"""<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(name)}</h1><p class="answer">{esc(sub)}.</p>{extra}
+    tips = [ui(k, lang) for k in LAB_TIPS.get(lab, []) if _ui_has(k)]
+    if tips:
+        extra += f"<h2>{esc(T('On the road', 'റോഡിൽ', lang))}</h2>" + "".join(f"<p>{esc(t)}</p>" for t in dict.fromkeys(tips))
+    extra += (f"<h2>{esc(T('How to use the lab', 'ലാബ് എങ്ങനെ ഉപയോഗിക്കാം', lang))}</h2><p>{esc(T('Move the sliders or tap the scene to change the situation, then press the play button in the middle of the picture to watch it happen in 3D. Every number updates as you go, and the diagram view shows the same result in 2D.', 'സാഹചര്യം മാറ്റാൻ സ്ലൈഡറുകൾ നീക്കുകയോ ദൃശ്യത്തിൽ തൊടുകയോ ചെയ്യുക; തുടർന്ന് ചിത്രത്തിന്റെ നടുവിലെ പ്ലേ ബട്ടൺ അമർത്തി 3D-യിൽ കാണുക. ഓരോ സംഖ്യയും തത്സമയം മാറും; ഡയഗ്രം കാഴ്ച അതേ ഫലം 2D-യിൽ കാണിക്കും.', lang))}</p>")
+    lessons = [(lid, t) for lid, t, _, lb in _lessons_text() if lb == lab]
+    if lessons:
+        extra += f"<h2>{esc(ui('labRelLessons', lang))}</h2>" + ul([a(f"/lesson/{lid}", pick(t, lang), lang) for lid, t in lessons])
+    games = [gid for gid, labs in GAME_LABS.items() if lab in labs]
+    if games:
+        extra += f"<h2>{esc(ui('labRelGames', lang))}</h2>" + ul([f'{a(f"/games/{k}", ui("gm_" + k, lang), lang)} - {esc(ui("gmSub_" + k, lang))}' for k in games])
+    others = [k for k in gids if k != lab]
+    if others:
+        extra += f"<h2>{esc(ui('labRelOther', lang))}: {esc(ui(g, lang))}</h2>" + ul([a(f"/science/{k}", ui("lab_" + k, lang), lang) for k in others])
+    body = f"""<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(name)}</h1><p class="answer">{esc(answer)}</p>{extra}
 <p>{a(f"/science/{lab}", T("Open the interactive lab", "സംവേദനാത്മക ലാബ് തുറക്കുക", lang), lang, "btn")}</p></article>"""
-    desc = f"{name}: {sub}. " + (pick(model, lang) if model else T(
-        "An interactive iDrive lab: move the sliders and watch the numbers and the road picture change.",
-        "ഒരു സംവേദനാത്മക iDrive ലാബ്: സ്ലൈഡറുകൾ നീക്കി സംഖ്യകളും റോഡ് ചിത്രവും മാറുന്നത് കാണുക.", lang))
+    q = T(f"What does the {ui('lab_' + lab, 'en')} lab show?", f"{name} ലാബ് എന്ത് കാണിക്കുന്നു?", lang)
     return Page(path=f"/science/{lab}", title=f"{name} - {T('interactive driving lab', 'സംവേദനാത്മക ഡ്രൈവിങ് ലാബ്', lang)} | iDrive",
-                description=clip(desc), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
+                description=clip(f"{name}: {answer}"), body=body, crumbs=crumbs,
+                jsonld=[faq(q, answer), resource_ld(name, clip(answer, 300), f"/science/{lab}", lang, "simulation", sub), breadcrumb_ld(crumbs, lang)])
 
 
-# Games (static/js/games.js): ids in hub order, grouped like Gm.GROUPS there.
+# Games (static/js/games.js + games2.js): ids in hub order, grouped like Gm.GROUPS there.
 GAME_GROUPS: list[tuple[str, list[str]]] = [
     ("gmReact", ["brakelight", "greenlight", "kidout", "gonogo", "indicator", "mirrors", "peripheral", "stopline", "dodge",
                  "lanekeep", "speedkeep", "gapjudge", "animals", "fogspot", "nightped"]),
@@ -572,6 +722,21 @@ GAME_GROUPS: list[tuple[str, list[str]]] = [
     ("gmRules", ["signsprint", "signpairs", "oddsign", "dashlights"]),
 ]
 GAME_IDS: list[str] = [g for _, ids in GAME_GROUPS for g in ids]
+# what each group of games trains - shown on every game page
+GAME_TRAINS: dict[str, tuple[str, str]] = {
+    "gmReact": ("Reaction time and attention: noticing hazards early and responding quickly and correctly.",
+                "പ്രതികരണ സമയവും ശ്രദ്ധയും: അപകടങ്ങൾ നേരത്തേ ശ്രദ്ധിച്ച് വേഗത്തിലും ശരിയായും പ്രതികരിക്കൽ."),
+    "gmSim": ("Judgement: reading speeds, gaps and distances, choosing what to do, and seeing the physics of the result.",
+              "വിലയിരുത്തൽ: വേഗവും ഇടവേളകളും ദൂരവും വായിച്ച് തീരുമാനിക്കൽ, ഫലത്തിന്റെ ഭൗതികശാസ്ത്രം കാണൽ."),
+    "gmLogic": ("Road logic: planning, right of way and quick calculations about speed, distance and time.",
+                "റോഡ് യുക്തി: ആസൂത്രണം, മുൻഗണന, വേഗം-ദൂരം-സമയം എന്നിവയുടെ പെട്ടെന്നുള്ള കണക്കുകൾ."),
+    "gmRules": ("Signs and rules: recognising road signs and dashboard lights instantly.",
+                "ചിഹ്നങ്ങളും നിയമങ്ങളും: റോഡ് ചിഹ്നങ്ങളും ഡാഷ്ബോർഡ് ലൈറ്റുകളും പെട്ടെന്ന് തിരിച്ചറിയൽ."),
+}
+
+
+def game_group(gid: str) -> tuple[str, list[str]]:
+    return next(((g, ids) for g, ids in GAME_GROUPS if gid in ids), ("", []))
 
 
 def page_games(gid: Optional[str], lang: Lang) -> Optional[Page]:
@@ -583,17 +748,34 @@ def page_games(gid: Optional[str], lang: Lang) -> Optional[Page]:
         lede = ui("gmLede", lang).replace("{n}", str(len(GAME_IDS)))
         parts = []
         for gk, ids in GAME_GROUPS:
-            parts.append(f"<h2>{esc(ui(gk, lang))}</h2>" + ul([f'{a(f"/games/{k}", ui("gm_" + k, lang), lang)} - {esc(ui("gmSub_" + k, lang))}' for k in ids]))
+            parts.append(f"<h2>{esc(ui(gk, lang))}</h2><p>{esc(T(*GAME_TRAINS[gk], lang))}</p>"
+                         + ul([f'{a(f"/games/{k}", ui("gm_" + k, lang), lang)} - {esc(ui("gmSub_" + k, lang))}' for k in ids]))
         body = f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p>{"".join(parts)}</article>'
-        return Page(path="/games", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
+        return Page(path="/games", title=f"{h1} | iDrive", description=clip(lede), body=body, crumbs=crumbs,
+                    jsonld=[collection_ld(h1, lede, "/games", [(ui("gm_" + k, lang), f"/games/{k}") for k in GAME_IDS], lang), breadcrumb_ld(crumbs, lang)])
     if gid not in GAME_IDS:
         return None
     name, sub, how = ui("gm_" + gid, lang), ui("gmSub_" + gid, lang), ui("gmHow_" + gid, lang)
+    g, ids = game_group(gid)
     crumbs = [home_crumb(lang), gc, (name, f"/games/{gid}")]
-    body = f"""<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(name)}</h1><p class="answer">{esc(sub)}. {esc(how)}</p>
+    answer = how if how.startswith(sub) else f"{sub}. {how}"
+    why_key = GAME_WHY.get(gid) or f"gmWhy_{gid}"
+    why = ui(why_key, lang) if _ui_has(why_key) else ""
+    out = [f"<h2>{esc(ui('gmWhatTrains', lang))}</h2><p>{esc(T(*GAME_TRAINS[g], lang))}</p>" + (f"<p>{esc(why)}</p>" if why else "")]
+    labs = GAME_LABS.get(gid, [])
+    if labs:
+        out.append(f"<h2>{esc(ui('gmRelLabs', lang))}</h2>" + ul([f'{a(f"/science/{k}", ui("lab_" + k, lang), lang)} - {esc(ui("labSub_" + k, lang))}' for k in labs]))
+    if g == "gmRules":
+        out.append(ul([a("/learn", ui("tSigns", lang), lang), a("/quiz", T("Road sign quiz", "റോഡ് ചിഹ്ന ക്വിസ്", lang), lang), a("/vehicle/lights", T("Warning lights", "മുന്നറിയിപ്പ് ലൈറ്റുകൾ", lang), lang)]))
+    i = ids.index(gid)
+    near = [ids[(i + k) % len(ids)] for k in (1, 2, 3, -1) if len(ids) > 1]
+    out.append(f"<h2>{esc(ui('gmRelated', lang))}</h2>" + ul([f'{a(f"/games/{k}", ui("gm_" + k, lang), lang)} - {esc(ui("gmSub_" + k, lang))}' for k in dict.fromkeys(near) if k != gid]))
+    body = f"""<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(name)}</h1><p class="answer">{esc(answer)}</p>{"".join(out)}
 <p>{a(f"/games/{gid}", T("Play the game", "ഗെയിം കളിക്കുക", lang), lang, "btn")}</p></article>"""
+    q = T(f"How do you play the {ui('gm_' + gid, 'en')} driving game?", f"{name} ഡ്രൈവിങ് ഗെയിം എങ്ങനെ കളിക്കാം?", lang)
     return Page(path=f"/games/{gid}", title=f"{name} - {T('driving game', 'ഡ്രൈവിങ് ഗെയിം', lang)} | iDrive",
-                description=clip(f"{name}: {sub}. {how}"), body=body, crumbs=crumbs, jsonld=[breadcrumb_ld(crumbs, lang)])
+                description=clip(f"{name}: {answer}"), body=body, crumbs=crumbs,
+                jsonld=[faq(q, answer), resource_ld(name, clip(answer, 300), f"/games/{gid}", lang, "game", T(*GAME_TRAINS[g], lang)), breadcrumb_ld(crumbs, lang)])
 
 
 def page_limits(lang: Lang) -> Optional[Page]:
@@ -622,7 +804,8 @@ def page_limits(lang: Lang) -> Optional[Page]:
         tables.append(f'<h2>{esc(head)} (km/h)</h2><div class="sptable"><table><thead><tr><th scope="col">{esc(ui("spVehicle", lang))}</th>{th}</tr></thead><tbody>{rows}</tbody></table></div>{refs}')
     notes = ul([esc(ui(k, lang)) for k in ("spN1", "spN2", "spN3k", "spN3i", "spN4", "spN5")])
     body = f"""<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(ui("spTitle", lang))}</h1>
-<h2>{esc(q)}</h2><p class="answer">{esc(ans)}</p>{"".join(tables)}<h2>{esc(ui("spNotes", lang))}</h2>{notes}</article>"""
+<h2>{esc(q)}</h2><p class="answer">{esc(ans)}</p>{"".join(tables)}<h2>{esc(ui("spNotes", lang))}</h2>{notes}
+<h2>{esc(T('Related', 'ബന്ധപ്പെട്ടവ', lang))}</h2>{ul([a("/theory/speed", T("Speed, distance and overtaking", "വേഗം, ദൂരം, ഓവർടേക്കിങ്", lang), lang), a("/science/stopping", ui("lab_stopping", lang), lang), a("/games/brakepoint", ui("gm_brakepoint", lang), lang), a("/learn/mand", T("Mandatory signs, including speed limit signs", "നിർബന്ധിത ചിഹ്നങ്ങൾ, വേഗപരിധി ചിഹ്നങ്ങൾ ഉൾപ്പെടെ", lang), lang)])}</article>"""
     return Page(path="/limits", title=f"{T('Speed limits in Kerala and India by vehicle and road', 'കേരളത്തിലെയും ഇന്ത്യയിലെയും വേഗപരിധി - വാഹനവും റോഡും അനുസരിച്ച്', lang)} | iDrive",
                 description=clip(ans), body=body, crumbs=crumbs, jsonld=[faq(q, ans), breadcrumb_ld(crumbs, lang)])
 
@@ -637,19 +820,53 @@ def page_tool(view: str, lang: Lang) -> Page:
         "exam": (T("Free learner licence mock test and practice questions", "സൗജന്യ ലേണേഴ്സ് ലൈസൻസ് മോക്ക് ടെസ്റ്റും പരിശീലന ചോദ്യങ്ങളും", lang),
                  T(f"Take a timed mock test in the style of the learner licence test, or practise topic by topic from {nq} questions with explanations, in English and Malayalam. Sign in to save results and sync across devices.",
                    f"ലേണേഴ്സ് ലൈസൻസ് ടെസ്റ്റിന്റെ രീതിയിൽ സമയബന്ധിതമായ മോക്ക് ടെസ്റ്റ് എഴുതുക, അല്ലെങ്കിൽ വിശദീകരണങ്ങളോടെ {nq} ചോദ്യങ്ങളിൽ നിന്ന് വിഷയം തിരിച്ച് പരിശീലിക്കുക - ഇംഗ്ലീഷിലും മലയാളത്തിലും. ഫലങ്ങൾ സൂക്ഷിക്കാനും ഉപകരണങ്ങളിൽ സമന്വയിപ്പിക്കാനും സൈൻ ഇൻ ചെയ്യുക.", lang), True),
-        "quiz": (T("Road sign quiz", "റോഡ് ചിഹ്ന ക്വിസ്", lang),
-                 T(f"Test yourself on {len(content.signs())} Indian road signs, markings and signals.", f"{len(content.signs())} ഇന്ത്യൻ റോഡ് ചിഹ്നങ്ങളിലും അടയാളങ്ങളിലും സിഗ്നലുകളിലും സ്വയം പരിശോധിക്കുക.", lang), True),
-        "cards": (T("Road sign flashcards", "റോഡ് ചിഹ്ന ഫ്ലാഷ്കാർഡുകൾ", lang),
-                  T("Flip through sign flashcards with spaced repetition until every sign sticks.", "ഓരോ ചിഹ്നവും ഓർമയിൽ ഉറയ്ക്കുന്നതുവരെ ഇടവിട്ടുള്ള ആവർത്തനത്തോടെ ഫ്ലാഷ്കാർഡുകൾ മറിക്കുക.", lang), True),
+        "quiz": (T("Road sign quiz for the learner licence test", "ലേണേഴ്സ് ലൈസൻസ് ടെസ്റ്റിനുള്ള റോഡ് ചിഹ്ന ക്വിസ്", lang),
+                 T(f"Test yourself on {len(content.signs())} Indian road signs, markings and signals: name the sign, find it from its meaning or pick its category, with the answer explained after every question.",
+                   f"{len(content.signs())} ഇന്ത്യൻ റോഡ് ചിഹ്നങ്ങളിലും അടയാളങ്ങളിലും സിഗ്നലുകളിലും സ്വയം പരിശോധിക്കുക: ചിഹ്നത്തിന്റെ പേര്, അർത്ഥത്തിൽ നിന്ന് ചിഹ്നം, വിഭാഗം - ഓരോ ചോദ്യത്തിനും ശേഷം ഉത്തരം വിശദീകരിക്കും.", lang), True),
+        "cards": (T("Road sign flashcards with spaced repetition", "ഇടവിട്ടുള്ള ആവർത്തനത്തോടെ റോഡ് ചിഹ്ന ഫ്ലാഷ്കാർഡുകൾ", lang),
+                  T("Flip through road sign flashcards: signs you get wrong come back sooner, signs you know come back less often, until every one of them sticks.",
+                    "റോഡ് ചിഹ്ന ഫ്ലാഷ്കാർഡുകൾ മറിക്കുക: തെറ്റുന്ന ചിഹ്നങ്ങൾ വേഗം തിരിച്ചുവരും, അറിയാവുന്നവ കുറച്ചേ വരൂ - എല്ലാം ഓർമയിൽ ഉറയ്ക്കും വരെ.", lang), True),
         "ask": (T("Ask the driving instructor", "ഡ്രൈവിങ് ഇൻസ്ട്രക്ടറോട് ചോദിക്കുക", lang),
                 T("Ask a driving-theory question and get an answer grounded in iDrive's lessons.", "ഒരു ഡ്രൈവിങ് തിയറി ചോദ്യം ചോദിച്ച് iDrive പാഠങ്ങളെ ആധാരമാക്കിയ ഉത്തരം നേടുക.", lang), False),
         "progress": (T("Your progress", "നിങ്ങളുടെ പുരോഗതി", lang),
                      T("Your lessons, scores and streaks.", "നിങ്ങളുടെ പാഠങ്ങളും സ്കോറുകളും തുടർച്ചയും.", lang), False),
     }[view]
     crumbs = [home_crumb(lang), (info[0], f"/{view}")]
-    body = f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(info[0])}</h1><p class="answer">{esc(info[1])}</p></article>'
+    more = _tool_more(view, lang)
+    body = f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(info[0])}</h1><p class="answer">{esc(info[1])}</p>{more}</article>'
+    ld: list[dict[str, Any]] = []
+    if view in ("exam", "quiz", "cards"):
+        ld.append(resource_ld(info[0], clip(info[1], 300), f"/{view}", lang, {"exam": "practice test", "quiz": "quiz", "cards": "flashcards"}[view],
+                              T("Indian road signs and driving theory for the learner licence test", "ലേണേഴ്സ് ലൈസൻസ് ടെസ്റ്റിനുള്ള ഇന്ത്യൻ റോഡ് ചിഹ്നങ്ങളും ഡ്രൈവിങ് തിയറിയും", lang),
+                              **({"@type": "Quiz"} if view != "cards" else {})))
     return Page(path=f"/{view}", title=f"{info[0]} | iDrive", description=clip(info[1]), body=body, crumbs=crumbs,
-                indexable=info[2], jsonld=[breadcrumb_ld(crumbs, lang)])
+                indexable=info[2], jsonld=ld + [breadcrumb_ld(crumbs, lang)])
+
+
+def _tool_more(view: str, lang: Lang) -> str:
+    """What is inside each practice tool, with links into the content it draws on."""
+    if view == "exam":
+        from app.services import exams
+        counts = content.question_counts()
+        mins = exams.MOCK_TOTAL * exams.SECONDS_PER_QUESTION // 60
+        fmt = T(f"Each mock test has {exams.MOCK_TOTAL} questions - {exams.MOCK_SIGN_QS} on road signs and {exams.MOCK_THEORY_QS} on driving theory - with {exams.SECONDS_PER_QUESTION} seconds per question (about {mins} minutes). Score {exams.PASS_MARK} or more to pass our mock. The official test format can differ by state, so check your RTO's current rules too.",
+                f"ഓരോ മോക്ക് ടെസ്റ്റിലും {exams.MOCK_TOTAL} ചോദ്യങ്ങൾ - {exams.MOCK_SIGN_QS} റോഡ് ചിഹ്നങ്ങളിൽ, {exams.MOCK_THEORY_QS} ഡ്രൈവിങ് തിയറിയിൽ - ഓരോ ചോദ്യത്തിനും {exams.SECONDS_PER_QUESTION} സെക്കൻഡ് (ഏകദേശം {mins} മിനിറ്റ്). ഞങ്ങളുടെ മോക്കിൽ ജയിക്കാൻ {exams.PASS_MARK} അല്ലെങ്കിൽ അതിൽ കൂടുതൽ. ഔദ്യോഗിക ടെസ്റ്റ് രീതി സംസ്ഥാനമനുസരിച്ച് മാറാം; നിങ്ങളുടെ RTO-യുടെ നിലവിലെ നിയമങ്ങളും പരിശോധിക്കുക.", lang)
+        tops = [f'{a(f"/theory/{t["id"]}", pick(t["name"], lang), lang)} - {counts.get(t["id"], 0)} {esc(T("questions", "ചോദ്യങ്ങൾ", lang))}'
+                for t in content.topics() if counts.get(t["id"])]
+        return (f"<h2>{esc(T('The mock test', 'മോക്ക് ടെസ്റ്റ്', lang))}</h2><p>{esc(fmt)}</p>"
+                f"<h2>{esc(T('Practice by topic', 'വിഷയം തിരിച്ചുള്ള പരിശീലനം', lang))}</h2>{ul(tops)}"
+                f"<p>{a('/learn', ui('tSigns', lang), lang)} · {a('/quiz', T('Road sign quiz', 'റോഡ് ചിഹ്ന ക്വിസ്', lang), lang)} · {a('/course', ui('tCourse', lang), lang)}</p>")
+    if view in ("quiz", "cards"):
+        cats = [f'{a(f"/learn/{c["id"]}", cat_name(c, lang), lang)} - {len(content.signs_in_category(c["id"]))} {esc(T("signs", "ചിഹ്നങ്ങൾ", lang))}' for c in content.categories()]
+        how = (T("Pick a group of signs or mix them all. Each question shows a sign or a meaning and four choices; after you answer you see the sign's meaning and what a driver must do.",
+                 "ഒരു വിഭാഗം ചിഹ്നങ്ങൾ തിരഞ്ഞെടുക്കുക, അല്ലെങ്കിൽ എല്ലാം കലർത്തുക. ഓരോ ചോദ്യവും ഒരു ചിഹ്നമോ അർത്ഥമോ നാല് ഓപ്ഷനുകളും കാണിക്കും; ഉത്തരം നൽകിയശേഷം ചിഹ്നത്തിന്റെ അർത്ഥവും ഡ്രൈവർ ചെയ്യേണ്ടതും കാണാം.", lang)
+               if view == "quiz" else
+               T("Each card shows a sign; think of its meaning, then flip it to check. Mark whether you knew it: cards you miss return within the session, cards you know move to longer intervals.",
+                 "ഓരോ കാർഡിലും ഒരു ചിഹ്നം; അതിന്റെ അർത്ഥം ആലോചിച്ച് മറിച്ചുനോക്കുക. അറിയാമായിരുന്നോ എന്ന് അടയാളപ്പെടുത്തുക: തെറ്റിയവ ഈ സെഷനിൽ തന്നെ തിരിച്ചുവരും, അറിയാവുന്നവ കൂടുതൽ ഇടവേളയിലേക്ക് മാറും.", lang))
+        return (f"<h2>{esc(T('How it works', 'എങ്ങനെ പ്രവർത്തിക്കുന്നു', lang))}</h2><p>{esc(how)}</p>"
+                f"<h2>{esc(T('Sign groups', 'ചിഹ്ന വിഭാഗങ്ങൾ', lang))}</h2>{ul(cats)}"
+                f"<p>{a('/exam', ui('tTests', lang), lang)} · {a('/games/signsprint', ui('gm_signsprint', lang), lang)} · {a('/games/signpairs', ui('gm_signpairs', lang), lang)}</p>")
+    return ""
 
 
 # ---------- home ----------
@@ -706,9 +923,19 @@ def page_static(name: str, lang: Lang) -> Optional[Page]:
         return None
     title, desc, body = got
     crumbs = [home_crumb(lang), (title, f"/{name}")]
+    explore = ""
+    if name in ("about", "install"):
+        explore = (f"<h2>{esc(T('Explore iDrive', 'iDrive പരിചയപ്പെടുക', lang))}</h2>"
+                   + ul([a("/course", ui("tCourse", lang), lang), a("/learn", ui("tSigns", lang), lang), a("/exam", ui("tTests", lang), lang),
+                         a("/hazard", ui("tHazard", lang), lang), a("/science", ui("tScience", lang), lang), a("/games", ui("tGames", lang), lang)]))
+    elif name in ("privacy", "terms"):
+        explore = f"<p>{a('/about', T('About iDrive', 'iDrive-നെക്കുറിച്ച്', lang), lang)} · {a('/privacy' if name == 'terms' else '/terms', T('Privacy policy', 'സ്വകാര്യതാ നയം', lang) if name == 'terms' else T('Terms of use', 'ഉപയോഗ നിബന്ധനകൾ', lang), lang)} · {a('/', 'iDrive', lang)}</p>"
+    page_type = {"about": "AboutPage", "privacy": "WebPage", "terms": "WebPage", "install": "WebPage"}[name]
+    ld = {"@context": "https://schema.org", "@type": page_type, "name": title, "description": clip(desc, 300), "inLanguage": lang,
+          "url": site_url() + href(f"/{name}", lang), "isPartOf": {"@type": "WebSite", "name": "iDrive", "url": site_url()}}
     return Page(path=f"/{name}", title=f"{title} | iDrive", description=clip(desc),
-                body=f'<article class="panel seo prose">{crumbs_html(crumbs, lang)}{body}</article>',
-                crumbs=crumbs, static=True, jsonld=[breadcrumb_ld(crumbs, lang)])
+                body=f'<article class="panel seo prose">{crumbs_html(crumbs, lang)}{body}{explore}</article>',
+                crumbs=crumbs, static=True, jsonld=[ld, breadcrumb_ld(crumbs, lang)])
 
 
 STATIC_PAGES = ("about", "privacy", "terms", "install")
@@ -717,6 +944,17 @@ STATIC_PAGES = ("about", "privacy", "terms", "install")
 # ---------- resolver ----------
 
 def resolve(path: str, lang: Lang) -> Optional[Page]:
+    page = _resolve(path, lang)
+    if page and page.status == 200 and len(page.description) < 100:
+        page.description = clip(page.description.rstrip(". ") + ". " + T(
+            "Explained simply for learner drivers in India, in English and Malayalam, on iDrive.",
+            "ഇന്ത്യയിലെ പഠിതാക്കൾക്കായി ഇംഗ്ലീഷിലും മലയാളത്തിലും ലളിതമായി - iDrive.", lang))
+    if page and len(page.title) > 65 and page.title.endswith(" | iDrive"):
+        page.title = page.title[: -len(" | iDrive")]   # results pages cut long titles; the brand is the part to drop
+    return page
+
+
+def _resolve(path: str, lang: Lang) -> Optional[Page]:
     parts = [p for p in path.strip("/").split("/") if p]
     if not parts or parts == ["home"]:
         return page_home(lang)
@@ -773,12 +1011,15 @@ _OGD = re.compile(r'<meta property="og:description" content="[^"]*">')
 _APP = re.compile(r'(<main class="wrap" id="app" tabindex="-1">)(</main>)')
 
 
+ROBOTS_OK = "index, follow, max-image-preview:large, max-snippet:-1"
+
+
 def head_tags(page: Page, lang: Lang) -> str:
     base = site_url()
     canon = base + href(page.path, lang)
     tags = [f'<link rel="canonical" href="{esc(canon)}">']
     if page.indexable and page.status == 200:
-        tags += [
+        tags += [f'<meta name="robots" content="{ROBOTS_OK}">',
             f'<link rel="alternate" hreflang="en" href="{esc(base + page.path)}">',
             f'<link rel="alternate" hreflang="ml" href="{esc(base + href(page.path, "ml"))}">',
             f'<link rel="alternate" hreflang="x-default" href="{esc(base + page.path)}">',
@@ -810,6 +1051,19 @@ def head_tags(page: Page, lang: Lang) -> str:
         # JSON-LD is data, not script: escape "<" so text can never close the tag
         tags.append('<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False).replace("<", "\\u003c") + "</script>")
     return "\n".join(tags)
+
+
+def head_json(path: str, lang: Lang) -> dict[str, Any]:
+    """The page's head (title, description, canonical, alternates, robots, JSON-LD) for the app to
+    apply after in-app navigation, so the document always matches what the server would send."""
+    clean = "/" + path.strip("/") if path.strip("/") else "/"
+    page = resolve(clean, lang) or not_found(lang)
+    base = site_url()
+    ok = page.indexable and page.status == 200
+    return {"title": page.title, "description": page.description, "lang": lang,
+            "canonical": base + href(page.path if page.status == 200 else clean, lang),
+            "alternates": {"en": base + page.path, "ml": base + href(page.path, "ml"), "x-default": base + page.path} if ok else {},
+            "robots": ROBOTS_OK if ok else "noindex", "ogType": page.og_type, "status": page.status, "jsonld": page.jsonld}
 
 
 def inject(markup: str, page: Page, lang: Lang) -> str:

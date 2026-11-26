@@ -240,11 +240,51 @@ async function route() {
   lastRoute = r.route;
   render();
   window.scrollTo(0, 0);
-  if (!first) { const t = TABS.find(x => x.id === curTab()); document.title = (t ? I18n.one(I18n.u(t.k)) + " | " : "") + "iDrive"; }
+  if (!first) { const t = TABS.find(x => x.id === curTab()); document.title = (t ? I18n.one(I18n.u(t.k)) + " | " : "") + "iDrive"; await syncHead(); }
   if (window.Analytics) Analytics.page();
   // deep links that need an action after the view renders
   if (r.raw === "sign" && r.a && Data.byId[r.a]) { await Data.ensureSvgIds([r.a]); Learn.openSheet(r.a, [r.a]); }
   if (r.view === "exam" && r.a === "practice" && r.b && Data.topicById[r.b]) Exam.startPractice(r.b);
+}
+
+/* ---------- page head after in-app navigation ----------
+   The server writes a unique title, description, canonical, hreflang, Open Graph
+   tags and JSON-LD into every page it sends. When the app moves to another
+   route itself, fetch the same head for the new path and apply it, so the open
+   document always describes what is on screen (shares, bookmarks, analytics,
+   crawlers that render). Offline it keeps the generic title set above. */
+const headCache = new Map();
+function setMeta(sel, attr, key, val) {
+  let el = document.head.querySelector(sel);
+  if (val == null || val === "") { if (el) el.remove(); return; }
+  if (!el) { el = document.createElement(sel.startsWith("link") ? "link" : "meta"); if (sel.startsWith("link")) el.rel = key; else el.setAttribute(attr, key); document.head.appendChild(el); }
+  el.setAttribute(sel.startsWith("link") ? "href" : "content", val);
+}
+async function syncHead() {
+  const lang = I18n.lang() === "ml" ? "ml" : "en", key = lang + location.pathname;
+  let h = headCache.get(key);
+  if (!h) {
+    try {
+      const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 1500);
+      const r = await fetch(`/api/seo/head?path=${encodeURIComponent(location.pathname)}&lang=${lang}`, { signal: ctl.signal });
+      clearTimeout(timer); if (!r.ok) return; h = await r.json(); headCache.set(key, h);
+    } catch (e) { return; }
+  }
+  document.title = h.title; document.documentElement.lang = h.lang;
+  setMeta('meta[name="description"]', "name", "description", h.description);
+  setMeta('link[rel="canonical"]', "rel", "canonical", h.canonical);
+  setMeta('meta[name="robots"]', "name", "robots", h.robots);
+  setMeta('meta[property="og:title"]', "property", "og:title", h.title);
+  setMeta('meta[property="og:description"]', "property", "og:description", h.description);
+  setMeta('meta[property="og:url"]', "property", "og:url", h.canonical);
+  setMeta('meta[property="og:type"]', "property", "og:type", h.ogType);
+  setMeta('meta[name="twitter:title"]', "name", "twitter:title", h.title);
+  setMeta('meta[name="twitter:description"]', "name", "twitter:description", h.description);
+  setMeta('meta[name="twitter:url"]', "name", "twitter:url", h.canonical);
+  document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((l) => l.remove());
+  Object.entries(h.alternates || {}).forEach(([hl, url]) => { const l = document.createElement("link"); l.rel = "alternate"; l.hreflang = hl; l.href = url; document.head.appendChild(l); });
+  document.head.querySelectorAll('script[type="application/ld+json"]').forEach((x) => x.remove());
+  (h.jsonld || []).forEach((ld) => { const x = document.createElement("script"); x.type = "application/ld+json"; x.textContent = JSON.stringify(ld); document.head.appendChild(x); });
 }
 
 /* ---------- "more" menu (mobile dock) ---------- */
@@ -290,7 +330,7 @@ document.addEventListener("click", (e) => {
   if (ds.art !== undefined) { go("#theory" + (ds.art ? "/" + ds.art : "")); return; }
   if (ds.etopic) { Exam.startPractice(ds.etopic); return; }
   if (ds.ans !== undefined) { Exam.select(+ds.ans); return; }
-  if (ds.lang) { P.lang = ds.lang; save(); setHash(lastRoute); render(); if (!document.getElementById("sheet").hidden) Learn.renderSheet(); return; }
+  if (ds.lang) { P.lang = ds.lang; save(); setHash(lastRoute); render(); syncHead(); if (!document.getElementById("sheet").hidden) Learn.renderSheet(); return; }
   if (ds.open) {
     const solo = ds.solo || ds.today;
     Learn.openSheet(ds.open, solo ? [ds.open] : (S.view === "learn" ? S.list : null));

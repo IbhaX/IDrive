@@ -230,6 +230,13 @@ async def llms_full() -> Response:
     return PlainTextResponse(seo.llms_full_txt(), headers={"Cache-Control": "public, max-age=3600"})
 
 
+@app.get("/api/seo/head", include_in_schema=False)
+async def seo_head(path: str = "/", lang: str = "en") -> Response:
+    """Head tags for a path - the app applies them after in-app navigation."""
+    data = seo.head_json(path[:300], "ml" if lang == "ml" else "en")
+    return JSONResponse(data, headers={"Cache-Control": "public, max-age=3600"})
+
+
 @app.get("/shell", include_in_schema=False)
 async def shell() -> Response:
     """The bare app shell (no page content) - the service worker caches this

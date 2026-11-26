@@ -256,3 +256,52 @@ def test_parking_levels_are_valid_and_solvable() -> None:
                 seen.add(cell)
         assert cars[0][0] == 2 and cars[0][3] is True and cars[0][2] == 2, f"level {n}: red car not on the exit row"
         assert fewest(cars) == lv["min"], f"level {n}: stored min is wrong"
+
+
+def test_every_indexable_page_has_rich_data_and_a_full_description() -> None:
+    """Beyond breadcrumbs, every indexable page carries structured data that says what it is,
+    and a description long enough to be useful in results."""
+    from app.web import seo
+    for p in seo.all_paths():
+        for lang in ("en", "ml"):
+            page = seo.resolve(p, lang)
+            assert page is not None
+            types = {ld["@type"] if isinstance(ld["@type"], str) else "+".join(ld["@type"]) for ld in page.jsonld}
+            assert types - {"BreadcrumbList"}, f"{p} ({lang}) has only breadcrumb data"
+            if lang == "en":
+                assert len(page.description) >= 100, (p, page.description)
+                assert len(page.title) <= 72, (p, page.title)
+
+
+def test_lab_groups_and_cross_links_match_the_app() -> None:
+    """seo.LAB_GROUPS mirrors labs.js; tips, game↔lab links and per-game lines point at real things."""
+    import json
+    import re
+    from app.web import seo
+    js = (seo.BASE_DIR / "app" / "static" / "js" / "labs.js").read_text(encoding="utf-8")
+    block = js.split("Lb.GROUPS = [", 1)[1].split("];", 1)[0]
+    groups = [(g, re.findall(r'"(\w+)"', ids)) for g, ids in re.findall(r'\["(\w+)", \[([^\]]*)\]\]', block)]
+    assert groups == seo.LAB_GROUPS
+    labs = {k for _, ids in seo.LAB_GROUPS for k in ids}
+    assert labs == set(seo.lab_ids())
+    ui = json.loads((seo.DATA_DIR / "ui_extra.json").read_text(encoding="utf-8"))
+    ui.update(json.loads((seo.DATA_DIR / "ui.json").read_text(encoding="utf-8")))
+    for lab, keys in seo.LAB_TIPS.items():
+        assert lab in labs and all(k in ui for k in keys), lab
+    for lab in labs:
+        assert f"m_{lab}" in ui or f"labAbout_{lab}" in ui, f"lab {lab} has no model text"
+    for gid, ls in seo.GAME_LABS.items():
+        assert gid in seo.GAME_IDS and set(ls) <= labs, gid
+    for gid in seo.GAME_IDS:
+        assert (seo.GAME_WHY.get(gid) or f"gmWhy_{gid}") in ui or gid in ("signpairs",), f"game {gid} has no why-it-matters line"
+
+
+def test_head_json_matches_the_rendered_page() -> None:
+    from app.web import seo
+    for p in ("/games/amber", "/science/stopping", "/sign/stop", "/progress", "/nope/x"):
+        for lang in ("en", "ml"):
+            h = seo.head_json(p, lang)
+            page = seo.resolve(p, lang) or seo.not_found(lang)
+            assert h["title"] == page.title and h["description"] == page.description
+            assert (h["robots"] == "noindex") == (not page.indexable or page.status != 200)
+            assert h["canonical"].startswith(seo.site_url())
