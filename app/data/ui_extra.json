@@ -4936,8 +4936,8 @@
   "കടക്കാൻ മതിയായ റോഡുണ്ടോ?"
  ],
  "gmHow_overtake": [
-  "Read the speeds and the gap to the oncoming car, then decide: overtake the lorry or wait.",
-  "വേഗങ്ങളും എതിരെ വരുന്ന കാറിലേക്കുള്ള ദൂരവും നോക്കി തീരുമാനിക്കുക: ലോറിയെ ഓവർടേക്ക് ചെയ്യണോ കാത്തിരിക്കണോ."
+  "Read the speeds and the gap to the oncoming car, then decide: overtake the lorry or wait. The manoeuvre then plays out in real metres — you start 20 m behind the lorry and must be 20 m ahead of it before pulling back in — with the working shown.",
+  "വേഗങ്ങളും എതിരെ വരുന്ന കാറിലേക്കുള്ള ദൂരവും നോക്കി തീരുമാനിക്കുക: ലോറിയെ ഓവർടേക്ക് ചെയ്യണോ കാത്തിരിക്കണോ. തുടർന്ന് ആ നീക്കം യഥാർഥ മീറ്ററിൽ കാണാം — ലോറിക്ക് 20 മീ. പിന്നിൽ തുടങ്ങി, തിരികെ കയറും മുമ്പ് 20 മീ. മുന്നിലെത്തണം — കണക്കുകൂട്ടലും കാണിക്കും."
  ],
  "gm_signsprint": [
   "Sign sprint",
@@ -5062,5 +5062,65 @@
  "gmSpeedTip": [
   "Uphill, drop a gear before the engine labours; downhill, a lower gear holds the car back (engine braking) so you need less brake.",
   "കയറ്റത്തിൽ എഞ്ചിൻ വലിയാതാകും മുമ്പ് ഗിയർ താഴ്ത്തുക; ഇറക്കത്തിൽ താഴ്ന്ന ഗിയർ കാറിനെ പിടിച്ചുനിർത്തും (എഞ്ചിൻ ബ്രേക്കിങ്), ബ്രേക്ക് കുറച്ച് മതി."
+ ],
+ "gmOvDone": [
+  "Overtake complete — {m} m to spare",
+  "ഓവർടേക്ക് പൂർത്തിയായി — {m} മീ. ബാക്കി"
+ ],
+ "gmOvHeadOn": [
+  "Not enough road — you'd meet the oncoming car head-on",
+  "റോഡ് മതിയാകില്ല — എതിരെ വരുന്ന കാറുമായി നേർക്കുനേർ"
+ ],
+ "gmOvWaitRoom": [
+  "Waiting is never wrong, but there was room: {m} m to spare",
+  "കാത്തിരിക്കുന്നത് തെറ്റല്ല, പക്ഷേ ഇടമുണ്ടായിരുന്നു: {m} മീ. ബാക്കി"
+ ],
+ "gmOvWaitRight": [
+  "Right call — overtaking would not have fitted",
+  "ശരിയായ തീരുമാനം — ഓവർടേക്ക് സാധ്യമാകുമായിരുന്നില്ല"
+ ],
+ "gmOvRel": [
+  "Closing speed on the lorry",
+  "ലോറിയിലേക്ക് അടുക്കുന്ന വേഗം"
+ ],
+ "gmOvDistRel": [
+  "Distance to gain (20 m behind → 20 m ahead)",
+  "നേടേണ്ട ദൂരം (20 മീ. പിന്നിൽ → 20 മീ. മുന്നിൽ)"
+ ],
+ "gmOvTime": [
+  "Time on the wrong side",
+  "എതിർവശത്തെ സമയം"
+ ],
+ "gmOvYouGo": [
+  "Road you cover",
+  "നിങ്ങൾ പിന്നിടുന്ന ദൂരം"
+ ],
+ "gmOvOncGo": [
+  "Road the oncoming car covers",
+  "എതിരെ വരുന്ന കാർ പിന്നിടുന്ന ദൂരം"
+ ],
+ "gmOvNeedRow": [
+  "Clear road needed",
+  "വേണ്ട തെളിഞ്ഞ റോഡ്"
+ ],
+ "gmOvHave": [
+  "Clear road you had",
+  "ഉണ്ടായിരുന്ന തെളിഞ്ഞ റോഡ്"
+ ],
+ "gmOvSpare": [
+  "Spare",
+  "ബാക്കി"
+ ],
+ "gmOvShortBy": [
+  "Short by",
+  "കുറവ്"
+ ],
+ "gmOvGapNow": [
+  "gap {m} m",
+  "അകലം {m} മീ."
+ ],
+ "gmNext": [
+  "Next",
+  "അടുത്തത്"
  ]
 }

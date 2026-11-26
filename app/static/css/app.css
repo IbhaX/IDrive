@@ -1368,3 +1368,12 @@ html.splashing,html.splashing body{overflow:hidden}
 .gpedals .ggas,.gpedals .gbrake{flex:1;max-width:170px}
 .gpedals .ggas.on{background:#166534;border-color:#22c55e}
 .gpedals .gbrake.on{background:#7f1d1d;border-color:#ef4444}
+.govr{margin:auto auto 10px;max-width:520px;width:calc(100% - 20px);padding:12px 14px;border-radius:14px;background:rgba(2,6,23,.88);color:#e2e8f0;border:2px solid #475569;font-size:13px}
+.govr.good{border-color:#22c55e}.govr.bad{border-color:#ef4444}
+.govh{display:block;font-size:15px;margin-bottom:6px;color:#f8fafc}
+.govr table{width:100%;border-collapse:collapse}
+.govr th{text-align:left;font-weight:500;color:#94a3b8;padding:2px 8px 2px 0;vertical-align:top}
+.govr td{text-align:right;padding:2px 0;font-variant-numeric:tabular-nums}
+.govr tr.ok td b{color:#4ade80}.govr tr.no td b{color:#f87171}
+.govr .gbtns{padding:8px 0 0}
+.govr{max-height:calc(100% - 20px);overflow:auto}

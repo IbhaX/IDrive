@@ -1091,25 +1091,97 @@ def("blindspots", {
   },
 });
 
-/* overtake or wait? */
+/* overtake or wait? — after the choice the manoeuvre plays out in real metres:
+   you start 20 m behind the lorry, pull out, pass, and are done 20 m ahead of it;
+   all speeds constant. Needed road = (your speed + oncoming speed) × time to pass. */
+const smooth = (x) => { x = clamp(x, 0, 1); return x * x * (3 - 2 * x); };
 def("overtake", {
   icon: "🚚", unit: "",
   start(g) {
-    const R = 8; let i = 0, ok = 0, cur;
+    const R = 8, CL = 4.5, GAP = 20, PX = 8; let i = 0, ok = 0, cur = null, anim = null;
     const gen = () => { for (;;) { const you = ri(50, 90), tr = ri(30, you - 10), len = pick([8, 10, 12, 16]), onc = ri(40, 80), avail = ri(150, 650);
-      const dv = (you - tr) / 3.6, t = (20 + len + 4.5 + 20) / dv, need = (you + onc) / 3.6 * t; if (Math.abs(avail - need) / need > 0.2) return { you, tr, len, onc, avail, need, go: avail > need }; } };
+      const dv = (you - tr) / 3.6, t = (GAP + len + CL + GAP) / dv, need = (you + onc) / 3.6 * t; if (Math.abs(avail - need) / need > 0.2) return { you, tr, len, onc, avail, need, t, dv, go: avail > need }; } };
+    /* world x in metres, + = your direction; lorry rear at 0 when t = 0 */
+    const state = (tt, mode) => {
+      const c0 = cur, vy = c0.you / 3.6, vt = c0.tr / 3.6, vo = c0.onc / 3.6;
+      const lorry = vt * tt;
+      let front, lane = 0;
+      if (mode === "go") { front = -GAP + vy * tt; const rel = front - lorry; lane = Math.min(smooth((rel + GAP) / 12), 1 - smooth((rel - CL - c0.len - 8) / 12)); }
+      else front = -GAP + vt * tt;                                  // waiting: sit behind at the lorry's speed
+      const onc = -GAP + c0.avail - vo * tt;                          // oncoming car's front
+      return { lorry, front, lane, onc };
+    };
     const round = () => {
       if (i >= R) return g.end(ok, e(u("gmOvTip")));
-      i++; cur = gen(); rounds(g, `${i} / ${R}`);
-      g.draw((c) => {
-        c.fillStyle = "#4d7c34"; c.fillRect(0, 0, W, H); c.fillStyle = "#3b3d40"; c.fillRect(0, 140, W, 120); c.fillStyle = "#f2f2f2"; for (let x = 0; x < W; x += 40) c.fillRect(x, 198, 22, 4);
-        D.carTop(c, 90, 170, 40, 72, "#2563eb", { rot: Math.PI / 2 }); c.fillStyle = "#a16207"; D.rr(c, 130, 150, cur.len * 7, 40, 6); c.fill();
-        D.carTop(c, 600, 230, 40, 72, "#e2e8f0", { rot: -Math.PI / 2 });
-        D.text(c, `${t1("gmYou")} ${cur.you} km/h · ${t1("gmLorry")} ${cur.tr} km/h (${cur.len} m)`, W / 2, 60, 17, "#fff");
-        D.text(c, `${t1("gmOncoming")} ${cur.onc} km/h · ${t1("gmClearAhead", { m: cur.avail })}`, W / 2, 95, 17, "#fde047");
-      });
-      g.btns([`↗ ${t1("gmOvertakeBtn")}`, `⏸ ${t1("gmWaitBtn")}`], (k) => { const right = (k === 0) === cur.go; if (right) ok++; g.msg(`${right ? t1("gmCorrect") : t1("gmWrong")} · ${t1("gmNeedM", { m: Math.round(cur.need) })}`, right ? "good" : "bad", 1600); g.after(1700, round); }, "two");
+      i++; cur = gen(); anim = null; rounds(g, `${i} / ${R}`);
+      g.btns([`↗ ${t1("gmOvertakeBtn")}`, `⏸ ${t1("gmWaitBtn")}`], (k) => choose(k === 0 ? "go" : "wait"), "two");
     };
+    const choose = (mode) => {
+      g.lay.innerHTML = "";
+      const right = (mode === "go") === cur.go; if (right) ok++;
+      /* how long to show: a pass runs to the end of the manoeuvre or to the moment the gap closes;
+         waiting runs until the oncoming car has gone by */
+      let tEnd;
+      if (mode === "go") {
+        tEnd = cur.t + 1;
+        if (!cur.go) { for (let tt = 0; tt < cur.t; tt += 0.02) { const s = state(tt, "go"); if (s.lane > 0.3 && s.onc - s.front < 8) { tEnd = tt; break; } } }
+      } else tEnd = (cur.avail + 10) / ((cur.tr + cur.onc) / 3.6);
+      anim = { mode, t: 0, tEnd, speed: Math.max(1, tEnd / 5), right, done: false };
+    };
+    const report = () => {
+      const c0 = cur, A = anim, margin = Math.round(c0.avail - c0.need), you = Math.round(c0.you / 3.6 * c0.t), onc = Math.round(c0.onc / 3.6 * c0.t);
+      const head = A.mode === "go" ? (c0.go ? t1("gmOvDone", { m: margin }) : t1("gmOvHeadOn")) : (c0.go ? t1("gmOvWaitRoom", { m: margin }) : t1("gmOvWaitRight"));
+      const row = (k, v, cls = "") => `<tr class="${cls}"><th>${e(u(k))}</th><td>${v}</td></tr>`;
+      g.panel(`<div class="govr ${A.right ? "good" : "bad"}"><b class="govh">${A.right ? "✓" : "✗"} ${I18n.esc(head)}</b><table>
+        ${row("gmOvRel", `${c0.you} − ${c0.tr} = <b>${c0.you - c0.tr} km/h</b> (${fx(c0.dv)} m/s)`)}
+        ${row("gmOvDistRel", `${GAP} + ${c0.len} + ${CL} + ${GAP} = <b>${fx(GAP * 2 + c0.len + CL, 1)} m</b>`)}
+        ${row("gmOvTime", `${fx(GAP * 2 + c0.len + CL, 1)} ÷ ${fx(c0.dv)} = <b>${fx(c0.t)} s</b>`)}
+        ${row("gmOvYouGo", `${fx(c0.you / 3.6)} m/s × ${fx(c0.t)} s = <b>${you} m</b>`)}
+        ${row("gmOvOncGo", `${fx(c0.onc / 3.6)} m/s × ${fx(c0.t)} s = <b>${onc} m</b>`)}
+        ${row("gmOvNeedRow", `${you} + ${onc} = <b>${Math.round(c0.need)} m</b>`)}
+        ${row("gmOvHave", `<b>${c0.avail} m</b>`)}
+        ${row(margin >= 0 ? "gmOvSpare" : "gmOvShortBy", `<b>${Math.abs(margin)} m</b>`, margin >= 0 ? "ok" : "no")}
+      </table><div class="gbtns"><button type="button" class="gbtn" data-n>${t1("gmNext")} ›</button></div></div>`);
+      g.lay.querySelector("[data-n]").addEventListener("click", (ev) => { ev.stopPropagation(); round(); });
+    };
+    g.loop((dt) => {
+      if (anim && !anim.done) { anim.t = Math.min(anim.tEnd, anim.t + dt * anim.speed); if (anim.t >= anim.tEnd) { anim.done = true; g.after(900, report); } }
+      const tt = anim ? anim.t : 0, s = state(tt, anim ? anim.mode : "wait");
+      const clash = anim && anim.mode === "go" && !cur.go && anim.done;
+      g.draw((c) => {
+        const cam = s.front - 10, X = (m) => 220 + (m - cam) * PX, Y0 = 120, Y1 = 180;
+        c.fillStyle = "#4d7c34"; c.fillRect(0, 0, W, H);
+        c.fillStyle = "#3b3d40"; c.fillRect(0, 90, W, 120);
+        c.fillStyle = "#f2f2f2"; c.fillRect(0, 92, W, 3); c.fillRect(0, 205, W, 3);
+        for (let m = Math.floor(cam / 6) * 6 - 60; m < cam + 80; m += 6) c.fillRect(X(m), 148, 3 * PX / 2, 4);
+        for (let m = Math.floor(cam / 25) * 25 - 50; m < cam + 80; m += 25) { c.fillStyle = "#e2e8f0"; c.fillRect(X(m), 76, 3, 10); }   // marker posts every 25 m
+        /* lorry: rear at s.lorry, cab in front */
+        const lx = X(s.lorry), lw = cur.len * PX;
+        c.fillStyle = "rgba(0,0,0,.3)"; D.rr(c, lx + 3, Y0 - 9, lw, 22, 4); c.fill();
+        c.fillStyle = "#a16207"; D.rr(c, lx, Y0 - 11, lw - 2.2 * PX, 22, 3); c.fill();
+        c.fillStyle = "#e2e8f0"; D.rr(c, lx + lw - 2.2 * PX, Y0 - 10, 2.2 * PX, 20, 4); c.fill();
+        /* oncoming car: front at s.onc, facing left */
+        if (X(s.onc) < W + 60) D.carTop(c, X(s.onc) + CL * PX / 2, Y1, 1.8 * PX, CL * PX, "#e2e8f0", { rot: -Math.PI / 2 });
+        /* you: front at s.front */
+        D.carTop(c, X(s.front) - CL * PX / 2, Y0 + s.lane * (Y1 - Y0), 1.8 * PX, CL * PX, clash ? "#dc2626" : "#2563eb", { rot: Math.PI / 2, ind: anim && anim.mode === "go" && s.lane > 0.02 && s.lane < 0.98 ? (s.front - s.lorry < cur.len ? "r" : "l") : null, on: Math.floor(tt * 3) % 2 === 0 });
+        if (clash) { c.strokeStyle = "#ef4444"; c.lineWidth = 3; c.beginPath(); c.arc((X(s.front) + X(s.onc)) / 2, Y1, 34, 0, 7); c.stroke(); }
+        /* top: question text before choosing, strip map during the run */
+        if (!anim) {
+          D.text(c, `${t1("gmYou")} ${cur.you} km/h · ${t1("gmLorry")} ${cur.tr} km/h (${cur.len} m)`, W / 2, 28, 16, "#fff");
+          D.text(c, `${t1("gmOncoming")} ${cur.onc} km/h · ${t1("gmClearAhead", { m: cur.avail })}`, W / 2, 56, 16, "#fde047");
+        } else {
+          const span = cur.avail + 30, MX = (m) => 40 + (m + GAP + 5) / span * 560;
+          c.fillStyle = "rgba(2,6,23,.6)"; D.rr(c, 24, 8, 592, 56, 10); c.fill();
+          c.fillStyle = "#475569"; c.fillRect(40, 44, 560, 4);
+          c.fillStyle = "#a16207"; c.fillRect(MX(s.lorry), 40, Math.max(3, cur.len / span * 560), 12);
+          c.fillStyle = "#2563eb"; c.beginPath(); c.arc(MX(s.front), 46, 6, 0, 7); c.fill();
+          c.fillStyle = "#e2e8f0"; c.beginPath(); c.arc(MX(s.onc), 46, 6, 0, 7); c.fill();
+          const gap = Math.max(0, s.onc - s.front);
+          D.text(c, `t = ${fx(tt)} s · ${t1("gmOvGapNow", { m: Math.round(gap) })} · ${t1("gmYou")} ${cur.you} km/h`, W / 2, 24, 13, "#e2e8f0");
+          if (anim.speed > 1.05) D.text(c, `×${fx(anim.speed)}`, 604, 24, 11, "#94a3b8", "right");
+        }
+      });
+    });
     round();
   },
 });
