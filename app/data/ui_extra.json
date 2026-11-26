@@ -4732,8 +4732,8 @@
   "വളഞ്ഞ റോഡിൽ ലെയ്നിൽ തുടരുക"
  ],
  "gmHow_lanekeep": [
-  "Hold the left or right side of the screen (or arrow keys) to steer. Keep to the left lane for 30 seconds.",
-  "സ്റ്റിയർ ചെയ്യാൻ സ്ക്രീനിന്റെ ഇടത് അല്ലെങ്കിൽ വലത് ഭാഗം അമർത്തിപ്പിടിക്കുക (അല്ലെങ്കിൽ ആരോ കീകൾ). 30 സെക്കൻഡ് ഇടത് ലെയ്നിൽ തുടരുക."
+  "Hold the left or right side of the screen (or arrow keys) to steer. Keep to the left lane for 30 seconds: blue = in your lane (counts), amber = over the centre line, red = off the road.",
+  "സ്റ്റിയർ ചെയ്യാൻ സ്ക്രീനിന്റെ ഇടത് അല്ലെങ്കിൽ വലത് ഭാഗം അമർത്തിപ്പിടിക്കുക (അല്ലെങ്കിൽ ആരോ കീകൾ). 30 സെക്കൻഡ് ഇടത് ലെയ്നിൽ തുടരുക: നീല = നിങ്ങളുടെ ലെയ്ൻ (കണക്കാക്കും), ആംബർ = മധ്യരേഖ കടന്നു, ചുവപ്പ് = റോഡിന് പുറത്ത്."
  ],
  "gm_speedkeep": [
   "Steady speed",
@@ -5010,5 +5010,13 @@
  "gmShort": [
   "short",
   "മുമ്പേ"
+ ],
+ "gmKeepLeft": [
+  "Keep left — you're over the centre line",
+  "ഇടത്തോട്ട് — മധ്യരേഖ കടന്നു"
+ ],
+ "gmOffRoad": [
+  "Off the road",
+  "റോഡിന് പുറത്ത്"
  ]
 }

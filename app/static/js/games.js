@@ -477,8 +477,11 @@ def("lanekeep", {
       t += dt; s += dt * 260;
       const dir = hold || (keys.ArrowLeft ? -1 : keys.ArrowRight ? 1 : 0);
       target += dir * 360 * dt; x += (target - x) * Math.min(1, dt * 8); x = clamp(x, 40, W - 40); target = clamp(target, 40, W - 40);
-      const off = Math.abs(x - (centre(320) - 35)); total += dt; if (off < 30) inLane += dt;
-      g.hud(`<b>${Math.round(inLane / Math.max(0.01, total) * 100)}%</b> · ${Math.ceil(T - t)} s`);
+      /* car centre inside the left lane (road half = 70 px, lane = 70 px wide) → counts;
+         on the road but over the centre line → amber; off the tarmac → red */
+      const rc = centre(320), zone = x <= rc + 4 && x >= rc - 70 ? 0 : Math.abs(x - rc) <= 70 ? 1 : 2;
+      total += dt; if (zone === 0) inLane += dt;
+      g.hud(`<b>${Math.round(inLane / Math.max(0.01, total) * 100)}%</b> · ${Math.ceil(T - t)} s${zone === 1 ? ` · ${e(u("gmKeepLeft"))}` : zone === 2 ? ` · ${e(u("gmOffRoad"))}` : ""}`);
       if (t >= T) g.end(inLane / total * 100);
       g.draw((c) => {
         c.fillStyle = "#4d7c34"; c.fillRect(0, 0, W, H);
@@ -488,7 +491,7 @@ def("lanekeep", {
         c.fillStyle = "#3b3d40"; c.beginPath(); ys.forEach((yy, k) => { const x2 = centre(yy) - 70; k ? c.lineTo(x2, yy) : c.moveTo(x2, yy); }); ys.slice().reverse().forEach((yy) => c.lineTo(centre(yy) + 70, yy)); c.fill();
         c.strokeStyle = "#f2f2f2"; c.lineWidth = 3; edge(-66); c.stroke(); edge(66); c.stroke();
         c.setLineDash([14, 14]); c.lineDashOffset = -s; edge(0); c.stroke(); c.setLineDash([]);
-        D.carTop(c, x, 320, 40, 72, off < 30 ? "#2563eb" : "#dc2626", { rot: clamp((target - x) / 300, -0.4, 0.4) });
+        D.carTop(c, x, 320, 40, 72, ["#2563eb", "#f59e0b", "#dc2626"][zone], { rot: clamp((target - x) / 300, -0.4, 0.4) });
       });
     });
   },
