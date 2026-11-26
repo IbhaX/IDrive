@@ -497,34 +497,112 @@ def("lanekeep", {
   },
 });
 
-/* hold the speed inside the band */
+/* hold a steady speed with a real drivetrain: 5-speed manual, torque curve,
+   engine braking, aero + rolling drag, gravity on grades, brakes.
+   Generic small petrol hatchback (≈1150 kg with driver). */
+const CAR = {
+  m: 1150, r: 0.29, fd: 4.1, eff: 0.9, gears: [3.55, 1.95, 1.28, 0.97, 0.78],
+  cda: 0.65, crr: 0.012, idle: 800, red: 6000, stall: 700,
+  torque: [[800, 70], [1500, 88], [2500, 102], [3500, 110], [4200, 113], [5000, 109], [6000, 96]],
+};
+const lerpTab = (tab, x) => { if (x <= tab[0][0]) return tab[0][1]; for (let k = 1; k < tab.length; k++) if (x <= tab[k][0]) { const [x0, y0] = tab[k - 1], [x1, y1] = tab[k]; return y0 + (y1 - y0) * (x - x0) / (x1 - x0); } return tab[tab.length - 1][1]; };
 def("speedkeep", {
   icon: "⏱️", unit: "%",
+  preview(g) { g.draw((c) => drawDash(c, { v: 45 / 3.6, rpm: 2400, gear: 3, thr: 0, brk: 0, grade: 0, lo: 45, hi: 55 })); },
   start(g) {
-    let v = 40, t = 0, inBand = 0, hold = false, grade = 0, gt = 0;
-    const T = 30, lo = 45, hi = 55;
-    g.on("down", () => { hold = true; }); g.on("up", () => { hold = false; });
-    g.on("key", (k) => { if (k === " " || k === "ArrowUp") { hold = true; const up = () => { hold = false; window.removeEventListener("keyup", up); }; window.addEventListener("keyup", up); } });
-    g.loop((dt, now) => {
-      t += dt; gt -= dt; if (gt <= 0) { grade = rnd(-6, 6); gt = rnd(2, 4); }
-      v += ((hold ? 9 : -2.5) - grade * 1.2) * dt; v = clamp(v, 0, 90);
-      if (v >= lo && v <= hi) inBand += dt;
-      g.hud(`<b>${Math.round(inBand / Math.max(0.01, t) * 100)}%</b> · ${Math.ceil(T - t)} s · ${grade > 1 ? "⬆" : grade < -1 ? "⬇" : "➡"}`);
-      if (t >= T) g.end(inBand / t * 100);
-      g.draw((c) => {
-        c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H);
-        const cx = W / 2, cy = 260, R = 160, A = (s) => Math.PI * (1.1 - s / 90 * 1.2);
-        c.lineWidth = 18;
-        c.beginPath(); c.strokeStyle = "#334155"; c.arc(cx, cy, R, -A(0), -A(90)); c.stroke();
-        c.beginPath(); c.strokeStyle = "#22c55e"; c.arc(cx, cy, R, -A(lo), -A(hi)); c.stroke();
-        for (let s = 0; s <= 90; s += 10) { const a = A(s); D.text(c, s, cx + Math.cos(a) * (R - 34), cy - Math.sin(a) * (R - 34), 14, "#cbd5e1"); }
-        const a = A(v); c.lineWidth = 5; c.strokeStyle = "#ef4444"; c.beginPath(); c.moveTo(cx, cy); c.lineTo(cx + Math.cos(a) * (R - 10), cy - Math.sin(a) * (R - 10)); c.stroke();
-        D.text(c, `${Math.round(v)} km/h`, cx, cy + 40, 30, v >= lo && v <= hi ? "#22c55e" : "#f8fafc", "center", 700);
-        D.text(c, hold ? "⛽" : "", cx, cy - 60, 30); void now;
-      });
+    const T = 40, lo = 45, hi = 55, G = 9.81;
+    const st = { v: 45 / 3.6, gear: 3, thr: 0.25, brk: 0, grade: 0, gT: 0, gt: 0, rpm: 0, stalled: false, gas: false, brake: false, lim: false };
+    let t = 0, inBand = 0, hintT = 0;
+    const rpmOf = (v, gear) => v / (2 * Math.PI * CAR.r) * 60 * CAR.gears[gear - 1] * CAR.fd;
+    const shift = (d) => {
+      const ng = clamp(st.gear + d, 1, 5); if (ng === st.gear) return;
+      if (rpmOf(st.v, ng) > CAR.red + 300) { g.msg(t1("gmOverRev"), "bad", 900); return; }   // a missed shift would over-rev: refuse it
+      st.gear = ng; if (st.stalled && (ng === 1 || rpmOf(st.v, ng) > 1100)) st.stalled = false;
+    };
+    g.panel(`<div class="gbtns gpedals"><button type="button" class="gbtn" data-k="dn">▼ ${t1("gmGearDown")}</button><button type="button" class="gbtn gbrake" data-k="brake">${t1("gmBrake")}</button><button type="button" class="gbtn ggas" data-k="gas">${t1("gmGas")}</button><button type="button" class="gbtn" data-k="up">${t1("gmGearUp")} ▲</button></div>`);
+    g.lay.querySelectorAll("[data-k]").forEach((b) => {
+      const k = b.dataset.k;
+      if (k === "up" || k === "dn") { b.addEventListener("click", (ev) => { ev.stopPropagation(); if (g.alive) shift(k === "up" ? 1 : -1); }); return; }
+      const on = (ev) => { ev.preventDefault(); ev.stopPropagation(); st[k] = true; b.classList.add("on"); try { b.setPointerCapture(ev.pointerId); } catch (err) { /* ignore */ } };
+      const off = () => { st[k] = false; b.classList.remove("on"); };
+      b.addEventListener("pointerdown", on); b.addEventListener("pointerup", off); b.addEventListener("pointercancel", off); b.addEventListener("lostpointercapture", off);
+    });
+    const held = {};
+    const kd = (ev) => { if (!g.alive) return; const k = ev.key;
+      if (k === "ArrowUp" || k === " ") st.gas = true; else if (k === "ArrowDown") st.brake = true;
+      else if (!held[k] && (k === "ArrowRight" || k === "e" || k === "E")) shift(1); else if (!held[k] && (k === "ArrowLeft" || k === "q" || k === "Q")) shift(-1);
+      held[k] = true; };
+    const ku = (ev) => { held[ev.key] = false; if (ev.key === "ArrowUp" || ev.key === " ") st.gas = false; if (ev.key === "ArrowDown") st.brake = false; if (!g.alive) { window.removeEventListener("keyup", ku); window.removeEventListener("keydown", kd); } };
+    g.on("key", () => {}); window.addEventListener("keydown", kd); window.addEventListener("keyup", ku);
+    g.loop((dt) => {
+      t += dt;
+      /* road: grade drifts towards a new target every few seconds, −5 % … +6 % */
+      st.gt -= dt; if (st.gt <= 0) { st.gT = rnd(-5, 6); st.gt = rnd(3, 5.5); }
+      st.grade += clamp(st.gT - st.grade, -1.2 * dt, 1.2 * dt);
+      /* pedals move at a human rate, not instantly */
+      st.thr = clamp(st.thr + (st.gas ? 1.1 : -2.2) * dt, 0, 1);
+      st.brk = clamp(st.brk + (st.brake ? 2.5 : -4) * dt, 0, 1);
+      const ratio = CAR.gears[st.gear - 1] * CAR.fd;
+      let rpm = rpmOf(st.v, st.gear), Te = 0;
+      if (st.gear === 1) rpm = Math.max(rpm, st.thr > 0.05 ? 1200 + 1500 * st.thr : CAR.idle);   // clutch slips in first
+      if (!st.stalled && st.gear > 1 && rpm < CAR.stall) { st.stalled = true; g.msg(t1("gmStalled"), "bad", 1400); }
+      if (!st.stalled) {
+        const full = lerpTab(CAR.torque, rpm), drag = -(8 + rpm * 0.0045);   // closed-throttle pumping/friction loss
+        st.lim = rpm >= CAR.red;
+        Te = st.lim ? Math.min(0, drag) : st.thr * full + (1 - st.thr) * drag;
+        if (st.gear === 1 && rpmOf(st.v, 1) < rpm) Te = Math.max(Te, 0);   // slipping clutch can't engine-brake
+      } else rpm = 0;
+      const Fdrive = Te * ratio * (Te > 0 ? CAR.eff : 1 / CAR.eff) / CAR.r;
+      const Fres = 0.5 * 1.2 * CAR.cda * st.v * st.v + (st.v > 0.05 ? CAR.crr * CAR.m * G : 0);
+      const Fgrade = CAR.m * G * Math.sin(Math.atan(st.grade / 100));
+      const Fbrake = st.brk * 0.75 * CAR.m * G * (st.v > 0.05 ? 1 : 0);
+      st.v = Math.max(0, st.v + (Fdrive - Fres - Fgrade - Fbrake) / CAR.m * dt);
+      st.rpm = rpm;
+      const kmh = st.v * 3.6, inside = kmh >= lo && kmh <= hi;
+      if (inside) inBand += dt;
+      hintT -= dt;
+      if (hintT <= 0) {
+        if (!st.stalled && st.gear > 1 && rpm < 1300 && st.thr > 0.5) { g.msg(t1("gmLugging"), "", 1000); hintT = 2.5; }
+        else if (rpm > 5600) { g.msg(t1("gmShiftUp"), "", 900); hintT = 2.5; }
+      }
+      const gr = Math.round(st.grade);
+      g.hud(`<b>${Math.round(inBand / Math.max(0.01, t) * 100)}%</b> · ${Math.max(0, Math.ceil(T - t))} s · ${gr >= 1 ? `⬈ ${e(u("gmUphill", { p: gr }))}` : gr <= -1 ? `⬊ ${e(u("gmDownhill", { p: -gr }))}` : `➡ ${e(u("gmFlat"))}`}`);
+      if (t >= T) { window.removeEventListener("keydown", kd); window.removeEventListener("keyup", ku); g.end(inBand / t * 100, e(u("gmSpeedTip"))); return; }
+      g.draw((c) => drawDash(c, { ...st, lo, hi }));
     });
   },
 });
+function drawDash(c, s) {
+  c.fillStyle = "#0b1120"; c.fillRect(0, 0, W, H);
+  const gauge = (cx, cy, R, max, val, step, fmtL, band, red) => {
+    const A = (x) => Math.PI * (1.25 - x / max * 1.5);   // 225° sweep
+    c.lineCap = "butt"; c.lineWidth = 12;
+    c.strokeStyle = "#1e293b"; c.beginPath(); c.arc(cx, cy, R, -A(0), -A(max)); c.stroke();
+    if (band) { c.strokeStyle = "#22c55e"; c.beginPath(); c.arc(cx, cy, R, -A(band[0]), -A(band[1])); c.stroke(); }
+    if (red) { c.strokeStyle = "#ef4444"; c.beginPath(); c.arc(cx, cy, R, -A(red), -A(max)); c.stroke(); }
+    for (let x = 0; x <= max + 1e-6; x += step / 2) {
+      const a = A(x), big = Math.abs(x / step - Math.round(x / step)) < 1e-6, r0 = R - (big ? 20 : 13);
+      c.strokeStyle = "#94a3b8"; c.lineWidth = big ? 2.5 : 1.2; c.beginPath(); c.moveTo(cx + Math.cos(a) * (R - 7), cy - Math.sin(a) * (R - 7)); c.lineTo(cx + Math.cos(a) * r0, cy - Math.sin(a) * r0); c.stroke();
+      if (big) D.text(c, fmtL(x), cx + Math.cos(a) * (R - 34), cy - Math.sin(a) * (R - 34), 13, "#cbd5e1");
+    }
+    const a = A(clamp(val, 0, max)); c.lineCap = "round"; c.lineWidth = 4; c.strokeStyle = "#f97316";
+    c.beginPath(); c.moveTo(cx - Math.cos(a) * 12, cy + Math.sin(a) * 12); c.lineTo(cx + Math.cos(a) * (R - 16), cy - Math.sin(a) * (R - 16)); c.stroke();
+    c.fillStyle = "#334155"; c.beginPath(); c.arc(cx, cy, 8, 0, 7); c.fill(); c.lineCap = "butt";
+  };
+  const kmh = s.v * 3.6, ok = kmh >= s.lo && kmh <= s.hi;
+  gauge(190, 175, 118, 140, kmh, 20, (x) => x, [s.lo, s.hi]);
+  D.text(c, `${Math.round(kmh)}`, 190, 232, 30, ok ? "#22c55e" : "#f8fafc", "center", 800); D.text(c, "km/h", 190, 258, 12, "#94a3b8");
+  gauge(450, 175, 92, 7000, s.rpm, 1000, (x) => x / 1000, null, 6000);
+  D.text(c, "rpm ×1000", 450, 145, 10, "#94a3b8");
+  c.fillStyle = s.stalled ? "#7f1d1d" : "#111827"; D.rr(c, 428, 208, 44, 46, 9); c.fill(); c.strokeStyle = "#475569"; c.lineWidth = 2; c.stroke();
+  D.text(c, s.stalled ? "!" : String(s.gear), 450, 232, 28, s.stalled ? "#fecaca" : "#f8fafc", "center", 800);
+  for (let k = 1; k <= 5; k++) D.text(c, k, 450 + (k - 3) * 16, 272, 12, k === s.gear ? "#f97316" : "#475569", "center", 700);
+  /* pedals */
+  const bar = (x, v, col, lab) => { c.fillStyle = "#1e293b"; D.rr(c, x, 100, 14, 150, 6); c.fill(); if (v > 0.01) { c.fillStyle = col; D.rr(c, x, 100 + 150 * (1 - v), 14, 150 * v, 6); c.fill(); } D.text(c, lab, x + 7, 266, 11, "#94a3b8"); };
+  bar(586, s.thr, "#22c55e", "⛽"); bar(612, s.brk, "#ef4444", "⏹");
+  /* slope */
+  c.save(); c.translate(588, 52); c.rotate(-Math.atan(s.grade / 100) * 3); c.fillStyle = "#475569"; c.fillRect(-36, 6, 72, 5); D.carTop(c, 0, -2, 12, 22, "#2563eb", { rot: Math.PI / 2 }); c.restore();
+}
 
 /* pull out of a side road into a safe gap */
 def("gapjudge", {

@@ -1363,3 +1363,8 @@ html.splashing,html.splashing body{overflow:hidden}
 .gchip{padding:2px 9px;border-radius:999px;background:rgba(148,163,184,.22);font-size:13px;font-weight:600}
 .gchip.good{background:rgba(34,197,94,.3)}.gchip.bad{background:rgba(239,68,68,.35)}
 .gprev{display:inline-block;color:#cbd5e1;font-size:13px}
+.gpedals{gap:6px;padding:8px}
+.gpedals .gbtn{touch-action:none;min-width:72px}
+.gpedals .ggas,.gpedals .gbrake{flex:1;max-width:170px}
+.gpedals .ggas.on{background:#166534;border-color:#22c55e}
+.gpedals .gbrake.on{background:#7f1d1d;border-color:#ef4444}

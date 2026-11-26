@@ -4740,12 +4740,12 @@
   "സ്ഥിര വേഗം"
  ],
  "gmSub_speedkeep": [
-  "Hold 45–55 km/h over hills",
-  "കയറ്റിറക്കങ്ങളിൽ 45–55 km/h നിലനിർത്തുക"
+  "Hold 45–55 km/h with gears, accelerator and brake",
+  "ഗിയർ, ആക്സിലറേറ്റർ, ബ്രേക്ക് ഉപയോഗിച്ച് 45–55 km/h നിലനിർത്തുക"
  ],
  "gmHow_speedkeep": [
-  "Hold anywhere (or Space) to accelerate, let go to ease off. Keep the needle in the green band while the road goes up and down.",
-  "വേഗം കൂട്ടാൻ എവിടെയെങ്കിലും അമർത്തിപ്പിടിക്കുക (അല്ലെങ്കിൽ Space), വിട്ടാൽ കുറയും. റോഡ് കയറിയിറങ്ങുമ്പോഴും സൂചി പച്ചയിൽ നിർത്തുക."
+  "Drive a 5-speed manual hatchback over hills and keep the speedometer in the green band (45–55 km/h) for 40 seconds. Hold Accelerator (↑ or Space) and Brake (↓); change gear with ▼/▲ (← / →). The physics is real: engine torque depends on revs and gear, a high gear labours uphill and can stall, a low gear gives engine braking downhill, and drag grows with speed.",
+  "5 സ്പീഡ് മാനുവൽ ഹാച്ച്ബാക്ക് കയറ്റിറക്കങ്ങളിലൂടെ ഓടിച്ച് 40 സെക്കൻഡ് സ്പീഡോമീറ്റർ പച്ച ഭാഗത്ത് (45–55 km/h) നിർത്തുക. ആക്സിലറേറ്റർ (↑ അല്ലെങ്കിൽ Space), ബ്രേക്ക് (↓) അമർത്തിപ്പിടിക്കുക; ▼/▲ (← / →) കൊണ്ട് ഗിയർ മാറ്റുക. ഭൗതികശാസ്ത്രം യഥാർഥം: എഞ്ചിൻ ടോർക്ക് ആർപിഎമ്മിനെയും ഗിയറിനെയും ആശ്രയിക്കുന്നു, ഉയർന്ന ഗിയർ കയറ്റത്തിൽ വലിയാതാകും, നിന്നുപോകാം; താഴ്ന്ന ഗിയർ ഇറക്കത്തിൽ എഞ്ചിൻ ബ്രേക്കിങ് നൽകും; വേഗം കൂടുമ്പോൾ കാറ്റിന്റെ പ്രതിരോധവും കൂടും."
  ],
  "gm_gapjudge": [
   "Pull out safely",
@@ -5018,5 +5018,49 @@
  "gmOffRoad": [
   "Off the road",
   "റോഡിന് പുറത്ത്"
+ ],
+ "gmGas": [
+  "Accelerator",
+  "ആക്സിലറേറ്റർ"
+ ],
+ "gmGearUp": [
+  "Gear",
+  "ഗിയർ"
+ ],
+ "gmGearDown": [
+  "Gear",
+  "ഗിയർ"
+ ],
+ "gmStalled": [
+  "Stalled — shift down",
+  "എഞ്ചിൻ നിന്നു — ഗിയർ താഴ്ത്തുക"
+ ],
+ "gmLugging": [
+  "Engine labouring — shift down",
+  "എഞ്ചിൻ വലിയുന്നില്ല — ഗിയർ താഴ്ത്തുക"
+ ],
+ "gmShiftUp": [
+  "Near the red line — shift up",
+  "റെഡ് ലൈനിനടുത്ത് — ഗിയർ ഉയർത്തുക"
+ ],
+ "gmOverRev": [
+  "Too fast for that gear",
+  "ആ ഗിയറിന് വേഗം കൂടുതൽ"
+ ],
+ "gmUphill": [
+  "{p}% uphill",
+  "{p}% കയറ്റം"
+ ],
+ "gmDownhill": [
+  "{p}% downhill",
+  "{p}% ഇറക്കം"
+ ],
+ "gmFlat": [
+  "level",
+  "നിരപ്പ്"
+ ],
+ "gmSpeedTip": [
+  "Uphill, drop a gear before the engine labours; downhill, a lower gear holds the car back (engine braking) so you need less brake.",
+  "കയറ്റത്തിൽ എഞ്ചിൻ വലിയാതാകും മുമ്പ് ഗിയർ താഴ്ത്തുക; ഇറക്കത്തിൽ താഴ്ന്ന ഗിയർ കാറിനെ പിടിച്ചുനിർത്തും (എഞ്ചിൻ ബ്രേക്കിങ്), ബ്രേക്ക് കുറച്ച് മതി."
  ]
 }
