@@ -25,10 +25,20 @@ Gm.ALL = Gm.GROUPS.flatMap(([, ids]) => ids);
 Gm.reindex = () => { Gm.ALL = Gm.GROUPS.flatMap(([, ids]) => ids); };
 
 /* ---------- scores ---------- */
-const points = (id, v) => (DEF[id].lo ? Math.max(0, 10000 - Math.round(v)) : Math.round(v));
-const fromPoints = (id, p) => (DEF[id].lo ? 10000 - p : p);
-const fmt = (id, v) => { const un = DEF[id].unit || ""; return `${Math.round(v)}${un ? " " + un : ""}`; };
-const bestOf = (id) => { const p = (P.gm || {})[id]; return p == null ? null : fromPoints(id, p); };
+const rnd10 = (id, v) => { const d = DEF[id].dec || 0, f = 10 ** d; return Math.round(v * f) / f; };
+const points = (id, v) => (DEF[id].lo ? Math.max(0, +(10000 - rnd10(id, v)).toFixed(DEF[id].dec || 0)) : rnd10(id, v));
+const fromPoints = (id, p) => (DEF[id].lo ? +(10000 - p).toFixed(DEF[id].dec || 0) : p);
+const fmt = (id, v) => { const un = DEF[id].unit || ""; return `${(+v).toFixed(DEF[id].dec || 0)}${un ? " " + un : ""}`; };
+const bestOf = (id, lv) => { const p = (P.gm || {})[lv ? `${id}.${lv}` : id]; return p == null ? null : fromPoints(id, p); };
+const LV_KEY = "idrive-gmlv";
+const levelOf = (id) => { const sp = DEF[id]; if (!sp.levels) return null; let v = null; try { v = JSON.parse(localStorage.getItem(LV_KEY) || "{}")[id]; } catch (err) { v = null; } return sp.levels.includes(v) ? v : sp.levels[0]; };
+const setLevel = (id, lv) => { try { const o = JSON.parse(localStorage.getItem(LV_KEY) || "{}"); o[id] = lv; localStorage.setItem(LV_KEY, JSON.stringify(o)); } catch (err) { /* private mode */ } };
+const playedGame = (id) => (DEF[id].levels ? DEF[id].levels.some((lv) => (P.gm || {})[`${id}.${lv}`] != null) : (P.gm || {})[id] != null);
+const bestLine = (id) => {
+  const sp = DEF[id];
+  if (!sp.levels) { const b = bestOf(id); return b == null ? e(u("gmNoBest")) : `${e(u("gmBest"))}: <b>${fmt(id, b)}</b>`; }
+  return sp.levels.map((lv) => { const b = bestOf(id, lv); return `${e(u("gmLvl_" + lv))}: <b>${b == null ? "—" : fmt(id, b)}</b>`; }).join(" · ");
+};
 
 /* ---------- drawing helpers (logical 640×400) ---------- */
 const D = {
@@ -177,6 +187,7 @@ function makeRunner(id, stage, onEnd) {
     g,
     start() { handlers = {}; lay.innerHTML = ""; hudEl.innerHTML = ""; alive = true; last = performance.now(); window.addEventListener("keydown", onKey); sp.start(g); if (!raf) raf = requestAnimationFrame(frame); },
     preview() { prep(); (sp.preview || defaultPreview)(g); },
+    stop() { alive = false; frameFn = null; timers.forEach(clearTimeout); timers = []; window.removeEventListener("keydown", onKey); handlers = {}; lay.innerHTML = ""; hudEl.innerHTML = ""; msgEl.className = "gmsg"; },
   };
 }
 function defaultPreview(g) { g.draw((c) => { D.roadV(c, W / 2, 2, 90, 0); D.carTop(c, W / 2 - 45, 300, 46, 84, "#2563eb"); }); }
@@ -188,12 +199,11 @@ Gm.view = (app) => {
   play(app, id);
 };
 function hub(app) {
-  const played = Gm.ALL.filter((k) => (P.gm || {})[k] != null).length;
+  const played = Gm.ALL.filter(playedGame).length;
   app.innerHTML = `${Course.crumbs([[u("home"), "#home"], [u("tGames"), "#games"]])}
   <section class="panel rvl"><h2>${e(u("gmTitle"))}</h2><p class="lede">${e(u("gmLede", { n: Gm.ALL.length }))}</p><p class="muted">${e(u("gmPlayed", { n: played, t: Gm.ALL.length }))}</p></section>
   ${Gm.GROUPS.map(([gk, ids]) => `<h3 class="labgroup rvl">${e(u(gk))}</h3><div class="feat">${ids.map((k) => {
-    const b = bestOf(k);
-    return `<a class="fcard tiltc rvl gcard" href="#games/${k}"><span class="fi gico" aria-hidden="true">${DEF[k].icon}</span><b>${e(u("gm_" + k))}</b><small>${e(u("gmSub_" + k))}</small><span class="mfoot">${b == null ? e(u("gmNoBest")) : `${e(u("gmBest"))}: <b>${fmt(k, b)}</b>`}</span></a>`;
+    return `<a class="fcard tiltc rvl gcard" href="#games/${k}"><span class="fi gico" aria-hidden="true">${DEF[k].icon}</span><b>${e(u("gm_" + k))}</b><small>${e(u("gmSub_" + k))}</small><span class="mfoot">${bestLine(k)}</span></a>`;
   }).join("")}</div>`).join("")}`;
   Motion.reveal(app);
 }
@@ -204,24 +214,35 @@ function play(app, id) {
   <nav class="labnav"><a class="btn small" href="#games">← ${e(u("gmAll"))}</a><span class="labgrp">${e(u(grp))} · ${i + 1}/${Gm.ALL.length}</span>
     <span class="labpn"><a class="btn small" href="#games/${prev}" aria-label="${I18n.attr(u("gm_" + prev))}">‹</a><a class="btn small" href="#games/${next}">${e(u("gm_" + next))} ›</a></span></nav>
   <section class="panel lab rvl"><h2>${sp.icon} ${e(u("gm_" + id))}</h2><p class="lede">${e(u("gmHow_" + id))}</p>
+    ${sp.levels ? `<div class="glevels" role="radiogroup" aria-label="${I18n.attr(u("gmLevel"))}">${sp.levels.map((lv) => `<button type="button" class="gbtnlv" role="radio" data-lv="${lv}">${e(u("gmLvl_" + lv))}</button>`).join("")}</div>` : ""}
     <div class="gstage ${sp.dom ? "dom" : ""} ${sp.sim ? "sim" : ""}" id="gStage"><canvas aria-hidden="true"></canvas><div class="ghud" aria-live="polite"></div><div class="glay"></div><div class="gmsg" aria-live="assertive"></div>
       <div class="gres" hidden></div>
       <button type="button" class="scenebtn" id="gPlay" aria-label="${I18n.attr(u("gmStart"))}" title="${I18n.attr(u("gmStart"))}"><i aria-hidden="true">▶</i></button></div>
     <p class="muted gbest" id="gBest"></p></section>`;
   const stage = document.getElementById("gStage"), btn = document.getElementById("gPlay"), res = stage.querySelector(".gres");
-  const showBest = () => { const b = bestOf(id); document.getElementById("gBest").innerHTML = b == null ? e(u("gmNoBest")) : `${e(u("gmBest"))}: <b>${fmt(id, b)}</b>`; };
-  showBest();
+  let lv = levelOf(id);
+  const showBest = () => { document.getElementById("gBest").innerHTML = bestLine(id); };
+  const markLv = () => app.querySelectorAll("[data-lv]").forEach((b) => { const on = b.dataset.lv === lv; b.classList.toggle("on", on); b.setAttribute("aria-checked", on ? "true" : "false"); });
+  showBest(); markLv();
   const run = makeRunner(id, stage, (value, detail) => {
-    const pts = points(id, value), prevPts = (P.gm || {})[id], isBest = prevPts == null || pts > prevPts;
-    if (value != null && isFinite(value)) { P.gm = P.gm || {}; if (isBest) P.gm[id] = pts; Course.touchDay(); save(); }
+    const key = lv ? `${id}.${lv}` : id;
+    const pts = points(id, value), prevPts = (P.gm || {})[key], isBest = prevPts == null || pts > prevPts;
+    if (value != null && isFinite(value)) { P.gm = P.gm || {}; if (isBest) P.gm[key] = pts; Course.touchDay(); save(); }
     const prevV = prevPts == null ? null : fromPoints(id, prevPts);
-    res.innerHTML = `<div class="gresin"><span class="eyebrow">${e(u("gmScore"))} · ${e(u(DEF[id].lo ? "gmLowBetter" : "gmHighBetter"))}</span><b class="gval">${value == null ? "—" : fmt(id, value)}</b>${isBest && value != null ? `<span class="gnew">★ ${e(u("gmNewBest"))}</span>` : prevV != null ? `<span class="gprev">${e(u("gmBest"))}: ${fmt(id, prevV)}</span>` : ""}${detail ? `<p>${detail}</p>` : ""}</div>`;
+    app.querySelector(".glevels")?.classList.remove("busy");
+    res.innerHTML = `<div class="gresin"><span class="eyebrow">${lv ? `${e(u("gmLvl_" + lv))} · ` : ""}${e(u("gmScore"))} · ${e(u(DEF[id].lo ? "gmLowBetter" : "gmHighBetter"))}</span><b class="gval">${value == null ? "—" : fmt(id, value)}</b>${isBest && value != null ? `<span class="gnew">★ ${e(u("gmNewBest"))}</span>` : prevV != null ? `<span class="gprev">${e(u("gmBest"))}: ${fmt(id, prevV)}</span>` : ""}${detail ? `<p>${detail}</p>` : ""}</div>`;
     res.hidden = false; btn.querySelector("i").textContent = "↻"; btn.setAttribute("aria-label", I18n.one(u("tryAgain"))); btn.hidden = false;
     showBest();
     if (isBest && value != null && window.Motion && Motion.confetti) Motion.confetti();
   });
-  run.preview();
-  btn.addEventListener("click", () => { btn.hidden = true; res.hidden = true; run.start(); });
+  run.g.level = lv; run.preview();
+  btn.addEventListener("click", () => { btn.hidden = true; res.hidden = true; run.g.level = lv; app.querySelector(".glevels")?.classList.add("busy"); run.start(); });
+  /* changing level stops the current run and resets the stage */
+  app.querySelectorAll("[data-lv]").forEach((b) => b.addEventListener("click", () => {
+    if (b.dataset.lv === lv) return; lv = b.dataset.lv; setLevel(id, lv); markLv();
+    run.stop(); res.hidden = true; btn.querySelector("i").textContent = "▶"; btn.setAttribute("aria-label", I18n.one(u("gmStart"))); btn.hidden = false;
+    run.g.level = lv; run.preview();
+  }));
 }
 
 /* ---------- shared bits for games ---------- */
@@ -1210,19 +1231,40 @@ def("signsprint", {
   },
 });
 
+/* memory pairs. easy: 6 pairs of clearly different signs; medium: 8; hard: 12 pairs
+   all from one category, so they look alike. Score = time + 2 s for every move
+   beyond the perfect one move per pair (lower is better). The clock starts on
+   the first card. */
+const PAIRS = { easy: { n: 6, cols: 4 }, medium: { n: 8, cols: 4 }, hard: { n: 12, cols: 6 } };
+const pickPairs = (lv) => {
+  const all = roadSigns(), n = PAIRS[lv].n;
+  if (lv === "hard") { const cat = pick(["mand", "caut"].filter((k) => all.filter((d) => d.cat === k).length >= n)); return shuffle(all.filter((d) => d.cat === cat)).slice(0, n); }
+  /* easy/medium: spread across the three categories so shapes differ */
+  const by = ["mand", "caut", "info"].map((k) => shuffle(all.filter((d) => d.cat === k))), out = [];
+  for (let k = 0; out.length < n; k++) { const b = by[k % 3]; if (b.length) out.push(b.pop()); }
+  return out;
+};
+const pairsGrid = (lv, cards, faces) => `<div class="gpairs" style="--cols:${PAIRS[lv].cols}">${cards.map((d, i) => `<button type="button" class="gcardb" data-i="${i}" aria-label="${I18n.attr(u("gmCard", { n: i + 1 }))}"><span class="gface">${faces ? Data.SVG[d.id] || "" : ""}</span></button>`).join("")}</div>`;
 def("signpairs", {
-  icon: "🃏", lo: true, unit: "", dom: true,
+  icon: "🃏", lo: true, unit: "s", dec: 1, dom: true, levels: ["easy", "medium", "hard"],
+  preview(g) { const lv = g.level || "easy"; g.panel(pairsGrid(lv, [...Array(PAIRS[lv].n * 2)], false)); g.hud(`${e(u("gmLvl_" + lv))} · ${PAIRS[lv].n} ${e(u("gmPairsN"))}`); },
   async start(g) {
-    const ds = shuffle(roadSigns()).slice(0, 8); await needSvgs(ds.map((d) => d.id)); if (!g.alive) return;
-    const cards = shuffle([...ds, ...ds]); let open = [], moves = 0, matched = 0, lock = false;
-    g.panel(`<div class="gpairs">${cards.map((d, i) => `<button type="button" class="gcardb" data-i="${i}" aria-label="?"><span class="gface">${Data.SVG[d.id] || ""}</span></button>`).join("")}</div>`);
-    const hud = () => g.hud(`${e(u("gmMoves"))} <b>${moves}</b> · ${matched}/8`); hud();
+    const lv = g.level || "easy", N = PAIRS[lv].n;
+    const ds = pickPairs(lv); await needSvgs(ds.map((d) => d.id)); if (!g.alive) return;
+    const cards = shuffle([...ds, ...ds]); let open = [], moves = 0, matched = 0, lock = false, t0 = null, tEnd = null;
+    g.panel(pairsGrid(lv, cards, true));
+    const secs = () => (t0 == null ? 0 : ((tEnd ?? g.now()) - t0) / 1000);
+    const hud = () => g.hud(`⏱ <b>${fx(secs(), 1)} s</b> · ${e(u("gmMoves"))} <b>${moves}</b> · ${matched}/${N}`); hud();
+    g.loop(() => { if (t0 != null && tEnd == null) hud(); });
     g.lay.querySelectorAll("[data-i]").forEach((b) => b.addEventListener("click", () => {
-      if (lock || b.classList.contains("up")) return;
+      if (lock || b.classList.contains("up") || !g.alive) return;
+      if (t0 == null) t0 = g.now();
       b.classList.add("up"); open.push(b);
       if (open.length === 2) {
         moves++; hud(); const [a, c2] = open, same = cards[+a.dataset.i].id === cards[+c2.dataset.i].id;
-        if (same) { a.classList.add("done"); c2.classList.add("done"); open = []; matched++; hud(); if (matched === 8) g.after(700, () => g.end(moves, e(u("gmPairsTip")))); }
+        if (same) { a.classList.add("done"); c2.classList.add("done"); open = []; matched++; hud();
+          if (matched === N) { tEnd = g.now(); hud(); const t = secs(), extra = moves - N, score = t + extra * 2;
+            g.after(700, () => g.end(score, `${e(u("gmPairsScore", { t: fx(t, 1), x: extra, p: extra * 2 }))} ${e(u("gmPairsTip", { n: N }))}`)); } }
         else { lock = true; g.after(800, () => { a.classList.remove("up"); c2.classList.remove("up"); open = []; lock = false; }); }
       }
     }));

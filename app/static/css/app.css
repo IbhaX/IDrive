@@ -1389,3 +1389,9 @@ html.splashing,html.splashing body{overflow:hidden}
  .gstage.sim .scenebtn{top:31%}
  .gstage.sim .gres:not([hidden])+.scenebtn{top:72%}
 }
+.glevels{display:inline-flex;gap:4px;padding:4px;margin:10px 0 0;border-radius:999px;background:var(--panel2,rgba(148,163,184,.12));border:1px solid var(--line)}
+.gbtnlv{border:0;background:transparent;color:var(--muted);padding:7px 16px;border-radius:999px;font:600 14px var(--body,inherit);cursor:pointer}
+.gbtnlv.on{background:var(--acc,#6366f1);color:#fff}
+.gbtnlv:focus-visible{outline:2px solid var(--focus,#fff);outline-offset:2px}
+.gpairs{grid-template-columns:repeat(var(--cols,4),1fr);max-width:calc(var(--cols,4) * 110px)}
+@media (max-width:640px){.gpairs[style*="--cols:6"]{grid-template-columns:repeat(4,1fr);max-width:440px}}

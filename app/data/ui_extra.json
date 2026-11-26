@@ -4360,8 +4360,8 @@
   "ഏകദേശം {m} മീ. വേണമായിരുന്നു"
  ],
  "gmPairsTip": [
-  "Fewer moves is better — 8 is perfect.",
-  "നീക്കങ്ങൾ കുറയുന്നത് നല്ലത് — 8 ആണ് പൂർണം."
+  "A perfect game takes {n} moves — one per pair.",
+  "പൂർണമായ കളിക്ക് {n} നീക്കങ്ങൾ — ഓരോ ജോഡിക്കും ഒന്ന്."
  ],
  "gmOddTip": [
   "Shape and colour tell you the kind of sign before you can read it.",
@@ -4956,12 +4956,12 @@
   "ചിഹ്ന ജോഡികൾ"
  ],
  "gmSub_signpairs": [
-  "Memory match with road signs",
-  "റോഡ് ചിഹ്നങ്ങളുമായി ഓർമ്മക്കളി"
+  "Memory match against the clock — 3 levels",
+  "ക്ലോക്കിനെതിരെ ഓർമ്മക്കളി — 3 ലെവലുകൾ"
  ],
  "gmHow_signpairs": [
-  "Turn over two cards at a time and find all eight matching pairs in as few moves as you can.",
-  "ഒരേസമയം രണ്ട് കാർഡുകൾ മറിച്ച്, കഴിയുന്നത്ര കുറഞ്ഞ നീക്കങ്ങളിൽ എട്ട് ജോഡികളും കണ്ടെത്തുക."
+  "Turn over two cards at a time and find every matching pair. Easy: 6 pairs of very different signs. Medium: 8 pairs. Hard: 12 pairs that all look alike. The clock starts on your first card; your score is the time plus 2 s for every move beyond one per pair — lower is better, and each level keeps its own best.",
+  "ഒരേസമയം രണ്ട് കാർഡുകൾ മറിച്ച് എല്ലാ ജോഡികളും കണ്ടെത്തുക. എളുപ്പം: വളരെ വ്യത്യസ്തമായ 6 ജോഡി ചിഹ്നങ്ങൾ. ഇടത്തരം: 8 ജോഡി. കഠിനം: ഒരുപോലെ തോന്നുന്ന 12 ജോഡി. ആദ്യ കാർഡിൽ ക്ലോക്ക് തുടങ്ങും; സ്കോർ സമയം + ഓരോ ജോഡിക്കും ഒന്നിൽ കൂടുതലുള്ള ഓരോ നീക്കത്തിനും 2 സെ. — കുറവാണ് നല്ലത്, ഓരോ ലെവലിനും സ്വന്തം മികച്ച സ്കോർ."
  ],
  "gm_oddsign": [
   "Odd one out",
@@ -6138,5 +6138,29 @@
  "sHAbsSoft": [
   "Stopped in {m} m — with ABS, pressing hard and holding stops shorter",
   "{m} മീ.-ൽ നിർത്തി — ABS ഉണ്ടെങ്കിൽ ശക്തമായി അമർത്തിപ്പിടിച്ചാൽ കുറഞ്ഞ ദൂരത്തിൽ നിർത്താം"
+ ],
+ "gmLvl_easy": [
+  "Easy",
+  "എളുപ്പം"
+ ],
+ "gmLvl_medium": [
+  "Medium",
+  "ഇടത്തരം"
+ ],
+ "gmLvl_hard": [
+  "Hard",
+  "കഠിനം"
+ ],
+ "gmPairsN": [
+  "pairs",
+  "ജോഡികൾ"
+ ],
+ "gmCard": [
+  "Card {n}",
+  "കാർഡ് {n}"
+ ],
+ "gmPairsScore": [
+  "Time {t} s + {x} extra moves × 2 s = +{p} s.",
+  "സമയം {t} സെ. + {x} അധിക നീക്കങ്ങൾ × 2 സെ. = +{p} സെ."
  ]
 }
