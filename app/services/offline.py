@@ -23,6 +23,7 @@ def manifest(build: str) -> dict[str, Any]:
         "/api/library/lights",
         "/api/library/vehicle",
         "/api/library/scenarios",
+        "/api/library/signs",
         "/api/library/references",
         "/api/auth/config",
     ]

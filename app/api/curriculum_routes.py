@@ -78,6 +78,12 @@ async def scenarios(response: Response) -> dict[str, Any]:
     return {"scenarios": curriculum.scenarios_payload()}
 
 
+@router.get("/api/library/signs")
+async def sign_details(response: Response) -> dict[str, Any]:
+    response.headers["Cache-Control"] = _CACHE
+    return {"details": curriculum.sign_details_payload()}
+
+
 @router.get("/api/library/references")
 async def references(response: Response) -> dict[str, Any]:
     response.headers["Cache-Control"] = _CACHE

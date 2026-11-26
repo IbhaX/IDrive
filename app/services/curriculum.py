@@ -596,6 +596,49 @@ def parts_payload() -> list[Any]:
     return [bilingual(p.model_dump(), lib.get(p.id), PART_SKIP) for p in vehicle_parts()]
 
 
+class SignWhen(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    s: str
+    d: str
+
+
+class SignDetail(BaseModel):
+    """Rich, hand-written extra content for one road sign (keyed by sign id)."""
+    model_config = ConfigDict(extra="forbid")
+    more: str
+    where: list[str] = Field(min_length=1)
+    when: list[SignWhen] = Field(min_length=1)
+    mistake: str
+
+
+@lru_cache(maxsize=1)
+def sign_details() -> dict[str, SignDetail]:
+    p = CURRICULUM_DIR / "sign_details.json"
+    if not p.is_file():
+        return {}
+    raw: dict[str, Any] = json.loads(p.read_text(encoding="utf-8"))
+    return {k: SignDetail.model_validate(v) for k, v in raw.items()}
+
+
+@lru_cache(maxsize=1)
+def _ml_sign_details() -> dict[str, Any]:
+    p = ML_DIR / "sign_details.json"
+    return json.loads(p.read_text(encoding="utf-8")) if p.is_file() else {}
+
+
+def sign_details_payload() -> dict[str, Any]:
+    ml = _ml_sign_details()
+    return {k: bilingual(v.model_dump(), ml.get(k), frozenset()) for k, v in sign_details().items()}
+
+
+def sign_details_missing_ml() -> list[str]:
+    out: list[str] = []
+    ml = _ml_sign_details()
+    for k, v in sign_details().items():
+        _missing(v.model_dump(), ml.get(k), frozenset(), f"sign:{k}", out)
+    return out
+
+
 def scenarios_payload() -> list[Any]:
     lib = _ml_library().get("scenarios", {})
     return [bilingual(sc.model_dump(), lib.get(sc.id), SCEN_SKIP) for sc in scenarios()]

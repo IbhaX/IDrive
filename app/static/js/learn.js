@@ -102,9 +102,28 @@ L.renderSheet = () => {
   <div class="shead"><span class="cat"><i style="background:${c.dot}"></i>${esc(I18n.cn(c))}</span><button class="x" id="sClose" aria-label="${I18n.attr(I18n.u("close"))}">✕</button></div>
   ${L.plate(d, "big")}<h2>${I18n.T(d, "name")}</h2><p>${I18n.T(d, "meaning")}</p>
   <div class="do"><b>${esc(I18n.u("do"))}</b>${I18n.T(d, "action")}</div>
+  <div id="sdx" class="sdx" aria-live="polite">${L.detailHtml(d.id)}</div>
   <div class="row"><button class="btn" data-act="sprev" ${sIdx === 0 ? "disabled" : ""}>${esc(I18n.u("prev"))}</button><button class="btn" data-act="snext" ${sIdx === sList.length - 1 ? "disabled" : ""}>${esc(I18n.u("next"))}</button><button class="btn ${L.known(d) ? "" : "primary"}" data-act="slearn">${esc(L.known(d) ? I18n.u("unknow") : I18n.u("know"))}</button></div>
   <p class="muted">${esc(I18n.u("pos", { i: sIdx + 1, n: sList.length }))}</p>`;
   Motion.drawSign(document.querySelector("#sheetCard .plate"));
+  if (!L.details) L.loadDetails(d.id);
+};
+
+/* rich, hand-written detail for each sign (/api/library/signs), loaded once */
+L.details = null;
+L.loadDetails = async (id) => {
+  try { L.details = (await Api.get("/api/library/signs")).details || {}; } catch (e) { return; }
+  const box = document.getElementById("sdx");
+  if (box && sList[sIdx] === id) box.innerHTML = L.detailHtml(id);
+};
+L.detailHtml = (id) => {
+  const x = L.details && L.details[id];
+  if (!x) return L.details ? "" : `<div class="skel"><i style="height:90px"></i></div>`;
+  const X = I18n.X;
+  return `<h3 class="sdh">${esc(I18n.u("sdAbout"))}</h3><p>${X(x.more)}</p>
+  <h3 class="sdh">${esc(I18n.u("sdWhere"))}</h3><ul class="sdwhere">${x.where.map(w => `<li>${X(w)}</li>`).join("")}</ul>
+  <h3 class="sdh">${esc(I18n.u("sdWhen"))}</h3><div class="sdwhen">${x.when.map(w => `<div class="sdcase"><b>${X(w.s)}</b><p>${X(w.d)}</p></div>`).join("")}</div>
+  <div class="sdmis"><b>${esc(I18n.u("sdMistake"))}</b><p>${X(x.mistake)}</p></div>`;
 };
 
 L.sheetNav = (dir) => {

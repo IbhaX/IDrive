@@ -3854,5 +3854,21 @@
  "bsiTip": [
   "On a blind bend keep left and drive at a speed that lets you stop in the distance you can see to be clear.",
   "കാണാത്ത വളവിൽ ഇടത്തേക്ക് ഒതുങ്ങി, ഒഴിഞ്ഞതായി കാണുന്ന ദൂരത്തിൽ നിർത്താനാകുന്ന വേഗത്തിൽ ഓടിക്കുക."
+ ],
+ "sdAbout": [
+  "About this sign",
+  "ഈ ചിഹ്നത്തെക്കുറിച്ച്"
+ ],
+ "sdWhere": [
+  "Where you'll see it",
+  "എവിടെ കാണാം"
+ ],
+ "sdWhen": [
+  "What to do when…",
+  "ഇങ്ങനെയെങ്കിൽ എന്ത് ചെയ്യണം…"
+ ],
+ "sdMistake": [
+  "Common mistake",
+  "സാധാരണ തെറ്റ്"
  ]
 }

@@ -119,3 +119,11 @@ def test_offline_manifest_and_search_index() -> None:
     assert not any("/api/exam" in u or "/api/quiz" in u or "/api/progress" in u for u in m["urls"])
     idx = curriculum.search_index()
     assert len(idx) > 300 and all(len(d["body"]) <= 1500 for d in idx)
+
+
+def test_sign_details_cover_real_signs_and_are_translated() -> None:
+    from app.services import content
+    ids = {s["id"] for s in content.signs()}
+    details = curriculum.sign_details()
+    assert set(details) <= ids
+    assert curriculum.sign_details_missing_ml() == []

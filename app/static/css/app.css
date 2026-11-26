@@ -1181,3 +1181,15 @@ html.splashing,html.splashing body{overflow:hidden}
 .labnav .labpn{min-width:0;max-width:100%}
 .labnav .labpn a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:min(60vw,320px)}
 @media (max-width:520px){.labnav .labgrp{flex-basis:100%;order:3}}
+
+/* sign sheet: rich detail */
+.sdx{margin:14px 0 4px}
+.sdx .sdh{font:700 12px var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--acc2);margin:16px 0 6px}
+.sdx p{margin:0}
+.sdwhere{margin:0;padding-left:20px}.sdwhere li{margin:4px 0}
+.sdwhen{display:grid;gap:8px}
+.sdcase{border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:color-mix(in srgb,var(--ink) 4%,transparent)}
+.sdcase b{display:block;margin-bottom:4px}
+.sdcase p{color:var(--muted)}
+.sdmis{margin-top:12px;border-left:3px solid #fb7185;padding:6px 12px;border-radius:6px;background:color-mix(in srgb,#fb7185 8%,transparent)}
+.sdmis b{color:#fb7185;font-size:13px;display:block;margin-bottom:2px}

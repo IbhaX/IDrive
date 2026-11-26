@@ -1,0 +1,1424 @@
+{
+  "stop": {
+    "more": "Stop is the only eight-sided sign, so you can recognise it even from behind or when it is dirty. It is used where a rolling 'slow down and look' is not enough — the view is blocked or cross traffic is fast.",
+    "where": [
+      "Where a village road meets a busy highway",
+      "At a railway crossing approach or a blind junction in town"
+    ],
+    "when": [
+      {
+        "s": "No other traffic is in sight",
+        "d": "Still stop completely behind the line, look right, left and right again, then move off."
+      },
+      {
+        "s": "Your view is blocked by a wall or parked truck",
+        "d": "Stop at the line first, then creep forward slowly until you can see, ready to stop again."
+      }
+    ],
+    "mistake": "Rolling slowly over the line without stopping — a 'rolling stop' is not a stop."
+  },
+  "giveway": {
+    "more": "The point-down triangle means other traffic has priority over you. Unlike Stop, you need not stop if the way is clearly free — but you must be ready to.",
+    "where": [
+      "Where a side road joins a main road",
+      "At the entry to a roundabout"
+    ],
+    "when": [
+      {
+        "s": "A vehicle on the main road is close or you can't judge its speed",
+        "d": "Stop behind the give-way line and wait for a bigger gap."
+      },
+      {
+        "s": "The main road is clear far in both directions",
+        "d": "Enter at low speed without stopping, still watching both ways."
+      }
+    ],
+    "mistake": "Pulling out and forcing a vehicle on the main road to brake."
+  },
+  "noentry": {
+    "more": "A red disc with a white bar marks the 'wrong end' of a one-way road or an exit-only gate. Every vehicle coming the other way expects the road to be empty of oncoming traffic.",
+    "where": [
+      "The exit end of a one-way street in town",
+      "The exit lane of a petrol pump, mall or toll plaza"
+    ],
+    "when": [
+      {
+        "s": "Your map app tells you to go in",
+        "d": "Trust the sign, not the app — take the next legal route."
+      },
+      {
+        "s": "You've already entered by mistake",
+        "d": "Stop safely at the edge, switch on hazard lights and turn round only when it is safe; don't drive on against the traffic."
+      }
+    ],
+    "mistake": "Entering 'just for a few metres' to reach a shop."
+  },
+  "oneway": {
+    "more": "Placed at the start of a one-way road and repeated at junctions along it. Two-wheelers are not exempt.",
+    "where": [
+      "Market roads and narrow streets in old town centres",
+      "Service roads beside flyovers"
+    ],
+    "when": [
+      {
+        "s": "You missed your turn on a one-way road",
+        "d": "Carry on with the flow and come back round the block."
+      },
+      {
+        "s": "You are crossing a one-way road on foot",
+        "d": "Look mainly towards the traffic, but check the other way for wrong-way riders."
+      }
+    ],
+    "mistake": "Riding a scooter a short distance against the arrow — oncoming drivers won't expect you."
+  },
+  "allprohib": {
+    "more": "A plain red-ringed white circle closes the road to all vehicles in both directions, often temporarily for repairs, events or a pedestrian zone.",
+    "where": [
+      "Pedestrian-only market streets",
+      "Roads closed for a festival, procession or repairs"
+    ],
+    "when": [
+      {
+        "s": "You need to reach an address on that road",
+        "d": "Park outside and walk in, or ask the officials on duty."
+      },
+      {
+        "s": "A local says it's fine to drive through",
+        "d": "Follow the sign — it is there for people on foot or workers inside."
+      }
+    ],
+    "mistake": "Squeezing a two-wheeler past the board because 'it is only for cars'."
+  },
+  "noahead": {
+    "more": "Usually placed where the road ahead becomes one-way against you, is closed, or crosses a busy carriageway that can't be crossed safely.",
+    "where": [
+      "Junctions where the road ahead is one-way the other way",
+      "Median gaps on divided highways that allow turning only"
+    ],
+    "when": [
+      {
+        "s": "Your destination is straight across",
+        "d": "Turn left or right as allowed and use the next legal crossing or U-turn point."
+      },
+      {
+        "s": "Traffic police wave you straight on",
+        "d": "A police officer's direction overrides the sign — go carefully as directed."
+      }
+    ],
+    "mistake": "Darting straight across when the junction looks empty."
+  },
+  "noright": {
+    "more": "Often at busy junctions where right-turning traffic would block the flow or cross fast oncoming lanes. It applies only at that junction.",
+    "where": [
+      "Signal junctions on city arterial roads",
+      "Highway median openings near flyovers"
+    ],
+    "when": [
+      {
+        "s": "You need to go right",
+        "d": "Go straight, then turn at the next allowed point or use a loop of left turns."
+      },
+      {
+        "s": "You're in the right lane by mistake",
+        "d": "Signal and move across early, or go straight; never turn from the wrong lane."
+      }
+    ],
+    "mistake": "Turning right anyway when no police are watching."
+  },
+  "noleft": {
+    "more": "Used where a left turn would lead into a one-way road the wrong way, a closed road, or across a busy pedestrian area.",
+    "where": [
+      "Junctions where the left road is one-way towards you",
+      "Gates of hospitals or schools that are entry-only from elsewhere"
+    ],
+    "when": [
+      {
+        "s": "The left road leads to your destination",
+        "d": "Continue and approach it from the side that allows entry."
+      },
+      {
+        "s": "A free-left lane is painted but this sign is up",
+        "d": "The sign wins — don't turn left here."
+      }
+    ],
+    "mistake": "Assuming 'left turns are always free'."
+  },
+  "nouturn": {
+    "more": "Turning round here would cut across fast traffic or block it. Look for the next median gap or roundabout.",
+    "where": [
+      "Median gaps on busy highways",
+      "Near flyovers, bridges and blind bends"
+    ],
+    "when": [
+      {
+        "s": "You've gone past your turning",
+        "d": "Drive on to the next place where a U-turn is allowed or a roundabout."
+      },
+      {
+        "s": "The road looks empty",
+        "d": "The ban still applies — fast traffic can appear in seconds."
+      }
+    ],
+    "mistake": "Making a U-turn in two or three movements across all lanes."
+  },
+  "noovertake": {
+    "more": "Used where you can't see far enough ahead to pass safely: bends, crests, narrow bridges, ghat roads and school zones. It lasts until an 'end of overtaking prohibition' sign.",
+    "where": [
+      "Ghat roads and hairpin sections",
+      "Approaches to narrow bridges and level crossings"
+    ],
+    "when": [
+      {
+        "s": "A slow lorry is holding you up",
+        "d": "Stay back with a good gap and wait for the end-of-restriction sign and a clear straight."
+      },
+      {
+        "s": "The vehicle ahead waves you past",
+        "d": "Don't go — the sign applies to you whatever the other driver signals."
+      }
+    ],
+    "mistake": "Overtaking on a short straight inside the restricted stretch."
+  },
+  "nohorn": {
+    "more": "Marks a silence zone around hospitals, schools, courts and some residential areas. Noise there disturbs patients, classes and proceedings.",
+    "where": [
+      "Hospital and medical college roads",
+      "School and court premises"
+    ],
+    "when": [
+      {
+        "s": "A pedestrian steps out in front of you",
+        "d": "Brake — slowing down is the safe answer here, not the horn."
+      },
+      {
+        "s": "A real emergency needs a warning",
+        "d": "A short warning to prevent a crash is reasonable; habitual honking is not."
+      }
+    ],
+    "mistake": "Honking at a slow vehicle or a red light inside the zone."
+  },
+  "noparking": {
+    "more": "You may stop briefly to let someone in or out, but not leave the vehicle. It often applies only on the side of the road where the sign stands; a plate below may give times.",
+    "where": [
+      "Near junctions, bus stops and hospital gates",
+      "Busy market roads where parked cars would block a lane"
+    ],
+    "when": [
+      {
+        "s": "You need to pick someone up",
+        "d": "Stop briefly with the engine running and stay with the vehicle; move off as soon as they're in."
+      },
+      {
+        "s": "The car park is full",
+        "d": "Find another legal spot even if it's a walk away."
+      }
+    ],
+    "mistake": "Leaving the car 'just for two minutes' to buy something."
+  },
+  "nostop": {
+    "more": "Stricter than No parking: you may not stop even to drop someone off. It keeps traffic moving where a single stopped vehicle causes a jam or danger.",
+    "where": [
+      "Flyovers, bridges and fast arterial roads",
+      "Approaches to junctions, toll plazas and airports"
+    ],
+    "when": [
+      {
+        "s": "A passenger asks to get out here",
+        "d": "Drive on to a place where stopping is allowed."
+      },
+      {
+        "s": "Your vehicle breaks down",
+        "d": "Stopping is unavoidable — switch on hazard lights, get people to safety and set out a warning triangle if you have one."
+      }
+    ],
+    "mistake": "Stopping on a flyover to make a phone call or check directions."
+  },
+  "nopeds": {
+    "more": "Pedestrians are kept off roads where walking is dangerous, usually because a subway, foot-over bridge or another path is provided.",
+    "where": [
+      "Expressways and access-controlled highways",
+      "Underpasses and flyovers with no footpath"
+    ],
+    "when": [
+      {
+        "s": "You are walking and the bridge is far",
+        "d": "Use it anyway — crossing a fast road on foot is one of the commonest ways people are killed."
+      },
+      {
+        "s": "You are driving and see someone walking there",
+        "d": "Slow down and give them room; they may be lost or in trouble."
+      }
+    ],
+    "mistake": "Climbing over the median to save a walk to the foot-over bridge."
+  },
+  "nocycles": {
+    "more": "Cycles are kept off roads where speed differences make cycling dangerous, typically fast highways and some flyovers.",
+    "where": [
+      "Expressways and high-speed bypasses",
+      "Some flyovers and tunnels"
+    ],
+    "when": [
+      {
+        "s": "You're cycling and the road is banned",
+        "d": "Use the service road, a cycle track or another route."
+      },
+      {
+        "s": "You're driving and see a cyclist there anyway",
+        "d": "Give them a wide berth and don't hoot to push them aside."
+      }
+    ],
+    "mistake": "Riding a cycle up a flyover because the service road is busy."
+  },
+  "notruck": {
+    "more": "Keeps heavy goods vehicles out of town centres, narrow roads or weak bridges, sometimes only during certain hours shown on a plate.",
+    "where": [
+      "City centre roads during the day",
+      "Narrow residential roads and old bridges"
+    ],
+    "when": [
+      {
+        "s": "You drive a lorry and the plate shows hours",
+        "d": "Wait until the allowed time or use the truck route."
+      },
+      {
+        "s": "You drive a car behind a lorry that ignored it",
+        "d": "Keep extra distance; it may stop or reverse suddenly when stuck."
+      }
+    ],
+    "mistake": "Taking a lorry through 'because the bypass is longer'."
+  },
+  "nobullock": {
+    "more": "Slow animal-drawn carts are kept off busy or fast roads where they would hold up traffic and be at risk.",
+    "where": [
+      "Town centres and highways",
+      "Bridges with heavy traffic"
+    ],
+    "when": [
+      {
+        "s": "You drive a bullock cart",
+        "d": "Use the village road or the service road beside the highway."
+      },
+      {
+        "s": "You meet a cart on the road anyway",
+        "d": "Slow down, give it a wide berth and don't hoot — animals can bolt."
+      }
+    ],
+    "mistake": "Honking loudly to make the animal move faster."
+  },
+  "nohandcart": {
+    "more": "Push and pull carts are kept off busy roads where they block a lane and are hard to see.",
+    "where": [
+      "Main roads through markets",
+      "Flyovers and fast city roads"
+    ],
+    "when": [
+      {
+        "s": "You push a handcart for a living",
+        "d": "Use side lanes and the edge of quieter roads."
+      },
+      {
+        "s": "You're driving and a cart is ahead",
+        "d": "Slow down and overtake only with plenty of room."
+      }
+    ],
+    "mistake": "Pushing a heavily loaded cart up a flyover against fast traffic."
+  },
+  "nomotor": {
+    "more": "Only non-motorised traffic — people on foot, cycles and carts — may use this road. Common in pedestrian zones, parks and heritage areas.",
+    "where": [
+      "Park roads and beach promenades",
+      "Heritage streets and campus roads"
+    ],
+    "when": [
+      {
+        "s": "You ride an electric scooter or e-bike with a motor",
+        "d": "Treat it as a motor vehicle — keep out unless a sign says otherwise."
+      },
+      {
+        "s": "You need to deliver something inside",
+        "d": "Park outside and carry it in, or ask for permission at the gate."
+      }
+    ],
+    "mistake": "Assuming a small scooter 'doesn't count'."
+  },
+  "load": {
+    "more": "Protects bridges and weak roads. The number is the total weight of the vehicle plus everything in it, in tonnes.",
+    "where": [
+      "Old bridges and culverts",
+      "Village roads with weak surfaces"
+    ],
+    "when": [
+      {
+        "s": "Your lorry is fully loaded and may be over the limit",
+        "d": "Don't risk it — take the alternative route even if it is longer."
+      },
+      {
+        "s": "You drive a car",
+        "d": "The limit is far above a car's weight; it matters for lorries, buses and tractors with trailers."
+      }
+    ],
+    "mistake": "Guessing the load instead of knowing it from the weighbridge or papers."
+  },
+  "axle": {
+    "more": "Even if the total weight is within limits, too much weight on one axle can crack a bridge deck or road. Heavy loads must be spread evenly.",
+    "where": [
+      "Bridges and flyovers",
+      "Roads with weak pavement"
+    ],
+    "when": [
+      {
+        "s": "Your load is piled at the back",
+        "d": "Redistribute it before the bridge so no single axle is overloaded."
+      },
+      {
+        "s": "You aren't sure of your axle loads",
+        "d": "Check at a weighbridge that weighs axles, or take another route."
+      }
+    ],
+    "mistake": "Thinking that being under the total load limit is enough."
+  },
+  "height": {
+    "more": "Warns of a low bridge, underpass, arch or overhead structure. The height includes anything on the roof — luggage, ladders, water tanks.",
+    "where": [
+      "Railway under-bridges and old arches",
+      "Entrances of multi-storey car parks and petrol pump canopies"
+    ],
+    "when": [
+      {
+        "s": "You have luggage on a roof carrier",
+        "d": "Add its height to your vehicle's and compare before you go under."
+      },
+      {
+        "s": "You aren't sure you'll fit",
+        "d": "Stop before the structure and check, or find another way — never 'try it slowly'."
+      }
+    ],
+    "mistake": "Forgetting the extra height of a roof rack or a raised load."
+  },
+  "width": {
+    "more": "Marks a narrow gap such as an old gateway, a narrow bridge or bollards. Mirrors and any load sticking out count.",
+    "where": [
+      "Old town gates and narrow bridges",
+      "Bollards at the entry of lanes"
+    ],
+    "when": [
+      {
+        "s": "You drive a wide vehicle or carry a wide load",
+        "d": "Measure it and use another route if in doubt."
+      },
+      {
+        "s": "Your car just fits",
+        "d": "Fold the mirrors if needed and go through slowly and straight."
+      }
+    ],
+    "mistake": "Ignoring a load that sticks out to the sides."
+  },
+  "length": {
+    "more": "Used where long vehicles can't make a tight turn or bend, such as hill roads and narrow junctions.",
+    "where": [
+      "Ghat roads with tight hairpins",
+      "Narrow junctions in old towns"
+    ],
+    "when": [
+      {
+        "s": "You drive a long bus or a truck with a trailer",
+        "d": "Use the route marked for long vehicles."
+      },
+      {
+        "s": "A long vehicle is stuck at a bend ahead",
+        "d": "Stay well back and give it room to reverse."
+      }
+    ],
+    "mistake": "Trying to make it round 'with a few shunts' and blocking the road."
+  },
+  "speed": {
+    "more": "The number is a maximum, not a target. It applies from the sign until another speed sign or an end-of-limit sign. Lower limits are common near schools, towns and bends.",
+    "where": [
+      "Entering a town or village on a highway",
+      "Near schools, hospitals and ghat sections"
+    ],
+    "when": [
+      {
+        "s": "It's raining or foggy",
+        "d": "Drive well below the limit — the number is for good conditions."
+      },
+      {
+        "s": "Traffic around you is going faster",
+        "d": "Stay at or below the limit; keep left and let others pass."
+      }
+    ],
+    "mistake": "Braking hard at a speed camera and speeding up again straight after."
+  },
+  "endrestr": {
+    "more": "The grey or black diagonal stripes cancel the restriction shown before — such as a speed limit or no overtaking. General rules still apply.",
+    "where": [
+      "After a school zone or road works",
+      "At the end of a ghat section or town limits"
+    ],
+    "when": [
+      {
+        "s": "A no-overtaking stretch ends",
+        "d": "You may overtake again, but only when you can see the road is clear for long enough."
+      },
+      {
+        "s": "A low speed limit ends",
+        "d": "Build up speed gradually to suit the road — not to the maximum straight away."
+      }
+    ],
+    "mistake": "Treating it as 'no limits at all'."
+  },
+  "cahead": {
+    "more": "Blue circles give orders. This one forbids turning at the next junction — usually because the side roads are one-way or turning would block traffic.",
+    "where": [
+      "Approach lanes at signal junctions",
+      "Flyover ramps and underpass entries"
+    ],
+    "when": [
+      {
+        "s": "You wanted to turn",
+        "d": "Go straight and turn at the next place that allows it."
+      },
+      {
+        "s": "You're in a lane marked for turning but the sign shows straight only",
+        "d": "The sign applies to the whole road at that point; go straight."
+      }
+    ],
+    "mistake": "Cutting across at the last moment to make a turn."
+  },
+  "cleft": {
+    "more": "Every vehicle at this point must turn left — straight on and right are not allowed, often because the road ahead is one-way against you.",
+    "where": [
+      "One-way systems in town centres",
+      "Slip roads that lead off a junction"
+    ],
+    "when": [
+      {
+        "s": "Your destination is straight ahead",
+        "d": "Turn left as ordered, then find a route back."
+      },
+      {
+        "s": "Pedestrians are crossing the road you're turning into",
+        "d": "Wait for them — turning traffic gives way to people crossing."
+      }
+    ],
+    "mistake": "Going straight on because 'the road ahead looks open'."
+  },
+  "cright": {
+    "more": "Every vehicle must turn right here. Right turns cross oncoming traffic, so they need the most care.",
+    "where": [
+      "One-way grids in cities",
+      "Junctions where the road ahead is closed"
+    ],
+    "when": [
+      {
+        "s": "Oncoming traffic is heavy",
+        "d": "Wait in position, wheels straight, until there's a safe gap."
+      },
+      {
+        "s": "A motorcycle could be hidden behind an oncoming bus",
+        "d": "Look past it before you commit to the turn."
+      }
+    ],
+    "mistake": "Waiting with the wheels already turned — a shunt from behind pushes you into oncoming traffic."
+  },
+  "caheadleft": {
+    "more": "Two permitted directions; turning right is banned. Pick your lane early so you aren't forced to cut across.",
+    "where": [
+      "Busy signal junctions where right turns are diverted",
+      "Exits of flyovers"
+    ],
+    "when": [
+      {
+        "s": "You need to go right",
+        "d": "Go straight or left and use the next legal turn."
+      },
+      {
+        "s": "You're in the left lane and want to go straight",
+        "d": "Check the lane arrows — some left lanes are turn-only."
+      }
+    ],
+    "mistake": "Turning right from the straight lane."
+  },
+  "caheadright": {
+    "more": "Straight on or right only; left is banned — perhaps the left road is one-way towards you.",
+    "where": [
+      "Junctions with a one-way road on the left",
+      "Service road entries"
+    ],
+    "when": [
+      {
+        "s": "You need to go left",
+        "d": "Continue and come round another way."
+      },
+      {
+        "s": "You're turning right across traffic",
+        "d": "Give way to oncoming vehicles and people crossing."
+      }
+    ],
+    "mistake": "Using the left turn because 'it's quicker'."
+  },
+  "ckeepleft": {
+    "more": "Placed on traffic islands, median ends and around obstructions. Passing on the wrong side puts you head-on with oncoming traffic.",
+    "where": [
+      "Ends of medians and traffic islands",
+      "Around road works or a broken-down vehicle"
+    ],
+    "when": [
+      {
+        "s": "The left side looks narrow",
+        "d": "Slow down and pass on the left anyway; never use the right side."
+      },
+      {
+        "s": "A pedestrian is waiting on the island",
+        "d": "Expect them to step off; slow down as you pass."
+      }
+    ],
+    "mistake": "Going round the 'short way' on the right of an island."
+  },
+  "ckeepright": {
+    "more": "Less common: used where the only safe passage is on the right of an obstruction, for example at work zones or on one-way roads.",
+    "where": [
+      "Road works blocking the left of a lane",
+      "One-way roads with an island on the left"
+    ],
+    "when": [
+      {
+        "s": "Oncoming traffic could be on the right",
+        "d": "Check carefully — on a two-way road give way before moving out."
+      },
+      {
+        "s": "Workers are on the left",
+        "d": "Pass slowly with a wide gap."
+      }
+    ],
+    "mistake": "Squeezing through on the left because it seems shorter."
+  },
+  "chorn": {
+    "more": "Tells you to give a short horn warning where others can't see you coming — blind bends and crests on hill roads.",
+    "where": [
+      "Blind hairpins on ghat roads",
+      "Narrow hill roads with walls or rock on the inside"
+    ],
+    "when": [
+      {
+        "s": "You approach the blind bend",
+        "d": "Give one short honk, slow down and keep left."
+      },
+      {
+        "s": "You hear a horn from round the bend",
+        "d": "Slow down and keep well left; a vehicle is coming."
+      }
+    ],
+    "mistake": "Long, continuous honking while speeding into the bend."
+  },
+  "ccycle": {
+    "more": "A track reserved for cycles. Motor vehicles must keep out and must not park on it.",
+    "where": [
+      "Beside new city roads and lake promenades",
+      "Campus roads and smart-city corridors"
+    ],
+    "when": [
+      {
+        "s": "You're turning across the cycle track",
+        "d": "Look for cyclists coming from behind on your side before you turn."
+      },
+      {
+        "s": "A two-wheeler is riding on the track",
+        "d": "Don't follow it — it's only for cycles."
+      }
+    ],
+    "mistake": "Parking a car or scooter on the cycle track 'for a minute'."
+  },
+  "hairR": {
+    "more": "A hairpin bends back on itself to the right, common on ghat roads. Large vehicles need the whole width of the road to get round, and you can't see what's coming.",
+    "where": [
+      "Ghat roads to hill stations such as Munnar or Wayanad",
+      "Mountain passes with numbered hairpins"
+    ],
+    "when": [
+      {
+        "s": "A bus or lorry is coming round the hairpin towards you",
+        "d": "Stop on your side in good time and let it complete the turn, even if it uses your lane."
+      },
+      {
+        "s": "You are going downhill",
+        "d": "Change to a low gear before the bend and brake gently on the straight, not in the turn."
+      }
+    ],
+    "mistake": "Cutting the inside of the hairpin to save time — that's where oncoming vehicles swing."
+  },
+  "hairL": {
+    "more": "A hairpin bends back on itself to the left, common on ghat roads. Large vehicles need the whole width of the road to get round, and you can't see what's coming.",
+    "where": [
+      "Ghat roads to hill stations such as Munnar or Wayanad",
+      "Mountain passes with numbered hairpins"
+    ],
+    "when": [
+      {
+        "s": "A bus or lorry is coming round the hairpin towards you",
+        "d": "Stop on your side in good time and let it complete the turn, even if it uses your lane."
+      },
+      {
+        "s": "You are going downhill",
+        "d": "Change to a low gear before the bend and brake gently on the straight, not in the turn."
+      }
+    ],
+    "mistake": "Cutting the inside of the hairpin to save time — that's where oncoming vehicles swing."
+  },
+  "curveR": {
+    "more": "A gentle curve to the right. Gentle doesn't mean you can keep any speed — at night or in rain, grip and sight are reduced.",
+    "where": [
+      "Highways through plantations and paddy fields",
+      "Rural roads following a river or hill"
+    ],
+    "when": [
+      {
+        "s": "You're approaching faster than feels comfortable",
+        "d": "Brake on the straight before the curve, then hold a steady speed through it."
+      },
+      {
+        "s": "A vehicle ahead is slow on the curve",
+        "d": "Don't overtake until you can see the road beyond is clear."
+      }
+    ],
+    "mistake": "Braking hard in the middle of the curve."
+  },
+  "curveL": {
+    "more": "A gentle curve to the left. Gentle doesn't mean you can keep any speed — at night or in rain, grip and sight are reduced.",
+    "where": [
+      "Highways through plantations and paddy fields",
+      "Rural roads following a river or hill"
+    ],
+    "when": [
+      {
+        "s": "You're approaching faster than feels comfortable",
+        "d": "Brake on the straight before the curve, then hold a steady speed through it."
+      },
+      {
+        "s": "A vehicle ahead is slow on the curve",
+        "d": "Don't overtake until you can see the road beyond is clear."
+      }
+    ],
+    "mistake": "Braking hard in the middle of the curve."
+  },
+  "bendR": {
+    "more": "A sharp, near right-angle turn to the right ahead. The road may look like it carries straight on, especially at night.",
+    "where": [
+      "Village roads turning round a field or a temple wall",
+      "Highways with a sudden turn at a bridge"
+    ],
+    "when": [
+      {
+        "s": "It's dark and the road edge is hard to see",
+        "d": "Slow right down; follow the chevrons and reflectors round the turn."
+      },
+      {
+        "s": "A side road joins at the bend",
+        "d": "Expect vehicles to come out; be ready to stop."
+      }
+    ],
+    "mistake": "Arriving too fast and running wide into the oncoming lane."
+  },
+  "bendL": {
+    "more": "A sharp, near right-angle turn to the left ahead. The road may look like it carries straight on, especially at night.",
+    "where": [
+      "Village roads turning round a field or a temple wall",
+      "Highways with a sudden turn at a bridge"
+    ],
+    "when": [
+      {
+        "s": "It's dark and the road edge is hard to see",
+        "d": "Slow right down; follow the chevrons and reflectors round the turn."
+      },
+      {
+        "s": "A side road joins at the bend",
+        "d": "Expect vehicles to come out; be ready to stop."
+      }
+    ],
+    "mistake": "Arriving too fast and running wide into the oncoming lane."
+  },
+  "revR": {
+    "more": "Two bends close together: first right, then the other way. Speed that suits the first bend may be too much for the second.",
+    "where": [
+      "Hill roads and river crossings",
+      "Roads around old buildings in towns"
+    ],
+    "when": [
+      {
+        "s": "You can't see past the second bend",
+        "d": "Keep to your lane and slow enough to stop within what you can see."
+      },
+      {
+        "s": "You're riding a two-wheeler",
+        "d": "Brake upright before the first bend; don't brake while leaned over between them."
+      }
+    ],
+    "mistake": "Overtaking between the two bends."
+  },
+  "revL": {
+    "more": "Two bends close together: first left, then the other way. Speed that suits the first bend may be too much for the second.",
+    "where": [
+      "Hill roads and river crossings",
+      "Roads around old buildings in towns"
+    ],
+    "when": [
+      {
+        "s": "You can't see past the second bend",
+        "d": "Keep to your lane and slow enough to stop within what you can see."
+      },
+      {
+        "s": "You're riding a two-wheeler",
+        "d": "Brake upright before the first bend; don't brake while leaned over between them."
+      }
+    ],
+    "mistake": "Overtaking between the two bends."
+  },
+  "ascent": {
+    "more": "A steep climb ahead. Heavy vehicles slow down a lot, and you may have to stop and restart on the slope.",
+    "where": [
+      "Ghat roads and approaches to hill towns",
+      "Ramps of flyovers and river bridges"
+    ],
+    "when": [
+      {
+        "s": "A loaded lorry ahead is crawling",
+        "d": "Keep a bigger gap — it may stop or roll back slightly when changing gear."
+      },
+      {
+        "s": "You must stop on the slope",
+        "d": "Use the handbrake for the restart so you don't roll back."
+      }
+    ],
+    "mistake": "Staying in a high gear until the engine struggles, then changing down in a panic."
+  },
+  "descent": {
+    "more": "A steep downhill. Gravity keeps speeding you up, and long braking can overheat the brakes until they fade.",
+    "where": [
+      "Ghat roads coming down from the hills",
+      "Long bridge approaches"
+    ],
+    "when": [
+      {
+        "s": "Your speed keeps creeping up",
+        "d": "Shift to a lower gear and use short, firm brake applications instead of riding the brake."
+      },
+      {
+        "s": "The brakes feel soft or smell hot",
+        "d": "Stop in a safe place and let them cool before going on."
+      }
+    ],
+    "mistake": "Coasting in neutral to 'save fuel'."
+  },
+  "narrow": {
+    "more": "The carriageway gets narrower — two lanes may become one, or the shoulders disappear.",
+    "where": [
+      "Where a widened highway meets an old section",
+      "Village roads between buildings"
+    ],
+    "when": [
+      {
+        "s": "A wide vehicle is coming the other way",
+        "d": "Slow down and pull to the left early; stop if needed and let it pass."
+      },
+      {
+        "s": "You're side by side with another vehicle",
+        "d": "Ease off and let it merge ahead rather than racing for the gap."
+      }
+    ],
+    "mistake": "Speeding up to get through before the oncoming vehicle."
+  },
+  "widen": {
+    "more": "The road becomes wider — often from two lanes to four. Vehicles behind may start overtaking and others may change lanes.",
+    "where": [
+      "Start of a four-lane section on a highway",
+      "Approaches to a town bypass"
+    ],
+    "when": [
+      {
+        "s": "Faster vehicles want to pass",
+        "d": "Keep left and hold a steady line."
+      },
+      {
+        "s": "Lanes aren't marked yet",
+        "d": "Stay predictable; don't drift into the middle."
+      }
+    ],
+    "mistake": "Swinging out to overtake before the extra lane has actually started."
+  },
+  "bridge": {
+    "more": "The bridge is narrower than the road leading to it, so vehicles must squeeze in, and there's no shoulder to escape to.",
+    "where": [
+      "Old bridges over rivers and canals",
+      "Culverts on village roads"
+    ],
+    "when": [
+      {
+        "s": "A bus is already on the bridge coming towards you",
+        "d": "Wait before the bridge until it's off."
+      },
+      {
+        "s": "You're both arriving at the same time",
+        "d": "Slow down; the vehicle nearer the bridge or with the clearer path usually goes first — don't race."
+      }
+    ],
+    "mistake": "Overtaking on the approach to the bridge."
+  },
+  "sideR": {
+    "more": "A minor road joins from the right. You have priority, but drivers coming out may not see you or may misjudge your speed.",
+    "where": [
+      "Village roads joining a state highway",
+      "Lanes coming out between shops and houses"
+    ],
+    "when": [
+      {
+        "s": "A vehicle is waiting at the side road",
+        "d": "Ease off and cover the brake; be ready if it pulls out."
+      },
+      {
+        "s": "You want to overtake near the junction",
+        "d": "Don't — a vehicle may turn out or in just as you're alongside."
+      }
+    ],
+    "mistake": "Holding full speed because you 'have priority'."
+  },
+  "sideL": {
+    "more": "A minor road joins from the left. You have priority, but drivers coming out may not see you or may misjudge your speed.",
+    "where": [
+      "Village roads joining a state highway",
+      "Lanes coming out between shops and houses"
+    ],
+    "when": [
+      {
+        "s": "A vehicle is waiting at the side road",
+        "d": "Ease off and cover the brake; be ready if it pulls out."
+      },
+      {
+        "s": "You want to overtake near the junction",
+        "d": "Don't — a vehicle may turn out or in just as you're alongside."
+      }
+    ],
+    "mistake": "Holding full speed because you 'have priority'."
+  },
+  "tj": {
+    "more": "Your road ends ahead and you must turn left or right. At night the end of the road can come up suddenly.",
+    "where": [
+      "Where a village road ends at a highway",
+      "Ends of roads in towns and beside rivers"
+    ],
+    "when": [
+      {
+        "s": "You don't know which way to turn",
+        "d": "Slow down early and read the direction board before the junction."
+      },
+      {
+        "s": "Traffic on the road ahead has priority",
+        "d": "Stop if needed and wait for a safe gap."
+      }
+    ],
+    "mistake": "Arriving fast at night and overshooting into the road ahead."
+  },
+  "yj": {
+    "more": "The road splits in two. The fork can be hard to read at speed, and drivers who chose late swerve across.",
+    "where": [
+      "Highway forks towards two towns",
+      "Splits at the foot of a flyover"
+    ],
+    "when": [
+      {
+        "s": "You aren't sure which branch to take",
+        "d": "Choose early from the signboards; if you miss it, carry on and turn round safely later."
+      },
+      {
+        "s": "A vehicle ahead hesitates at the fork",
+        "d": "Hold back; it may cut across in front of you."
+      }
+    ],
+    "mistake": "Changing your mind at the nose of the fork."
+  },
+  "stag": {
+    "more": "Two side roads join a short distance apart on opposite sides, so vehicles may cross your road in two steps.",
+    "where": [
+      "Market towns on state highways",
+      "Residential areas with offset lanes"
+    ],
+    "when": [
+      {
+        "s": "A vehicle comes out of the first side road",
+        "d": "Expect it to cross straight over into the second; slow down."
+      },
+      {
+        "s": "You're turning between the two roads",
+        "d": "Signal clearly and check both ways twice."
+      }
+    ],
+    "mistake": "Watching only one side and missing the vehicle from the other."
+  },
+  "crossRd": {
+    "more": "A four-way junction without signals. Many crashes happen here because each driver assumes the other will stop.",
+    "where": [
+      "Rural junctions on state highways",
+      "Grid roads in towns"
+    ],
+    "when": [
+      {
+        "s": "You think you have priority",
+        "d": "Slow down anyway and look both ways — the other driver may not agree."
+      },
+      {
+        "s": "Hedges or buildings hide the side roads",
+        "d": "Approach slowly enough to stop."
+      }
+    ],
+    "mistake": "Crossing at full speed because the road you're on looks bigger."
+  },
+  "round": {
+    "more": "Traffic goes round clockwise (to the left) and vehicles already on the roundabout have priority over those entering.",
+    "where": [
+      "Town centres and major junctions",
+      "Bypass interchanges"
+    ],
+    "when": [
+      {
+        "s": "You're going right (the third exit)",
+        "d": "Approach in the right lane, keep to the inside, and move out after the exit before yours, signalling left."
+      },
+      {
+        "s": "A bus is going round beside you",
+        "d": "Don't ride alongside it — let it exit first."
+      }
+    ],
+    "mistake": "Entering without looking right, or stopping on the roundabout to read signs."
+  },
+  "major": {
+    "more": "Your road meets a bigger, busier road that has priority. Expect fast traffic from both sides.",
+    "where": [
+      "Village roads meeting a national highway",
+      "Service roads joining a main road"
+    ],
+    "when": [
+      {
+        "s": "Traffic on the major road is fast and continuous",
+        "d": "Wait patiently for a safe gap; don't edge out into it."
+      },
+      {
+        "s": "You need to cross the major road",
+        "d": "Make sure both directions are clear, or turn and use a proper crossing point."
+      }
+    ],
+    "mistake": "Pulling out because 'they'll slow down for me'."
+  },
+  "dip": {
+    "more": "A sudden dip, often where a stream crosses the road. A car in the dip is hidden from view, and the bump at the bottom can unsettle the vehicle.",
+    "where": [
+      "Causeways across streams on rural roads",
+      "Undulating plantation roads"
+    ],
+    "when": [
+      {
+        "s": "You can't see the bottom of the dip",
+        "d": "Slow down and keep left — an oncoming vehicle may be hidden there."
+      },
+      {
+        "s": "Water is lying in the dip",
+        "d": "Check the depth before you go in; don't go into flowing water."
+      }
+    ],
+    "mistake": "Overtaking just before a dip."
+  },
+  "hump": {
+    "more": "A speed breaker or raised hump ahead. Many aren't painted, so this sign may be your only warning.",
+    "where": [
+      "Outside schools, hospitals and junctions in villages",
+      "Entries to housing colonies and campuses"
+    ],
+    "when": [
+      {
+        "s": "You're on a two-wheeler with a pillion",
+        "d": "Slow right down and cross it straight, standing slightly on the footrests if needed."
+      },
+      {
+        "s": "The vehicle ahead brakes suddenly for the hump",
+        "d": "Keep enough gap that you don't have to brake hard too."
+      }
+    ],
+    "mistake": "Swerving to the edge of the road to dodge the hump."
+  },
+  "slip": {
+    "more": "The surface may lose grip, especially in the first rain after a dry spell when oil and dust float up, or where mud or leaves lie.",
+    "where": [
+      "Hill roads in the monsoon",
+      "Approaches to fuel stations and markets"
+    ],
+    "when": [
+      {
+        "s": "It has just started raining",
+        "d": "Double your following gap and brake, accelerate and steer gently."
+      },
+      {
+        "s": "The car starts to slide",
+        "d": "Ease off the accelerator, look where you want to go and steer smoothly; don't slam the brakes."
+      }
+    ],
+    "mistake": "Braking hard and turning at the same time."
+  },
+  "gravel": {
+    "more": "Loose chips on the surface reduce grip and get flung up by tyres, cracking windscreens and hurting riders.",
+    "where": [
+      "Freshly resurfaced roads",
+      "Quarry and construction areas"
+    ],
+    "when": [
+      {
+        "s": "You're following another vehicle",
+        "d": "Drop well back so stones from its tyres don't hit you."
+      },
+      {
+        "s": "You're riding a two-wheeler",
+        "d": "Slow down before bends and avoid sudden braking; the front tyre can wash out."
+      }
+    ],
+    "mistake": "Overtaking and spraying stones at the vehicle you pass."
+  },
+  "rocks": {
+    "more": "Rocks can fall from a cutting or slope, especially during and after heavy rain. They may already be lying on the road.",
+    "where": [
+      "Ghat roads through cuttings",
+      "Hill highways in the monsoon"
+    ],
+    "when": [
+      {
+        "s": "You see small stones trickling down",
+        "d": "Don't stop below the slope; drive on carefully and report it if it's serious."
+      },
+      {
+        "s": "A rock is lying in your lane round a bend",
+        "d": "Slow enough on these stretches to stop or steer round safely."
+      }
+    ],
+    "mistake": "Stopping under the cliff to take photographs."
+  },
+  "cattle": {
+    "more": "Cows, buffaloes or goats are often on or beside the road, especially near villages, at dusk and on market days. Animals move unpredictably.",
+    "where": [
+      "Village roads and highways through farmland",
+      "Near dairy farms and cattle markets"
+    ],
+    "when": [
+      {
+        "s": "Animals are standing in the road",
+        "d": "Slow to walking pace and pass with a wide gap; wait if they block the road."
+      },
+      {
+        "s": "It's dusk or dark",
+        "d": "Slow down — dark animals are very hard to see and their eyes may not reflect."
+      }
+    ],
+    "mistake": "Honking loudly — startled animals may run into your path."
+  },
+  "pedx": {
+    "more": "Warns of a zebra crossing ahead that you may not see yet — over a crest, round a bend or in busy streets.",
+    "where": [
+      "Town roads near bus stops and markets",
+      "Highways passing through villages"
+    ],
+    "when": [
+      {
+        "s": "People are waiting at the kerb",
+        "d": "Slow down and stop to let them cross; don't wave them out into another lane's traffic."
+      },
+      {
+        "s": "A vehicle has stopped at the crossing in the next lane",
+        "d": "Assume someone is crossing in front of it — stop too."
+      }
+    ],
+    "mistake": "Overtaking a vehicle that has stopped at a crossing."
+  },
+  "school": {
+    "more": "A school is close by. Children are small, hard to see between parked vehicles and may run out without looking — especially at start and end of school.",
+    "where": [
+      "Roads outside schools in towns and villages",
+      "Near school bus stops on highways"
+    ],
+    "when": [
+      {
+        "s": "It's school opening or closing time",
+        "d": "Drive at a crawl and be ready to stop; watch for children between vehicles."
+      },
+      {
+        "s": "A school bus has stopped",
+        "d": "Pass very slowly or wait — children may cross in front of it."
+      }
+    ],
+    "mistake": "Keeping normal speed because school seems over for the day."
+  },
+  "work": {
+    "more": "Road works ahead: workers, machines, loose material and narrowed lanes. Workers often have their backs to traffic.",
+    "where": [
+      "Highway widening projects",
+      "Pipe-laying and resurfacing in towns"
+    ],
+    "when": [
+      {
+        "s": "A flagman shows STOP",
+        "d": "Stop and wait until you are waved on."
+      },
+      {
+        "s": "The lane is coned off",
+        "d": "Merge early and in turn, and pass the workers slowly."
+      }
+    ],
+    "mistake": "Speeding through the work zone once you're past the flagman."
+  },
+  "ferry": {
+    "more": "The road leads to a ferry or jankar — common on Kerala's backwaters. There may be a queue, a ramp and a drop into water.",
+    "where": [
+      "Backwater crossings such as those in Alappuzha and Kochi",
+      "River crossings without a bridge"
+    ],
+    "when": [
+      {
+        "s": "You're driving onto the ferry",
+        "d": "Follow the ferry staff's signals exactly, go slowly, then apply the handbrake and switch off."
+      },
+      {
+        "s": "There's a queue",
+        "d": "Wait in line with a gap; don't overtake towards the ramp."
+      }
+    ],
+    "mistake": "Driving down the ramp before the ferry is tied up."
+  },
+  "cyclex": {
+    "more": "A cycle track or route crosses the road. Cyclists may come out at speed, especially schoolchildren.",
+    "where": [
+      "Where a cycle track crosses a road in new towns",
+      "Near schools and colleges"
+    ],
+    "when": [
+      {
+        "s": "Cyclists are approaching the crossing",
+        "d": "Slow down and let them cross."
+      },
+      {
+        "s": "You're turning across a cycle route",
+        "d": "Check for cyclists coming from behind on your left."
+      }
+    ],
+    "mistake": "Assuming cyclists will always stop for cars."
+  },
+  "gap": {
+    "more": "An opening in the median where vehicles cross or U-turn. Turning vehicles may move slowly across your lanes.",
+    "where": [
+      "Divided highways through towns",
+      "Opposite petrol pumps and side roads"
+    ],
+    "when": [
+      {
+        "s": "A vehicle is waiting in the gap",
+        "d": "Ease off and move away from the median lane if you can — it may pull out."
+      },
+      {
+        "s": "You want to use the gap",
+        "d": "Signal early, slow down in the right lane and give way to oncoming traffic before crossing."
+      }
+    ],
+    "mistake": "Driving fast in the lane next to the median past an occupied gap."
+  },
+  "x2_notonga": {
+    "more": "Horse-drawn vehicles are kept off this road, usually because they are slow and horses can be startled by fast traffic. Other traffic is unaffected.",
+    "where": [
+      "Highways and busy city roads",
+      "Flyovers"
+    ],
+    "when": [
+      {
+        "s": "You are driving one of these: horse-drawn vehicles",
+        "d": "Turn off before the sign and use the alternative route or service road."
+      },
+      {
+        "s": "You see one on the road anyway",
+        "d": "Give it room and patience — it may be looking for a way off."
+      }
+    ],
+    "mistake": "Thinking a short stretch 'doesn't matter'."
+  },
+  "x2_notractor": {
+    "more": "Tractors are kept off this road, usually because they are slow, wide and may carry trailers that block lanes. Other traffic is unaffected.",
+    "where": [
+      "Expressways and city centres",
+      "Bridges with weight limits"
+    ],
+    "when": [
+      {
+        "s": "You are driving one of these: tractors",
+        "d": "Turn off before the sign and use the alternative route or service road."
+      },
+      {
+        "s": "You see one on the road anyway",
+        "d": "Give it room and patience — it may be looking for a way off."
+      }
+    ],
+    "mistake": "Thinking a short stretch 'doesn't matter'."
+  },
+  "x2_nomoto": {
+    "more": "Scooters and motorcycles are kept off this road, usually because the road is fast, access-controlled, or a flyover where riders are at high risk. Other traffic is unaffected.",
+    "where": [
+      "Some expressways and elevated roads",
+      "Certain flyovers and tunnels"
+    ],
+    "when": [
+      {
+        "s": "You are driving one of these: scooters and motorcycles",
+        "d": "Turn off before the sign and use the alternative route or service road."
+      },
+      {
+        "s": "You see one on the road anyway",
+        "d": "Give it room and patience — it may be looking for a way off."
+      }
+    ],
+    "mistake": "Thinking a short stretch 'doesn't matter'."
+  },
+  "x2_nobus": {
+    "more": "Buses are kept off this road, usually because the road is too narrow, has low structures, or buses have their own route. Other traffic is unaffected.",
+    "where": [
+      "Narrow residential roads",
+      "Old town lanes and low underpasses"
+    ],
+    "when": [
+      {
+        "s": "You are driving one of these: buses",
+        "d": "Turn off before the sign and use the alternative route or service road."
+      },
+      {
+        "s": "You see one on the road anyway",
+        "d": "Give it room and patience — it may be looking for a way off."
+      }
+    ],
+    "mistake": "Thinking a short stretch 'doesn't matter'."
+  },
+  "x2_noauto": {
+    "more": "Auto-rickshaws are kept off this road, usually because the road is fast or access-controlled, or autos would stop and block traffic. Other traffic is unaffected.",
+    "where": [
+      "Expressways and some flyovers",
+      "Airport and station approach roads"
+    ],
+    "when": [
+      {
+        "s": "You are driving one of these: auto-rickshaws",
+        "d": "Turn off before the sign and use the alternative route or service road."
+      },
+      {
+        "s": "You see one on the road anyway",
+        "d": "Give it room and patience — it may be looking for a way off."
+      }
+    ],
+    "mistake": "Thinking a short stretch 'doesn't matter'."
+  },
+  "x2_nocycrick": {
+    "more": "Cycle-rickshaws are kept off this road, usually because they are slow and unprotected on a fast road. Other traffic is unaffected.",
+    "where": [
+      "Main arterial roads",
+      "Flyovers and bridges"
+    ],
+    "when": [
+      {
+        "s": "You are driving one of these: cycle-rickshaws",
+        "d": "Turn off before the sign and use the alternative route or service road."
+      },
+      {
+        "s": "You see one on the road anyway",
+        "d": "Give it room and patience — it may be looking for a way off."
+      }
+    ],
+    "mistake": "Thinking a short stretch 'doesn't matter'."
+  },
+  "x2_minspeed": {
+    "more": "A blue circle with a number sets a minimum, used on fast roads where very slow vehicles would cause dangerous braking and lane changes behind them.",
+    "where": [
+      "Expressways and access-controlled highways",
+      "Fast lanes of some elevated roads"
+    ],
+    "when": [
+      {
+        "s": "Your vehicle can't keep up, or a load makes you slow",
+        "d": "Use another road, or the leftmost lane where one exists."
+      },
+      {
+        "s": "Traffic is jammed",
+        "d": "You can drive slower than the minimum — it never forces you to be unsafe."
+      }
+    ],
+    "mistake": "Crawling in the right lane on an expressway."
+  },
+  "x2_endspeed": {
+    "more": "Ends the specific limit that was posted before. The general limits for that type of road and vehicle still apply.",
+    "where": [
+      "Leaving a town or a school zone",
+      "After road works or a ghat section"
+    ],
+    "when": [
+      {
+        "s": "You've left a 30 km/h school zone",
+        "d": "Speed up gradually to a speed that suits the road and traffic."
+      },
+      {
+        "s": "Weather is poor",
+        "d": "Stay slow — ending a limit doesn't make the road safer."
+      }
+    ],
+    "mistake": "Accelerating hard the moment you pass the sign."
+  },
+  "x2_endovertake": {
+    "more": "Marks where a no-overtaking stretch ends. Overtaking becomes allowed — not automatically safe.",
+    "where": [
+      "After a ghat section or a series of bends",
+      "Past a narrow bridge or a school zone"
+    ],
+    "when": [
+      {
+        "s": "You've been behind a slow lorry for kilometres",
+        "d": "Wait for a long, clear straight with no junctions, then overtake decisively."
+      },
+      {
+        "s": "Oncoming traffic is close",
+        "d": "Stay behind; the sign only removes the ban."
+      }
+    ],
+    "mistake": "Pulling out the instant you see the sign without checking ahead."
+  },
+  "x2_giveoncoming": {
+    "more": "On a single-lane stretch — narrow bridge, culvert or road works — traffic from the other side goes first. The opposite end usually has a 'priority over oncoming' sign.",
+    "where": [
+      "Narrow bridges on village roads",
+      "Single-lane stretches through road works"
+    ],
+    "when": [
+      {
+        "s": "An oncoming vehicle has entered the narrow part",
+        "d": "Stop in the wider area before it and wait."
+      },
+      {
+        "s": "The narrow part is empty and you can see the far end",
+        "d": "Go through steadily without stopping in the middle."
+      }
+    ],
+    "mistake": "Racing an oncoming vehicle to the narrow section."
+  },
+  "x2_passeither": {
+    "more": "Both sides of the island or obstruction are open in your direction — common on one-way roads and divided carriageways.",
+    "where": [
+      "Islands on one-way roads",
+      "Toll plaza approaches and bridge piers"
+    ],
+    "when": [
+      {
+        "s": "Vehicles are passing on both sides",
+        "d": "Choose a side early and hold your line; don't switch at the last moment."
+      },
+      {
+        "s": "A two-wheeler is filtering on one side",
+        "d": "Pass on the other side with room."
+      }
+    ],
+    "mistake": "Swerving from one side to the other just before the island."
+  }
+}
