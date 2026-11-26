@@ -1287,3 +1287,16 @@ html.splashing,html.splashing body{overflow:hidden}
 .rtviz .lab3{aspect-ratio:16/8}
 .engviz .lab3{aspect-ratio:3/4}
 @media (max-width:420px){.lab3ctl button{font-size:11px;padding:4px 8px}}
+
+/* ▶ start button in the middle of a hazard scene or a 3D lab */
+.hzscene{position:relative}
+.scenebtn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border:0;border-radius:999px;cursor:pointer;
+  font:600 16px/1.2 var(--body);color:#fff;background:linear-gradient(135deg,var(--acc),var(--acc2,#38bdf8));box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 0 6px rgba(255,255,255,.14);
+  max-width:calc(100% - 40px);white-space:normal;text-align:center;transition:transform .2s,box-shadow .2s}
+.scenebtn:hover{transform:translate(-50%,-50%) scale(1.04)}
+.scenebtn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.scenebtn[hidden]{display:none}
+@media (prefers-reduced-motion:no-preference){.scenebtn:not([hidden]){animation:scenein .35s ease-out}}
+@keyframes scenein{from{opacity:0;transform:translate(-50%,-50%) scale(.85)}}
+.show2d .lab3 .scenebtn{display:none}
+.lab:has(.has3d:not(.show2d)) .controls :is([data-l3run],[data-act="labrun"],[data-act="lab.folrun"],[data-act="lab.corun"],[data-act="lab.endrop"],[data-act="lab.hlrun"]){display:none}

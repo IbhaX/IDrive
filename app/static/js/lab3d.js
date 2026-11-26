@@ -91,9 +91,11 @@ L3.attach = (viz, id, get) => {
   wrap.innerHTML = `<canvas aria-hidden="true"></canvas><div class="lab3lbl"></div>
     <div class="lab3ctl seg" role="group"><button type="button" class="on" data-l3view="3d" aria-pressed="true">3D</button><button type="button" data-l3view="2d" aria-pressed="false">${I18n.esc(I18n.one(I18n.u("lab3Diagram")))}</button></div>
     <button type="button" class="lab3reset" hidden aria-label="${I18n.attr(I18n.u("lab3Reset"))}">⟲</button>
+    <button type="button" class="scenebtn" hidden></button>
     <p class="lab3hint">${I18n.esc(I18n.one(I18n.u(sc.hint || "lab3Drag")))}</p>`;
   viz.prepend(wrap);
   viz.classList.add("has3d");
+  const playBtn = wrap.querySelector(".scenebtn");
   const canvas = wrap.querySelector("canvas"), lblHost = wrap.querySelector(".lab3lbl"), resetBtn = wrap.querySelector(".lab3reset");
   const gl = canvas.getContext("webgl2", { antialias: true, alpha: false, preserveDrawingBuffer: false });
   if (!gl) { wrap.remove(); viz.classList.remove("has3d"); return null; }
@@ -221,6 +223,25 @@ L3.attach = (viz, id, get) => {
     },
   };
 
+  /* the big ▶ in the middle: clicks the lab's own run button, hides while
+     the run animates and comes back when it has finished */
+  const runCtl = () => { const sec = viz.closest(".lab") || viz.parentElement; return sec && sec.querySelector("[data-l3run],[data-act='labrun'],[data-act='lab.folrun'],[data-act='lab.corun'],[data-act='lab.endrop'],[data-act='lab.hlrun'],[data-act='engplay']"); };
+  let playHold = 0;
+  const syncPlay = () => {
+    const ctl = runCtl();
+    if (!ctl) { playBtn.hidden = true; return; }
+    const busy = runDur > 0 || Date.now() < playHold || (sc.playing && sc.playing());
+    if (!busy) { const html = ctl.innerHTML.replace(/❚❚[^<]*/, "▶ " + I18n.esc(I18n.one(I18n.u("play")))); if (playBtn._h !== html) { playBtn.innerHTML = html; playBtn._h = html; } }
+    playBtn.hidden = busy;
+  };
+  playBtn.addEventListener("click", () => {
+    const ctl = runCtl(); if (!ctl) return;
+    playBtn.hidden = true;
+    if (sc.hold) playHold = Date.now() + sc.hold * 1000;
+    ctl.click();
+    setTimeout(syncPlay, 60);
+  });
+
   /* run clock */
   let runT = 1, runDur = 0, idle = true, dirty = true, alive = true, raf = 0, last = performance.now(), time = 0, lastCam = null;
   const W = { w: 2, h: 2 };
@@ -270,7 +291,8 @@ L3.attach = (viz, id, get) => {
     if (!alive) return;
     if (!canvas.isConnected) { api.destroy(); return; }
     const dt = Math.min(0.05, (now - last) / 1000); last = now; time += dt;
-    if (runDur > 0) { runT = Math.min(1, runT + dt / runDur); if (runT >= 1) runDur = 0; dirty = true; }
+    if (runDur > 0) { runT = Math.min(1, runT + dt / runDur); if (runT >= 1) { runDur = 0; syncPlay(); } dirty = true; }
+    if ((sc.playing || playHold) && (time % 0.25) < dt) syncPlay();
     const need = dirty || live || runDur > 0 || !camSettled();
     if (mode === "3d" && visible && !document.hidden && need) render(dt);
     raf = requestAnimationFrame(frame);
@@ -373,11 +395,12 @@ L3.attach = (viz, id, get) => {
 
   raf = requestAnimationFrame(frame);
   setMode(mode);
+  setTimeout(syncPlay, 0);
   const api = {
     dirty() { dirty = true; },
     /* a state change: show the settled picture */
-    changed() { runT = 1; runDur = 0; idle = true; dirty = true; },
-    run(dur = 2.2) { idle = false; if (!Motion.gsap || Motion.reduced()) { runT = 1; runDur = 0; dirty = true; return; } runT = 0; runDur = dur; dirty = true; },
+    changed() { const was = runDur > 0; runT = 1; runDur = 0; idle = true; dirty = true; if (was || playBtn.hidden) syncPlay(); },
+    run(dur = 2.2) { idle = false; if (!Motion.gsap || Motion.reduced()) { runT = 1; runDur = 0; dirty = true; syncPlay(); return; } runT = 0; runDur = dur; dirty = true; playBtn.hidden = true; },
     destroy() {
       if (!alive) return; alive = false; cancelAnimationFrame(raf); if (ro) ro.disconnect(); if (io) io.disconnect();
       cache.forEach((m) => { gl.deleteVertexArray(m.vao); gl.deleteBuffer(m.buf); }); dyn.forEach((d) => { gl.deleteVertexArray(d.m.vao); gl.deleteBuffer(d.m.buf); });

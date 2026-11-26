@@ -354,6 +354,7 @@ document.addEventListener("click", (e) => {
     case "engplay": Labs.engPlay(); break;
     case "engstep": Labs.engStep(); break;
     case "hzstart": Hazard.start(); break;
+    case "hzplay": Hazard.playClick(); break;
     case "hzreplay": Hazard.replay(); break;
     case "hzcam": Hazard.cam(ds.k || "drive"); break;
     case "hzcat": Hazard.filter(ds.k || ""); break;

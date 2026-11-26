@@ -732,6 +732,7 @@ def("hotcar", {
 
 def("engine", {
   env: { kind: "studio" },
+  playing: () => !!(Labs.eng && Labs.eng.tl),
   scene(S, c) {
     const theta = c.theta, a = (theta % 360) * Math.PI / 180, K1 = 0.01;
     const crankR = 44 * K1, rodL = 150 * K1, cy = 0.4;
@@ -993,6 +994,7 @@ def("offtracking", {
 
 def("trafficwave", {
   env: { kind: "open" },
+  hold: 4,
   scene(S, c) {
     S.live();
     const cars = c.cars || [], RING = 360, rad = RING / (2 * Math.PI);

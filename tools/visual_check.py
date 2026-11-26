@@ -121,7 +121,7 @@ def run(base: str, out: Path, browser_path: Optional[str]) -> int:
         check("stopping lab recalculates", "km/h" in page.inner_text("#stopOut") or "m short" in page.inner_text("#stopOut"))
 
         page.goto(f"{base}/#hazard/ped-crossing"); _wait(page)
-        page.click("[data-act=hzstart]")
+        page.click("#hzPlay")
         page.wait_for_selector("#hzPanel [data-hz]", timeout=8000)
         page.click("#hzPanel [data-hz=ped]")
         page.click("#hzPanel [data-hzc='0']")

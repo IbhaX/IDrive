@@ -143,7 +143,7 @@ H.play = (app, s) => {
   const cam = camPref();
   const camBtn = (k, label) => `<button data-act="hzcam" data-k="${k}" class="${cam === k ? "on" : ""}" aria-pressed="${cam === k}">${e(u(label))}</button>`;
   app.innerHTML = `${Course.crumbs([[u("tHazard"), "#hazard"], [s.title, "#hazard/" + s.id]])}
-  <div class="hzgrid"><section class="panel hzscene"><div class="hz3" id="hz3"><canvas id="hzGl" role="img" aria-label="${I18n.attr(s.title)}"></canvas>
+  <div class="hzgrid"><section class="panel hzscene"><button type="button" class="scenebtn" id="hzPlay" data-act="hzplay">▶ <span>${e(u("hzStart"))}</span></button><div class="hz3" id="hz3"><canvas id="hzGl" role="img" aria-label="${I18n.attr(s.title)}"></canvas>
     <div class="hz3mir" id="hzMir" hidden aria-hidden="true"></div>
     <div class="hz3cam seg hzcam" role="group" aria-label="${I18n.attr(u("hzCamLabel"))}">${camBtn("drive", "hzCamDrive")}${camBtn("top", "hzCamTop")}</div>
     <div class="hz3spd" aria-hidden="true"><b id="hzKmh">0</b><small>km/h</small></div>
@@ -157,7 +157,7 @@ H.panel = () => {
   const st = H.st, s = st.s, box = document.getElementById("hzPanel");
   if (!box) return;
   if (st.phase === "intro") {
-    box.innerHTML = `<span class="eyebrow">${e(u("tHazard"))}</span><h2>${e(s.title)}</h2><p class="lede">${e(s.brief)}</p><ol class="steps"><li>${e(u("hzStep1"))}</li><li>${e(u("hzStep2"))}</li><li>${e(u("hzStep3"))}</li></ol><button class="btn primary mag" data-act="hzstart">▶ ${e(u("hzStart"))}</button>`;
+    box.innerHTML = `<span class="eyebrow">${e(u("tHazard"))}</span><h2>${e(s.title)}</h2><p class="lede">${e(s.brief)}</p><ol class="steps"><li>${e(u("hzStep1"))}</li><li>${e(u("hzStep2"))}</li><li>${e(u("hzStep3"))}</li></ol>`;
   } else if (st.phase === "play") {
     box.innerHTML = `<p class="lede">${e(u("hzWatch"))}</p><div class="hzbar"><i id="hzProg"></i></div>`;
   } else if (st.phase === "spot") {
@@ -172,11 +172,26 @@ H.panel = () => {
     <div class="row"><button class="btn" data-act="hzreplay">↻ ${e(u("tryAgain"))}</button>${H.nextId() ? `<a class="btn primary" href="#hazard/${H.nextId()}">${e(u("next"))} →</a>` : `<a class="btn primary" href="#hazard">${e(u("allScenarios"))}</a>`}${s.lesson ? `<a class="btn ghost" href="#lesson/${s.lesson}">${e(u("readLesson"))}</a>` : ""}</div>`;
   }
 };
+/* the big ▶ in the middle of the scene: hidden while the scene plays,
+   back (as "Try again") once the outcome animation has finished */
+H.playBtn = (show, label) => {
+  const b = document.getElementById("hzPlay");
+  if (!b) return;
+  if (label) b.querySelector("span").innerHTML = e(u(label));
+  b.hidden = !show;
+};
+H.playClick = () => {
+  if (!H.st) return;
+  if (H.st.phase === "intro") { H.start(); return; }
+  if (H.st.phase === "result") { H.replay(); H.start(); }
+};
 H.nextId = () => { const i = H.all.indexOf(H.st.s); return H.all[i + 1] ? H.all[i + 1].id : null; };
 
 H.start = () => {
   const st = H.st, s = st.s, G = Motion.gsap;
+  if (st.phase !== "intro") return;
   st.phase = "play"; H.panel();
+  H.playBtn(false);
   s.actors.forEach(a => place(a.id, a.x, a.y, facing(a, a.x, a.y, a.tx, a.ty)));
   const done = () => {
     s.actors.forEach(a => walk(a.id, false));
@@ -225,7 +240,9 @@ H.choose = (i) => {
   H.panel();
   const hz = s.actors.find(a => a.id === s.hazard);
   const hr = facing(hz, hz.tx, hz.ty, hz.then[0], hz.then[1]);
-  if (!G || Motion.reduced()) { place(hz.id, hz.then[0], hz.then[1], hr); return; }
+  const back = () => { if (H.st === st && st.phase === "result") H.playBtn(true, "tryAgain"); };
+  if (!G || Motion.reduced()) { place(hz.id, hz.then[0], hz.then[1], hr); back(); return; }
+  setTimeout(back, ok ? 2000 : 2300);
   Motion.scoped(() => {
     const o = { x: hz.tx, y: hz.ty };
     const moves = hz.kind === "ped" && Math.hypot(hz.then[0] - hz.tx, hz.then[1] - hz.ty) > 2;
