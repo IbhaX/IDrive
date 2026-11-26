@@ -196,10 +196,11 @@ def test_game_ids_match_games_js() -> None:
     """The server's list of game pages must match the games in games.js."""
     import re
     from app.web import seo
-    src = (seo.BASE_DIR / "app" / "static" / "js" / "games.js").read_text(encoding="utf-8")
-    defined = re.findall(r'^def\("(\w+)"', src, re.M)
+    js = seo.BASE_DIR / "app" / "static" / "js"
+    src = (js / "games.js").read_text(encoding="utf-8") + (js / "games2.js").read_text(encoding="utf-8")
+    defined = re.findall(r'^def(?:Sim)?\("(\w+)"', src, re.M)
     assert sorted(defined) == sorted(seo.GAME_IDS)
-    assert len(seo.GAME_IDS) >= 30
+    assert len(seo.GAME_IDS) >= 51
     for gk, ids in seo.GAME_GROUPS:
         assert f'["{gk}", [{", ".join(chr(34) + i + chr(34) for i in ids)}]]' in src
 

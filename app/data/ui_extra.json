@@ -4056,8 +4056,8 @@
   "ഡ്രൈവിങ് ബുദ്ധി ഗെയിമുകൾ"
  ],
  "gmLede": [
-  "31 short games that train what safe driving needs: fast reactions, wide attention, quick judgement of gaps and speeds, and road logic. Each takes a minute or two, and your best score is saved.",
-  "സുരക്ഷിത ഡ്രൈവിങ്ങിന് വേണ്ടത് പരിശീലിപ്പിക്കുന്ന 31 ചെറിയ ഗെയിമുകൾ: വേഗത്തിലുള്ള പ്രതികരണം, വിശാലമായ ശ്രദ്ധ, ഇടവേളകളും വേഗവും പെട്ടെന്ന് വിലയിരുത്തൽ, റോഡ് യുക്തി. ഓരോന്നിനും ഒന്നോ രണ്ടോ മിനിറ്റ്; നിങ്ങളുടെ മികച്ച സ്കോർ സൂക്ഷിക്കും."
+  "{n} short games that train what safe driving needs: fast reactions, wide attention, quick judgement of gaps and speeds, and road logic — plus decide-and-watch situations that play out live with the physics shown. Each takes a minute or two, and your best score is saved.",
+  "സുരക്ഷിത ഡ്രൈവിങ്ങിന് വേണ്ടത് പരിശീലിപ്പിക്കുന്ന {n} ചെറിയ ഗെയിമുകൾ: വേഗത്തിലുള്ള പ്രതികരണം, വിശാലമായ ശ്രദ്ധ, ഇടവേളകളും വേഗവും പെട്ടെന്ന് വിലയിരുത്തൽ, റോഡ് യുക്തി — കൂടാതെ ഭൗതികശാസ്ത്രം കാണിച്ച് തത്സമയം കാണാവുന്ന തീരുമാന സാഹചര്യങ്ങളും. ഓരോന്നിനും ഒന്നോ രണ്ടോ മിനിറ്റ്; നിങ്ങളുടെ മികച്ച സ്കോർ സൂക്ഷിക്കും."
  ],
  "gmPlayed": [
   "You have played {n} of {t} games.",
@@ -5122,5 +5122,1021 @@
  "gmNext": [
   "Next",
   "അടുത്തത്"
+ ],
+ "gmSim": [
+  "Decide and watch",
+  "തീരുമാനിക്കൂ, ഫലം കാണൂ"
+ ],
+ "gmGap": [
+  "Gap",
+  "അകലം"
+ ],
+ "sOpStop": [
+  "Stop",
+  "നിർത്തുക"
+ ],
+ "sOpGo": [
+  "Go",
+  "പോകുക"
+ ],
+ "sOpKeep": [
+  "Keep this gap",
+  "ഈ അകലം തുടരുക"
+ ],
+ "sOpBack": [
+  "Drop back to 3 s",
+  "3 സെക്കൻഡിലേക്ക് പിന്നോട്ട്"
+ ],
+ "sOpCross": [
+  "Cross now",
+  "ഇപ്പോൾ കടക്കുക"
+ ],
+ "sOpTurn": [
+  "Turn now",
+  "ഇപ്പോൾ തിരിയുക"
+ ],
+ "sOpPull": [
+  "Pull out now",
+  "ഇപ്പോൾ കയറുക"
+ ],
+ "sOpHard": [
+  "Brake hard now",
+  "ഇപ്പോൾ ശക്തമായി ബ്രേക്ക്"
+ ],
+ "sOpEase": [
+  "Ease off early, brake gently",
+  "നേരത്തേ വേഗം കുറച്ച് പതിയെ ബ്രേക്ക്"
+ ],
+ "sOpBelt": [
+  "Wear the belt",
+  "ബെൽറ്റ് ഇടുക"
+ ],
+ "sOpNoBelt": [
+  "Skip it — short trip",
+  "വേണ്ട — ചെറിയ യാത്ര"
+ ],
+ "sOpBrakeLane": [
+  "Brake hard in lane",
+  "ലെയ്നിൽ ശക്തമായി ബ്രേക്ക്"
+ ],
+ "sOpSwerve": [
+  "Swerve right",
+  "വലത്തോട്ട് വെട്ടിക്കുക"
+ ],
+ "sOpChange": [
+  "Change lane now",
+  "ഇപ്പോൾ ലെയ്ൻ മാറുക"
+ ],
+ "sOpPass": [
+  "Pass now",
+  "ഇപ്പോൾ കടന്നുപോകുക"
+ ],
+ "sOpBehind": [
+  "Wait behind",
+  "പിന്നിൽ കാത്തിരിക്കുക"
+ ],
+ "sOpAt": [
+  "Brake at {m} m",
+  "{m} മീ.-ൽ ബ്രേക്ക്"
+ ],
+ "sOpHold": [
+  "Press hard and hold",
+  "ശക്തമായി അമർത്തിപ്പിടിക്കുക"
+ ],
+ "sOpThresh": [
+  "Squeeze — just short of locking",
+  "ലോക്ക് ആകാതെ പരമാവധി അമർത്തുക"
+ ],
+ "sOpLetGo": [
+  "Let the cyclist go first",
+  "സൈക്കിളിനെ ആദ്യം വിടുക"
+ ],
+ "sQAmber1": [
+  "{v} km/h — the light turns amber {d} m before the stop line.",
+  "{v} km/h — സ്റ്റോപ്പ് ലൈനിന് {d} മീ. മുമ്പ് ലൈറ്റ് ആംബർ ആകുന്നു."
+ ],
+ "sQAmber2": [
+  "Amber lasts 3 s, the junction is 14 m wide",
+  "ആംബർ 3 സെ., ജംഗ്ഷൻ 14 മീ. വീതി"
+ ],
+ "sQGap1": [
+  "{v} km/h, {s} s ({m} m) behind the car ahead.",
+  "{v} km/h, മുന്നിലെ കാറിന് {s} സെ. ({m} മീ.) പിന്നിൽ."
+ ],
+ "sQGap2": [
+  "It is about to brake as hard as it can",
+  "അത് പരമാവധി ബ്രേക്ക് ചെയ്യാൻ പോകുന്നു"
+ ],
+ "sQBend1": [
+  "A bend of radius {r} m.",
+  "{r} മീ. ആരമുള്ള വളവ്."
+ ],
+ "sQBend2": [
+  "Which speed gets you round safely?",
+  "ഏത് വേഗത്തിൽ സുരക്ഷിതമായി വളവ് കടക്കാം?"
+ ],
+ "sQSchool1": [
+  "Parked cars outside a school — a child could step out.",
+  "സ്കൂളിന് മുന്നിൽ പാർക്ക് ചെയ്ത കാറുകൾ — ഒരു കുട്ടി ഇറങ്ങിവരാം."
+ ],
+ "sQFastest": [
+  "fastest speed that still stops in time?",
+  "സമയത്ത് നിർത്താവുന്ന ഏറ്റവും കൂടിയ വേഗം?"
+ ],
+ "sQFog1": [
+  "Fog: you can see {m} m ahead.",
+  "മഞ്ഞ്: മുന്നിൽ {m} മീ. കാണാം."
+ ],
+ "sQNight1": [
+  "Night, dipped beams: dark clothes show up only at {m} m.",
+  "രാത്രി, താഴ്ത്തിയ ലൈറ്റ്: ഇരുണ്ട വസ്ത്രം {m} മീ.-ൽ മാത്രം കാണും."
+ ],
+ "sQRail1": [
+  "Unmanned level crossing — a train at {v} km/h, {m} m away.",
+  "ആളില്ലാ ലെവൽ ക്രോസ് — {v} km/h-ൽ ഒരു ട്രെയിൻ, {m} മീ. അകലെ."
+ ],
+ "sQRail2": [
+  "You are stopped at the line. Cross or wait?",
+  "നിങ്ങൾ ലൈനിൽ നിർത്തിയിരിക്കുന്നു. കടക്കണോ കാത്തിരിക്കണോ?"
+ ],
+ "sQRight1": [
+  "Turning right: an oncoming car at {v} km/h, {m} m away.",
+  "വലത്തോട്ട് തിരിയുന്നു: {v} km/h-ൽ എതിരെ ഒരു കാർ, {m} മീ. അകലെ."
+ ],
+ "sQRight2": [
+  "Turn across it now, or wait?",
+  "ഇപ്പോൾ മുറിച്ചുകടക്കണോ, കാത്തിരിക്കണോ?"
+ ],
+ "sQSide1": [
+  "Side road: a car from your right at {v} km/h, {m} m away.",
+  "ഉപറോഡ്: വലത്തുനിന്ന് {v} km/h-ൽ ഒരു കാർ, {m} മീ. അകലെ."
+ ],
+ "sQSide2": [
+  "Pull out to the left now, or wait?",
+  "ഇപ്പോൾ ഇടത്തോട്ട് കയറണോ, കാത്തിരിക്കണോ?"
+ ],
+ "sQMerge1": [
+  "Joining a highway: traffic at {v} km/h, a gap {m} m long.",
+  "ഹൈവേയിൽ കയറുന്നു: ട്രാഫിക് {v} km/h, ഇടവേള {m} മീ."
+ ],
+ "sQMerge2": [
+  "What speed do you merge at?",
+  "ഏത് വേഗത്തിൽ ലയിക്കും?"
+ ],
+ "sQTail1": [
+  "{v} km/h, stopped traffic {m} m ahead.",
+  "{v} km/h, മുന്നിൽ {m} മീ.-ൽ നിർത്തിയ ട്രാഫിക്."
+ ],
+ "sQTail2": [
+  "A car is tailgating you only {s} s behind",
+  "ഒരു കാർ വെറും {s} സെ. പിന്നിൽ ഒട്ടിവരുന്നു"
+ ],
+ "sQBeltF": [
+  "You're in the front seat for a short trip.",
+  "ചെറിയ യാത്ര, നിങ്ങൾ മുൻസീറ്റിൽ."
+ ],
+ "sQBeltR": [
+  "You're in the back seat for a short trip.",
+  "ചെറിയ യാത്ര, നിങ്ങൾ പിൻസീറ്റിൽ."
+ ],
+ "sQBelt2": [
+  "On the way the car hits a wall at {v} km/h",
+  "വഴിയിൽ കാർ {v} km/h-ൽ ഒരു മതിലിൽ ഇടിക്കുന്നു"
+ ],
+ "sQCow1": [
+  "{v} km/h — a cow walks into your lane {m} m ahead.",
+  "{v} km/h — {m} മീ. മുന്നിൽ ഒരു പശു നിങ്ങളുടെ ലെയ്നിലേക്ക്."
+ ],
+ "sQCowOnc": [
+  "An oncoming car is in the other lane",
+  "എതിർ ലെയ്നിൽ ഒരു കാർ വരുന്നു"
+ ],
+ "sQCowClear": [
+  "The other lane is clear",
+  "എതിർ ലെയ്ൻ ഒഴിഞ്ഞതാണ്"
+ ],
+ "sQBike1": [
+  "{v} km/h on a two-lane road, indicating right.",
+  "{v} km/h, രണ്ട് ലെയ്ൻ റോഡ്, വലത് ഇൻഡിക്കേറ്റർ."
+ ],
+ "sQBike2": [
+  "A motorbike is coming up in the right lane",
+  "വലത് ലെയ്നിൽ ഒരു ബൈക്ക് വരുന്നു"
+ ],
+ "sQLane1": [
+  "You at {v} km/h; a car at {w} km/h is {m} m behind in the right lane.",
+  "നിങ്ങൾ {v} km/h; വലത് ലെയ്നിൽ {m} മീ. പിന്നിൽ {w} km/h-ൽ ഒരു കാർ."
+ ],
+ "sQLane2": [
+  "Move into the right lane now, or wait?",
+  "ഇപ്പോൾ വലത് ലെയ്നിലേക്ക് മാറണോ, കാത്തിരിക്കണോ?"
+ ],
+ "sQCrest1": [
+  "You at {v} km/h behind a tractor at {w} km/h.",
+  "നിങ്ങൾ {v} km/h, മുന്നിൽ {w} km/h-ൽ ഒരു ട്രാക്ടർ."
+ ],
+ "sQCrest2": [
+  "A hill crest {m} m ahead hides the road beyond",
+  "{m} മീ. മുന്നിലെ കുന്നിൻമുകൾ അപ്പുറത്തെ റോഡ് മറയ്ക്കുന്നു"
+ ],
+ "sQCyc1": [
+  "You at {v} km/h behind a cyclist at {w} km/h.",
+  "നിങ്ങൾ {v} km/h, മുന്നിൽ {w} km/h-ൽ ഒരു സൈക്കിൾ."
+ ],
+ "sQCyc2": [
+  "Oncoming car at {v} km/h, {m} m away",
+  "എതിരെ {v} km/h-ൽ കാർ, {m} മീ. അകലെ"
+ ],
+ "sQBp1": [
+  "{v} km/h, the light ahead is red.",
+  "{v} km/h, മുന്നിൽ ചുവപ്പ് ലൈറ്റ്."
+ ],
+ "sQBp2": [
+  "firm braking {a} m/s² — where do you start?",
+  "ഉറച്ച ബ്രേക്കിങ് {a} m/s² — എവിടെ തുടങ്ങും?"
+ ],
+ "sQAbsOn": [
+  "{v} km/h, emergency stop — your car has ABS.",
+  "{v} km/h, അടിയന്തര സ്റ്റോപ്പ് — കാറിന് ABS ഉണ്ട്."
+ ],
+ "sQAbsOff": [
+  "{v} km/h, emergency stop — your car has no ABS.",
+  "{v} km/h, അടിയന്തര സ്റ്റോപ്പ് — കാറിന് ABS ഇല്ല."
+ ],
+ "sQAbs2": [
+  "you also need to steer round something",
+  "എന്തിനെയെങ്കിലും ഒഴിവാക്കാൻ സ്റ്റിയർ ചെയ്യുകയും വേണം"
+ ],
+ "sQHook1": [
+  "You at {v} km/h, about to turn left.",
+  "നിങ്ങൾ {v} km/h, ഇടത്തോട്ട് തിരിയാൻ പോകുന്നു."
+ ],
+ "sQHook2": [
+  "A cyclist at {v} km/h is {m} m behind on your left",
+  "ഇടതുവശത്ത് {m} മീ. പിന്നിൽ {v} km/h-ൽ ഒരു സൈക്കിൾ"
+ ],
+ "sLToLine": [
+  "{m} m to the line",
+  "ലൈനിലേക്ക് {m} മീ."
+ ],
+ "sLToHaz": [
+  "{m} m to go",
+  "{m} മീ. ബാക്കി"
+ ],
+ "sLLat": [
+  "sideways {a} of {h} m/s²",
+  "പാർശ്വ {a} / {h} m/s²"
+ ],
+ "sLTrain": [
+  "train in {s} s",
+  "ട്രെയിൻ {s} സെ.-ൽ"
+ ],
+ "sLOnc": [
+  "other car {m} m",
+  "മറ്റേ കാർ {m} മീ."
+ ],
+ "sLBehind": [
+  "car behind {m} m",
+  "പിന്നിലെ കാർ {m} മീ."
+ ],
+ "sLDecel": [
+  "peak ≈ {g} g",
+  "പരമാവധി ≈ {g} g"
+ ],
+ "sLBikeBehind": [
+  "bike {m} m behind you",
+  "ബൈക്ക് {m} മീ. പിന്നിൽ"
+ ],
+ "sLBikeAhead": [
+  "bike {m} m ahead",
+  "ബൈക്ക് {m} മീ. മുന്നിൽ"
+ ],
+ "sLBikeBeside": [
+  "bike beside you",
+  "ബൈക്ക് തൊട്ടരികിൽ"
+ ],
+ "sLClear": [
+  "{m} m from the cyclist",
+  "സൈക്കിളിൽ നിന്ന് {m} മീ."
+ ],
+ "sLCycBack": [
+  "cyclist {m} m from the corner",
+  "സൈക്കിൾ വളവിൽ നിന്ന് {m} മീ."
+ ],
+ "sLCycPast": [
+  "cyclist at the corner",
+  "സൈക്കിൾ വളവിൽ"
+ ],
+ "sLLocked": [
+  "wheels locked — no steering",
+  "ചക്രങ്ങൾ ലോക്ക് — സ്റ്റിയറിങ് ഇല്ല"
+ ],
+ "sLNoSteer": [
+  "can't steer",
+  "സ്റ്റിയർ ചെയ്യാനാവില്ല"
+ ],
+ "sHStopped": [
+  "Stopped {m} m short — safe",
+  "{m} മീ. മുമ്പ് നിർത്തി — സുരക്ഷിതം"
+ ],
+ "sHPastLine": [
+  "Stopped {m} m past the line — in the junction",
+  "ലൈനിന് {m} മീ. അപ്പുറം നിർത്തി — ജംഗ്ഷനിൽ"
+ ],
+ "sHClearedAmber": [
+  "Cleared the junction {s} s before red",
+  "ചുവപ്പിന് {s} സെ. മുമ്പ് ജംഗ്ഷൻ കടന്നു"
+ ],
+ "sHRedInside": [
+  "Still in the junction {s} s after it turned red",
+  "ചുവപ്പായി {s} സെ. കഴിഞ്ഞും ജംഗ്ഷനിൽ"
+ ],
+ "sHStoppedBehind": [
+  "Stopped {m} m behind it",
+  "അതിന് {m} മീ. പിന്നിൽ നിർത്തി"
+ ],
+ "sHRearEnd": [
+  "Rear-ended it at about {v} km/h",
+  "ഏകദേശം {v} km/h-ൽ പിന്നിൽ ഇടിച്ചു"
+ ],
+ "sHSkid": [
+  "Ran out of grip and slid off the bend",
+  "ഗ്രിപ്പ് തീർന്ന് വളവിൽ നിന്ന് തെന്നിപ്പോയി"
+ ],
+ "sHBendOk": [
+  "Round the bend with grip to spare",
+  "ഗ്രിപ്പ് ബാക്കിയോടെ വളവ് കടന്നു"
+ ],
+ "sHBendSlow": [
+  "Safe — but another choice was also safe and quicker",
+  "സുരക്ഷിതം — പക്ഷേ വേഗമേറിയ മറ്റൊരു സുരക്ഷിത വഴിയുണ്ടായിരുന്നു"
+ ],
+ "sHHit": [
+  "Hit at about {v} km/h",
+  "ഏകദേശം {v} km/h-ൽ ഇടിച്ചു"
+ ],
+ "sHTooSlow": [
+  "Safe ({m} m to spare) — a faster speed was safe too",
+  "സുരക്ഷിതം ({m} മീ. ബാക്കി) — കൂടിയ വേഗവും സുരക്ഷിതമായിരുന്നു"
+ ],
+ "sHRailOk": [
+  "Across with {s} s to spare",
+  "{s} സെ. ബാക്കിയോടെ കടന്നു"
+ ],
+ "sHRailClose": [
+  "Across with only {s} s to spare — far too close",
+  "വെറും {s} സെ. ബാക്കി — വളരെ അടുത്ത്"
+ ],
+ "sHWaitRoom": [
+  "Safe — but there was {s} s of room",
+  "സുരക്ഷിതം — പക്ഷേ {s} സെ. ഇടമുണ്ടായിരുന്നു"
+ ],
+ "sHWaitRoomM": [
+  "Safe — but there was room to go",
+  "സുരക്ഷിതം — പക്ഷേ പോകാൻ ഇടമുണ്ടായിരുന്നു"
+ ],
+ "sHWaitRight": [
+  "Right call — going would not have been safe",
+  "ശരിയായ തീരുമാനം — പോകുന്നത് സുരക്ഷിതമാകുമായിരുന്നില്ല"
+ ],
+ "sHTurnOk": [
+  "Turned with {s} s to spare",
+  "{s} സെ. ബാക്കിയോടെ തിരിഞ്ഞു"
+ ],
+ "sHForced": [
+  "The other driver had to brake at {a} m/s² ({g} g)",
+  "മറ്റേ ഡ്രൈവർക്ക് {a} m/s² ({g} g)-ൽ ബ്രേക്ക് ചെയ്യേണ്ടിവന്നു"
+ ],
+ "sHPullOk": [
+  "In — the other car only had to ease off ({a} m/s²)",
+  "കയറി — മറ്റേ കാറിന് അല്പം വേഗം കുറച്ചാൽ മതിയായി ({a} m/s²)"
+ ],
+ "sHMergeMatch": [
+  "Matched the traffic — nobody had to brake",
+  "ട്രാഫിക്കിന്റെ വേഗത്തിലെത്തി — ആർക്കും ബ്രേക്ക് വേണ്ടിവന്നില്ല"
+ ],
+ "sHMergeOk": [
+  "In — the car behind eased off gently ({a} m/s²)",
+  "കയറി — പിന്നിലെ കാർ പതിയെ വേഗം കുറച്ചു ({a} m/s²)"
+ ],
+ "sHCutIn": [
+  "You cut in — the other car had no room to stop",
+  "നിങ്ങൾ ഇടിച്ചുകയറി — മറ്റേ കാറിന് നിർത്താൻ ഇടമില്ലായിരുന്നു"
+ ],
+ "sHTailHit": [
+  "You stopped — but the tailgater ran into you",
+  "നിങ്ങൾ നിർത്തി — പക്ഷേ പിന്നിലെ കാർ ഇടിച്ചു"
+ ],
+ "sHQueueHit": [
+  "Too late for gentle braking — you reached the queue",
+  "പതിയെ ബ്രേക്കിങ്ങിന് വൈകി — ക്യൂവിലെത്തി"
+ ],
+ "sHHardRight": [
+  "Right — the queue was too close for anything gentler",
+  "ശരി — ക്യൂ വളരെ അടുത്തായിരുന്നു, പതിയെ ആകുമായിരുന്നില്ല"
+ ],
+ "sHEaseOk": [
+  "Stopped smoothly — the tailgater had time too",
+  "സുഗമമായി നിർത്തി — പിന്നിലെ കാറിനും സമയം കിട്ടി"
+ ],
+ "sHBelt": [
+  "The belt stopped you over 0.8 m — about {g} g",
+  "ബെൽറ്റ് 0.8 മീ.-ൽ നിങ്ങളെ നിർത്തി — ഏകദേശം {g} g"
+ ],
+ "sHNoBelt": [
+  "You hit the inside of the car — about {g} g",
+  "കാറിനുള്ളിൽ ഇടിച്ചു — ഏകദേശം {g} g"
+ ],
+ "sHHitSlower": [
+  "Hit at about {v} km/h instead of {w} km/h",
+  "{w} km/h-ന് പകരം ഏകദേശം {v} km/h-ൽ ഇടിച്ചു"
+ ],
+ "sHHeadOn": [
+  "Swerved into the oncoming car",
+  "എതിരെ വന്ന കാറിലേക്ക് വെട്ടിച്ചു"
+ ],
+ "sHSwerveOk": [
+  "Swerved past with the lane clear",
+  "ഒഴിഞ്ഞ ലെയ്നിലൂടെ വെട്ടിച്ചുകടന്നു"
+ ],
+ "sHSwerveLate": [
+  "Too late to swerve — braking was safer",
+  "വെട്ടിക്കാൻ വൈകി — ബ്രേക്കിങ് ആയിരുന്നു സുരക്ഷിതം"
+ ],
+ "sHBikeOk": [
+  "The bike was already past — safe change",
+  "ബൈക്ക് ഇതിനകം കടന്നുപോയി — സുരക്ഷിതം"
+ ],
+ "sHBikeHit": [
+  "You moved across into the motorbike",
+  "നിങ്ങൾ ബൈക്കിലേക്ക് നീങ്ങി"
+ ],
+ "sHOvOk": [
+  "Overtook with {m} m to spare even in the worst case",
+  "ഏറ്റവും മോശം സാഹചര്യത്തിലും {m} മീ. ബാക്കിയോടെ ഓവർടേക്ക് ചെയ്തു"
+ ],
+ "sHCrestBad": [
+  "A car came over the crest while you were alongside",
+  "നിങ്ങൾ അരികിലായിരിക്കുമ്പോൾ ഒരു കാർ കുന്നിറങ്ങിവന്നു"
+ ],
+ "sHCycOk": [
+  "Passed with a wide gap",
+  "വിശാലമായ അകലത്തിൽ കടന്നു"
+ ],
+ "sHCycSqueeze": [
+  "Squeezed past far too close to the cyclist",
+  "സൈക്കിളിന് വളരെ അടുത്തുകൂടി ഞെരുങ്ങിക്കടന്നു"
+ ],
+ "sHEarly": [
+  "Stopped {m} m early — braking that early holds up traffic",
+  "{m} മീ. നേരത്തേ നിർത്തി — അത്ര നേരത്തേ ബ്രേക്ക് ചെയ്യുന്നത് ട്രാഫിക്കിനെ തടയും"
+ ],
+ "sHLocked": [
+  "Stopped in {m} m — but the locked wheels couldn't steer",
+  "{m} മീ.-ൽ നിർത്തി — പക്ഷേ ലോക്കായ ചക്രങ്ങൾ സ്റ്റിയർ ചെയ്തില്ല"
+ ],
+ "sHAbsOk": [
+  "Stopped in {m} m and could still steer",
+  "{m} മീ.-ൽ നിർത്തി, സ്റ്റിയർ ചെയ്യാനുമായി"
+ ],
+ "sHHookOk": [
+  "Turned without cutting across the cyclist",
+  "സൈക്കിളിന്റെ വഴി മുറിക്കാതെ തിരിഞ്ഞു"
+ ],
+ "sHHookBad": [
+  "You turned across the cyclist's path",
+  "നിങ്ങൾ സൈക്കിളിന്റെ വഴിയിലേക്ക് തിരിഞ്ഞു"
+ ],
+ "sRSpeed": [
+  "Speed",
+  "വേഗം"
+ ],
+ "sRReact": [
+  "Reaction distance ({rt} s)",
+  "പ്രതികരണ ദൂരം ({rt} സെ.)"
+ ],
+ "sRBrake": [
+  "Braking distance (v² ÷ 2a)",
+  "ബ്രേക്കിങ് ദൂരം (v² ÷ 2a)"
+ ],
+ "sRStop": [
+  "Total stopping distance",
+  "ആകെ നിർത്താനുള്ള ദൂരം"
+ ],
+ "sRToLine": [
+  "Distance to the line",
+  "ലൈനിലേക്കുള്ള ദൂരം"
+ ],
+ "sRClearAmber": [
+  "Time to clear the junction",
+  "ജംഗ്ഷൻ കടക്കാനുള്ള സമയം"
+ ],
+ "sRLostReact": [
+  "Gap lost while you react ({rt} s)",
+  "പ്രതികരിക്കുമ്പോൾ നഷ്ടമാകുന്ന അകലം ({rt} സെ.)"
+ ],
+ "sRSameBrake": [
+  "Both cars then brake the same",
+  "തുടർന്ന് രണ്ട് കാറും ഒരുപോലെ ബ്രേക്ക്"
+ ],
+ "sRFinalGap": [
+  "Gap left when stopped",
+  "നിർത്തുമ്പോൾ ബാക്കി അകലം"
+ ],
+ "sRLatNeed": [
+  "Sideways grip needed (v² ÷ r)",
+  "വേണ്ട പാർശ്വ ഗ്രിപ്പ് (v² ÷ r)"
+ ],
+ "sRLatHave": [
+  "Grip available (μ × g)",
+  "ലഭ്യമായ ഗ്രിപ്പ് (μ × g)"
+ ],
+ "sRVmax": [
+  "Highest speed (√μgr)",
+  "പരമാവധി വേഗം (√μgr)"
+ ],
+ "sRSeen": [
+  "Distance when you see it",
+  "കാണുമ്പോഴുള്ള ദൂരം"
+ ],
+ "sRTrain": [
+  "Train arrives in",
+  "ട്രെയിൻ എത്തുന്നത്"
+ ],
+ "sRCrossT": [
+  "Time to cross from rest (1.5 m/s²)",
+  "നിന്നിടത്തുനിന്ന് കടക്കാൻ (1.5 m/s²)"
+ ],
+ "sRRailRule": [
+  "Margin we insist on",
+  "വേണ്ട കുറഞ്ഞ ഇടവേള"
+ ],
+ "sRArrive": [
+  "Oncoming car arrives in",
+  "എതിരെയുള്ള കാർ എത്തുന്നത്"
+ ],
+ "sRTurnT": [
+  "Time to turn across (14 m, 2.5 m/s²)",
+  "മുറിച്ചുതിരിയാൻ (14 മീ., 2.5 m/s²)"
+ ],
+ "sRWant": [
+  "Margin you want",
+  "വേണ്ട ഇടവേള"
+ ],
+ "sRInLane": [
+  "In the lane after",
+  "ലെയ്നിലെത്തുന്നത്"
+ ],
+ "sRGapThen": [
+  "Gap at that moment",
+  "ആ സമയത്തെ അകലം"
+ ],
+ "sRDiff": [
+  "Speed difference",
+  "വേഗ വ്യത്യാസം"
+ ],
+ "sRDecelNeed": [
+  "Braking the other driver needs",
+  "മറ്റേ ഡ്രൈവർക്ക് വേണ്ട ബ്രേക്കിങ്"
+ ],
+ "sRComfort": [
+  "Gentle limit",
+  "സൗമ്യ പരിധി"
+ ],
+ "sRTraffic": [
+  "Traffic speed",
+  "ട്രാഫിക് വേഗം"
+ ],
+ "sRYou": [
+  "Your speed",
+  "നിങ്ങളുടെ വേഗം"
+ ],
+ "sRTailGap": [
+  "Tailgater's gap",
+  "പിന്നിലെ കാറിന്റെ അകലം"
+ ],
+ "sRQueue": [
+  "Queue ahead",
+  "മുന്നിലെ ക്യൂ"
+ ],
+ "sRGentle": [
+  "Braking needed to stop gently in time",
+  "സമയത്ത് പതിയെ നിർത്താൻ വേണ്ട ബ്രേക്കിങ്"
+ ],
+ "sRTailNeeds": [
+  "Distance the tailgater covers while reacting",
+  "പ്രതികരിക്കുമ്പോൾ പിന്നിലെ കാർ പിന്നിടുന്നത്"
+ ],
+ "sRStopOver": [
+  "Your body stops over",
+  "ശരീരം നിൽക്കുന്ന ദൂരം"
+ ],
+ "sRDecel": [
+  "Deceleration",
+  "വേഗക്കുറവ്"
+ ],
+ "sRForce": [
+  "Force on a 70 kg body",
+  "70 കി.ഗ്രാം ശരീരത്തിലെ ബലം"
+ ],
+ "sRSwerveD": [
+  "Distance to swerve one lane",
+  "ഒരു ലെയ്ൻ വെട്ടിക്കാൻ വേണ്ട ദൂരം"
+ ],
+ "sROnc": [
+  "Other lane clear",
+  "എതിർ ലെയ്ൻ ഒഴിഞ്ഞത്"
+ ],
+ "sRBikePos": [
+  "Bike behind your front",
+  "നിങ്ങളുടെ മുൻഭാഗത്തിന് പിന്നിൽ ബൈക്ക്"
+ ],
+ "sRBikePass": [
+  "Time for the bike to get past",
+  "ബൈക്ക് കടന്നുപോകാൻ സമയം"
+ ],
+ "sRCrossLine": [
+  "You cross the lane line after",
+  "നിങ്ങൾ ലെയ്ൻ വര കടക്കുന്നത്"
+ ],
+ "sRBehindCar": [
+  "Car behind",
+  "പിന്നിലെ കാർ"
+ ],
+ "sRWorst": [
+  "Worst case: a car at 70 km/h just over the crest",
+  "ഏറ്റവും മോശം: കുന്നിന് തൊട്ടപ്പുറം 70 km/h-ൽ ഒരു കാർ"
+ ],
+ "sRSight": [
+  "Road you can see",
+  "കാണാവുന്ന റോഡ്"
+ ],
+ "sRCycGap": [
+  "Gap to leave a cyclist",
+  "സൈക്കിളിന് നൽകേണ്ട അകലം"
+ ],
+ "sRFoot": [
+  "Moving your foot (0.5 s)",
+  "കാൽ മാറ്റാൻ (0.5 സെ.)"
+ ],
+ "sRFirm": [
+  "Firm braking distance",
+  "ഉറച്ച ബ്രേക്കിങ് ദൂരം"
+ ],
+ "sRBrakeFrom": [
+  "You started braking at",
+  "ബ്രേക്കിങ് തുടങ്ങിയത്"
+ ],
+ "sRAbs": [
+  "ABS",
+  "ABS"
+ ],
+ "sRGrip": [
+  "Grip: rolling peak / locked sliding (μ)",
+  "ഗ്രിപ്പ്: ഉരുളുമ്പോൾ / ലോക്കായി തെന്നുമ്പോൾ (μ)"
+ ],
+ "sROptHold": [
+  "Press hard and hold",
+  "ശക്തമായി അമർത്തിപ്പിടിക്കൽ"
+ ],
+ "sROptThresh": [
+  "Squeeze short of locking",
+  "ലോക്കാകാതെ അമർത്തൽ"
+ ],
+ "sRCycBehind": [
+  "Cyclist behind you",
+  "പിന്നിലെ സൈക്കിൾ"
+ ],
+ "sRTurnBlock": [
+  "Your turn blocks its path",
+  "നിങ്ങളുടെ തിരിവ് വഴി തടയുന്നത്"
+ ],
+ "sRCycArrive": [
+  "Cyclist reaches the corner",
+  "സൈക്കിൾ വളവിലെത്തുന്നത്"
+ ],
+ "sTAmber": [
+  "Amber means stop, unless you are so close that stopping would be unsafe.",
+  "ആംബർ എന്നാൽ നിർത്തുക — നിർത്തുന്നത് അപകടകരമാകുന്നത്ര അടുത്താണെങ്കിൽ മാത്രം തുടരുക."
+ ],
+ "sTGap": [
+  "Keep at least 2 seconds — 3 or more in rain. Your reaction time is what the gap is for.",
+  "കുറഞ്ഞത് 2 സെക്കൻഡ് — മഴയിൽ 3-ൽ കൂടുതൽ. നിങ്ങളുടെ പ്രതികരണ സമയത്തിനാണ് ഈ അകലം."
+ ],
+ "sTBend": [
+  "Grip needed grows with the square of speed: 20% faster needs 44% more grip.",
+  "വേണ്ട ഗ്രിപ്പ് വേഗത്തിന്റെ വർഗത്തിനനുസരിച്ച് കൂടും: 20% വേഗം കൂടിയാൽ 44% ഗ്രിപ്പ് കൂടുതൽ."
+ ],
+ "sTSchool": [
+  "Near schools and parked cars, drive at a speed that lets you stop for a child who appears suddenly.",
+  "സ്കൂളുകൾക്കും പാർക്ക് ചെയ്ത കാറുകൾക്കും സമീപം, പെട്ടെന്ന് വരുന്ന കുട്ടിക്കായി നിർത്താവുന്ന വേഗത്തിൽ ഓടിക്കുക."
+ ],
+ "sTFog": [
+  "Always be able to stop within the distance you can see to be clear.",
+  "തെളിഞ്ഞുകാണുന്ന ദൂരത്തിനുള്ളിൽ എപ്പോഴും നിർത്താൻ കഴിയണം."
+ ],
+ "sTNight": [
+  "At night you see people in dark clothes very late — slow down where people may walk.",
+  "രാത്രി ഇരുണ്ട വസ്ത്രമിട്ടവരെ വളരെ വൈകിയേ കാണൂ — ആളുകൾ നടക്കാവുന്നിടത്ത് വേഗം കുറയ്ക്കുക."
+ ],
+ "sTRail": [
+  "At an unmanned crossing, stop, look both ways and cross only when no train is close. Never race a train.",
+  "ആളില്ലാ ക്രോസിങ്ങിൽ നിർത്തി, ഇരുവശവും നോക്കി, ട്രെയിൻ അടുത്തില്ലാത്തപ്പോൾ മാത്രം കടക്കുക. ട്രെയിനുമായി മത്സരിക്കരുത്."
+ ],
+ "sTRight": [
+  "Turning across traffic, wait for a gap that leaves you time to spare — oncoming speeds are easy to misjudge.",
+  "ട്രാഫിക് മുറിച്ച് തിരിയുമ്പോൾ സമയം ബാക്കിയുള്ള ഇടവേളയ്ക്ക് കാത്തിരിക്കുക — എതിരെയുള്ള വേഗം തെറ്റിദ്ധരിക്കാൻ എളുപ്പമാണ്."
+ ],
+ "sTSide": [
+  "Pull out only when nobody on the main road has to brake for you.",
+  "പ്രധാന റോഡിൽ ആരും നിങ്ങൾക്കായി ബ്രേക്ക് ചെയ്യേണ്ടാത്തപ്പോൾ മാത്രം കയറുക."
+ ],
+ "sTMerge": [
+  "Use the slip road to reach the speed of the traffic, then merge into a gap.",
+  "സ്ലിപ്പ് റോഡ് ഉപയോഗിച്ച് ട്രാഫിക്കിന്റെ വേഗത്തിലെത്തി, ഒരു ഇടവേളയിലേക്ക് ലയിക്കുക."
+ ],
+ "sTTail": [
+  "With a tailgater, look further ahead and slow down early and gently so they have time too.",
+  "പിന്നിൽ ഒട്ടിവരുന്നവരുണ്ടെങ്കിൽ കൂടുതൽ ദൂരേക്ക് നോക്കി നേരത്തേ, പതിയെ വേഗം കുറയ്ക്കുക; അവർക്കും സമയം കിട്ടും."
+ ],
+ "sTBelt": [
+  "The belt spreads the stop over the car's crumple zone; without it you stop on whatever you hit — front or back seat.",
+  "ബെൽറ്റ് നിർത്തൽ കാറിന്റെ ക്രംപിൾ സോണിലൂടെ വ്യാപിപ്പിക്കുന്നു; ഇല്ലെങ്കിൽ ഇടിക്കുന്നതിൽ നിങ്ങൾ നിൽക്കും — മുന്നിലോ പിന്നിലോ."
+ ],
+ "sTCow": [
+  "Braking in your lane is usually best. Swerve only into space you can see is clear.",
+  "സാധാരണ സ്വന്തം ലെയ്നിൽ ബ്രേക്ക് ചെയ്യുന്നതാണ് നല്ലത്. ഒഴിഞ്ഞതായി കാണുന്നിടത്തേക്ക് മാത്രം വെട്ടിക്കുക."
+ ],
+ "sTBike": [
+  "Mirrors miss bikes alongside you: look over your shoulder before every lane change.",
+  "അരികിലുള്ള ബൈക്കുകൾ കണ്ണാടിയിൽ കാണില്ല: ഓരോ ലെയ്ൻ മാറ്റത്തിനും മുമ്പ് തോളിനു മുകളിലൂടെ നോക്കുക."
+ ],
+ "sTLane": [
+  "Before moving out, judge how fast the car behind is closing, not just how far back it is.",
+  "മാറുന്നതിന് മുമ്പ്, പിന്നിലെ കാർ എത്ര അകലെ എന്നല്ല, എത്ര വേഗം അടുക്കുന്നു എന്നും നോക്കുക."
+ ],
+ "sTCrest": [
+  "Never overtake when you can't see enough clear road — a crest can hide a car.",
+  "ആവശ്യത്തിന് തെളിഞ്ഞ റോഡ് കാണാനാകാത്തപ്പോൾ ഓവർടേക്ക് ചെയ്യരുത് — കുന്ന് ഒരു കാറിനെ മറയ്ക്കാം."
+ ],
+ "sTCyc": [
+  "Give a cyclist at least 1.5 m; if the oncoming lane isn't free, wait behind.",
+  "സൈക്കിളിന് കുറഞ്ഞത് 1.5 മീ. നൽകുക; എതിർ ലെയ്ൻ ഒഴിവില്ലെങ്കിൽ പിന്നിൽ കാത്തിരിക്കുക."
+ ],
+ "sTBp": [
+  "Start braking early and smoothly; leave more room on wet roads.",
+  "നേരത്തേ, സുഗമമായി ബ്രേക്ക് ചെയ്തുതുടങ്ങുക; നനഞ്ഞ റോഡിൽ കൂടുതൽ ഇടം വിടുക."
+ ],
+ "sTAbs": [
+  "With ABS, press hard and keep pressing — you can still steer. Without ABS, brake just short of locking.",
+  "ABS ഉണ്ടെങ്കിൽ ശക്തമായി അമർത്തിപ്പിടിക്കുക — സ്റ്റിയർ ചെയ്യാനാകും. ABS ഇല്ലെങ്കിൽ ലോക്കാകാതെ പരമാവധി ബ്രേക്ക് ചെയ്യുക."
+ ],
+ "sTHook": [
+  "Check your left mirror and blind spot before turning left — let cyclists and bikes on your left go first.",
+  "ഇടത്തോട്ട് തിരിയും മുമ്പ് ഇടത് കണ്ണാടിയും ബ്ലൈൻഡ് സ്പോട്ടും നോക്കുക — ഇടതുവശത്തെ സൈക്കിളുകളെയും ബൈക്കുകളെയും ആദ്യം വിടുക."
+ ],
+ "gm_amber": [
+  "Amber light",
+  "ആംബർ ലൈറ്റ്"
+ ],
+ "gmSub_amber": [
+  "Stop or go when the light changes",
+  "ലൈറ്റ് മാറുമ്പോൾ നിർത്തണോ പോകണോ"
+ ],
+ "gmHow_amber": [
+  "Stop or go when the light changes. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "ലൈറ്റ് മാറുമ്പോൾ നിർത്തണോ പോകണോ. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_gapkeep": [
+  "Following gap",
+  "പിന്തുടരൽ അകലം"
+ ],
+ "gmSub_gapkeep": [
+  "Is your gap enough if it brakes?",
+  "മുന്നിലെ കാർ ബ്രേക്ക് ചെയ്താൽ അകലം മതിയോ?"
+ ],
+ "gmHow_gapkeep": [
+  "Is your gap enough if it brakes?. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "മുന്നിലെ കാർ ബ്രേക്ക് ചെയ്താൽ അകലം മതിയോ?. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_bendspeed": [
+  "Bend speed",
+  "വളവിലെ വേഗം"
+ ],
+ "gmSub_bendspeed": [
+  "Pick a speed that keeps grip",
+  "ഗ്രിപ്പ് നിലനിർത്തുന്ന വേഗം തിരഞ്ഞെടുക്കുക"
+ ],
+ "gmHow_bendspeed": [
+  "Pick a speed that keeps grip. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "ഗ്രിപ്പ് നിലനിർത്തുന്ന വേഗം തിരഞ്ഞെടുക്കുക. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_schoolzone": [
+  "School zone",
+  "സ്കൂൾ മേഖല"
+ ],
+ "gmSub_schoolzone": [
+  "Speed past parked cars",
+  "പാർക്ക് ചെയ്ത കാറുകൾക്കരികിലെ വേഗം"
+ ],
+ "gmHow_schoolzone": [
+  "Speed past parked cars. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "പാർക്ക് ചെയ്ത കാറുകൾക്കരികിലെ വേഗം. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_fogspeed": [
+  "Fog speed",
+  "മഞ്ഞിലെ വേഗം"
+ ],
+ "gmSub_fogspeed": [
+  "Stop within what you can see",
+  "കാണുന്ന ദൂരത്തിനുള്ളിൽ നിർത്തുക"
+ ],
+ "gmHow_fogspeed": [
+  "Stop within what you can see. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "കാണുന്ന ദൂരത്തിനുള്ളിൽ നിർത്തുക. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_nightdip": [
+  "Night speed",
+  "രാത്രി വേഗം"
+ ],
+ "gmSub_nightdip": [
+  "Dipped beams and dark clothes",
+  "താഴ്ത്തിയ ലൈറ്റും ഇരുണ്ട വസ്ത്രവും"
+ ],
+ "gmHow_nightdip": [
+  "Dipped beams and dark clothes. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "താഴ്ത്തിയ ലൈറ്റും ഇരുണ്ട വസ്ത്രവും. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_levelx": [
+  "Level crossing",
+  "ലെവൽ ക്രോസ്"
+ ],
+ "gmSub_levelx": [
+  "Cross before the train, or wait?",
+  "ട്രെയിനിന് മുമ്പ് കടക്കണോ, കാത്തിരിക്കണോ?"
+ ],
+ "gmHow_levelx": [
+  "Cross before the train, or wait?. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "ട്രെയിനിന് മുമ്പ് കടക്കണോ, കാത്തിരിക്കണോ?. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_rightturn": [
+  "Right turn",
+  "വലത്തോട്ടുള്ള തിരിവ്"
+ ],
+ "gmSub_rightturn": [
+  "Turn across oncoming traffic",
+  "എതിർ ട്രാഫിക് മുറിച്ച് തിരിയൽ"
+ ],
+ "gmHow_rightturn": [
+  "Turn across oncoming traffic. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "എതിർ ട്രാഫിക് മുറിച്ച് തിരിയൽ. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_sideroad": [
+  "Side road",
+  "ഉപറോഡ്"
+ ],
+ "gmSub_sideroad": [
+  "Pull out without making anyone brake",
+  "ആരെയും ബ്രേക്ക് ചെയ്യിക്കാതെ കയറുക"
+ ],
+ "gmHow_sideroad": [
+  "Pull out without making anyone brake. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "ആരെയും ബ്രേക്ക് ചെയ്യിക്കാതെ കയറുക. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_merge": [
+  "Highway merge",
+  "ഹൈവേ ലയനം"
+ ],
+ "gmSub_merge": [
+  "Join at the right speed",
+  "ശരിയായ വേഗത്തിൽ ചേരുക"
+ ],
+ "gmHow_merge": [
+  "Join at the right speed. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "ശരിയായ വേഗത്തിൽ ചേരുക. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_tailgater": [
+  "Tailgater",
+  "ഒട്ടിവരുന്ന കാർ"
+ ],
+ "gmSub_tailgater": [
+  "Stopping with someone too close behind",
+  "പിന്നിൽ ഒട്ടിവരുമ്പോൾ നിർത്തൽ"
+ ],
+ "gmHow_tailgater": [
+  "Stopping with someone too close behind. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "പിന്നിൽ ഒട്ടിവരുമ്പോൾ നിർത്തൽ. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_seatbelt": [
+  "Seat belt",
+  "സീറ്റ് ബെൽറ്റ്"
+ ],
+ "gmSub_seatbelt": [
+  "A short trip and a sudden stop",
+  "ചെറിയ യാത്രയും പെട്ടെന്നുള്ള നിർത്തലും"
+ ],
+ "gmHow_seatbelt": [
+  "A short trip and a sudden stop. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "ചെറിയ യാത്രയും പെട്ടെന്നുള്ള നിർത്തലും. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_cowswerve": [
+  "Cow on the road",
+  "റോഡിൽ പശു"
+ ],
+ "gmSub_cowswerve": [
+  "Brake in lane or swerve?",
+  "ലെയ്നിൽ ബ്രേക്ക് ചെയ്യണോ വെട്ടിക്കണോ?"
+ ],
+ "gmHow_cowswerve": [
+  "Brake in lane or swerve?. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "ലെയ്നിൽ ബ്രേക്ക് ചെയ്യണോ വെട്ടിക്കണോ?. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_blindbike": [
+  "Blind-spot bike",
+  "ബ്ലൈൻഡ് സ്പോട്ട് ബൈക്ക്"
+ ],
+ "gmSub_blindbike": [
+  "Lane change with a bike coming",
+  "ബൈക്ക് വരുമ്പോൾ ലെയ്ൻ മാറ്റം"
+ ],
+ "gmHow_blindbike": [
+  "Lane change with a bike coming. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "ബൈക്ക് വരുമ്പോൾ ലെയ്ൻ മാറ്റം. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_laneright": [
+  "Fast lane",
+  "വേഗ ലെയ്ൻ"
+ ],
+ "gmSub_laneright": [
+  "Move out ahead of a faster car?",
+  "വേഗമേറിയ കാറിന് മുന്നിലേക്ക് മാറണോ?"
+ ],
+ "gmHow_laneright": [
+  "Move out ahead of a faster car?. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "വേഗമേറിയ കാറിന് മുന്നിലേക്ക് മാറണോ?. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_crest": [
+  "Blind crest",
+  "മറഞ്ഞ കുന്ന്"
+ ],
+ "gmSub_crest": [
+  "Overtake a tractor before a hill?",
+  "കുന്നിന് മുമ്പ് ട്രാക്ടറിനെ ഓവർടേക്ക്?"
+ ],
+ "gmHow_crest": [
+  "Overtake a tractor before a hill?. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "കുന്നിന് മുമ്പ് ട്രാക്ടറിനെ ഓവർടേക്ക്?. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_cyclist": [
+  "Passing a cyclist",
+  "സൈക്കിളിനെ കടക്കൽ"
+ ],
+ "gmSub_cyclist": [
+  "Pass now or wait behind?",
+  "ഇപ്പോൾ കടക്കണോ പിന്നിൽ കാത്തിരിക്കണോ?"
+ ],
+ "gmHow_cyclist": [
+  "Pass now or wait behind?. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "ഇപ്പോൾ കടക്കണോ പിന്നിൽ കാത്തിരിക്കണോ?. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_brakepoint": [
+  "Brake point",
+  "ബ്രേക്ക് പോയിന്റ്"
+ ],
+ "gmSub_brakepoint": [
+  "Where to start braking for a red light",
+  "ചുവപ്പ് ലൈറ്റിന് എവിടെ ബ്രേക്ക് തുടങ്ങണം"
+ ],
+ "gmHow_brakepoint": [
+  "Where to start braking for a red light. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "ചുവപ്പ് ലൈറ്റിന് എവിടെ ബ്രേക്ക് തുടങ്ങണം. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_abs": [
+  "Emergency brake: ABS",
+  "അടിയന്തര ബ്രേക്ക്: ABS"
+ ],
+ "gmSub_abs": [
+  "ABS or no ABS — how to brake",
+  "ABS ഉണ്ടോ ഇല്ലയോ — എങ്ങനെ ബ്രേക്ക് ചെയ്യണം"
+ ],
+ "gmHow_abs": [
+  "ABS or no ABS — how to brake. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "ABS ഉണ്ടോ ഇല്ലയോ — എങ്ങനെ ബ്രേക്ക് ചെയ്യണം. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "gm_lefthook": [
+  "Left turn, cyclist",
+  "ഇടത് തിരിവ്, സൈക്കിൾ"
+ ],
+ "gmSub_lefthook": [
+  "Don't turn across a cyclist",
+  "സൈക്കിളിന്റെ വഴി മുറിച്ച് തിരിയരുത്"
+ ],
+ "gmHow_lefthook": [
+  "Don't turn across a cyclist. Read the situation, choose what to do, then watch it play out at true scale with the numbers live. A card then shows the working — speeds, distances, times and forces. Reaction time 1 s unless stated; braking 7 m/s² dry, 4.5 m/s² wet.",
+  "സൈക്കിളിന്റെ വഴി മുറിച്ച് തിരിയരുത്. സാഹചര്യം വായിച്ച് എന്ത് ചെയ്യണമെന്ന് തിരഞ്ഞെടുക്കുക; തുടർന്ന് അത് യഥാർഥ അളവിൽ, തത്സമയ സംഖ്യകളോടെ കാണാം. പിന്നീട് ഒരു കാർഡ് കണക്കുകൂട്ടൽ കാണിക്കും — വേഗം, ദൂരം, സമയം, ബലം. പ്രതികരണ സമയം (പറയാത്തപക്ഷം) 1 സെ.; ബ്രേക്കിങ് ഉണങ്ങിയ റോഡിൽ 7 m/s², നനഞ്ഞതിൽ 4.5 m/s²."
+ ],
+ "sHAbsSoft": [
+  "Stopped in {m} m — with ABS, pressing hard and holding stops shorter",
+  "{m} മീ.-ൽ നിർത്തി — ABS ഉണ്ടെങ്കിൽ ശക്തമായി അമർത്തിപ്പിടിച്ചാൽ കുറഞ്ഞ ദൂരത്തിൽ നിർത്താം"
  ]
 }

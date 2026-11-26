@@ -22,6 +22,7 @@ Gm.GROUPS = [
   ["gmRules", ["signsprint", "signpairs", "oddsign", "dashlights"]],
 ];
 Gm.ALL = Gm.GROUPS.flatMap(([, ids]) => ids);
+Gm.reindex = () => { Gm.ALL = Gm.GROUPS.flatMap(([, ids]) => ids); };
 
 /* ---------- scores ---------- */
 const points = (id, v) => (DEF[id].lo ? Math.max(0, 10000 - Math.round(v)) : Math.round(v));
@@ -189,7 +190,7 @@ Gm.view = (app) => {
 function hub(app) {
   const played = Gm.ALL.filter((k) => (P.gm || {})[k] != null).length;
   app.innerHTML = `${Course.crumbs([[u("home"), "#home"], [u("tGames"), "#games"]])}
-  <section class="panel rvl"><h2>${e(u("gmTitle"))}</h2><p class="lede">${e(u("gmLede"))}</p><p class="muted">${e(u("gmPlayed", { n: played, t: Gm.ALL.length }))}</p></section>
+  <section class="panel rvl"><h2>${e(u("gmTitle"))}</h2><p class="lede">${e(u("gmLede", { n: Gm.ALL.length }))}</p><p class="muted">${e(u("gmPlayed", { n: played, t: Gm.ALL.length }))}</p></section>
   ${Gm.GROUPS.map(([gk, ids]) => `<h3 class="labgroup rvl">${e(u(gk))}</h3><div class="feat">${ids.map((k) => {
     const b = bestOf(k);
     return `<a class="fcard tiltc rvl gcard" href="#games/${k}"><span class="fi gico" aria-hidden="true">${DEF[k].icon}</span><b>${e(u("gm_" + k))}</b><small>${e(u("gmSub_" + k))}</small><span class="mfoot">${b == null ? e(u("gmNoBest")) : `${e(u("gmBest"))}: <b>${fmt(k, b)}</b>`}</span></a>`;
@@ -203,7 +204,7 @@ function play(app, id) {
   <nav class="labnav"><a class="btn small" href="#games">← ${e(u("gmAll"))}</a><span class="labgrp">${e(u(grp))} · ${i + 1}/${Gm.ALL.length}</span>
     <span class="labpn"><a class="btn small" href="#games/${prev}" aria-label="${I18n.attr(u("gm_" + prev))}">‹</a><a class="btn small" href="#games/${next}">${e(u("gm_" + next))} ›</a></span></nav>
   <section class="panel lab rvl"><h2>${sp.icon} ${e(u("gm_" + id))}</h2><p class="lede">${e(u("gmHow_" + id))}</p>
-    <div class="gstage ${sp.dom ? "dom" : ""}" id="gStage"><canvas aria-hidden="true"></canvas><div class="ghud" aria-live="polite"></div><div class="glay"></div><div class="gmsg" aria-live="assertive"></div>
+    <div class="gstage ${sp.dom ? "dom" : ""} ${sp.sim ? "sim" : ""}" id="gStage"><canvas aria-hidden="true"></canvas><div class="ghud" aria-live="polite"></div><div class="glay"></div><div class="gmsg" aria-live="assertive"></div>
       <div class="gres" hidden></div>
       <button type="button" class="scenebtn" id="gPlay" aria-label="${I18n.attr(u("gmStart"))}" title="${I18n.attr(u("gmStart"))}"><i aria-hidden="true">▶</i></button></div>
     <p class="muted gbest" id="gBest"></p></section>`;
@@ -1271,5 +1272,7 @@ def("dashlights", {
   },
 });
 
+/* shared with games2.js (decide-and-watch games) */
+Object.assign(Gm, { def, D, W, H, rnd, ri, pick, shuffle, clamp, fx, avg, chips });
 window.Games = Gm;
 })();

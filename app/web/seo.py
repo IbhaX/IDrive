@@ -565,6 +565,8 @@ def page_science(lab: Optional[str], lang: Lang) -> Optional[Page]:
 GAME_GROUPS: list[tuple[str, list[str]]] = [
     ("gmReact", ["brakelight", "greenlight", "kidout", "gonogo", "indicator", "mirrors", "peripheral", "stopline", "dodge",
                  "lanekeep", "speedkeep", "gapjudge", "animals", "fogspot", "nightped"]),
+    ("gmSim", ["amber", "gapkeep", "bendspeed", "schoolzone", "fogspeed", "nightdip", "levelx", "rightturn", "sideroad", "merge",
+               "tailgater", "seatbelt", "cowswerve", "blindbike", "laneright", "crest", "cyclist", "brakepoint", "abs", "lefthook"]),
     ("gmLogic", ["parking", "route", "rightofway", "roundabout", "sequence", "fuelplan", "stopguess", "gapcount", "speedmath",
                  "plates", "blindspots", "overtake"]),
     ("gmRules", ["signsprint", "signpairs", "oddsign", "dashlights"]),
@@ -578,7 +580,7 @@ def page_games(gid: Optional[str], lang: Lang) -> Optional[Page]:
         crumbs = [home_crumb(lang), gc]
         h1 = T(f"Driving games: {len(GAME_IDS)} games for reaction time and road logic",
                f"ഡ്രൈവിങ് ഗെയിമുകൾ: പ്രതികരണ സമയത്തിനും റോഡ് യുക്തിക്കും {len(GAME_IDS)} ഗെയിമുകൾ", lang)
-        lede = ui("gmLede", lang)
+        lede = ui("gmLede", lang).replace("{n}", str(len(GAME_IDS)))
         parts = []
         for gk, ids in GAME_GROUPS:
             parts.append(f"<h2>{esc(ui(gk, lang))}</h2>" + ul([f'{a(f"/games/{k}", ui("gm_" + k, lang), lang)} — {esc(ui("gmSub_" + k, lang))}' for k in ids]))
@@ -852,7 +854,7 @@ SITEMAPS: dict[str, tuple[Callable[[], list[str]], list[Path]]] = {
     "lights": (lambda: [f"/vehicle/lights/{w.id}" for w in curriculum.warning_lights()], [CUR / "warning_lights.json", CUR / "ml" / "library.json"]),
     "parts": (lambda: [f"/vehicle/explore/{p.id}" for p in curriculum.vehicle_parts()], [CUR / "vehicle_parts.json", CUR / "ml" / "library.json"]),
     "labs": (lambda: [f"/science/{k}" for k in lab_ids()], [DATA_DIR / "ui_extra.json"]),
-    "games": (lambda: [f"/games/{k}" for k in GAME_IDS], [DATA_DIR / "ui_extra.json", BASE_DIR / "app" / "static" / "js" / "games.js"]),
+    "games": (lambda: [f"/games/{k}" for k in GAME_IDS], [DATA_DIR / "ui_extra.json", BASE_DIR / "app" / "static" / "js" / "games.js", BASE_DIR / "app" / "static" / "js" / "games2.js"]),
 }
 
 
