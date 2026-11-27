@@ -2,7 +2,7 @@
   <title>iDrive</title>
   <desc>iDrive — The stem is a road in perspective with dashed lane markings, heading to the horizon.</desc>
   <defs><linearGradient id="idrive-tile" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="64">
-      <stop offset="0" stop-color="#2F6FD6"/><stop offset="1" stop-color="#1C4796"/>
+      <stop offset="0" stop-color="#3d78b4"/><stop offset="1" stop-color="#1f4570"/>
     </linearGradient>
     <linearGradient id="idrive-sheen" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#fff" stop-opacity=".14"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/>
