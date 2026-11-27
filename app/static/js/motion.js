@@ -214,6 +214,10 @@ M.roadScene = (host) => {
     <rect x="0" y="132" width="720" height="58" fill="url(#rd)"/>
     <rect x="0" y="132" width="720" height="3" fill="#1e2650"/>
     <g class="dashes">${dashX.map(x => `<rect x="${x}" y="158" width="40" height="6" rx="3" fill="#7c6cff" opacity=".85"/>`).join("")}</g>
+    <g class="signs">
+      <g class="fsign" transform="translate(300,100) scale(.42)"><rect x="46" y="88" width="8" height="46" fill="#232a4a"/><circle cx="50" cy="50" r="44" fill="#0d1120" stroke="#fbbf24" stroke-width="7"/><circle cx="50" cy="50" r="38" fill="#f8fafc"/><rect x="18" y="42" width="64" height="16" rx="3" fill="#d4202c"/></g>
+      <g class="fsign" transform="translate(430,108) scale(.34)"><rect x="46" y="86" width="8" height="48" fill="#232a4a"/><path d="M8 16H92L50 92Z" fill="#f8fafc" stroke="#d4202c" stroke-width="9" stroke-linejoin="round"/></g>
+    </g>
     <g class="car">
       <path d="M54 128 L96 120 L96 142 L54 146 Z" fill="url(#beam)"/>
       <rect x="0" y="126" width="54" height="22" rx="8" fill="#7c6cff"/>
@@ -222,10 +226,6 @@ M.roadScene = (host) => {
       <rect x="27" y="118" width="10" height="8" rx="2" fill="#38bdf8" opacity=".85"/>
       <circle cx="14" cy="149" r="7" fill="#05060d"/><circle cx="41" cy="149" r="7" fill="#05060d"/>
       <circle cx="14" cy="149" r="3" fill="#1e2650"/><circle cx="41" cy="149" r="3" fill="#1e2650"/>
-    </g>
-    <g class="signs">
-      <g class="fsign" transform="translate(300,84) scale(.42)"><rect x="46" y="88" width="8" height="46" fill="#232a4a"/><circle cx="50" cy="50" r="44" fill="#0d1120" stroke="#fbbf24" stroke-width="7"/><circle cx="50" cy="50" r="38" fill="#f8fafc"/><rect x="18" y="42" width="64" height="16" rx="3" fill="#d4202c"/></g>
-      <g class="fsign" transform="translate(430,96) scale(.34)"><rect x="46" y="86" width="8" height="48" fill="#232a4a"/><path d="M8 16H92L50 92Z" fill="#f8fafc" stroke="#d4202c" stroke-width="9" stroke-linejoin="round"/></g>
     </g>
   </svg>`;
   if (M.reduced() || !G) return;
