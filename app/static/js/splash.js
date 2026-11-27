@@ -1,8 +1,7 @@
-/* startup splash: once per browser session (every launch of the installed app),
-   removed by app.js when the first screen is ready; never blocks for long. */
+/* iDrive startup modal: show on every document load; app.js dismisses it after boot. */
 (function () {
   var el = document.getElementById("splash");
-  try { if (sessionStorage.getItem("idrive-splash")) { el.remove(); return; } sessionStorage.setItem("idrive-splash", "1"); } catch (e) {}
+  if (!el) return;
   document.documentElement.classList.add("splashing");
   window.__splashT0 = Date.now();
   var fit = function () {

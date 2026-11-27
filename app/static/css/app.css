@@ -1011,6 +1011,20 @@ a,button,[role="button"],summary,label{-webkit-tap-highlight-color:transparent;t
 /* phones: show the experiment first, controls underneath, so every slider change is visible */
 @media (max-width:900px){.lab .labgrid>.labviz{order:-1}}
 
+/* iDrive-specific startup modal card */
+#splash{backdrop-filter:blur(16px)}
+.drive-load-card{position:relative;width:min(460px,calc(100vw - 36px));max-width:460px;box-sizing:border-box;padding:30px 24px 26px;border-radius:30px;border:1px solid rgba(145,135,255,.22);background:linear-gradient(145deg,rgba(25,27,53,.96),rgba(10,12,23,.98));box-shadow:0 32px 100px rgba(0,0,0,.55),inset 0 1px rgba(255,255,255,.07);overflow:hidden}
+.drive-load-card:before{content:"";position:absolute;top:0;left:18%;right:18%;height:1px;background:linear-gradient(90deg,transparent,#8c7dff,#55d7f2,transparent)}
+.drive-load-card .splin{width:100%;gap:clamp(12px,2.5vh,22px)}
+.drive-load-card .slock{width:min(76vw,340px);max-height:24vh}
+.drive-load-card .stag{font-size:clamp(12px,1vw + 8px,18px)}
+.drive-load-status{margin-top:20px;text-align:center;color:#a6abc8;font:500 12px Inter,system-ui,sans-serif}
+.drive-load-track{height:3px;width:min(260px,72%);margin:14px auto 0;background:#ffffff15;border-radius:9px;overflow:hidden}
+.drive-load-track i{display:block;width:36%;height:100%;border-radius:inherit;background:linear-gradient(90deg,#7c6cff,#38bdf8);animation:drive-loading 1.5s ease-in-out infinite}
+@keyframes drive-loading{from{transform:translateX(-110%)}to{transform:translateX(290%)}}
+@media(max-width:560px){.drive-load-card{width:min(420px,calc(100vw - 32px));border-radius:24px;padding:25px 18px 22px}.drive-load-card .slock{width:min(76vw,300px);max-height:22vh}}
+@media(prefers-reduced-motion:reduce){.drive-load-track i{animation:none;width:55%}}
+
 /* ============ startup splash ============ */
 html.splashing,html.splashing body{overflow:hidden}
 #splash{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;
@@ -1435,3 +1449,13 @@ html.splashing,html.splashing body{overflow:hidden}
  .adtable td::before{content:attr(data-l);font-size:12px;color:var(--muted);flex:none}
  .adacts{white-space:normal;justify-content:flex-end}
 }
+
+/* iDrive modal card: keep the brand lockup inside a compact centered dialog. */
+#splash>.drive-load-card{width:min(460px,calc(100vw - 32px))!important;max-width:460px!important;min-height:0!important;margin:auto!important;display:block!important;flex:0 1 auto!important;padding:30px 24px 26px!important;border-radius:28px!important;background:linear-gradient(145deg,rgba(25,27,53,.97),rgba(10,12,23,.99))!important;border:1px solid rgba(145,135,255,.28)!important;box-shadow:0 32px 100px rgba(0,0,0,.6),inset 0 1px rgba(255,255,255,.07)!important}
+#splash>.drive-load-card .splin{width:100%!important}
+#splash>.drive-load-card .slock{width:min(72vw,320px)!important;max-height:23vh!important}
+@media(max-width:560px){#splash>.drive-load-card{width:calc(100vw - 32px)!important;padding:24px 18px 22px!important;border-radius:24px!important}}
+
+/* Startup is a glass modal over the existing app, never a replacement screen. */
+#splash{background:radial-gradient(120% 80% at 50% 40%,rgba(91,91,180,.10) 0%,rgba(8,10,20,.24) 70%)!important;backdrop-filter:blur(5px) saturate(1.08)!important;-webkit-backdrop-filter:blur(5px) saturate(1.08)!important}
+#splash.out{pointer-events:none}
