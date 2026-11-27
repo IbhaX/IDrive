@@ -29,15 +29,17 @@ def get_engine() -> AsyncEngine:
             Path(db_path).parent.mkdir(parents=True, exist_ok=True)
         _engine = create_async_engine(url, echo=False, pool_pre_ping=True)
 
-        @event.listens_for(_engine.sync_engine, "connect")
-        def _set_sqlite_pragma(
-            dbapi_conn: PoolProxiedConnection, _record: ConnectionPoolEntry
-        ) -> None:
-            cursor = dbapi_conn.cursor()
-            cursor.execute("PRAGMA journal_mode=WAL")
-            cursor.execute("PRAGMA foreign_keys=ON")
-            cursor.execute("PRAGMA busy_timeout=30000")
-            cursor.close()
+        if url.startswith("sqlite"):
+
+            @event.listens_for(_engine.sync_engine, "connect")
+            def _set_sqlite_pragma(
+                dbapi_conn: PoolProxiedConnection, _record: ConnectionPoolEntry
+            ) -> None:
+                cursor = dbapi_conn.cursor()
+                cursor.execute("PRAGMA journal_mode=WAL")
+                cursor.execute("PRAGMA foreign_keys=ON")
+                cursor.execute("PRAGMA busy_timeout=30000")
+                cursor.close()
 
     return _engine
 

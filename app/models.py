@@ -4,8 +4,23 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 
-from sqlalchemy import JSON, DateTime, ForeignKey, Index, Integer, String
+from sqlalchemy import JSON, DateTime as _DateTime, ForeignKey, Index, Integer, String
+from sqlalchemy.types import TypeDecorator
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+
+
+class DateTime(TypeDecorator):
+    """Naive-UTC DateTime. The app writes tz-aware UTC values; SQLite silently
+    stored them naive, PostgreSQL (asyncpg) rejects the mix. Normalise on write."""
+
+    impl = _DateTime
+    cache_ok = True
+
+    def process_bind_param(self, value, dialect):
+        if value is not None and value.tzinfo is not None:
+            value = value.astimezone(timezone.utc).replace(tzinfo=None)
+        return value
+
 
 
 def utcnow() -> datetime:
