@@ -35,7 +35,7 @@ Rules you must follow:
 4. Be a patient instructor: short paragraphs, plain language, define jargon, use a concrete Indian road example when helpful. Keep answers under about 220 words unless asked for more.
 5. When asked to quiz the learner, write 3 multiple-choice questions from the sources, then give the answers with one-line explanations at the end.
 6. Mark simplified physics as an educational model.
-7. Reply in the learner's language: if the question is in Tamil, answer in clear, natural Tamil; if it is in Malayalam, answer in clear, natural Malayalam (keep common technical words such as clutch, brake, RTO in the form learners use); otherwise answer in English. Sources may be given in any supported language."""
+7. Reply in the learner's language: Tamil, Malayalam, Hindi, Kannada or Telugu when selected or detected; otherwise use English. Use clear, natural language and keep common driving terms such as clutch, brake and RTO in the form learners use. Sources may be given in any supported language."""
 
 
 def _clip(text: str, n: int = MAX_PASSAGE) -> str:
@@ -50,12 +50,15 @@ def _plain(x: Any) -> str:
 def retrieve(question: str, k: int = TOP_K, language: str = "auto") -> list[dict[str, Any]]:
     """Top-k passages for the question, from lessons, articles, lights, parts, signs, glossary.
     Malayalam questions retrieve over the Malayalam text and pass it as the source."""
+    is_hi = language == "hi" or bool(re.search(r"[\u0900-\u097f]", question))
+    is_kn = language == "kn" or bool(re.search(r"[\u0c80-\u0cff]", question))
+    is_te = language == "te" or bool(re.search(r"[\u0c00-\u0c7f]", question))
     is_ta = language == "ta" or bool(re.search(r"[\u0b80-\u0bff]", question))
     is_ml = language == "ml" or bool(re.search(r"[\u0d00-\u0d7f]", question))
     hits = curriculum.search(question, limit=k * 3)
     if not hits:
         # fall back to single-word matches for long natural-language questions
-        words = sorted({w for w in re.findall(r"[a-zA-Z\u0d00-\u0d7f\u0b80-\u0bff]{2,}", question.lower())}, key=len, reverse=True)[:4]
+        words = sorted({w for w in re.findall(r"[a-zA-Z\u0900-\u097f\u0c00-\u0c7f\u0c80-\u0cff\u0d00-\u0d7f\u0b80-\u0bff]{2,}", question.lower())}, key=len, reverse=True)[:4]
         seen: set[str] = set()
         hits = []
         for w in words:
@@ -70,7 +73,7 @@ def retrieve(question: str, k: int = TOP_K, language: str = "auto") -> list[dict
         d = docs.get(h["kind"] + ":" + h["id"])
         if not d:
             continue
-        text = d.get("body_ta") if is_ta and d.get("body_ta") else d.get("body_ml") if is_ml and d.get("body_ml") else d["body"]
+        text = d.get("body_kn") if is_kn and d.get("body_kn") else d.get("body_te") if is_te and d.get("body_te") else d.get("body_hi") if is_hi and d.get("body_hi") else d.get("body_ta") if is_ta and d.get("body_ta") else d.get("body_ml") if is_ml and d.get("body_ml") else d["body"]
         out.append({
             "n": len(out) + 1, "kind": h["kind"], "id": h["id"], "title": h["title"],
             "group": h["group"], "href": h["href"], "text": _clip(text),
@@ -115,6 +118,9 @@ async def ask(
             "sources": _public(sources),
         }
     language_instruction = {
+        "hi": "The learner selected Hindi in the app. Reply in clear, natural Hindi, even if their question is typed in English. Keep common driving terms such as clutch, brake and RTO in familiar usage.",
+        "kn": "The learner selected Kannada in the app. Reply in clear, natural Kannada, even if their question is typed in English. Keep common driving terms such as clutch, brake and RTO in familiar usage.",
+        "te": "The learner selected Telugu in the app. Reply in clear, natural Telugu, even if their question is typed in English. Keep common driving terms such as clutch, brake and RTO in familiar usage.",
         "ta": "The learner selected Tamil in the app. Reply in clear, natural Tamil, even if their question is typed in English. Keep common driving terms such as clutch, brake and RTO in familiar usage.",
         "ml": "The learner selected Malayalam in the app. Reply in clear, natural Malayalam, even if their question is typed in English.",
         "en": "The learner selected English in the app. Reply in English.",

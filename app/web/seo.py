@@ -31,7 +31,7 @@ from app.config import BASE_DIR, get_settings
 from app.services import content, curriculum
 
 DATA_DIR = BASE_DIR / "app" / "data"
-Lang = str  # "en" | "ml"
+Lang = str  # "en" | "ml" | "ta" | "hi"
 
 
 # ---------- small helpers ----------
@@ -47,6 +47,8 @@ def pick(v: Any, lang: Lang) -> str:
             return ""
         if lang == "ta" and len(v) > 2 and isinstance(v[2], str) and v[2].strip():
             return v[2]
+        idx = {"ta":2,"hi":3,"kn":4,"te":5}.get(lang)
+        if idx is not None and len(v)>idx and isinstance(v[idx],str) and v[idx].strip(): return v[idx]
         if lang == "ml" and len(v) > 1 and isinstance(v[1], str) and v[1].strip():
             return v[1]
         return str(v[0])
@@ -60,8 +62,8 @@ def ui(key: str, lang: Lang, **kw: Any) -> str:
     return s
 
 
-def T(en: str, ml: str, lang: Lang) -> str:
-    return ml if lang == "ml" else en
+def T(en: str, ml: str, lang: Lang, hi: Optional[str] = None, kn: Optional[str] = None, te: Optional[str] = None) -> str:
+    return {"hi":hi,"kn":kn,"te":te}.get(lang) or (ml if lang=="ml" else en)
 
 
 def slugify(s: str) -> str:
@@ -83,7 +85,7 @@ def site_url() -> str:
 
 
 def href(path: str, lang: Lang) -> str:
-    return path + ("?lang=" + lang if lang in ("ml", "ta") else "")
+    return path + ("?lang=" + lang if lang in ("ml","ta","hi","kn","te") else "")
 
 
 def a(path: str, label: str, lang: Lang, cls: str = "") -> str:
@@ -173,12 +175,14 @@ SIGN_WORD = {"mand", "caut", "info"}
 
 
 def sign_name(d: dict[str, Any], lang: Lang) -> str:
-    return (d.get("ta") or [d["name"]])[0] if lang == "ta" else (d.get("ml") or [d["name"]])[0] if lang == "ml" else d["name"]
+    return (d.get(lang) or [d["name"]])[0] if lang in ("ml","ta","hi","kn","te") else d["name"]
 
 
 def sign_text(d: dict[str, Any], lang: Lang) -> tuple[str, str]:
     ml = d.get("ml") or ["", "", ""]
     ta = d.get("ta") or []
+    local = d.get(lang) or []
+    if lang in ("hi","kn","te") and len(local)>=3: return local[1],local[2]
     if lang == "ta" and len(ta) >= 3:
         return ta[1], ta[2]
     if lang == "ml" and ml[1]:
@@ -188,6 +192,10 @@ def sign_text(d: dict[str, Any], lang: Lang) -> tuple[str, str]:
 
 def sign_question(d: dict[str, Any], lang: Lang) -> str:
     n = sign_name(d, lang)
+    if lang == "kn": return f"“{n}” ಚಿಹ್ನೆಯ ಅರ್ಥವೇನು?"
+    if lang == "te": return f"“{n}” గుర్తు అర్థం ఏమిటి?"
+    if lang == "hi":
+        return f"“{n}” संकेत का क्या अर्थ है?"
     if lang == "ta":
         return f"“{n}” என்ற குறியீட்டின் பொருள் என்ன?"
     if lang == "ml":
@@ -197,16 +205,16 @@ def sign_question(d: dict[str, Any], lang: Lang) -> str:
 
 def sign_answer(d: dict[str, Any], lang: Lang) -> str:
     meaning, action = sign_text(d, lang)
-    return f"{meaning} {T('What to do:', 'എന്ത് ചെയ്യണം:', lang)} {action}"
+    return f"{meaning} {T('What to do:', 'എന്ത് ചെയ്യണം:', lang, 'क्या करें:', 'ಏನು ಮಾಡಬೇಕು:', 'ఏం చేయాలి:')} {action}"
 
 
 def cat_name(c: dict[str, Any], lang: Lang) -> str:
-    return (c.get("ta") or [c["name"]])[0] if lang == "ta" else (c.get("ml") or [c["name"]])[0] if lang == "ml" else c["name"]
+    return (c.get(lang) or [c["name"]])[0] if lang in ("ml","ta","hi","kn","te") else c["name"]
 
 
 def cat_blurb(c: dict[str, Any], lang: Lang) -> str:
     ml = c.get("ml") or []
-    return (c.get("ta") or ["", c.get("blurb", "")])[1] if lang == "ta" else ml[1] if lang == "ml" and len(ml) > 1 else c.get("blurb", "")
+    return (c.get(lang) or ["",c.get("blurb","")])[1] if lang in ("ta","hi","kn","te") else ml[1] if lang=="ml" and len(ml)>1 else c.get("blurb","")
 
 
 @lru_cache(maxsize=1)
@@ -377,12 +385,14 @@ def glossary_slugs() -> dict[str, list[str]]:
 
 
 def glossary_term(g: list[str], lang: Lang) -> str:
-    if lang == "ta" and len(g) > 4: return g[4]
+    idx={"ta":4,"hi":6,"kn":8,"te":10}.get(lang)
+    if idx is not None and len(g)>idx:return g[idx]
     return g[1] if lang == "ml" else g[0]
 
 
 def glossary_definition(g: list[str], lang: Lang) -> str:
-    if lang == "ta" and len(g) > 5: return g[5]
+    idx={"ta":5,"hi":7,"kn":9,"te":11}.get(lang)
+    if idx is not None and len(g)>idx:return g[idx]
     return g[3] if lang == "ml" else g[2]
 
 
@@ -390,12 +400,13 @@ def page_glossary(slug: Optional[str], lang: Lang) -> Optional[Page]:
     gl = glossary_slugs()
     if slug is None:
         crumbs = [home_crumb(lang), (ui("tTheory", lang), "/theory"), (T("Glossary", "പദാവലി", lang), "/theory/gloss")]
-        h1 = T(f"Driving glossary: {len(gl)} terms in plain English and Malayalam", f"ഡ്രൈവിങ് പദാവലി: {len(gl)} പദങ്ങൾ ലളിതമായി", lang)
+        h1 = T(f"Driving glossary: {len(gl)} terms in plain English and Malayalam", f"ഡ്രൈവിങ് പദാവലി: {len(gl)} പദങ്ങൾ ലളിതമായി", lang, f"ड्राइविंग शब्दावली: {len(gl)} शब्द आसान भाषा में")
         rows = "".join(
             f'<dt id="{s}">{a(f"/glossary/{s}", glossary_term(g, lang), lang)}</dt><dd>{esc(glossary_definition(g, lang))}</dd>'
             for s, g in gl.items())
         lede = T("Plain definitions of the driving words you meet in lessons and the licence test, in English and Malayalam.",
-                 "പാഠങ്ങളിലും ലൈസൻസ് ടെസ്റ്റിലും കാണുന്ന ഡ്രൈവിങ് പദങ്ങളുടെ ലളിതമായ നിർവചനങ്ങൾ, ഇംഗ്ലീഷിലും മലയാളത്തിലും.", lang)
+                 "പാഠങ്ങളിലും ലൈസൻസ് ടെസ്റ്റിലും കാണുന്ന ഡ്രൈവിങ് പദങ്ങളുടെ ലളിതമായ നിർവചനങ്ങൾ, ഇംഗ്ലീഷിലും മലയാളത്തിലും.", lang,
+                 "पाठों और ड्राइविंग लाइसेंस परीक्षा में आने वाले शब्दों की सरल परिभाषाएँ।")
         body = f'<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(h1)}</h1><p class="answer">{esc(lede)}</p><dl class="gloss">{rows}</dl></article>'
         return Page(path="/theory/gloss", title=f"{h1} | iDrive",
                     description=clip(lede),
@@ -408,19 +419,19 @@ def page_glossary(slug: Optional[str], lang: Lang) -> Optional[Page]:
     if not g:
         return None
     term, defin = (glossary_term(g, lang), glossary_definition(g, lang))
-    q = f"வாகனம் ஓட்டுவதில் {term} என்றால் என்ன?" if lang == "ta" else T(f"What is {g[0]} in driving?", f"ഡ്രൈവിങ്ങിൽ {g[1]} എന്നാൽ എന്ത്?", lang)
+    q = (f"വാഹനം ഓടിക്കുമ്പോൾ {term} എന്നതിന്റെ അർത്ഥമെന്ത്?" if lang=="ml" else f"“{term}” ಎಂದರೆ ಚಾಲನೆಯಲ್ಲಿ ಏನು?" if lang=="kn" else f"డ్రైవింగ్‌లో “{term}” అంటే ఏమిటి?" if lang=="te" else f"वहन चलाने में {term} का क्या अर्थ है?" if lang=="hi" else f"வாகனம் ஓட்டுவதில் {term} என்றால் என்ன?" if lang=="ta" else f"What is {g[0]} in driving?")
     crumbs = [home_crumb(lang), (T("Glossary", "പദാവലി", lang), "/theory/gloss"), (term, f"/glossary/{slug}")]
     others = [s for s in gl if s != slug]
     i = list(gl).index(slug)
     near = [others[(i + k) % len(others)] for k in range(0, 6)] if others else []
     body = f"""<article class="panel seo">{crumbs_html(crumbs, lang)}<h1>{esc(q)}</h1>
 <p class="answer"><strong>{esc(term)}</strong>: {esc(defin)}</p>
-<p>{esc(('தமிழில்:' if lang == 'ta' else T('In Malayalam:', 'ഇംഗ്ലീഷിൽ:', lang)))} <span lang="{'en' if lang == 'ml' else 'ml'}">{esc(g[0] if lang == 'ml' else g[4] if lang == 'ta' and len(g) > 4 else g[1])}</span></p>
+<p>{esc(('हिंदी में:' if lang == 'hi' else 'தமிழில்:' if lang == 'ta' else T('In Malayalam:', 'ഇംഗ്ലീഷിൽ:', lang)))} <span lang="en">{esc(g[0])}</span></p>
 {_term_lessons(g[0], lang)}
-<h2>{esc(T('More driving terms', 'മറ്റ് ഡ്രൈവിങ് പദങ്ങൾ', lang))}</h2>{ul([a(f"/glossary/{s}", glossary_term(gl[s], lang), lang) for s in near])}
+<h2>{esc(T('More driving terms', 'മറ്റ് ഡ്രൈവിങ് പദങ്ങൾ', lang, 'ड्राइविंग के अन्य शब्द'))}</h2>{ul([a(f"/glossary/{s}", glossary_term(gl[s], lang), lang) for s in near])}
 <p>{a("/theory/gloss", T("All glossary terms", "എല്ലാ പദങ്ങളും", lang), lang)}</p></article>"""
     visible = f"{term}: {defin}"
-    return Page(path=f"/glossary/{slug}", title=f"{term} - {T('meaning in driving', 'ഡ്രൈവിങ്ങിലെ അർത്ഥം', lang)} | iDrive",
+    return Page(path=f"/glossary/{slug}", title=f"{term} - {T('meaning in driving', 'ഡ്രൈവിങ്ങിലെ അർത്ഥം', lang, 'ड्राइविंग में अर्थ')} | iDrive",
                 description=clip(visible), body=body, crumbs=crumbs, og_type="article",
                 jsonld=[faq(q, visible),
                         {"@context": "https://schema.org", "@type": "DefinedTerm", "name": term, "description": defin,
@@ -899,9 +910,9 @@ def org_ld() -> list[dict[str, Any]]:
         org["sameAs"] = same
     app = {"@context": "https://schema.org", "@type": "WebApplication", "name": "iDrive - the interactive driving school",
            "url": site_url(), "applicationCategory": "EducationalApplication", "operatingSystem": "Any (web, Android, iOS, desktop)",
-           "inLanguage": ["en", "ml", "ta"], "isAccessibleForFree": True,
+           "inLanguage": ["en", "ml", "ta", "hi"], "isAccessibleForFree": True,
            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}}
-    site = {"@context": "https://schema.org", "@type": "WebSite", "name": "iDrive", "url": site_url(), "inLanguage": ["en", "ml", "ta"]}
+    site = {"@context": "https://schema.org", "@type": "WebSite", "name": "iDrive", "url": site_url(), "inLanguage": ["en", "ml", "ta", "hi"]}
     return [org, site, app]
 
 
@@ -1042,13 +1053,16 @@ def head_tags(page: Page, lang: Lang) -> str:
             f'<link rel="alternate" hreflang="en" href="{esc(base + page.path)}">',
             f'<link rel="alternate" hreflang="ml" href="{esc(base + href(page.path, "ml"))}">',
             f'<link rel="alternate" hreflang="ta" href="{esc(base + href(page.path, "ta"))}">',
+            f'<link rel="alternate" hreflang="hi" href="{esc(base + href(page.path, "hi"))}">',
+            f'<link rel="alternate" hreflang="kn" href="{esc(base + href(page.path, "kn"))}">',
+            f'<link rel="alternate" hreflang="te" href="{esc(base + href(page.path, "te"))}">',
             f'<link rel="alternate" hreflang="x-default" href="{esc(base + page.path)}">',
         ]
     else:
         tags.append('<meta name="robots" content="noindex">')
     tags += [
         f'<meta property="og:url" content="{esc(canon)}">',
-        f'<meta property="og:locale" content="{"ml_IN" if lang == "ml" else "ta_IN" if lang == "ta" else "en_IN"}">',
+        f'<meta property="og:locale" content="{"ml_IN" if lang == "ml" else "ta_IN" if lang == "ta" else "hi_IN" if lang == "hi" else "kn_IN" if lang == "kn" else "te_IN" if lang == "te" else "en_IN"}">',
         f'<meta property="og:locale:alternate" content="{"en_IN" if lang == "ml" else "ml_IN" if lang == "en" else "en_IN"}">',
         f'<meta name="twitter:url" content="{esc(canon)}">',
         f'<meta name="twitter:title" content="{esc(page.title)}">',
@@ -1082,7 +1096,7 @@ def head_json(path: str, lang: Lang) -> dict[str, Any]:
     ok = page.indexable and page.status == 200
     return {"title": page.title, "description": page.description, "lang": lang,
             "canonical": base + href(page.path if page.status == 200 else clean, lang),
-            "alternates": {"en": base + page.path, "ml": base + href(page.path, "ml"), "ta": base + href(page.path, "ta"), "x-default": base + page.path} if ok else {},
+            "alternates": {"en": base + page.path, "ml": base + href(page.path, "ml"), "ta":base+href(page.path,"ta"),"hi":base+href(page.path,"hi"),"kn":base+href(page.path,"kn"),"te":base+href(page.path,"te"),"x-default": base + page.path} if ok else {},
             "robots": ROBOTS_OK if ok else "noindex", "ogType": page.og_type, "status": page.status, "jsonld": page.jsonld}
 
 
@@ -1147,7 +1161,7 @@ def sitemap(name: str) -> Optional[str]:
     base, lm = site_url(), _mtime_date(src)
     out = []
     for p in paths():
-        for lang in ("en", "ml", "ta"):
+        for lang in ("en","ml","ta","hi","kn","te"):
             alts = (f'<xhtml:link rel="alternate" hreflang="en" href="{esc(base + p)}"/>'
                     f'<xhtml:link rel="alternate" hreflang="ml" href="{esc(base + href(p, "ml"))}"/>'
                     f'<xhtml:link rel="alternate" hreflang="ta" href="{esc(base + href(p, "ta"))}"/>'

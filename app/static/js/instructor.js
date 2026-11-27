@@ -66,7 +66,7 @@ A.send = async (text) => {
   A.log.push({ role: "user", content: q }, { role: "assistant", pending: true });
   A.busy = true; A.redraw();
   try {
-    const r = await Api.post("/api/instructor/ask", { question: q, history, lang: ["en", "ml", "ta", "ta-en"].includes(I18n.lang()) ? (I18n.lang() === "ta-en" ? "ta" : I18n.lang()) : "auto" });
+    const r = await Api.post("/api/instructor/ask", { question: q, history, lang: ["en","ml","ta","ta-en","hi","hi-en","kn","kn-en","te","te-en"].includes(I18n.lang()) ? (I18n.lang().endsWith("-en") ? I18n.lang().split("-")[0] : I18n.lang()) : "auto" });
     A.log[A.log.length - 1] = { role: "assistant", content: r.answer || "", mode: r.mode, sources: r.sources };
   } catch (err) {
     let local = null;

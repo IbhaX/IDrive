@@ -1,6 +1,6 @@
 # iDrive
 
-The interactive driving-theory school for India, with extra depth for Kerala - fully multilingual in English, Malayalam and Tamil (every lesson, quiz, warning light, vehicle part and scenario, not just the interface).
+The interactive driving-theory school for India, with extra depth for Kerala - multilingual across English, Malayalam, Tamil, Hindi, Kannada and Telugu (lessons, quizzes, warning lights, vehicle parts, scenarios and the interface). The header language selector includes native-language and English-bilingual modes.
 
 - **Curriculum:** 12 modules from absolute beginner to advanced (driving basics, how vehicles work, dashboard lights, signs, traffic law, practical manoeuvres, defensive driving, maintenance, emergencies, vehicle dynamics, psychology, licensing) - 38 authored lessons with objectives, worked examples, safety notes, knowledge checks and cited, date-verified sources, plus the 18 original theory articles.
 - **Interactive:** clickable vehicle explorer, 17-entry warning-light encyclopedia (stop-now vs check-soon), stopping-distance lab, reaction-time test, animated four-stroke engine, six hazard-perception scenarios.
@@ -39,6 +39,8 @@ Re-extract content after editing `Sadak Saathi.html`:
 ```bash
 node tools/extract_data.mjs   # or: make extract - rewrites app/data/*.json
 python tools/translate_tamil_all.py # rebuilds Tamil translations after extraction
+python tools/translate_indic_all.py kn 4 # rebuilds Kannada translations
+python tools/translate_indic_all.py te 5 # rebuilds Telugu translations
 ```
 
 ## Architecture

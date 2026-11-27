@@ -48,6 +48,7 @@ def test_every_sign_complete(signs, svgs) -> None:
         ids.add(d["id"])
         assert len(d["ml"]) >= 3 and all(d["ml"]), f"{d['id']} missing Malayalam"
         assert len(d.get("ta", [])) >= 3 and all(d["ta"]), f"{d['id']} missing Tamil"
+        assert len(d.get("hi", [])) >= 3 and all(d["hi"]), f"{d['id']} missing Hindi"
         assert svgs[d["id"]].lstrip().startswith("<svg")
 
 
@@ -60,14 +61,14 @@ def test_questions_valid(questions) -> None:
     topics = {t["id"] for t in load("topics.json")}
     for q in questions:
         assert q["t"] in topics, f"{q['id']} unknown topic {q['t']}"
-        assert len(q["q"]) >= 3 and all(q["q"]), "question text not trilingual"
+        assert len(q["q"]) >= 4 and all(q["q"]), "question text not quadrilingual"
         assert 0 <= q["a"] < len(q["o"])
         assert len({json.dumps(o, ensure_ascii=False) for o in q["o"]}) == len(q["o"]), "dup options"
-        assert len(q["r"]) >= 3 and all(q["r"]), "reasoning not trilingual"
+        assert len(q["r"]) >= 4 and all(q["r"]), "reasoning not quadrilingual"
         for o in q["o"]:
             # options are [en, ml] pairs or shared strings (e.g. numbers)
             if isinstance(o, list):
-                assert len(o) >= 3 and all(o), f"{q['id']} option not trilingual"
+                assert len(o) >= 4 and all(o), f"{q['id']} option not quadrilingual"
             else:
                 assert isinstance(o, str) and o, f"{q['id']} bad option"
 
@@ -75,18 +76,18 @@ def test_questions_valid(questions) -> None:
 def test_articles_bilingual() -> None:
     for p in (DATA / "articles").glob("*.json"):
         a = load("articles/" + p.name)
-        assert len(a["intro"]) >= 3 and all(a["intro"]), p.name
+        assert len(a["intro"]) >= 4 and all(a["intro"]), p.name
         assert isinstance(a["sections"], list) and a["sections"], p.name
         for s in a["sections"]:
-            assert len(s["h"]) >= 3 and all(s["h"])
+            assert len(s["h"]) >= 4 and all(s["h"])
             for para in s["p"]:
-                assert len(para) >= 3 and all(para)
+                assert len(para) >= 4 and all(para)
 
 
 def test_ui_every_key_bilingual() -> None:
     for name in ("ui.json", "ui_extra.json"):
         for k, v in load(name).items():
-            assert isinstance(v, list) and len(v) >= 3, f"{name}:{k}"
+            assert isinstance(v, list) and len(v) >= 4, f"{name}:{k}"
 
 
 def test_meta_tracks_source() -> None:

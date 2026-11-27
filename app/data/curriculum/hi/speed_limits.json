@@ -1,0 +1,391 @@
+{
+  "kerala": {
+    "refs": [
+      "kl-speed-2023",
+      "kl-speed-2024",
+      "kl-speed-2023"
+    ],
+    "roads": [
+      {
+        "id": "nh6",
+        "t": [
+          "National highway, 6 lanes or more (divided)",
+          "ദേശീയപാത, 6 വരിയോ അതിലധികമോ (വിഭജിതം)",
+          "National highway, 6 lanes or more (divided)",
+          "राष्ट्रीय राजमार्ग, 6 लेन या अधिक (विभाजित)"
+        ]
+      },
+      {
+        "id": "nh4",
+        "t": [
+          "National highway, 4 lanes (divided)",
+          "ദേശീയപാത, 4 വരി (വിഭജിതം)",
+          "National highway, 4 lanes (divided)",
+          "राष्ट्रीय राजमार्ग, 4 लेन (विभाजित)"
+        ]
+      },
+      {
+        "id": "nh",
+        "t": [
+          "Other national highways",
+          "മറ്റ് ദേശീയപാതകൾ",
+          "Other national highways",
+          "अन्य राष्ट्रीय राजमार्ग"
+        ]
+      },
+      {
+        "id": "sh4",
+        "t": [
+          "State highway, 4 lanes (divided)",
+          "സംസ്ഥാന പാത, 4 വരി (വിഭജിതം)",
+          "State highway, 4 lanes (divided)",
+          "राज्य राजमार्ग, 4 लेन (विभाजित)"
+        ]
+      },
+      {
+        "id": "sh",
+        "t": [
+          "Other state highways and major district roads",
+          "മറ്റ് സംസ്ഥാന പാതകളും പ്രധാന ജില്ലാ റോഡുകളും",
+          "Other state highways and major district roads",
+          "अन्य राज्य राजमार्ग और प्रमुख जिला सड़कें"
+        ]
+      },
+      {
+        "id": "city",
+        "t": [
+          "Roads within city limits",
+          "നഗര പരിധിക്കുള്ളിലെ റോഡുകൾ",
+          "Roads within city limits",
+          "शहर की सीमा के भीतर की सड़कें"
+        ]
+      },
+      {
+        "id": "other",
+        "t": [
+          "Other roads",
+          "മറ്റ് റോഡുകൾ",
+          "Other roads",
+          "अन्य सड़कें"
+        ]
+      }
+    ],
+    "vehicles": [
+      {
+        "id": "m1",
+        "t": [
+          "Cars, jeeps and taxis",
+          "കാർ, ജീപ്പ്, ടാക്സി",
+          "Cars, jeeps and taxis",
+          "कार, जीप और टैक्सी"
+        ],
+        "sub": [
+          "Passenger vehicles with up to 8 seats besides the driver (M1)",
+          "ഡ്രൈവർക്ക് പുറമെ 8 സീറ്റ് വരെയുള്ള യാത്രാവാഹനങ്ങൾ (M1)",
+          "Passenger vehicles with up to 8 seats besides the driver (M1)",
+          "ड्राइवर के अलावा 8 सीटों वाले यात्री वाहन (M1)"
+        ],
+        "lim": [
+          100,
+          100,
+          90,
+          90,
+          80,
+          50,
+          70
+        ]
+      },
+      {
+        "id": "m23",
+        "t": [
+          "Buses and large passenger vehicles",
+          "ബസ്സുകളും വലിയ യാത്രാവാഹനങ്ങളും",
+          "Buses and large passenger vehicles",
+          "बसें और बड़े यात्री वाहन"
+        ],
+        "sub": [
+          "9 or more seats besides the driver (M2, M3)",
+          "ഡ്രൈവർക്ക് പുറമെ 9-ഓ അതിലധികമോ സീറ്റുകൾ (M2, M3)",
+          "9 or more seats besides the driver (M2, M3)",
+          "9 or more seats besides the driver (M2, M3)"
+        ],
+        "lim": [
+          90,
+          90,
+          85,
+          80,
+          70,
+          50,
+          60
+        ]
+      },
+      {
+        "id": "n",
+        "t": [
+          "Goods vehicles",
+          "ചരക്കുവാഹനങ്ങൾ",
+          "Goods vehicles",
+          "Goods vehicles"
+        ],
+        "sub": [
+          "Lorries, pick-ups and other goods carriages (N)",
+          "ലോറികൾ, പിക്കപ്പുകൾ, മറ്റ് ചരക്കുവണ്ടികൾ (N)",
+          "Lorries, pick-ups and other goods carriages (N)",
+          "Lorries, pick-ups and other goods carriages (N)"
+        ],
+        "lim": [
+          80,
+          80,
+          70,
+          70,
+          65,
+          50,
+          60
+        ]
+      },
+      {
+        "id": "two",
+        "t": [
+          "Two-wheelers",
+          "ഇരുചക്രവാഹനങ്ങൾ",
+          "Two-wheelers",
+          "Two-wheelers"
+        ],
+        "sub": [
+          "Scooters and motorcycles",
+          "സ്കൂട്ടറുകളും മോട്ടോർസൈക്കിളുകളും",
+          "Scooters and motorcycles",
+          "Scooters and motorcycles"
+        ],
+        "lim": [
+          60,
+          60,
+          60,
+          60,
+          60,
+          50,
+          60
+        ]
+      },
+      {
+        "id": "three",
+        "t": [
+          "Three-wheelers and quadricycles",
+          "മുച്ചക്രവാഹനങ്ങളും ക്വാഡ്രിസൈക്കിളുകളും",
+          "Three-wheelers and quadricycles",
+          "तिपहिया वाहन और क्वाड्रिसाइकिल"
+        ],
+        "sub": [
+          "Autorickshaws and quadricycles",
+          "ഓട്ടോറിക്ഷകളും ക്വാഡ്രിസൈക്കിളുകളും",
+          "Autorickshaws and quadricycles",
+          "ऑटोरिक्शा और क्वाड्रिसाइकल"
+        ],
+        "lim": [
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50
+        ]
+      },
+      {
+        "id": "edu",
+        "t": [
+          "School and college buses",
+          "സ്കൂൾ, കോളേജ് ബസ്സുകൾ",
+          "School and college buses",
+          "स्कूल और कॉलेज बसें"
+        ],
+        "sub": [
+          "Educational-institution buses",
+          "വിദ്യാഭ്യാസ സ്ഥാപന ബസ്സുകൾ",
+          "Educational-institution buses",
+          "शैक्षणिक-संस्थान बसें"
+        ],
+        "lim": [
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50
+        ]
+      }
+    ]
+  },
+  "india": {
+    "refs": [
+      "morth-speed-2018"
+    ],
+    "roads": [
+      {
+        "id": "expy",
+        "t": [
+          "Expressway with access control",
+          "പ്രവേശന നിയന്ത്രണമുള്ള എക്സ്പ്രസ് വേ",
+          "Expressway with access control",
+          "एक्सेस कंट्रोल के साथ एक्सप्रेसवे"
+        ]
+      },
+      {
+        "id": "div4",
+        "t": [
+          "4 lanes or more, divided carriageway",
+          "4 വരിയോ അതിലധികമോ, വിഭജിത പാത",
+          "4 lanes or more, divided carriageway",
+          "4 लेन या अधिक, विभाजित कैरिजवे"
+        ]
+      },
+      {
+        "id": "muni",
+        "t": [
+          "Roads within municipal limits",
+          "മുനിസിപ്പൽ പരിധിക്കുള്ളിലെ റോഡുകൾ",
+          "Roads within municipal limits",
+          "नगरपालिका सीमा के भीतर सड़कें"
+        ]
+      },
+      {
+        "id": "other",
+        "t": [
+          "Other roads",
+          "മറ്റ് റോഡുകൾ",
+          "Other roads",
+          "अन्य सड़कें"
+        ]
+      }
+    ],
+    "vehicles": [
+      {
+        "id": "m1",
+        "t": [
+          "Cars, jeeps and taxis",
+          "കാർ, ജീപ്പ്, ടാക്സി",
+          "Cars, jeeps and taxis",
+          "कार, जीप और टैक्सी"
+        ],
+        "sub": [
+          "Passenger vehicles with up to 8 seats besides the driver (M1)",
+          "ഡ്രൈവർക്ക് പുറമെ 8 സീറ്റ് വരെയുള്ള യാത്രാവാഹനങ്ങൾ (M1)",
+          "Passenger vehicles with up to 8 seats besides the driver (M1)",
+          "ड्राइवर के अलावा 8 सीटों वाले यात्री वाहन (M1)"
+        ],
+        "lim": [
+          120,
+          100,
+          70,
+          70
+        ]
+      },
+      {
+        "id": "m23",
+        "t": [
+          "Buses and large passenger vehicles",
+          "ബസ്സുകളും വലിയ യാത്രാവാഹനങ്ങളും",
+          "Buses and large passenger vehicles",
+          "बसें और बड़े यात्री वाहन"
+        ],
+        "sub": [
+          "9 or more seats besides the driver (M2, M3)",
+          "ഡ്രൈവർക്ക് പുറമെ 9-ഓ അതിലധികമോ സീറ്റുകൾ (M2, M3)",
+          "9 or more seats besides the driver (M2, M3)",
+          "9 or more seats besides the driver (M2, M3)"
+        ],
+        "lim": [
+          100,
+          90,
+          60,
+          60
+        ]
+      },
+      {
+        "id": "n",
+        "t": [
+          "Goods vehicles",
+          "ചരക്കുവാഹനങ്ങൾ",
+          "Goods vehicles",
+          "Goods vehicles"
+        ],
+        "sub": [
+          "All goods carriages (N)",
+          "എല്ലാ ചരക്കുവണ്ടികളും (N)",
+          "All goods carriages (N)",
+          "सभी मालवाहक गाड़ियां (एन)"
+        ],
+        "lim": [
+          80,
+          80,
+          60,
+          60
+        ]
+      },
+      {
+        "id": "two",
+        "t": [
+          "Motorcycles",
+          "മോട്ടോർസൈക്കിളുകൾ",
+          "Motorcycles",
+          "मोटरसाइकिलें"
+        ],
+        "sub": [
+          "On expressways only where they are allowed",
+          "എക്സ്പ്രസ് വേയിൽ അനുവദിച്ചിടത്ത് മാത്രം",
+          "On expressways only where they are allowed",
+          "एक्सप्रेसवे पर केवल वहीं जहां उन्हें अनुमति है"
+        ],
+        "lim": [
+          80,
+          80,
+          60,
+          60
+        ]
+      },
+      {
+        "id": "quad",
+        "t": [
+          "Quadricycles",
+          "ക്വാഡ്രിസൈക്കിളുകൾ",
+          "Quadricycles",
+          "क्वाड्रिसाइकल"
+        ],
+        "sub": [
+          "Not allowed on expressways",
+          "എക്സ്പ്രസ് വേയിൽ ബാധകമല്ല",
+          "Not allowed on expressways",
+          "एक्सप्रेसवे पर अनुमति नहीं है"
+        ],
+        "lim": [
+          null,
+          60,
+          50,
+          50
+        ]
+      },
+      {
+        "id": "three",
+        "t": [
+          "Three-wheelers",
+          "മുച്ചക്രവാഹനങ്ങൾ",
+          "Three-wheelers",
+          "तिपहिया वाहन"
+        ],
+        "sub": [
+          "Not allowed on expressways",
+          "എക്സ്പ്രസ് വേയിൽ ബാധകമല്ല",
+          "Not allowed on expressways",
+          "एक्सप्रेसवे पर अनुमति नहीं है"
+        ],
+        "lim": [
+          null,
+          50,
+          50,
+          50
+        ]
+      }
+    ]
+  }
+}

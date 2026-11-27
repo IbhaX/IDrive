@@ -27,7 +27,7 @@ def test_every_sitemap_path_renders_in_both_languages() -> None:
     assert len(paths) > 500
     titles: dict[str, str] = {}
     for p in paths:
-        for lang in ("en", "ml", "ta"):
+        for lang in ("en","ml","ta","hi","kn","te"):
             page = seo.resolve(p, lang)
             assert page is not None, (p, lang)
             assert page.status == 200 and page.indexable, p
@@ -50,7 +50,7 @@ def test_sign_page_answers_first_and_faq_matches_visible_text() -> None:
     markup = seo.inject(seo.shell_for_tests(), seo.resolve(f"/sign/{sid}", "en"), "en")
     assert '<html lang="en">' in markup
     assert f'<link rel="canonical" href="https://idrive.ibhax.com/sign/{sid}">' in markup
-    assert 'hreflang="ml"' in markup and 'hreflang="ta"' in markup and 'hreflang="x-default"' in markup
+    assert all(f'hreflang="{l}"' in markup for l in ("ml","ta","hi","kn","te","x-default"))
     assert '<meta property="og:url"' in markup
     faq = next(x for x in _ld(markup) if x["@type"] == "FAQPage")
     answer = faq["mainEntity"]["acceptedAnswer"]["text"]
@@ -103,7 +103,7 @@ def test_sitemaps_are_valid_xml_with_alternates() -> None:
         for u in urls[:3]:
             assert len(u.findall("{http://www.w3.org/1999/xhtml}link")) == 4
         total += len(urls)
-    assert total == 3 * len(seo.all_paths())
+    assert total == 6 * len(seo.all_paths())
     assert seo.sitemap("nope") is None
 
 

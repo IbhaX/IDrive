@@ -31,8 +31,18 @@ def _t(d: dict, i: int) -> str:
     return ta[i] if i < len(ta) else ""
 
 
-def _triple(en: str, ml: str, ta: str) -> list[str]:
-    return [en, ml or en, ta or en]
+def _h(d: dict, i: int) -> str:
+    hi = d.get("hi") or []
+    return hi[i] if i < len(hi) else ""
+
+def _k(d: dict, i: int) -> str:
+    kn=d.get("kn") or []; return kn[i] if i<len(kn) else ""
+
+def _te(d: dict, i: int) -> str:
+    te=d.get("te") or []; return te[i] if i<len(te) else ""
+
+def _triple(en: str, ml: str, ta: str, hi: str = "", kn: str = "", te: str = "") -> list[str]:
+    return [en,ml or en,ta or en,hi or en,kn or en,te or en]
 
 
 def _svg(d: dict) -> str:
@@ -57,15 +67,15 @@ def sign_q(d: dict, rng: random.Random, kind: Optional[str] = None) -> dict:
     cat_by_id = content.cat_by_id()
     ui = content.ui()
     svg = _svg(d)
-    reason = _triple(d["meaning"] + " " + d["action"], _m(d, 1) + " " + _m(d, 2), _t(d, 1) + " " + _t(d, 2))
+    reason = _triple(d["meaning"] + " " + d["action"], _m(d, 1) + " " + _m(d, 2), _t(d, 1) + " " + _t(d, 2), _h(d, 1) + " " + _h(d, 2), _k(d,1)+" "+_k(d,2), _te(d,1)+" "+_te(d,2))
 
     if kind == "name":
         opts = [d] + _pick_options(d, rng)
         rng.shuffle(opts)
         return {
             "id": "sg_n_" + d["id"], "t": "signs", "svg": svg,
-            "q": _triple("What does this sign mean?", "ഈ ചിഹ്നം എന്താണ് അർത്ഥമാക്കുന്നത്?", "இந்தக் குறியீட்டின் பொருள் என்ன?"),
-            "o": [_triple(x["name"], _m(x, 0), _t(x, 0)) for x in opts],
+            "q": _triple("What does this sign mean?", "ഈ ചിഹ്നം എന്താണ് അർത്ഥമാക്കുന്നത്?", "இந்தக் குறியீட்டின் பொருள் என்ன?", "इस संकेत का क्या अर्थ है?", "ಈ ಚಿಹ್ನೆಯ ಅರ್ಥವೇನು?", "ఈ గుర్తు అర్థం ఏమిటి?"),
+            "o": [_triple(x["name"],_m(x,0),_t(x,0),_h(x,0),_k(x,0),_te(x,0)) for x in opts],
             "a": opts.index(d), "r": reason,
         }
 
@@ -79,7 +89,7 @@ def sign_q(d: dict, rng: random.Random, kind: Optional[str] = None) -> dict:
                 "ഇവയിൽ \u201c" + (_m(d, 0) or d["name"]) + "\u201d ഏതാണ്?",
             ],
             "o": [
-                {"svg": _svg(x), "n": [x["name"], _m(x, 0) or x["name"]]}
+                {"svg":_svg(x),"n":_triple(x["name"],_m(x,0),_t(x,0),_h(x,0),_k(x,0),_te(x,0))}
                 for x in opts
             ],
             "a": opts.index(d), "r": reason,
@@ -89,6 +99,9 @@ def sign_q(d: dict, rng: random.Random, kind: Optional[str] = None) -> dict:
         c = cat_by_id[d["cat"]]
         cm = c.get("ml") or []
         ct = c.get("ta") or []
+        ch = c.get("hi") or []
+        ck = c.get("kn") or []
+        cte = c.get("te") or []
         others = [x for x in cats if x["id"] != d["cat"]]
         rng.shuffle(others)
         opts = [c] + others[:3]
@@ -99,9 +112,12 @@ def sign_q(d: dict, rng: random.Random, kind: Optional[str] = None) -> dict:
                 "Which group does this sign belong to?",
                 "ഈ ചിഹ്നം ഏത് വിഭാഗത്തിൽപ്പെടുന്നു?",
                 "இந்தக் குறியீடு எந்த வகையைச் சேர்ந்தது?",
+                "यह संकेत किस श्रेणी में आता है?",
+                "ಈ ಚಿಹ್ನೆ ಯಾವ ಗುಂಪಿಗೆ ಸೇರಿದೆ?",
+                "ఈ గుర్తు ఏ వర్గానికి చెందుతుంది?",
             ],
             "o": [
-                _triple(x["name"], (x.get("ml") or [x["name"]])[0], (x.get("ta") or [x["name"]])[0])
+                _triple(x["name"], (x.get("ml") or [x["name"]])[0], (x.get("ta") or [x["name"]])[0], (x.get("hi") or [x["name"]])[0],(x.get("kn") or [x["name"]])[0],(x.get("te") or [x["name"]])[0])
                 for x in opts
             ],
             "a": opts.index(c),
@@ -109,6 +125,9 @@ def sign_q(d: dict, rng: random.Random, kind: Optional[str] = None) -> dict:
                 f"{d['name']} is in the group \u201c{c['name']}\u201d. {c['blurb']}",
                 f"{_m(d, 0) or d['name']} \u201c{cm[0] if len(cm) > 0 else ''}\u201d വിഭാഗത്തിൽ ഉൾപ്പെടുന്നു. {cm[1] if len(cm) > 1 else ''}",
                 f"{_t(d, 0) or d['name']} “{ct[0] if len(ct) > 0 else ''}” வகையைச் சேர்ந்தது. {ct[1] if len(ct) > 1 else ''}",
+                f"{_h(d,0) or d['name']} “{ch[0] if ch else ''}” श्रेणी में आता है। {ch[1] if len(ch)>1 else ''}",
+                f"{_k(d,0) or d['name']} “{ck[0] if ck else ''}” ಗುಂಪಿಗೆ ಸೇರಿದೆ. {ck[1] if len(ck)>1 else ''}",
+                f"{_te(d,0) or d['name']} “{cte[0] if cte else ''}” వర్గానికి చెందుతుంది. {cte[1] if len(cte)>1 else ''}",
             ],
         }
 
@@ -122,13 +141,19 @@ def sign_q(d: dict, rng: random.Random, kind: Optional[str] = None) -> dict:
             "Which statement describes this sign?",
             "ഈ ചിഹ്നത്തെ വിവരിക്കുന്ന പ്രസ്താവന ഏത്?",
             "இந்தக் குறியீட்டை விவரிக்கும் கூற்று எது?",
+            "इस संकेत का वर्णन कौन सा कथन करता है?",
+            "ಈ ಚಿಹ್ನೆಯನ್ನು ವಿವರಿಸುವ ಹೇಳಿಕೆ ಯಾವುದು?",
+            "ఈ గుర్తును వివరించే ప్రకటన ఏది?",
         ],
-        "o": [_triple(x["meaning"], _m(x, 1), _t(x, 1)) for x in opts],
+        "o": [_triple(x["meaning"],_m(x,1),_t(x,1),_h(x,1),_k(x,1),_te(x,1)) for x in opts],
         "a": opts.index(d),
         "r": [
             d["name"] + ". " + d["action"],
             (_m(d, 0) or d["name"]) + ". " + _m(d, 2),
             (_t(d, 0) or d["name"]) + ". " + _t(d, 2),
+            (_h(d,0) or d["name"])+". "+_h(d,2),
+            (_k(d,0) or d["name"])+". "+_k(d,2),
+            (_te(d,0) or d["name"])+". "+_te(d,2),
         ],
     }
 
@@ -197,7 +222,7 @@ def build_sign_quiz(cat: str, length: int, rng: random.Random) -> list[dict]:
                     "\u201c" + mlname + "\u201d ഏത് ചിഹ്നമാണ്?",
                 ],
                 "o": [
-                    {"svg": _svg(x), "n": [x["name"], _m(x, 0) or x["name"]]}
+                    {"svg":_svg(x),"n":_triple(x["name"],_m(x,0),_t(x,0),_h(x,0),_k(x,0),_te(x,0))}
                     for x in opts
                 ],
                 "a": a, "target": target,

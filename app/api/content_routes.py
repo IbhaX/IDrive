@@ -68,7 +68,7 @@ async def glossary(
 ) -> dict[str, Any]:
     entries = content.glossary_search(q)
     response.headers["Cache-Control"] = _LONG_CACHE if not q else "no-cache"
-    return {"entries": [{"term": [g[0], g[1], g[4] if len(g) > 4 else g[0]], "definition": [g[2], g[3], g[5] if len(g) > 5 else g[2]]} for g in entries]}
+    return {"entries": [{"term": [g[0], g[1], g[4] if len(g) > 4 else g[0], g[6] if len(g)>6 else g[0],g[8] if len(g)>8 else g[0],g[10] if len(g)>10 else g[0]], "definition": [g[2],g[3],g[5] if len(g)>5 else g[2],g[7] if len(g)>7 else g[2],g[9] if len(g)>9 else g[2],g[11] if len(g)>11 else g[2]]} for g in entries]}
 
 
 @router.get("/ui")

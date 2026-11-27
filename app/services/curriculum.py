@@ -134,6 +134,9 @@ _ML_FIXED: dict[str, str] = {
 }
 ML_DIR = CURRICULUM_DIR / "ml"
 TA_DIR = CURRICULUM_DIR / "ta"
+HI_DIR = CURRICULUM_DIR / "hi"
+KN_DIR = CURRICULUM_DIR / "kn"
+TE_DIR = CURRICULUM_DIR / "te"
 _DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
@@ -415,6 +418,43 @@ def _ta_fixed() -> dict[str, str]:
     return _read(p) if p.is_file() else {}
 
 
+def item_title_hi(item: str) -> Optional[str]:
+    fixed = _hi_fixed().get(item)
+    if fixed: return fixed
+    kind, _, ref = item.partition(":")
+    if kind == "lesson": return _hi_text(("lesson", ref, "title"))
+    if kind == "article":
+        t = _content().topic_by_id().get(ref); return t["name"][3] if t and len(t["name"]) > 3 else None
+    if kind == "practice":
+        t = _content().topic_by_id().get(ref); return f"अभ्यास: {t['name'][3]}" if t and len(t["name"]) > 3 else None
+    if kind == "signs":
+        cat = _content().cat_by_id().get(ref); return f"संकेत पुस्तकालय: {cat['hi'][0]}" if cat and cat.get("hi") else None
+    if kind == "scenario": return _hi_text(("scenario", ref, "title"))
+    return None
+
+
+def _extra_title(item: str, lang: str) -> Optional[str]:
+    kind, _, ref = item.partition(":")
+    fixed = _extra_fixed(lang).get(item)
+    if fixed: return fixed
+    if kind == "lesson": return _extra_text(lang, ("lesson", ref, "title"))
+    if kind == "article":
+        t = _content().topic_by_id().get(ref); n = t.get("name", []) if t else []
+        return n[4 if lang == "kn" else 5] if len(n) > (4 if lang == "kn" else 5) else None
+    if kind == "practice":
+        t = _content().topic_by_id().get(ref); n = t.get("name", []) if t else []
+        return f"{'ಅಭ್ಯಾಸ' if lang == 'kn' else 'అభ్యాసం'}: {n[4 if lang == 'kn' else 5]}" if len(n) > (4 if lang == "kn" else 5) else None
+    if kind == "signs":
+        cat = _content().cat_by_id().get(ref); arr = cat.get(lang, []) if cat else []
+        return f"{'ಸಂಕೇತಗಳ ಗ್ರಂಥಾಲಯ' if lang == 'kn' else 'సంకేతాల గ్రంథాలయం'}: {arr[0]}" if arr else None
+    if kind == "scenario": return _extra_text(lang, ("scenario", ref, "title"))
+    return None
+
+
+def item_title_kn(item: str) -> Optional[str]: return _extra_title(item, "kn")
+def item_title_te(item: str) -> Optional[str]: return _extra_title(item, "te")
+
+
 def item_title_ta(item: str) -> Optional[str]:
     fixed = _ta_fixed().get(item)
     if fixed:
@@ -436,16 +476,16 @@ def item_title_ta(item: str) -> Optional[str]:
     return None
 
 
-def _pair(en: str, ml: Optional[str], ta: Optional[str] = None) -> Any:
-    if ta:
-        return [en, ml or en, ta]
-    return [en, ml] if ml else en
+def _pair(en: str, ml: Optional[str], ta: Optional[str] = None, hi: Optional[str] = None,
+          kn: Optional[str] = None, te: Optional[str] = None) -> Any:
+    vals = [en, ml or en, ta or en, hi or en, kn or en, te or en]
+    return vals if any(v != en for v in vals[1:]) else en
 
 
 def _item_out(item: str) -> dict[str, Any]:
     kind, _, ref = item.partition(":")
     out: dict[str, Any] = {"ref": item, "type": kind, "id": ref,
-                           "title": _pair(item_title(item) or item, item_title_ml(item), item_title_ta(item))}
+                           "title": _pair(item_title(item) or item, item_title_ml(item), item_title_ta(item), item_title_hi(item), item_title_kn(item), item_title_te(item))}
     if kind == "lesson":
         hit = lesson(ref)
         if hit:
@@ -460,13 +500,13 @@ def catalogue() -> dict[str, Any]:
     for m in modules():
         mods.append({
             "id": m.id, "n": m.n,
-            "title": _pair(m.title, _ml_text(("module", m.id, "title")), _ta_text(("module", m.id, "title"))),
-            "summary": _pair(m.summary, _ml_text(("module", m.id, "summary")), _ta_text(("module", m.id, "summary"))),
+            "title": _pair(m.title, _ml_text(("module", m.id, "title")), _ta_text(("module", m.id, "title")), _hi_text(("module", m.id, "title")), _extra_text("kn", ("module", m.id, "title")), _extra_text("te", ("module", m.id, "title"))),
+            "summary": _pair(m.summary, _ml_text(("module", m.id, "summary")), _ta_text(("module", m.id, "summary")), _hi_text(("module", m.id, "summary")), _extra_text("kn", ("module", m.id, "summary")), _extra_text("te", ("module", m.id, "summary"))),
             "accent": m.accent, "icon": m.icon, "level": m.level,
             "lessonCount": len(m.lessons),
             "minutes": sum(x.minutes for x in m.lessons),
             "chapters": [
-                {"id": c.id, "title": _pair(c.title, _ml_text(("chapter", m.id, c.id)), _ta_text(("chapter", m.id, c.id))),
+                {"id": c.id, "title": _pair(c.title, _ml_text(("chapter", m.id, c.id)), _ta_text(("chapter", m.id, c.id)), _hi_text(("chapter", m.id, c.id)), _extra_text("kn", ("chapter", m.id, c.id)), _extra_text("te", ("chapter", m.id, c.id))),
                  "items": [_item_out(i) for i in c.items]}
                 for c in m.chapters
             ],
@@ -495,8 +535,8 @@ def lesson_payload(lesson_id: str) -> Optional[dict[str, Any]]:
     order = catalogue()["lessonOrder"]
     i = order.index(les.id) if les.id in order else -1
     return {
-        "lesson": trilingual(les.model_dump(), ml_lesson(les.id), ta_lesson(les.id), LESSON_SKIP),
-        "module": {"id": mod.id, "n": mod.n, "title": _pair(mod.title, _ml_text(("module", mod.id, "title")), _ta_text(("module", mod.id, "title"))),
+        "lesson": hexari(les.model_dump(), ml_lesson(les.id), ta_lesson(les.id), hi_lesson(les.id), _extra_lesson("kn", les.id), _extra_lesson("te", les.id), LESSON_SKIP),
+        "module": {"id": mod.id, "n": mod.n, "title": _pair(mod.title, _ml_text(("module", mod.id, "title")), _ta_text(("module", mod.id, "title")), _hi_text(("module", mod.id, "title")), _extra_text("kn", ("module", mod.id, "title")), _extra_text("te", ("module", mod.id, "title"))),
                    "accent": mod.accent},
         "references": [{"id": r, **refs[r].model_dump()} for r in les.refs if r in refs],
         "related": [_item_out(x) for x in les.related],
@@ -603,6 +643,111 @@ def _ta_text(key: tuple[str, str, str]) -> Optional[str]:
     return v if isinstance(v, str) and v.strip() else None
 
 
+@lru_cache(maxsize=1)
+def _hi_fixed() -> dict[str, str]:
+    p = HI_DIR / "fixed.json"
+    return _read(p) if p.is_file() else {}
+
+
+@lru_cache(maxsize=1)
+def _hi_modules() -> dict[str, dict[str, Any]]:
+    return {p.stem.split("-", 1)[0]: _read(p) for p in HI_DIR.glob("m*.json")} if HI_DIR.is_dir() else {}
+
+
+@lru_cache(maxsize=1)
+def _hi_library() -> dict[str, Any]:
+    p = HI_DIR / "library.json"
+    return _read(p) if p.is_file() else {}
+
+
+@lru_cache(maxsize=1)
+def _hi_lessons() -> dict[str, dict[str, Any]]:
+    out: dict[str, dict[str, Any]] = {}
+    for mod in _hi_modules().values(): out.update(mod.get("lessons", {}))
+    return out
+
+
+def hi_lesson(lesson_id: str) -> dict[str, Any]:
+    return _hi_lessons().get(lesson_id, {})
+
+
+def _hi_text(key: tuple[str, str, str]) -> Optional[str]:
+    kind, a, b = key
+    if kind == "module": v = _hi_modules().get(a, {}).get("module", {}).get(b)
+    elif kind == "chapter": v = _hi_modules().get(a, {}).get("chapters", {}).get(b)
+    elif kind == "lesson": v = hi_lesson(a).get(b)
+    elif kind == "scenario": v = _hi_library().get("scenarios", {}).get(a, {}).get(b)
+    else: v = None
+    return v if isinstance(v, str) and v.strip() else None
+
+
+def _extra_dir(lang: str) -> Path: return KN_DIR if lang == "kn" else TE_DIR
+
+@lru_cache(maxsize=2)
+def _extra_fixed(lang: str) -> dict[str, str]:
+    p = _extra_dir(lang) / "fixed.json"
+    return _read(p) if p.is_file() else {}
+
+@lru_cache(maxsize=2)
+def _extra_modules(lang: str) -> dict[str, dict[str, Any]]:
+    return {p.stem.split("-", 1)[0]: _read(p) for p in _extra_dir(lang).glob("m*.json")} if _extra_dir(lang).is_dir() else {}
+
+@lru_cache(maxsize=2)
+def _extra_library(lang: str) -> dict[str, Any]:
+    p = _extra_dir(lang) / "library.json"
+    return _read(p) if p.is_file() else {}
+
+@lru_cache(maxsize=2)
+def _extra_lessons(lang: str) -> dict[str, dict[str, Any]]:
+    out = {}
+    for mod in _extra_modules(lang).values(): out.update(mod.get("lessons", {}))
+    return out
+
+def _extra_lesson(lang: str, lesson_id: str) -> dict[str, Any]:
+    return _extra_lessons(lang).get(lesson_id, {})
+
+def _extra_text(lang: str, key: tuple[str, str, str]) -> Optional[str]:
+    kind, a, b = key
+    if kind == "module": v = _extra_modules(lang).get(a, {}).get("module", {}).get(b)
+    elif kind == "chapter": v = _extra_modules(lang).get(a, {}).get("chapters", {}).get(b)
+    elif kind == "lesson": v = _extra_lesson(lang, a).get(b)
+    elif kind == "scenario": v = _extra_library(lang).get("scenarios", {}).get(a, {}).get(b)
+    else: v = None
+    return v if isinstance(v, str) and v.strip() else None
+
+def item_title_hi(item: str) -> Optional[str]: return item_title_ta(item) if False else _hi_fixed().get(item) or _hi_text(("lesson", item.split(":",1)[1], "title")) if item.startswith("lesson:") else _hi_fixed().get(item)
+
+def hexari(en: Any, ml: Any, ta: Any, hi: Any, kn: Any, te: Any, skip: frozenset[str]) -> Any:
+    if isinstance(en, str):
+        vals = [en] + [v if isinstance(v, str) and v.strip() else en for v in (ml, ta, hi, kn, te)]
+        return vals if any(v != en for v in vals[1:]) else en
+    if isinstance(en, list):
+        sources = [ml, ta, hi, kn, te]
+        sources = [v if isinstance(v, list) and len(v) == len(en) else [None] * len(en) for v in sources]
+        return [hexari(*items, skip) for items in zip(en, *sources)]
+    if isinstance(en, dict):
+        sources = [v if isinstance(v, dict) else {} for v in (ml, ta, hi, kn, te)]
+        return {k: (v if k in skip else hexari(v, *(src.get(k) for src in sources), skip)) for k, v in en.items()}
+    return en
+
+
+def quadri(en: Any, ml: Any, ta: Any, hi: Any, skip: frozenset[str]) -> Any:
+    if isinstance(en, str):
+        vals = [en, ml if isinstance(ml, str) and ml.strip() else en,
+                ta if isinstance(ta, str) and ta.strip() else en,
+                hi if isinstance(hi, str) and hi.strip() else en]
+        return vals if any(v != en for v in vals[1:]) else en
+    if isinstance(en, list):
+        ml = ml if isinstance(ml, list) and len(ml) == len(en) else [None] * len(en)
+        ta = ta if isinstance(ta, list) and len(ta) == len(en) else [None] * len(en)
+        hi = hi if isinstance(hi, list) and len(hi) == len(en) else [None] * len(en)
+        return [quadri(a, b, c, d, skip) for a, b, c, d in zip(en, ml, ta, hi)]
+    if isinstance(en, dict):
+        md, td, hd = ml if isinstance(ml, dict) else {}, ta if isinstance(ta, dict) else {}, hi if isinstance(hi, dict) else {}
+        return {k: (v if k in skip else quadri(v, md.get(k), td.get(k), hd.get(k), skip)) for k, v in en.items()}
+    return en
+
+
 def trilingual(en: Any, ml: Any, ta: Any, skip: frozenset[str]) -> Any:
     if isinstance(en, str):
         return [en, ml if isinstance(ml, str) and ml.strip() else en,
@@ -701,14 +846,46 @@ def ta_coverage() -> list[str]:
     return out
 
 
+def extra_coverage(lang: str) -> list[str]:
+    out=[]
+    for m in modules():
+        mm=_extra_modules(lang).get(m.id,{})
+        for f in ("title","summary"):
+            if not (mm.get("module",{}).get(f) or "").strip(): out.append(f"{m.id}.module.{f}")
+        for c in m.chapters:
+            if not (mm.get("chapters",{}).get(c.id) or "").strip(): out.append(f"{m.id}.chapters.{c.id}")
+        for les in m.lessons: _missing(les.model_dump(),_extra_lesson(lang,les.id),LESSON_SKIP,f"lesson:{les.id}",out)
+    lib=_extra_library(lang)
+    for w in warning_lights(): _missing(w.model_dump(),lib.get("lights",{}).get(w.id),LIGHT_SKIP,f"light:{w.id}",out)
+    for part in vehicle_parts(): _missing(part.model_dump(),lib.get("parts",{}).get(part.id),PART_SKIP,f"part:{part.id}",out)
+    for sc in scenarios(): _missing(sc.model_dump(),lib.get("scenarios",{}).get(sc.id),SCEN_SKIP,f"scenario:{sc.id}",out)
+    return out
+
+
+def hi_coverage() -> list[str]:
+    out: list[str] = []
+    for m in modules():
+        hm = _hi_modules().get(m.id, {})
+        for f in ("title", "summary"):
+            if not (hm.get("module", {}).get(f) or "").strip(): out.append(f"{m.id}.module.{f}")
+        for c in m.chapters:
+            if not (hm.get("chapters", {}).get(c.id) or "").strip(): out.append(f"{m.id}.chapters.{c.id}")
+        for les in m.lessons: _missing(les.model_dump(), hi_lesson(les.id), LESSON_SKIP, f"lesson:{les.id}", out)
+    lib = _hi_library()
+    for w in warning_lights(): _missing(w.model_dump(), lib.get("lights", {}).get(w.id), LIGHT_SKIP, f"light:{w.id}", out)
+    for part in vehicle_parts(): _missing(part.model_dump(), lib.get("parts", {}).get(part.id), PART_SKIP, f"part:{part.id}", out)
+    for sc in scenarios(): _missing(sc.model_dump(), lib.get("scenarios", {}).get(sc.id), SCEN_SKIP, f"scenario:{sc.id}", out)
+    return out
+
+
 def lights_payload() -> list[Any]:
-    lib, ta = _ml_library().get("lights", {}), _ta_library().get("lights", {})
-    return [trilingual(w.model_dump(), lib.get(w.id), ta.get(w.id), LIGHT_SKIP) for w in warning_lights()]
+    libs = [_ml_library().get("lights", {}), _ta_library().get("lights", {}), _hi_library().get("lights", {}), _extra_library("kn").get("lights", {}), _extra_library("te").get("lights", {})]
+    return [hexari(w.model_dump(), *(lib.get(w.id) for lib in libs), LIGHT_SKIP) for w in warning_lights()]
 
 
 def parts_payload() -> list[Any]:
-    lib, ta = _ml_library().get("parts", {}), _ta_library().get("parts", {})
-    return [trilingual(p.model_dump(), lib.get(p.id), ta.get(p.id), PART_SKIP) for p in vehicle_parts()]
+    libs = [_ml_library().get("parts", {}), _ta_library().get("parts", {}), _hi_library().get("parts", {}), _extra_library("kn").get("parts", {}), _extra_library("te").get("parts", {})]
+    return [hexari(p.model_dump(), *(lib.get(p.id) for lib in libs), PART_SKIP) for p in vehicle_parts()]
 
 
 class SignWhen(BaseModel):
@@ -745,7 +922,10 @@ def sign_details_payload() -> dict[str, Any]:
     ml = _ml_sign_details()
     p = TA_DIR / "sign_details.json"
     ta = json.loads(p.read_text(encoding="utf-8")) if p.is_file() else {}
-    return {k: trilingual(v.model_dump(), ml.get(k), ta.get(k), frozenset()) for k, v in sign_details().items()}
+    hi = json.loads((HI_DIR / "sign_details.json").read_text(encoding="utf-8")) if (HI_DIR / "sign_details.json").is_file() else {}
+    kn = json.loads((KN_DIR / "sign_details.json").read_text(encoding="utf-8")) if (KN_DIR / "sign_details.json").is_file() else {}
+    te = json.loads((TE_DIR / "sign_details.json").read_text(encoding="utf-8")) if (TE_DIR / "sign_details.json").is_file() else {}
+    return {k: hexari(v.model_dump(), ml.get(k), ta.get(k), hi.get(k), kn.get(k), te.get(k), frozenset()) for k, v in sign_details().items()}
 
 
 def sign_details_missing_ml() -> list[str]:
@@ -766,15 +946,34 @@ def speed_limits() -> dict[str, Any]:
 
 def speed_limits_payload() -> dict[str, Any]:
     refs = references()
+    hi_path = HI_DIR / "speed_limits.json"
+    hi_data = _read(hi_path) if hi_path.is_file() else {}
+    kn_data = _read(KN_DIR / "speed_limits.json") if (KN_DIR / "speed_limits.json").is_file() else {}
+    te_data = _read(TE_DIR / "speed_limits.json") if (TE_DIR / "speed_limits.json").is_file() else {}
     out: dict[str, Any] = {}
     for region, d in speed_limits().items():
-        out[region] = {**d, "refs": [{"id": r, **refs[r].model_dump()} for r in d.get("refs", []) if r in refs]}
+        hd = hi_data.get(region, {})
+        roads = []
+        for i, road in enumerate(d.get("roads", [])):
+            label = list(road.get("t", []))
+            hlabel = (hd.get("roads", [{}])[i].get("t") or []) if i < len(hd.get("roads", [])) else []
+            roads.append({**road, "t": (label + [label[0]] * max(0, 3-len(label)))[:3] + [hlabel[3] if len(hlabel)>3 else label[0], (kn_data.get(region, {}).get("roads", [{}])[i].get("t") or [None])[0] if i < len(kn_data.get(region, {}).get("roads", [])) else label[0], (te_data.get(region, {}).get("roads", [{}])[i].get("t") or [None])[0] if i < len(te_data.get(region, {}).get("roads", [])) else label[0]]})
+        vehicles = []
+        for i, vehicle in enumerate(d.get("vehicles", [])):
+            hv = hd.get("vehicles", [{}])[i] if i < len(hd.get("vehicles", [])) else {}
+            row = dict(vehicle)
+            for key in ("t", "sub"):
+                label = list(vehicle.get(key, [])); hlabel = hv.get(key) or []
+                row[key] = (label + [label[0]] * max(0, 3-len(label)))[:3] + [hlabel[3] if len(hlabel)>3 else label[0], (kn_data.get(region, {}).get("vehicles", [{}])[i].get(key) or [None])[0] if i < len(kn_data.get(region, {}).get("vehicles", [])) else label[0], (te_data.get(region, {}).get("vehicles", [{}])[i].get(key) or [None])[0] if i < len(te_data.get(region, {}).get("vehicles", [])) else label[0]]
+            vehicles.append(row)
+        out[region] = {**d, "roads": roads, "vehicles": vehicles,
+                       "refs": [{"id": r, **refs[r].model_dump()} for r in d.get("refs", []) if r in refs]}
     return out
 
 
 def scenarios_payload() -> list[Any]:
-    lib, ta = _ml_library().get("scenarios", {}), _ta_library().get("scenarios", {})
-    return [trilingual(sc.model_dump(), lib.get(sc.id), ta.get(sc.id), SCEN_SKIP) for sc in scenarios()]
+    libs = [_ml_library().get("scenarios", {}), _ta_library().get("scenarios", {}), _hi_library().get("scenarios", {}), _extra_library("kn").get("scenarios", {}), _extra_library("te").get("scenarios", {})]
+    return [hexari(sc.model_dump(), *(lib.get(sc.id) for lib in libs), SCEN_SKIP) for sc in scenarios()]
 
 
 def _flat_ml(x: Any) -> str:
@@ -813,10 +1012,10 @@ def _search_docs() -> list[dict[str, str]]:  # noqa: C901 - flat list builder
             + [" ".join([s.h, *s.p, *s.steps, s.note.text if s.note else ""]) for s in les.sections]
             + [" ".join(t) for t in les.terms] + les.mistakes + les.safety + les.examples
         )
-        mll, tal = ml_lesson(les.id), ta_lesson(les.id)
+        mll, tal, hil = ml_lesson(les.id), ta_lesson(les.id), hi_lesson(les.id)
         docs.append({"kind": "lesson", "id": les.id, "title": les.title, "title_ml": mll.get("title", ""),
-                     "title_ta": tal.get("title", ""), "group": f"Module {mod.n}: {mod.title}",
-                     "body": body, "body_ml": _flat_ml(mll), "body_ta": _flat_ml(tal),
+                     "title_ta": tal.get("title", ""), "title_hi": hil.get("title", ""), "title_kn": _extra_lesson("kn", les.id).get("title", ""), "title_te": _extra_lesson("te", les.id).get("title", ""), "group": f"Module {mod.n}: {mod.title}",
+                     "body": body, "body_ml": _flat_ml(mll), "body_ta": _flat_ml(tal), "body_hi": _flat_ml(hil), "body_kn": _flat_ml(_extra_lesson("kn", les.id)), "body_te": _flat_ml(_extra_lesson("te", les.id)),
                      "href": f"#lesson/{les.id}"})
     c = _content()
     for t in c.topics():
@@ -826,32 +1025,45 @@ def _search_docs() -> list[dict[str, str]]:  # noqa: C901 - flat list builder
         body = " ".join([a["intro"][0]] + [s["h"][0] + " " + " ".join(p[0] for p in s["p"]) for s in a["sections"]])
         body_ml = " ".join([a["intro"][1]] + [s["h"][1] + " " + " ".join(p[1] for p in s["p"]) for s in a["sections"]])
         body_ta = " ".join([a["intro"][2]] + [s["h"][2] + " " + " ".join(p[2] for p in s["p"]) for s in a["sections"]]) if len(a["intro"]) > 2 else ""
+        body_hi = " ".join([a["intro"][3]] + [s["h"][3] + " " + " ".join(p[3] for p in s["p"]) for s in a["sections"]]) if len(a["intro"]) > 3 else ""
+        body_kn = " ".join([a["intro"][4]] + [s["h"][4] + " " + " ".join(p[4] for p in s["p"]) for s in a["sections"]]) if len(a["intro"]) > 4 else ""
+        body_te = " ".join([a["intro"][5]] + [s["h"][5] + " " + " ".join(p[5] for p in s["p"]) for s in a["sections"]]) if len(a["intro"]) > 5 else ""
         docs.append({"kind": "article", "id": t["id"], "title": t["name"][0], "title_ml": t["name"][1],
-                     "title_ta": t["name"][2] if len(t["name"]) > 2 else "", "group": "Theory article",
-                     "body": body, "body_ml": body_ml, "body_ta": body_ta, "href": f"#theory/{t['id']}"})
+                     "title_ta": t["name"][2] if len(t["name"]) > 2 else "", "title_hi": t["name"][3] if len(t["name"]) > 3 else "", "title_kn": t["name"][4] if len(t["name"]) > 4 else "", "title_te": t["name"][5] if len(t["name"]) > 5 else "", "group": "Theory article",
+                     "body": body, "body_ml": body_ml, "body_ta": body_ta, "body_hi": body_hi, "body_kn": body_kn, "body_te": body_te, "href": f"#theory/{t['id']}"})
     for d in c.signs():
         ml, ta = d.get("ml") or ["", "", ""], d.get("ta") or ["", "", ""]
-        docs.append({"kind": "sign", "id": d["id"], "title": d["name"], "title_ml": ml[0], "title_ta": ta[0],
+        hi = d.get("hi") or ["", "", "", ""]
+        kn = d.get("kn") or ["", "", "", "", ""]
+        te = d.get("te") or ["", "", "", "", "", ""]
+        docs.append({"kind": "sign", "id": d["id"], "title": d["name"], "title_ml": ml[0], "title_ta": ta[0], "title_hi": hi[0], "title_kn": kn[0], "title_te": te[0],
                      "group": "Road sign", "body": d["meaning"] + " " + d["action"],
-                     "body_ml": ml[1] + " " + ml[2], "body_ta": ta[1] + " " + ta[2], "href": f"#sign/{d['id']}"})
+                     "body_ml": ml[1] + " " + ml[2], "body_ta": ta[1] + " " + ta[2], "body_hi": hi[1] + " " + hi[2], "body_kn": kn[1] + " " + kn[2], "body_te": te[1] + " " + te[2], "href": f"#sign/{d['id']}"})
     for g in c.glossary():
-        docs.append({"kind": "term", "id": g[0], "title": g[0], "title_ml": g[1], "title_ta": g[4] if len(g)>4 else "",
-                     "group": "Glossary", "body": g[2], "body_ml": g[3], "body_ta": g[5] if len(g)>5 else "", "href": "#theory/gloss"})
+        docs.append({"kind": "term", "id": g[0], "title": g[0], "title_ml": g[1], "title_ta": g[4] if len(g)>4 else "", "title_hi": g[6] if len(g)>6 else "", "title_kn": g[8] if len(g)>8 else "", "title_te": g[10] if len(g)>10 else "",
+                     "group": "Glossary", "body": g[2], "body_ml": g[3], "body_ta": g[5] if len(g)>5 else "", "body_hi": g[7] if len(g)>7 else "", "body_kn": g[9] if len(g)>9 else "", "body_te": g[11] if len(g)>11 else "", "href": "#theory/gloss"})
     if speed_limits():
+        def _speed_terms(lang: str) -> str:
+            data = _read({"ml": ML_DIR, "ta": TA_DIR, "hi": HI_DIR, "kn": KN_DIR, "te": TE_DIR}[lang] / "speed_limits.json") if ({"ml": ML_DIR, "ta": TA_DIR, "hi": HI_DIR, "kn": KN_DIR, "te": TE_DIR}[lang] / "speed_limits.json").is_file() else {}
+            idx = {"ta":2,"hi":3,"kn":0,"te":0}.get(lang,1)
+            return " ".join(str(v) for region in data.values() for row in region.get("roads", []) + region.get("vehicles", []) for v in (row.get("t", [])[idx:idx+1] if len(row.get("t", [])) > idx else []))
         docs.append({"kind": "library", "id": "speed-limits", "title": "Speed limits in Kerala and India",
-                     "title_ml": "കേരളത്തിലെയും ഇന്ത്യയിലെയും വേഗപരിധികൾ", "group": "Speed limits",
+                     "title_ml": "കേരളത്തിലെയും ഇന്ത്യയിലെയും വേഗപരിധികൾ", "title_ta": "கேரளா மற்றும் இந்தியாவின் வேக வரம்புகள்",
+                     "title_hi": "केरल और भारत में गति सीमाएँ", "title_kn": "ಕೇರಳ ಮತ್ತು ಭಾರತದ ವೇಗ ಮಿತಿಗಳು", "title_te": "కేరళ మరియు భారతదేశంలో వేగ పరిమితులు", "group": "Speed limits",
                      "body": "maximum speed limit km/h national highway state highway city expressway car two-wheeler bus lorry auto school bus",
-                     "body_ml": "വേഗപരിധി പരമാവധി വേഗം ദേശീയപാത സംസ്ഥാന പാത നഗരം കാർ ഇരുചക്രവാഹനം ബസ് ലോറി ഓട്ടോ", "href": "#limits"})
-    lib, talib = _ml_library(), _ta_library()
+                     "body_ml": "വേഗപരിധി പരമാവധി വേഗം ദേശീയപാത സംസ്ഥാന പാത നഗരം കാർ ഇരുചക്രവാഹനം ബസ് ലോറി ഓട്ടോ",
+                     "body_ta": _speed_terms("ta"), "body_hi": _speed_terms("hi"), "body_kn": _speed_terms("kn"), "body_te": _speed_terms("te"), "href": "#limits"})
+    lib, talib, hilib = _ml_library(), _ta_library(), _hi_library()
+    knlib, telib = _extra_library("kn"), _extra_library("te")
     for w in warning_lights():
-        mw, tw = lib.get("lights", {}).get(w.id, {}), talib.get("lights", {}).get(w.id, {})
-        docs.append({"kind": "light", "id": w.id, "title": w.name, "title_ml": mw.get("name", ""), "title_ta": tw.get("name", ""), "group": "Warning light",
-                     "body": " ".join([w.means, w.why, w.drive, *w.action, w.ignored]), "body_ml": _flat_ml(mw), "body_ta": _flat_ml(tw),
+        mw, tw, hw, kw, tew = lib.get("lights", {}).get(w.id, {}), talib.get("lights", {}).get(w.id, {}), hilib.get("lights", {}).get(w.id, {}), knlib.get("lights", {}).get(w.id, {}), telib.get("lights", {}).get(w.id, {})
+        docs.append({"kind": "light", "id": w.id, "title": w.name, "title_ml": mw.get("name", ""), "title_ta": tw.get("name", ""), "title_hi": hw.get("name", ""), "title_kn": kw.get("name", ""), "title_te": tew.get("name", ""), "group": "Warning light",
+                     "body": " ".join([w.means, w.why, w.drive, *w.action, w.ignored]), "body_ml": _flat_ml(mw), "body_ta": _flat_ml(tw), "body_hi": _flat_ml(hw), "body_kn": _flat_ml(kw), "body_te": _flat_ml(tew),
                      "href": f"#vehicle/lights/{w.id}"})
     for p in vehicle_parts():
-        mp, tp = lib.get("parts", {}).get(p.id, {}), talib.get("parts", {}).get(p.id, {})
-        docs.append({"kind": "part", "id": p.id, "title": p.name, "title_ml": mp.get("name", ""), "title_ta": tp.get("name", ""), "group": "Vehicle part",
-                     "body": " ".join([p.what, p.how, p.fails]), "body_ml": _flat_ml(mp), "body_ta": _flat_ml(tp), "href": f"#vehicle/explore/{p.id}"})
+        mp, tp, hp, kp, tep = lib.get("parts", {}).get(p.id, {}), talib.get("parts", {}).get(p.id, {}), hilib.get("parts", {}).get(p.id, {}), knlib.get("parts", {}).get(p.id, {}), telib.get("parts", {}).get(p.id, {})
+        docs.append({"kind": "part", "id": p.id, "title": p.name, "title_ml": mp.get("name", ""), "title_ta": tp.get("name", ""), "title_hi": hp.get("name", ""), "title_kn": kp.get("name", ""), "title_te": tep.get("name", ""), "group": "Vehicle part",
+                     "body": " ".join([p.what, p.how, p.fails]), "body_ml": _flat_ml(mp), "body_ta": _flat_ml(tp), "body_hi": _flat_ml(hp), "body_kn": _flat_ml(kp), "body_te": _flat_ml(tep), "href": f"#vehicle/explore/{p.id}"})
     return docs
 
 
@@ -864,27 +1076,35 @@ _KIND_WEIGHT: dict[str, float] = {"lesson": 1.3, "light": 1.2, "part": 1.1, "art
 _GROUP_ML: dict[str, str] = {"Theory article": "തിയറി ലേഖനം", "Road sign": "റോഡ് ചിഹ്നം", "Glossary": "പദാവലി",
                              "Warning light": "മുന്നറിയിപ്പ് ലൈറ്റ്", "Vehicle part": "വാഹന ഭാഗം",
                              "Speed limits": "വേഗപരിധി"}
+_GROUP_KN: dict[str, str] = {"Theory article": "ಸಿದ್ಧಾಂತ ಲೇಖನ", "Road sign": "ರಸ್ತೆ ಚಿಹ್ನೆ", "Glossary": "ಪದಕೋಶ", "Warning light": "ಎಚ್ಚರಿಕೆ ದೀಪ", "Vehicle part": "ವಾಹನದ ಭಾಗ", "Speed limits": "ವೇಗದ ಮಿತಿ"}
+_GROUP_TE: dict[str, str] = {"Theory article": "సిద్ధాంత వ్యాసం", "Road sign": "రహదారి సంకేతం", "Glossary": "పదకోశం", "Warning light": "హెచ్చరిక లైట్", "Vehicle part": "వాహన భాగం", "Speed limits": "వేగ పరిమితులు"}
+_GROUP_HI: dict[str, str] = {"Theory article": "सिद्धांत लेख", "Road sign": "सड़क संकेत", "Glossary": "शब्दावली", "Warning light": "चेतावनी लाइट", "Vehicle part": "वाहन का हिस्सा", "Speed limits": "गति सीमा"}
 _GROUP_TA: dict[str, str] = {
     "Theory article": "கோட்பாட்டுக் கட்டுரை", "Road sign": "சாலை அடையாளம்",
     "Glossary": "சொற்களஞ்சியம்", "Warning light": "எச்சரிக்கை விளக்கு",
     "Vehicle part": "வாகனப் பகுதி", "Speed limits": "வேக வரம்புகள்",
 }
 _ML_CHARS = re.compile(r"[\u0d00-\u0d7f]")
+_HI_CHARS = re.compile(r"[\u0900-\u097f]")
+_KN_CHARS = re.compile(r"[\u0c80-\u0cff]")
+_TE_CHARS = re.compile(r"[\u0c00-\u0c7f]")
 
 
 def search(q: str, limit: int = 30) -> list[dict[str, Any]]:
     qn = _norm(q)
     if len(qn) < 2:
         return []
-    words = [w for w in re.findall(r"[a-z0-9\u0d00-\u0d7f\u0b80-\u0bff]+", qn) if len(w) > 1 and w not in _STOP]
+    words = [w for w in re.findall(r"[a-z0-9\u0900-\u097f\u0c00-\u0c7f\u0c80-\u0cff\u0d00-\u0d7f\u0b80-\u0bff]+", qn) if len(w) > 1 and w not in _STOP]
     if not words:
         return []
     scored: list[tuple[float, dict[str, Any]]] = []
+    is_hi = bool(_HI_CHARS.search(qn))
+    is_kn = bool(_KN_CHARS.search(qn)); is_te = bool(_TE_CHARS.search(qn))
     is_ta = bool(re.search(r"[\u0b80-\u0bff]", qn))
     is_ml = bool(_ML_CHARS.search(qn))
     for d in _search_docs():
-        title = (d.get("title_ta", "") if is_ta else d.get("title_ml", "") if is_ml else d["title"]).lower()
-        body = (d.get("body_ta", "") if is_ta else d.get("body_ml", "") if is_ml else d["body"]).lower()
+        title = (d.get("title_kn","") if is_kn else d.get("title_te","") if is_te else d.get("title_hi","") if is_hi else d.get("title_ta","") if is_ta else d.get("title_ml","") if is_ml else d["title"]).lower()
+        body = (d.get("body_kn","") if is_kn else d.get("body_te","") if is_te else d.get("body_hi","") if is_hi else d.get("body_ta","") if is_ta else d.get("body_ml","") if is_ml else d["body"]).lower()
         score = 0.0
         if qn in title:
             score += 10 + (5 if title.startswith(qn) else 0)
@@ -909,10 +1129,10 @@ def search(q: str, limit: int = 30) -> list[dict[str, Any]]:
             grp_ta = d["group"].replace("Module", "தொகுதி")
         scored.append((score, {
             "kind": d["kind"], "id": d["id"],
-            "title": _pair(d["title"], d.get("title_ml") or None, d.get("title_ta") or None),
-            "group": _pair(d["group"], grp_ml or None, grp_ta or None),
+            "title": _pair(d["title"], d.get("title_ml") or None, d.get("title_ta") or None, d.get("title_hi") or None, d.get("title_kn") or None, d.get("title_te") or None),
+            "group": _pair(d["group"], grp_ml or None, grp_ta or None, _GROUP_HI.get(d["group"], "") or None, _GROUP_KN.get(d["group"], "") or None, _GROUP_TE.get(d["group"], "") or None),
             "href": d["href"],
-            "snippet": _snippet(d.get("body_ta", "") if is_ta else d["body_ml"] if is_ml else d["body"], words[0] if words else qn),
+            "snippet": _snippet(d.get("body_kn","") if is_kn else d.get("body_te","") if is_te else d.get("body_hi","") if is_hi else d.get("body_ta","") if is_ta else d["body_ml"] if is_ml else d["body"], words[0] if words else qn),
         }))
     scored.sort(key=lambda x: -x[0])
     return [x[1] for x in scored[:limit]]
@@ -933,9 +1153,9 @@ def search_index() -> list[dict[str, str]]:
             grp_ml = d["group"].replace("Module", "മൊഡ്യൂൾ")
         out.append({
             "kind": d["kind"], "id": d["id"], "href": d["href"],
-            "title": d["title"], "title_ml": d.get("title_ml", ""), "title_ta": d.get("title_ta", ""),
-            "group": d["group"], "group_ml": grp_ml, "group_ta": _GROUP_TA.get(d["group"], "பாடத் தொகுதி" if d["kind"] == "lesson" else ""),
-            "body": d["body"][:1500], "body_ml": d.get("body_ml", "")[:1500], "body_ta": d.get("body_ta", "")[:1500],
+            "title": d["title"], "title_ml": d.get("title_ml", ""), "title_ta": d.get("title_ta", ""), "title_hi": d.get("title_hi", ""), "title_kn": d.get("title_kn", ""), "title_te": d.get("title_te", ""),
+            "group": d["group"], "group_ml": grp_ml, "group_ta": _GROUP_TA.get(d["group"], "பாடத் தொகுதி" if d["kind"] == "lesson" else ""), "group_hi": _GROUP_HI.get(d["group"], "पाठ" if d["kind"] == "lesson" else ""), "group_kn": _GROUP_KN.get(d["group"], "ಪಾಠ" if d["kind"] == "lesson" else ""), "group_te": _GROUP_TE.get(d["group"], "పాఠం" if d["kind"] == "lesson" else ""),
+            "body": d["body"][:1500], "body_ml": d.get("body_ml", "")[:1500], "body_ta": d.get("body_ta", "")[:1500], "body_hi": d.get("body_hi", "")[:1500], "body_kn": d.get("body_kn", "")[:1500], "body_te": d.get("body_te", "")[:1500],
         })
     return out
 

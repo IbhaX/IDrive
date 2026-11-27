@@ -113,7 +113,7 @@ async def html_headers(
         _gtag = bool(settings.ga_measurement_id or settings.ads_id)
         resp.headers["Content-Security-Policy"] = (
             "default-src 'self'; "
-            "img-src 'self' data: blob:" + (" https://*.google-analytics.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com https://www.google.co.in" if _gtag else "") + "; "
+            "img-src 'self' data:" + (" https://*.google-analytics.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com https://www.google.co.in" if _gtag else "") + "; "
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://accounts.google.com; "
             "font-src 'self' https://fonts.gstatic.com; "
             # three.js (original addons via the hashed import map) comes from jsDelivr
@@ -236,7 +236,7 @@ async def llms_full() -> Response:
 @app.get("/api/seo/head", include_in_schema=False)
 async def seo_head(path: str = "/", lang: str = "en") -> Response:
     """Head tags for a path - the app applies them after in-app navigation."""
-    data = seo.head_json(path[:300], "ta" if lang == "ta-en" else lang if lang in ("ml", "ta") else "en")
+    data = seo.head_json(path[:300], "ta" if lang == "ta-en" else "hi" if lang == "hi-en" else lang.split("-")[0] if lang in ("kn-en","te-en") else lang if lang in ("ml","ta","hi","kn","te") else "en")
     return JSONResponse(data, headers={"Cache-Control": "public, max-age=3600"})
 
 
@@ -255,7 +255,7 @@ async def shell() -> Response:
 async def page(path: str, request: Request) -> Response:
     if path.startswith(("api/", "static/", "models/")):
         return JSONResponse({"detail": "Not Found"}, status_code=404)
-    lang = "ta" if request.query_params.get("lang") == "ta-en" else request.query_params.get("lang") if request.query_params.get("lang") in ("ml", "ta") else "en"
+    lang = "ta" if request.query_params.get("lang") == "ta-en" else "hi" if request.query_params.get("lang") == "hi-en" else request.query_params.get("lang").split("-")[0] if request.query_params.get("lang") in ("kn-en","te-en") else request.query_params.get("lang") if request.query_params.get("lang") in ("ml","ta","hi","kn","te") else "en"
     clean = "/" + path.strip("/")
     if path.endswith("/") and clean != "/":
         q = f"?{request.url.query}" if request.url.query else ""

@@ -55,11 +55,11 @@ Q.local = async (q, limit = 30) => {
   if (!Q.idx) Q.idx = (await Api.get("/api/curriculum/search-index")).docs;
   const qn = q.toLowerCase().normalize("NFC").replace(/\s+/g, " ").trim();
   if (qn.length < 2) return [];
-  const words = (qn.match(/[a-z0-9\u0d00-\u0d7f\u0b80-\u0bff]+/g) || []).filter((w) => w.length > 1 && !STOP.has(w));
+  const words = (qn.match(/[a-z0-9\u0900-\u097f\u0c00-\u0c7f\u0c80-\u0cff\u0d00-\u0d7f\u0b80-\u0bff]+/g) || []).filter((w) => w.length > 1 && !STOP.has(w));
   if (!words.length) return [];
-  const ta = /[\u0b80-\u0bff]/.test(qn), ml = /[\u0d00-\u0d7f]/.test(qn), out = [];
+  const hi = /[\u0900-\u097f]/.test(qn), kn=/[\u0c80-\u0cff]/.test(qn), te=/[\u0c00-\u0c7f]/.test(qn), ta = /[\u0b80-\u0bff]/.test(qn), ml = /[\u0d00-\u0d7f]/.test(qn), out = [];
   for (const d of Q.idx) {
-    const title = (ta ? d.title_ta : ml ? d.title_ml : d.title).toLowerCase(), body = (ta ? d.body_ta : ml ? d.body_ml : d.body).toLowerCase();
+    const title = (kn?d.title_kn:te?d.title_te:hi?d.title_hi:ta?d.title_ta:ml?d.title_ml:d.title).toLowerCase(), body = (kn?d.body_kn:te?d.body_te:hi?d.body_hi:ta?d.body_ta:ml?d.body_ml:d.body).toLowerCase();
     let score = 0, matched = 0;
     if (qn && title.includes(qn)) score += 10 + (title.startsWith(qn) ? 5 : 0);
     if (body.includes(qn)) score += 4;
@@ -71,10 +71,10 @@ Q.local = async (q, limit = 30) => {
     if (words.length > 1) score *= 0.4 + 0.6 * matched / words.length;
     if (score <= 0) continue;
     score *= KW[d.kind] || 1;
-    const src = ta ? d.body_ta : ml ? d.body_ml : d.body, at = Math.max(0, src.toLowerCase().indexOf(words[0]));
+    const src=kn?d.body_kn:te?d.body_te:hi?d.body_hi:ta?d.body_ta:ml?d.body_ml:d.body, at = Math.max(0, src.toLowerCase().indexOf(words[0]));
     const snip = (at > 60 ? "…" : "") + src.slice(Math.max(0, at - 60), at + 120).trim() + "…";
-    out.push([score, { kind: d.kind, id: d.id, href: d.href, title: d.title_ta ? [d.title, d.title_ml || d.title, d.title_ta] : d.title_ml ? [d.title, d.title_ml] : d.title,
-      group: d.group_ta ? [d.group, d.group_ml || d.group, d.group_ta] : d.group_ml ? [d.group, d.group_ml] : d.group, snippet: snip }]);
+    out.push([score, { kind: d.kind, id: d.id, href: d.href, title: [d.title,d.title_ml||d.title,d.title_ta||d.title,d.title_hi||d.title,d.title_kn||d.title,d.title_te||d.title],
+      group:[d.group,d.group_ml||d.group,d.group_ta||d.group,d.group_hi||d.group,d.group_kn||d.group,d.group_te||d.group], snippet: snip }]);
   }
   return out.sort((a, b) => b[0] - a[0]).slice(0, limit).map((x) => x[1]);
 };

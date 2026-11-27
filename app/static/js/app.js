@@ -47,14 +47,13 @@ const TABS = [
 ];
 const DOCK = ["home", "course", "learn", "exam"];
 const TAB_OF = { lesson: "course", theory: "course", quiz: "exam", cards: "exam", limits: "learn" };
-const LANGS = [["en", "EN", "English"], ["ml", "മല", "മലയാളം"], ["ta", "த", "தமிழ்"], ["both", "EN+மல", "English + മലയാളം"], ["ta-en", "EN+த", "English + தமிழ்"]];
+const LANGS = [["en","English"],["ml","മലയാളം"],["ta","தமிழ்"],["both","English + മലയാളം"],["ta-en","English + தமிழ்"],["hi","हिन्दी"],["hi-en","English + हिन्दी"],["kn","ಕನ್ನಡ"],["kn-en","English + ಕನ್ನಡ"],["te","తెలుగు"],["te-en","English + తెలుగు"]];
 const curTab = () => TAB_OF[S.view] || S.view;
 
 const tabHtml = (ids) => TABS.filter(t => !ids || ids.includes(t.id)).map(t =>
   `<a href="#${t.id}" ${t.id === curTab() ? 'aria-current="page"' : ""} title="${I18n.attr(I18n.u(t.k))}">${I(t.icon)}<span>${esc(I18n.u(t.k))}</span></a>`).join("");
 const dockHtml = () => tabHtml(DOCK) + `<button class="morebtn ${DOCK.includes(curTab()) ? "" : "cur"}" data-act="more" aria-haspopup="true" aria-expanded="false">${I('<circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/>')}<span>${esc(I18n.u("more"))}</span></button>`;
-const langHtml = () => LANGS.map(l =>
-  `<button class="lg ${I18n.lang() === l[0] ? "on" : ""}" data-lang="${l[0]}" aria-pressed="${I18n.lang() === l[0]}" aria-label="${l[2]}" title="${l[2]}">${l[1]}</button>`).join("");
+const langHtml = () => '<label class="langselect" aria-label="Select language"><span aria-hidden="true">文</span><select id="languageSelect" aria-label="Select language">' + LANGS.map(l => '<option value="' + l[0] + '"' + (I18n.lang() === l[0] ? ' selected' : '') + '>' + l[1] + '</option>').join('') + '</select></label>';
 
 /* theme: dark is the default; "light" sets data-theme=light */
 const SUN = '<circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5 5l1.8 1.8M17.2 17.2 19 19M19 5l-1.8 1.8M6.8 17.2 5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
@@ -77,7 +76,7 @@ window.toggleTheme = () => {
 };
 
 function applyStatic() {
-  document.documentElement.lang = ["ta", "ta-en"].includes(I18n.lang()) ? "ta" : I18n.lang() === "ml" ? "ml" : "en";
+  document.documentElement.lang = ["ta","ta-en"].includes(I18n.lang()) ? "ta" : ["hi","hi-en"].includes(I18n.lang()) ? "hi" : ["kn","kn-en"].includes(I18n.lang()) ? "kn" : ["te","te-en"].includes(I18n.lang()) ? "te" : I18n.lang() === "ml" ? "ml" : "en";
   document.getElementById("subline").textContent = I18n.u("sub2");
   const play = document.querySelector('meta[name="play-url"]');
   document.getElementById("foot").innerHTML = `${esc(I18n.u("foot"))}<span class="footlinks"><a href="/about">${esc(I18n.u("ftAbout"))}</a><a href="/privacy">${esc(I18n.u("ftPrivacy"))}</a><a href="/terms">${esc(I18n.u("ftTerms"))}</a><a href="/install">${esc(I18n.u("ftInstall"))}</a>${play ? `<a href="${I18n.attr(play.content)}" rel="noopener" target="_blank">${esc(I18n.u("ftPlay"))}</a>` : ""}</span>`;
@@ -161,7 +160,7 @@ function applyRoute() {
 }
 /* address bar → clean path for the current route, keeping ?lang if present */
 function urlFor(r) {
-  const q = ["ml","ta","en","both","ta-en"].includes(P.lang) ? "?lang=" + P.lang : "";
+  const q = ["ml","ta","en","both","ta-en","hi","hi-en","kn","kn-en","te","te-en"].includes(P.lang) ? "?lang=" + P.lang : "";
   return routeToPath(r) + q;
 }
 function setHash(v) {
@@ -197,7 +196,6 @@ function render() {
   requestAnimationFrame(() => {
     Motion.jelly(document.getElementById("tabsTop"));
     Motion.jelly(document.getElementById("dockin"));
-    Motion.langPill(document.getElementById("langs"));
     fitNav();
     Motion.bindTilt();
     Motion.bindMagnetic();
@@ -218,7 +216,7 @@ function fitNav() {
   if (over()) nav.classList.add("nav-icons");
   if (over()) nav.classList.add("nav-tight");
   measureChrome();
-  requestAnimationFrame(() => { Motion.jelly(tabs); Motion.langPill(document.getElementById("langs")); });
+  requestAnimationFrame(() => { Motion.jelly(tabs); });
 }
 function measureChrome() {
   const nav = document.querySelector(".topnav"), dock = document.getElementById("dock");
@@ -262,7 +260,7 @@ function setMeta(sel, attr, key, val) {
   el.setAttribute(sel.startsWith("link") ? "href" : "content", val);
 }
 async function syncHead() {
-  const lang = ["ml","ta","ta-en"].includes(I18n.lang()) ? (I18n.lang() === "ta-en" ? "ta" : I18n.lang()) : "en", key = lang + location.pathname;
+  const lang = ["ml","ta","ta-en","hi","hi-en","kn","kn-en","te","te-en"].includes(I18n.lang()) ? (I18n.lang().endsWith("-en") ? I18n.lang().split("-")[0] : I18n.lang()) : "en", key = lang + location.pathname;
   let h = headCache.get(key);
   if (!h) {
     try {
@@ -304,6 +302,7 @@ function toggleMore(btn) {
 }
 
 /* ---------- event delegation ---------- */
+document.addEventListener("change", (e) => { if (e.target && e.target.id === "languageSelect") { P.lang=e.target.value; save(); setHash(lastRoute); render(); syncHead(); if (!document.getElementById("sheet").hidden) Learn.renderSheet(); } });
 document.addEventListener("click", (e) => {
   if (e.target === document.getElementById("sheet")) { Learn.closeSheet(); return; }
   if (e.target === document.getElementById("amodal")) { Auth.closeModal(); return; }
@@ -469,7 +468,7 @@ window.hideSplash = () => {
   // the server-rendered page for this URL; static pages reuse it as-is
   StaticPage.keep(location.pathname, app.innerHTML);
   const ql = new URLSearchParams(location.search).get("lang");
-  if (ql === "ml" || ql === "ta" || ql === "en" || ql === "ta-en" || ql === "both") { P.lang = ql; save(); }
+  if (["ml","ta","en","ta-en","both","hi","hi-en","kn","kn-en","te","te-en"].includes(ql)) { P.lang = ql; save(); }
   app.innerHTML = `<section class="panel"><div class="skel"><i style="height:26px;width:34%"></i><i style="height:16px"></i><i style="height:16px;width:80%"></i><i style="height:16px;width:60%"></i></div></section>`;
   try {
     await Data.loadIndex();

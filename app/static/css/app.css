@@ -38,8 +38,8 @@
   --r-sm:10px; --r-md:14px; --r-lg:20px; --r-xl:26px;
 
   /* type */
-  --display:'Barlow Condensed','Noto Sans Malayalam','Noto Sans Tamil','Arial Narrow',system-ui,sans-serif;
-  --body:'Barlow','Noto Sans Malayalam','Noto Sans Tamil',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --display:'Barlow Condensed','Noto Sans Malayalam','Noto Sans Tamil','Noto Sans Devanagari','Noto Sans Kannada','Noto Sans Telugu','Arial Narrow',system-ui,sans-serif;
+  --body:'Barlow','Noto Sans Malayalam','Noto Sans Tamil','Noto Sans Devanagari','Noto Sans Kannada','Noto Sans Telugu',system-ui,-apple-system,'Segoe UI',sans-serif;
 
   /* motion */
   --spring-soft:cubic-bezier(.22,1.2,.36,1);
@@ -949,14 +949,14 @@ a,button,[role="button"],summary,label{-webkit-tap-highlight-color:transparent;t
   .eyebrow,.today .eyebrow,.mn,.myth span.tag,.story .tag,.lnote b{font-size:12px}
   :root[lang="ml"] .eyebrow,:root[lang="ml"] .mn,:root[lang="ml"] .tag,:root[lang="ml"] .lnote b,:root[lang="ta"] .eyebrow,:root[lang="ta"] .mn,:root[lang="ta"] .tag,:root[lang="ta"] .lnote b{font-size:12.5px;letter-spacing:0}
 }
-/* Tamil labels need to wrap inside their own dock columns, never across neighbours. */
+/* Indic labels wrap inside their own dock columns, never across neighbours. */
 @media (max-width:759px){
-  html[lang="ta"] .dock .dockin{grid-template-columns:repeat(5,minmax(0,1fr));gap:1px}
-  html[lang="ta"] .dock a,
-  html[lang="ta"] .dock .morebtn{min-width:0;max-width:100%;padding-inline:1px;gap:4px}
-  html[lang="ta"] .dock a span,
-  html[lang="ta"] .dock .morebtn span{display:block;width:100%;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:normal;font-size:9px;line-height:1.2;text-align:center}
-  html[lang="ta"] .dock svg{flex:none}
+  html[lang="ta"] .dock .dockin,html[lang="hi"] .dock .dockin{grid-template-columns:repeat(5,minmax(0,1fr));gap:1px}
+  html[lang="ta"] .dock a,html[lang="ta"] .dock .morebtn,
+  html[lang="hi"] .dock a,html[lang="hi"] .dock .morebtn{min-width:0;max-width:100%;padding-inline:1px;gap:4px}
+  html[lang="ta"] .dock a span,html[lang="ta"] .dock .morebtn span,
+  html[lang="hi"] .dock a span,html[lang="hi"] .dock .morebtn span{display:block;width:100%;max-width:100%;white-space:normal;overflow-wrap:anywhere;word-break:normal;font-size:9px;line-height:1.2;text-align:center}
+  html[lang="ta"] .dock svg,html[lang="hi"] .dock svg{flex:none}
 }
 @media (pointer:coarse){
   .crumbs{gap:2px}
@@ -1468,3 +1468,18 @@ html.splashing,html.splashing body{overflow:hidden}
 /* Startup is a glass modal over the existing app, never a replacement screen. */
 #splash{background:radial-gradient(120% 80% at 50% 40%,rgba(91,91,180,.10) 0%,rgba(8,10,20,.24) 70%)!important;backdrop-filter:blur(5px) saturate(1.08)!important;-webkit-backdrop-filter:blur(5px) saturate(1.08)!important}
 #splash.out{pointer-events:none}
+
+/* Hindi typography */
+html[lang="hi"] body,html[lang="hi"] button,html[lang="hi"] input{font-family:var(--body)}
+html[lang="hi"] .en{font-family:var(--body)}
+
+@media (max-width:640px){.langs{width:100%;gap:1px}.lg{flex:1;min-width:0;padding:5px 3px;font-size:11px}}
+
+/* Compact native language picker */
+.langselect{display:inline-flex;align-items:center;gap:8px;min-width:0;padding:0 12px;height:38px;border:1px solid var(--line);border-radius:12px;background:var(--panel2);color:var(--muted)}
+.langselect>span{font-size:17px;line-height:1}
+.langselect select{appearance:none;-webkit-appearance:none;border:0;outline:0;min-width:0;max-width:210px;background:transparent;color:var(--ink);font:600 12.5px var(--body);padding:0 17px 0 0;cursor:pointer}
+.langselect{position:relative}
+.langselect:after{content:"";position:absolute;right:10px;top:14px;width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);pointer-events:none}
+.langselect select option{background:var(--panel);color:var(--ink)}
+@media(max-width:640px){.langselect{flex:1;justify-content:center;height:36px}.langselect select{max-width:calc(100% - 32px);font-size:12px}}

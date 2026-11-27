@@ -65,8 +65,8 @@ const Data = {
   },
 
   catOf(id) { return Data.catById[id]; },
-  sm(d) { return ["ta", "ta-en"].includes(I18n.lang()) ? (d.ta || d.ml || []) : (d.ml || []); },
-  catMl(c, i) { return ((["ta", "ta-en"].includes(I18n.lang()) ? c.ta : c.ml) || [])[i] || ""; },
+  sm(d) { return ["ta", "ta-en"].includes(I18n.lang()) ? (d.ta || d.ml || []) : ["hi","hi-en"].includes(I18n.lang())?(d.hi||d.ta||d.ml||[]):["kn","kn-en"].includes(I18n.lang())?(d.kn||d.hi||d.ml||[]):["te","te-en"].includes(I18n.lang())?(d.te||d.hi||d.ml||[]):(d.ml||[]); },
+  catMl(c, i) { return ((["ta", "ta-en"].includes(I18n.lang()) ? c.ta : ["hi","hi-en"].includes(I18n.lang())?c.hi:["kn","kn-en"].includes(I18n.lang())?c.kn:["te","te-en"].includes(I18n.lang())?c.te:c.ml) || [])[i] || ""; },
 };
 window.Data = Data;
 })();

@@ -9,7 +9,7 @@ const Ad = { q: "", role: "", status: "", sort: "joined", page: 1, size: 25, arm
 
 const when = (iso, withTime) => {
   if (!iso) return e(u("adNever"));
-  const d = new Date(iso), loc = I18n.lang() === "en" ? "en-IN" : ["ta", "ta-en"].includes(I18n.lang()) ? "ta-IN" : "ml-IN";
+  const d = new Date(iso), loc = I18n.lang() === "en" ? "en-IN" : ["ta","ta-en"].includes(I18n.lang())?"ta-IN":["hi","hi-en"].includes(I18n.lang())?"hi-IN":["kn","kn-en"].includes(I18n.lang())?"kn-IN":["te","te-en"].includes(I18n.lang())?"te-IN":"ml-IN";
   return d.toLocaleDateString(loc, { day: "numeric", month: "short", year: "numeric" }) + (withTime ? " " + d.toLocaleTimeString(loc, { hour: "2-digit", minute: "2-digit" }) : "");
 };
 const ago = (iso) => {
