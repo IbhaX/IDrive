@@ -1,1 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180"><defs><linearGradient id="t" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d1e3a"/><stop offset="1" stop-color="#0b0c14"/></linearGradient><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c6cff"/><stop offset="1" stop-color="#38bdf8"/></linearGradient><mask id="m"><rect width="180" height="180" fill="#fff"/><rect x="88.5" y="74" width="3" height="10" rx="1.5" fill="#000"/><rect x="87.5" y="94" width="5" height="15" rx="2.5" fill="#000"/><rect x="86" y="120" width="8" height="22" rx="4" fill="#000"/></mask></defs><rect width="180" height="180" fill="url(#t)"/><g transform="translate(90 97) scale(.72) translate(-90 -97)"><g mask="url(#m)" fill="url(#g)"><circle cx="90" cy="38" r="14"/><path d="M81 62H99L120 150Q121 156 115 156H65Q59 156 60 150Z"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="iDrive">
+  <title>iDrive</title>
+  <desc>iDrive — The stem is a road in perspective with dashed lane markings, heading to the horizon.</desc>
+  <defs><linearGradient id="idrive-tile" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="64">
+      <stop offset="0" stop-color="#2F6FD6"/><stop offset="1" stop-color="#1C4796"/>
+    </linearGradient>
+    <linearGradient id="idrive-sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".14"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient></defs>
+  
+  <g transform="translate(0 0)">
+    <g>
+      <rect width="64" height="64" fill="url(#idrive-tile)"/>
+    </g>
+    <g transform="translate(32 32) scale(.74) translate(-32 -32)"><g><circle cx="32" cy="14" r="5.4" fill="#fff"/></g>
+    <g><path d="M28.6 24 H35.4 L40.6 51 Q41 53 39 53 H25 Q23 53 23.4 51 Z" fill="#fff"/></g>
+    <g><rect x="31.45" y="27" width="1.1" height="3.4" rx=".4" fill="url(#idrive-tile)"/><rect x="31.2" y="34" width="1.6" height="4.6" rx=".5" fill="url(#idrive-tile)"/><rect x="30.9" y="42.2" width="2.2" height="6.6" rx=".6" fill="url(#idrive-tile)"/></g></g>
+  </g>
+</svg>
