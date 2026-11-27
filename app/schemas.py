@@ -7,7 +7,7 @@ from typing import Any, Literal, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
-LangPair = list[str]  # [en, ml]
+LangPair = list[str]  # [en, ml, ta]
 
 
 # ---------- auth ----------
@@ -56,6 +56,7 @@ class SignOut(BaseModel):
     meaning: str
     action: str
     ml: list[str] = Field(default_factory=list)
+    ta: list[str] = Field(default_factory=list)
 
 
 class SignFullOut(SignOut):
@@ -68,6 +69,7 @@ class CategoryOut(BaseModel):
     dot: str
     blurb: str
     ml: list[str] = Field(default_factory=list)
+    ta: list[str] = Field(default_factory=list)
     count: int = 0
 
 
@@ -91,13 +93,13 @@ class ContentIndexOut(BaseModel):
 
 
 class GlossaryEntryOut(BaseModel):
-    term: LangPair
-    definition: LangPair
+    term: list[str]
+    definition: list[str]
 
 
 # ---------- quiz / exam questions ----------
 
-Bilingual = list[str]  # [en, ml]
+Bilingual = list[str]  # [en, ml, ta]
 
 
 class OptionItem(BaseModel):
@@ -229,6 +231,7 @@ class ChatTurn(BaseModel):
 class InstructorIn(BaseModel):
     question: str = Field(min_length=2, max_length=600)
     history: list[ChatTurn] = Field(default_factory=list, max_length=12)
+    lang: Literal["auto", "en", "ml", "ta"] = "auto"
 
 
 class InstructorSource(BaseModel):

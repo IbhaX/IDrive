@@ -116,4 +116,5 @@ async def ask(request: Request, body: InstructorIn, user: OptionalUser) -> dict[
         model=s.ai_model,
         allow_ai=user is not None,
         site_url=s.ai_site_url,
+        language=body.lang,
     )

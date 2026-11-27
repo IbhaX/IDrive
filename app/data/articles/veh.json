@@ -1,328 +1,397 @@
 {
- "intro": [
-  "A well-kept vehicle is a safer, cheaper and cleaner vehicle. Most breakdowns and many accidents begin with something small that was ignored: a soft tyre, a weak brake, a dead bulb. This article gives you a simple routine for tyres, brakes, fluids and lights, and explains pollution checks, fuel-efficient driving and dashboard warning lights.",
-  "നന്നായി പരിപാലിച്ച വാഹനം കൂടുതൽ സുരക്ഷിതവും ചെലവു കുറഞ്ഞതും പരിസ്ഥിതിക്ക് ഇണങ്ങുന്നതുമാണ്. മിക്ക തകരാറുകളും പല അപകടങ്ങളും തുടങ്ങുന്നത് അവഗണിച്ച ചെറിയ കാര്യത്തിൽ നിന്നാണ്: കാറ്റു കുറഞ്ഞ ടയർ, ദുർബലമായ ബ്രേക്ക്, കത്താത്ത ബൾബ്. ടയർ, ബ്രേക്ക്, ദ്രാവകങ്ങൾ, ലൈറ്റ് എന്നിവയ്ക്കുള്ള ലളിതമായ പരിശോധനാരീതിയും പുക പരിശോധന, ഇന്ധനക്ഷമത, ഡാഷ്ബോർഡ് മുന്നറിയിപ്പ് ലൈറ്റുകൾ എന്നിവയും ഈ ലേഖനത്തിൽ വിശദീകരിക്കുന്നു."
- ],
- "sections": [
-  {
-   "h": [
-    "A quick check before you drive",
-    "ഓടിക്കും മുമ്പുള്ള ചെറിയ പരിശോധന"
-   ],
-   "p": [
+  "intro": [
+    "A well-kept vehicle is a safer, cheaper and cleaner vehicle. Most breakdowns and many accidents begin with something small that was ignored: a soft tyre, a weak brake, a dead bulb. This article gives you a simple routine for tyres, brakes, fluids and lights, and explains pollution checks, fuel-efficient driving and dashboard warning lights.",
+    "നന്നായി പരിപാലിച്ച വാഹനം കൂടുതൽ സുരക്ഷിതവും ചെലവു കുറഞ്ഞതും പരിസ്ഥിതിക്ക് ഇണങ്ങുന്നതുമാണ്. മിക്ക തകരാറുകളും പല അപകടങ്ങളും തുടങ്ങുന്നത് അവഗണിച്ച ചെറിയ കാര്യത്തിൽ നിന്നാണ്: കാറ്റു കുറഞ്ഞ ടയർ, ദുർബലമായ ബ്രേക്ക്, കത്താത്ത ബൾബ്. ടയർ, ബ്രേക്ക്, ദ്രാവകങ്ങൾ, ലൈറ്റ് എന്നിവയ്ക്കുള്ള ലളിതമായ പരിശോധനാരീതിയും പുക പരിശോധന, ഇന്ധനക്ഷമത, ഡാഷ്ബോർഡ് മുന്നറിയിപ്പ് ലൈറ്റുകൾ എന്നിവയും ഈ ലേഖനത്തിൽ വിശദീകരിക്കുന്നു.",
+    "நன்கு பராமரிக்கப்பட்ட வாகனம் பாதுகாப்பான, மலிவான மற்றும் தூய்மையான வாகனமாகும். பெரும்பாலான செயலிழப்புகள் மற்றும் பல விபத்துக்கள் புறக்கணிக்கப்பட்ட சிறியவற்றுடன் தொடங்குகின்றன: மென்மையான டயர், பலவீனமான பிரேக், இறந்த பல்ப். இந்தக் கட்டுரை டயர்கள், பிரேக்குகள், திரவங்கள் மற்றும் விளக்குகளுக்கான எளிய வழக்கத்தை வழங்குகிறது, மேலும் மாசு சோதனைகள், எரிபொருள்-திறனுள்ள ஓட்டுநர் மற்றும் டேஷ்போர்டு எச்சரிக்கை விளக்குகள் ஆகியவற்றை விளக்குகிறது."
+  ],
+  "sections": [
+    {
+      "h": [
+        "A quick check before you drive",
+        "ഓടിക്കും മുമ്പുള്ള ചെറിയ പരിശോധന",
+        "நீங்கள் ஓட்டுவதற்கு முன் ஒரு விரைவான சோதனை"
+      ],
+      "p": [
+        [
+          "Walk around the vehicle once before a long trip. Look at tyres, lights, glass, mirrors and the ground under the vehicle for drips. This takes a minute and catches most simple faults.",
+          "ദീർഘയാത്രയ്ക്കു മുമ്പ് വാഹനത്തിന് ഒരു വട്ടം ചുറ്റി നടക്കുക. ടയർ, ലൈറ്റ്, ഗ്ലാസ്, മിററുകൾ, വാഹനത്തിനടിയിൽ ഇറ്റുന്ന ദ്രാവകം എന്നിവ നോക്കുക. ഒരു മിനിറ്റ് മതി; ലളിതമായ മിക്ക തകരാറുകളും ഇതിൽ പിടിക്കാം.",
+          "நீண்ட பயணத்திற்கு முன் ஒருமுறை வாகனத்தைச் சுற்றி நடக்கவும். டயர்கள், விளக்குகள், கண்ணாடிகள், கண்ணாடிகள் மற்றும் வாகனத்தின் கீழ் தரையை சொட்டு சொட்டாகப் பாருங்கள். இது ஒரு நிமிடம் எடுக்கும் மற்றும் மிக எளிய தவறுகளைப் பிடிக்கிறது."
+        ],
+        [
+          "Inside, adjust the seat, mirrors and steering, fasten the seat belt, and check that the horn, indicators and wipers work. Make sure the brake and clutch pedals feel normal.",
+          "അകത്ത് സീറ്റ്, മിററുകൾ, സ്റ്റിയറിങ് എന്നിവ ക്രമീകരിക്കുക, സീറ്റ് ബെൽറ്റ് ഇടുക, ഹോൺ, ഇൻഡിക്കേറ്റർ, വൈപ്പർ എന്നിവ പ്രവർത്തിക്കുന്നുണ്ടോ എന്ന് നോക്കുക. ബ്രേക്ക്, ക്ലച്ച് പെഡലുകൾക്ക് സാധാരണ അനുഭവമാണെന്ന് ഉറപ്പാക്കുക.",
+          "உள்ளே, இருக்கை, கண்ணாடிகள் மற்றும் ஸ்டீயரிங் ஆகியவற்றை சரிசெய்து, சீட் பெல்ட்டைக் கட்டவும், மேலும் ஹார்ன், இண்டிகேட்டர்கள் மற்றும் வைப்பர்கள் செயல்படுகிறதா என்று சரிபார்க்கவும். பிரேக் மற்றும் கிளட்ச் பெடல்கள் இயல்பானதாக இருப்பதை உறுதிப்படுத்தவும்."
+        ],
+        [
+          "Keep the vehicle documents and the first-aid kit handy, and follow the service schedule in the owner's manual rather than waiting for something to fail.",
+          "വാഹന രേഖകളും പ്രഥമശുശ്രൂഷാ കിറ്റും കൈയെത്തും ദൂരത്ത് സൂക്ഷിക്കുക; എന്തെങ്കിലും കേടാകുംവരെ കാത്തിരിക്കാതെ ഓണേഴ്സ് മാന്വലിലെ സർവീസ് ഷെഡ്യൂൾ പാലിക്കുക.",
+          "வாகன ஆவணங்கள் மற்றும் முதலுதவி பெட்டியை கைவசம் வைத்திருங்கள், ஏதாவது தோல்வியடையும் வரை காத்திருக்காமல், உரிமையாளரின் கையேட்டில் உள்ள சேவை அட்டவணையைப் பின்பற்றவும்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Tyres",
+        "ടയറുകൾ",
+        "டயர்கள்"
+      ],
+      "p": [
+        [
+          "Tyres are the only part of the vehicle touching the road, so grip, braking and steering all depend on them. Check pressure regularly when the tyres are cold, using the value recommended by the vehicle maker, and do not forget the spare.",
+          "വാഹനത്തിൽ റോഡിൽ തൊടുന്ന ഏക ഭാഗം ടയറാണ്; പിടിത്തം, ബ്രേക്കിങ്, സ്റ്റിയറിങ് എല്ലാം അതിനെ ആശ്രയിക്കുന്നു. ടയർ തണുത്തിരിക്കുമ്പോൾ, വാഹന നിർമാതാവ് നിർദേശിച്ച മർദത്തിൽ കൃത്യമായി കാറ്റ് പരിശോധിക്കുക; സ്പെയർ ടയറും മറക്കരുത്.",
+          "டயர்கள் மட்டுமே சாலையைத் தொடும் வாகனத்தின் ஒரு பகுதியாகும், எனவே பிடிப்பு, பிரேக்கிங் மற்றும் ஸ்டீயரிங் அனைத்தும் அவற்றைச் சார்ந்தது. வாகன தயாரிப்பாளரால் பரிந்துரைக்கப்பட்ட மதிப்பைப் பயன்படுத்தி, டயர்கள் குளிர்ச்சியாக இருக்கும்போது அழுத்தத்தை தவறாமல் சரிபார்க்கவும், உதிரிகளை மறந்துவிடாதீர்கள்."
+        ],
+        [
+          "Look at the tread. Grooves push water out from under the tyre, so worn tyres are far more dangerous in the rain. Most tyres have wear indicators in the grooves; if the tread is level with them, replace the tyre.",
+          "ട്രെഡ് നോക്കുക. ടയറിനടിയിൽ നിന്ന് വെള്ളം പുറത്തേക്ക് തള്ളുന്നത് ഗ്രൂവുകളാണ്, അതിനാൽ തേഞ്ഞ ടയർ മഴയിൽ വളരെ അപകടകരമാണ്. മിക്ക ടയറുകളിലും ഗ്രൂവിൽ തേയ്മാന സൂചകങ്ങളുണ്ട്; ട്രെഡ് അവയ്ക്കൊപ്പമെത്തിയാൽ ടയർ മാറ്റുക.",
+          "ஜாக்கிரதையைப் பாருங்கள். பள்ளங்கள் டயருக்கு அடியில் இருந்து தண்ணீரை வெளியேற்றுகிறது, எனவே தேய்ந்த டயர்கள் மழையில் மிகவும் ஆபத்தானவை. பெரும்பாலான டயர்கள் பள்ளங்களில் தேய்மான குறிகாட்டிகளைக் கொண்டுள்ளன; டிரெட் அவற்றுடன் சமமாக இருந்தால், டயரை மாற்றவும்."
+        ],
+        [
+          "Check the sidewalls for cuts, bulges and cracks, and remove stones stuck in the tread. Uneven wear can mean wrong pressure or poor wheel alignment, so get it checked.",
+          "സൈഡ്‌വാളിൽ മുറിവ്, വീക്കം, വിള്ളൽ എന്നിവയുണ്ടോ എന്ന് നോക്കുക; ട്രെഡിൽ കുടുങ്ങിയ കല്ലുകൾ നീക്കുക. ഒരേപോലെയല്ലാത്ത തേയ്മാനം തെറ്റായ മർദമോ വീൽ അലൈൻമെന്റ് പ്രശ്നമോ ആകാം; പരിശോധിപ്പിക്കുക.",
+          "வெட்டுக்கள், வீக்கம் மற்றும் விரிசல்கள் உள்ளதா எனப் பக்கச்சுவர்களில் சரிபார்த்து, நடைபாதையில் சிக்கியுள்ள கற்களை அகற்றவும். சீரற்ற உடைகள் தவறான அழுத்தம் அல்லது மோசமான சக்கர சீரமைப்பு என்று அர்த்தம், எனவே அதை சரிபார்க்கவும்."
+        ],
+        [
+          "Never overload the vehicle beyond what the maker allows. Overloading overheats tyres and lengthens braking distance.",
+          "വാഹന നിർമാതാവ് അനുവദിച്ചതിലും അധികം ഭാരം കയറ്റരുത്. അമിതഭാരം ടയർ ചൂടാക്കുകയും ബ്രേക്കിങ് ദൂരം കൂട്ടുകയും ചെയ്യും.",
+          "தயாரிப்பாளரின் அனுமதிக்கு மேல் வாகனத்தை ஓவர்லோட் செய்யாதீர்கள். ஓவர்லோடிங் டயர்களை அதிக வெப்பமாக்குகிறது மற்றும் பிரேக்கிங் தூரத்தை நீட்டிக்கிறது."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Brakes, fluids and lights",
+        "ബ്രേക്ക്, ദ്രാവകങ്ങൾ, ലൈറ്റുകൾ",
+        "பிரேக்குகள், திரவங்கள் மற்றும் விளக்குகள்"
+      ],
+      "p": [
+        [
+          "Warning signs of weak brakes include a soft or sinking pedal, pulling to one side, squealing or grinding noise, and a longer stopping distance. Do not wait; have the brakes inspected at once.",
+          "ബ്രേക്ക് ദുർബലമാകുന്നതിന്റെ ലക്ഷണങ്ങൾ: പെഡൽ മൃദുവാകുകയോ താഴ്ന്നുപോകുകയോ ചെയ്യുക, വാഹനം ഒരു വശത്തേക്ക് വലിയുക, ഞരക്കമോ ഉരസൽ ശബ്ദമോ, നിർത്താൻ കൂടുതൽ ദൂരം വേണ്ടിവരിക. കാത്തിരിക്കാതെ ഉടൻ ബ്രേക്ക് പരിശോധിപ്പിക്കുക.",
+          "பலவீனமான பிரேக்குகளின் எச்சரிக்கை அறிகுறிகள் மென்மையான அல்லது மூழ்கும் மிதி, ஒரு பக்கமாக இழுத்தல், சத்தம் அல்லது அரைக்கும் சத்தம் மற்றும் நீண்ட நிறுத்த தூரம் ஆகியவை அடங்கும். காத்திருக்காதே; பிரேக்குகளை ஒரே நேரத்தில் பரிசோதிக்க வேண்டும்."
+        ],
+        [
+          "Know the main fluids: engine oil, coolant, brake fluid, windscreen washer fluid and, where fitted, power steering fluid. Check levels on level ground as the manual describes, and never open a hot radiator cap.",
+          "പ്രധാന ദ്രാവകങ്ങൾ അറിയുക: എൻജിൻ ഓയിൽ, കൂളന്റ്, ബ്രേക്ക് ഫ്ലൂയിഡ്, വിൻഡ്സ്ക്രീൻ വാഷർ ഫ്ലൂയിഡ്, ഉണ്ടെങ്കിൽ പവർ സ്റ്റിയറിങ് ഫ്ലൂയിഡ്. മാന്വൽ പറയുന്നതുപോലെ നിരപ്പായ സ്ഥലത്ത് അളവ് നോക്കുക; ചൂടുള്ള റേഡിയേറ്റർ തൊപ്പി ഒരിക്കലും തുറക്കരുത്.",
+          "முக்கிய திரவங்களை அறிக: என்ஜின் ஆயில், கூலன்ட், பிரேக் திரவம், விண்ட்ஸ்கிரீன் வாஷர் திரவம் மற்றும், பொருத்தப்பட்ட இடத்தில், பவர் ஸ்டீயரிங் திரவம். கையேட்டில் விவரிக்கப்பட்டுள்ளபடி சமதளத்தில் நிலைகளைச் சரிபார்க்கவும், சூடான ரேடியேட்டர் தொப்பியைத் திறக்க வேண்டாம்."
+        ],
+        [
+          "A falling brake fluid level is a warning, not something to top up and forget, because it can mean a leak or worn pads. Get the cause found.",
+          "ബ്രേക്ക് ഫ്ലൂയിഡ് കുറയുന്നത് മുന്നറിയിപ്പാണ്; നിറച്ച് മറക്കേണ്ട കാര്യമല്ല, ചോർച്ചയോ തേഞ്ഞ പാഡോ ആകാം. കാരണം കണ്ടെത്തുക.",
+          "வீழ்ச்சியடைந்த பிரேக் திரவ நிலை என்பது ஒரு எச்சரிக்கை, டாப் அப் செய்து மறக்க வேண்டிய ஒன்று அல்ல, ஏனெனில் அது கசிவு அல்லது தேய்ந்த பட்டைகளைக் குறிக்கலாம். காரணத்தைக் கண்டறியவும்."
+        ],
+        [
+          "Test headlights (low and high beam), tail lamps, brake lights, indicators and number-plate lamp. Working lights let others see you and understand your intentions; a dead brake light invites a rear-end collision.",
+          "ഹെഡ്‌ലൈറ്റ് (ലോ, ഹൈ ബീം), ടെയിൽ ലാമ്പ്, ബ്രേക്ക് ലൈറ്റ്, ഇൻഡിക്കേറ്റർ, നമ്പർ പ്ലേറ്റ് ലാമ്പ് എന്നിവ പരിശോധിക്കുക. പ്രവർത്തിക്കുന്ന ലൈറ്റുകൾ മറ്റുള്ളവർക്ക് നിങ്ങളെ കാണാനും ഉദ്ദേശ്യം മനസ്സിലാക്കാനും സഹായിക്കുന്നു; കത്താത്ത ബ്രേക്ക് ലൈറ്റ് പിന്നിൽ നിന്നുള്ള ഇടിയെ ക്ഷണിച്ചുവരുത്തും.",
+          "சோதனை ஹெட்லைட்கள் (குறைந்த மற்றும் உயர் பீம்), டெயில் விளக்குகள், பிரேக் விளக்குகள், குறிகாட்டிகள் மற்றும் எண்-தகடு விளக்கு. வேலை செய்யும் விளக்குகள் மற்றவர்கள் உங்களைப் பார்க்கவும் உங்கள் நோக்கங்களைப் புரிந்துகொள்ளவும் அனுமதிக்கின்றன; ஒரு டெட் பிரேக் லைட் பின்பக்க மோதலை அழைக்கிறது."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Pollution check and the environment",
+        "പുക പരിശോധനയും പരിസ്ഥിതിയും",
+        "மாசு சோதனை மற்றும் சுற்றுச்சூழல்"
+      ],
+      "p": [
+        [
+          "A Pollution Under Control (PUC) certificate shows that your vehicle's exhaust emissions were tested and found within the permitted limits. Driving without a valid certificate is an offence and a penalty applies; check the current rules with your RTO or on Parivahan.",
+          "നിങ്ങളുടെ വാഹനത്തിന്റെ പുക പുറന്തള്ളൽ പരിശോധിച്ച് അനുവദനീയമായ പരിധിക്കുള്ളിലാണെന്ന് തെളിയിക്കുന്നതാണ് പൊല്യൂഷൻ അണ്ടർ കൺട്രോൾ (PUC) സർട്ടിഫിക്കറ്റ്. സാധുവായ സർട്ടിഫിക്കറ്റില്ലാതെ ഓടിക്കുന്നത് കുറ്റകരവും പിഴ ബാധകവുമാണ്; നിലവിലെ നിയമം RTO യിലോ പരിവാഹനിലോ പരിശോധിക്കുക.",
+          "மாசுக் கட்டுப்பாட்டின் கீழ் (PUC) சான்றிதழானது, உங்கள் வாகனத்தின் வெளியேற்ற உமிழ்வுகள் சோதனை செய்யப்பட்டு அனுமதிக்கப்பட்ட வரம்புகளுக்குள் கண்டறியப்பட்டதைக் காட்டுகிறது. செல்லுபடியாகும் சான்றிதழ் இல்லாமல் வாகனம் ஓட்டுவது குற்றம் மற்றும் அபராதம் விதிக்கப்படும்; தற்போதைய விதிகளை உங்கள் ஆர்டிஓ அல்லது பரிவாஹனில் சரிபார்க்கவும்."
+        ],
+        [
+          "Black smoke, blue smoke or a strong smell usually points to a fault such as a dirty air filter, burning oil or a badly tuned engine. Regular servicing keeps emissions down and also saves fuel.",
+          "കറുത്ത പുക, നീല പുക, രൂക്ഷ ഗന്ധം എന്നിവ സാധാരണ എയർ ഫിൽറ്റർ അഴുക്ക്, ഓയിൽ കത്തൽ, ശരിയായി ട്യൂൺ ചെയ്യാത്ത എൻജിൻ തുടങ്ങിയ തകരാറിനെ സൂചിപ്പിക്കുന്നു. കൃത്യമായ സർവീസ് പുക കുറയ്ക്കുകയും ഇന്ധനം ലാഭിക്കുകയും ചെയ്യും.",
+          "கறுப்பு புகை, நீல புகை அல்லது கடுமையான வாசனை பொதுவாக அழுக்கு காற்று வடிகட்டி, எரியும் எண்ணெய் அல்லது மோசமாக டியூன் செய்யப்பட்ட இயந்திரம் போன்ற பிழையை சுட்டிக்காட்டுகிறது. வழக்கமான சேவையானது உமிழ்வைக் குறைக்கிறது மற்றும் எரிபொருளைச் சேமிக்கிறது."
+        ],
+        [
+          "Do not idle the engine for long while waiting, and do not use the horn without need. Less idling means less fuel burnt, less pollution and less noise in the neighbourhood.",
+          "കാത്തിരിക്കുമ്പോൾ എൻജിൻ ദീർഘനേരം ഐഡിൽ ചെയ്യരുത്, ആവശ്യമില്ലാതെ ഹോൺ അടിക്കരുത്. ഐഡിലിങ് കുറഞ്ഞാൽ ഇന്ധനം, മലിനീകരണം, പ്രദേശത്തെ ശബ്ദം എന്നിവ കുറയും.",
+          "காத்திருக்கும் போது எஞ்சினை நீண்ட நேரம் செயலிழக்கச் செய்யாதீர்கள், மேலும் தேவையில்லாமல் ஹார்னைப் பயன்படுத்தாதீர்கள். குறைவான செயலற்ற நிலை என்பது குறைந்த எரிபொருளை எரிப்பது, குறைந்த மாசுபாடு மற்றும் அக்கம்பக்கத்தில் குறைவான சத்தம் ஆகியவற்றைக் குறிக்கிறது."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Fuel-efficient driving",
+        "ഇന്ധനക്ഷമതയുള്ള ഡ്രൈവിങ്",
+        "எரிபொருள் திறன் கொண்ட ஓட்டுநர்"
+      ],
+      "p": [
+        [
+          "Smooth driving saves fuel. Accelerate gradually, look far ahead so that you can ease off early instead of braking late, and keep a steady speed where the road allows.",
+          "സുഗമമായ ഡ്രൈവിങ് ഇന്ധനം ലാഭിക്കും. പതുക്കെ വേഗം കൂട്ടുക, ദൂരേക്ക് നോക്കി വൈകി ബ്രേക്ക് ചെയ്യുന്നതിനു പകരം നേരത്തേ ആക്സിലറേറ്റർ വിടുക, റോഡ് അനുവദിക്കുന്നിടത്ത് സ്ഥിരമായ വേഗത്തിൽ പോകുക.",
+          "சீராக ஓட்டுவது எரிபொருளைச் சேமிக்கிறது. படிப்படியாக முடுக்கி, முன்னோக்கிப் பார்க்கவும், இதனால் தாமதமாக பிரேக்கிங் செய்வதற்குப் பதிலாக விரைவாகச் செல்லலாம், மேலும் சாலை அனுமதிக்கும் இடத்தில் நிலையான வேகத்தை வைத்திருக்கவும்."
+        ],
+        [
+          "Change gear at the right time, avoid riding the clutch, and do not rev the engine in neutral. Correct tyre pressure and removing unnecessary load from the vehicle also help.",
+          "ശരിയായ സമയത്ത് ഗിയർ മാറ്റുക, ക്ലച്ചിൽ കാൽ വയ്ക്കരുത്, ന്യൂട്രലിൽ എൻജിൻ റെയ്സ് ചെയ്യരുത്. ശരിയായ ടയർ മർദവും അനാവശ്യ ഭാരം ഒഴിവാക്കലും ഇന്ധനം ലാഭിക്കും.",
+          "சரியான நேரத்தில் கியரை மாற்றவும், கிளட்ச் சவாரி செய்வதைத் தவிர்க்கவும், நடுநிலையில் இயந்திரத்தை புதுப்பிக்க வேண்டாம். சரியான டயர் அழுத்தம் மற்றும் வாகனத்திலிருந்து தேவையற்ற சுமைகளை அகற்றுவதும் உதவும்."
+        ],
+        [
+          "Plan your route to avoid unnecessary stops and turns. A calm style is cheaper and safer at the same time.",
+          "അനാവശ്യ നിർത്തലും തിരിവും ഒഴിവാക്കാൻ റൂട്ട് ആസൂത്രണം ചെയ്യുക. ശാന്തമായ ശൈലി ചെലവു കുറവും സുരക്ഷിതവുമാണ്.",
+          "தேவையற்ற நிறுத்தங்கள் மற்றும் திருப்பங்களைத் தவிர்க்க உங்கள் வழியைத் திட்டமிடுங்கள். அமைதியான பாணி மலிவானது மற்றும் அதே நேரத்தில் பாதுகாப்பானது."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Dashboard warning lights",
+        "ഡാഷ്ബോർഡ് മുന്നറിയിപ്പ് ലൈറ്റുകൾ",
+        "டாஷ்போர்டு எச்சரிக்கை விளக்குகள்"
+      ],
+      "p": [
+        [
+          "Warning lights are the vehicle's way of telling you something is wrong. Colour is a rough guide: red usually means stop and check as soon as it is safe, amber or yellow means a fault needs attention soon, and green or blue usually show a system that is on.",
+          "മുന്നറിയിപ്പ് ലൈറ്റുകൾ വാഹനം എന്തോ കുഴപ്പമുണ്ടെന്ന് അറിയിക്കുന്ന രീതിയാണ്. നിറം ഏകദേശ വഴികാട്ടിയാണ്: ചുവപ്പ് സാധാരണ സുരക്ഷിതമായാലുടൻ നിർത്തി പരിശോധിക്കണം എന്ന്, മഞ്ഞ/ആമ്പർ ഉടൻ ശ്രദ്ധ വേണ്ട തകരാർ എന്ന്, പച്ചയോ നീലയോ ഒരു സംവിധാനം പ്രവർത്തിക്കുന്നു എന്ന് സൂചിപ്പിക്കുന്നു.",
+          "எச்சரிக்கும் விளக்குகள் வாகனத்தின் வழி ஏதோ தவறு என்று உங்களுக்குச் சொல்லும். நிறம் ஒரு தோராயமான வழிகாட்டி: சிவப்பு என்பது பொதுவாக நிறுத்து மற்றும் பாதுகாப்பாக இருந்தால் சரி பார்க்கவும், அம்பர் அல்லது மஞ்சள் என்றால் ஒரு தவறுக்கு விரைவில் கவனம் தேவை, மேலும் பச்சை அல்லது நீலம் பொதுவாக இயக்கத்தில் இருக்கும் அமைப்பைக் காட்டுகிறது."
+        ],
+        [
+          "Common ones include engine oil pressure, battery charging, engine temperature, brake system, ABS, airbag and the engine check light. Symbols differ between models, so read your owner's manual to know exactly what each means.",
+          "എൻജിൻ ഓയിൽ പ്രഷർ, ബാറ്ററി ചാർജിങ്, എൻജിൻ താപനില, ബ്രേക്ക് സിസ്റ്റം, ABS, എയർബാഗ്, എൻജിൻ ചെക്ക് ലൈറ്റ് എന്നിവ സാധാരണ കാണുന്നവയാണ്. ചിഹ്നങ്ങൾ മോഡലുകൾക്കനുസരിച്ച് വ്യത്യാസപ്പെടും; ഓരോന്നിന്റെയും അർഥം അറിയാൻ ഓണേഴ്സ് മാന്വൽ വായിക്കുക.",
+          "எஞ்சின் ஆயில் பிரஷர், பேட்டரி சார்ஜிங், இன்ஜின் வெப்பநிலை, பிரேக் சிஸ்டம், ஏபிஎஸ், ஏர்பேக் மற்றும் என்ஜின் செக் லைட் ஆகியவை பொதுவானவை. மாதிரிகளுக்கு இடையே சின்னங்கள் வேறுபடுகின்றன, எனவே ஒவ்வொன்றும் சரியாக என்ன என்பதை அறிய உங்கள் உரிமையாளரின் கையேட்டைப் படிக்கவும்."
+        ],
+        [
+          "Do not ignore a light because the vehicle still seems to run. Red oil pressure or temperature lights, in particular, can mean serious engine damage if you keep driving; stop safely and switch off, then seek help.",
+          "വാഹനം ഓടുന്നുണ്ടല്ലോ എന്നു കരുതി ലൈറ്റ് അവഗണിക്കരുത്. ചുവന്ന ഓയിൽ പ്രഷർ, താപനില ലൈറ്റുകൾ ഓടിക്കൽ തുടർന്നാൽ ഗുരുതരമായ എൻജിൻ കേടിനു കാരണമാകാം; സുരക്ഷിതമായി നിർത്തി ഓഫ് ചെയ്ത് സഹായം തേടുക.",
+          "வாகனம் இன்னும் இயங்குவதாகத் தோன்றுவதால், ஒளியைப் புறக்கணிக்காதீர்கள். சிவப்பு எண்ணெய் அழுத்தம் அல்லது வெப்பநிலை விளக்குகள், குறிப்பாக, நீங்கள் வாகனம் ஓட்டினால் தீவிர இயந்திர சேதத்தை குறிக்கும்; பாதுகாப்பாக நிறுத்தி அணைக்கவும், பிறகு உதவியை நாடுங்கள்."
+        ]
+      ]
+    }
+  ],
+  "dos": [
     [
-     "Walk around the vehicle once before a long trip. Look at tyres, lights, glass, mirrors and the ground under the vehicle for drips. This takes a minute and catches most simple faults.",
-     "ദീർഘയാത്രയ്ക്കു മുമ്പ് വാഹനത്തിന് ഒരു വട്ടം ചുറ്റി നടക്കുക. ടയർ, ലൈറ്റ്, ഗ്ലാസ്, മിററുകൾ, വാഹനത്തിനടിയിൽ ഇറ്റുന്ന ദ്രാവകം എന്നിവ നോക്കുക. ഒരു മിനിറ്റ് മതി; ലളിതമായ മിക്ക തകരാറുകളും ഇതിൽ പിടിക്കാം."
+      "Check tyre pressure regularly, including the spare.",
+      "സ്പെയർ ഉൾപ്പെടെ ടയർ മർദം കൃത്യമായി പരിശോധിക്കുക.",
+      "உதிரி உட்பட டயர் அழுத்தத்தை தவறாமல் சரிபார்க்கவும்."
     ],
     [
-     "Inside, adjust the seat, mirrors and steering, fasten the seat belt, and check that the horn, indicators and wipers work. Make sure the brake and clutch pedals feel normal.",
-     "അകത്ത് സീറ്റ്, മിററുകൾ, സ്റ്റിയറിങ് എന്നിവ ക്രമീകരിക്കുക, സീറ്റ് ബെൽറ്റ് ഇടുക, ഹോൺ, ഇൻഡിക്കേറ്റർ, വൈപ്പർ എന്നിവ പ്രവർത്തിക്കുന്നുണ്ടോ എന്ന് നോക്കുക. ബ്രേക്ക്, ക്ലച്ച് പെഡലുകൾക്ക് സാധാരണ അനുഭവമാണെന്ന് ഉറപ്പാക്കുക."
+      "Inspect tread and sidewalls for wear and damage.",
+      "ട്രെഡും സൈഡ്‌വാളും തേയ്മാനത്തിനും കേടിനും പരിശോധിക്കുക.",
+      "தேய்மானம் மற்றும் சேதம் உள்ளதா என ஜாக்கிரதை மற்றும் பக்கச்சுவர்களைப் பரிசோதிக்கவும்."
     ],
     [
-     "Keep the vehicle documents and the first-aid kit handy, and follow the service schedule in the owner's manual rather than waiting for something to fail.",
-     "വാഹന രേഖകളും പ്രഥമശുശ്രൂഷാ കിറ്റും കൈയെത്തും ദൂരത്ത് സൂക്ഷിക്കുക; എന്തെങ്കിലും കേടാകുംവരെ കാത്തിരിക്കാതെ ഓണേഴ്സ് മാന്വലിലെ സർവീസ് ഷെഡ്യൂൾ പാലിക്കുക."
+      "Service the vehicle on schedule.",
+      "കൃത്യസമയത്ത് വാഹനം സർവീസ് ചെയ്യുക.",
+      "கால அட்டவணையில் வாகனத்தை சர்வீஸ் செய்யுங்கள்."
+    ],
+    [
+      "Keep a valid PUC certificate.",
+      "സാധുവായ PUC സർട്ടിഫിക്കറ്റ് സൂക്ഷിക്കുക.",
+      "சரியான PUC சான்றிதழை வைத்திருங்கள்."
+    ],
+    [
+      "Test all lights before a long trip.",
+      "ദീർഘയാത്രയ്ക്കു മുമ്പ് എല്ലാ ലൈറ്റുകളും പരിശോധിക്കുക.",
+      "நீண்ட பயணத்திற்கு முன் அனைத்து விளக்குகளையும் சோதிக்கவும்."
+    ],
+    [
+      "Check engine oil and coolant on level ground.",
+      "നിരപ്പായ സ്ഥലത്ത് എൻജിൻ ഓയിലും കൂളന്റും പരിശോധിക്കുക.",
+      "சமதளத்தில் என்ஜின் ஆயில் மற்றும் குளிரூட்டியை சரிபார்க்கவும்."
+    ],
+    [
+      "Read the owner's manual for warning light meanings.",
+      "മുന്നറിയിപ്പ് ലൈറ്റുകളുടെ അർഥത്തിന് ഓണേഴ്സ് മാന്വൽ വായിക്കുക.",
+      "எச்சரிக்கை ஒளி அர்த்தங்களுக்கு உரிமையாளரின் கையேட்டைப் படிக்கவும்."
+    ],
+    [
+      "Accelerate and brake smoothly.",
+      "സുഗമമായി വേഗം കൂട്ടുകയും ബ്രേക്ക് ചെയ്യുകയും ചെയ്യുക.",
+      "முடுக்கி மற்றும் சீராக பிரேக் செய்யவும்."
+    ],
+    [
+      "Replace worn wipers and tyres in time.",
+      "തേഞ്ഞ വൈപ്പറും ടയറും സമയത്തു മാറ്റുക.",
+      "பழைய வைப்பர்கள் மற்றும் டயர்களை சரியான நேரத்தில் மாற்றவும்."
+    ],
+    [
+      "Get brake problems checked immediately.",
+      "ബ്രേക്ക് പ്രശ്നങ്ങൾ ഉടൻ പരിശോധിപ്പിക്കുക.",
+      "பிரேக் பிரச்சனைகளை உடனடியாக சரிபார்க்கவும்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Tyres",
-    "ടയറുകൾ"
-   ],
-   "p": [
+  ],
+  "donts": [
     [
-     "Tyres are the only part of the vehicle touching the road, so grip, braking and steering all depend on them. Check pressure regularly when the tyres are cold, using the value recommended by the vehicle maker, and do not forget the spare.",
-     "വാഹനത്തിൽ റോഡിൽ തൊടുന്ന ഏക ഭാഗം ടയറാണ്; പിടിത്തം, ബ്രേക്കിങ്, സ്റ്റിയറിങ് എല്ലാം അതിനെ ആശ്രയിക്കുന്നു. ടയർ തണുത്തിരിക്കുമ്പോൾ, വാഹന നിർമാതാവ് നിർദേശിച്ച മർദത്തിൽ കൃത്യമായി കാറ്റ് പരിശോധിക്കുക; സ്പെയർ ടയറും മറക്കരുത്."
+      "Do not ignore red warning lights.",
+      "ചുവന്ന മുന്നറിയിപ്പ് ലൈറ്റുകൾ അവഗണിക്കരുത്.",
+      "சிவப்பு எச்சரிக்கை விளக்குகளை புறக்கணிக்காதீர்கள்."
     ],
     [
-     "Look at the tread. Grooves push water out from under the tyre, so worn tyres are far more dangerous in the rain. Most tyres have wear indicators in the grooves; if the tread is level with them, replace the tyre.",
-     "ട്രെഡ് നോക്കുക. ടയറിനടിയിൽ നിന്ന് വെള്ളം പുറത്തേക്ക് തള്ളുന്നത് ഗ്രൂവുകളാണ്, അതിനാൽ തേഞ്ഞ ടയർ മഴയിൽ വളരെ അപകടകരമാണ്. മിക്ക ടയറുകളിലും ഗ്രൂവിൽ തേയ്മാന സൂചകങ്ങളുണ്ട്; ട്രെഡ് അവയ്ക്കൊപ്പമെത്തിയാൽ ടയർ മാറ്റുക."
+      "Do not open a hot radiator cap.",
+      "ചൂടുള്ള റേഡിയേറ്റർ തൊപ്പി തുറക്കരുത്.",
+      "சூடான ரேடியேட்டர் தொப்பியைத் திறக்க வேண்டாம்."
     ],
     [
-     "Check the sidewalls for cuts, bulges and cracks, and remove stones stuck in the tread. Uneven wear can mean wrong pressure or poor wheel alignment, so get it checked.",
-     "സൈഡ്‌വാളിൽ മുറിവ്, വീക്കം, വിള്ളൽ എന്നിവയുണ്ടോ എന്ന് നോക്കുക; ട്രെഡിൽ കുടുങ്ങിയ കല്ലുകൾ നീക്കുക. ഒരേപോലെയല്ലാത്ത തേയ്മാനം തെറ്റായ മർദമോ വീൽ അലൈൻമെന്റ് പ്രശ്നമോ ആകാം; പരിശോധിപ്പിക്കുക."
+      "Do not drive with bald or damaged tyres.",
+      "തേഞ്ഞതോ കേടായതോ ആയ ടയറുമായി ഓടിക്കരുത്.",
+      "வழுக்கை அல்லது சேதமடைந்த டயர்களுடன் வாகனம் ஓட்ட வேண்டாம்."
     ],
     [
-     "Never overload the vehicle beyond what the maker allows. Overloading overheats tyres and lengthens braking distance.",
-     "വാഹന നിർമാതാവ് അനുവദിച്ചതിലും അധികം ഭാരം കയറ്റരുത്. അമിതഭാരം ടയർ ചൂടാക്കുകയും ബ്രേക്കിങ് ദൂരം കൂട്ടുകയും ചെയ്യും."
+      "Do not overload the vehicle.",
+      "വാഹനത്തിൽ അമിതഭാരം കയറ്റരുത്.",
+      "வாகனத்தை ஓவர்லோட் செய்ய வேண்டாம்."
+    ],
+    [
+      "Do not ride the clutch or the brake.",
+      "ക്ലച്ചിലോ ബ്രേക്കിലോ കാൽ വച്ച് ഓടിക്കരുത്.",
+      "கிளட்ச் அல்லது பிரேக்கை சவாரி செய்யாதீர்கள்."
+    ],
+    [
+      "Do not idle the engine for long.",
+      "എൻജിൻ ദീർഘനേരം ഐഡിൽ ചെയ്യരുത്.",
+      "எஞ்சினை நீண்ட நேரம் செயலிழக்க வைக்காதீர்கள்."
+    ],
+    [
+      "Do not drive with a faulty brake light or indicator.",
+      "കേടായ ബ്രേക്ക് ലൈറ്റോ ഇൻഡിക്കേറ്ററോ ഉപയോഗിച്ച് ഓടിക്കരുത്.",
+      "தவறான பிரேக் லைட் அல்லது இண்டிகேட்டர் மூலம் வாகனம் ஓட்ட வேண்டாம்."
+    ],
+    [
+      "Do not top up brake fluid and ignore a leak.",
+      "ബ്രേക്ക് ഫ്ലൂയിഡ് നിറച്ച് ചോർച്ച അവഗണിക്കരുത്.",
+      "பிரேக் திரவத்தை நிரப்ப வேண்டாம் மற்றும் கசிவை புறக்கணிக்கவும்."
+    ],
+    [
+      "Do not change the exhaust or lights in ways that break the rules.",
+      "നിയമം ലംഘിക്കുന്ന രീതിയിൽ എക്സ്ഹോസ്റ്റോ ലൈറ്റുകളോ മാറ്റം വരുത്തരുത്.",
+      "விதிகளை மீறும் வழிகளில் வெளியேற்றம் அல்லது விளக்குகளை மாற்ற வேண்டாம்."
+    ],
+    [
+      "Do not skip servicing to save a little money.",
+      "അൽപം പണം ലാഭിക്കാൻ സർവീസ് ഒഴിവാക്കരുത്.",
+      "கொஞ்சம் பணத்தை மிச்சப்படுத்த சர்வீஸ் செய்வதைத் தவிர்க்காதீர்கள்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Brakes, fluids and lights",
-    "ബ്രേക്ക്, ദ്രാവകങ്ങൾ, ലൈറ്റുകൾ"
-   ],
-   "p": [
+  ],
+  "myths": [
+    {
+      "m": [
+        "Tyres are fine if they still hold air.",
+        "കാറ്റ് നിൽക്കുന്നുണ്ടെങ്കിൽ ടയർ കുഴപ്പമില്ല.",
+        "டயர்கள் இன்னும் காற்றைப் பிடித்திருந்தால் நன்றாக இருக்கும்."
+      ],
+      "f": [
+        "Worn tread cannot clear water and grips poorly even when full of air. Tread and sidewalls matter too.",
+        "തേഞ്ഞ ട്രെഡിന് വെള്ളം നീക്കാനാവില്ല; കാറ്റ് നിറഞ്ഞിരുന്നാലും പിടിത്തം കുറവായിരിക്കും. ട്രെഡും സൈഡ്‌വാളും പ്രധാനമാണ്.",
+        "தேய்ந்த ஜாக்கிரதையால் நீரை சுத்தம் செய்ய முடியாது மற்றும் காற்று நிரம்பியிருந்தாலும் மோசமாகப் பிடிக்கும். நடைபாதை மற்றும் பக்கச்சுவர்கள் கூட முக்கியம்."
+      ]
+    },
+    {
+      "m": [
+        "Warming up the engine for a long time is good.",
+        "എൻജിൻ ദീർഘനേരം ചൂടാക്കുന്നത് നല്ലതാണ്.",
+        "எஞ்சினை நீண்ட நேரம் வெப்பமாக்குவது நல்லது."
+      ],
+      "f": [
+        "Long idling wastes fuel and adds pollution. Start, wait briefly, and drive off gently as the manual advises.",
+        "ദീർഘനേരം ഐഡിൽ ചെയ്യുന്നത് ഇന്ധനം പാഴാക്കുകയും മലിനീകരണം കൂട്ടുകയും ചെയ്യും. സ്റ്റാർട്ട് ചെയ്ത് അൽപനേരം കഴിഞ്ഞ് മാന്വൽ പറയുംപോലെ പതുക്കെ നീങ്ങുക.",
+        "நீண்ட நேரம் செயலற்ற நிலையில் இருப்பது எரிபொருளை வீணாக்குகிறது மற்றும் மாசுபாட்டை சேர்க்கிறது. தொடங்கவும், சிறிது நேரம் காத்திருந்து, கையேடு அறிவுறுத்தியபடி மெதுவாக ஓட்டவும்."
+      ]
+    },
+    {
+      "m": [
+        "A PUC certificate is only a formality.",
+        "PUC സർട്ടിഫിക്കറ്റ് വെറും ഔപചാരികത മാത്രമാണ്.",
+        "PUC சான்றிதழ் என்பது ஒரு சம்பிரதாயம் மட்டுமே."
+      ],
+      "f": [
+        "It checks that your exhaust is within limits and flags engine faults. It is a legal requirement, so check the current rule with your RTO.",
+        "എക്സ്ഹോസ്റ്റ് പരിധിക്കുള്ളിലാണോ എന്ന് പരിശോധിക്കുകയും എൻജിൻ തകരാർ കണ്ടെത്താൻ സഹായിക്കുകയും ചെയ്യുന്നു. ഇത് നിയമപരമായ ആവശ്യമാണ്; നിലവിലെ നിയമം RTO യിൽ പരിശോധിക്കുക.",
+        "இது உங்கள் வெளியேற்றம் வரம்புக்குள் உள்ளதா என்பதைச் சரிபார்த்து, எஞ்சின் பிழைகளைக் கொடியிடுகிறது. இது ஒரு சட்டபூர்வமான தேவை, எனவே உங்கள் RTO உடன் தற்போதைய விதியை சரிபார்க்கவும்."
+      ]
+    },
+    {
+      "m": [
+        "If a warning light goes off by itself, the problem is gone.",
+        "മുന്നറിയിപ്പ് ലൈറ്റ് തനിയെ അണഞ്ഞാൽ പ്രശ്നം മാറി.",
+        "ஒரு எச்சரிக்கை விளக்கு தானாகவே அணைந்துவிட்டால், பிரச்சனை தீர்ந்துவிடும்."
+      ],
+      "f": [
+        "Some faults are intermittent. A light that came on once should still be mentioned to a mechanic.",
+        "ചില തകരാറുകൾ ഇടയ്ക്കിടെ മാത്രം വരും. ഒരിക്കൽ തെളിഞ്ഞ ലൈറ്റ് മെക്കാനിക്കിനെ അറിയിക്കണം.",
+        "சில தவறுகள் இடையிடையே உள்ளன. ஒருமுறை எரிந்த ஒளியை இன்னும் ஒரு மெக்கானிக்கிடம் குறிப்பிட வேண்டும்."
+      ]
+    },
+    {
+      "m": [
+        "Driving fast and braking hard gets me there sooner and costs the same.",
+        "വേഗത്തിൽ ഓടിച്ച് ശക്തമായി ബ്രേക്ക് ചെയ്താൽ വേഗം എത്തും, ചെലവും ഒന്നുതന്നെ.",
+        "வேகமாக ஓட்டுவதும், பிரேக் அடிப்பதும் என்னை விரைவில் அங்கு அழைத்துச் செல்லும்."
+      ],
+      "f": [
+        "Harsh driving burns more fuel, wears tyres and brakes faster, and saves very little time.",
+        "പരുക്കൻ ഡ്രൈവിങ് കൂടുതൽ ഇന്ധനം കത്തിക്കുകയും ടയറും ബ്രേക്കും വേഗം തേയ്ക്കുകയും ചെയ്യും; സമയം ലാഭിക്കുന്നത് വളരെ കുറവാണ്.",
+        "கடுமையான வாகனம் ஓட்டுவது அதிக எரிபொருளை எரிக்கிறது, டயர்கள் மற்றும் பிரேக்களை வேகமாக அணிகிறது, மேலும் மிகக் குறைந்த நேரத்தை மிச்சப்படுத்துகிறது."
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "t": [
+        "The soft tyre",
+        "കാറ്റു കുറഞ്ഞ ടയർ",
+        "மென்மையான டயர்"
+      ],
+      "s": [
+        "Before a family trip, Binu walked around his car and noticed that the left rear tyre looked slightly flat. He checked the pressure at a nearby station and found it low, so he filled it to the recommended value. The mechanic also pointed out a small nail in the tread. It was fixed in minutes. He realised how much worse a puncture at highway speed with a loaded car could have been.",
+        "കുടുംബയാത്രയ്ക്കു മുമ്പ് ബിനു കാറിന് ഒരു വട്ടം ചുറ്റി നോക്കിയപ്പോൾ ഇടത് പിൻ ടയറിന് ചെറിയ കാറ്റുകുറവ് കണ്ടു. അടുത്തുള്ള പമ്പിൽ മർദം പരിശോധിച്ചപ്പോൾ കുറവായിരുന്നു; നിർദേശിച്ച അളവിലേക്ക് നിറച്ചു. ട്രെഡിൽ ഒരു ചെറിയ ആണി ഉള്ളത് മെക്കാനിക്ക് കാണിച്ചുതന്നു; മിനിറ്റുകൾക്കകം ശരിയാക്കി. ഭാരം കയറ്റിയ കാറിൽ ഹൈവേ വേഗത്തിൽ പഞ്ചറായിരുന്നെങ്കിൽ എത്ര മോശമാകുമായിരുന്നു എന്ന് അയാൾ ഓർത്തു.",
+        "குடும்பப் பயணத்திற்கு முன், பினு தனது காரைச் சுற்றிச் சென்று பார்த்தபோது, ​​இடது பின் டயர் சற்று தட்டையாக இருப்பதைக் கவனித்தார். அவர் அருகிலுள்ள நிலையத்தில் அழுத்தத்தை சரிபார்த்து, அது குறைவாக இருப்பதைக் கண்டறிந்தார், எனவே அவர் பரிந்துரைக்கப்பட்ட மதிப்பில் அதை நிரப்பினார். மெக்கானிக் கூட நடைபாதையில் ஒரு சிறிய ஆணியை சுட்டிக்காட்டினார். நிமிடங்களில் சரி செய்யப்பட்டது. ஒரு ஏற்றப்பட்ட காருடன் நெடுஞ்சாலை வேகத்தில் ஒரு பஞ்சர் எவ்வளவு மோசமாக இருந்திருக்கும் என்பதை அவர் உணர்ந்தார்."
+      ],
+      "lesson": [
+        "A one-minute walk-around can prevent a roadside emergency.",
+        "ഒരു മിനിറ്റ് നീളുന്ന പരിശോധന വഴിയിലെ അടിയന്തരാവസ്ഥ ഒഴിവാക്കാം.",
+        "ஒரு நிமிட நடைப்பயிற்சி சாலையோர அவசரநிலையைத் தடுக்கலாம்."
+      ]
+    },
+    {
+      "t": [
+        "The red light that stayed on",
+        "അണയാത്ത ചുവന്ന ലൈറ്റ്",
+        ""
+      ],
+      "s": [
+        "While driving, a learner called Meera saw a red oil-can light come on. She thought it could wait until she reached home. Remembering her lesson, she pulled over safely, switched off the engine and read the manual. It said to stop and check the oil level. The level was very low. She called for help instead of driving on, and the mechanic said the engine had been saved.",
+        "വാഹനം ഓടിക്കുമ്പോൾ മീര എന്ന പഠിതാവ് ചുവന്ന ഓയിൽ ക്യാൻ ലൈറ്റ് തെളിയുന്നത് കണ്ടു. വീട്ടിലെത്തിയിട്ട് നോക്കാം എന്ന് ആദ്യം കരുതി. പഠിച്ചത് ഓർത്ത് അവൾ സുരക്ഷിതമായി വാഹനം ഒതുക്കി എൻജിൻ ഓഫ് ചെയ്ത് മാന്വൽ വായിച്ചു. നിർത്തി ഓയിൽ നില പരിശോധിക്കണം എന്നായിരുന്നു നിർദേശം. ഓയിൽ വളരെ കുറവായിരുന്നു. ഓടിച്ചുപോകാതെ സഹായം വിളിച്ചു; എൻജിൻ രക്ഷപ്പെട്ടു എന്ന് മെക്കാനിക്ക് പറഞ്ഞു.",
+        "வாகனம் ஓட்டும் போது, ​​மீரா என்று அழைக்கப்படும் ஒரு கற்றவர், சிவப்பு எண்ணெய் கேன் விளக்கு எரிவதைக் கண்டார். அவள் வீட்டை அடையும் வரை காத்திருக்கலாம் என்று நினைத்தாள். அவள் பாடத்தை நினைவில் வைத்துக் கொண்டு, அவள் பாதுகாப்பாக இழுத்து, இயந்திரத்தை அணைத்து கையேட்டைப் படித்தாள். அதை நிறுத்தி எண்ணெய் அளவை சரிபார்க்கவும். நிலை மிகவும் குறைவாக இருந்தது. அவள் ஓட்டுவதற்குப் பதிலாக உதவிக்கு அழைத்தாள், இயந்திரம் காப்பாற்றப்பட்டதாக மெக்கானிக் கூறினார்."
+      ],
+      "lesson": [
+        "A red warning light means stop safely and check. Do not wait until you get home.",
+        "ചുവന്ന മുന്നറിയിപ്പ് എന്നാൽ സുരക്ഷിതമായി നിർത്തി പരിശോധിക്കുക. വീട്ടിലെത്തുംവരെ കാത്തിരിക്കരുത്.",
+        "சிவப்பு எச்சரிக்கை விளக்கு என்றால் பாதுகாப்பாக நிறுத்தி சரிபார்க்கவும். நீங்கள் வீட்டிற்கு வரும் வரை காத்திருக்க வேண்டாம்."
+      ]
+    }
+  ],
+  "recap": [
     [
-     "Warning signs of weak brakes include a soft or sinking pedal, pulling to one side, squealing or grinding noise, and a longer stopping distance. Do not wait; have the brakes inspected at once.",
-     "ബ്രേക്ക് ദുർബലമാകുന്നതിന്റെ ലക്ഷണങ്ങൾ: പെഡൽ മൃദുവാകുകയോ താഴ്ന്നുപോകുകയോ ചെയ്യുക, വാഹനം ഒരു വശത്തേക്ക് വലിയുക, ഞരക്കമോ ഉരസൽ ശബ്ദമോ, നിർത്താൻ കൂടുതൽ ദൂരം വേണ്ടിവരിക. കാത്തിരിക്കാതെ ഉടൻ ബ്രേക്ക് പരിശോധിപ്പിക്കുക."
+      "Walk around the vehicle before a trip.",
+      "യാത്രയ്ക്കു മുമ്പ് വാഹനത്തിന് ചുറ്റും ഒരു പരിശോധന നടത്തുക.",
+      "பயணத்திற்கு முன் வாகனத்தைச் சுற்றி நடக்கவும்."
     ],
     [
-     "Know the main fluids: engine oil, coolant, brake fluid, windscreen washer fluid and, where fitted, power steering fluid. Check levels on level ground as the manual describes, and never open a hot radiator cap.",
-     "പ്രധാന ദ്രാവകങ്ങൾ അറിയുക: എൻജിൻ ഓയിൽ, കൂളന്റ്, ബ്രേക്ക് ഫ്ലൂയിഡ്, വിൻഡ്സ്ക്രീൻ വാഷർ ഫ്ലൂയിഡ്, ഉണ്ടെങ്കിൽ പവർ സ്റ്റിയറിങ് ഫ്ലൂയിഡ്. മാന്വൽ പറയുന്നതുപോലെ നിരപ്പായ സ്ഥലത്ത് അളവ് നോക്കുക; ചൂടുള്ള റേഡിയേറ്റർ തൊപ്പി ഒരിക്കലും തുറക്കരുത്."
+      "Tyres: pressure, tread, sidewalls, spare.",
+      "ടയർ: മർദം, ട്രെഡ്, സൈഡ്‌വാൾ, സ്പെയർ.",
+      "டயர்கள்: அழுத்தம், ஜாக்கிரதை, பக்கச்சுவர்கள், உதிரி."
     ],
     [
-     "A falling brake fluid level is a warning, not something to top up and forget, because it can mean a leak or worn pads. Get the cause found.",
-     "ബ്രേക്ക് ഫ്ലൂയിഡ് കുറയുന്നത് മുന്നറിയിപ്പാണ്; നിറച്ച് മറക്കേണ്ട കാര്യമല്ല, ചോർച്ചയോ തേഞ്ഞ പാഡോ ആകാം. കാരണം കണ്ടെത്തുക."
+      "Brake feel changes mean get it checked now.",
+      "ബ്രേക്കിന്റെ അനുഭവം മാറിയാൽ ഉടൻ പരിശോധിപ്പിക്കുക.",
+      "பிரேக் ஃபீல் மாற்றங்கள் என்பதை இப்போது சரிபார்க்கவும்."
     ],
     [
-     "Test headlights (low and high beam), tail lamps, brake lights, indicators and number-plate lamp. Working lights let others see you and understand your intentions; a dead brake light invites a rear-end collision.",
-     "ഹെഡ്‌ലൈറ്റ് (ലോ, ഹൈ ബീം), ടെയിൽ ലാമ്പ്, ബ്രേക്ക് ലൈറ്റ്, ഇൻഡിക്കേറ്റർ, നമ്പർ പ്ലേറ്റ് ലാമ്പ് എന്നിവ പരിശോധിക്കുക. പ്രവർത്തിക്കുന്ന ലൈറ്റുകൾ മറ്റുള്ളവർക്ക് നിങ്ങളെ കാണാനും ഉദ്ദേശ്യം മനസ്സിലാക്കാനും സഹായിക്കുന്നു; കത്താത്ത ബ്രേക്ക് ലൈറ്റ് പിന്നിൽ നിന്നുള്ള ഇടിയെ ക്ഷണിച്ചുവരുത്തും."
+      "Keep a valid PUC and service on schedule.",
+      "സാധുവായ PUC സൂക്ഷിക്കുക, കൃത്യമായി സർവീസ് ചെയ്യുക.",
+      "சரியான PUC மற்றும் சேவையை அட்டவணையில் வைத்திருங்கள்."
+    ],
+    [
+      "Smooth driving saves fuel and parts.",
+      "സുഗമമായ ഡ്രൈവിങ് ഇന്ധനവും ഭാഗങ്ങളും ലാഭിക്കും.",
+      "மென்மையான ஓட்டுதல் எரிபொருள் மற்றும் பாகங்களை சேமிக்கிறது."
+    ],
+    [
+      "Red warning light: stop safely and check.",
+      "ചുവന്ന മുന്നറിയിപ്പ് ലൈറ്റ്: സുരക്ഷിതമായി നിർത്തി പരിശോധിക്കുക.",
+      "சிவப்பு எச்சரிக்கை விளக்கு: பாதுகாப்பாக நிறுத்தி சரிபார்க்கவும்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Pollution check and the environment",
-    "പുക പരിശോധനയും പരിസ്ഥിതിയും"
-   ],
-   "p": [
-    [
-     "A Pollution Under Control (PUC) certificate shows that your vehicle's exhaust emissions were tested and found within the permitted limits. Driving without a valid certificate is an offence and a penalty applies; check the current rules with your RTO or on Parivahan.",
-     "നിങ്ങളുടെ വാഹനത്തിന്റെ പുക പുറന്തള്ളൽ പരിശോധിച്ച് അനുവദനീയമായ പരിധിക്കുള്ളിലാണെന്ന് തെളിയിക്കുന്നതാണ് പൊല്യൂഷൻ അണ്ടർ കൺട്രോൾ (PUC) സർട്ടിഫിക്കറ്റ്. സാധുവായ സർട്ടിഫിക്കറ്റില്ലാതെ ഓടിക്കുന്നത് കുറ്റകരവും പിഴ ബാധകവുമാണ്; നിലവിലെ നിയമം RTO യിലോ പരിവാഹനിലോ പരിശോധിക്കുക."
-    ],
-    [
-     "Black smoke, blue smoke or a strong smell usually points to a fault such as a dirty air filter, burning oil or a badly tuned engine. Regular servicing keeps emissions down and also saves fuel.",
-     "കറുത്ത പുക, നീല പുക, രൂക്ഷ ഗന്ധം എന്നിവ സാധാരണ എയർ ഫിൽറ്റർ അഴുക്ക്, ഓയിൽ കത്തൽ, ശരിയായി ട്യൂൺ ചെയ്യാത്ത എൻജിൻ തുടങ്ങിയ തകരാറിനെ സൂചിപ്പിക്കുന്നു. കൃത്യമായ സർവീസ് പുക കുറയ്ക്കുകയും ഇന്ധനം ലാഭിക്കുകയും ചെയ്യും."
-    ],
-    [
-     "Do not idle the engine for long while waiting, and do not use the horn without need. Less idling means less fuel burnt, less pollution and less noise in the neighbourhood.",
-     "കാത്തിരിക്കുമ്പോൾ എൻജിൻ ദീർഘനേരം ഐഡിൽ ചെയ്യരുത്, ആവശ്യമില്ലാതെ ഹോൺ അടിക്കരുത്. ഐഡിലിങ് കുറഞ്ഞാൽ ഇന്ധനം, മലിനീകരണം, പ്രദേശത്തെ ശബ്ദം എന്നിവ കുറയും."
-    ]
-   ]
-  },
-  {
-   "h": [
-    "Fuel-efficient driving",
-    "ഇന്ധനക്ഷമതയുള്ള ഡ്രൈവിങ്"
-   ],
-   "p": [
-    [
-     "Smooth driving saves fuel. Accelerate gradually, look far ahead so that you can ease off early instead of braking late, and keep a steady speed where the road allows.",
-     "സുഗമമായ ഡ്രൈവിങ് ഇന്ധനം ലാഭിക്കും. പതുക്കെ വേഗം കൂട്ടുക, ദൂരേക്ക് നോക്കി വൈകി ബ്രേക്ക് ചെയ്യുന്നതിനു പകരം നേരത്തേ ആക്സിലറേറ്റർ വിടുക, റോഡ് അനുവദിക്കുന്നിടത്ത് സ്ഥിരമായ വേഗത്തിൽ പോകുക."
-    ],
-    [
-     "Change gear at the right time, avoid riding the clutch, and do not rev the engine in neutral. Correct tyre pressure and removing unnecessary load from the vehicle also help.",
-     "ശരിയായ സമയത്ത് ഗിയർ മാറ്റുക, ക്ലച്ചിൽ കാൽ വയ്ക്കരുത്, ന്യൂട്രലിൽ എൻജിൻ റെയ്സ് ചെയ്യരുത്. ശരിയായ ടയർ മർദവും അനാവശ്യ ഭാരം ഒഴിവാക്കലും ഇന്ധനം ലാഭിക്കും."
-    ],
-    [
-     "Plan your route to avoid unnecessary stops and turns. A calm style is cheaper and safer at the same time.",
-     "അനാവശ്യ നിർത്തലും തിരിവും ഒഴിവാക്കാൻ റൂട്ട് ആസൂത്രണം ചെയ്യുക. ശാന്തമായ ശൈലി ചെലവു കുറവും സുരക്ഷിതവുമാണ്."
-    ]
-   ]
-  },
-  {
-   "h": [
-    "Dashboard warning lights",
-    "ഡാഷ്ബോർഡ് മുന്നറിയിപ്പ് ലൈറ്റുകൾ"
-   ],
-   "p": [
-    [
-     "Warning lights are the vehicle's way of telling you something is wrong. Colour is a rough guide: red usually means stop and check as soon as it is safe, amber or yellow means a fault needs attention soon, and green or blue usually show a system that is on.",
-     "മുന്നറിയിപ്പ് ലൈറ്റുകൾ വാഹനം എന്തോ കുഴപ്പമുണ്ടെന്ന് അറിയിക്കുന്ന രീതിയാണ്. നിറം ഏകദേശ വഴികാട്ടിയാണ്: ചുവപ്പ് സാധാരണ സുരക്ഷിതമായാലുടൻ നിർത്തി പരിശോധിക്കണം എന്ന്, മഞ്ഞ/ആമ്പർ ഉടൻ ശ്രദ്ധ വേണ്ട തകരാർ എന്ന്, പച്ചയോ നീലയോ ഒരു സംവിധാനം പ്രവർത്തിക്കുന്നു എന്ന് സൂചിപ്പിക്കുന്നു."
-    ],
-    [
-     "Common ones include engine oil pressure, battery charging, engine temperature, brake system, ABS, airbag and the engine check light. Symbols differ between models, so read your owner's manual to know exactly what each means.",
-     "എൻജിൻ ഓയിൽ പ്രഷർ, ബാറ്ററി ചാർജിങ്, എൻജിൻ താപനില, ബ്രേക്ക് സിസ്റ്റം, ABS, എയർബാഗ്, എൻജിൻ ചെക്ക് ലൈറ്റ് എന്നിവ സാധാരണ കാണുന്നവയാണ്. ചിഹ്നങ്ങൾ മോഡലുകൾക്കനുസരിച്ച് വ്യത്യാസപ്പെടും; ഓരോന്നിന്റെയും അർഥം അറിയാൻ ഓണേഴ്സ് മാന്വൽ വായിക്കുക."
-    ],
-    [
-     "Do not ignore a light because the vehicle still seems to run. Red oil pressure or temperature lights, in particular, can mean serious engine damage if you keep driving; stop safely and switch off, then seek help.",
-     "വാഹനം ഓടുന്നുണ്ടല്ലോ എന്നു കരുതി ലൈറ്റ് അവഗണിക്കരുത്. ചുവന്ന ഓയിൽ പ്രഷർ, താപനില ലൈറ്റുകൾ ഓടിക്കൽ തുടർന്നാൽ ഗുരുതരമായ എൻജിൻ കേടിനു കാരണമാകാം; സുരക്ഷിതമായി നിർത്തി ഓഫ് ചെയ്ത് സഹായം തേടുക."
-    ]
-   ]
-  }
- ],
- "dos": [
-  [
-   "Check tyre pressure regularly, including the spare.",
-   "സ്പെയർ ഉൾപ്പെടെ ടയർ മർദം കൃത്യമായി പരിശോധിക്കുക."
-  ],
-  [
-   "Inspect tread and sidewalls for wear and damage.",
-   "ട്രെഡും സൈഡ്‌വാളും തേയ്മാനത്തിനും കേടിനും പരിശോധിക്കുക."
-  ],
-  [
-   "Service the vehicle on schedule.",
-   "കൃത്യസമയത്ത് വാഹനം സർവീസ് ചെയ്യുക."
-  ],
-  [
-   "Keep a valid PUC certificate.",
-   "സാധുവായ PUC സർട്ടിഫിക്കറ്റ് സൂക്ഷിക്കുക."
-  ],
-  [
-   "Test all lights before a long trip.",
-   "ദീർഘയാത്രയ്ക്കു മുമ്പ് എല്ലാ ലൈറ്റുകളും പരിശോധിക്കുക."
-  ],
-  [
-   "Check engine oil and coolant on level ground.",
-   "നിരപ്പായ സ്ഥലത്ത് എൻജിൻ ഓയിലും കൂളന്റും പരിശോധിക്കുക."
-  ],
-  [
-   "Read the owner's manual for warning light meanings.",
-   "മുന്നറിയിപ്പ് ലൈറ്റുകളുടെ അർഥത്തിന് ഓണേഴ്സ് മാന്വൽ വായിക്കുക."
-  ],
-  [
-   "Accelerate and brake smoothly.",
-   "സുഗമമായി വേഗം കൂട്ടുകയും ബ്രേക്ക് ചെയ്യുകയും ചെയ്യുക."
-  ],
-  [
-   "Replace worn wipers and tyres in time.",
-   "തേഞ്ഞ വൈപ്പറും ടയറും സമയത്തു മാറ്റുക."
-  ],
-  [
-   "Get brake problems checked immediately.",
-   "ബ്രേക്ക് പ്രശ്നങ്ങൾ ഉടൻ പരിശോധിപ്പിക്കുക."
   ]
- ],
- "donts": [
-  [
-   "Do not ignore red warning lights.",
-   "ചുവന്ന മുന്നറിയിപ്പ് ലൈറ്റുകൾ അവഗണിക്കരുത്."
-  ],
-  [
-   "Do not open a hot radiator cap.",
-   "ചൂടുള്ള റേഡിയേറ്റർ തൊപ്പി തുറക്കരുത്."
-  ],
-  [
-   "Do not drive with bald or damaged tyres.",
-   "തേഞ്ഞതോ കേടായതോ ആയ ടയറുമായി ഓടിക്കരുത്."
-  ],
-  [
-   "Do not overload the vehicle.",
-   "വാഹനത്തിൽ അമിതഭാരം കയറ്റരുത്."
-  ],
-  [
-   "Do not ride the clutch or the brake.",
-   "ക്ലച്ചിലോ ബ്രേക്കിലോ കാൽ വച്ച് ഓടിക്കരുത്."
-  ],
-  [
-   "Do not idle the engine for long.",
-   "എൻജിൻ ദീർഘനേരം ഐഡിൽ ചെയ്യരുത്."
-  ],
-  [
-   "Do not drive with a faulty brake light or indicator.",
-   "കേടായ ബ്രേക്ക് ലൈറ്റോ ഇൻഡിക്കേറ്ററോ ഉപയോഗിച്ച് ഓടിക്കരുത്."
-  ],
-  [
-   "Do not top up brake fluid and ignore a leak.",
-   "ബ്രേക്ക് ഫ്ലൂയിഡ് നിറച്ച് ചോർച്ച അവഗണിക്കരുത്."
-  ],
-  [
-   "Do not change the exhaust or lights in ways that break the rules.",
-   "നിയമം ലംഘിക്കുന്ന രീതിയിൽ എക്സ്ഹോസ്റ്റോ ലൈറ്റുകളോ മാറ്റം വരുത്തരുത്."
-  ],
-  [
-   "Do not skip servicing to save a little money.",
-   "അൽപം പണം ലാഭിക്കാൻ സർവീസ് ഒഴിവാക്കരുത്."
-  ]
- ],
- "myths": [
-  {
-   "m": [
-    "Tyres are fine if they still hold air.",
-    "കാറ്റ് നിൽക്കുന്നുണ്ടെങ്കിൽ ടയർ കുഴപ്പമില്ല."
-   ],
-   "f": [
-    "Worn tread cannot clear water and grips poorly even when full of air. Tread and sidewalls matter too.",
-    "തേഞ്ഞ ട്രെഡിന് വെള്ളം നീക്കാനാവില്ല; കാറ്റ് നിറഞ്ഞിരുന്നാലും പിടിത്തം കുറവായിരിക്കും. ട്രെഡും സൈഡ്‌വാളും പ്രധാനമാണ്."
-   ]
-  },
-  {
-   "m": [
-    "Warming up the engine for a long time is good.",
-    "എൻജിൻ ദീർഘനേരം ചൂടാക്കുന്നത് നല്ലതാണ്."
-   ],
-   "f": [
-    "Long idling wastes fuel and adds pollution. Start, wait briefly, and drive off gently as the manual advises.",
-    "ദീർഘനേരം ഐഡിൽ ചെയ്യുന്നത് ഇന്ധനം പാഴാക്കുകയും മലിനീകരണം കൂട്ടുകയും ചെയ്യും. സ്റ്റാർട്ട് ചെയ്ത് അൽപനേരം കഴിഞ്ഞ് മാന്വൽ പറയുംപോലെ പതുക്കെ നീങ്ങുക."
-   ]
-  },
-  {
-   "m": [
-    "A PUC certificate is only a formality.",
-    "PUC സർട്ടിഫിക്കറ്റ് വെറും ഔപചാരികത മാത്രമാണ്."
-   ],
-   "f": [
-    "It checks that your exhaust is within limits and flags engine faults. It is a legal requirement, so check the current rule with your RTO.",
-    "എക്സ്ഹോസ്റ്റ് പരിധിക്കുള്ളിലാണോ എന്ന് പരിശോധിക്കുകയും എൻജിൻ തകരാർ കണ്ടെത്താൻ സഹായിക്കുകയും ചെയ്യുന്നു. ഇത് നിയമപരമായ ആവശ്യമാണ്; നിലവിലെ നിയമം RTO യിൽ പരിശോധിക്കുക."
-   ]
-  },
-  {
-   "m": [
-    "If a warning light goes off by itself, the problem is gone.",
-    "മുന്നറിയിപ്പ് ലൈറ്റ് തനിയെ അണഞ്ഞാൽ പ്രശ്നം മാറി."
-   ],
-   "f": [
-    "Some faults are intermittent. A light that came on once should still be mentioned to a mechanic.",
-    "ചില തകരാറുകൾ ഇടയ്ക്കിടെ മാത്രം വരും. ഒരിക്കൽ തെളിഞ്ഞ ലൈറ്റ് മെക്കാനിക്കിനെ അറിയിക്കണം."
-   ]
-  },
-  {
-   "m": [
-    "Driving fast and braking hard gets me there sooner and costs the same.",
-    "വേഗത്തിൽ ഓടിച്ച് ശക്തമായി ബ്രേക്ക് ചെയ്താൽ വേഗം എത്തും, ചെലവും ഒന്നുതന്നെ."
-   ],
-   "f": [
-    "Harsh driving burns more fuel, wears tyres and brakes faster, and saves very little time.",
-    "പരുക്കൻ ഡ്രൈവിങ് കൂടുതൽ ഇന്ധനം കത്തിക്കുകയും ടയറും ബ്രേക്കും വേഗം തേയ്ക്കുകയും ചെയ്യും; സമയം ലാഭിക്കുന്നത് വളരെ കുറവാണ്."
-   ]
-  }
- ],
- "stories": [
-  {
-   "t": [
-    "The soft tyre",
-    "കാറ്റു കുറഞ്ഞ ടയർ"
-   ],
-   "s": [
-    "Before a family trip, Binu walked around his car and noticed that the left rear tyre looked slightly flat. He checked the pressure at a nearby station and found it low, so he filled it to the recommended value. The mechanic also pointed out a small nail in the tread. It was fixed in minutes. He realised how much worse a puncture at highway speed with a loaded car could have been.",
-    "കുടുംബയാത്രയ്ക്കു മുമ്പ് ബിനു കാറിന് ഒരു വട്ടം ചുറ്റി നോക്കിയപ്പോൾ ഇടത് പിൻ ടയറിന് ചെറിയ കാറ്റുകുറവ് കണ്ടു. അടുത്തുള്ള പമ്പിൽ മർദം പരിശോധിച്ചപ്പോൾ കുറവായിരുന്നു; നിർദേശിച്ച അളവിലേക്ക് നിറച്ചു. ട്രെഡിൽ ഒരു ചെറിയ ആണി ഉള്ളത് മെക്കാനിക്ക് കാണിച്ചുതന്നു; മിനിറ്റുകൾക്കകം ശരിയാക്കി. ഭാരം കയറ്റിയ കാറിൽ ഹൈവേ വേഗത്തിൽ പഞ്ചറായിരുന്നെങ്കിൽ എത്ര മോശമാകുമായിരുന്നു എന്ന് അയാൾ ഓർത്തു."
-   ],
-   "lesson": [
-    "A one-minute walk-around can prevent a roadside emergency.",
-    "ഒരു മിനിറ്റ് നീളുന്ന പരിശോധന വഴിയിലെ അടിയന്തരാവസ്ഥ ഒഴിവാക്കാം."
-   ]
-  },
-  {
-   "t": [
-    "The red light that stayed on",
-    "അണയാത്ത ചുവന്ന ലൈറ്റ്"
-   ],
-   "s": [
-    "While driving, a learner called Meera saw a red oil-can light come on. She thought it could wait until she reached home. Remembering her lesson, she pulled over safely, switched off the engine and read the manual. It said to stop and check the oil level. The level was very low. She called for help instead of driving on, and the mechanic said the engine had been saved.",
-    "വാഹനം ഓടിക്കുമ്പോൾ മീര എന്ന പഠിതാവ് ചുവന്ന ഓയിൽ ക്യാൻ ലൈറ്റ് തെളിയുന്നത് കണ്ടു. വീട്ടിലെത്തിയിട്ട് നോക്കാം എന്ന് ആദ്യം കരുതി. പഠിച്ചത് ഓർത്ത് അവൾ സുരക്ഷിതമായി വാഹനം ഒതുക്കി എൻജിൻ ഓഫ് ചെയ്ത് മാന്വൽ വായിച്ചു. നിർത്തി ഓയിൽ നില പരിശോധിക്കണം എന്നായിരുന്നു നിർദേശം. ഓയിൽ വളരെ കുറവായിരുന്നു. ഓടിച്ചുപോകാതെ സഹായം വിളിച്ചു; എൻജിൻ രക്ഷപ്പെട്ടു എന്ന് മെക്കാനിക്ക് പറഞ്ഞു."
-   ],
-   "lesson": [
-    "A red warning light means stop safely and check. Do not wait until you get home.",
-    "ചുവന്ന മുന്നറിയിപ്പ് എന്നാൽ സുരക്ഷിതമായി നിർത്തി പരിശോധിക്കുക. വീട്ടിലെത്തുംവരെ കാത്തിരിക്കരുത്."
-   ]
-  }
- ],
- "recap": [
-  [
-   "Walk around the vehicle before a trip.",
-   "യാത്രയ്ക്കു മുമ്പ് വാഹനത്തിന് ചുറ്റും ഒരു പരിശോധന നടത്തുക."
-  ],
-  [
-   "Tyres: pressure, tread, sidewalls, spare.",
-   "ടയർ: മർദം, ട്രെഡ്, സൈഡ്‌വാൾ, സ്പെയർ."
-  ],
-  [
-   "Brake feel changes mean get it checked now.",
-   "ബ്രേക്കിന്റെ അനുഭവം മാറിയാൽ ഉടൻ പരിശോധിപ്പിക്കുക."
-  ],
-  [
-   "Keep a valid PUC and service on schedule.",
-   "സാധുവായ PUC സൂക്ഷിക്കുക, കൃത്യമായി സർവീസ് ചെയ്യുക."
-  ],
-  [
-   "Smooth driving saves fuel and parts.",
-   "സുഗമമായ ഡ്രൈവിങ് ഇന്ധനവും ഭാഗങ്ങളും ലാഭിക്കും."
-  ],
-  [
-   "Red warning light: stop safely and check.",
-   "ചുവന്ന മുന്നറിയിപ്പ് ലൈറ്റ്: സുരക്ഷിതമായി നിർത്തി പരിശോധിക്കുക."
-  ]
- ]
 }

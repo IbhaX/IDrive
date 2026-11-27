@@ -27,7 +27,7 @@ def test_every_sitemap_path_renders_in_both_languages() -> None:
     assert len(paths) > 500
     titles: dict[str, str] = {}
     for p in paths:
-        for lang in ("en", "ml"):
+        for lang in ("en", "ml", "ta"):
             page = seo.resolve(p, lang)
             assert page is not None, (p, lang)
             assert page.status == 200 and page.indexable, p
@@ -50,7 +50,7 @@ def test_sign_page_answers_first_and_faq_matches_visible_text() -> None:
     markup = seo.inject(seo.shell_for_tests(), seo.resolve(f"/sign/{sid}", "en"), "en")
     assert '<html lang="en">' in markup
     assert f'<link rel="canonical" href="https://idrive.ibhax.com/sign/{sid}">' in markup
-    assert 'hreflang="ml"' in markup and 'hreflang="x-default"' in markup
+    assert 'hreflang="ml"' in markup and 'hreflang="ta"' in markup and 'hreflang="x-default"' in markup
     assert '<meta property="og:url"' in markup
     faq = next(x for x in _ld(markup) if x["@type"] == "FAQPage")
     answer = faq["mainEntity"]["acceptedAnswer"]["text"]
@@ -65,6 +65,16 @@ def test_malayalam_page_is_malayalam() -> None:
     assert '<html lang="ml">' in markup
     assert f"/sign/{sid}?lang=ml" in markup
     assert re.search(r"[ഀ-ൿ]", page.title)
+
+
+def test_tamil_query_parameter_renders_tamil(client) -> None:
+    sid = content.signs()[0]["id"]
+    response = client.get(f"/sign/{sid}?lang=ta")
+    assert response.status_code == 200
+    assert '<html lang="ta">' in response.text
+    assert re.search(r"[஀-௿]", response.text)
+    head = client.get("/api/seo/head", params={"path": f"/sign/{sid}", "lang": "ta"})
+    assert head.status_code == 200 and head.json()["canonical"].endswith(f"/sign/{sid}?lang=ta")
 
 
 def test_not_found_page_is_noindex() -> None:
@@ -91,9 +101,9 @@ def test_sitemaps_are_valid_xml_with_alternates() -> None:
         assert urls, name
         assert len(urls) <= 50000
         for u in urls[:3]:
-            assert len(u.findall("{http://www.w3.org/1999/xhtml}link")) == 3
+            assert len(u.findall("{http://www.w3.org/1999/xhtml}link")) == 4
         total += len(urls)
-    assert total == 2 * len(seo.all_paths())
+    assert total == 3 * len(seo.all_paths())
     assert seo.sitemap("nope") is None
 
 
@@ -305,3 +315,12 @@ def test_head_json_matches_the_rendered_page() -> None:
             assert h["title"] == page.title and h["description"] == page.description
             assert (h["robots"] == "noindex") == (not page.indexable or page.status != 200)
             assert h["canonical"].startswith(seo.site_url())
+
+
+def test_tamil_page_is_tamil() -> None:
+    sid = content.signs()[0]["id"]
+    page = seo.resolve(f"/sign/{sid}", "ta")
+    markup = seo.inject(seo.shell_for_tests(), page, "ta")
+    assert '<html lang="ta">' in markup
+    assert f"/sign/{sid}?lang=ta" in markup
+    assert re.search(r"[஀-௿]", page.title)

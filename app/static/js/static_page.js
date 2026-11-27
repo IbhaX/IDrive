@@ -5,21 +5,21 @@
 "use strict";
 const SP = { cache: {} };
 const key = (name, lang) => name + "|" + lang;
-const langOf = () => (I18n.lang() === "ml" ? "ml" : "en");
+const langOf = () => (["ml", "ta", "ta-en"].includes(I18n.lang()) ? (I18n.lang() === "ta-en" ? "ta" : I18n.lang()) : "en");
 
 SP.keep = (path, html) => {
   const name = (path || "").replace(/^\/+|\/+$/g, "");
   if (document.querySelector('meta[name="app-notfound"]')) { SP.cache[key("notfound", "en")] = SP.cache[key("notfound", "ml")] = html; return; }
   const tagged = document.querySelector('meta[name="app-static"]');
   if (!tagged || !/^(about|privacy|terms|install)$/.test(name)) return;
-  const ml = new URLSearchParams(location.search).get("lang") === "ml";
-  SP.cache[key(name, ml ? "ml" : "en")] = html;
+  const pageLang = new URLSearchParams(location.search).get("lang");
+  SP.cache[key(name, ["ml", "ta"].includes(pageLang) ? pageLang : "en")] = html;
 };
 
 async function load(name, lang) {
   let html = SP.cache[key(name, lang)];
   if (html) return html;
-  const res = await fetch("/" + name + (lang === "ml" ? "?lang=ml" : ""), { headers: { Accept: "text/html" } });
+  const res = await fetch("/" + name + (["ml", "ta"].includes(lang) ? "?lang=" + lang : ""), { headers: { Accept: "text/html" } });
   if (!res.ok) throw new Error(String(res.status));
   const doc = new DOMParser().parseFromString(await res.text(), "text/html");
   const main = doc.getElementById("app");
@@ -32,8 +32,8 @@ async function load(name, lang) {
 SP.view = async (app) => {
   const p = S.param || "";
   const name = /^(about|privacy|terms|install)$/.test(p) || (p === "notfound" && SP.cache[key(p, "en")]) ? p : "about";
-  // English + Malayalam mode shows the Malayalam page, then the English one
-  const langs = name === "notfound" ? ["en"] : I18n.lang() === "both" ? ["ml", "en"] : [langOf()];
+  // Bilingual modes show the selected local language, then English.
+  const langs = name === "notfound" ? ["en"] : I18n.lang() === "both" ? ["ml", "en"] : I18n.lang() === "ta-en" ? ["ta", "en"] : [langOf()];
   let html = langs.every((l) => SP.cache[key(name, l)]) ? langs.map((l) => SP.cache[key(name, l)]).join("") : "";
   if (!html) {
     app.innerHTML = `<section class="panel"><div class="skel"><i style="height:26px;width:34%"></i><i style="height:16px"></i><i style="height:16px;width:80%"></i></div></section>`;

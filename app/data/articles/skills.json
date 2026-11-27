@@ -1,344 +1,417 @@
 {
- "intro": [
-  "Good driving is a set of small physical skills done in the right order: sit properly, see clearly, control the clutch and accelerator, steer smoothly and park with patience. Nobody gets these perfect on day one. This article explains why each skill matters and how to practise it in a safe place so that confidence grows step by step.",
-  "നല്ല ഡ്രൈവിങ് എന്നത് ശരിയായ ക്രമത്തിൽ ചെയ്യുന്ന ചെറിയ കായിക കഴിവുകളുടെ കൂട്ടമാണ്: ശരിയായി ഇരിക്കുക, വ്യക്തമായി കാണുക, ക്ലച്ചും ആക്സിലറേറ്ററും നിയന്ത്രിക്കുക, സുഗമമായി സ്റ്റിയർ ചെയ്യുക, ക്ഷമയോടെ പാർക്ക് ചെയ്യുക. ആദ്യ ദിവസം തന്നെ ആർക്കും ഇവ പൂർണമാകില്ല. ഓരോ കഴിവും എന്തുകൊണ്ട് പ്രധാനമാണെന്നും സുരക്ഷിത സ്ഥലത്ത് എങ്ങനെ പരിശീലിക്കാമെന്നും ഈ ലേഖനം വിശദീകരിക്കുന്നു."
- ],
- "sections": [
-  {
-   "h": [
-    "Seating, mirrors and the cockpit drill",
-    "ഇരിപ്പും മിററുകളും തയ്യാറെടുപ്പും"
-   ],
-   "p": [
+  "intro": [
+    "Good driving is a set of small physical skills done in the right order: sit properly, see clearly, control the clutch and accelerator, steer smoothly and park with patience. Nobody gets these perfect on day one. This article explains why each skill matters and how to practise it in a safe place so that confidence grows step by step.",
+    "നല്ല ഡ്രൈവിങ് എന്നത് ശരിയായ ക്രമത്തിൽ ചെയ്യുന്ന ചെറിയ കായിക കഴിവുകളുടെ കൂട്ടമാണ്: ശരിയായി ഇരിക്കുക, വ്യക്തമായി കാണുക, ക്ലച്ചും ആക്സിലറേറ്ററും നിയന്ത്രിക്കുക, സുഗമമായി സ്റ്റിയർ ചെയ്യുക, ക്ഷമയോടെ പാർക്ക് ചെയ്യുക. ആദ്യ ദിവസം തന്നെ ആർക്കും ഇവ പൂർണമാകില്ല. ഓരോ കഴിവും എന്തുകൊണ്ട് പ്രധാനമാണെന്നും സുരക്ഷിത സ്ഥലത്ത് എങ്ങനെ പരിശീലിക്കാമെന്നും ഈ ലേഖനം വിശദീകരിക്കുന്നു.",
+    "நல்ல ஓட்டுதல் என்பது சரியான வரிசையில் செய்யப்படும் சிறிய உடல் திறன்களின் தொகுப்பாகும்: ஒழுங்காக உட்காரவும், தெளிவாகப் பார்க்கவும், கிளட்ச் மற்றும் ஆக்ஸிலரேட்டரைக் கட்டுப்படுத்தவும், சீராகச் செல்லவும், பொறுமையுடன் நிறுத்தவும். முதல் நாளில் யாரும் இவற்றை முழுமையாகப் பெறுவதில்லை. ஒவ்வொரு திறமையும் ஏன் முக்கியமானது என்பதையும், பாதுகாப்பான இடத்தில் அதை எவ்வாறு பயிற்சி செய்வது என்பதையும் இந்தக் கட்டுரை விளக்குகிறது, இதனால் நம்பிக்கை படிப்படியாக வளர்கிறது."
+  ],
+  "sections": [
+    {
+      "h": [
+        "Seating, mirrors and the cockpit drill",
+        "ഇരിപ്പും മിററുകളും തയ്യാറെടുപ്പും",
+        "இருக்கை, கண்ணாடிகள் மற்றும் காக்பிட் பயிற்சி"
+      ],
+      "p": [
+        [
+          "Adjust the seat so that you can press the clutch fully to the floor with a slight bend left in your knee. If your leg is stretched straight, you cannot control the pedal; if it is too bent, your leg tires quickly.",
+          "ക്ലച്ച് പൂർണമായി അമർത്തുമ്പോൾ കാൽമുട്ട് അൽപ്പം വളഞ്ഞിരിക്കുന്ന രീതിയിൽ സീറ്റ് ക്രമീകരിക്കുക. കാൽ നിവർന്നിരുന്നാൽ പെഡൽ നിയന്ത്രിക്കാനാകില്ല; അമിതമായി വളഞ്ഞാൽ കാൽ വേഗം ക്ഷീണിക്കും.",
+          "உங்கள் முழங்காலில் சிறிது வளைவுடன் கிளட்சை முழுமையாக தரையில் அழுத்தும் வகையில் இருக்கையை சரிசெய்யவும். உங்கள் கால் நேராக நீட்டப்பட்டிருந்தால், நீங்கள் மிதிவைக் கட்டுப்படுத்த முடியாது; அது மிகவும் வளைந்திருந்தால், உங்கள் கால் விரைவாக சோர்வடையும்."
+        ],
+        [
+          "Sit with your back against the seat and hold the steering wheel so your wrists rest on the top of the rim with arms slightly bent. This position lets you turn the wheel without stretching and keeps you steady in a sudden stop.",
+          "പുറം സീറ്റിൽ ചേർത്തിരുന്ന്, കൈകൾ അൽപ്പം വളച്ച് കൈത്തണ്ട സ്റ്റിയറിങ് വീലിന്റെ മുകളിൽ എത്തുന്ന രീതിയിൽ പിടിക്കുക. ഇങ്ങനെ ആയാൽ നീട്ടാതെ വീൽ തിരിക്കാനും പെട്ടെന്ന് നിർത്തുമ്പോൾ ഉറച്ചിരിക്കാനും കഴിയും.",
+          "இருக்கைக்கு எதிராக உங்கள் முதுகில் அமர்ந்து, ஸ்டீயரிங் வீலைப் பிடித்துக் கொள்ளுங்கள், இதனால் உங்கள் மணிக்கட்டுகள் விளிம்பின் மேற்புறத்தில் சிறிது வளைந்த நிலையில் இருக்கும். இந்த நிலை நீட்டாமல் சக்கரத்தை சுழற்ற உதவுகிறது மற்றும் திடீர் நிறுத்தத்தில் உங்களை நிலையாக வைத்திருக்கும்."
+        ],
+        [
+          "Set the inside mirror so you see the whole rear window, then the side mirrors so you see only a thin edge of your own car and mostly the road. Fix mirrors before you start moving, never while driving.",
+          "ഉൾവശത്തെ മിറർ പിൻ ഗ്ലാസ് മുഴുവനായി കാണുന്ന രീതിയിലും സൈഡ് മിററുകൾ സ്വന്തം കാറിന്റെ നേർത്ത അറ്റം മാത്രം കാണുകയും ബാക്കി റോഡ് കാണുകയും ചെയ്യുന്ന രീതിയിലും ക്രമീകരിക്കുക. വണ്ടി നീങ്ങുംമുമ്പ് മിറർ ശരിയാക്കുക, ഓടിക്കുമ്പോൾ അല്ല.",
+          "உள்புறக் கண்ணாடியை அமைக்கவும், இதன் மூலம் நீங்கள் பின்புற ஜன்னல் முழுவதையும், பக்கவாட்டு கண்ணாடிகளையும் பார்க்கிறீர்கள், எனவே உங்கள் சொந்த காரின் மெல்லிய விளிம்பு மற்றும் பெரும்பாலும் சாலையை மட்டுமே பார்க்கிறீர்கள். நீங்கள் நகரத் தொடங்கும் முன் கண்ணாடிகளை சரிசெய்யவும், வாகனம் ஓட்டும் போது ஒருபோதும்."
+        ],
+        [
+          "Fasten the seat belt and check that everyone in the car has done the same. A quick routine every time, such as seat, mirrors, belt, handbrake, gear in neutral, makes it a habit you never skip.",
+          "സീറ്റ് ബെൽറ്റ് ഇടുക, കാറിലെ എല്ലാവരും ഇട്ടെന്ന് ഉറപ്പാക്കുക. സീറ്റ്, മിറർ, ബെൽറ്റ്, ഹാൻഡ്ബ്രേക്ക്, ന്യൂട്രൽ ഗിയർ എന്നിങ്ങനെ ഓരോ തവണയും ചെയ്യുന്ന ചെറിയ ക്രമം ശീലമായാൽ ഒന്നും വിട്ടുപോകില്ല.",
+          "சீட் பெல்ட்டைக் கட்டி, காரில் உள்ள அனைவரும் அதையே செய்துள்ளார்களா என்பதைச் சரிபார்க்கவும். ஒவ்வொரு முறையும் சீட், கண்ணாடிகள், பெல்ட், ஹேண்ட்பிரேக், நியூட்ரலில் உள்ள கியர் போன்ற விரைவான வழக்கத்தை நீங்கள் தவிர்க்கவே கூடாது."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Clutch and accelerator: finding the bite point",
+        "ക്ലച്ചും ആക്സിലറേറ്ററും: ബൈറ്റ് പോയിന്റ്",
+        "கிளட்ச் மற்றும் முடுக்கி: கடி புள்ளியைக் கண்டறிதல்"
+      ],
+      "p": [
+        [
+          "The clutch connects the engine to the wheels. As you lift the pedal slowly, there is a point where the car begins to creep; this is the bite point. Learning to feel it through your foot is the single most important beginner skill.",
+          "എൻജിനെ ചക്രങ്ങളുമായി ബന്ധിപ്പിക്കുന്നത് ക്ലച്ചാണ്. പെഡൽ പതുക്കെ ഉയർത്തുമ്പോൾ വണ്ടി നീങ്ങിത്തുടങ്ങുന്ന ഒരു ബിന്ദു ഉണ്ട്; അതാണ് ബൈറ്റ് പോയിന്റ്. ഇത് കാലിലൂടെ തിരിച്ചറിയാൻ പഠിക്കുന്നതാണ് തുടക്കക്കാരന്റെ ഏറ്റവും പ്രധാന കഴിവ്.",
+          "கிளட்ச் இயந்திரத்தை சக்கரங்களுடன் இணைக்கிறது. நீங்கள் மிதிவை மெதுவாக தூக்கும்போது, ​​கார் ஊர்ந்து செல்லத் தொடங்கும் ஒரு புள்ளி உள்ளது; இது கடி புள்ளி. உங்கள் கால் மூலம் அதை உணர கற்றுக்கொள்வது மிக முக்கியமான தொடக்க திறமையாகும்."
+        ],
+        [
+          "Practise on flat ground: press the clutch, select first gear, lift the clutch slowly to the bite point and hold it there. Then add a little accelerator and keep lifting the clutch gently. Stalling is normal while learning; just press the clutch, brake, and restart calmly.",
+          "നിരപ്പായ സ്ഥലത്ത് പരിശീലിക്കുക: ക്ലച്ച് അമർത്തി ഫസ്റ്റ് ഗിയർ ഇടുക, ക്ലച്ച് പതുക്കെ ബൈറ്റ് പോയിന്റ് വരെ ഉയർത്തി അവിടെ പിടിക്കുക. പിന്നെ അൽപ്പം ആക്സിലറേറ്റർ നൽകി ക്ലച്ച് പതുക്കെ ഉയർത്തുക. പഠിക്കുമ്പോൾ എൻജിൻ ഓഫ് ആകുന്നത് സാധാരണമാണ്; ക്ലച്ച് അമർത്തി ബ്രേക്ക് ചെയ്ത് ശാന്തമായി വീണ്ടും സ്റ്റാർട്ട് ചെയ്യുക.",
+          "தட்டையான நிலத்தில் பயிற்சி செய்யுங்கள்: கிளட்சை அழுத்தவும், முதல் கியரைத் தேர்ந்தெடுத்து, க்ளட்சை மெதுவாகக் கடிக்கும் இடத்திற்கு உயர்த்தி, அங்கேயே பிடிக்கவும். பிறகு கொஞ்சம் ஆக்ஸிலரேட்டரை சேர்த்து கிளட்சை மெதுவாக தூக்கவும். கற்கும் போது ஸ்தம்பித்தல் இயல்பானது; கிளட்ச், பிரேக்கை அழுத்தி, அமைதியாக மறுதொடக்கம் செய்யவும்."
+        ],
+        [
+          "Use the accelerator in a smooth, gradual way, as if there were a glass of water on the dashboard. Sudden pressing wastes fuel, jerks the passengers and makes it harder to stay in control.",
+          "ഡാഷ്ബോർഡിൽ ഒരു ഗ്ലാസ് വെള്ളം ഉണ്ടെന്ന് കരുതി ആക്സിലറേറ്റർ മൃദുവായും ക്രമേണയും ഉപയോഗിക്കുക. പെട്ടെന്ന് അമർത്തിയാൽ ഇന്ധനം നഷ്ടപ്പെടും, യാത്രക്കാർക്ക് കുലുക്കം ഉണ്ടാകും, നിയന്ത്രണം കുറയും.",
+          "டாஷ்போர்டில் ஒரு கிளாஸ் தண்ணீர் இருப்பது போல், முடுக்கியை மென்மையான, படிப்படியான வழியில் பயன்படுத்தவும். திடீரென அழுத்தினால் எரிபொருள் வீணாகி, பயணிகளை அலைக்கழிக்கிறது மற்றும் கட்டுப்பாட்டில் இருப்பது கடினமாகிறது."
+        ],
+        [
+          "Do not rest your foot on the clutch while driving (called riding the clutch). It wears the clutch plate and means the engine is not fully connected to the wheels when you need it.",
+          "ഓടിക്കുമ്പോൾ ക്ലച്ചിൽ കാൽ വെച്ചിരിക്കരുത്. ഇത് ക്ലച്ച് പ്ലേറ്റ് തേയ്മാനത്തിനും, ആവശ്യമുള്ളപ്പോൾ എൻജിനും ചക്രങ്ങളും പൂർണമായി ബന്ധപ്പെടാതിരിക്കാനും കാരണമാകും.",
+          "வாகனம் ஓட்டும் போது கிளட்ச் மீது கால் வைக்க வேண்டாம் (கிளட்ச் சவாரி என்று அழைக்கப்படுகிறது). இது கிளட்ச் பிளேட்டை அணிந்துள்ளது மற்றும் உங்களுக்கு தேவைப்படும் போது இயந்திரம் முழுமையாக சக்கரங்களுடன் இணைக்கப்படவில்லை."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Smooth gear changes and steering",
+        "സുഗമമായ ഗിയർ മാറ്റവും സ്റ്റിയറിങ്ങും",
+        "மென்மையான கியர் மாற்றங்கள் மற்றும் ஸ்டீயரிங்"
+      ],
+      "p": [
+        [
+          "Change gear by pressing the clutch fully, moving the lever, and then releasing the clutch smoothly while easing the accelerator. Choose the gear by engine sound and speed, not by looking at the lever; keep your eyes on the road.",
+          "ക്ലച്ച് പൂർണമായി അമർത്തി ലിവർ നീക്കി, ആക്സിലറേറ്റർ കുറച്ച് ക്ലച്ച് സുഗമമായി വിടുക. എൻജിന്റെ ശബ്ദവും വേഗവും നോക്കി ഗിയർ തിരഞ്ഞെടുക്കുക; ലിവറിൽ നോക്കാതെ കണ്ണ് റോഡിൽ വെക്കുക.",
+          "கிளட்சை முழுவதுமாக அழுத்தி, நெம்புகோலை நகர்த்தி, ஆக்ஸிலரேட்டரை எளிதாக்கும் போது கிளட்சை சீராக வெளியிடுவதன் மூலம் கியரை மாற்றவும். எஞ்சின் ஒலி மற்றும் வேகத்தின் மூலம் கியரைத் தேர்ந்தெடுக்கவும், நெம்புகோலைப் பார்த்து அல்ல; உங்கள் கண்களை சாலையில் வைத்திருங்கள்."
+        ],
+        [
+          "Slow down before a turn, not during it. Select a lower gear early so that you can turn with steady power instead of braking hard in the middle of the bend.",
+          "വളവിനുള്ളിൽ അല്ല, വളവിന് മുമ്പാണ് വേഗം കുറയ്ക്കേണ്ടത്. നേരത്തെ താഴ്ന്ന ഗിയറിലേക്ക് മാറിയാൽ വളവിനുള്ളിൽ ശക്തമായി ബ്രേക്ക് ചെയ്യാതെ സ്ഥിരമായ ശക്തിയിൽ തിരിക്കാം.",
+          "ஒரு திருப்பத்திற்கு முன் மெதுவாக, அதன் போது அல்ல. வளைவின் நடுவில் கடினமாக பிரேக் செய்வதற்குப் பதிலாக நிலையான சக்தியுடன் நீங்கள் திரும்புவதற்கு குறைந்த கியரை முன்கூட்டியே தேர்ந்தெடுக்கவும்."
+        ],
+        [
+          "Hold the steering wheel with both hands in a relaxed grip, roughly at the nine and three positions. Look far ahead in the direction you want to go; the car tends to follow your eyes. Use hand-over-hand or shuffle steering for turns and let the wheel slide back as you straighten.",
+          "രണ്ട് കൈകൊണ്ടും, ഏകദേശം ഒൻപത്, മൂന്ന് മണി സ്ഥാനങ്ങളിൽ, അയഞ്ഞ പിടുത്തത്തോടെ വീൽ പിടിക്കുക. പോകേണ്ട ദിശയിൽ ദൂരേക്ക് നോക്കുക; വണ്ടി കണ്ണ് പോകുന്നിടത്തേക്ക് നീങ്ങും. വളയ്ക്കുമ്പോൾ കൈ മാറി മാറി തിരിക്കുക, നേരെയാക്കുമ്പോൾ വീൽ തനിയെ തിരിച്ചുപോകാൻ അനുവദിക്കുക.",
+          "ஸ்டியரிங் வீலை இரு கைகளாலும் ஒரு தளர்வான பிடியில் பிடித்து, தோராயமாக ஒன்பது மற்றும் மூன்று நிலைகளில். நீங்கள் செல்ல விரும்பும் திசையில் வெகு தொலைவில் பாருங்கள்; கார் உங்கள் கண்களைப் பின்தொடர்கிறது. திருப்பங்களுக்கு ஹேண்ட்-ஓவர் ஹேண்ட் அல்லது ஷஃபிள் ஸ்டீயரிங் பயன்படுத்தவும், நீங்கள் நேராக்கும்போது சக்கரம் பின்னோக்கிச் செல்லட்டும்."
+        ],
+        [
+          "Do not coast downhill with the clutch pressed or in neutral. The engine then gives you no braking help and you lose control of speed.",
+          "ഇറക്കത്തിൽ ക്ലച്ച് അമർത്തിയോ ന്യൂട്രലിലോ ഉരുട്ടി വിടരുത്. എൻജിന്റെ ബ്രേക്കിങ് സഹായം കിട്ടില്ല, വേഗത്തിലുള്ള നിയന്ത്രണം നഷ്ടപ്പെടും.",
+          "கிளட்சை அழுத்தியோ அல்லது நடுநிலையாகவோ கீழ்நோக்கிச் செல்ல வேண்டாம். இயந்திரம் உங்களுக்கு பிரேக்கிங் உதவியை வழங்காது, மேலும் நீங்கள் வேகக் கட்டுப்பாட்டை இழக்கிறீர்கள்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Hill start and parking brake",
+        "കയറ്റത്തിലെ സ്റ്റാർട്ടും പാർക്കിങ് ബ്രേക്കും",
+        "ஹில் ஸ்டார்ட் மற்றும் பார்க்கிங் பிரேக்"
+      ],
+      "p": [
+        [
+          "On a slope the car wants to roll back when you move your foot from the brake to the accelerator. The parking brake (handbrake) holds the car so you can find the bite point without rolling.",
+          "കയറ്റത്തിൽ കാൽ ബ്രേക്കിൽ നിന്ന് ആക്സിലറേറ്ററിലേക്ക് മാറ്റുമ്പോൾ വണ്ടി പിന്നോട്ട് ഉരുളാൻ ശ്രമിക്കും. പാർക്കിങ് ബ്രേക്ക് (ഹാൻഡ്ബ്രേക്ക്) വണ്ടിയെ പിടിച്ചുനിർത്തുന്നതിനാൽ ഉരുളാതെ ബൈറ്റ് പോയിന്റ് കണ്ടെത്താം.",
+          "ஒரு சாய்வில் உங்கள் கால்களை பிரேக்கிலிருந்து ஆக்ஸிலரேட்டருக்கு நகர்த்தும்போது கார் பின்வாங்க விரும்புகிறது. பார்க்கிங் பிரேக் (ஹேண்ட்பிரேக்) காரைப் பிடித்துக் கொண்டிருப்பதால், உருட்டாமல் கடித்த இடத்தைக் கண்டுபிடிக்கலாம்."
+        ],
+        [
+          "Method: handbrake on, first gear, raise the engine sound slightly with the accelerator, lift the clutch to the bite point until the car feels as if it wants to move forward, then release the handbrake smoothly and continue.",
+          "രീതി: ഹാൻഡ്ബ്രേക്ക് ഇടുക, ഫസ്റ്റ് ഗിയർ, ആക്സിലറേറ്റർ കൊണ്ട് എൻജിൻ ശബ്ദം അൽപ്പം ഉയർത്തുക, വണ്ടി മുന്നോട്ട് നീങ്ങാൻ ആഗ്രഹിക്കുന്നതായി തോന്നുംവരെ ക്ലച്ച് ബൈറ്റ് പോയിന്റ് വരെ ഉയർത്തുക, പിന്നെ ഹാൻഡ്ബ്രേക്ക് സുഗമമായി വിട്ട് മുന്നോട്ട് പോകുക.",
+          "முறை: ஹேண்ட்பிரேக் ஆன், முதல் கியர், ஆக்சிலரேட்டருடன் இன்ஜின் ஒலியை சிறிது உயர்த்தி, கார் முன்னோக்கி நகர்வதைப் போல் உணரும் வரை கிளட்சை உயர்த்தி, பின்னர் ஹேண்ட்பிரேக்கை சீராக விடுவித்து தொடரவும்."
+        ],
+        [
+          "Always apply the parking brake whenever you leave the car, and on a slope also leave it in gear (first when facing uphill, reverse when facing downhill) and turn the wheels toward the kerb or edge of the road if the situation allows.",
+          "വണ്ടി വിട്ടുപോകുമ്പോൾ എപ്പോഴും പാർക്കിങ് ബ്രേക്ക് ഇടുക. ചരിവിൽ ഗിയറിലും ഇടുക (കയറ്റത്തിലേക്ക് മുഖം ആണെങ്കിൽ ഫസ്റ്റ്, ഇറക്കത്തിലേക്ക് ആണെങ്കിൽ റിവേഴ്സ്). സാഹചര്യം അനുവദിച്ചാൽ ചക്രങ്ങൾ റോഡരികിലേക്ക് തിരിച്ചുവെക്കുക.",
+          "நீங்கள் காரை விட்டு வெளியேறும் போதெல்லாம் பார்க்கிங் பிரேக்கை எப்பொழுதும் பயன்படுத்தவும், மேலும் ஒரு சாய்வில் அதை கியரில் விட்டு விடுங்கள் (முதலில் மேல்நோக்கி, கீழ்நோக்கி எதிர்கொள்ளும் போது தலைகீழாக எதிர்கொள்ளும் போது) மற்றும் சூழ்நிலை அனுமதித்தால் சக்கரங்களை சாலையின் கர்ப் அல்லது விளிம்பில் திருப்பவும்."
+        ],
+        [
+          "Keep a safe gap from the vehicle in front on a hill, because some vehicles may roll back a little when they start. Leave space and stay calm if the car behind you is close.",
+          "കയറ്റത്തിൽ മുന്നിലെ വാഹനത്തിൽ നിന്ന് സുരക്ഷിത അകലം പാലിക്കുക; ചില വാഹനങ്ങൾ തുടങ്ങുമ്പോൾ അൽപ്പം പിന്നോട്ട് ഉരുളാം. പിന്നിലെ വണ്ടി അടുത്താണെങ്കിലും ശാന്തത പാലിക്കുക.",
+          "ஒரு மலையின் மீது முன்னால் உள்ள வாகனத்திலிருந்து பாதுகாப்பான இடைவெளியை வைத்திருங்கள், ஏனெனில் சில வாகனங்கள் தொடங்கும் போது சிறிது பின்னோக்கிச் செல்லலாம். உங்களுக்குப் பின்னால் இருக்கும் கார் அருகில் இருந்தால், இடத்தை விட்டுவிட்டு அமைதியாக இருங்கள்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Parking and reversing practice",
+        "പാർക്കിങ്ങും റിവേഴ്സും പരിശീലനം",
+        "பார்க்கிங் மற்றும் ரிவர்சிங் பயிற்சி"
+      ],
+      "p": [
+        [
+          "Reversing is slow driving. Keep the car at walking pace using the clutch bite point, look through the rear window over your shoulder as well as in the mirrors, and check for children, pets or objects behind before you start.",
+          "റിവേഴ്സിങ് എന്നത് പതുക്കെയുള്ള ഡ്രൈവിങ് ആണ്. ക്ലച്ച് ബൈറ്റ് പോയിന്റിൽ നടക്കുന്ന വേഗത്തിൽ നീക്കുക, മിററുകൾക്കൊപ്പം തോളിനു മുകളിലൂടെ പിൻ ഗ്ലാസ് വഴിയും നോക്കുക, തുടങ്ങുംമുമ്പ് പിന്നിൽ കുട്ടികളോ മൃഗങ്ങളോ വസ്തുക്കളോ ഉണ്ടോ എന്ന് പരിശോധിക്കുക.",
+          "தலைகீழாக ஓட்டுவது மெதுவாக ஓட்டுவது. கிளட்ச் பைட் பாயிண்ட் மூலம் காரை நடந்து செல்லும் வேகத்தில் வைத்து, பின்புற ஜன்னல் வழியாக உங்கள் தோள்பட்டை மற்றும் கண்ணாடிகளில் பார்க்கவும், நீங்கள் தொடங்குவதற்கு முன் பின்னால் குழந்தைகள், செல்லப்பிராணிகள் அல்லது பொருட்களை சரிபார்க்கவும்."
+        ],
+        [
+          "When reversing, the car's front swings out in the opposite direction to the way the rear goes. Turn the wheel in small movements and correct early; if you feel lost, stop, go forward and start again.",
+          "റിവേഴ്സ് ചെയ്യുമ്പോൾ പിൻഭാഗം പോകുന്നതിന് വിപരീതദിശയിൽ വണ്ടിയുടെ മുൻഭാഗം വെട്ടിമാറും. വീൽ ചെറിയ അളവിൽ തിരിച്ച് നേരത്തെ തിരുത്തുക; ആശയക്കുഴപ്പം തോന്നിയാൽ നിർത്തി, മുന്നോട്ടെടുത്ത് വീണ്ടും തുടങ്ങുക.",
+          "பின்னோக்கிச் செல்லும் போது, ​​காரின் முன்புறம் பின்புறம் செல்லும் வழியில் எதிர் திசையில் ஊசலாடுகிறது. சிறிய அசைவுகளில் சக்கரத்தைத் திருப்பவும், முன்கூட்டியே சரிசெய்யவும்; நீங்கள் இழந்துவிட்டதாக உணர்ந்தால், நிறுத்துங்கள், முன்னோக்கிச் சென்று மீண்டும் தொடங்குங்கள்."
+        ],
+        [
+          "Practise parallel and angle parking using cones, bottles or lines in an empty ground. Picking fixed reference points on the car, such as a mirror lining up with a line, makes the movements repeatable.",
+          "ഒഴിഞ്ഞ ഗ്രൗണ്ടിൽ കോൺ, കുപ്പി, വരകൾ എന്നിവ ഉപയോഗിച്ച് പാരലൽ, ആംഗിൾ പാർക്കിങ് പരിശീലിക്കുക. വണ്ടിയിലെ ഉറച്ച അടയാളങ്ങൾ (ഉദാ. മിറർ ഒരു വരയോട് ചേരുന്നത്) ഉപയോഗിച്ചാൽ ചലനങ്ങൾ ആവർത്തിക്കാൻ എളുപ്പമാകും.",
+          "வெற்று மைதானத்தில் கூம்புகள், பாட்டில்கள் அல்லது கோடுகளைப் பயன்படுத்தி இணையான மற்றும் கோணம் நிறுத்துவதைப் பயிற்சி செய்யுங்கள். காரில் நிலையான குறிப்புப் புள்ளிகளைத் தேர்ந்தெடுப்பது, ஒரு கோட்டுடன் வரிசையாக நிற்கும் கண்ணாடி போன்றது, இயக்கங்களை மீண்டும் மீண்டும் செய்யக்கூடியதாக ஆக்குகிறது."
+        ],
+        [
+          "Park only where it is allowed and never block a gate, a junction or a bus stop. Before leaving, check mirrors and the door side for approaching two-wheelers and pedestrians.",
+          "അനുവദിച്ച സ്ഥലത്ത് മാത്രം പാർക്ക് ചെയ്യുക; ഗേറ്റ്, ജംഗ്ഷൻ, ബസ് സ്റ്റോപ്പ് എന്നിവ തടയരുത്. ഇറങ്ങുംമുമ്പ് മിററിൽ നോക്കി, വാതിൽ തുറക്കുന്ന വശത്ത് വരുന്ന ഇരുചക്രവാഹനങ്ങളോ കാൽനടക്കാരോ ഇല്ലെന്ന് ഉറപ്പാക്കുക.",
+          "அனுமதிக்கப்படும் இடத்தில் மட்டும் நிறுத்துங்கள், வாயில், சந்திப்பு அல்லது பேருந்து நிறுத்தத்தை ஒருபோதும் தடுக்க வேண்டாம். புறப்படுவதற்கு முன், இரு சக்கர வாகனங்கள் மற்றும் பாதசாரிகள் அணுகுவதற்கு கண்ணாடிகள் மற்றும் கதவு பக்கங்களைச் சரிபார்க்கவும்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Building confidence in a safe place",
+        "സുരക്ഷിതമായ സ്ഥലത്ത് ആത്മവിശ്വാസം വളർത്തൽ",
+        "பாதுகாப்பான இடத்தில் நம்பிக்கையை உருவாக்குதல்"
+      ],
+      "p": [
+        [
+          "Start in an empty ground, a quiet lane or a driving school area before you move to traffic. Without pressure from horns and crowds, your hands and feet learn the controls much faster.",
+          "ഗതാഗതത്തിലേക്ക് വരുംമുമ്പ് ഒഴിഞ്ഞ ഗ്രൗണ്ട്, ശാന്തമായ ഇടവഴി, ഡ്രൈവിങ് സ്കൂൾ പരിസരം എന്നിവിടങ്ങളിൽ തുടങ്ങുക. ഹോണിന്റെയും തിരക്കിന്റെയും സമ്മർദ്ദമില്ലാത്തപ്പോൾ കൈകാലുകൾ നിയന്ത്രണങ്ങൾ വളരെ വേഗം പഠിക്കും.",
+          "நீங்கள் போக்குவரத்திற்குச் செல்வதற்கு முன் வெற்று மைதானம், அமைதியான பாதை அல்லது ஓட்டுநர் பள்ளிப் பகுதியில் தொடங்கவும். கொம்புகள் மற்றும் கூட்டத்திலிருந்து அழுத்தம் இல்லாமல், உங்கள் கைகளும் கால்களும் மிக வேகமாக கட்டுப்பாடுகளைக் கற்றுக்கொள்கின்றன."
+        ],
+        [
+          "Learn with a qualified instructor or an experienced licensed driver, and always display the learner's sign required by the rules for a learner. Practise in short, regular sessions rather than one long, tiring day.",
+          "യോഗ്യതയുള്ള ഇൻസ്ട്രക്ടറുടെ അല്ലെങ്കിൽ പരിചയസമ്പന്നനായ ലൈസൻസുള്ള ഡ്രൈവറുടെ കൂടെ പഠിക്കുക; ലേണർക്ക് നിയമം ആവശ്യപ്പെടുന്ന ലേണർ അടയാളം പ്രദർശിപ്പിക്കുക. ഒരു ദിവസം ദീർഘമായി ക്ഷീണിക്കുന്നതിലും നല്ലത് ചെറിയ, പതിവ് പരിശീലനമാണ്.",
+          "ஒரு தகுதிவாய்ந்த பயிற்றுவிப்பாளர் அல்லது அனுபவம் வாய்ந்த உரிமம் பெற்ற ஓட்டுநரிடம் கற்றுக் கொள்ளுங்கள், மேலும் கற்றவருக்கு விதிகளின்படி கற்பவரின் அடையாளத்தை எப்போதும் காண்பிக்கவும். ஒரு நீண்ட, சோர்வான நாளைக் காட்டிலும் குறுகிய, வழக்கமான அமர்வுகளில் பயிற்சி செய்யுங்கள்."
+        ],
+        [
+          "Add one new challenge at a time: first moving off and stopping, then gear changes, then turns, then slopes, then light traffic. If you make a mistake, stop safely, think about what happened, and try again; do not rush to hide it.",
+          "ഒരു സമയം ഒരു പുതിയ വെല്ലുവിളി മാത്രം ചേർക്കുക: ആദ്യം നീങ്ങുക, നിർത്തുക; പിന്നെ ഗിയർ മാറ്റം; പിന്നെ വളവുകൾ; പിന്നെ ചരിവുകൾ; പിന്നെ കുറഞ്ഞ ഗതാഗതം. തെറ്റ് പറ്റിയാൽ സുരക്ഷിതമായി നിർത്തി, എന്താണ് സംഭവിച്ചതെന്ന് ആലോചിച്ച് വീണ്ടും ശ്രമിക്കുക; മറയ്ക്കാൻ തിടുക്കം കാട്ടരുത്.",
+          "ஒரு நேரத்தில் ஒரு புதிய சவாலைச் சேர்க்கவும்: முதலில் நகர்த்துதல் மற்றும் நிறுத்துதல், பின்னர் கியர் மாற்றங்கள், பின்னர் திருப்பங்கள், பின்னர் சரிவுகள், பின்னர் குறைந்த போக்குவரத்து. நீங்கள் தவறு செய்தால், பாதுகாப்பாக நிறுத்துங்கள், என்ன நடந்தது என்பதைப் பற்றி சிந்தித்து, மீண்டும் முயற்சிக்கவும்; அதை மறைக்க அவசரப்பட வேண்டாம்."
+        ],
+        [
+          "Confidence is not speed or showing off. It is the calm feeling that comes from knowing you can control the car, and it is built by repetition, not by taking risks.",
+          "ആത്മവിശ്വാസം എന്നാൽ വേഗമോ പ്രകടനമോ അല്ല. വണ്ടി നിയന്ത്രിക്കാനാകുമെന്ന ശാന്തമായ ബോധമാണത്; അത് ആവർത്തനത്തിലൂടെയാണ് ഉണ്ടാകുന്നത്, റിസ്ക് എടുത്തല്ല.",
+          "நம்பிக்கை என்பது வேகம் அல்லது காட்டுவது அல்ல. நீங்கள் காரைக் கட்டுப்படுத்த முடியும் என்பதை அறிவதன் மூலம் வரும் அமைதியான உணர்வு இது, மேலும் இது ரிஸ்க் எடுப்பதன் மூலம் அல்ல, மீண்டும் மீண்டும் செய்வதன் மூலம் உருவாக்கப்படுகிறது."
+        ]
+      ]
+    }
+  ],
+  "dos": [
     [
-     "Adjust the seat so that you can press the clutch fully to the floor with a slight bend left in your knee. If your leg is stretched straight, you cannot control the pedal; if it is too bent, your leg tires quickly.",
-     "ക്ലച്ച് പൂർണമായി അമർത്തുമ്പോൾ കാൽമുട്ട് അൽപ്പം വളഞ്ഞിരിക്കുന്ന രീതിയിൽ സീറ്റ് ക്രമീകരിക്കുക. കാൽ നിവർന്നിരുന്നാൽ പെഡൽ നിയന്ത്രിക്കാനാകില്ല; അമിതമായി വളഞ്ഞാൽ കാൽ വേഗം ക്ഷീണിക്കും."
+      "Adjust seat, mirrors and belt before you move.",
+      "വണ്ടി നീക്കുംമുമ്പ് സീറ്റ്, മിറർ, ബെൽറ്റ് ക്രമീകരിക്കുക.",
+      "நீங்கள் நகரும் முன் இருக்கை, கண்ணாடிகள் மற்றும் பெல்ட்டை சரிசெய்யவும்."
     ],
     [
-     "Sit with your back against the seat and hold the steering wheel so your wrists rest on the top of the rim with arms slightly bent. This position lets you turn the wheel without stretching and keeps you steady in a sudden stop.",
-     "പുറം സീറ്റിൽ ചേർത്തിരുന്ന്, കൈകൾ അൽപ്പം വളച്ച് കൈത്തണ്ട സ്റ്റിയറിങ് വീലിന്റെ മുകളിൽ എത്തുന്ന രീതിയിൽ പിടിക്കുക. ഇങ്ങനെ ആയാൽ നീട്ടാതെ വീൽ തിരിക്കാനും പെട്ടെന്ന് നിർത്തുമ്പോൾ ഉറച്ചിരിക്കാനും കഴിയും."
+      "Press the clutch fully before changing gear.",
+      "ഗിയർ മാറ്റുംമുമ്പ് ക്ലച്ച് പൂർണമായി അമർത്തുക.",
+      "கியர் மாற்றும் முன் கிளட்சை முழுமையாக அழுத்தவும்."
     ],
     [
-     "Set the inside mirror so you see the whole rear window, then the side mirrors so you see only a thin edge of your own car and mostly the road. Fix mirrors before you start moving, never while driving.",
-     "ഉൾവശത്തെ മിറർ പിൻ ഗ്ലാസ് മുഴുവനായി കാണുന്ന രീതിയിലും സൈഡ് മിററുകൾ സ്വന്തം കാറിന്റെ നേർത്ത അറ്റം മാത്രം കാണുകയും ബാക്കി റോഡ് കാണുകയും ചെയ്യുന്ന രീതിയിലും ക്രമീകരിക്കുക. വണ്ടി നീങ്ങുംമുമ്പ് മിറർ ശരിയാക്കുക, ഓടിക്കുമ്പോൾ അല്ല."
+      "Practise finding the bite point on flat ground.",
+      "നിരപ്പായ സ്ഥലത്ത് ബൈറ്റ് പോയിന്റ് കണ്ടെത്താൻ പരിശീലിക്കുക.",
+      "தட்டையான தரையில் கடித்த புள்ளியைக் கண்டறிய பயிற்சி செய்யுங்கள்."
     ],
     [
-     "Fasten the seat belt and check that everyone in the car has done the same. A quick routine every time, such as seat, mirrors, belt, handbrake, gear in neutral, makes it a habit you never skip.",
-     "സീറ്റ് ബെൽറ്റ് ഇടുക, കാറിലെ എല്ലാവരും ഇട്ടെന്ന് ഉറപ്പാക്കുക. സീറ്റ്, മിറർ, ബെൽറ്റ്, ഹാൻഡ്ബ്രേക്ക്, ന്യൂട്രൽ ഗിയർ എന്നിങ്ങനെ ഓരോ തവണയും ചെയ്യുന്ന ചെറിയ ക്രമം ശീലമായാൽ ഒന്നും വിട്ടുപോകില്ല."
+      "Look far ahead where you want to go.",
+      "പോകേണ്ട ഇടത്തേക്ക് ദൂരേക്ക് നോക്കുക.",
+      "நீங்கள் எங்கு செல்ல விரும்புகிறீர்கள் என்பதை முன்னோக்கிப் பாருங்கள்."
+    ],
+    [
+      "Slow down before the turn, not in it.",
+      "വളവിനുള്ളിലല്ല, വളവിന് മുമ്പ് വേഗം കുറയ്ക്കുക.",
+      "திருப்பத்திற்கு முன் மெதுவாக, அதில் இல்லை."
+    ],
+    [
+      "Use the handbrake for hill starts and when parking.",
+      "കയറ്റത്തിൽ സ്റ്റാർട്ട് ചെയ്യാനും പാർക്ക് ചെയ്യാനും ഹാൻഡ്ബ്രേക്ക് ഉപയോഗിക്കുക.",
+      "ஹில் ஸ்டார்ட் மற்றும் பார்க்கிங் செய்யும் போது ஹேண்ட்பிரேக்கைப் பயன்படுத்தவும்."
+    ],
+    [
+      "Check all around, including behind, before reversing.",
+      "റിവേഴ്സ് ചെയ്യുംമുമ്പ് പിൻഭാഗം ഉൾപ്പെടെ ചുറ്റും നോക്കുക.",
+      "பின்னோக்கிச் செல்வதற்கு முன், பின்பக்கம் உட்பட அனைத்தையும் சரிபார்க்கவும்."
+    ],
+    [
+      "Learn with a qualified instructor in a safe place.",
+      "സുരക്ഷിത സ്ഥലത്ത് യോഗ്യതയുള്ള ഇൻസ്ട്രക്ടറോടൊപ്പം പഠിക്കുക.",
+      "பாதுகாப்பான இடத்தில் தகுதிவாய்ந்த பயிற்றுவிப்பாளருடன் கற்றுக்கொள்ளுங்கள்."
+    ],
+    [
+      "Stop safely and restart calmly if you stall.",
+      "എൻജിൻ ഓഫ് ആയാൽ സുരക്ഷിതമായി നിർത്തി ശാന്തമായി വീണ്ടും തുടങ്ങുക.",
+      "நீங்கள் நிறுத்தினால் பாதுகாப்பாக நிறுத்தவும் மற்றும் அமைதியாக மீண்டும் தொடங்கவும்."
+    ],
+    [
+      "Practise in short, regular sessions.",
+      "ചെറിയ, പതിവ് സെഷനുകളായി പരിശീലിക്കുക.",
+      "குறுகிய, வழக்கமான அமர்வுகளில் பயிற்சி செய்யுங்கள்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Clutch and accelerator: finding the bite point",
-    "ക്ലച്ചും ആക്സിലറേറ്ററും: ബൈറ്റ് പോയിന്റ്"
-   ],
-   "p": [
+  ],
+  "donts": [
     [
-     "The clutch connects the engine to the wheels. As you lift the pedal slowly, there is a point where the car begins to creep; this is the bite point. Learning to feel it through your foot is the single most important beginner skill.",
-     "എൻജിനെ ചക്രങ്ങളുമായി ബന്ധിപ്പിക്കുന്നത് ക്ലച്ചാണ്. പെഡൽ പതുക്കെ ഉയർത്തുമ്പോൾ വണ്ടി നീങ്ങിത്തുടങ്ങുന്ന ഒരു ബിന്ദു ഉണ്ട്; അതാണ് ബൈറ്റ് പോയിന്റ്. ഇത് കാലിലൂടെ തിരിച്ചറിയാൻ പഠിക്കുന്നതാണ് തുടക്കക്കാരന്റെ ഏറ്റവും പ്രധാന കഴിവ്."
+      "Do not adjust mirrors or seat while driving.",
+      "ഓടിക്കുമ്പോൾ മിററോ സീറ്റോ ക്രമീകരിക്കരുത്.",
+      "வாகனம் ஓட்டும் போது கண்ணாடிகள் அல்லது இருக்கைகளை சரிசெய்ய வேண்டாம்."
     ],
     [
-     "Practise on flat ground: press the clutch, select first gear, lift the clutch slowly to the bite point and hold it there. Then add a little accelerator and keep lifting the clutch gently. Stalling is normal while learning; just press the clutch, brake, and restart calmly.",
-     "നിരപ്പായ സ്ഥലത്ത് പരിശീലിക്കുക: ക്ലച്ച് അമർത്തി ഫസ്റ്റ് ഗിയർ ഇടുക, ക്ലച്ച് പതുക്കെ ബൈറ്റ് പോയിന്റ് വരെ ഉയർത്തി അവിടെ പിടിക്കുക. പിന്നെ അൽപ്പം ആക്സിലറേറ്റർ നൽകി ക്ലച്ച് പതുക്കെ ഉയർത്തുക. പഠിക്കുമ്പോൾ എൻജിൻ ഓഫ് ആകുന്നത് സാധാരണമാണ്; ക്ലച്ച് അമർത്തി ബ്രേക്ക് ചെയ്ത് ശാന്തമായി വീണ്ടും സ്റ്റാർട്ട് ചെയ്യുക."
+      "Do not rest your foot on the clutch pedal.",
+      "ക്ലച്ച് പെഡലിൽ കാൽ വെച്ചിരിക്കരുത്.",
+      "கிளட்ச் மிதி மீது உங்கள் கால் வைக்க வேண்டாம்."
     ],
     [
-     "Use the accelerator in a smooth, gradual way, as if there were a glass of water on the dashboard. Sudden pressing wastes fuel, jerks the passengers and makes it harder to stay in control.",
-     "ഡാഷ്ബോർഡിൽ ഒരു ഗ്ലാസ് വെള്ളം ഉണ്ടെന്ന് കരുതി ആക്സിലറേറ്റർ മൃദുവായും ക്രമേണയും ഉപയോഗിക്കുക. പെട്ടെന്ന് അമർത്തിയാൽ ഇന്ധനം നഷ്ടപ്പെടും, യാത്രക്കാർക്ക് കുലുക്കം ഉണ്ടാകും, നിയന്ത്രണം കുറയും."
+      "Do not stamp on the accelerator suddenly.",
+      "ആക്സിലറേറ്റർ പെട്ടെന്ന് ചവിട്ടരുത്.",
+      "முடுக்கியில் திடீரென முத்திரையிடாதீர்கள்."
     ],
     [
-     "Do not rest your foot on the clutch while driving (called riding the clutch). It wears the clutch plate and means the engine is not fully connected to the wheels when you need it.",
-     "ഓടിക്കുമ്പോൾ ക്ലച്ചിൽ കാൽ വെച്ചിരിക്കരുത്. ഇത് ക്ലച്ച് പ്ലേറ്റ് തേയ്മാനത്തിനും, ആവശ്യമുള്ളപ്പോൾ എൻജിനും ചക്രങ്ങളും പൂർണമായി ബന്ധപ്പെടാതിരിക്കാനും കാരണമാകും."
+      "Do not coast downhill in neutral or with the clutch pressed.",
+      "ഇറക്കത്തിൽ ന്യൂട്രലിലോ ക്ലച്ച് അമർത്തിയോ ഉരുട്ടി വിടരുത്.",
+      "நடுநிலையாகவோ அல்லது கிளட்சை அழுத்தியோ கீழ்நோக்கிச் செல்ல வேண்டாம்."
+    ],
+    [
+      "Do not look down at the gear lever while changing.",
+      "ഗിയർ മാറ്റുമ്പോൾ ലിവറിലേക്ക് നോക്കിക്കൊണ്ടിരിക്കരുത്.",
+      "மாற்றும் போது கியர் லீவரை கீழே பார்க்க வேண்டாம்."
+    ],
+    [
+      "Do not brake hard in the middle of a turn.",
+      "വളവിന്റെ നടുവിൽ ശക്തമായി ബ്രേക്ക് ചെയ്യരുത്.",
+      "ஒரு திருப்பத்தின் நடுவில் கடுமையாக பிரேக் செய்ய வேண்டாம்."
+    ],
+    [
+      "Do not reverse without checking behind.",
+      "പിന്നിൽ നോക്കാതെ റിവേഴ്സ് ചെയ്യരുത്.",
+      "பின்னால் சரிபார்க்காமல் தலைகீழாக மாற்ற வேண்டாம்."
+    ],
+    [
+      "Do not leave the car without the parking brake on.",
+      "പാർക്കിങ് ബ്രേക്ക് ഇടാതെ വണ്ടി വിട്ടുപോകരുത്.",
+      "பார்க்கிங் பிரேக் போடாமல் காரை விட்டுவிடாதீர்கள்."
+    ],
+    [
+      "Do not rush into heavy traffic before you are ready.",
+      "തയ്യാറാകുംമുമ്പ് തിരക്കേറിയ റോഡിലേക്ക് ഇറങ്ങരുത്.",
+      "நீங்கள் தயாராவதற்கு முன் அதிக ட்ராஃபிக்கில் அவசரப்பட வேண்டாம்."
+    ],
+    [
+      "Do not feel ashamed of mistakes; stop and learn from them.",
+      "തെറ്റുകളിൽ ലജ്ജിക്കരുത്; നിർത്തി പഠിക്കുക.",
+      "தவறுகளுக்கு வெட்கப்பட வேண்டாம்; நிறுத்தி அவர்களிடமிருந்து கற்றுக்கொள்ளுங்கள்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Smooth gear changes and steering",
-    "സുഗമമായ ഗിയർ മാറ്റവും സ്റ്റിയറിങ്ങും"
-   ],
-   "p": [
+  ],
+  "myths": [
+    {
+      "m": [
+        "Stalling means you are a bad driver.",
+        "എൻജിൻ ഓഫ് ആകുന്നത് മോശം ഡ്രൈവറുടെ ലക്ഷണമാണ്.",
+        "ஸ்டால்லிங் என்றால் நீங்கள் ஒரு மோசமான டிரைவர் என்று அர்த்தம்."
+      ],
+      "f": [
+        "Almost every learner stalls. It simply means the clutch and accelerator were not balanced yet; practice fixes it.",
+        "മിക്ക ലേണർമാർക്കും ഇത് സംഭവിക്കും. ക്ലച്ചും ആക്സിലറേറ്ററും ഇതുവരെ ശരിയായി സമതുലിതമായില്ല എന്നേ ഇതിനർത്ഥമുള്ളൂ; പരിശീലനം ഇത് ശരിയാക്കും.",
+        "ஏறக்குறைய ஒவ்வொரு கற்கும் ஸ்டால்கள். கிளட்ச் மற்றும் முடுக்கி இன்னும் சமநிலையில் இல்லை என்று அர்த்தம்; பயிற்சி அதை சரிசெய்கிறது."
+      ]
+    },
+    {
+      "m": [
+        "Resting your foot on the clutch gives you more control.",
+        "ക്ലച്ചിൽ കാൽ വെച്ചാൽ കൂടുതൽ നിയന്ത്രണം കിട്ടും.",
+        "கிளட்ச் மீது உங்கள் கால் ஓய்வெடுப்பது உங்களுக்கு அதிக கட்டுப்பாட்டை அளிக்கிறது."
+      ],
+      "f": [
+        "It wears the clutch and weakens the connection between engine and wheels. Keep your foot on the floor rest.",
+        "ഇത് ക്ലച്ച് തേയ്മാനത്തിനും എൻജിൻ-ചക്ര ബന്ധം ദുർബലമാകാനും ഇടയാക്കും. കാൽ ഫുട്ട് റെസ്റ്റിൽ വെക്കുക.",
+        "இது கிளட்ச் அணிந்து, எஞ்சின் மற்றும் சக்கரங்களுக்கு இடையேயான தொடர்பை பலவீனப்படுத்துகிறது. உங்கள் கால் தரையில் ஓய்வெடுக்கவும்."
+      ]
+    },
+    {
+      "m": [
+        "Coasting in neutral saves fuel.",
+        "ന്യൂട്രലിൽ ഉരുട്ടിയാൽ ഇന്ധനം ലാഭിക്കാം.",
+        "நடுநிலையில் பூசுவது எரிபொருளைச் சேமிக்கிறது."
+      ],
+      "f": [
+        "It gives away engine braking and control, and it is unsafe. Stay in a suitable gear.",
+        "ഇത് എൻജിൻ ബ്രേക്കിങ്ങും നിയന്ത്രണവും ഇല്ലാതാക്കും, അപകടകരവുമാണ്. അനുയോജ്യമായ ഗിയറിൽ തന്നെ തുടരുക.",
+        "இது என்ஜின் பிரேக்கிங் மற்றும் கட்டுப்பாட்டை வழங்குகிறது, மேலும் இது பாதுகாப்பற்றது. பொருத்தமான கியரில் இருங்கள்."
+      ]
+    },
+    {
+      "m": [
+        "Mirrors are enough; you do not need to turn your head.",
+        "മിററുകൾ മതി, തല തിരിക്കേണ്ടതില്ല.",
+        "கண்ணாடிகள் போதும்; நீங்கள் உங்கள் தலையை திருப்ப தேவையில்லை."
+      ],
+      "f": [
+        "Mirrors have blind spots. A quick glance over your shoulder before moving off or changing lane covers them.",
+        "മിററുകൾക്ക് അന്ധമേഖലകളുണ്ട്. നീങ്ങുംമുമ്പോ ലൈൻ മാറുംമുമ്പോ തോളിനു മുകളിലൂടെ ഒന്ന് നോക്കിയാൽ ഇത് പരിഹരിക്കാം.",
+        "கண்ணாடிகளில் குருட்டுப் புள்ளிகள் உள்ளன. புறப்படுவதற்கு முன் அல்லது பாதையை மாற்றுவதற்கு முன் உங்கள் தோள்பட்டை மீது ஒரு விரைவான பார்வை அவர்களை உள்ளடக்கும்."
+      ]
+    },
+    {
+      "m": [
+        "Confident drivers drive fast.",
+        "ആത്മവിശ്വാസമുള്ളവർ വേഗത്തിൽ ഓടിക്കുന്നവരാണ്.",
+        "நம்பிக்கையான ஓட்டுநர்கள் வேகமாக ஓட்டுகிறார்கள்."
+      ],
+      "f": [
+        "Real confidence is control and calm. Skilled drivers are usually smooth and unhurried.",
+        "യഥാർത്ഥ ആത്മവിശ്വാസം നിയന്ത്രണവും ശാന്തതയുമാണ്. പരിചയസമ്പന്നർ സാധാരണയായി സുഗമമായും തിടുക്കമില്ലാതെയും ഓടിക്കും.",
+        "உண்மையான நம்பிக்கை என்பது கட்டுப்பாடு மற்றும் அமைதி. திறமையான ஓட்டுநர்கள் பொதுவாக மென்மையான மற்றும் அவசரப்படாமல் இருப்பார்கள்."
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "t": [
+        "Anu and the slope",
+        "അനുവും ചരിവും",
+        "அனுவும் சரிவும்"
+      ],
+      "s": [
+        "A learner called Anu practised moving off in an empty ground and did well. On her first slope near a junction, the car rolled back a little and she panicked and stalled. Her instructor reminded her to apply the handbrake, find the bite point with a little accelerator, and release the brake only when the car felt ready to go. After a few tries in a quiet lane, she managed it smoothly.",
+        "അനു എന്ന ലേണർ ഒഴിഞ്ഞ ഗ്രൗണ്ടിൽ വണ്ടി നീക്കി പരിശീലിച്ച് നന്നായി ചെയ്തു. ജംഗ്ഷനടുത്തുള്ള ആദ്യ ചരിവിൽ വണ്ടി അൽപ്പം പിന്നോട്ട് ഉരുണ്ടു, പരിഭ്രമിച്ച് എൻജിൻ ഓഫ് ആയി. ഹാൻഡ്ബ്രേക്ക് ഇട്ട്, അൽപ്പം ആക്സിലറേറ്റർ കൊണ്ട് ബൈറ്റ് പോയിന്റ് കണ്ടെത്തി, വണ്ടി പോകാൻ തയ്യാറാണെന്ന് തോന്നിയാൽ മാത്രം ബ്രേക്ക് വിടാൻ ഇൻസ്ട്രക്ടർ ഓർമ്മിപ്പിച്ചു. ശാന്തമായ ഇടവഴിയിൽ കുറച്ച് ശ്രമങ്ങൾക്കുശേഷം അവൾ അത് സുഗമമായി ചെയ്തു.",
+        "அனு என்று அழைக்கப்படும் ஒரு கற்றவர் வெற்று நிலத்தில் இடம்பெயர்ந்து நன்றாகச் செய்தார். ஒரு சந்திப்புக்கு அருகே அவளது முதல் சாய்வில், கார் சிறிது பின்னோக்கிச் சென்றது, அவள் பீதியடைந்து நின்றாள். அவளது பயிற்றுவிப்பாளர் அவளுக்கு ஹேண்ட்பிரேக்கைப் பயன்படுத்தவும், ஒரு சிறிய ஆக்சிலரேட்டரைக் கொண்டு கடித்த இடத்தைக் கண்டுபிடித்து, கார் செல்லத் தயாராக இருக்கும் போது மட்டுமே பிரேக்கை விடுவிக்கவும் நினைவூட்டினார். அமைதியான பாதையில் சில முயற்சிகளுக்குப் பிறகு, அவள் அதைச் சீராகச் சமாளித்தாள்."
+      ],
+      "lesson": [
+        "Use the handbrake and the bite point on slopes, and practise away from traffic first.",
+        "ചരിവിൽ ഹാൻഡ്ബ്രേക്കും ബൈറ്റ് പോയിന്റും ഉപയോഗിക്കുക; ആദ്യം ഗതാഗതത്തിൽ നിന്ന് അകലെ പരിശീലിക്കുക.",
+        "சரிவுகளில் ஹேண்ட்பிரேக் மற்றும் பைட் பாயிண்ட்டைப் பயன்படுத்தவும், முதலில் போக்குவரத்திலிருந்து விலகி பயிற்சி செய்யவும்."
+      ]
+    },
+    {
+      "t": [
+        "Reversing into the gap",
+        "വിടവിലേക്ക് റിവേഴ്സ്",
+        "இடைவெளியில் திரும்புதல்"
+      ],
+      "s": [
+        "Ravi wanted to park in a narrow space outside a shop and started reversing quickly, only looking in the mirror. A pedestrian stepped behind the car and Ravi stopped just in time. After that, he began to switch off the music, look over his shoulder, and move at walking pace with the clutch. He also learnt to stop and pull forward if the angle was wrong, instead of forcing it.",
+        "കടയുടെ മുന്നിലെ ഇടുങ്ങിയ സ്ഥലത്ത് പാർക്ക് ചെയ്യാൻ രവി മിററിൽ മാത്രം നോക്കി വേഗത്തിൽ റിവേഴ്സ് ചെയ്തു തുടങ്ങി. ഒരു കാൽനടക്കാരൻ വണ്ടിയുടെ പിന്നിൽ വന്നു; രവി തക്കസമയത്ത് നിർത്തി. അതിനുശേഷം പാട്ട് ഓഫ് ചെയ്ത്, തോളിനു മുകളിലൂടെ നോക്കി, ക്ലച്ച് ഉപയോഗിച്ച് നടക്കുന്ന വേഗത്തിൽ നീക്കാൻ തുടങ്ങി. കോൺ തെറ്റിയാൽ നിർബന്ധിക്കാതെ മുന്നോട്ടെടുത്ത് വീണ്ടും ശ്രമിക്കാനും പഠിച്ചു.",
+        "ரவி ஒரு கடைக்கு வெளியே ஒரு குறுகிய இடத்தில் நிறுத்த விரும்பினார், மேலும் கண்ணாடியை மட்டும் பார்த்துக்கொண்டு வேகமாகத் திரும்பத் தொடங்கினார். ஒரு பாதசாரி காரின் பின்னால் வந்தான், ரவி சரியான நேரத்தில் நிறுத்தினான். அதன் பிறகு, அவர் இசையை அணைத்து, தோள்பட்டைக்கு மேல் பார்த்து, கிளட்ச் மூலம் நடக்கத் தொடங்கினார். கோணம் தவறாக இருந்தால், கட்டாயப்படுத்துவதற்குப் பதிலாக நிறுத்தவும் முன்னோக்கி இழுக்கவும் கற்றுக்கொண்டார்."
+      ],
+      "lesson": [
+        "Reverse slowly, look all around, and do not be afraid to stop and try again.",
+        "പതുക്കെ റിവേഴ്സ് ചെയ്യുക, ചുറ്റും നോക്കുക, നിർത്തി വീണ്ടും ശ്രമിക്കാൻ മടിക്കരുത്.",
+        "மெதுவாகத் திரும்பி, சுற்றிப் பார்க்கவும், பயப்படாமல் நிறுத்திவிட்டு மீண்டும் முயற்சிக்கவும்."
+      ]
+    }
+  ],
+  "recap": [
     [
-     "Change gear by pressing the clutch fully, moving the lever, and then releasing the clutch smoothly while easing the accelerator. Choose the gear by engine sound and speed, not by looking at the lever; keep your eyes on the road.",
-     "ക്ലച്ച് പൂർണമായി അമർത്തി ലിവർ നീക്കി, ആക്സിലറേറ്റർ കുറച്ച് ക്ലച്ച് സുഗമമായി വിടുക. എൻജിന്റെ ശബ്ദവും വേഗവും നോക്കി ഗിയർ തിരഞ്ഞെടുക്കുക; ലിവറിൽ നോക്കാതെ കണ്ണ് റോഡിൽ വെക്കുക."
+      "Seat, mirrors, belt first; then move.",
+      "ആദ്യം സീറ്റ്, മിറർ, ബെൽറ്റ്; പിന്നെ നീങ്ങുക.",
+      "இருக்கை, கண்ணாடிகள், பெல்ட் முதலில்; பின்னர் நகர்த்தவும்."
     ],
     [
-     "Slow down before a turn, not during it. Select a lower gear early so that you can turn with steady power instead of braking hard in the middle of the bend.",
-     "വളവിനുള്ളിൽ അല്ല, വളവിന് മുമ്പാണ് വേഗം കുറയ്ക്കേണ്ടത്. നേരത്തെ താഴ്ന്ന ഗിയറിലേക്ക് മാറിയാൽ വളവിനുള്ളിൽ ശക്തമായി ബ്രേക്ക് ചെയ്യാതെ സ്ഥിരമായ ശക്തിയിൽ തിരിക്കാം."
+      "The bite point is the key beginner skill.",
+      "ബൈറ്റ് പോയിന്റ് ആണ് തുടക്കക്കാരന്റെ പ്രധാന കഴിവ്.",
+      "கடி புள்ளி முக்கிய தொடக்க திறன் ஆகும்."
     ],
     [
-     "Hold the steering wheel with both hands in a relaxed grip, roughly at the nine and three positions. Look far ahead in the direction you want to go; the car tends to follow your eyes. Use hand-over-hand or shuffle steering for turns and let the wheel slide back as you straighten.",
-     "രണ്ട് കൈകൊണ്ടും, ഏകദേശം ഒൻപത്, മൂന്ന് മണി സ്ഥാനങ്ങളിൽ, അയഞ്ഞ പിടുത്തത്തോടെ വീൽ പിടിക്കുക. പോകേണ്ട ദിശയിൽ ദൂരേക്ക് നോക്കുക; വണ്ടി കണ്ണ് പോകുന്നിടത്തേക്ക് നീങ്ങും. വളയ്ക്കുമ്പോൾ കൈ മാറി മാറി തിരിക്കുക, നേരെയാക്കുമ്പോൾ വീൽ തനിയെ തിരിച്ചുപോകാൻ അനുവദിക്കുക."
+      "Be smooth with clutch, accelerator, brake and steering.",
+      "ക്ലച്ച്, ആക്സിലറേറ്റർ, ബ്രേക്ക്, സ്റ്റിയറിങ് എല്ലാം സുഗമമായി ഉപയോഗിക്കുക.",
+      "கிளட்ச், ஆக்ஸிலரேட்டர், பிரேக் மற்றும் ஸ்டீயரிங் மூலம் மென்மையாக இருங்கள்."
     ],
     [
-     "Do not coast downhill with the clutch pressed or in neutral. The engine then gives you no braking help and you lose control of speed.",
-     "ഇറക്കത്തിൽ ക്ലച്ച് അമർത്തിയോ ന്യൂട്രലിലോ ഉരുട്ടി വിടരുത്. എൻജിന്റെ ബ്രേക്കിങ് സഹായം കിട്ടില്ല, വേഗത്തിലുള്ള നിയന്ത്രണം നഷ്ടപ്പെടും."
+      "Slow down before the turn; look where you want to go.",
+      "വളവിന് മുമ്പ് വേഗം കുറയ്ക്കുക; പോകേണ്ട ഇടത്തേക്ക് നോക്കുക.",
+      "திருப்பத்திற்கு முன் மெதுவாக; நீங்கள் எங்கு செல்ல வேண்டும் என்று பாருங்கள்."
+    ],
+    [
+      "Handbrake for hill starts and every time you park.",
+      "കയറ്റത്തിലെ സ്റ്റാർട്ടിനും ഓരോ പാർക്കിങ്ങിനും ഹാൻഡ്ബ്രേക്ക്.",
+      "ஹில் தொடங்கும் போது மற்றும் நீங்கள் நிறுத்தும் ஒவ்வொரு முறையும் ஹேண்ட்பிரேக்."
+    ],
+    [
+      "Practise in a safe place; confidence comes from repetition.",
+      "സുരക്ഷിത സ്ഥലത്ത് പരിശീലിക്കുക; ആവർത്തനത്തിലൂടെയാണ് ആത്മവിശ്വാസം.",
+      "பாதுகாப்பான இடத்தில் பயிற்சி செய்யுங்கள்; நம்பிக்கை மீண்டும் மீண்டும் வருகிறது."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Hill start and parking brake",
-    "കയറ്റത്തിലെ സ്റ്റാർട്ടും പാർക്കിങ് ബ്രേക്കും"
-   ],
-   "p": [
-    [
-     "On a slope the car wants to roll back when you move your foot from the brake to the accelerator. The parking brake (handbrake) holds the car so you can find the bite point without rolling.",
-     "കയറ്റത്തിൽ കാൽ ബ്രേക്കിൽ നിന്ന് ആക്സിലറേറ്ററിലേക്ക് മാറ്റുമ്പോൾ വണ്ടി പിന്നോട്ട് ഉരുളാൻ ശ്രമിക്കും. പാർക്കിങ് ബ്രേക്ക് (ഹാൻഡ്ബ്രേക്ക്) വണ്ടിയെ പിടിച്ചുനിർത്തുന്നതിനാൽ ഉരുളാതെ ബൈറ്റ് പോയിന്റ് കണ്ടെത്താം."
-    ],
-    [
-     "Method: handbrake on, first gear, raise the engine sound slightly with the accelerator, lift the clutch to the bite point until the car feels as if it wants to move forward, then release the handbrake smoothly and continue.",
-     "രീതി: ഹാൻഡ്ബ്രേക്ക് ഇടുക, ഫസ്റ്റ് ഗിയർ, ആക്സിലറേറ്റർ കൊണ്ട് എൻജിൻ ശബ്ദം അൽപ്പം ഉയർത്തുക, വണ്ടി മുന്നോട്ട് നീങ്ങാൻ ആഗ്രഹിക്കുന്നതായി തോന്നുംവരെ ക്ലച്ച് ബൈറ്റ് പോയിന്റ് വരെ ഉയർത്തുക, പിന്നെ ഹാൻഡ്ബ്രേക്ക് സുഗമമായി വിട്ട് മുന്നോട്ട് പോകുക."
-    ],
-    [
-     "Always apply the parking brake whenever you leave the car, and on a slope also leave it in gear (first when facing uphill, reverse when facing downhill) and turn the wheels toward the kerb or edge of the road if the situation allows.",
-     "വണ്ടി വിട്ടുപോകുമ്പോൾ എപ്പോഴും പാർക്കിങ് ബ്രേക്ക് ഇടുക. ചരിവിൽ ഗിയറിലും ഇടുക (കയറ്റത്തിലേക്ക് മുഖം ആണെങ്കിൽ ഫസ്റ്റ്, ഇറക്കത്തിലേക്ക് ആണെങ്കിൽ റിവേഴ്സ്). സാഹചര്യം അനുവദിച്ചാൽ ചക്രങ്ങൾ റോഡരികിലേക്ക് തിരിച്ചുവെക്കുക."
-    ],
-    [
-     "Keep a safe gap from the vehicle in front on a hill, because some vehicles may roll back a little when they start. Leave space and stay calm if the car behind you is close.",
-     "കയറ്റത്തിൽ മുന്നിലെ വാഹനത്തിൽ നിന്ന് സുരക്ഷിത അകലം പാലിക്കുക; ചില വാഹനങ്ങൾ തുടങ്ങുമ്പോൾ അൽപ്പം പിന്നോട്ട് ഉരുളാം. പിന്നിലെ വണ്ടി അടുത്താണെങ്കിലും ശാന്തത പാലിക്കുക."
-    ]
-   ]
-  },
-  {
-   "h": [
-    "Parking and reversing practice",
-    "പാർക്കിങ്ങും റിവേഴ്സും പരിശീലനം"
-   ],
-   "p": [
-    [
-     "Reversing is slow driving. Keep the car at walking pace using the clutch bite point, look through the rear window over your shoulder as well as in the mirrors, and check for children, pets or objects behind before you start.",
-     "റിവേഴ്സിങ് എന്നത് പതുക്കെയുള്ള ഡ്രൈവിങ് ആണ്. ക്ലച്ച് ബൈറ്റ് പോയിന്റിൽ നടക്കുന്ന വേഗത്തിൽ നീക്കുക, മിററുകൾക്കൊപ്പം തോളിനു മുകളിലൂടെ പിൻ ഗ്ലാസ് വഴിയും നോക്കുക, തുടങ്ങുംമുമ്പ് പിന്നിൽ കുട്ടികളോ മൃഗങ്ങളോ വസ്തുക്കളോ ഉണ്ടോ എന്ന് പരിശോധിക്കുക."
-    ],
-    [
-     "When reversing, the car's front swings out in the opposite direction to the way the rear goes. Turn the wheel in small movements and correct early; if you feel lost, stop, go forward and start again.",
-     "റിവേഴ്സ് ചെയ്യുമ്പോൾ പിൻഭാഗം പോകുന്നതിന് വിപരീതദിശയിൽ വണ്ടിയുടെ മുൻഭാഗം വെട്ടിമാറും. വീൽ ചെറിയ അളവിൽ തിരിച്ച് നേരത്തെ തിരുത്തുക; ആശയക്കുഴപ്പം തോന്നിയാൽ നിർത്തി, മുന്നോട്ടെടുത്ത് വീണ്ടും തുടങ്ങുക."
-    ],
-    [
-     "Practise parallel and angle parking using cones, bottles or lines in an empty ground. Picking fixed reference points on the car, such as a mirror lining up with a line, makes the movements repeatable.",
-     "ഒഴിഞ്ഞ ഗ്രൗണ്ടിൽ കോൺ, കുപ്പി, വരകൾ എന്നിവ ഉപയോഗിച്ച് പാരലൽ, ആംഗിൾ പാർക്കിങ് പരിശീലിക്കുക. വണ്ടിയിലെ ഉറച്ച അടയാളങ്ങൾ (ഉദാ. മിറർ ഒരു വരയോട് ചേരുന്നത്) ഉപയോഗിച്ചാൽ ചലനങ്ങൾ ആവർത്തിക്കാൻ എളുപ്പമാകും."
-    ],
-    [
-     "Park only where it is allowed and never block a gate, a junction or a bus stop. Before leaving, check mirrors and the door side for approaching two-wheelers and pedestrians.",
-     "അനുവദിച്ച സ്ഥലത്ത് മാത്രം പാർക്ക് ചെയ്യുക; ഗേറ്റ്, ജംഗ്ഷൻ, ബസ് സ്റ്റോപ്പ് എന്നിവ തടയരുത്. ഇറങ്ങുംമുമ്പ് മിററിൽ നോക്കി, വാതിൽ തുറക്കുന്ന വശത്ത് വരുന്ന ഇരുചക്രവാഹനങ്ങളോ കാൽനടക്കാരോ ഇല്ലെന്ന് ഉറപ്പാക്കുക."
-    ]
-   ]
-  },
-  {
-   "h": [
-    "Building confidence in a safe place",
-    "സുരക്ഷിതമായ സ്ഥലത്ത് ആത്മവിശ്വാസം വളർത്തൽ"
-   ],
-   "p": [
-    [
-     "Start in an empty ground, a quiet lane or a driving school area before you move to traffic. Without pressure from horns and crowds, your hands and feet learn the controls much faster.",
-     "ഗതാഗതത്തിലേക്ക് വരുംമുമ്പ് ഒഴിഞ്ഞ ഗ്രൗണ്ട്, ശാന്തമായ ഇടവഴി, ഡ്രൈവിങ് സ്കൂൾ പരിസരം എന്നിവിടങ്ങളിൽ തുടങ്ങുക. ഹോണിന്റെയും തിരക്കിന്റെയും സമ്മർദ്ദമില്ലാത്തപ്പോൾ കൈകാലുകൾ നിയന്ത്രണങ്ങൾ വളരെ വേഗം പഠിക്കും."
-    ],
-    [
-     "Learn with a qualified instructor or an experienced licensed driver, and always display the learner's sign required by the rules for a learner. Practise in short, regular sessions rather than one long, tiring day.",
-     "യോഗ്യതയുള്ള ഇൻസ്ട്രക്ടറുടെ അല്ലെങ്കിൽ പരിചയസമ്പന്നനായ ലൈസൻസുള്ള ഡ്രൈവറുടെ കൂടെ പഠിക്കുക; ലേണർക്ക് നിയമം ആവശ്യപ്പെടുന്ന ലേണർ അടയാളം പ്രദർശിപ്പിക്കുക. ഒരു ദിവസം ദീർഘമായി ക്ഷീണിക്കുന്നതിലും നല്ലത് ചെറിയ, പതിവ് പരിശീലനമാണ്."
-    ],
-    [
-     "Add one new challenge at a time: first moving off and stopping, then gear changes, then turns, then slopes, then light traffic. If you make a mistake, stop safely, think about what happened, and try again; do not rush to hide it.",
-     "ഒരു സമയം ഒരു പുതിയ വെല്ലുവിളി മാത്രം ചേർക്കുക: ആദ്യം നീങ്ങുക, നിർത്തുക; പിന്നെ ഗിയർ മാറ്റം; പിന്നെ വളവുകൾ; പിന്നെ ചരിവുകൾ; പിന്നെ കുറഞ്ഞ ഗതാഗതം. തെറ്റ് പറ്റിയാൽ സുരക്ഷിതമായി നിർത്തി, എന്താണ് സംഭവിച്ചതെന്ന് ആലോചിച്ച് വീണ്ടും ശ്രമിക്കുക; മറയ്ക്കാൻ തിടുക്കം കാട്ടരുത്."
-    ],
-    [
-     "Confidence is not speed or showing off. It is the calm feeling that comes from knowing you can control the car, and it is built by repetition, not by taking risks.",
-     "ആത്മവിശ്വാസം എന്നാൽ വേഗമോ പ്രകടനമോ അല്ല. വണ്ടി നിയന്ത്രിക്കാനാകുമെന്ന ശാന്തമായ ബോധമാണത്; അത് ആവർത്തനത്തിലൂടെയാണ് ഉണ്ടാകുന്നത്, റിസ്ക് എടുത്തല്ല."
-    ]
-   ]
-  }
- ],
- "dos": [
-  [
-   "Adjust seat, mirrors and belt before you move.",
-   "വണ്ടി നീക്കുംമുമ്പ് സീറ്റ്, മിറർ, ബെൽറ്റ് ക്രമീകരിക്കുക."
-  ],
-  [
-   "Press the clutch fully before changing gear.",
-   "ഗിയർ മാറ്റുംമുമ്പ് ക്ലച്ച് പൂർണമായി അമർത്തുക."
-  ],
-  [
-   "Practise finding the bite point on flat ground.",
-   "നിരപ്പായ സ്ഥലത്ത് ബൈറ്റ് പോയിന്റ് കണ്ടെത്താൻ പരിശീലിക്കുക."
-  ],
-  [
-   "Look far ahead where you want to go.",
-   "പോകേണ്ട ഇടത്തേക്ക് ദൂരേക്ക് നോക്കുക."
-  ],
-  [
-   "Slow down before the turn, not in it.",
-   "വളവിനുള്ളിലല്ല, വളവിന് മുമ്പ് വേഗം കുറയ്ക്കുക."
-  ],
-  [
-   "Use the handbrake for hill starts and when parking.",
-   "കയറ്റത്തിൽ സ്റ്റാർട്ട് ചെയ്യാനും പാർക്ക് ചെയ്യാനും ഹാൻഡ്ബ്രേക്ക് ഉപയോഗിക്കുക."
-  ],
-  [
-   "Check all around, including behind, before reversing.",
-   "റിവേഴ്സ് ചെയ്യുംമുമ്പ് പിൻഭാഗം ഉൾപ്പെടെ ചുറ്റും നോക്കുക."
-  ],
-  [
-   "Learn with a qualified instructor in a safe place.",
-   "സുരക്ഷിത സ്ഥലത്ത് യോഗ്യതയുള്ള ഇൻസ്ട്രക്ടറോടൊപ്പം പഠിക്കുക."
-  ],
-  [
-   "Stop safely and restart calmly if you stall.",
-   "എൻജിൻ ഓഫ് ആയാൽ സുരക്ഷിതമായി നിർത്തി ശാന്തമായി വീണ്ടും തുടങ്ങുക."
-  ],
-  [
-   "Practise in short, regular sessions.",
-   "ചെറിയ, പതിവ് സെഷനുകളായി പരിശീലിക്കുക."
   ]
- ],
- "donts": [
-  [
-   "Do not adjust mirrors or seat while driving.",
-   "ഓടിക്കുമ്പോൾ മിററോ സീറ്റോ ക്രമീകരിക്കരുത്."
-  ],
-  [
-   "Do not rest your foot on the clutch pedal.",
-   "ക്ലച്ച് പെഡലിൽ കാൽ വെച്ചിരിക്കരുത്."
-  ],
-  [
-   "Do not stamp on the accelerator suddenly.",
-   "ആക്സിലറേറ്റർ പെട്ടെന്ന് ചവിട്ടരുത്."
-  ],
-  [
-   "Do not coast downhill in neutral or with the clutch pressed.",
-   "ഇറക്കത്തിൽ ന്യൂട്രലിലോ ക്ലച്ച് അമർത്തിയോ ഉരുട്ടി വിടരുത്."
-  ],
-  [
-   "Do not look down at the gear lever while changing.",
-   "ഗിയർ മാറ്റുമ്പോൾ ലിവറിലേക്ക് നോക്കിക്കൊണ്ടിരിക്കരുത്."
-  ],
-  [
-   "Do not brake hard in the middle of a turn.",
-   "വളവിന്റെ നടുവിൽ ശക്തമായി ബ്രേക്ക് ചെയ്യരുത്."
-  ],
-  [
-   "Do not reverse without checking behind.",
-   "പിന്നിൽ നോക്കാതെ റിവേഴ്സ് ചെയ്യരുത്."
-  ],
-  [
-   "Do not leave the car without the parking brake on.",
-   "പാർക്കിങ് ബ്രേക്ക് ഇടാതെ വണ്ടി വിട്ടുപോകരുത്."
-  ],
-  [
-   "Do not rush into heavy traffic before you are ready.",
-   "തയ്യാറാകുംമുമ്പ് തിരക്കേറിയ റോഡിലേക്ക് ഇറങ്ങരുത്."
-  ],
-  [
-   "Do not feel ashamed of mistakes; stop and learn from them.",
-   "തെറ്റുകളിൽ ലജ്ജിക്കരുത്; നിർത്തി പഠിക്കുക."
-  ]
- ],
- "myths": [
-  {
-   "m": [
-    "Stalling means you are a bad driver.",
-    "എൻജിൻ ഓഫ് ആകുന്നത് മോശം ഡ്രൈവറുടെ ലക്ഷണമാണ്."
-   ],
-   "f": [
-    "Almost every learner stalls. It simply means the clutch and accelerator were not balanced yet; practice fixes it.",
-    "മിക്ക ലേണർമാർക്കും ഇത് സംഭവിക്കും. ക്ലച്ചും ആക്സിലറേറ്ററും ഇതുവരെ ശരിയായി സമതുലിതമായില്ല എന്നേ ഇതിനർത്ഥമുള്ളൂ; പരിശീലനം ഇത് ശരിയാക്കും."
-   ]
-  },
-  {
-   "m": [
-    "Resting your foot on the clutch gives you more control.",
-    "ക്ലച്ചിൽ കാൽ വെച്ചാൽ കൂടുതൽ നിയന്ത്രണം കിട്ടും."
-   ],
-   "f": [
-    "It wears the clutch and weakens the connection between engine and wheels. Keep your foot on the floor rest.",
-    "ഇത് ക്ലച്ച് തേയ്മാനത്തിനും എൻജിൻ-ചക്ര ബന്ധം ദുർബലമാകാനും ഇടയാക്കും. കാൽ ഫുട്ട് റെസ്റ്റിൽ വെക്കുക."
-   ]
-  },
-  {
-   "m": [
-    "Coasting in neutral saves fuel.",
-    "ന്യൂട്രലിൽ ഉരുട്ടിയാൽ ഇന്ധനം ലാഭിക്കാം."
-   ],
-   "f": [
-    "It gives away engine braking and control, and it is unsafe. Stay in a suitable gear.",
-    "ഇത് എൻജിൻ ബ്രേക്കിങ്ങും നിയന്ത്രണവും ഇല്ലാതാക്കും, അപകടകരവുമാണ്. അനുയോജ്യമായ ഗിയറിൽ തന്നെ തുടരുക."
-   ]
-  },
-  {
-   "m": [
-    "Mirrors are enough; you do not need to turn your head.",
-    "മിററുകൾ മതി, തല തിരിക്കേണ്ടതില്ല."
-   ],
-   "f": [
-    "Mirrors have blind spots. A quick glance over your shoulder before moving off or changing lane covers them.",
-    "മിററുകൾക്ക് അന്ധമേഖലകളുണ്ട്. നീങ്ങുംമുമ്പോ ലൈൻ മാറുംമുമ്പോ തോളിനു മുകളിലൂടെ ഒന്ന് നോക്കിയാൽ ഇത് പരിഹരിക്കാം."
-   ]
-  },
-  {
-   "m": [
-    "Confident drivers drive fast.",
-    "ആത്മവിശ്വാസമുള്ളവർ വേഗത്തിൽ ഓടിക്കുന്നവരാണ്."
-   ],
-   "f": [
-    "Real confidence is control and calm. Skilled drivers are usually smooth and unhurried.",
-    "യഥാർത്ഥ ആത്മവിശ്വാസം നിയന്ത്രണവും ശാന്തതയുമാണ്. പരിചയസമ്പന്നർ സാധാരണയായി സുഗമമായും തിടുക്കമില്ലാതെയും ഓടിക്കും."
-   ]
-  }
- ],
- "stories": [
-  {
-   "t": [
-    "Anu and the slope",
-    "അനുവും ചരിവും"
-   ],
-   "s": [
-    "A learner called Anu practised moving off in an empty ground and did well. On her first slope near a junction, the car rolled back a little and she panicked and stalled. Her instructor reminded her to apply the handbrake, find the bite point with a little accelerator, and release the brake only when the car felt ready to go. After a few tries in a quiet lane, she managed it smoothly.",
-    "അനു എന്ന ലേണർ ഒഴിഞ്ഞ ഗ്രൗണ്ടിൽ വണ്ടി നീക്കി പരിശീലിച്ച് നന്നായി ചെയ്തു. ജംഗ്ഷനടുത്തുള്ള ആദ്യ ചരിവിൽ വണ്ടി അൽപ്പം പിന്നോട്ട് ഉരുണ്ടു, പരിഭ്രമിച്ച് എൻജിൻ ഓഫ് ആയി. ഹാൻഡ്ബ്രേക്ക് ഇട്ട്, അൽപ്പം ആക്സിലറേറ്റർ കൊണ്ട് ബൈറ്റ് പോയിന്റ് കണ്ടെത്തി, വണ്ടി പോകാൻ തയ്യാറാണെന്ന് തോന്നിയാൽ മാത്രം ബ്രേക്ക് വിടാൻ ഇൻസ്ട്രക്ടർ ഓർമ്മിപ്പിച്ചു. ശാന്തമായ ഇടവഴിയിൽ കുറച്ച് ശ്രമങ്ങൾക്കുശേഷം അവൾ അത് സുഗമമായി ചെയ്തു."
-   ],
-   "lesson": [
-    "Use the handbrake and the bite point on slopes, and practise away from traffic first.",
-    "ചരിവിൽ ഹാൻഡ്ബ്രേക്കും ബൈറ്റ് പോയിന്റും ഉപയോഗിക്കുക; ആദ്യം ഗതാഗതത്തിൽ നിന്ന് അകലെ പരിശീലിക്കുക."
-   ]
-  },
-  {
-   "t": [
-    "Reversing into the gap",
-    "വിടവിലേക്ക് റിവേഴ്സ്"
-   ],
-   "s": [
-    "Ravi wanted to park in a narrow space outside a shop and started reversing quickly, only looking in the mirror. A pedestrian stepped behind the car and Ravi stopped just in time. After that, he began to switch off the music, look over his shoulder, and move at walking pace with the clutch. He also learnt to stop and pull forward if the angle was wrong, instead of forcing it.",
-    "കടയുടെ മുന്നിലെ ഇടുങ്ങിയ സ്ഥലത്ത് പാർക്ക് ചെയ്യാൻ രവി മിററിൽ മാത്രം നോക്കി വേഗത്തിൽ റിവേഴ്സ് ചെയ്തു തുടങ്ങി. ഒരു കാൽനടക്കാരൻ വണ്ടിയുടെ പിന്നിൽ വന്നു; രവി തക്കസമയത്ത് നിർത്തി. അതിനുശേഷം പാട്ട് ഓഫ് ചെയ്ത്, തോളിനു മുകളിലൂടെ നോക്കി, ക്ലച്ച് ഉപയോഗിച്ച് നടക്കുന്ന വേഗത്തിൽ നീക്കാൻ തുടങ്ങി. കോൺ തെറ്റിയാൽ നിർബന്ധിക്കാതെ മുന്നോട്ടെടുത്ത് വീണ്ടും ശ്രമിക്കാനും പഠിച്ചു."
-   ],
-   "lesson": [
-    "Reverse slowly, look all around, and do not be afraid to stop and try again.",
-    "പതുക്കെ റിവേഴ്സ് ചെയ്യുക, ചുറ്റും നോക്കുക, നിർത്തി വീണ്ടും ശ്രമിക്കാൻ മടിക്കരുത്."
-   ]
-  }
- ],
- "recap": [
-  [
-   "Seat, mirrors, belt first; then move.",
-   "ആദ്യം സീറ്റ്, മിറർ, ബെൽറ്റ്; പിന്നെ നീങ്ങുക."
-  ],
-  [
-   "The bite point is the key beginner skill.",
-   "ബൈറ്റ് പോയിന്റ് ആണ് തുടക്കക്കാരന്റെ പ്രധാന കഴിവ്."
-  ],
-  [
-   "Be smooth with clutch, accelerator, brake and steering.",
-   "ക്ലച്ച്, ആക്സിലറേറ്റർ, ബ്രേക്ക്, സ്റ്റിയറിങ് എല്ലാം സുഗമമായി ഉപയോഗിക്കുക."
-  ],
-  [
-   "Slow down before the turn; look where you want to go.",
-   "വളവിന് മുമ്പ് വേഗം കുറയ്ക്കുക; പോകേണ്ട ഇടത്തേക്ക് നോക്കുക."
-  ],
-  [
-   "Handbrake for hill starts and every time you park.",
-   "കയറ്റത്തിലെ സ്റ്റാർട്ടിനും ഓരോ പാർക്കിങ്ങിനും ഹാൻഡ്ബ്രേക്ക്."
-  ],
-  [
-   "Practise in a safe place; confidence comes from repetition.",
-   "സുരക്ഷിത സ്ഥലത്ത് പരിശീലിക്കുക; ആവർത്തനത്തിലൂടെയാണ് ആത്മവിശ്വാസം."
-  ]
- ]
 }

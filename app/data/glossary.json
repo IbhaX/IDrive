@@ -1,500 +1,666 @@
 [
- [
-  "Carriageway",
-  "കാര്യേജ്‌വേ",
-  "The part of the road used by moving vehicles, not including the footpath or shoulder. A divided road has a separate carriageway for each direction.",
-  "റോഡിൽ വാഹനങ്ങൾ ഓടുന്ന ഭാഗം; നടപ്പാതയും ഷോൾഡറും ഇതിൽ ഉൾപ്പെടില്ല. ഡിവൈഡഡ് റോഡിൽ ഓരോ ദിശയ്ക്കും വെവ്വേറെ കാര്യേജ്‌വേ ഉണ്ടാകും."
- ],
- [
-  "Kerb",
-  "കെർബ്",
-  "The raised edge between the road and the footpath or median. It guides water and marks where vehicles should not go.",
-  "റോഡിനും നടപ്പാതയ്ക്കും അല്ലെങ്കിൽ മീഡിയനും ഇടയിലെ ഉയർന്ന അരിക്. ഇത് വെള്ളം ഒഴുകാൻ സഹായിക്കുകയും വാഹനങ്ങൾ കയറരുതാത്ത സ്ഥലം കാണിക്കുകയും ചെയ്യുന്നു."
- ],
- [
-  "Median",
-  "മീഡിയൻ",
-  "The strip in the middle of a divided road that separates traffic going in opposite directions. You must not cross it except at marked openings.",
-  "എതിർദിശകളിലെ വാഹനങ്ങളെ വേർതിരിക്കുന്ന ഡിവൈഡഡ് റോഡിന്റെ നടുവിലെ ഭാഗം. അടയാളപ്പെടുത്തിയ വിടവുകളിലല്ലാതെ ഇത് മുറിച്ചുകടക്കരുത്."
- ],
- [
-  "Shoulder",
-  "ഷോൾഡർ",
-  "The strip at the side of the carriageway meant for emergency stops, not for regular driving or parking.",
-  "കാര്യേജ്‌വേയുടെ വശത്തുള്ള ഭാഗം; അടിയന്തര സാഹചര്യത്തിൽ നിർത്താനുള്ളതാണ്, സാധാരണ ഓടിക്കാനോ പാർക്ക് ചെയ്യാനോ അല്ല."
- ],
- [
-  "Gradient",
-  "ഗ്രേഡിയന്റ്",
-  "How steeply a road rises or falls, such as an uphill or downhill slope. Steep gradients need a lower gear and more care with braking.",
-  "റോഡ് എത്ര കുത്തനെ കയറുന്നു അല്ലെങ്കിൽ ഇറങ്ങുന്നു എന്നതിന്റെ അളവ്. കുത്തനെയുള്ള ചരിവിൽ താഴ്ന്ന ഗിയറും ബ്രേക്കിങ്ങിൽ കൂടുതൽ ശ്രദ്ധയും വേണം."
- ],
- [
-  "Camber",
-  "കാംബർ",
-  "The slight slope of the road surface from the centre towards the edges so that rainwater drains off. It can affect how a vehicle feels on bends.",
-  "മഴവെള്ളം ഒഴുകിപ്പോകാൻ റോഡിന്റെ നടുവിൽ നിന്ന് അരികുകളിലേക്കുള്ള നേരിയ ചരിവ്. വളവുകളിൽ വാഹനത്തിന്റെ നിയന്ത്രണത്തെ ഇത് ബാധിക്കാം."
- ],
- [
-  "Blind spot",
-  "ബ്ലൈൻഡ് സ്പോട്ട്",
-  "An area beside or behind your vehicle that you cannot see in the mirrors. Turn your head and check it before changing lanes.",
-  "കണ്ണാടികളിൽ കാണാൻ കഴിയാത്ത വാഹനത്തിന്റെ വശത്തോ പിന്നിലോ ഉള്ള ഭാഗം. ലെയ്ൻ മാറുന്നതിന് മുമ്പ് തല തിരിച്ച് ഇത് പരിശോധിക്കുക."
- ],
- [
-  "Clutch",
-  "ക്ലച്ച്",
-  "The pedal and mechanism that connects or disconnects the engine from the wheels so you can change gear or stop without stalling.",
-  "എൻജിനെ ചക്രങ്ങളുമായി ബന്ധിപ്പിക്കുകയോ വേർപെടുത്തുകയോ ചെയ്യുന്ന പെഡലും സംവിധാനവും; ഗിയർ മാറ്റാനും എൻജിൻ ഓഫ് ആകാതെ നിർത്താനും സഹായിക്കുന്നു."
- ],
- [
-  "Bite point",
-  "ബൈറ്റ് പോയിന്റ്",
-  "The point while releasing the clutch where the engine starts to pull the car forward. Finding it helps you move off smoothly, especially on a slope.",
-  "ക്ലച്ച് പതുക്കെ വിടുമ്പോൾ എൻജിൻ വാഹനത്തെ മുന്നോട്ട് വലിക്കാൻ തുടങ്ങുന്ന ഘട്ടം. ഇത് തിരിച്ചറിയുന്നത് സുഗമമായി മുന്നോട്ടെടുക്കാൻ, പ്രത്യേകിച്ച് കയറ്റത്തിൽ, സഹായിക്കും."
- ],
- [
-  "Engine braking",
-  "എൻജിൻ ബ്രേക്കിങ്",
-  "Slowing the vehicle by staying in a lower gear and easing off the accelerator, so the engine resists the motion. It is useful on long downhill roads.",
-  "താഴ്ന്ന ഗിയറിൽ തുടർന്ന് ആക്സിലറേറ്റർ കുറച്ച് എൻജിന്റെ പ്രതിരോധം ഉപയോഗിച്ച് വേഗം കുറയ്ക്കുന്ന രീതി. നീണ്ട ഇറക്കങ്ങളിൽ ഇത് ഉപകരിക്കും."
- ],
- [
-  "Aquaplaning",
-  "അക്വാപ്ലേനിങ്",
-  "When tyres ride on a film of water and lose contact with the road, so steering and braking stop working properly. Slowing down early in heavy rain reduces the risk.",
-  "ടയറുകൾ റോഡിലെ വെള്ളത്തിന്റെ പാളിയിൽ തെന്നി റോഡുമായുള്ള സമ്പർക്കം നഷ്ടപ്പെടുന്ന അവസ്ഥ; സ്റ്റിയറിങ്ങും ബ്രേക്കിങ്ങും ശരിയായി പ്രവർത്തിക്കില്ല. കനത്ത മഴയിൽ നേരത്തേ വേഗം കുറയ്ക്കുന്നത് അപകടസാധ്യത കുറയ്ക്കും."
- ],
- [
-  "Tailgating",
-  "ടെയിൽഗേറ്റിങ്",
-  "Driving too close behind the vehicle ahead. It leaves no time to react if that vehicle brakes suddenly.",
-  "മുന്നിലെ വാഹനത്തിന് വളരെ അടുത്തായി പിന്തുടരുന്നത്. ആ വാഹനം പെട്ടെന്ന് ബ്രേക്ക് ചെയ്താൽ പ്രതികരിക്കാൻ സമയം ലഭിക്കില്ല."
- ],
- [
-  "Overtaking",
-  "ഓവർടേക്കിങ്",
-  "Passing a slower vehicle going the same way. Do it only when the road ahead is clear and it is permitted.",
-  "ഒരേ ദിശയിൽ പോകുന്ന വേഗം കുറഞ്ഞ വാഹനത്തെ മറികടക്കൽ. മുന്നിലെ റോഡ് വ്യക്തമായിരിക്കുമ്പോൾ, അനുവദനീയമായ സ്ഥലത്ത് മാത്രം ചെയ്യുക."
- ],
- [
-  "Right of way",
-  "റൈറ്റ് ഓഫ് വേ",
-  "The right of one road user to go first in a given situation. It is a legal priority, so use it carefully and still avoid a collision.",
-  "ഒരു സാഹചര്യത്തിൽ ആദ്യം പോകാനുള്ള ഒരു റോഡ് ഉപയോക്താവിന്റെ അവകാശം. ഇത് നിയമപരമായ മുൻഗണനയാണ്; എങ്കിലും കൂട്ടിയിടി ഒഴിവാക്കാൻ ശ്രദ്ധിക്കണം."
- ],
- [
-  "Give way",
-  "ഗിവ് വേ",
-  "To slow down or stop so that another road user can go first. A give way sign tells you to let traffic on the main road pass.",
-  "മറ്റൊരു റോഡ് ഉപയോക്താവിന് ആദ്യം പോകാൻ വേഗം കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുക. ഗിവ് വേ ചിഹ്നം പ്രധാന റോഡിലെ വാഹനങ്ങളെ കടത്തിവിടാൻ പറയുന്നു."
- ],
- [
-  "Zebra crossing",
-  "സീബ്ര ക്രോസിങ്",
-  "A pedestrian crossing marked with black and white stripes on the road. Slow down and let pedestrians cross.",
-  "റോഡിൽ കറുപ്പും വെളുപ്പും വരകളാൽ അടയാളപ്പെടുത്തിയ കാൽനട ക്രോസിങ്. വേഗം കുറച്ച് കാൽനടക്കാരെ കടക്കാൻ അനുവദിക്കുക."
- ],
- [
-  "Black spot",
-  "ബ്ലാക്ക് സ്പോട്ട്",
-  "A stretch of road where accidents have happened repeatedly. Drive with extra care and follow the warning signs there.",
-  "അപകടങ്ങൾ ആവർത്തിച്ച് ഉണ്ടാകുന്ന റോഡിലെ ഭാഗം. അവിടെ കൂടുതൽ ശ്രദ്ധയോടെ ഓടിക്കുകയും മുന്നറിയിപ്പ് ബോർഡുകൾ പാലിക്കുകയും ചെയ്യുക."
- ],
- [
-  "LLR (Learner's Licence)",
-  "എൽഎൽആർ (ലേണേഴ്‌സ് ലൈസൻസ്)",
-  "A temporary licence that lets you practise driving under the rules for learners before taking the driving test. It is valid for a limited period, so check with your RTO.",
-  "ഡ്രൈവിങ് ടെസ്റ്റിന് മുമ്പ് പഠിതാവിനുള്ള നിബന്ധനകളോടെ ഓടിച്ച് പരിശീലിക്കാൻ അനുവദിക്കുന്ന താൽക്കാലിക ലൈസൻസ്. ഇതിന് നിശ്ചിത കാലാവധിയേ ഉള്ളൂ; ആർടിഒയിൽ പരിശോധിക്കുക."
- ],
- [
-  "DL (Driving Licence)",
-  "ഡിഎൽ (ഡ്രൈവിങ് ലൈസൻസ്)",
-  "The permanent licence that allows you to drive the classes of vehicle written on it. Carry it, or its valid digital copy, when driving.",
-  "അതിൽ രേഖപ്പെടുത്തിയ വിഭാഗം വാഹനങ്ങൾ ഓടിക്കാൻ അനുവദിക്കുന്ന സ്ഥിരം ലൈസൻസ്. ഓടിക്കുമ്പോൾ ഇതോ ഇതിന്റെ സാധുവായ ഡിജിറ്റൽ പകർപ്പോ കരുതുക."
- ],
- [
-  "RC (Registration Certificate)",
-  "ആർസി (രജിസ്ട്രേഷൻ സർട്ടിഫിക്കറ്റ്)",
-  "The document that proves a vehicle is registered and shows its owner, number and details. Keep it with the vehicle.",
-  "വാഹനം രജിസ്റ്റർ ചെയ്തിട്ടുണ്ടെന്ന് തെളിയിക്കുകയും ഉടമയുടെ പേര്, നമ്പർ, വിവരങ്ങൾ എന്നിവ കാണിക്കുകയും ചെയ്യുന്ന രേഖ. ഇത് വാഹനത്തിൽ കരുതുക."
- ],
- [
-  "PUC (Pollution Under Control)",
-  "പിയുസി (പൊല്യൂഷൻ അണ്ടർ കൺട്രോൾ)",
-  "A certificate showing that a vehicle's exhaust emissions were tested and found within the allowed limits. It must be kept valid and renewed on time.",
-  "വാഹനത്തിന്റെ പുക പരിശോധിച്ച് അനുവദനീയ പരിധിക്കുള്ളിലാണെന്ന് കാണിക്കുന്ന സർട്ടിഫിക്കറ്റ്. ഇത് സാധുവായി സൂക്ഷിക്കുകയും സമയത്തിന് പുതുക്കുകയും വേണം."
- ],
- [
-  "RTO",
-  "ആർടിഒ",
-  "The Regional Transport Office, which registers vehicles and issues licences and permits in its area.",
-  "വാഹന രജിസ്ട്രേഷൻ, ലൈസൻസ്, പെർമിറ്റ് എന്നിവ നൽകുന്ന പ്രാദേശിക ഗതാഗത ഓഫീസ് (റീജിയണൽ ട്രാൻസ്പോർട്ട് ഓഫീസ്)."
- ],
- [
-  "MVD",
-  "എംവിഡി",
-  "The Motor Vehicles Department, the state body that enforces road transport rules. In Kerala its officers check vehicles and documents on the road.",
-  "റോഡ് ഗതാഗത നിയമങ്ങൾ നടപ്പാക്കുന്ന സംസ്ഥാന വകുപ്പായ മോട്ടോർ വെഹിക്കിൾസ് ഡിപ്പാർട്ട്മെന്റ്. കേരളത്തിൽ ഇതിലെ ഉദ്യോഗസ്ഥർ റോഡിൽ വാഹനങ്ങളും രേഖകളും പരിശോധിക്കുന്നു."
- ],
- [
-  "NH (National Highway)",
-  "എൻഎച്ച് (ദേശീയപാത)",
-  "A major road that connects states and big cities, numbered and maintained under national authority. Traffic on it is usually faster and heavier.",
-  "സംസ്ഥാനങ്ങളെയും വലിയ നഗരങ്ങളെയും ബന്ധിപ്പിക്കുന്ന, നമ്പർ നൽകി ദേശീയ തലത്തിൽ പരിപാലിക്കുന്ന പ്രധാന റോഡ്. ഇതിൽ ഗതാഗതം സാധാരണ വേഗമേറിയതും തിരക്കേറിയതുമാണ്."
- ],
- [
-  "SH (State Highway)",
-  "എസ്എച്ച് (സംസ്ഥാനപാത)",
-  "A main road within a state that links district towns and joins national highways. It is looked after by the state government.",
-  "ഒരു സംസ്ഥാനത്തിനുള്ളിലെ ജില്ലാ പട്ടണങ്ങളെ ബന്ധിപ്പിക്കുകയും ദേശീയപാതകളോട് ചേരുകയും ചെയ്യുന്ന പ്രധാന റോഡ്. ഇത് സംസ്ഥാന സർക്കാർ പരിപാലിക്കുന്നു."
- ],
- [
-  "Hazard lights",
-  "ഹസാർഡ് ലൈറ്റുകൾ",
-  "All four indicators flashing together to warn others of a breakdown or danger. Do not use them just to drive through rain or to park illegally.",
-  "ബ്രേക്ക്ഡൗൺ അല്ലെങ്കിൽ അപകടം മറ്റുള്ളവരെ അറിയിക്കാൻ നാല് ഇൻഡിക്കേറ്ററുകളും ഒന്നിച്ച് മിന്നിക്കുന്നത്. മഴയിൽ ഓടിക്കാനോ നിയമവിരുദ്ധ പാർക്കിങ്ങിനോ ഇത് ഉപയോഗിക്കരുത്."
- ],
- [
-  "Dipped beam",
-  "ഡിപ്പ്ഡ് ബീം",
-  "The low-beam headlight setting that lights the road without dazzling others. Use it in towns and when meeting other vehicles at night.",
-  "മറ്റുള്ളവരുടെ കണ്ണിൽ പതിയാതെ റോഡ് പ്രകാശിപ്പിക്കുന്ന ലോ-ബീം ഹെഡ്‌ലൈറ്റ്. പട്ടണങ്ങളിലും രാത്രി എതിരെ വാഹനം വരുമ്പോഴും ഇത് ഉപയോഗിക്കുക."
- ],
- [
-  "High beam",
-  "ഹൈ ബീം",
-  "The bright headlight setting for seeing far on dark, empty roads. Switch to dipped beam when other vehicles approach or when following one.",
-  "ഇരുട്ടുള്ള ആളൊഴിഞ്ഞ റോഡിൽ ദൂരേക്ക് കാണാനുള്ള തീവ്ര പ്രകാശം. മറ്റ് വാഹനങ്ങൾ അടുത്തെത്തുമ്പോഴോ ഒന്നിനെ പിന്തുടരുമ്പോഴോ ഡിപ്പ്ഡ് ബീമിലേക്ക് മാറ്റുക."
- ],
- [
-  "ABS (Anti-lock Braking System)",
-  "എബിഎസ് (ആന്റി-ലോക്ക് ബ്രേക്കിങ് സിസ്റ്റം)",
-  "A system that stops the wheels from locking during hard braking, helping you keep steering control. Press the brake firmly and do not pump it.",
-  "ശക്തമായി ബ്രേക്ക് ചെയ്യുമ്പോൾ ചക്രങ്ങൾ ലോക്ക് ആകാതെ സ്റ്റിയറിങ് നിയന്ത്രണം നിലനിർത്താൻ സഹായിക്കുന്ന സംവിധാനം. ബ്രേക്ക് ദൃഢമായി അമർത്തുക, പമ്പ് ചെയ്യരുത്."
- ],
- [
-  "ESP (Electronic Stability Program)",
-  "ഇഎസ്പി (ഇലക്ട്രോണിക് സ്റ്റെബിലിറ്റി പ്രോഗ്രാം)",
-  "A system that senses skidding and brakes individual wheels to help the vehicle stay on its intended path. It helps but cannot beat the laws of physics, so drive within limits.",
-  "വാഹനം തെന്നുന്നത് തിരിച്ചറിഞ്ഞ് ഓരോ ചക്രത്തിലും ബ്രേക്ക് പ്രയോഗിച്ച് ഉദ്ദേശിച്ച പാതയിൽ നിലനിർത്താൻ സഹായിക്കുന്ന സംവിധാനം. ഇത് സഹായിക്കുമെങ്കിലും പരിധിക്കുള്ളിൽ തന്നെ ഓടിക്കണം."
- ],
- [
-  "TPMS (Tyre Pressure Monitoring System)",
-  "ടിപിഎംഎസ് (ടയർ പ്രഷർ മോണിറ്ററിങ് സിസ്റ്റം)",
-  "A system that warns you on the dashboard when a tyre's air pressure is low. Check the tyre and fill it to the recommended pressure.",
-  "ടയറിലെ വായു മർദം കുറഞ്ഞാൽ ഡാഷ്ബോർഡിൽ മുന്നറിയിപ്പ് നൽകുന്ന സംവിധാനം. ടയർ പരിശോധിച്ച് നിർദേശിച്ച മർദത്തിലേക്ക് വായു നിറയ്ക്കുക."
- ],
- [
-  "Airbag",
-  "എയർബാഗ്",
-  "A cushion that inflates in a serious crash to protect occupants. It works best together with a fastened seat belt, not instead of it.",
-  "ഗുരുതരമായ കൂട്ടിയിടിയിൽ യാത്രക്കാരെ സംരക്ഷിക്കാൻ വീർക്കുന്ന കുഷ്യൻ. ഇത് സീറ്റ് ബെൽറ്റിന് പകരമല്ല, ബെൽറ്റിനൊപ്പമാണ് ഏറ്റവും ഫലപ്രദം."
- ],
- [
-  "Hatchback",
-  "ഹാച്ച്ബാക്ക്",
-  "A car whose rear door lifts up and opens along with the boot space, usually compact in size. Mind its blind spots when reversing.",
-  "ഡിക്കിയുമായി ചേർന്ന് മുകളിലേക്ക് തുറക്കുന്ന പിൻവാതിലുള്ള, സാധാരണ ചെറിയ കാർ. പിന്നോട്ടെടുക്കുമ്പോൾ ഇതിന്റെ ബ്ലൈൻഡ് സ്പോട്ടുകൾ ശ്രദ്ധിക്കുക."
- ],
- [
-  "Pillion",
-  "പില്ല്യൺ",
-  "The seat behind the rider on a two-wheeler, or the person sitting there. A pillion rider must also wear a helmet.",
-  "ടൂവീലറിൽ ഓടിക്കുന്നയാളുടെ പിന്നിലെ സീറ്റ്, അല്ലെങ്കിൽ അവിടെ ഇരിക്കുന്നയാൾ. പില്ല്യൺ യാത്രക്കാരനും ഹെൽമറ്റ് ധരിക്കണം."
- ],
- [
-  "Mudguard",
-  "മഡ്ഗാർഡ്",
-  "The cover over a wheel that stops mud and water being thrown up at the vehicle, rider or others. Keep it fitted and in good condition.",
-  "ചക്രത്തിൽ നിന്ന് ചെളിയും വെള്ളവും വാഹനത്തിലേക്കോ യാത്രക്കാരിലേക്കോ മറ്റുള്ളവരിലേക്കോ തെറിക്കാതിരിക്കാൻ ചക്രത്തിന് മുകളിലുള്ള ആവരണം. ഇത് കേടുകൂടാതെ ഘടിപ്പിച്ചിരിക്കണം."
- ],
- [
-  "Gore area",
-  "ഗോർ ഏരിയ",
-  "The triangular painted area between a main road and an exit or entry ramp where the two paths split or join. Do not drive or stop on it.",
-  "പ്രധാന റോഡും എക്സിറ്റ്/എൻട്രി റാമ്പും വേർപിരിയുകയോ ചേരുകയോ ചെയ്യുന്നിടത്തെ, വരച്ചിട്ടുള്ള ത്രികോണാകൃതിയിലുള്ള ഭാഗം. ഇതിൽ ഓടിക്കുകയോ നിർത്തുകയോ ചെയ്യരുത്."
- ],
- [
-  "Rumble strip",
-  "റംബിൾ സ്ട്രിപ്പ്",
-  "Raised or grooved bands across or along the road that make noise and vibration to alert you. They warn of a hazard ahead or of drifting off the lane.",
-  "ശബ്ദവും കുലുക്കവും ഉണ്ടാക്കി ഡ്രൈവറെ ഉണർത്തുന്ന, റോഡിൽ കുറുകെയോ നീളത്തിലോ ഉള്ള ഉയർന്നതോ ചാലുള്ളതോ ആയ പട്ടകൾ. മുന്നിലെ അപകടത്തെക്കുറിച്ചോ ലെയ്ൻ വിട്ടുപോകുന്നതിനെക്കുറിച്ചോ ഇവ മുന്നറിയിപ്പ് നൽകുന്നു."
- ],
- [
-  "Speed breaker",
-  "സ്പീഡ് ബ്രേക്കർ",
-  "A raised hump across the road to force vehicles to slow down. Reduce speed in advance and cross it slowly.",
-  "വാഹനങ്ങളുടെ വേഗം കുറയ്ക്കാൻ റോഡിന് കുറുകെ ഉണ്ടാക്കിയ ഉയർന്ന തിട്ട. മുൻകൂട്ടി വേഗം കുറച്ച് പതുക്കെ കടക്കുക."
- ],
- [
-  "Flyover",
-  "ഫ്ലൈഓവർ",
-  "A raised road or bridge that carries traffic over a junction, railway line or another road. Vehicles on it avoid the junction below.",
-  "ജംഗ്ഷൻ, റെയിൽപാത, മറ്റൊരു റോഡ് എന്നിവയ്ക്ക് മുകളിലൂടെ ഗതാഗതം കൊണ്ടുപോകുന്ന ഉയർന്ന റോഡ്/പാലം. ഇതിലൂടെ പോകുന്ന വാഹനങ്ങൾ താഴത്തെ ജംഗ്ഷൻ ഒഴിവാക്കുന്നു."
- ],
- [
-  "Underpass",
-  "അണ്ടർപാസ്",
-  "A road or passage that goes under another road or railway. Watch for lower height limits and wet patches inside.",
-  "മറ്റൊരു റോഡിനോ റെയിൽപാതയ്ക്കോ അടിയിലൂടെയുള്ള റോഡ് അല്ലെങ്കിൽ പാത. ഉയരപരിധിയും ഉള്ളിലെ നനവും ശ്രദ്ധിക്കുക."
- ],
- [
-  "Bypass",
-  "ബൈപാസ്",
-  "A road built around a town or busy area so through traffic can avoid it. It reduces congestion in the town centre.",
-  "പട്ടണത്തിലോ തിരക്കുള്ള പ്രദേശത്തോ കയറാതെ കടന്നുപോകാൻ അതിനെ ചുറ്റി നിർമിച്ച റോഡ്. ഇത് പട്ടണ മധ്യത്തിലെ തിരക്ക് കുറയ്ക്കുന്നു."
- ],
- [
-  "Level crossing",
-  "ലെവൽ ക്രോസിങ്",
-  "A place where a road crosses a railway line at the same level. Stop when the signal or gate says so, and never try to beat the train.",
-  "റോഡും റെയിൽപാതയും ഒരേ നിരപ്പിൽ കൂടിച്ചേരുന്ന സ്ഥലം. സിഗ്നലോ ഗേറ്റോ പറയുമ്പോൾ നിർത്തുക; ട്രെയിനിനെ തോൽപ്പിച്ച് കടക്കാൻ ശ്രമിക്കരുത്."
- ],
- [
-  "e-challan",
-  "ഇ-ചലാൻ",
-  "An electronic notice issued for a traffic offence, often based on camera or officer records. It can be checked and handled through the official Parivahan or state portals.",
-  "ട്രാഫിക് നിയമലംഘനത്തിന് ക്യാമറയുടെയോ ഉദ്യോഗസ്ഥരുടെയോ രേഖകളുടെ അടിസ്ഥാനത്തിൽ നൽകുന്ന ഇലക്ട്രോണിക് നോട്ടീസ്. ഇത് ഔദ്യോഗിക പരിവാഹൻ അല്ലെങ്കിൽ സംസ്ഥാന പോർട്ടലുകൾ വഴി പരിശോധിക്കാം."
- ],
- [
-  "Fitness certificate",
-  "ഫിറ്റ്നസ് സർട്ടിഫിക്കറ്റ്",
-  "A document showing that a transport vehicle such as a bus, taxi or truck has been inspected and is roadworthy. It must be renewed as required.",
-  "ബസ്, ടാക്സി, ട്രക്ക് തുടങ്ങിയ ട്രാൻസ്പോർട്ട് വാഹനം പരിശോധിച്ച് റോഡിലിറക്കാൻ യോഗ്യമാണെന്ന് കാണിക്കുന്ന രേഖ. ആവശ്യമായ സമയത്ത് ഇത് പുതുക്കണം."
- ],
- [
-  "Permit",
-  "പെർമിറ്റ്",
-  "An authorisation to use a vehicle for carrying passengers or goods for hire, usually for a stated route or area. Private-use cars do not need it.",
-  "വാടകയ്‌ക്കോ പ്രതിഫലത്തിനോ യാത്രക്കാരെയോ ചരക്കോ കൊണ്ടുപോകാൻ വാഹനം ഉപയോഗിക്കാനുള്ള അനുമതി; സാധാരണ നിശ്ചിത റൂട്ടിനോ പ്രദേശത്തിനോ ആയിരിക്കും. സ്വകാര്യ ഉപയോഗത്തിലെ കാറിന് ഇത് വേണ്ട."
- ],
- [
-  "Insurance",
-  "ഇൻഷുറൻസ്",
-  "A contract in which an insurer covers certain losses, such as damage or injury caused by a vehicle, in return for a premium. Keep the policy valid at all times.",
-  "പ്രീമിയം വാങ്ങി വാഹനം മൂലമുള്ള നാശനഷ്ടം, പരിക്ക് തുടങ്ങിയ നഷ്ടങ്ങൾ ഇൻഷുറർ വഹിക്കുന്ന കരാർ. പോളിസി എപ്പോഴും സാധുവായി സൂക്ഷിക്കുക."
- ],
- [
-  "Third-party insurance",
-  "തേർഡ്-പാർട്ടി ഇൻഷുറൻസ്",
-  "The minimum insurance every motor vehicle must have, covering harm your vehicle causes to other people or their property. It does not cover damage to your own vehicle.",
-  "ഓരോ വാഹനത്തിനും നിർബന്ധമായ കുറഞ്ഞ ഇൻഷുറൻസ്; നിങ്ങളുടെ വാഹനം മൂലം മറ്റുള്ളവർക്കോ അവരുടെ വസ്തുവിനോ ഉണ്ടാകുന്ന നഷ്ടം ഇത് വഹിക്കുന്നു. നിങ്ങളുടെ സ്വന്തം വാഹനത്തിന്റെ കേടുപാട് ഇതിൽ ഉൾപ്പെടില്ല."
- ],
- [
-  "Comprehensive insurance",
-  "കോംപ്രിഹെൻസീവ് ഇൻഷുറൻസ്",
-  "A wider policy that covers third-party liability and also damage to your own vehicle, subject to its terms. Read what it includes and excludes.",
-  "തേർഡ്-പാർട്ടി ബാധ്യതയ്‌ക്കൊപ്പം നിബന്ധനകൾക്ക് വിധേയമായി സ്വന്തം വാഹനത്തിന്റെ കേടുപാടും ഉൾപ്പെടുത്തുന്ന വിശാലമായ പോളിസി. എന്തൊക്കെ ഉൾപ്പെടുന്നു, ഉൾപ്പെടുന്നില്ല എന്ന് വായിച്ച് മനസ്സിലാക്കുക."
- ],
- [
-  "Registration",
-  "രജിസ്ട്രേഷൻ",
-  "The official recording of a vehicle with the RTO, which gives it a unique number and an RC. A vehicle must be registered before use on public roads.",
-  "വാഹനത്തെ ആർടിഒയിൽ ഔദ്യോഗികമായി രേഖപ്പെടുത്തുന്ന നടപടി; ഇതിലൂടെ തനത് നമ്പറും ആർസിയും ലഭിക്കുന്നു. പൊതുനിരത്തിൽ ഉപയോഗിക്കുംമുമ്പ് വാഹനം രജിസ്റ്റർ ചെയ്തിരിക്കണം."
- ],
- [
-  "Learner",
-  "ലേണർ",
-  "A person who is still learning to drive and holds a learner's licence. A learner must follow the conditions on it, such as displaying the L sign.",
-  "ഡ്രൈവിങ് പഠിച്ചുകൊണ്ടിരിക്കുന്നവരും ലേണേഴ്‌സ് ലൈസൻസ് ഉള്ളവരും. എൽ ചിഹ്നം പ്രദർശിപ്പിക്കുന്നത് പോലുള്ള നിബന്ധനകൾ ലേണർ പാലിക്കണം."
- ],
- [
-  "Indicator",
-  "ഇൻഡിക്കേറ്റർ",
-  "The blinking light that shows you intend to turn or change lane. Signal early and switch it off after the manoeuvre.",
-  "തിരിയാനോ ലെയ്ൻ മാറാനോ ഉള്ള ഉദ്ദേശ്യം കാണിക്കുന്ന മിന്നുന്ന ലൈറ്റ്. നേരത്തേ സിഗ്നൽ ഇടുകയും കഴിഞ്ഞ ശേഷം ഓഫ് ചെയ്യുകയും ചെയ്യുക."
- ],
- [
-  "Stopping distance",
-  "സ്റ്റോപ്പിങ് ഡിസ്റ്റൻസ്",
-  "The total distance a vehicle travels from the moment you see danger until it stops. It is thinking distance plus braking distance and grows with speed.",
-  "അപകടം കാണുന്ന നിമിഷം മുതൽ വാഹനം നിൽക്കുന്നതുവരെ സഞ്ചരിക്കുന്ന ആകെ ദൂരം. ഇത് ചിന്താദൂരവും ബ്രേക്കിങ് ദൂരവും ചേർന്നതാണ്; വേഗം കൂടുംതോറും കൂടും."
- ],
- [
-  "Reaction time",
-  "റിയാക്ഷൻ ടൈം",
-  "The time between noticing a hazard and starting to act, such as pressing the brake. Tiredness, phone use and alcohol make it longer.",
-  "അപകടം ശ്രദ്ധയിൽപ്പെടുന്നതിനും ബ്രേക്ക് അമർത്തുന്നത് പോലുള്ള പ്രവൃത്തി തുടങ്ങുന്നതിനും ഇടയിലെ സമയം. ക്ഷീണം, ഫോൺ ഉപയോഗം, മദ്യം എന്നിവ ഇത് കൂട്ടുന്നു."
- ],
- [
-  "Defensive driving",
-  "ഡിഫൻസീവ് ഡ്രൈവിങ്",
-  "Driving in a way that expects other people's mistakes, keeps a safe gap and leaves room to react. It aims to avoid crashes even when others err.",
-  "മറ്റുള്ളവരുടെ പിഴവുകൾ മുൻകൂട്ടി കണ്ട്, സുരക്ഷിത അകലം പാലിച്ച്, പ്രതികരിക്കാൻ സ്ഥലം ബാക്കി വച്ച് ഓടിക്കുന്ന രീതി. മറ്റുള്ളവർ തെറ്റ് ചെയ്താലും അപകടം ഒഴിവാക്കുകയാണ് ലക്ഷ്യം."
- ],
- [
-  "Lane discipline",
-  "ലെയ്ൻ ഡിസിപ്ലിൻ",
-  "Keeping to your own lane and changing lanes only when needed and safe. Straddling lanes confuses others and causes crashes.",
-  "സ്വന്തം ലെയ്നിൽ തന്നെ ഓടുകയും ആവശ്യമുള്ളപ്പോൾ സുരക്ഷിതമായി മാത്രം ലെയ്ൻ മാറുകയും ചെയ്യുക. രണ്ട് ലെയ്നുകൾക്ക് നടുവിൽ ഓടുന്നത് മറ്റുള്ളവരെ കുഴപ്പിക്കുകയും അപകടമുണ്ടാക്കുകയും ചെയ്യും."
- ],
- [
-  "Roundabout",
-  "റൗണ്ടാന",
-  "A circular junction where traffic moves around a central island in one direction. In India you give way to traffic already on the roundabout and keep left.",
-  "നടുവിലെ ദ്വീപിന് ചുറ്റും ഒരേ ദിശയിൽ ഗതാഗതം നീങ്ങുന്ന വൃത്താകൃതിയിലുള്ള ജംഗ്ഷൻ. ഇന്ത്യയിൽ റൗണ്ടാനയിൽ ഇതിനകം ഉള്ള വാഹനങ്ങൾക്ക് വഴി കൊടുക്കുകയും ഇടതുവശം ചേർന്ന് പോവുകയും വേണം."
- ],
- [
-  "Footpath",
-  "നടപ്പാത",
-  "The path at the side of a road meant for pedestrians. Vehicles must not drive or park on it.",
-  "കാൽനടക്കാർക്കായി റോഡരികിലുള്ള പാത. വാഹനങ്ങൾ ഇതിലൂടെ ഓടിക്കുകയോ ഇതിൽ പാർക്ക് ചെയ്യുകയോ ചെയ്യരുത്."
- ],
- [
-  "Pedestrian",
-  "കാൽനടയാത്രക്കാരൻ",
-  "A person travelling on foot. Drivers should be especially careful with children, the elderly and persons with disabilities.",
-  "കാൽനടയായി സഞ്ചരിക്കുന്ന വ്യക്തി. കുട്ടികൾ, പ്രായമായവർ, ഭിന്നശേഷിക്കാർ എന്നിവരുടെ കാര്യത്തിൽ ഡ്രൈവർ പ്രത്യേകം ശ്രദ്ധിക്കണം."
- ],
- [
-  "Stop line",
-  "സ്റ്റോപ്പ് ലൈൻ",
-  "The white line across the road at a signal or junction behind which you must stop. Do not cross it on a red light.",
-  "സിഗ്നലിലോ ജംഗ്ഷനിലോ റോഡിന് കുറുകെയുള്ള വെളുത്ത വര; ഇതിന് പിന്നിലാണ് നിർത്തേണ്ടത്. ചുവപ്പ് ലൈറ്റിൽ ഇത് കടക്കരുത്."
- ],
- [
-  "Lane marking",
-  "ലെയ്ൻ മാർക്കിങ്",
-  "Painted lines on the road that show lanes, where overtaking is allowed and where it is not. A solid line on your side means do not cross it to overtake.",
-  "ലെയ്നുകളും മറികടക്കാവുന്ന/പാടില്ലാത്ത സ്ഥലങ്ങളും കാണിക്കാൻ റോഡിൽ വരച്ച വരകൾ. നിങ്ങളുടെ വശത്ത് തുടർച്ചയായ വരയാണെങ്കിൽ മറികടക്കാൻ അത് കടക്കരുത്."
- ],
- [
-  "Diversion",
-  "ഡൈവേർഷൻ",
-  "A temporary alternative route used when the normal road is blocked or under repair. Follow the diversion signs carefully.",
-  "സാധാരണ റോഡ് തടസ്സപ്പെടുകയോ പണി നടക്കുകയോ ചെയ്യുമ്പോൾ ഉപയോഗിക്കുന്ന താൽക്കാലിക ബദൽ വഴി. ഡൈവേർഷൻ ബോർഡുകൾ ശ്രദ്ധയോടെ പിന്തുടരുക."
- ],
- [
-  "Hairpin bend",
-  "ഹെയർപിൻ ബെൻഡ്",
-  "A very sharp turn, common on ghat roads, that almost doubles back on itself. Slow down, keep left and do not overtake on it.",
-  "ഏതാണ്ട് തിരിച്ച് വളയുന്ന വളരെ മൂർച്ചയുള്ള വളവ്; ഘാട്ട് റോഡുകളിൽ സാധാരണം. വേഗം കുറയ്ക്കുക, ഇടത് ചേർന്ന് പോവുക, ഇവിടെ മറികടക്കരുത്."
- ],
- [
-  "Ghat road",
-  "ഘാട്ട് റോഡ്",
-  "A winding mountain road with many bends and steep slopes, such as those in Wayanad or Munnar. Use a low gear downhill and give way to uphill traffic where required.",
-  "ധാരാളം വളവുകളും കുത്തനെയുള്ള ചരിവുകളുമുള്ള മലമ്പാത, വയനാട്, മൂന്നാർ പോലുള്ള ഇടങ്ങളിലേത്. ഇറക്കത്തിൽ താഴ്ന്ന ഗിയർ ഉപയോഗിക്കുകയും ആവശ്യമുള്ളിടത്ത് കയറ്റം കയറുന്ന വാഹനത്തിന് വഴി കൊടുക്കുകയും ചെയ്യുക."
- ],
- [
-  "Handbrake",
-  "ഹാൻഡ്ബ്രേക്ക്",
-  "The brake lever, also called parking brake, that holds the vehicle still when parked. Always apply it when you park, especially on a slope.",
-  "വാഹനം പാർക്ക് ചെയ്യുമ്പോൾ നിശ്ചലമായി പിടിച്ചുനിർത്തുന്ന ബ്രേക്ക് ലിവർ (പാർക്കിങ് ബ്രേക്ക്). പാർക്ക് ചെയ്യുമ്പോൾ, പ്രത്യേകിച്ച് ചരിവിൽ, ഇത് എപ്പോഴും ഇടുക."
- ],
- [
-  "Neutral gear",
-  "ന്യൂട്രൽ ഗിയർ",
-  "The gear position where the engine is not connected to the wheels. Do not coast downhill in neutral, because you lose engine braking and control.",
-  "എൻജിൻ ചക്രങ്ങളുമായി ബന്ധിപ്പിക്കപ്പെടാത്ത ഗിയർ സ്ഥാനം. ഇറക്കത്തിൽ ന്യൂട്രലിൽ ഓടിക്കരുത്; എൻജിൻ ബ്രേക്കിങ്ങും നിയന്ത്രണവും നഷ്ടപ്പെടും."
- ],
- [
-  "Stalling",
-  "സ്റ്റാളിങ്",
-  "When the engine suddenly stops because the clutch was released too fast or the gear was too high for the speed. Press the clutch, shift to neutral and restart.",
-  "ക്ലച്ച് വളരെ വേഗം വിടുകയോ വേഗത്തിന് യോജിക്കാത്ത ഉയർന്ന ഗിയറിൽ ഓടിക്കുകയോ ചെയ്യുമ്പോൾ എൻജിൻ പെട്ടെന്ന് ഓഫ് ആകുന്നത്. ക്ലച്ച് അമർത്തി ന്യൂട്രലിലാക്കി വീണ്ടും സ്റ്റാർട്ട് ചെയ്യുക."
- ],
- [
-  "Skid",
-  "സ്കിഡ്",
-  "When tyres lose grip and the vehicle slides out of control, often on wet, loose or oily surfaces. Ease off the accelerator and steer gently in the direction you want to go.",
-  "ടയറിന്റെ പിടി നഷ്ടപ്പെട്ട് വാഹനം നിയന്ത്രണമില്ലാതെ തെന്നുന്ന അവസ്ഥ; നനഞ്ഞ, അയഞ്ഞ, എണ്ണയുള്ള പ്രതലങ്ങളിൽ സാധാരണം. ആക്സിലറേറ്റർ കുറച്ച് പോകേണ്ട ദിശയിലേക്ക് മൃദുവായി സ്റ്റിയർ ചെയ്യുക."
- ],
- [
-  "Tread",
-  "ട്രെഡ്",
-  "The grooved pattern on a tyre that grips the road and channels water away. Worn tread reduces grip, especially on wet roads.",
-  "റോഡിൽ പിടിക്കാനും വെള്ളം ഒഴുക്കിക്കളയാനും സഹായിക്കുന്ന ടയറിലെ ചാലുകളുടെ പാറ്റേൺ. ട്രെഡ് തേഞ്ഞാൽ, പ്രത്യേകിച്ച് നനഞ്ഞ റോഡിൽ, പിടി കുറയും."
- ],
- [
-  "Wheel alignment",
-  "വീൽ അലൈൻമെന്റ്",
-  "The correct angle setting of the wheels so the vehicle runs straight and tyres wear evenly. A car pulling to one side may need it checked.",
-  "വാഹനം നേരെ ഓടാനും ടയറുകൾ ഒരുപോലെ തേയാനും ചക്രങ്ങളുടെ ശരിയായ കോൺ ക്രമീകരണം. വാഹനം ഒരു വശത്തേക്ക് വലിയുന്നുവെങ്കിൽ ഇത് പരിശോധിക്കണം."
- ],
- [
-  "Dashboard warning light",
-  "ഡാഷ്ബോർഡ് വാണിങ് ലൈറ്റ്",
-  "A symbol on the instrument panel that tells you about a fault or a need such as low oil, low fuel or a door ajar. Do not ignore a red warning light; check the manual and stop safely if needed.",
-  "ഓയിൽ കുറവ്, ഇന്ധനം കുറവ്, വാതിൽ തുറന്നിരിക്കുക തുടങ്ങിയ തകരാറോ ആവശ്യമോ അറിയിക്കുന്ന ഇൻസ്ട്രുമെന്റ് പാനലിലെ ചിഹ്നം. ചുവപ്പ് ലൈറ്റ് അവഗണിക്കരുത്; മാനുവൽ നോക്കുകയും ആവശ്യമെങ്കിൽ സുരക്ഷിതമായി നിർത്തുകയും ചെയ്യുക."
- ],
- [
-  "Seat belt",
-  "സീറ്റ് ബെൽറ്റ്",
-  "The strap that holds you in your seat in a crash or hard braking. Wear it correctly across the chest and hips, and make sure passengers do too.",
-  "കൂട്ടിയിടിയിലോ ശക്തമായ ബ്രേക്കിങ്ങിലോ നിങ്ങളെ സീറ്റിൽ പിടിച്ചുനിർത്തുന്ന ബെൽറ്റ്. നെഞ്ചിനും ഇടുപ്പിനും കുറുകെ ശരിയായി ധരിക്കുക; യാത്രക്കാരും ധരിക്കുന്നെന്ന് ഉറപ്പാക്കുക."
- ],
- [
-  "Helmet (ISI)",
-  "ഹെൽമറ്റ് (ഐഎസ്ഐ)",
-  "A protective head covering for two-wheeler riders and pillion riders. Choose one that meets the recognised standard, fits snugly and has the strap fastened.",
-  "ടൂവീലർ യാത്രക്കാർക്കും പില്ല്യൺ യാത്രക്കാർക്കും തലയ്ക്ക് സംരക്ഷണം നൽകുന്ന കവചം. അംഗീകൃത നിലവാരമുള്ളതും ശരിയായി ഇണങ്ങുന്നതും ചരട് മുറുക്കി ധരിക്കാവുന്നതുമായത് തിരഞ്ഞെടുക്കുക."
- ],
- [
-  "Drink driving",
-  "ഡ്രിങ്ക് ഡ്രൈവിങ്",
-  "Driving after drinking alcohol. It slows reaction, blurs judgement and is an offence, so never mix drink and driving.",
-  "മദ്യപിച്ച ശേഷം വാഹനം ഓടിക്കൽ. ഇത് പ്രതികരണം മന്ദഗതിയിലാക്കുകയും വിവേചനം മങ്ങിക്കുകയും ചെയ്യുന്നു, നിയമലംഘനവുമാണ്; മദ്യവും ഡ്രൈവിങ്ങും ഒരിക്കലും ഒന്നിച്ച് പാടില്ല."
- ],
- [
-  "Good Samaritan",
-  "ഗുഡ് സമരിറ്റൻ",
-  "A person who helps a road accident victim in good faith. The law protects such helpers from harassment, so help and call emergency services without fear.",
-  "നല്ല ഉദ്ദേശ്യത്തോടെ റോഡപകടത്തിൽപ്പെട്ടയാളെ സഹായിക്കുന്ന വ്യക്തി. ഇത്തരക്കാരെ ഉപദ്രവങ്ങളിൽ നിന്ന് നിയമം സംരക്ഷിക്കുന്നു; ഭയമില്ലാതെ സഹായിക്കുകയും എമർജൻസി സേവനങ്ങളെ വിളിക്കുകയും ചെയ്യുക."
- ],
- [
-  "Golden hour",
-  "ഗോൾഡൻ അവർ",
-  "The first hour after a serious injury, when quick medical care gives the best chance of saving life. Call for an ambulance without delay.",
-  "ഗുരുതരമായ പരിക്കിന് ശേഷമുള്ള ആദ്യ മണിക്കൂർ; വേഗത്തിലുള്ള ചികിത്സ ജീവൻ രക്ഷിക്കാൻ ഏറ്റവും സഹായിക്കുന്ന സമയം. ഉടൻ ആംബുലൻസ് വിളിക്കുക."
- ],
- [
-  "One-way street",
-  "വൺവേ റോഡ്",
-  "A road where vehicles may travel in only one direction. Entering it from the wrong end is an offence and very dangerous.",
-  "വാഹനങ്ങൾ ഒരു ദിശയിൽ മാത്രം പോകാവുന്ന റോഡ്. തെറ്റായ അറ്റത്ത് നിന്ന് കയറുന്നത് നിയമലംഘനവും വളരെ അപകടകരവുമാണ്."
- ],
- [
-  "U-turn",
-  "യു-ടേൺ",
-  "Turning your vehicle around to go back the way you came. Do it only where it is permitted and the road is clear in both directions.",
-  "വന്ന ദിശയിലേക്ക് തിരിച്ചുപോകാൻ വാഹനം തിരിക്കുന്നത്. അനുവദനീയമായ, ഇരുദിശയിലും വ്യക്തമായ സ്ഥലത്ത് മാത്രം ചെയ്യുക."
- ],
- [
-  "Parivahan / mParivahan",
-  "പരിവാഹൻ / എംപരിവാഹൻ",
-  "The government portal and mobile app for transport services, where you can view vehicle and licence details and use many RTO services online. Use only the official site or app.",
-  "വാഹന, ലൈസൻസ് വിവരങ്ങൾ കാണാനും പല ആർടിഒ സേവനങ്ങളും ഓൺലൈനിൽ ഉപയോഗിക്കാനുമുള്ള സർക്കാർ പോർട്ടലും മൊബൈൽ ആപ്പും. ഔദ്യോഗിക സൈറ്റോ ആപ്പോ മാത്രം ഉപയോഗിക്കുക."
- ],
- [
-  "DigiLocker",
-  "ഡിജിലോക്കർ",
-  "A government digital locker where you can keep electronic copies of documents such as licence and RC. Such digital copies are accepted as valid documents.",
-  "ലൈസൻസ്, ആർസി പോലുള്ള രേഖകളുടെ ഇലക്ട്രോണിക് പകർപ്പുകൾ സൂക്ഷിക്കാവുന്ന സർക്കാർ ഡിജിറ്റൽ ലോക്കർ. ഇത്തരം ഡിജിറ്റൽ പകർപ്പുകൾ സാധുവായ രേഖകളായി സ്വീകരിക്കും."
- ],
- [
-  "Warning triangle",
-  "വാണിങ് ട്രയാംഗിൾ",
-  "A reflective triangle placed behind a broken-down vehicle to warn approaching drivers. Place it at a sensible distance back, in good time for others to react.",
-  "ബ്രേക്ക്ഡൗൺ ആയ വാഹനത്തിന് പിന്നിൽ വരുന്ന ഡ്രൈവർമാർക്ക് മുന്നറിയിപ്പ് നൽകാൻ വയ്ക്കുന്ന പ്രതിഫലിക്കുന്ന ത്രികോണം. മറ്റുള്ളവർക്ക് പ്രതികരിക്കാൻ സമയം കിട്ടുംവിധം പിന്നിലായി വയ്ക്കുക."
- ],
- [
-  "Slip road",
-  "സ്ലിപ് റോഡ്",
-  "A short road used to enter or leave a main road or highway. Match your speed to the traffic and give way to vehicles already on the main road when joining.",
-  "പ്രധാന റോഡിലേക്കോ ഹൈവേയിലേക്കോ കയറാനോ ഇറങ്ങാനോ ഉള്ള ചെറിയ റോഡ്. കയറുമ്പോൾ ഗതാഗതത്തിനൊപ്പം വേഗം ക്രമീകരിക്കുകയും പ്രധാന റോഡിലെ വാഹനങ്ങൾക്ക് വഴി കൊടുക്കുകയും ചെയ്യുക."
- ],
- [
-  "Traffic island",
-  "ട്രാഫിക് ഐലൻഡ്",
-  "A raised or painted area in the road that guides traffic and gives pedestrians a place to wait. Do not drive over it.",
-  "ഗതാഗതത്തെ നയിക്കാനും കാൽനടക്കാർക്ക് കാത്തുനിൽക്കാനും റോഡിൽ ഉയർത്തിയോ വരച്ചോ ഉണ്ടാക്കിയ ഭാഗം. ഇതിന് മുകളിലൂടെ ഓടിക്കരുത്."
- ],
- [
-  "Learner (L) plate",
-  "എൽ പ്ലേറ്റ്",
-  "A sign with the letter L shown on a vehicle driven by a learner to warn other road users. Other drivers should give such a vehicle extra space.",
-  "പഠിതാവ് ഓടിക്കുന്ന വാഹനത്തിൽ മറ്റുള്ളവരെ അറിയിക്കാൻ പ്രദർശിപ്പിക്കുന്ന എൽ അക്ഷരമുള്ള ചിഹ്നം. മറ്റ് ഡ്രൈവർമാർ ഇത്തരം വാഹനത്തിന് കൂടുതൽ സ്ഥലം നൽകണം."
- ]
+  [
+    "Carriageway",
+    "കാര്യേജ്‌വേ",
+    "The part of the road used by moving vehicles, not including the footpath or shoulder. A divided road has a separate carriageway for each direction.",
+    "റോഡിൽ വാഹനങ്ങൾ ഓടുന്ന ഭാഗം; നടപ്പാതയും ഷോൾഡറും ഇതിൽ ഉൾപ്പെടില്ല. ഡിവൈഡഡ് റോഡിൽ ഓരോ ദിശയ്ക്കും വെവ്വേറെ കാര്യേജ്‌വേ ഉണ്ടാകും.",
+    "Carriageway",
+    "நடைபாதை அல்லது தோள்பட்டை உட்பட, நகரும் வாகனங்கள் பயன்படுத்தும் சாலையின் பகுதி. பிரிக்கப்பட்ட சாலையில் ஒவ்வொரு திசைக்கும் தனித்தனி வண்டிப்பாதை உள்ளது."
+  ],
+  [
+    "Kerb",
+    "കെർബ്",
+    "The raised edge between the road and the footpath or median. It guides water and marks where vehicles should not go.",
+    "റോഡിനും നടപ്പാതയ്ക്കും അല്ലെങ്കിൽ മീഡിയനും ഇടയിലെ ഉയർന്ന അരിക്. ഇത് വെള്ളം ഒഴുകാൻ സഹായിക്കുകയും വാഹനങ്ങൾ കയറരുതാത്ത സ്ഥലം കാണിക്കുകയും ചെയ്യുന്നു.",
+    "கர்ப்",
+    "சாலை மற்றும் நடைபாதை அல்லது இடைநிலைக்கு இடையே உயர்த்தப்பட்ட விளிம்பு. இது தண்ணீரை வழிநடத்துகிறது மற்றும் வாகனங்கள் எங்கு செல்லக்கூடாது என்பதைக் குறிக்கிறது."
+  ],
+  [
+    "Median",
+    "മീഡിയൻ",
+    "The strip in the middle of a divided road that separates traffic going in opposite directions. You must not cross it except at marked openings.",
+    "എതിർദിശകളിലെ വാഹനങ്ങളെ വേർതിരിക്കുന്ന ഡിവൈഡഡ് റോഡിന്റെ നടുവിലെ ഭാഗം. അടയാളപ്പെടുത്തിയ വിടവുകളിലല്ലാതെ ഇത് മുറിച്ചുകടക്കരുത്.",
+    "மீடியன்",
+    "ஒரு பிளவுபட்ட சாலையின் நடுவில் உள்ள துண்டு, இது எதிர் திசையில் செல்லும் போக்குவரத்தைப் பிரிக்கிறது. குறிக்கப்பட்ட திறப்புகளைத் தவிர நீங்கள் அதைக் கடக்கக்கூடாது."
+  ],
+  [
+    "Shoulder",
+    "ഷോൾഡർ",
+    "The strip at the side of the carriageway meant for emergency stops, not for regular driving or parking.",
+    "കാര്യേജ്‌വേയുടെ വശത്തുള്ള ഭാഗം; അടിയന്തര സാഹചര്യത്തിൽ നിർത്താനുള്ളതാണ്, സാധാരണ ഓടിക്കാനോ പാർക്ക് ചെയ്യാനോ അല്ല.",
+    "தோள்பட்டை",
+    "வண்டிப்பாதையின் பக்கவாட்டில் உள்ள ஸ்ட்ரிப் என்பது அவசரகால நிறுத்தங்களுக்குப் பயன்படுத்தப்பட்டது, வழக்கமான வாகனம் ஓட்டுவதற்கு அல்லது நிறுத்துவதற்கு அல்ல."
+  ],
+  [
+    "Gradient",
+    "ഗ്രേഡിയന്റ്",
+    "How steeply a road rises or falls, such as an uphill or downhill slope. Steep gradients need a lower gear and more care with braking.",
+    "റോഡ് എത്ര കുത്തനെ കയറുന്നു അല്ലെങ്കിൽ ഇറങ്ങുന്നു എന്നതിന്റെ അളവ്. കുത്തനെയുള്ള ചരിവിൽ താഴ്ന്ന ഗിയറും ബ്രേക്കിങ്ങിൽ കൂടുതൽ ശ്രദ്ധയും വേണം.",
+    "சாய்வு",
+    "மேல்நோக்கி அல்லது கீழ்நோக்கிச் சரிவு போன்ற ஒரு சாலை எவ்வளவு செங்குத்தாக உயர்கிறது அல்லது விழுகிறது. செங்குத்தான சாய்வுகளுக்கு குறைந்த கியர் மற்றும் பிரேக்கிங்கில் அதிக கவனம் தேவை."
+  ],
+  [
+    "Camber",
+    "കാംബർ",
+    "The slight slope of the road surface from the centre towards the edges so that rainwater drains off. It can affect how a vehicle feels on bends.",
+    "മഴവെള്ളം ഒഴുകിപ്പോകാൻ റോഡിന്റെ നടുവിൽ നിന്ന് അരികുകളിലേക്കുള്ള നേരിയ ചരിവ്. വളവുകളിൽ വാഹനത്തിന്റെ നിയന്ത്രണത്തെ ഇത് ബാധിക്കാം.",
+    "கேம்பர்",
+    "சாலையின் மேற்பரப்பின் மையத்திலிருந்து விளிம்புகளை நோக்கி மழைநீர் வெளியேறும் வகையில் சிறிய சாய்வு. வளைவுகளில் வாகனம் எப்படி உணர்கிறது என்பதைப் பாதிக்கலாம்."
+  ],
+  [
+    "Blind spot",
+    "ബ്ലൈൻഡ് സ്പോട്ട്",
+    "An area beside or behind your vehicle that you cannot see in the mirrors. Turn your head and check it before changing lanes.",
+    "കണ്ണാടികളിൽ കാണാൻ കഴിയാത്ത വാഹനത്തിന്റെ വശത്തോ പിന്നിലോ ഉള്ള ഭാഗം. ലെയ്ൻ മാറുന്നതിന് മുമ്പ് തല തിരിച്ച് ഇത് പരിശോധിക്കുക.",
+    "குருட்டுப் புள்ளி",
+    "கண்ணாடியில் உங்களால் பார்க்க முடியாத உங்கள் வாகனத்திற்கு அருகில் அல்லது பின்புறம் உள்ள பகுதி. பாதையை மாற்றுவதற்கு முன் உங்கள் தலையைத் திருப்பிப் பாருங்கள்."
+  ],
+  [
+    "Clutch",
+    "ക്ലച്ച്",
+    "The pedal and mechanism that connects or disconnects the engine from the wheels so you can change gear or stop without stalling.",
+    "എൻജിനെ ചക്രങ്ങളുമായി ബന്ധിപ്പിക്കുകയോ വേർപെടുത്തുകയോ ചെയ്യുന്ന പെഡലും സംവിധാനവും; ഗിയർ മാറ്റാനും എൻജിൻ ഓഫ് ആകാതെ നിർത്താനും സഹായിക്കുന്നു.",
+    "கிளட்ச்",
+    "மிதி மற்றும் இயந்திரத்தை சக்கரங்களில் இருந்து இணைக்கும் அல்லது துண்டிக்கும் இயந்திரம், அதனால் நீங்கள் கியர் மாற்றலாம் அல்லது நிறுத்தாமல் நிறுத்தலாம்."
+  ],
+  [
+    "Bite point",
+    "ബൈറ്റ് പോയിന്റ്",
+    "The point while releasing the clutch where the engine starts to pull the car forward. Finding it helps you move off smoothly, especially on a slope.",
+    "ക്ലച്ച് പതുക്കെ വിടുമ്പോൾ എൻജിൻ വാഹനത്തെ മുന്നോട്ട് വലിക്കാൻ തുടങ്ങുന്ന ഘട്ടം. ഇത് തിരിച്ചറിയുന്നത് സുഗമമായി മുന്നോട്ടെടുക്കാൻ, പ്രത്യേകിച്ച് കയറ്റത്തിൽ, സഹായിക്കും.",
+    "கடி புள்ளி",
+    "எஞ்சின் காரை முன்னோக்கி இழுக்கத் தொடங்கும் இடத்தில் கிளட்சை வெளியிடும் போது புள்ளி. அதைக் கண்டறிவது, குறிப்பாக ஒரு சாய்வில், சீராகச் செல்ல உதவுகிறது."
+  ],
+  [
+    "Engine braking",
+    "എൻജിൻ ബ്രേക്കിങ്",
+    "Slowing the vehicle by staying in a lower gear and easing off the accelerator, so the engine resists the motion. It is useful on long downhill roads.",
+    "താഴ്ന്ന ഗിയറിൽ തുടർന്ന് ആക്സിലറേറ്റർ കുറച്ച് എൻജിന്റെ പ്രതിരോധം ഉപയോഗിച്ച് വേഗം കുറയ്ക്കുന്ന രീതി. നീണ്ട ഇറക്കങ്ങളിൽ ഇത് ഉപകരിക്കും.",
+    "எஞ்சின் பிரேக்கிங்",
+    "குறைந்த கியரில் தங்கி, ஆக்ஸிலரேட்டரை எளிதாக்குவதன் மூலம் வாகனத்தை மெதுவாக்குகிறது, எனவே இயந்திரம் இயக்கத்தை எதிர்க்கிறது. நீண்ட தாழ்வான சாலைகளில் இது பயனுள்ளதாக இருக்கும்."
+  ],
+  [
+    "Aquaplaning",
+    "അക്വാപ്ലേനിങ്",
+    "When tyres ride on a film of water and lose contact with the road, so steering and braking stop working properly. Slowing down early in heavy rain reduces the risk.",
+    "ടയറുകൾ റോഡിലെ വെള്ളത്തിന്റെ പാളിയിൽ തെന്നി റോഡുമായുള്ള സമ്പർക്കം നഷ്ടപ്പെടുന്ന അവസ്ഥ; സ്റ്റിയറിങ്ങും ബ്രേക്കിങ്ങും ശരിയായി പ്രവർത്തിക്കില്ല. കനത്ത മഴയിൽ നേരത്തേ വേഗം കുറയ്ക്കുന്നത് അപകടസാധ്യത കുറയ്ക്കും.",
+    "Aquaplaning",
+    "டயர்கள் தண்ணீர் படலத்தில் சவாரி செய்து, சாலையுடனான தொடர்பை இழக்கும்போது, ​​ஸ்டீயரிங் மற்றும் பிரேக்கிங் சரியாக வேலை செய்வதை நிறுத்தும். கனமழையின் தொடக்கத்தில் தாமதம் ஆபத்தைக் குறைக்கிறது."
+  ],
+  [
+    "Tailgating",
+    "ടെയിൽഗേറ്റിങ്",
+    "Driving too close behind the vehicle ahead. It leaves no time to react if that vehicle brakes suddenly.",
+    "മുന്നിലെ വാഹനത്തിന് വളരെ അടുത്തായി പിന്തുടരുന്നത്. ആ വാഹനം പെട്ടെന്ന് ബ്രേക്ക് ചെയ്താൽ പ്രതികരിക്കാൻ സമയം ലഭിക്കില്ല.",
+    "டெயில்கேட்டிங்",
+    "முன்னால் செல்லும் வாகனத்தின் பின்னால் மிக அருகில் ஓட்டுதல். அந்த வாகனம் திடீரென பிரேக் போட்டால் எதிர்வினையாற்ற நேரமில்லை."
+  ],
+  [
+    "Overtaking",
+    "ഓവർടേക്കിങ്",
+    "Passing a slower vehicle going the same way. Do it only when the road ahead is clear and it is permitted.",
+    "ഒരേ ദിശയിൽ പോകുന്ന വേഗം കുറഞ്ഞ വാഹനത്തെ മറികടക്കൽ. മുന്നിലെ റോഡ് വ്യക്തമായിരിക്കുമ്പോൾ, അനുവദനീയമായ സ്ഥലത്ത് മാത്രം ചെയ്യുക.",
+    "முந்திச் செல்வது",
+    "அதே வழியில் செல்லும் மெதுவாக வாகனத்தைக் கடப்பது. முன்னோக்கி செல்லும் பாதை தெளிவாகவும், அது அனுமதிக்கப்படும் போது மட்டுமே அதைச் செய்யுங்கள்."
+  ],
+  [
+    "Right of way",
+    "റൈറ്റ് ഓഫ് വേ",
+    "The right of one road user to go first in a given situation. It is a legal priority, so use it carefully and still avoid a collision.",
+    "ഒരു സാഹചര്യത്തിൽ ആദ്യം പോകാനുള്ള ഒരു റോഡ് ഉപയോക്താവിന്റെ അവകാശം. ഇത് നിയമപരമായ മുൻഗണനയാണ്; എങ്കിലും കൂട്ടിയിടി ഒഴിവാക്കാൻ ശ്രദ്ധിക്കണം.",
+    "சரியான வழி",
+    "ஒரு குறிப்பிட்ட சூழ்நிலையில் முதலில் செல்ல ஒரு சாலை பயனரின் உரிமை. இது ஒரு சட்டப்பூர்வ முன்னுரிமை, எனவே கவனமாகப் பயன்படுத்தவும், மோதலைத் தவிர்க்கவும்."
+  ],
+  [
+    "Give way",
+    "ഗിവ് വേ",
+    "To slow down or stop so that another road user can go first. A give way sign tells you to let traffic on the main road pass.",
+    "മറ്റൊരു റോഡ് ഉപയോക്താവിന് ആദ്യം പോകാൻ വേഗം കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുക. ഗിവ് വേ ചിഹ്നം പ്രധാന റോഡിലെ വാഹനങ്ങളെ കടത്തിവിടാൻ പറയുന്നു.",
+    "வழி",
+    "வேகத்தைக் குறைத்தல் அல்லது நிறுத்துதல், இதன் மூலம் மற்றொரு சாலைப் பயனாளர் முதலில் செல்லலாம். பிரதான சாலையில் போக்குவரத்தைக் கடந்து செல்ல அனுமதிக்கும் வழி அடையாளம் உங்களுக்குச் சொல்கிறது."
+  ],
+  [
+    "Zebra crossing",
+    "സീബ്ര ക്രോസിങ്",
+    "A pedestrian crossing marked with black and white stripes on the road. Slow down and let pedestrians cross.",
+    "റോഡിൽ കറുപ്പും വെളുപ്പും വരകളാൽ അടയാളപ്പെടുത്തിയ കാൽനട ക്രോസിങ്. വേഗം കുറച്ച് കാൽനടക്കാരെ കടക്കാൻ അനുവദിക്കുക.",
+    "ஜீப்ரா கிராசிங்",
+    "சாலையில் கருப்பு மற்றும் வெள்ளை கோடுகளால் குறிக்கப்பட்ட ஒரு பாதசாரி கடக்கும் பாதை. வேகத்தைக் குறைத்து, பாதசாரிகளைக் கடக்கட்டும்."
+  ],
+  [
+    "Black spot",
+    "ബ്ലാക്ക് സ്പോട്ട്",
+    "A stretch of road where accidents have happened repeatedly. Drive with extra care and follow the warning signs there.",
+    "അപകടങ്ങൾ ആവർത്തിച്ച് ഉണ്ടാകുന്ന റോഡിലെ ഭാഗം. അവിടെ കൂടുതൽ ശ്രദ്ധയോടെ ഓടിക്കുകയും മുന്നറിയിപ്പ് ബോർഡുകൾ പാലിക്കുകയും ചെയ്യുക.",
+    "கரும்புள்ளி",
+    "மீண்டும் மீண்டும் விபத்துகள் நடக்கும் சாலையின் நீளம். கூடுதல் கவனத்துடன் வாகனத்தை ஓட்டவும், அங்குள்ள எச்சரிக்கை பலகைகளைப் பின்பற்றவும்."
+  ],
+  [
+    "LLR (Learner's Licence)",
+    "എൽഎൽആർ (ലേണേഴ്‌സ് ലൈസൻസ്)",
+    "A temporary licence that lets you practise driving under the rules for learners before taking the driving test. It is valid for a limited period, so check with your RTO.",
+    "ഡ്രൈവിങ് ടെസ്റ്റിന് മുമ്പ് പഠിതാവിനുള്ള നിബന്ധനകളോടെ ഓടിച്ച് പരിശീലിക്കാൻ അനുവദിക്കുന്ന താൽക്കാലിക ലൈസൻസ്. ഇതിന് നിശ്ചിത കാലാവധിയേ ഉള്ളൂ; ആർടിഒയിൽ പരിശോധിക്കുക.",
+    "LLR (லேர்னர்ஸ் லைசென்ஸ்)",
+    "ஒரு தற்காலிக உரிமம், ஓட்டுநர் தேர்வை எடுப்பதற்கு முன் கற்பவர்களுக்கான விதிகளின்படி வாகனம் ஓட்டுவதற்கு உங்களை அனுமதிக்கிறது. இது ஒரு குறிப்பிட்ட காலத்திற்கு செல்லுபடியாகும், எனவே உங்கள் RTO உடன் சரிபார்க்கவும்."
+  ],
+  [
+    "DL (Driving Licence)",
+    "ഡിഎൽ (ഡ്രൈവിങ് ലൈസൻസ്)",
+    "The permanent licence that allows you to drive the classes of vehicle written on it. Carry it, or its valid digital copy, when driving.",
+    "അതിൽ രേഖപ്പെടുത്തിയ വിഭാഗം വാഹനങ്ങൾ ഓടിക്കാൻ അനുവദിക്കുന്ന സ്ഥിരം ലൈസൻസ്. ഓടിക്കുമ്പോൾ ഇതോ ഇതിന്റെ സാധുവായ ഡിജിറ്റൽ പകർപ്പോ കരുതുക.",
+    "DL (ஓட்டுநர் உரிமம்)",
+    "நிரந்தர உரிமம் அதில் எழுதப்பட்ட வாகனத்தின் வகுப்புகளை ஓட்ட உங்களை அனுமதிக்கிறது. வாகனம் ஓட்டும்போது அதை அல்லது அதன் சரியான டிஜிட்டல் நகலை எடுத்துச் செல்லவும்."
+  ],
+  [
+    "RC (Registration Certificate)",
+    "ആർസി (രജിസ്ട്രേഷൻ സർട്ടിഫിക്കറ്റ്)",
+    "The document that proves a vehicle is registered and shows its owner, number and details. Keep it with the vehicle.",
+    "വാഹനം രജിസ്റ്റർ ചെയ്തിട്ടുണ്ടെന്ന് തെളിയിക്കുകയും ഉടമയുടെ പേര്, നമ്പർ, വിവരങ്ങൾ എന്നിവ കാണിക്കുകയും ചെയ്യുന്ന രേഖ. ഇത് വാഹനത്തിൽ കരുതുക.",
+    "RC (பதிவுச் சான்றிதழ்)",
+    "வாகனம் பதிவு செய்யப்பட்டதை நிரூபிக்கும் ஆவணம் மற்றும் அதன் உரிமையாளர், எண் மற்றும் விவரங்களைக் காட்டுகிறது. வாகனத்துடன் வைத்துக் கொள்ளவும்."
+  ],
+  [
+    "PUC (Pollution Under Control)",
+    "പിയുസി (പൊല്യൂഷൻ അണ്ടർ കൺട്രോൾ)",
+    "A certificate showing that a vehicle's exhaust emissions were tested and found within the allowed limits. It must be kept valid and renewed on time.",
+    "വാഹനത്തിന്റെ പുക പരിശോധിച്ച് അനുവദനീയ പരിധിക്കുള്ളിലാണെന്ന് കാണിക്കുന്ന സർട്ടിഫിക്കറ്റ്. ഇത് സാധുവായി സൂക്ഷിക്കുകയും സമയത്തിന് പുതുക്കുകയും വേണം.",
+    "PUC (கட்டுப்பாட்டின் கீழ் மாசு)",
+    "ஒரு வாகனத்தின் வெளியேற்ற உமிழ்வுகள் சோதனை செய்யப்பட்டு அனுமதிக்கப்பட்ட வரம்புகளுக்குள் கண்டறியப்பட்டதைக் காட்டும் சான்றிதழ். இது செல்லுபடியாகும் மற்றும் சரியான நேரத்தில் புதுப்பிக்கப்பட வேண்டும்."
+  ],
+  [
+    "RTO",
+    "ആർടിഒ",
+    "The Regional Transport Office, which registers vehicles and issues licences and permits in its area.",
+    "വാഹന രജിസ്ട്രേഷൻ, ലൈസൻസ്, പെർമിറ്റ് എന്നിവ നൽകുന്ന പ്രാദേശിക ഗതാഗത ഓഫീസ് (റീജിയണൽ ട്രാൻസ്പോർട്ട് ഓഫീസ്).",
+    "RTO",
+    "பிராந்திய போக்குவரத்து அலுவலகம், அதன் பகுதியில் வாகனங்களை பதிவு செய்து உரிமங்கள் மற்றும் அனுமதிகளை வழங்குகிறது."
+  ],
+  [
+    "MVD",
+    "എംവിഡി",
+    "The Motor Vehicles Department, the state body that enforces road transport rules. In Kerala its officers check vehicles and documents on the road.",
+    "റോഡ് ഗതാഗത നിയമങ്ങൾ നടപ്പാക്കുന്ന സംസ്ഥാന വകുപ്പായ മോട്ടോർ വെഹിക്കിൾസ് ഡിപ്പാർട്ട്മെന്റ്. കേരളത്തിൽ ഇതിലെ ഉദ്യോഗസ്ഥർ റോഡിൽ വാഹനങ്ങളും രേഖകളും പരിശോധിക്കുന്നു.",
+    "MVD",
+    "மோட்டார் வாகனத் துறை, சாலை போக்குவரத்து விதிகளை அமல்படுத்தும் மாநில அமைப்பு. கேரளாவில் அதன் அதிகாரிகள் சாலையில் வாகனங்கள் மற்றும் ஆவணங்களை சரிபார்க்கின்றனர்."
+  ],
+  [
+    "NH (National Highway)",
+    "എൻഎച്ച് (ദേശീയപാത)",
+    "A major road that connects states and big cities, numbered and maintained under national authority. Traffic on it is usually faster and heavier.",
+    "സംസ്ഥാനങ്ങളെയും വലിയ നഗരങ്ങളെയും ബന്ധിപ്പിക്കുന്ന, നമ്പർ നൽകി ദേശീയ തലത്തിൽ പരിപാലിക്കുന്ന പ്രധാന റോഡ്. ഇതിൽ ഗതാഗതം സാധാരണ വേഗമേറിയതും തിരക്കേറിയതുമാണ്.",
+    "NH (தேசிய நெடுஞ்சாலை)",
+    "மாநிலங்கள் மற்றும் பெரிய நகரங்களை இணைக்கும் ஒரு பெரிய சாலை, தேசிய அதிகாரத்தின் கீழ் எண்ணிடப்பட்டு பராமரிக்கப்படுகிறது. அதன் மீது போக்குவரத்து பொதுவாக வேகமாகவும் கனமாகவும் இருக்கும்."
+  ],
+  [
+    "SH (State Highway)",
+    "എസ്എച്ച് (സംസ്ഥാനപാത)",
+    "A main road within a state that links district towns and joins national highways. It is looked after by the state government.",
+    "ഒരു സംസ്ഥാനത്തിനുള്ളിലെ ജില്ലാ പട്ടണങ്ങളെ ബന്ധിപ്പിക്കുകയും ദേശീയപാതകളോട് ചേരുകയും ചെയ്യുന്ന പ്രധാന റോഡ്. ഇത് സംസ്ഥാന സർക്കാർ പരിപാലിക്കുന്നു.",
+    "SH (மாநில நெடுஞ்சாலை)",
+    "மாவட்ட நகரங்களை இணைக்கும் மற்றும் தேசிய நெடுஞ்சாலைகளை இணைக்கும் ஒரு மாநிலத்திற்குள் ஒரு முக்கிய சாலை. அதை மாநில அரசு கவனித்து வருகிறது."
+  ],
+  [
+    "Hazard lights",
+    "ഹസാർഡ് ലൈറ്റുകൾ",
+    "All four indicators flashing together to warn others of a breakdown or danger. Do not use them just to drive through rain or to park illegally.",
+    "ബ്രേക്ക്ഡൗൺ അല്ലെങ്കിൽ അപകടം മറ്റുള്ളവരെ അറിയിക്കാൻ നാല് ഇൻഡിക്കേറ്ററുകളും ഒന്നിച്ച് മിന്നിക്കുന്നത്. മഴയിൽ ഓടിക്കാനോ നിയമവിരുദ്ധ പാർക്കിങ്ങിനോ ഇത് ഉപയോഗിക്കരുത്.",
+    "அபாய விளக்குகள்",
+    "அனைத்து நான்கு குறிகாட்டிகளும் ஒரு முறிவு அல்லது ஆபத்து பற்றி மற்றவர்களுக்கு எச்சரிக்க ஒன்றாக ஒளிரும். மழையின் போது வாகனம் ஓட்டுவதற்கு அல்லது சட்டவிரோதமாக வாகனங்களை நிறுத்துவதற்கு அவற்றைப் பயன்படுத்த வேண்டாம்."
+  ],
+  [
+    "Dipped beam",
+    "ഡിപ്പ്ഡ് ബീം",
+    "The low-beam headlight setting that lights the road without dazzling others. Use it in towns and when meeting other vehicles at night.",
+    "മറ്റുള്ളവരുടെ കണ്ണിൽ പതിയാതെ റോഡ് പ്രകാശിപ്പിക്കുന്ന ലോ-ബീം ഹെഡ്‌ലൈറ്റ്. പട്ടണങ്ങളിലും രാത്രി എതിരെ വാഹനം വരുമ്പോഴും ഇത് ഉപയോഗിക്കുക.",
+    "டிப்ட் பீம்",
+    "மற்றவர்களை திகைக்க வைக்காமல் சாலையை விளக்கும் குறைந்த பீம் ஹெட்லைட் அமைப்பு. நகரங்களிலும், இரவில் மற்ற வாகனங்கள் சந்திக்கும் போதும் பயன்படுத்தவும்."
+  ],
+  [
+    "High beam",
+    "ഹൈ ബീം",
+    "The bright headlight setting for seeing far on dark, empty roads. Switch to dipped beam when other vehicles approach or when following one.",
+    "ഇരുട്ടുള്ള ആളൊഴിഞ്ഞ റോഡിൽ ദൂരേക്ക് കാണാനുള്ള തീവ്ര പ്രകാശം. മറ്റ് വാഹനങ്ങൾ അടുത്തെത്തുമ്പോഴോ ഒന്നിനെ പിന്തുടരുമ്പോഴോ ഡിപ്പ്ഡ് ബീമിലേക്ക് മാറ്റുക.",
+    "உயர் பீம்",
+    "இருண்ட, வெறுமையான சாலைகளில் வெகுதூரம் பார்ப்பதற்கான பிரகாசமான ஹெட்லைட் அமைப்பு. மற்ற வாகனங்கள் நெருங்கும்போது அல்லது ஒன்றைப் பின்தொடரும் போது டிப் பீமுக்கு மாறவும்."
+  ],
+  [
+    "ABS (Anti-lock Braking System)",
+    "എബിഎസ് (ആന്റി-ലോക്ക് ബ്രേക്കിങ് സിസ്റ്റം)",
+    "A system that stops the wheels from locking during hard braking, helping you keep steering control. Press the brake firmly and do not pump it.",
+    "ശക്തമായി ബ്രേക്ക് ചെയ്യുമ്പോൾ ചക്രങ്ങൾ ലോക്ക് ആകാതെ സ്റ്റിയറിങ് നിയന്ത്രണം നിലനിർത്താൻ സഹായിക്കുന്ന സംവിധാനം. ബ്രേക്ക് ദൃഢമായി അമർത്തുക, പമ്പ് ചെയ്യരുത്.",
+    "ஏபிஎஸ் (ஆன்டி-லாக் பிரேக்கிங் சிஸ்டம்)",
+    "கடினமான பிரேக்கிங்கின் போது சக்கரங்கள் பூட்டப்படுவதைத் தடுக்கும் ஒரு அமைப்பு, ஸ்டீயரிங் கட்டுப்பாட்டில் வைத்திருக்க உதவுகிறது. பிரேக்கை உறுதியாக அழுத்தவும், அதை பம்ப் செய்ய வேண்டாம்."
+  ],
+  [
+    "ESP (Electronic Stability Program)",
+    "ഇഎസ്പി (ഇലക്ട്രോണിക് സ്റ്റെബിലിറ്റി പ്രോഗ്രാം)",
+    "A system that senses skidding and brakes individual wheels to help the vehicle stay on its intended path. It helps but cannot beat the laws of physics, so drive within limits.",
+    "വാഹനം തെന്നുന്നത് തിരിച്ചറിഞ്ഞ് ഓരോ ചക്രത്തിലും ബ്രേക്ക് പ്രയോഗിച്ച് ഉദ്ദേശിച്ച പാതയിൽ നിലനിർത്താൻ സഹായിക്കുന്ന സംവിധാനം. ഇത് സഹായിക്കുമെങ്കിലും പരിധിക്കുള്ളിൽ തന്നെ ഓടിക്കണം.",
+    "ESP (எலக்ட்ரானிக் ஸ்டெபிலிட்டி புரோகிராம்)",
+    "வாகனம் அதன் நோக்கம் கொண்ட பாதையில் இருக்க உதவும் வகையில் சறுக்குவதை உணர்ந்து தனிப்பட்ட சக்கரங்களை பிரேக் செய்யும் அமைப்பு. இது உதவுகிறது ஆனால் இயற்பியல் விதிகளை வெல்ல முடியாது, எனவே வரம்புகளுக்குள் ஓட்டுங்கள்."
+  ],
+  [
+    "TPMS (Tyre Pressure Monitoring System)",
+    "ടിപിഎംഎസ് (ടയർ പ്രഷർ മോണിറ്ററിങ് സിസ്റ്റം)",
+    "A system that warns you on the dashboard when a tyre's air pressure is low. Check the tyre and fill it to the recommended pressure.",
+    "ടയറിലെ വായു മർദം കുറഞ്ഞാൽ ഡാഷ്ബോർഡിൽ മുന്നറിയിപ്പ് നൽകുന്ന സംവിധാനം. ടയർ പരിശോധിച്ച് നിർദേശിച്ച മർദത്തിലേക്ക് വായു നിറയ്ക്കുക.",
+    "TPMS (டயர் அழுத்தம் கண்காணிப்பு அமைப்பு)",
+    "டயரின் காற்றழுத்தம் குறைவாக இருக்கும்போது டேஷ்போர்டில் உங்களை எச்சரிக்கும் அமைப்பு. டயரைச் சரிபார்த்து, பரிந்துரைக்கப்பட்ட அழுத்தத்திற்கு அதை நிரப்பவும்."
+  ],
+  [
+    "Airbag",
+    "എയർബാഗ്",
+    "A cushion that inflates in a serious crash to protect occupants. It works best together with a fastened seat belt, not instead of it.",
+    "ഗുരുതരമായ കൂട്ടിയിടിയിൽ യാത്രക്കാരെ സംരക്ഷിക്കാൻ വീർക്കുന്ന കുഷ്യൻ. ഇത് സീറ്റ് ബെൽറ്റിന് പകരമല്ല, ബെൽറ്റിനൊപ്പമാണ് ഏറ്റവും ഫലപ്രദം.",
+    "ஏர்பேக்",
+    "ஆக்கிரமிப்பாளர்களைப் பாதுகாப்பதற்காக ஒரு கடுமையான விபத்தில் பெருகும் குஷன். கட்டப்பட்ட சீட் பெல்ட்டுடன் இது சிறப்பாகச் செயல்படுகிறது, அதற்குப் பதிலாக அல்ல."
+  ],
+  [
+    "Hatchback",
+    "ഹാച്ച്ബാക്ക്",
+    "A car whose rear door lifts up and opens along with the boot space, usually compact in size. Mind its blind spots when reversing.",
+    "ഡിക്കിയുമായി ചേർന്ന് മുകളിലേക്ക് തുറക്കുന്ന പിൻവാതിലുള്ള, സാധാരണ ചെറിയ കാർ. പിന്നോട്ടെടുക്കുമ്പോൾ ഇതിന്റെ ബ്ലൈൻഡ് സ്പോട്ടുകൾ ശ്രദ്ധിക്കുക.",
+    "ஹேட்ச்பேக்",
+    "ஒரு கார், அதன் பின்புற கதவு மேலே தூக்கி, பூட் ஸ்பேஸுடன் திறக்கும், பொதுவாக சிறிய அளவில் இருக்கும். தலைகீழாக மாற்றும்போது அதன் குருட்டுப் புள்ளிகளைக் கவனியுங்கள்."
+  ],
+  [
+    "Pillion",
+    "പില്ല്യൺ",
+    "The seat behind the rider on a two-wheeler, or the person sitting there. A pillion rider must also wear a helmet.",
+    "ടൂവീലറിൽ ഓടിക്കുന്നയാളുടെ പിന്നിലെ സീറ്റ്, അല്ലെങ്കിൽ അവിടെ ഇരിക്കുന്നയാൾ. പില്ല്യൺ യാത്രക്കാരനും ഹെൽമറ്റ് ധരിക്കണം.",
+    "பில்லியன்",
+    "இரு சக்கர வாகனத்தில் சவாரி செய்பவரின் பின் இருக்கை அல்லது அங்கு அமர்ந்திருக்கும் நபர். பில்லியனை ஓட்டுபவர்களும் கட்டாயம் ஹெல்மெட் அணிய வேண்டும்."
+  ],
+  [
+    "Mudguard",
+    "മഡ്ഗാർഡ്",
+    "The cover over a wheel that stops mud and water being thrown up at the vehicle, rider or others. Keep it fitted and in good condition.",
+    "ചക്രത്തിൽ നിന്ന് ചെളിയും വെള്ളവും വാഹനത്തിലേക്കോ യാത്രക്കാരിലേക്കോ മറ്റുള്ളവരിലേക്കോ തെറിക്കാതിരിക്കാൻ ചക്രത്തിന് മുകളിലുള്ള ആവരണം. ഇത് കേടുകൂടാതെ ഘടിപ്പിച്ചിരിക്കണം.",
+    "மட்கார்டு",
+    "வாகனம், சவாரி செய்பவர் அல்லது பிறர் மீது சேறு மற்றும் நீர் வீசப்படுவதைத் தடுக்கும் சக்கரத்தின் மேலுள்ள உறை. அதை பொருத்தி நல்ல நிலையில் வைக்கவும்."
+  ],
+  [
+    "Gore area",
+    "ഗോർ ഏരിയ",
+    "The triangular painted area between a main road and an exit or entry ramp where the two paths split or join. Do not drive or stop on it.",
+    "പ്രധാന റോഡും എക്സിറ്റ്/എൻട്രി റാമ്പും വേർപിരിയുകയോ ചേരുകയോ ചെയ്യുന്നിടത്തെ, വരച്ചിട്ടുള്ള ത്രികോണാകൃതിയിലുള്ള ഭാഗം. ഇതിൽ ഓടിക്കുകയോ നിർത്തുകയോ ചെയ്യരുത്.",
+    "கோர் பகுதி",
+    "ஒரு பிரதான சாலை மற்றும் இரண்டு பாதைகள் பிரிந்து அல்லது சேரும் ஒரு வெளியேறும் அல்லது நுழைவு வளைவுக்கு இடையே உள்ள முக்கோண வர்ணம் பூசப்பட்ட பகுதி. அதை ஓட்டவோ நிறுத்தவோ கூடாது."
+  ],
+  [
+    "Rumble strip",
+    "റംബിൾ സ്ട്രിപ്പ്",
+    "Raised or grooved bands across or along the road that make noise and vibration to alert you. They warn of a hazard ahead or of drifting off the lane.",
+    "ശബ്ദവും കുലുക്കവും ഉണ്ടാക്കി ഡ്രൈവറെ ഉണർത്തുന്ന, റോഡിൽ കുറുകെയോ നീളത്തിലോ ഉള്ള ഉയർന്നതോ ചാലുള്ളതോ ആയ പട്ടകൾ. മുന്നിലെ അപകടത്തെക്കുറിച്ചോ ലെയ്ൻ വിട്ടുപോകുന്നതിനെക്കുറിച്ചോ ഇവ മുന്നറിയിപ്പ് നൽകുന്നു.",
+    "ரம்பிள் ஸ்ட்ரிப்",
+    "உங்களை எச்சரிப்பதற்காக சத்தம் மற்றும் அதிர்வுகளை உருவாக்கும் சாலையின் குறுக்கே அல்லது நெடுகிலும் உயர்த்தப்பட்ட அல்லது பள்ளம் கொண்ட பட்டைகள். முன்னால் ஒரு ஆபத்து அல்லது பாதையிலிருந்து விலகிச் செல்வது பற்றி அவர்கள் எச்சரிக்கிறார்கள்."
+  ],
+  [
+    "Speed breaker",
+    "സ്പീഡ് ബ്രേക്കർ",
+    "A raised hump across the road to force vehicles to slow down. Reduce speed in advance and cross it slowly.",
+    "വാഹനങ്ങളുടെ വേഗം കുറയ്ക്കാൻ റോഡിന് കുറുകെ ഉണ്ടാക്കിയ ഉയർന്ന തിട്ട. മുൻകൂട്ടി വേഗം കുറച്ച് പതുക്കെ കടക്കുക.",
+    "ஸ்பீட் பிரேக்கர்",
+    "வாகனங்கள் மெதுவாகச் செல்லும்படி சாலையின் குறுக்கே உயர்த்தப்பட்ட கூம்பு. முன்கூட்டியே வேகத்தை குறைத்து மெதுவாக கடக்கவும்."
+  ],
+  [
+    "Flyover",
+    "ഫ്ലൈഓവർ",
+    "A raised road or bridge that carries traffic over a junction, railway line or another road. Vehicles on it avoid the junction below.",
+    "ജംഗ്ഷൻ, റെയിൽപാത, മറ്റൊരു റോഡ് എന്നിവയ്ക്ക് മുകളിലൂടെ ഗതാഗതം കൊണ്ടുപോകുന്ന ഉയർന്ന റോഡ്/പാലം. ഇതിലൂടെ പോകുന്ന വാഹനങ്ങൾ താഴത്തെ ജംഗ്ഷൻ ഒഴിവാക്കുന്നു.",
+    "மேம்பாலம்",
+    "ஒரு சந்திப்பு, இரயில் பாதை அல்லது மற்றொரு சாலையின் மீது போக்குவரத்தை கொண்டு செல்லும் ஒரு உயர்த்தப்பட்ட சாலை அல்லது பாலம். அதில் வரும் வாகனங்கள் கீழே உள்ள சந்திப்பைத் தவிர்க்கின்றன."
+  ],
+  [
+    "Underpass",
+    "അണ്ടർപാസ്",
+    "A road or passage that goes under another road or railway. Watch for lower height limits and wet patches inside.",
+    "മറ്റൊരു റോഡിനോ റെയിൽപാതയ്ക്കോ അടിയിലൂടെയുള്ള റോഡ് അല്ലെങ്കിൽ പാത. ഉയരപരിധിയും ഉള്ളിലെ നനവും ശ്രദ്ധിക്കുക.",
+    "அண்டர்பாஸ்",
+    "மற்றொரு சாலை அல்லது ரயில்வேயின் கீழ் செல்லும் சாலை அல்லது பாதை. குறைந்த உயர வரம்புகள் மற்றும் உள்ளே ஈரமான திட்டுகள் உள்ளனவா என்று பாருங்கள்."
+  ],
+  [
+    "Bypass",
+    "ബൈപാസ്",
+    "A road built around a town or busy area so through traffic can avoid it. It reduces congestion in the town centre.",
+    "പട്ടണത്തിലോ തിരക്കുള്ള പ്രദേശത്തോ കയറാതെ കടന്നുപോകാൻ അതിനെ ചുറ്റി നിർമിച്ച റോഡ്. ഇത് പട്ടണ മധ്യത്തിലെ തിരക്ക് കുറയ്ക്കുന്നു.",
+    "பைபாஸ்",
+    "ஒரு நகரம் அல்லது பரபரப்பான பகுதியைச் சுற்றி அமைக்கப்பட்ட சாலை, போக்குவரத்து மூலம் அதைத் தவிர்க்கலாம். இது நகர மையத்தில் நெரிசலைக் குறைக்கிறது."
+  ],
+  [
+    "Level crossing",
+    "ലെവൽ ക്രോസിങ്",
+    "A place where a road crosses a railway line at the same level. Stop when the signal or gate says so, and never try to beat the train.",
+    "റോഡും റെയിൽപാതയും ഒരേ നിരപ്പിൽ കൂടിച്ചേരുന്ന സ്ഥലം. സിഗ്നലോ ഗേറ്റോ പറയുമ്പോൾ നിർത്തുക; ട്രെയിനിനെ തോൽപ്പിച്ച് കടക്കാൻ ശ്രമിക്കരുത്.",
+    "லெவல் கிராசிங்",
+    "ஒரு சாலை ஒரு ரயில் பாதையை அதே மட்டத்தில் கடக்கும் இடம். சிக்னல் அல்லது கேட் சொன்னால் நிறுத்துங்கள், ரயிலை அடிக்க முயற்சிக்காதீர்கள்."
+  ],
+  [
+    "e-challan",
+    "ഇ-ചലാൻ",
+    "An electronic notice issued for a traffic offence, often based on camera or officer records. It can be checked and handled through the official Parivahan or state portals.",
+    "ട്രാഫിക് നിയമലംഘനത്തിന് ക്യാമറയുടെയോ ഉദ്യോഗസ്ഥരുടെയോ രേഖകളുടെ അടിസ്ഥാനത്തിൽ നൽകുന്ന ഇലക്ട്രോണിക് നോട്ടീസ്. ഇത് ഔദ്യോഗിക പരിവാഹൻ അല്ലെങ്കിൽ സംസ്ഥാന പോർട്ടലുകൾ വഴി പരിശോധിക്കാം.",
+    "இ-சலான்",
+    "ஒரு போக்குவரத்து குற்றத்திற்காக வழங்கப்படும் மின்னணு அறிவிப்பு, பெரும்பாலும் கேமரா அல்லது அதிகாரி பதிவுகளை அடிப்படையாகக் கொண்டது. இது அதிகாரப்பூர்வ பரிவாஹன் அல்லது மாநில இணையதளங்கள் மூலம் சரிபார்த்து கையாளப்படலாம்."
+  ],
+  [
+    "Fitness certificate",
+    "ഫിറ്റ്നസ് സർട്ടിഫിക്കറ്റ്",
+    "A document showing that a transport vehicle such as a bus, taxi or truck has been inspected and is roadworthy. It must be renewed as required.",
+    "ബസ്, ടാക്സി, ട്രക്ക് തുടങ്ങിയ ട്രാൻസ്പോർട്ട് വാഹനം പരിശോധിച്ച് റോഡിലിറക്കാൻ യോഗ്യമാണെന്ന് കാണിക്കുന്ന രേഖ. ആവശ്യമായ സമയത്ത് ഇത് പുതുക്കണം.",
+    "உடற்தகுதி சான்றிதழ்",
+    "பேருந்து, டாக்சி அல்லது டிரக் போன்ற போக்குவரத்து வாகனம் ஆய்வு செய்யப்பட்டு, சாலையோரமானது என்பதைக் காட்டும் ஆவணம். தேவைக்கேற்ப புதுப்பிக்க வேண்டும்."
+  ],
+  [
+    "Permit",
+    "പെർമിറ്റ്",
+    "An authorisation to use a vehicle for carrying passengers or goods for hire, usually for a stated route or area. Private-use cars do not need it.",
+    "വാടകയ്‌ക്കോ പ്രതിഫലത്തിനോ യാത്രക്കാരെയോ ചരക്കോ കൊണ്ടുപോകാൻ വാഹനം ഉപയോഗിക്കാനുള്ള അനുമതി; സാധാരണ നിശ്ചിത റൂട്ടിനോ പ്രദേശത്തിനോ ആയിരിക്കും. സ്വകാര്യ ഉപയോഗത്തിലെ കാറിന് ഇത് വേണ്ട.",
+    "அனுமதி",
+    "பொதுவாக ஒரு குறிப்பிட்ட பாதை அல்லது பகுதிக்கு, பயணிகள் அல்லது பொருட்களை வாடகைக்கு எடுத்துச் செல்ல ஒரு வாகனத்தைப் பயன்படுத்துவதற்கான அங்கீகாரம். தனியார் பயன்பாட்டு கார்களுக்கு இது தேவையில்லை."
+  ],
+  [
+    "Insurance",
+    "ഇൻഷുറൻസ്",
+    "A contract in which an insurer covers certain losses, such as damage or injury caused by a vehicle, in return for a premium. Keep the policy valid at all times.",
+    "പ്രീമിയം വാങ്ങി വാഹനം മൂലമുള്ള നാശനഷ്ടം, പരിക്ക് തുടങ്ങിയ നഷ്ടങ്ങൾ ഇൻഷുറർ വഹിക്കുന്ന കരാർ. പോളിസി എപ്പോഴും സാധുവായി സൂക്ഷിക്കുക.",
+    "காப்பீடு",
+    "காப்பீட்டாளர் ஒரு பிரீமியத்திற்கு ஈடாக, வாகனத்தால் ஏற்படும் சேதம் அல்லது காயம் போன்ற சில இழப்புகளை ஈடுசெய்யும் ஒப்பந்தம். பாலிசியை எல்லா நேரங்களிலும் செல்லுபடியாக வைத்திருக்கவும்."
+  ],
+  [
+    "Third-party insurance",
+    "തേർഡ്-പാർട്ടി ഇൻഷുറൻസ്",
+    "The minimum insurance every motor vehicle must have, covering harm your vehicle causes to other people or their property. It does not cover damage to your own vehicle.",
+    "ഓരോ വാഹനത്തിനും നിർബന്ധമായ കുറഞ്ഞ ഇൻഷുറൻസ്; നിങ്ങളുടെ വാഹനം മൂലം മറ്റുള്ളവർക്കോ അവരുടെ വസ്തുവിനോ ഉണ്ടാകുന്ന നഷ്ടം ഇത് വഹിക്കുന്നു. നിങ്ങളുടെ സ്വന്തം വാഹനത്തിന്റെ കേടുപാട് ഇതിൽ ഉൾപ്പെടില്ല.",
+    "மூன்றாம் தரப்பு காப்பீடு",
+    "ஒவ்வொரு மோட்டார் வாகனமும் வைத்திருக்க வேண்டிய குறைந்தபட்ச காப்பீடு, உங்கள் வாகனம் மற்றவர்களுக்கு அல்லது அவர்களின் சொத்துக்களுக்கு ஏற்படும் தீங்குகளை உள்ளடக்கியது. இது உங்கள் சொந்த வாகனத்திற்கு சேதம் ஏற்படாது."
+  ],
+  [
+    "Comprehensive insurance",
+    "കോംപ്രിഹെൻസീവ് ഇൻഷുറൻസ്",
+    "A wider policy that covers third-party liability and also damage to your own vehicle, subject to its terms. Read what it includes and excludes.",
+    "തേർഡ്-പാർട്ടി ബാധ്യതയ്‌ക്കൊപ്പം നിബന്ധനകൾക്ക് വിധേയമായി സ്വന്തം വാഹനത്തിന്റെ കേടുപാടും ഉൾപ്പെടുത്തുന്ന വിശാലമായ പോളിസി. എന്തൊക്കെ ഉൾപ്പെടുന്നു, ഉൾപ്പെടുന്നില്ല എന്ന് വായിച്ച് മനസ്സിലാക്കുക.",
+    "விரிவான காப்பீடு",
+    "அதன் விதிமுறைகளுக்கு உட்பட்டு, மூன்றாம் தரப்பு பொறுப்பு மற்றும் உங்கள் சொந்த வாகனத்திற்கு சேதம் விளைவிக்கும் ஒரு பரந்த பாலிசி. அதில் உள்ளவற்றையும் விலக்குவதையும் படிக்கவும்."
+  ],
+  [
+    "Registration",
+    "രജിസ്ട്രേഷൻ",
+    "The official recording of a vehicle with the RTO, which gives it a unique number and an RC. A vehicle must be registered before use on public roads.",
+    "വാഹനത്തെ ആർടിഒയിൽ ഔദ്യോഗികമായി രേഖപ്പെടുത്തുന്ന നടപടി; ഇതിലൂടെ തനത് നമ്പറും ആർസിയും ലഭിക്കുന്നു. പൊതുനിരത്തിൽ ഉപയോഗിക്കുംമുമ്പ് വാഹനം രജിസ്റ്റർ ചെയ്തിരിക്കണം.",
+    "பதிவு",
+    "RTO உடனான வாகனத்தின் அதிகாரப்பூர்வ பதிவு, அது ஒரு தனிப்பட்ட எண் மற்றும் RC ஐ வழங்குகிறது. பொது சாலைகளில் பயன்படுத்துவதற்கு முன் வாகனம் பதிவு செய்யப்பட வேண்டும்."
+  ],
+  [
+    "Learner",
+    "ലേണർ",
+    "A person who is still learning to drive and holds a learner's licence. A learner must follow the conditions on it, such as displaying the L sign.",
+    "ഡ്രൈവിങ് പഠിച്ചുകൊണ്ടിരിക്കുന്നവരും ലേണേഴ്‌സ് ലൈസൻസ് ഉള്ളവരും. എൽ ചിഹ്നം പ്രദർശിപ്പിക്കുന്നത് പോലുള്ള നിബന്ധനകൾ ലേണർ പാലിക്കണം.",
+    "கற்றவர்",
+    "இன்னும் வாகனம் ஓட்டக் கற்றுக்கொண்டிருப்பவர் மற்றும் கற்றல் உரிமம் பெற்றவர். L குறியைக் காண்பிப்பது போன்ற நிபந்தனைகளை ஒரு கற்றவர் பின்பற்ற வேண்டும்."
+  ],
+  [
+    "Indicator",
+    "ഇൻഡിക്കേറ്റർ",
+    "The blinking light that shows you intend to turn or change lane. Signal early and switch it off after the manoeuvre.",
+    "തിരിയാനോ ലെയ്ൻ മാറാനോ ഉള്ള ഉദ്ദേശ്യം കാണിക്കുന്ന മിന്നുന്ന ലൈറ്റ്. നേരത്തേ സിഗ്നൽ ഇടുകയും കഴിഞ്ഞ ശേഷം ഓഫ് ചെയ്യുകയും ചെയ്യുക.",
+    "காட்டி",
+    "நீங்கள் பாதையைத் திருப்ப அல்லது மாற்ற விரும்புகிறீர்கள் என்பதைக் காட்டும் ஒளிரும் விளக்கு. முன்கூட்டியே சமிக்ஞை செய்து, சூழ்ச்சிக்குப் பிறகு அதை அணைக்கவும்."
+  ],
+  [
+    "Stopping distance",
+    "സ്റ്റോപ്പിങ് ഡിസ്റ്റൻസ്",
+    "The total distance a vehicle travels from the moment you see danger until it stops. It is thinking distance plus braking distance and grows with speed.",
+    "അപകടം കാണുന്ന നിമിഷം മുതൽ വാഹനം നിൽക്കുന്നതുവരെ സഞ്ചരിക്കുന്ന ആകെ ദൂരം. ഇത് ചിന്താദൂരവും ബ്രേക്കിങ് ദൂരവും ചേർന്നതാണ്; വേഗം കൂടുംതോറും കൂടും.",
+    "நிறுத்தும் தூரம்",
+    "நீங்கள் ஆபத்தைக் கண்டதிலிருந்து அது நிற்கும் வரை வாகனம் பயணிக்கும் மொத்த தூரம். இது சிந்திக்கும் தூரம் மற்றும் பிரேக்கிங் தூரம் மற்றும் வேகத்துடன் வளரும்."
+  ],
+  [
+    "Reaction time",
+    "റിയാക്ഷൻ ടൈം",
+    "The time between noticing a hazard and starting to act, such as pressing the brake. Tiredness, phone use and alcohol make it longer.",
+    "അപകടം ശ്രദ്ധയിൽപ്പെടുന്നതിനും ബ്രേക്ക് അമർത്തുന്നത് പോലുള്ള പ്രവൃത്തി തുടങ്ങുന്നതിനും ഇടയിലെ സമയം. ക്ഷീണം, ഫോൺ ഉപയോഗം, മദ്യം എന്നിവ ഇത് കൂട്ടുന്നു.",
+    "எதிர்வினை நேரம்",
+    "பிரேக்கை அழுத்துவது போன்ற ஆபத்தைக் கவனிப்பதற்கும் செயல்படத் தொடங்குவதற்கும் இடைப்பட்ட நேரம். சோர்வு, போன் உபயோகம் மற்றும் மதுபானம் ஆகியவை அதை அதிக நேரம் ஆக்குகின்றன."
+  ],
+  [
+    "Defensive driving",
+    "ഡിഫൻസീവ് ഡ്രൈവിങ്",
+    "Driving in a way that expects other people's mistakes, keeps a safe gap and leaves room to react. It aims to avoid crashes even when others err.",
+    "മറ്റുള്ളവരുടെ പിഴവുകൾ മുൻകൂട്ടി കണ്ട്, സുരക്ഷിത അകലം പാലിച്ച്, പ്രതികരിക്കാൻ സ്ഥലം ബാക്കി വച്ച് ഓടിക്കുന്ന രീതി. മറ്റുള്ളവർ തെറ്റ് ചെയ്താലും അപകടം ഒഴിവാക്കുകയാണ് ലക്ഷ്യം.",
+    "தற்காப்பு ஓட்டுநர்",
+    "மற்றவர்களின் தவறுகளை எதிர்பார்க்கும் விதத்தில் வாகனம் ஓட்டுவது, பாதுகாப்பான இடைவெளியை வைத்திருப்பது மற்றும் எதிர்வினைக்கு இடமளிக்கிறது. மற்றவர்கள் தவறு செய்தாலும் விபத்துகளைத் தவிர்ப்பதே இதன் நோக்கம்."
+  ],
+  [
+    "Lane discipline",
+    "ലെയ്ൻ ഡിസിപ്ലിൻ",
+    "Keeping to your own lane and changing lanes only when needed and safe. Straddling lanes confuses others and causes crashes.",
+    "സ്വന്തം ലെയ്നിൽ തന്നെ ഓടുകയും ആവശ്യമുള്ളപ്പോൾ സുരക്ഷിതമായി മാത്രം ലെയ്ൻ മാറുകയും ചെയ്യുക. രണ്ട് ലെയ്നുകൾക്ക് നടുവിൽ ഓടുന്നത് മറ്റുള്ളവരെ കുഴപ്പിക്കുകയും അപകടമുണ്ടാക്കുകയും ചെയ്യും.",
+    "லேன் டிசிப்ளின்",
+    "உங்கள் சொந்த பாதையில் வைத்து, தேவைப்படும் மற்றும் பாதுகாப்பான போது மட்டுமே பாதைகளை மாற்றவும். தடம் புரளும் பாதைகள் மற்றவர்களைக் குழப்பி விபத்துகளை ஏற்படுத்துகின்றன."
+  ],
+  [
+    "Roundabout",
+    "റൗണ്ടാന",
+    "A circular junction where traffic moves around a central island in one direction. In India you give way to traffic already on the roundabout and keep left.",
+    "നടുവിലെ ദ്വീപിന് ചുറ്റും ഒരേ ദിശയിൽ ഗതാഗതം നീങ്ങുന്ന വൃത്താകൃതിയിലുള്ള ജംഗ്ഷൻ. ഇന്ത്യയിൽ റൗണ്ടാനയിൽ ഇതിനകം ഉള്ള വാഹനങ്ങൾക്ക് വഴി കൊടുക്കുകയും ഇടതുവശം ചേർന്ന് പോവുകയും വേണം.",
+    "ரவுண்டானா",
+    "ஒரு மையத் தீவைச் சுற்றி ஒரு திசையில் போக்குவரத்து நகரும் வட்டச் சந்திப்பு. இந்தியாவில் நீங்கள் ஏற்கனவே ரவுண்டானாவில் போக்குவரத்திற்கு வழிவிட்டு இடதுபுறமாக செல்லுங்கள்."
+  ],
+  [
+    "Footpath",
+    "നടപ്പാത",
+    "The path at the side of a road meant for pedestrians. Vehicles must not drive or park on it.",
+    "കാൽനടക്കാർക്കായി റോഡരികിലുള്ള പാത. വാഹനങ്ങൾ ഇതിലൂടെ ഓടിക്കുകയോ ഇതിൽ പാർക്ക് ചെയ്യുകയോ ചെയ്യരുത്.",
+    "நடைபாதை",
+    "பாதசாரிகளுக்கான சாலையின் ஓரத்தில் உள்ள பாதை. அதில் வாகனங்கள் ஓட்டவோ, நிறுத்தவோ கூடாது."
+  ],
+  [
+    "Pedestrian",
+    "കാൽനടയാത്രക്കാരൻ",
+    "A person travelling on foot. Drivers should be especially careful with children, the elderly and persons with disabilities.",
+    "കാൽനടയായി സഞ്ചരിക്കുന്ന വ്യക്തി. കുട്ടികൾ, പ്രായമായവർ, ഭിന്നശേഷിക്കാർ എന്നിവരുടെ കാര്യത്തിൽ ഡ്രൈവർ പ്രത്യേകം ശ്രദ്ധിക്കണം.",
+    "பாதசாரி",
+    "காலில் பயணிக்கும் நபர். குறிப்பாக குழந்தைகள், முதியவர்கள் மற்றும் மாற்றுத்திறனாளிகளிடம் ஓட்டுநர்கள் கவனமாக இருக்க வேண்டும்."
+  ],
+  [
+    "Stop line",
+    "സ്റ്റോപ്പ് ലൈൻ",
+    "The white line across the road at a signal or junction behind which you must stop. Do not cross it on a red light.",
+    "സിഗ്നലിലോ ജംഗ്ഷനിലോ റോഡിന് കുറുകെയുള്ള വെളുത്ത വര; ഇതിന് പിന്നിലാണ് നിർത്തേണ്ടത്. ചുവപ്പ് ലൈറ്റിൽ ഇത് കടക്കരുത്.",
+    "ஸ்டாப் லைன்",
+    "சிக்னல் அல்லது சந்திப்பில் சாலையின் குறுக்கே நீங்கள் நிறுத்த வேண்டிய வெள்ளைக் கோடு. சிவப்பு விளக்கில் அதைக் கடக்க வேண்டாம்."
+  ],
+  [
+    "Lane marking",
+    "ലെയ്ൻ മാർക്കിങ്",
+    "Painted lines on the road that show lanes, where overtaking is allowed and where it is not. A solid line on your side means do not cross it to overtake.",
+    "ലെയ്നുകളും മറികടക്കാവുന്ന/പാടില്ലാത്ത സ്ഥലങ്ങളും കാണിക്കാൻ റോഡിൽ വരച്ച വരകൾ. നിങ്ങളുടെ വശത്ത് തുടർച്ചയായ വരയാണെങ്കിൽ മറികടക്കാൻ അത് കടക്കരുത്.",
+    "லேன் மார்க்கிங்",
+    "சாலையில் வர்ணம் பூசப்பட்ட கோடுகள் பாதைகள், முந்திச் செல்ல அனுமதிக்கப்படும் இடங்கள் மற்றும் இல்லை. உங்கள் பக்கத்தில் ஒரு திடமான கோடு என்பது முந்துவதற்கு அதைக் கடக்க வேண்டாம் என்பதாகும்."
+  ],
+  [
+    "Diversion",
+    "ഡൈവേർഷൻ",
+    "A temporary alternative route used when the normal road is blocked or under repair. Follow the diversion signs carefully.",
+    "സാധാരണ റോഡ് തടസ്സപ്പെടുകയോ പണി നടക്കുകയോ ചെയ്യുമ്പോൾ ഉപയോഗിക്കുന്ന താൽക്കാലിക ബദൽ വഴി. ഡൈവേർഷൻ ബോർഡുകൾ ശ്രദ്ധയോടെ പിന്തുടരുക.",
+    "திசைதிருப்பல்",
+    "சாதாரண சாலை தடைபட்டிருக்கும்போது அல்லது பழுதுபார்க்கப்படும்போது பயன்படுத்தப்படும் ஒரு தற்காலிக மாற்று வழி. திசைதிருப்பல் அறிகுறிகளை கவனமாக பின்பற்றவும்."
+  ],
+  [
+    "Hairpin bend",
+    "ഹെയർപിൻ ബെൻഡ്",
+    "A very sharp turn, common on ghat roads, that almost doubles back on itself. Slow down, keep left and do not overtake on it.",
+    "ഏതാണ്ട് തിരിച്ച് വളയുന്ന വളരെ മൂർച്ചയുള്ള വളവ്; ഘാട്ട് റോഡുകളിൽ സാധാരണം. വേഗം കുറയ്ക്കുക, ഇടത് ചേർന്ന് പോവുക, ഇവിടെ മറികടക്കരുത്.",
+    "ஹேர்பின் வளைவு",
+    "மிகவும் கூர்மையான திருப்பம், காட் சாலைகளில் பொதுவானது, அது கிட்டத்தட்ட இரட்டிப்பாகும். மெதுவாக, இடதுபுறமாக இருங்கள் மற்றும் அதை முந்த வேண்டாம்."
+  ],
+  [
+    "Ghat road",
+    "ഘാട്ട് റോഡ്",
+    "A winding mountain road with many bends and steep slopes, such as those in Wayanad or Munnar. Use a low gear downhill and give way to uphill traffic where required.",
+    "ധാരാളം വളവുകളും കുത്തനെയുള്ള ചരിവുകളുമുള്ള മലമ്പാത, വയനാട്, മൂന്നാർ പോലുള്ള ഇടങ്ങളിലേത്. ഇറക്കത്തിൽ താഴ്ന്ന ഗിയർ ഉപയോഗിക്കുകയും ആവശ്യമുള്ളിടത്ത് കയറ്റം കയറുന്ന വാഹനത്തിന് വഴി കൊടുക്കുകയും ചെയ്യുക.",
+    "காட் சாலை",
+    "வயநாடு அல்லது மூணாரில் உள்ளதைப் போன்ற பல வளைவுகள் மற்றும் செங்குத்தான சரிவுகளைக் கொண்ட வளைந்து செல்லும் மலைப்பாதை. கீழ்நோக்கி குறைந்த கியரைப் பயன்படுத்தவும், தேவைப்படும் இடங்களில் மேல்நோக்கி போக்குவரத்திற்கு வழிவிடவும்."
+  ],
+  [
+    "Handbrake",
+    "ഹാൻഡ്ബ്രേക്ക്",
+    "The brake lever, also called parking brake, that holds the vehicle still when parked. Always apply it when you park, especially on a slope.",
+    "വാഹനം പാർക്ക് ചെയ്യുമ്പോൾ നിശ്ചലമായി പിടിച്ചുനിർത്തുന്ന ബ്രേക്ക് ലിവർ (പാർക്കിങ് ബ്രേക്ക്). പാർക്ക് ചെയ്യുമ്പോൾ, പ്രത്യേകിച്ച് ചരിവിൽ, ഇത് എപ്പോഴും ഇടുക.",
+    "ஹேண்ட்பிரேக்",
+    "பார்க்கிங் பிரேக் என்றும் அழைக்கப்படும் பிரேக் லீவர், வாகனத்தை நிறுத்தும் போது அப்படியே வைத்திருக்கும். நீங்கள் நிறுத்தும்போது, ​​குறிப்பாக ஒரு சாய்வில் எப்போதும் அதைப் பயன்படுத்துங்கள்."
+  ],
+  [
+    "Neutral gear",
+    "ന്യൂട്രൽ ഗിയർ",
+    "The gear position where the engine is not connected to the wheels. Do not coast downhill in neutral, because you lose engine braking and control.",
+    "എൻജിൻ ചക്രങ്ങളുമായി ബന്ധിപ്പിക്കപ്പെടാത്ത ഗിയർ സ്ഥാനം. ഇറക്കത്തിൽ ന്യൂട്രലിൽ ഓടിക്കരുത്; എൻജിൻ ബ്രേക്കിങ്ങും നിയന്ത്രണവും നഷ്ടപ്പെടും.",
+    "நியூட்ரல் கியர்",
+    "இயந்திரம் சக்கரங்களுடன் இணைக்கப்படாத கியர் நிலை. நடுநிலையில் கீழ்நோக்கிச் செல்ல வேண்டாம், ஏனெனில் நீங்கள் என்ஜின் பிரேக்கிங் மற்றும் கட்டுப்பாட்டை இழக்கிறீர்கள்."
+  ],
+  [
+    "Stalling",
+    "സ്റ്റാളിങ്",
+    "When the engine suddenly stops because the clutch was released too fast or the gear was too high for the speed. Press the clutch, shift to neutral and restart.",
+    "ക്ലച്ച് വളരെ വേഗം വിടുകയോ വേഗത്തിന് യോജിക്കാത്ത ഉയർന്ന ഗിയറിൽ ഓടിക്കുകയോ ചെയ്യുമ്പോൾ എൻജിൻ പെട്ടെന്ന് ഓഫ് ആകുന്നത്. ക്ലച്ച് അമർത്തി ന്യൂട്രലിലാക്കി വീണ്ടും സ്റ്റാർട്ട് ചെയ്യുക.",
+    "ஸ்டாலிங்",
+    "கிளட்ச் மிக வேகமாக வெளியிடப்பட்டதால் அல்லது கியர் வேகத்திற்கு அதிகமாக இருந்ததால் என்ஜின் திடீரென நிற்கும் போது. கிளட்சை அழுத்தி, நடுநிலைக்கு மாற்றி மறுதொடக்கம் செய்யவும்."
+  ],
+  [
+    "Skid",
+    "സ്കിഡ്",
+    "When tyres lose grip and the vehicle slides out of control, often on wet, loose or oily surfaces. Ease off the accelerator and steer gently in the direction you want to go.",
+    "ടയറിന്റെ പിടി നഷ്ടപ്പെട്ട് വാഹനം നിയന്ത്രണമില്ലാതെ തെന്നുന്ന അവസ്ഥ; നനഞ്ഞ, അയഞ്ഞ, എണ്ണയുള്ള പ്രതലങ്ങളിൽ സാധാരണം. ആക്സിലറേറ്റർ കുറച്ച് പോകേണ്ട ദിശയിലേക്ക് മൃദുവായി സ്റ്റിയർ ചെയ്യുക.",
+    "ஸ்கிட்",
+    "டயர்கள் பிடியை இழந்து வாகனம் கட்டுப்பாட்டை மீறும் போது, ​​பெரும்பாலும் ஈரமான, தளர்வான அல்லது எண்ணெய் பரப்புகளில். முடுக்கியை அணைத்துவிட்டு, நீங்கள் செல்ல விரும்பும் திசையில் மெதுவாகச் செல்லவும்."
+  ],
+  [
+    "Tread",
+    "ട്രെഡ്",
+    "The grooved pattern on a tyre that grips the road and channels water away. Worn tread reduces grip, especially on wet roads.",
+    "റോഡിൽ പിടിക്കാനും വെള്ളം ഒഴുക്കിക്കളയാനും സഹായിക്കുന്ന ടയറിലെ ചാലുകളുടെ പാറ്റേൺ. ട്രെഡ് തേഞ്ഞാൽ, പ്രത്യേകിച്ച് നനഞ്ഞ റോഡിൽ, പിടി കുറയും.",
+    "நடை",
+    "டயரில் உள்ள பள்ளமான அமைப்பு, அது சாலையைப் பிடிக்கும் மற்றும் தண்ணீரை வெளியேற்றும். தேய்ந்த டிரெட் பிடியை குறைக்கிறது, குறிப்பாக ஈரமான சாலைகளில்."
+  ],
+  [
+    "Wheel alignment",
+    "വീൽ അലൈൻമെന്റ്",
+    "The correct angle setting of the wheels so the vehicle runs straight and tyres wear evenly. A car pulling to one side may need it checked.",
+    "വാഹനം നേരെ ഓടാനും ടയറുകൾ ഒരുപോലെ തേയാനും ചക്രങ്ങളുടെ ശരിയായ കോൺ ക്രമീകരണം. വാഹനം ഒരു വശത്തേക്ക് വലിയുന്നുവെങ്കിൽ ഇത് പരിശോധിക്കണം.",
+    "வீல் சீரமைப்பு",
+    "சக்கரங்களின் சரியான கோண அமைப்பு, வாகனம் நேராக இயங்கும் மற்றும் டயர்கள் சீராக தேய்ந்து போகும். ஒரு பக்கம் இழுக்கும் கார் அதைச் சரிபார்க்க வேண்டியிருக்கலாம்."
+  ],
+  [
+    "Dashboard warning light",
+    "ഡാഷ്ബോർഡ് വാണിങ് ലൈറ്റ്",
+    "A symbol on the instrument panel that tells you about a fault or a need such as low oil, low fuel or a door ajar. Do not ignore a red warning light; check the manual and stop safely if needed.",
+    "ഓയിൽ കുറവ്, ഇന്ധനം കുറവ്, വാതിൽ തുറന്നിരിക്കുക തുടങ്ങിയ തകരാറോ ആവശ്യമോ അറിയിക്കുന്ന ഇൻസ്ട്രുമെന്റ് പാനലിലെ ചിഹ്നം. ചുവപ്പ് ലൈറ്റ് അവഗണിക്കരുത്; മാനുവൽ നോക്കുകയും ആവശ്യമെങ്കിൽ സുരക്ഷിതമായി നിർത്തുകയും ചെയ്യുക.",
+    "டாஷ்போர்டு எச்சரிக்கை விளக்கு",
+    "இன்ஸ்ட்ரூமென்ட் பேனலில் உள்ள ஒரு சின்னம், ஒரு தவறு அல்லது குறைந்த எண்ணெய், குறைந்த எரிபொருள் அல்லது கதவைத் திறப்பது போன்ற தேவைகளைப் பற்றி உங்களுக்குச் சொல்லும். சிவப்பு எச்சரிக்கை விளக்கை புறக்கணிக்காதீர்கள்; கையேட்டை சரிபார்த்து, தேவைப்பட்டால் பாதுகாப்பாக நிறுத்தவும்."
+  ],
+  [
+    "Seat belt",
+    "സീറ്റ് ബെൽറ്റ്",
+    "The strap that holds you in your seat in a crash or hard braking. Wear it correctly across the chest and hips, and make sure passengers do too.",
+    "കൂട്ടിയിടിയിലോ ശക്തമായ ബ്രേക്കിങ്ങിലോ നിങ്ങളെ സീറ്റിൽ പിടിച്ചുനിർത്തുന്ന ബെൽറ്റ്. നെഞ്ചിനും ഇടുപ്പിനും കുറുകെ ശരിയായി ധരിക്കുക; യാത്രക്കാരും ധരിക്കുന്നെന്ന് ഉറപ്പാക്കുക.",
+    "சீட் பெல்ட்",
+    "விபத்து அல்லது கடினமான பிரேக்கிங்கில் உங்களை இருக்கையில் வைத்திருக்கும் பட்டா. மார்பு மற்றும் இடுப்பு முழுவதும் சரியாக அணிந்து, பயணிகளும் அணிவதை உறுதிப்படுத்தவும்."
+  ],
+  [
+    "Helmet (ISI)",
+    "ഹെൽമറ്റ് (ഐഎസ്ഐ)",
+    "A protective head covering for two-wheeler riders and pillion riders. Choose one that meets the recognised standard, fits snugly and has the strap fastened.",
+    "ടൂവീലർ യാത്രക്കാർക്കും പില്ല്യൺ യാത്രക്കാർക്കും തലയ്ക്ക് സംരക്ഷണം നൽകുന്ന കവചം. അംഗീകൃത നിലവാരമുള്ളതും ശരിയായി ഇണങ്ങുന്നതും ചരട് മുറുക്കി ധരിക്കാവുന്നതുമായത് തിരഞ്ഞെടുക്കുക.",
+    "ஹெல்மெட் (ISI)",
+    "இரு சக்கர வாகன ஓட்டிகள் மற்றும் பிலியன் ரைடர்களுக்கு ஒரு பாதுகாப்பு தலை உறை. அங்கீகரிக்கப்பட்ட தரநிலையைச் சந்திக்கும், இறுக்கமாகப் பொருந்தக்கூடிய மற்றும் கட்டப்பட்ட பட்டாவைத் தேர்ந்தெடுக்கவும்."
+  ],
+  [
+    "Drink driving",
+    "ഡ്രിങ്ക് ഡ്രൈവിങ്",
+    "Driving after drinking alcohol. It slows reaction, blurs judgement and is an offence, so never mix drink and driving.",
+    "മദ്യപിച്ച ശേഷം വാഹനം ഓടിക്കൽ. ഇത് പ്രതികരണം മന്ദഗതിയിലാക്കുകയും വിവേചനം മങ്ങിക്കുകയും ചെയ്യുന്നു, നിയമലംഘനവുമാണ്; മദ്യവും ഡ്രൈവിങ്ങും ഒരിക്കലും ഒന്നിച്ച് പാടില്ല.",
+    "குடித்துவிட்டு வாகனம் ஓட்டுதல்",
+    "மது அருந்திவிட்டு வாகனம் ஓட்டுதல். இது எதிர்வினையை குறைக்கிறது, தீர்ப்பை மங்கலாக்குகிறது மற்றும் ஒரு குற்றமாகும், எனவே குடித்துவிட்டு வாகனம் ஓட்ட வேண்டாம்."
+  ],
+  [
+    "Good Samaritan",
+    "ഗുഡ് സമരിറ്റൻ",
+    "A person who helps a road accident victim in good faith. The law protects such helpers from harassment, so help and call emergency services without fear.",
+    "നല്ല ഉദ്ദേശ്യത്തോടെ റോഡപകടത്തിൽപ്പെട്ടയാളെ സഹായിക്കുന്ന വ്യക്തി. ഇത്തരക്കാരെ ഉപദ്രവങ്ങളിൽ നിന്ന് നിയമം സംരക്ഷിക്കുന്നു; ഭയമില്ലാതെ സഹായിക്കുകയും എമർജൻസി സേവനങ്ങളെ വിളിക്കുകയും ചെയ്യുക.",
+    "நல்ல சமாரியன்",
+    "சாலை விபத்தில் பாதிக்கப்பட்டவருக்கு நல்ல நம்பிக்கையுடன் உதவுபவர். அத்தகைய உதவியாளர்களை துன்புறுத்தலில் இருந்து சட்டம் பாதுகாக்கிறது, எனவே பயமின்றி அவசர சேவைகளுக்கு உதவுங்கள் மற்றும் அழைக்கவும்."
+  ],
+  [
+    "Golden hour",
+    "ഗോൾഡൻ അവർ",
+    "The first hour after a serious injury, when quick medical care gives the best chance of saving life. Call for an ambulance without delay.",
+    "ഗുരുതരമായ പരിക്കിന് ശേഷമുള്ള ആദ്യ മണിക്കൂർ; വേഗത്തിലുള്ള ചികിത്സ ജീവൻ രക്ഷിക്കാൻ ഏറ്റവും സഹായിക്കുന്ന സമയം. ഉടൻ ആംബുലൻസ് വിളിക്കുക.",
+    "கோல்டன் ஹவர்",
+    "கடுமையான காயத்திற்குப் பிறகு முதல் மணிநேரம், விரைவான மருத்துவ சிகிச்சையானது உயிரைக் காப்பாற்றுவதற்கான சிறந்த வாய்ப்பை அளிக்கிறது. தாமதிக்காமல் ஆம்புலன்ஸை அழைக்கவும்."
+  ],
+  [
+    "One-way street",
+    "വൺവേ റോഡ്",
+    "A road where vehicles may travel in only one direction. Entering it from the wrong end is an offence and very dangerous.",
+    "വാഹനങ്ങൾ ഒരു ദിശയിൽ മാത്രം പോകാവുന്ന റോഡ്. തെറ്റായ അറ്റത്ത് നിന്ന് കയറുന്നത് നിയമലംഘനവും വളരെ അപകടകരവുമാണ്.",
+    "ஒருவழித் தெரு",
+    "வாகனங்கள் ஒரு திசையில் மட்டுமே செல்லக்கூடிய சாலை. தவறான முடிவில் இருந்து நுழைவது ஒரு குற்றம் மற்றும் மிகவும் ஆபத்தானது."
+  ],
+  [
+    "U-turn",
+    "യു-ടേൺ",
+    "Turning your vehicle around to go back the way you came. Do it only where it is permitted and the road is clear in both directions.",
+    "വന്ന ദിശയിലേക്ക് തിരിച്ചുപോകാൻ വാഹനം തിരിക്കുന്നത്. അനുവദനീയമായ, ഇരുദിശയിലും വ്യക്തമായ സ്ഥലത്ത് മാത്രം ചെയ്യുക.",
+    "யு-டர்ன்",
+    "நீங்கள் வந்த வழியில் திரும்பிச் செல்ல உங்கள் வாகனத்தைத் திருப்புதல். இரண்டு திசைகளிலும் சாலை தெளிவாக இருக்கும் இடத்தில் மட்டுமே அதைச் செய்யுங்கள்."
+  ],
+  [
+    "Parivahan / mParivahan",
+    "പരിവാഹൻ / എംപരിവാഹൻ",
+    "The government portal and mobile app for transport services, where you can view vehicle and licence details and use many RTO services online. Use only the official site or app.",
+    "വാഹന, ലൈസൻസ് വിവരങ്ങൾ കാണാനും പല ആർടിഒ സേവനങ്ങളും ഓൺലൈനിൽ ഉപയോഗിക്കാനുമുള്ള സർക്കാർ പോർട്ടലും മൊബൈൽ ആപ്പും. ഔദ്യോഗിക സൈറ്റോ ആപ്പോ മാത്രം ഉപയോഗിക്കുക.",
+    "பரிவஹன் / mParivahan",
+    "போக்குவரத்து சேவைகளுக்கான அரசாங்க போர்டல் மற்றும் மொபைல் பயன்பாடு, நீங்கள் வாகனம் மற்றும் உரிம விவரங்களைப் பார்க்கலாம் மற்றும் ஆன்லைனில் பல RTO சேவைகளைப் பயன்படுத்தலாம். அதிகாரப்பூர்வ தளம் அல்லது பயன்பாட்டை மட்டும் பயன்படுத்தவும்."
+  ],
+  [
+    "DigiLocker",
+    "ഡിജിലോക്കർ",
+    "A government digital locker where you can keep electronic copies of documents such as licence and RC. Such digital copies are accepted as valid documents.",
+    "ലൈസൻസ്, ആർസി പോലുള്ള രേഖകളുടെ ഇലക്ട്രോണിക് പകർപ്പുകൾ സൂക്ഷിക്കാവുന്ന സർക്കാർ ഡിജിറ്റൽ ലോക്കർ. ഇത്തരം ഡിജിറ്റൽ പകർപ്പുകൾ സാധുവായ രേഖകളായി സ്വീകരിക്കും.",
+    "டிஜிலாக்கர்",
+    "உரிமம் மற்றும் RC போன்ற ஆவணங்களின் மின்னணு நகல்களை நீங்கள் வைத்திருக்கக்கூடிய அரசாங்க டிஜிட்டல் லாக்கர். அத்தகைய டிஜிட்டல் பிரதிகள் சரியான ஆவணங்களாக ஏற்றுக்கொள்ளப்படுகின்றன."
+  ],
+  [
+    "Warning triangle",
+    "വാണിങ് ട്രയാംഗിൾ",
+    "A reflective triangle placed behind a broken-down vehicle to warn approaching drivers. Place it at a sensible distance back, in good time for others to react.",
+    "ബ്രേക്ക്ഡൗൺ ആയ വാഹനത്തിന് പിന്നിൽ വരുന്ന ഡ്രൈവർമാർക്ക് മുന്നറിയിപ്പ് നൽകാൻ വയ്ക്കുന്ന പ്രതിഫലിക്കുന്ന ത്രികോണം. മറ്റുള്ളവർക്ക് പ്രതികരിക്കാൻ സമയം കിട്ടുംവിധം പിന്നിലായി വയ്ക്കുക.",
+    "எச்சரிக்கை முக்கோணம்",
+    "எதிரே வரும் ஓட்டுனர்களை எச்சரிப்பதற்காக உடைந்த வாகனத்தின் பின்னால் வைக்கப்பட்ட பிரதிபலிப்பு முக்கோணம். மற்றவர்கள் எதிர்வினையாற்றுவதற்கு நல்ல நேரத்தில், விவேகமான தூரத்தில் அதை வைக்கவும்."
+  ],
+  [
+    "Slip road",
+    "സ്ലിപ് റോഡ്",
+    "A short road used to enter or leave a main road or highway. Match your speed to the traffic and give way to vehicles already on the main road when joining.",
+    "പ്രധാന റോഡിലേക്കോ ഹൈവേയിലേക്കോ കയറാനോ ഇറങ്ങാനോ ഉള്ള ചെറിയ റോഡ്. കയറുമ്പോൾ ഗതാഗതത്തിനൊപ്പം വേഗം ക്രമീകരിക്കുകയും പ്രധാന റോഡിലെ വാഹനങ്ങൾക്ക് വഴി കൊടുക്കുകയും ചെയ്യുക.",
+    "ஸ்லிப் ரோடு",
+    "ஒரு முக்கிய சாலை அல்லது நெடுஞ்சாலையில் நுழைய அல்லது வெளியேற பயன்படும் ஒரு குறுகிய சாலை. உங்கள் வேகத்தை போக்குவரத்துடன் பொருத்தி, சேரும் போது ஏற்கனவே பிரதான சாலையில் இருக்கும் வாகனங்களுக்கு வழி கொடுங்கள்."
+  ],
+  [
+    "Traffic island",
+    "ട്രാഫിക് ഐലൻഡ്",
+    "A raised or painted area in the road that guides traffic and gives pedestrians a place to wait. Do not drive over it.",
+    "ഗതാഗതത്തെ നയിക്കാനും കാൽനടക്കാർക്ക് കാത്തുനിൽക്കാനും റോഡിൽ ഉയർത്തിയോ വരച്ചോ ഉണ്ടാക്കിയ ഭാഗം. ഇതിന് മുകളിലൂടെ ഓടിക്കരുത്.",
+    "ட்ராஃபிக் தீவு",
+    "சாலையில் உயரமான அல்லது வர்ணம் பூசப்பட்ட பகுதி, போக்குவரத்தை வழிநடத்துகிறது மற்றும் பாதசாரிகள் காத்திருக்க ஒரு இடத்தை வழங்குகிறது. அதற்கு மேல் ஓட்ட வேண்டாம்."
+  ],
+  [
+    "Learner (L) plate",
+    "എൽ പ്ലേറ്റ്",
+    "A sign with the letter L shown on a vehicle driven by a learner to warn other road users. Other drivers should give such a vehicle extra space.",
+    "പഠിതാവ് ഓടിക്കുന്ന വാഹനത്തിൽ മറ്റുള്ളവരെ അറിയിക്കാൻ പ്രദർശിപ്പിക്കുന്ന എൽ അക്ഷരമുള്ള ചിഹ്നം. മറ്റ് ഡ്രൈവർമാർ ഇത്തരം വാഹനത്തിന് കൂടുതൽ സ്ഥലം നൽകണം.",
+    "கற்றவர் (எல்) தட்டு",
+    "மற்ற சாலைப் பயனாளர்களை எச்சரிப்பதற்காக ஒரு கற்றவர் ஓட்டும் வாகனத்தில் எல் என்ற எழுத்தைக் கொண்ட அடையாளம். மற்ற ஓட்டுனர்கள் அத்தகைய வாகனத்திற்கு கூடுதல் இடம் கொடுக்க வேண்டும்."
+  ]
 ]

@@ -1,312 +1,378 @@
 {
- "intro": [
-  "A junction is where paths cross, so it is where most conflicts happen. Right of way is not a prize you win; it is an agreement that tells everyone who goes first so that nobody has to guess. This article explains the principles behind the rules, so you can handle roundabouts, T-junctions, signals and unmarked crossings calmly.",
-  "രണ്ടോ അതിലധികമോ വഴികൾ കൂടിച്ചേരുന്ന ഇടമാണ് ജംഗ്ഷൻ; അതുകൊണ്ടുതന്നെ ഏറ്റവുമധികം കൂട്ടിയിടി സാധ്യതയും ഇവിടെയാണ്. മുൻഗണന എന്നത് ജയിച്ചെടുക്കേണ്ട ഒന്നല്ല; ആരാണ് ആദ്യം പോകേണ്ടത് എന്ന് ആർക്കും ഊഹിക്കേണ്ടി വരാതിരിക്കാനുള്ള ഒരു ധാരണയാണ്. റൗണ്ടെബൗട്ട്, ടി-ജംഗ്ഷൻ, സിഗ്നൽ, അടയാളമില്ലാത്ത ക്രോസിങ് എന്നിവ ശാന്തമായി കൈകാര്യം ചെയ്യാൻ നിയമങ്ങൾക്കു പിന്നിലെ തത്ത്വങ്ങൾ ഈ ലേഖനം വിശദീകരിക്കുന്നു."
- ],
- "sections": [
-  {
-   "h": [
-    "The idea behind right of way",
-    "മുൻഗണനയുടെ അടിസ്ഥാന ആശയം"
-   ],
-   "p": [
+  "intro": [
+    "A junction is where paths cross, so it is where most conflicts happen. Right of way is not a prize you win; it is an agreement that tells everyone who goes first so that nobody has to guess. This article explains the principles behind the rules, so you can handle roundabouts, T-junctions, signals and unmarked crossings calmly.",
+    "രണ്ടോ അതിലധികമോ വഴികൾ കൂടിച്ചേരുന്ന ഇടമാണ് ജംഗ്ഷൻ; അതുകൊണ്ടുതന്നെ ഏറ്റവുമധികം കൂട്ടിയിടി സാധ്യതയും ഇവിടെയാണ്. മുൻഗണന എന്നത് ജയിച്ചെടുക്കേണ്ട ഒന്നല്ല; ആരാണ് ആദ്യം പോകേണ്ടത് എന്ന് ആർക്കും ഊഹിക്കേണ്ടി വരാതിരിക്കാനുള്ള ഒരു ധാരണയാണ്. റൗണ്ടെബൗട്ട്, ടി-ജംഗ്ഷൻ, സിഗ്നൽ, അടയാളമില്ലാത്ത ക്രോസിങ് എന്നിവ ശാന്തമായി കൈകാര്യം ചെയ്യാൻ നിയമങ്ങൾക്കു പിന്നിലെ തത്ത്വങ്ങൾ ഈ ലേഖനം വിശദീകരിക്കുന്നു.",
+    "ஒரு சந்திப்பு என்பது பாதைகள் கடக்கும் இடமாகும், எனவே இங்குதான் பெரும்பாலான மோதல்கள் நிகழ்கின்றன. வழியின் உரிமை என்பது நீங்கள் வெல்லும் பரிசு அல்ல; யாரும் யூகிக்காதபடி முதலில் செல்லும் அனைவருக்கும் சொல்லும் ஒப்பந்தம் இது. இந்தக் கட்டுரை விதிகளுக்குப் பின்னால் உள்ள கொள்கைகளை விளக்குகிறது, எனவே நீங்கள் ரவுண்டானாக்கள், டி-சந்திகள், சிக்னல்கள் மற்றும் குறிக்கப்படாத கிராசிங்குகளை அமைதியாகக் கையாளலாம்."
+  ],
+  "sections": [
+    {
+      "h": [
+        "The idea behind right of way",
+        "മുൻഗണനയുടെ അടിസ്ഥാന ആശയം",
+        "சரியான வழிக்கு பின்னால் உள்ள யோசனை"
+      ],
+      "p": [
+        [
+          "Right of way means that one driver is expected to go first and the other is expected to give way. It exists because two vehicles cannot occupy the same space, and a fixed rule is faster and safer than negotiating with eye contact.",
+          "ഒരാൾ ആദ്യം പോകണം, മറ്റേയാൾ വഴി കൊടുക്കണം എന്നതാണ് മുൻഗണനയുടെ അർഥം. രണ്ടു വാഹനങ്ങൾക്ക് ഒരേ സ്ഥലത്ത് ഒരേസമയം ഇരിക്കാനാവില്ല; കണ്ണിൽ നോക്കി ഒത്തുതീർപ്പാക്കുന്നതിനേക്കാൾ വേഗവും സുരക്ഷിതവും ഉറപ്പുള്ള ഒരു നിയമമാണ്.",
+          "சரியான பாதை என்பது ஒரு ஓட்டுனர் முதலில் செல்வார் என்றும் மற்றவர் வழி கொடுப்பார் என்றும் எதிர்பார்க்கப்படுகிறது. இரண்டு வாகனங்கள் ஒரே இடத்தை ஆக்கிரமிக்க முடியாது என்பதால் இது உள்ளது, மேலும் ஒரு நிலையான விதி கண் தொடர்புடன் பேச்சுவார்த்தை நடத்துவதை விட வேகமானது மற்றும் பாதுகாப்பானது."
+        ],
+        [
+          "Having right of way never switches off your duty to look. If the other driver does not give way, the sensible thing is to slow down and let them pass rather than prove a point. The aim is to arrive, not to be right.",
+          "മുൻഗണന ഉണ്ടെന്നു കരുതി ചുറ്റും നോക്കേണ്ട കടമ ഇല്ലാതാകുന്നില്ല. മറ്റേ ഡ്രൈവർ വഴി തരുന്നില്ലെങ്കിൽ ശരി തെളിയിക്കാൻ നിൽക്കാതെ വേഗം കുറച്ച് അവരെ കടത്തിവിടുന്നതാണ് വിവേകം. ലക്ഷ്യം ശരിയാകലല്ല, സുരക്ഷിതമായി എത്തലാണ്.",
+          "சரியான வழியைக் கொண்டிருப்பது, பார்ப்பதற்கான உங்கள் கடமையை ஒருபோதும் முடக்காது. மற்ற ஓட்டுனர் வழி கொடுக்கவில்லை என்றால், ஒரு புள்ளியை நிரூபிப்பதை விட, வேகத்தைக் குறைத்து, அவர்களைக் கடந்து செல்வதே விவேகமான விஷயம். வருவதே குறிக்கோள், சரியாக இருக்கக்கூடாது."
+        ],
+        [
+          "Priority usually follows a simple order: a police officer or signal first, then signs and markings, then the general rules of the road. When they disagree, the higher one in this list wins.",
+          "സാധാരണ ക്രമം ഇതാണ്: ആദ്യം പോലീസുകാരന്റെ നിർദേശമോ സിഗ്നലോ, പിന്നെ ചിഹ്നങ്ങളും റോഡ് അടയാളങ്ങളും, അതിനുശേഷം പൊതുവായ റോഡ് നിയമങ്ങൾ. ഇവ തമ്മിൽ വ്യത്യാസം വന്നാൽ പട്ടികയിൽ മുകളിലുള്ളതാണ് ബാധകം.",
+          "முன்னுரிமை பொதுவாக ஒரு எளிய வரிசையைப் பின்பற்றுகிறது: முதலில் ஒரு போலீஸ் அதிகாரி அல்லது சிக்னல், பின்னர் அடையாளங்கள் மற்றும் அடையாளங்கள், பின்னர் சாலையின் பொதுவான விதிகள். அவர்கள் உடன்படாதபோது, ​​இந்தப் பட்டியலில் உயர்ந்தவர் வெற்றி பெறுவார்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Uncontrolled junctions and T-junctions",
+        "നിയന്ത്രണമില്ലാത്ത ജംഗ്ഷനും ടി-ജംഗ്ഷനും",
+        "கட்டுப்பாடற்ற சந்திப்புகள் மற்றும் டி-சந்திகள்"
+      ],
+      "p": [
+        [
+          "At a junction with no signal and no police officer, approach slowly and be ready to stop. Look right, left and right again, because many Kerala junctions have bends, walls or parked vehicles that hide approaching traffic.",
+          "സിഗ്നലോ പോലീസുകാരനോ ഇല്ലാത്ത ജംഗ്ഷനിൽ പതുക്കെ അടുക്കുകയും നിർത്താൻ തയ്യാറായിരിക്കുകയും ചെയ്യുക. വലത്, ഇടത്, വീണ്ടും വലത് എന്നിങ്ങനെ നോക്കുക; കേരളത്തിലെ പല ജംഗ്ഷനുകളിലും വളവുകളും മതിലുകളും പാർക്ക് ചെയ്ത വാഹനങ്ങളും കാഴ്ച മറയ്ക്കാറുണ്ട്.",
+          "சிக்னல் மற்றும் போலீஸ் அதிகாரி இல்லாத சந்திப்பில், மெதுவாக அணுகி நிறுத்த தயாராக இருங்கள். வலப்புறம், இடப்புறம், வலதுபுறம் என்று மீண்டும் பார்க்கவும், ஏனென்றால் பல கேரள சந்திப்புகளில் வளைவுகள், சுவர்கள் அல்லது நிறுத்தப்பட்ட வாகனங்கள் உள்ளன."
+        ],
+        [
+          "The general principle is that traffic on the main road goes first and traffic joining from a minor road gives way. Give Way signs and broken lines at the stop line tell you that you are on the minor road.",
+          "പ്രധാന റോഡിലെ വാഹനങ്ങൾക്കാണ് ആദ്യം പോകാനുള്ള അവകാശം; ചെറിയ റോഡിൽ നിന്ന് വരുന്നവർ വഴി കൊടുക്കണം എന്നതാണ് പൊതുതത്ത്വം. ഗിവ് വേ ചിഹ്നവും സ്റ്റോപ്പ് ലൈനിലെ മുറിഞ്ഞ വരയും നിങ്ങൾ ചെറിയ റോഡിലാണെന്ന് സൂചിപ്പിക്കുന്നു.",
+          "பொதுவான கொள்கை என்னவென்றால், பிரதான சாலையில் போக்குவரத்து முதலில் செல்கிறது மற்றும் ஒரு சிறிய சாலையில் இருந்து சேரும் போக்குவரத்து வழி கொடுக்கிறது. ஸ்டாப் லைனில் உள்ள வழி அடையாளங்கள் மற்றும் உடைந்த கோடுகள் நீங்கள் சிறிய சாலையில் இருக்கிறீர்கள் என்று தெரிவிக்கின்றன."
+        ],
+        [
+          "At a T-junction the road that continues straight is normally the main road, and the vehicle coming out of the stem of the T gives way. When roads look equal, slow down and follow the rule taught in the Rules of the Road Regulations, which is to give way to traffic from your right; check the latest rule with your RTO.",
+          "ടി-ജംഗ്ഷനിൽ നേരെ തുടരുന്ന റോഡാണ് സാധാരണ പ്രധാന റോഡ്; ടി-യുടെ താഴത്തെ കമ്പിൽ നിന്ന് വരുന്ന വാഹനം വഴി കൊടുക്കണം. രണ്ടു റോഡുകളും ഒരുപോലെ തോന്നുമ്പോൾ വേഗം കുറച്ച്, റോഡ് നിയമങ്ങളിൽ പഠിപ്പിക്കുന്ന പ്രകാരം വലതുവശത്തുനിന്ന് വരുന്ന വാഹനത്തിന് വഴി കൊടുക്കുക; ഏറ്റവും പുതിയ നിയമം RTO യിൽ ഉറപ്പാക്കുക.",
+          "T-சந்தியில் நேராகத் தொடரும் சாலை பொதுவாக பிரதான சாலையாகும், மேலும் T இன் தண்டிலிருந்து வெளியே வரும் வாகனம் வழி கொடுக்கிறது. சாலைகள் சமமாக இருக்கும் போது, ​​வேகத்தைக் குறைத்து, சாலை விதிகளின் விதிகளில் கற்பிக்கப்பட்டுள்ள விதியைப் பின்பற்றுங்கள், இது உங்கள் வலதுபுறத்தில் இருந்து போக்குவரத்திற்கு வழி வகுக்கும்; உங்கள் RTO உடன் சமீபத்திய விதியை சரிபார்க்கவும்."
+        ],
+        [
+          "When you turn right, you cross the path of oncoming vehicles, so wait for a safe gap and give way to traffic coming straight. Cutting the corner or turning early is a common cause of head-on and side collisions.",
+          "വലത്തോട്ട് തിരിയുമ്പോൾ എതിരെ വരുന്ന വാഹനങ്ങളുടെ പാത മുറിച്ചുകടക്കേണ്ടി വരുന്നു; അതിനാൽ സുരക്ഷിതമായ വിടവിനായി കാത്തിരിക്കുകയും നേരെ വരുന്നവർക്ക് വഴി കൊടുക്കുകയും ചെയ്യുക. വളവ് മുറിച്ച് നേരത്തേ തിരിയുന്നത് നേർക്കുനേർ കൂട്ടിയിടിക്കും വശത്തുനിന്നുള്ള ഇടിക്കും സാധാരണ കാരണമാണ്.",
+          "நீங்கள் வலதுபுறம் திரும்பும்போது, ​​எதிரே வரும் வாகனங்களின் பாதையைக் கடக்கிறீர்கள், எனவே பாதுகாப்பான இடைவெளிக்காகக் காத்திருந்து நேராக வரும் போக்குவரத்திற்கு வழிவிடுங்கள். மூலையை வெட்டுவது அல்லது சீக்கிரம் திரும்புவது தலை மற்றும் பக்க மோதல்களுக்கு ஒரு பொதுவான காரணமாகும்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Roundabouts",
+        "റൗണ്ടെബൗട്ടുകൾ",
+        "ரவுண்டானாக்கள்"
+      ],
+      "p": [
+        [
+          "In India traffic goes round a roundabout clockwise, keeping the island on your left. The Roundabout Ahead sign and the Give Way line tell you to give way to vehicles already on the roundabout.",
+          "ഇന്ത്യയിൽ റൗണ്ടെബൗട്ടിൽ വാഹനങ്ങൾ ഘടികാരദിശയിൽ, ഐലൻഡ് ഇടതുവശത്തു വരുംവിധം സഞ്ചരിക്കുന്നു. റൗണ്ടെബൗട്ട് ചിഹ്നവും ഗിവ് വേ ലൈനും സൂചിപ്പിക്കുന്നത്, ഉള്ളിൽ ഇതിനകം ഉള്ള വാഹനങ്ങൾക്ക് വഴി കൊടുക്കണം എന്നാണ്.",
+          "இந்தியாவில் உங்கள் இடதுபுறத்தில் தீவை வைத்துக்கொண்டு, கடிகார திசையில் ஒரு ரவுண்டானா சுற்றி வருகிறது. ரவுண்டானாவுக்கு முன்னால் உள்ள போர்டு மற்றும் கிவ் வே லைன் ஆகியவை ஏற்கனவே ரவுண்டானாவில் உள்ள வாகனங்களுக்கு வழி கொடுக்கச் சொல்கிறது."
+        ],
+        [
+          "Why give way to those already inside? Because they are committed to the circle and cannot stop easily. Entering only when there is a gap keeps the circle moving; forcing in makes everyone stop and blocks all arms of the junction.",
+          "ഉള്ളിലുള്ളവർക്ക് വഴി കൊടുക്കുന്നത് എന്തിന്? അവർ വൃത്തത്തിനുള്ളിൽ കടന്നുകഴിഞ്ഞു, എളുപ്പം നിർത്താനാകില്ല. വിടവ് കണ്ടാൽ മാത്രം കയറിയാൽ വൃത്തം തടസ്സമില്ലാതെ നീങ്ങും; തള്ളിക്കയറിയാൽ എല്ലാവരും നിൽക്കുകയും ജംഗ്ഷന്റെ എല്ലാ വശങ്ങളും കുരുങ്ങുകയും ചെയ്യും.",
+          "ஏற்கனவே உள்ளே இருப்பவர்களுக்கு ஏன் வழி கொடுக்க வேண்டும்? ஏனென்றால் அவர்கள் வட்டத்தில் உறுதியாக இருக்கிறார்கள் மற்றும் எளிதில் நிறுத்த முடியாது. இடைவெளி இருக்கும்போது மட்டும் உள்ளே நுழைவது வட்டத்தை நகர்த்துகிறது; வலுக்கட்டாயமாக உள்ளே நுழைவது அனைவரையும் நிறுத்துகிறது மற்றும் சந்திப்பின் அனைத்து கைகளையும் தடுக்கிறது."
+        ],
+        [
+          "Choose your lane early. For a left exit stay on the left, and signal left before your exit. For going further round, keep to the lane that suits your exit and do not cut across other lanes at the last moment.",
+          "നേരത്തേ ലെയ്ൻ തിരഞ്ഞെടുക്കുക. ഇടത്തേക്കുള്ള എക്സിറ്റിന് ഇടതുവശത്തു തുടരുക, എക്സിറ്റിനു തൊട്ടുമുമ്പ് ഇടത് സിഗ്നൽ നൽകുക. കൂടുതൽ ചുറ്റാനുണ്ടെങ്കിൽ നിങ്ങളുടെ എക്സിറ്റിന് ചേരുന്ന ലെയ്നിൽ തുടരുക; അവസാന നിമിഷം മറ്റു ലെയ്നുകൾ മുറിച്ചുകടക്കരുത്.",
+          "உங்கள் பாதையை முன்கூட்டியே தேர்வு செய்யவும். இடதுபுறம் வெளியேறுவதற்கு, இடதுபுறம் இருக்கவும், வெளியேறும் முன் இடதுபுறம் சமிக்ஞை செய்யவும். மேலும் சுற்றிச் செல்ல, நீங்கள் வெளியேறுவதற்கு ஏற்ற பாதையில் செல்லவும், கடைசி நேரத்தில் மற்ற பாதைகளை வெட்ட வேண்டாம்."
+        ],
+        [
+          "Watch two-wheelers and autos, which can appear beside you in your blind spot. Move at a steady, slow pace and never stop inside the circle unless traffic forces you.",
+          "നിങ്ങളുടെ ബ്ലൈൻഡ് സ്പോട്ടിൽ വശത്തുകൂടി വരുന്ന ഇരുചക്രവാഹനങ്ങളെയും ഓട്ടോകളെയും ശ്രദ്ധിക്കുക. സ്ഥിരമായ പതുക്കെയുള്ള വേഗത്തിൽ നീങ്ങുക; തടസ്സം നിർബന്ധിച്ചാലല്ലാതെ വൃത്തത്തിനുള്ളിൽ നിർത്തരുത്.",
+          "இரு சக்கர வாகனங்கள் மற்றும் ஆட்டோக்களைப் பார்க்கவும், அவை உங்கள் கண்மூடித்தனமான இடத்தில் உங்களுக்கு அருகில் தோன்றும். ஒரு நிலையான, மெதுவான வேகத்தில் நகரவும், போக்குவரத்து உங்களை கட்டாயப்படுத்தும் வரை, வட்டத்திற்குள் ஒருபோதும் நிறுத்த வேண்டாம்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Traffic lights and police signals",
+        "ട്രാഫിക് ലൈറ്റുകളും പോലീസ് സിഗ്നലുകളും",
+        "போக்குவரத்து விளக்குகள் மற்றும் போலீஸ் சிக்னல்கள்"
+      ],
+      "p": [
+        [
+          "Red means stop behind the stop line. Amber means the signal is about to turn red: stop if you can do so safely, and do not speed up to beat it. Green means go, but only if the junction ahead is clear.",
+          "ചുവപ്പ് എന്നാൽ സ്റ്റോപ്പ് ലൈനിനു പിന്നിൽ നിർത്തുക. മഞ്ഞ എന്നാൽ സിഗ്നൽ ചുവപ്പാകാൻ പോകുന്നു; സുരക്ഷിതമായി നിർത്താൻ കഴിയുമെങ്കിൽ നിർത്തുക, കടന്നുപോകാൻ വേഗം കൂട്ടരുത്. പച്ച എന്നാൽ പോകാം, പക്ഷേ മുന്നിലെ ജംഗ്ഷൻ ഒഴിഞ്ഞിട്ടുണ്ടെങ്കിൽ മാത്രം.",
+          "சிவப்பு என்பது நிறுத்தக் கோட்டின் பின்னால் நிறுத்துவதைக் குறிக்கிறது. அம்பர் என்றால் சிக்னல் சிவப்பு நிறமாக மாறப்போகிறது: உங்களால் பாதுகாப்பாகச் செய்ய முடிந்தால் நிறுத்துங்கள், அதை முறியடிக்க வேகத்தை அதிகரிக்காதீர்கள். பச்சை என்றால் செல், ஆனால் முன்னால் இருக்கும் சந்திப்பு தெளிவாக இருந்தால் மட்டுமே."
+        ],
+        [
+          "Do not enter a junction if you cannot clear it, even on green. Blocking the box leaves cross traffic stuck when their turn comes and builds the very jam you wanted to avoid.",
+          "ജംഗ്ഷൻ കടന്നുപോകാൻ കഴിയില്ലെന്നുണ്ടെങ്കിൽ പച്ചയാണെങ്കിലും കയറരുത്. ജംഗ്ഷനിൽ കുരുങ്ങിക്കിടന്നാൽ മറ്റു ദിശകളിലെ വാഹനങ്ങളുടെ ഊഴം വരുമ്പോൾ അവർ കുടുങ്ങും; നിങ്ങൾ ഒഴിവാക്കാൻ ശ്രമിച്ച കുരുക്ക് തന്നെ ഉണ്ടാകും.",
+          "பச்சை நிறத்தில் கூட, சந்திப்பை உங்களால் அழிக்க முடியாவிட்டால், சந்திப்பில் நுழைய வேண்டாம். பெட்டியைத் தடுப்பது, கிராஸ் ட்ராஃபிக்கை அவர்களின் முறை வரும்போது சிக்கி, நீங்கள் தவிர்க்க விரும்பிய நெரிசலை உருவாக்குகிறது."
+        ],
+        [
+          "A flashing amber means proceed with care, giving way to others as the junction demands. If a signal is dark or faulty, treat the junction as uncontrolled, or follow the police officer if one is present.",
+          "മിന്നുന്ന മഞ്ഞ എന്നാൽ ജംഗ്ഷന്റെ ആവശ്യമനുസരിച്ച് മറ്റുള്ളവർക്ക് വഴി നൽകി ശ്രദ്ധയോടെ മുന്നോട്ടുപോകുക. സിഗ്നൽ കത്താതെയോ കേടായോ ഇരുന്നാൽ നിയന്ത്രണമില്ലാത്ത ജംഗ്ഷൻ പോലെ കരുതുക; പോലീസുകാരൻ ഉണ്ടെങ്കിൽ അദ്ദേഹത്തിന്റെ നിർദേശം പാലിക്കുക.",
+          "ஒளிரும் அம்பர் என்றால், சந்திப்பின் தேவைக்கேற்ப மற்றவர்களுக்கு வழிவகுத்து, கவனமாகச் செல்லுங்கள். சிக்னல் இருட்டாகவோ அல்லது பழுதாகவோ இருந்தால், சந்திப்பை கட்டுப்பாடற்றதாகக் கருதுங்கள் அல்லது போலீஸ் அதிகாரி ஒருவர் இருந்தால் அவரைப் பின்தொடரவும்."
+        ],
+        [
+          "Green arrows, filter lanes and pedestrian signals add detail. Obey the one that applies to your lane, and remember that pedestrians on a green walk signal have priority over turning vehicles.",
+          "പച്ച അമ്പടയാളങ്ങളും ഫിൽട്ടർ ലെയ്നുകളും കാൽനടയാത്രക്കാർക്കുള്ള സിഗ്നലും കൂടുതൽ വിവരം നൽകുന്നു. നിങ്ങളുടെ ലെയ്നിന് ബാധകമായതു പാലിക്കുക; പച്ച കാൽനട സിഗ്നലിൽ റോഡ് മുറിച്ചുകടക്കുന്നവർക്ക് തിരിയുന്ന വാഹനങ്ങളെക്കാൾ മുൻഗണനയുണ്ടെന്ന് ഓർക്കുക.",
+          "பச்சை அம்புகள், வடிகட்டி பாதைகள் மற்றும் பாதசாரி சிக்னல்கள் விவரங்களைச் சேர்க்கின்றன. உங்கள் பாதையில் பொருந்தக்கூடிய ஒன்றைக் கடைப்பிடிக்கவும், மேலும் பச்சை நடை சிக்னலில் பாதசாரிகள் வாகனங்களைத் திருப்புவதற்கு முன்னுரிமை அளிக்கிறார்கள் என்பதை நினைவில் கொள்ளுங்கள்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Giving way to emergency vehicles",
+        "അടിയന്തര വാഹനങ്ങൾക്ക് വഴി കൊടുക്കൽ",
+        "அவசரகால வாகனங்களுக்கு வழி கொடுப்பது"
+      ],
+      "p": [
+        [
+          "Ambulances, fire engines and police vehicles with a siren or flashing lights are on an urgent job. Give them way promptly; a few seconds saved can matter to a patient.",
+          "സൈറണോ മിന്നുന്ന ലൈറ്റോ ഉള്ള ആംബുലൻസ്, ഫയർ എൻജിൻ, പോലീസ് വാഹനങ്ങൾ അടിയന്തര ആവശ്യത്തിനാണ് പോകുന്നത്. ഉടൻ വഴി കൊടുക്കുക; ഏതാനും സെക്കൻഡുകൾ രോഗിക്ക് നിർണായകമാകാം.",
+          "ஆம்புலன்ஸ்கள், தீயணைப்பு இயந்திரங்கள் மற்றும் சைரன் அல்லது ஒளிரும் விளக்குகள் கொண்ட போலீஸ் வாகனங்கள் அவசர வேலையில் உள்ளன. அவர்களுக்கு உடனடியாக வழி கொடுங்கள்; ஒரு சில வினாடிகள் சேமிக்கப்படுவது ஒரு நோயாளிக்கு முக்கியமானதாக இருக்கலாம்."
+        ],
+        [
+          "Check your mirrors, signal, and move to the left and slow or stop so that a clear path opens. Do not panic-brake in the middle of the road or swerve across lanes.",
+          "മിററിൽ നോക്കി സിഗ്നൽ നൽകി ഇടത്തോട്ട് മാറി വേഗം കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്ത് വഴി തുറക്കുക. റോഡിന്റെ നടുവിൽ പരിഭ്രമിച്ച് ബ്രേക്ക് ചവിട്ടുകയോ ലെയ്നുകൾ മുറിച്ച് വെട്ടിച്ചു മാറുകയോ ചെയ്യരുത്.",
+          "உங்கள் கண்ணாடியை சரிபார்த்து, சிக்னல் செய்து, இடதுபுறம் நகர்த்தி மெதுவாக அல்லது நிறுத்துங்கள், இதனால் தெளிவான பாதை திறக்கும். சாலையின் நடுவில் பிரேக் போடவோ அல்லது பாதையின் குறுக்கே செல்லவோ வேண்டாம்."
+        ],
+        [
+          "At a red light, do not jump the signal on your own. Move aside only as far as it is safe to make room, and let the emergency driver decide how to pass. Never follow closely behind an ambulance to get through traffic.",
+          "ചുവപ്പ് സിഗ്നലിൽ സ്വന്തമായി സിഗ്നൽ ലംഘിക്കരുത്. സുരക്ഷിതമായി സാധ്യമായത്ര മാത്രം ഒതുങ്ങി സ്ഥലം ഒരുക്കുക; കടന്നുപോകുന്ന രീതി അടിയന്തര വാഹനത്തിന്റെ ഡ്രൈവർ തീരുമാനിക്കട്ടെ. തിരക്കിലൂടെ കടക്കാൻ ആംബുലൻസിന് തൊട്ടുപിന്നാലെ പോകരുത്.",
+          "சிவப்பு விளக்கில், நீங்களே சிக்னலை குதிக்காதீர்கள். அறையை உருவாக்குவதற்கு பாதுகாப்பாக இருக்கும் வரை மட்டுமே ஒதுக்கி நகர்த்தவும், எப்படி கடந்து செல்வது என்பதை அவசரகால ஓட்டுனர் தீர்மானிக்கட்டும். போக்குவரத்தை கடந்து செல்ல ஆம்புலன்ஸ் பின்னால் நெருங்கி செல்ல வேண்டாம்."
+        ]
+      ]
+    }
+  ],
+  "dos": [
     [
-     "Right of way means that one driver is expected to go first and the other is expected to give way. It exists because two vehicles cannot occupy the same space, and a fixed rule is faster and safer than negotiating with eye contact.",
-     "ഒരാൾ ആദ്യം പോകണം, മറ്റേയാൾ വഴി കൊടുക്കണം എന്നതാണ് മുൻഗണനയുടെ അർഥം. രണ്ടു വാഹനങ്ങൾക്ക് ഒരേ സ്ഥലത്ത് ഒരേസമയം ഇരിക്കാനാവില്ല; കണ്ണിൽ നോക്കി ഒത്തുതീർപ്പാക്കുന്നതിനേക്കാൾ വേഗവും സുരക്ഷിതവും ഉറപ്പുള്ള ഒരു നിയമമാണ്."
+      "Slow down and look both ways at every junction.",
+      "ഓരോ ജംഗ്ഷനിലും വേഗം കുറച്ച് ഇരുവശവും നോക്കുക.",
+      "ஒவ்வொரு சந்திப்பிலும் மெதுவாக இருபுறமும் பார்க்கவும்."
     ],
     [
-     "Having right of way never switches off your duty to look. If the other driver does not give way, the sensible thing is to slow down and let them pass rather than prove a point. The aim is to arrive, not to be right.",
-     "മുൻഗണന ഉണ്ടെന്നു കരുതി ചുറ്റും നോക്കേണ്ട കടമ ഇല്ലാതാകുന്നില്ല. മറ്റേ ഡ്രൈവർ വഴി തരുന്നില്ലെങ്കിൽ ശരി തെളിയിക്കാൻ നിൽക്കാതെ വേഗം കുറച്ച് അവരെ കടത്തിവിടുന്നതാണ് വിവേകം. ലക്ഷ്യം ശരിയാകലല്ല, സുരക്ഷിതമായി എത്തലാണ്."
+      "Give way to traffic already on the roundabout.",
+      "റൗണ്ടെബൗട്ടിൽ ഉള്ളിലുള്ള വാഹനങ്ങൾക്ക് വഴി കൊടുക്കുക.",
+      "ரவுண்டானாவில் ஏற்கனவே போக்குவரத்துக்கு வழி கொடுங்கள்."
     ],
     [
-     "Priority usually follows a simple order: a police officer or signal first, then signs and markings, then the general rules of the road. When they disagree, the higher one in this list wins.",
-     "സാധാരണ ക്രമം ഇതാണ്: ആദ്യം പോലീസുകാരന്റെ നിർദേശമോ സിഗ്നലോ, പിന്നെ ചിഹ്നങ്ങളും റോഡ് അടയാളങ്ങളും, അതിനുശേഷം പൊതുവായ റോഡ് നിയമങ്ങൾ. ഇവ തമ്മിൽ വ്യത്യാസം വന്നാൽ പട്ടികയിൽ മുകളിലുള്ളതാണ് ബാധകം."
+      "Stop behind the stop line at red.",
+      "ചുവപ്പിൽ സ്റ്റോപ്പ് ലൈനിനു പിന്നിൽ നിർത്തുക.",
+      "சிவப்பு நிறத்தில் நிறுத்தக் கோட்டின் பின்னால் நிறுத்தவும்."
+    ],
+    [
+      "Signal early before turning or exiting.",
+      "തിരിയുന്നതിനും എക്സിറ്റിനും മുമ്പ് നേരത്തേ സിഗ്നൽ നൽകുക.",
+      "திரும்புவதற்கு அல்லது வெளியேறும் முன் முன்கூட்டியே சமிக்ஞை செய்யுங்கள்."
+    ],
+    [
+      "Wait for a safe gap before turning right.",
+      "വലത്തോട്ട് തിരിയും മുമ്പ് സുരക്ഷിതമായ വിടവിനായി കാത്തിരിക്കുക.",
+      "வலதுபுறம் திரும்புவதற்கு முன் பாதுகாப்பான இடைவெளிக்காக காத்திருங்கள்."
+    ],
+    [
+      "Give way to pedestrians crossing at the junction.",
+      "ജംഗ്ഷനിൽ റോഡ് മുറിച്ചുകടക്കുന്ന കാൽനടക്കാർക്ക് വഴി കൊടുക്കുക.",
+      "சந்திப்பில் பாதசாரிகள் கடக்க வழி கொடுங்கள்."
+    ],
+    [
+      "Move left and slow down for sirens.",
+      "സൈറൺ കേട്ടാൽ ഇടത്തോട്ട് മാറി വേഗം കുറയ്ക്കുക.",
+      "இடதுபுறமாக நகர்ந்து சைரன்களை மெதுவாக்கவும்."
+    ],
+    [
+      "Follow the police officer over the signal.",
+      "സിഗ്നലിനെക്കാൾ പോലീസുകാരന്റെ നിർദേശം പാലിക്കുക.",
+      "சிக்னலில் போலீஸ் அதிகாரியைப் பின்தொடரவும்."
+    ],
+    [
+      "Enter a junction only if there is room to leave it.",
+      "ജംഗ്ഷൻ വിടാൻ സ്ഥലമുണ്ടെങ്കിൽ മാത്രം അതിൽ കയറുക.",
+      "சந்திப்பை விட்டு வெளியேற இடம் இருந்தால் மட்டுமே அதை உள்ளிடவும்."
+    ],
+    [
+      "Treat a dead signal as an uncontrolled junction.",
+      "കേടായ സിഗ്നലിനെ നിയന്ത്രണമില്ലാത്ത ജംഗ്ഷനായി കണക്കാക്കുക.",
+      "இறந்த சமிக்ஞையை கட்டுப்பாடற்ற சந்திப்பாகக் கருதுங்கள்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Uncontrolled junctions and T-junctions",
-    "നിയന്ത്രണമില്ലാത്ത ജംഗ്ഷനും ടി-ജംഗ്ഷനും"
-   ],
-   "p": [
+  ],
+  "donts": [
     [
-     "At a junction with no signal and no police officer, approach slowly and be ready to stop. Look right, left and right again, because many Kerala junctions have bends, walls or parked vehicles that hide approaching traffic.",
-     "സിഗ്നലോ പോലീസുകാരനോ ഇല്ലാത്ത ജംഗ്ഷനിൽ പതുക്കെ അടുക്കുകയും നിർത്താൻ തയ്യാറായിരിക്കുകയും ചെയ്യുക. വലത്, ഇടത്, വീണ്ടും വലത് എന്നിങ്ങനെ നോക്കുക; കേരളത്തിലെ പല ജംഗ്ഷനുകളിലും വളവുകളും മതിലുകളും പാർക്ക് ചെയ്ത വാഹനങ്ങളും കാഴ്ച മറയ്ക്കാറുണ്ട്."
+      "Do not speed up to beat amber.",
+      "മഞ്ഞ ലൈറ്റ് കടക്കാൻ വേഗം കൂട്ടരുത്.",
+      "அம்பர் அடிக்க வேகத்தை அதிகரிக்க வேண்டாம்."
     ],
     [
-     "The general principle is that traffic on the main road goes first and traffic joining from a minor road gives way. Give Way signs and broken lines at the stop line tell you that you are on the minor road.",
-     "പ്രധാന റോഡിലെ വാഹനങ്ങൾക്കാണ് ആദ്യം പോകാനുള്ള അവകാശം; ചെറിയ റോഡിൽ നിന്ന് വരുന്നവർ വഴി കൊടുക്കണം എന്നതാണ് പൊതുതത്ത്വം. ഗിവ് വേ ചിഹ്നവും സ്റ്റോപ്പ് ലൈനിലെ മുറിഞ്ഞ വരയും നിങ്ങൾ ചെറിയ റോഡിലാണെന്ന് സൂചിപ്പിക്കുന്നു."
+      "Do not stop on the zebra crossing or inside the junction.",
+      "സീബ്ര ക്രോസിങ്ങിലോ ജംഗ്ഷനുള്ളിലോ നിർത്തരുത്.",
+      "வரிக்குதிரை கடக்கும் இடத்திலோ அல்லது சந்திப்பின் உள்ளேயோ நிறுத்த வேண்டாம்."
     ],
     [
-     "At a T-junction the road that continues straight is normally the main road, and the vehicle coming out of the stem of the T gives way. When roads look equal, slow down and follow the rule taught in the Rules of the Road Regulations, which is to give way to traffic from your right; check the latest rule with your RTO.",
-     "ടി-ജംഗ്ഷനിൽ നേരെ തുടരുന്ന റോഡാണ് സാധാരണ പ്രധാന റോഡ്; ടി-യുടെ താഴത്തെ കമ്പിൽ നിന്ന് വരുന്ന വാഹനം വഴി കൊടുക്കണം. രണ്ടു റോഡുകളും ഒരുപോലെ തോന്നുമ്പോൾ വേഗം കുറച്ച്, റോഡ് നിയമങ്ങളിൽ പഠിപ്പിക്കുന്ന പ്രകാരം വലതുവശത്തുനിന്ന് വരുന്ന വാഹനത്തിന് വഴി കൊടുക്കുക; ഏറ്റവും പുതിയ നിയമം RTO യിൽ ഉറപ്പാക്കുക."
+      "Do not cut the corner when turning right.",
+      "വലത്തോട്ട് തിരിയുമ്പോൾ വളവ് മുറിക്കരുത്.",
+      "வலதுபுறம் திரும்பும்போது மூலையை வெட்ட வேண்டாம்."
     ],
     [
-     "When you turn right, you cross the path of oncoming vehicles, so wait for a safe gap and give way to traffic coming straight. Cutting the corner or turning early is a common cause of head-on and side collisions.",
-     "വലത്തോട്ട് തിരിയുമ്പോൾ എതിരെ വരുന്ന വാഹനങ്ങളുടെ പാത മുറിച്ചുകടക്കേണ്ടി വരുന്നു; അതിനാൽ സുരക്ഷിതമായ വിടവിനായി കാത്തിരിക്കുകയും നേരെ വരുന്നവർക്ക് വഴി കൊടുക്കുകയും ചെയ്യുക. വളവ് മുറിച്ച് നേരത്തേ തിരിയുന്നത് നേർക്കുനേർ കൂട്ടിയിടിക്കും വശത്തുനിന്നുള്ള ഇടിക്കും സാധാരണ കാരണമാണ്."
+      "Do not force your way into a roundabout.",
+      "റൗണ്ടെബൗട്ടിലേക്ക് തള്ളിക്കയറരുത്.",
+      "ஒரு ரவுண்டானாவுக்குள் உங்கள் வழியை கட்டாயப்படுத்தாதீர்கள்."
+    ],
+    [
+      "Do not overtake near or inside a junction.",
+      "ജംഗ്ഷനടുത്തോ ഉള്ളിലോ ഓവർടേക്ക് ചെയ്യരുത്.",
+      "சந்திப்பிற்கு அருகில் அல்லது உள்ளே முந்திச் செல்ல வேண்டாம்."
+    ],
+    [
+      "Do not assume the other driver will stop.",
+      "മറ്റേ ഡ്രൈവർ നിർത്തും എന്ന് കരുതരുത്.",
+      "மற்ற டிரைவர் நிறுத்துவார் என்று நினைக்க வேண்டாம்."
+    ],
+    [
+      "Do not block the road for the sake of a few seconds.",
+      "ഏതാനും സെക്കൻഡ് ലാഭിക്കാൻ റോഡ് തടസ്സപ്പെടുത്തരുത്.",
+      "சில நொடிகளுக்கு சாலையைத் தடுக்க வேண்டாம்."
+    ],
+    [
+      "Do not follow an ambulance closely to skip traffic.",
+      "തിരക്ക് ഒഴിവാക്കാൻ ആംബുലൻസിന് പിന്നാലെ പോകരുത്.",
+      "போக்குவரத்தைத் தவிர்க்க ஆம்புலன்ஸை நெருக்கமாகப் பின்தொடர வேண்டாம்."
+    ],
+    [
+      "Do not use the phone while waiting at a signal and miss the green.",
+      "സിഗ്നലിൽ കാത്തുനിൽക്കുമ്പോൾ ഫോൺ ഉപയോഗിച്ച് പച്ച കാണാതെ പോകരുത്.",
+      "சிக்னலில் காத்திருக்கும்போது ஃபோனைப் பயன்படுத்தாதீர்கள் மற்றும் பச்சை நிறத்தைத் தவறவிடாதீர்கள்."
+    ],
+    [
+      "Do not ignore a Give Way or Stop sign.",
+      "ഗിവ് വേ, സ്റ്റോപ്പ് ചിഹ്നങ്ങൾ അവഗണിക്കരുത്.",
+      "கிவ் வே அல்லது ஸ்டாப் அடையாளத்தை புறக்கணிக்காதீர்கள்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Roundabouts",
-    "റൗണ്ടെബൗട്ടുകൾ"
-   ],
-   "p": [
+  ],
+  "myths": [
+    {
+      "m": [
+        "Whoever reaches the junction first has right of way.",
+        "ആദ്യം ജംഗ്ഷനിൽ എത്തുന്നയാൾക്കാണ് മുൻഗണന.",
+        "சந்திப்பை யார் முதலில் அடைகிறாரோ அவருக்கு வழியின் உரிமை உண்டு."
+      ],
+      "f": [
+        "Priority comes from the road, signs and signals, not from who is faster. A fast vehicle on a minor road still gives way.",
+        "മുൻഗണന നിശ്ചയിക്കുന്നത് റോഡ്, ചിഹ്നം, സിഗ്നൽ എന്നിവയാണ്, വേഗമല്ല. ചെറിയ റോഡിലെ വേഗമേറിയ വാഹനവും വഴി കൊടുക്കണം.",
+        "முன்னுரிமை என்பது சாலை, அடையாளங்கள் மற்றும் சிக்னல்களில் இருந்து வருகிறது, யார் வேகமாக இருப்பவர் என்பதல்ல. ஒரு சிறிய சாலையில் வேகமான வாகனம் இன்னும் வழி கொடுக்கிறது."
+      ]
+    },
+    {
+      "m": [
+        "Bigger vehicles always have right of way.",
+        "വലിയ വാഹനങ്ങൾക്ക് എപ്പോഴും മുൻഗണനയുണ്ട്.",
+        "பெரிய வாகனங்களுக்கு எப்போதுமே சரியான வழி இருக்கும்."
+      ],
+      "f": [
+        "Size gives no priority. A bus is simply harder to stop, so smaller vehicles should be extra careful, but the rules apply to all.",
+        "വലുപ്പം മുൻഗണന നൽകുന്നില്ല. ബസ് നിർത്താൻ പ്രയാസമാണെന്നേയുള്ളൂ, അതിനാൽ ചെറിയ വാഹനങ്ങൾ കൂടുതൽ ശ്രദ്ധിക്കണം; നിയമം എല്ലാവർക്കും ബാധകമാണ്.",
+        "அளவு முன்னுரிமை அளிக்காது. ஒரு பஸ் நிறுத்துவது கடினம், எனவே சிறிய வாகனங்கள் கூடுதல் கவனமாக இருக்க வேண்டும், ஆனால் விதிகள் அனைவருக்கும் பொருந்தும்."
+      ]
+    },
+    {
+      "m": [
+        "On green I can go no matter what.",
+        "പച്ച കണ്ടാൽ എന്തായാലും പോകാം.",
+        "பச்சை நிறத்தில் நான் எதுவாக இருந்தாலும் செல்ல முடியும்."
+      ],
+      "f": [
+        "Green only means you may go if it is safe. Vehicles still clearing the junction and pedestrians must be given time.",
+        "പച്ച എന്നാൽ സുരക്ഷിതമെങ്കിൽ പോകാം എന്നു മാത്രം. ജംഗ്ഷൻ ഒഴിയുന്ന വാഹനങ്ങൾക്കും കാൽനടക്കാർക്കും സമയം നൽകണം.",
+        "பச்சை என்றால் அது பாதுகாப்பாக இருந்தால் நீங்கள் செல்லலாம். இன்னும் சந்திப்பை அகற்றும் வாகனங்கள் மற்றும் பாதசாரிகளுக்கு கால அவகாசம் வழங்க வேண்டும்."
+      ]
+    },
+    {
+      "m": [
+        "The vehicle entering a roundabout has priority because it is moving.",
+        "റൗണ്ടെബൗട്ടിലേക്ക് കയറുന്ന വാഹനത്തിനാണ് മുൻഗണന.",
+        "ஒரு ரவுண்டானாவுக்குள் நுழையும் வாகனம் நகரும் என்பதால் முன்னுரிமை உள்ளது."
+      ],
+      "f": [
+        "Vehicles already on the roundabout are given way to, as shown by the Roundabout and Give Way signs.",
+        "റൗണ്ടെബൗട്ടിലുള്ള വാഹനങ്ങൾക്കാണ് വഴി കൊടുക്കേണ്ടത്; ചിഹ്നങ്ങൾ ഇത് കാണിക്കുന്നു.",
+        "ரவுண்டானாவில் ஏற்கனவே உள்ள வாகனங்கள், ரவுண்டானா மற்றும் கிவ் வே அடையாளங்களால் காட்டப்படும்."
+      ]
+    },
+    {
+      "m": [
+        "If an ambulance is behind me, I can jump a red light for it.",
+        "പിന്നിൽ ആംബുലൻസ് ഉണ്ടെങ്കിൽ ചുവപ്പ് ലൈറ്റ് കടക്കാം.",
+        "ஒரு ஆம்புலன்ஸ் எனக்குப் பின்னால் இருந்தால், நான் அதற்கு சிவப்பு விளக்கை ஏற்ற முடியும்."
+      ],
+      "f": [
+        "Make room safely, but do not enter cross traffic blindly. Stay safe so that you do not cause a second emergency.",
+        "സുരക്ഷിതമായി സ്ഥലം ഒരുക്കുക; കാണാതെ മറ്റു ദിശയിലെ വാഹനങ്ങൾക്കിടയിലേക്ക് കയറരുത്. മറ്റൊരു അപകടം ഉണ്ടാക്കാതിരിക്കുക.",
+        "பாதுகாப்பாக அறையை உருவாக்குங்கள், ஆனால் கிராஸ் டிராஃபிக்கை கண்மூடித்தனமாக நுழையாதீர்கள். நீங்கள் இரண்டாவது அவசரநிலையை ஏற்படுத்தாதபடி பாதுகாப்பாக இருங்கள்."
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "t": [
+        "The turn that was too early",
+        "വളവ് മുറിച്ച തിരിവ്",
+        "மிக விரைவாக இருந்த திருப்பம்"
+      ],
+      "s": [
+        "A learner called Anu was turning right at a small T-junction. She saw an oncoming scooter but felt she could make it, so she cut the corner and started turning early. The scooter rider had to brake hard and slid slightly on the wet road. Nobody was hurt, but both of them were shaking. Her instructor later asked her one question: what was the hurry?",
+        "അനു എന്ന പഠിതാവ് ഒരു ചെറിയ ടി-ജംഗ്ഷനിൽ വലത്തോട്ട് തിരിയുകയായിരുന്നു. എതിരെ ഒരു സ്കൂട്ടർ കണ്ടെങ്കിലും കടന്നുപോകാം എന്ന് തോന്നി, അവൾ വളവ് മുറിച്ച് നേരത്തേ തിരിഞ്ഞു. സ്കൂട്ടർ യാത്രക്കാരൻ ശക്തമായി ബ്രേക്ക് ചെയ്ത് നനഞ്ഞ റോഡിൽ ചെറുതായി തെന്നി. ആർക്കും പരിക്കില്ല, പക്ഷേ ഇരുവരും വിറച്ചുപോയി. പിന്നീട് ഇൻസ്ട്രക്ടർ ഒരു ചോദ്യമേ ചോദിച്ചുള്ളൂ: എന്തിനായിരുന്നു ഇത്ര ധൃതി?",
+        "அனு என்று அழைக்கப்படும் ஒரு மாணவர் ஒரு சிறிய T- சந்திப்பில் வலதுபுறம் திரும்பிக் கொண்டிருந்தார். அவள் ஒரு ஸ்கூட்டரைப் பார்த்தாள், ஆனால் அவளால் அதை உருவாக்க முடியும் என்று உணர்ந்தாள், அதனால் அவள் மூலையை வெட்டி சீக்கிரம் திரும்ப ஆரம்பித்தாள். ஸ்கூட்டர் ஓட்டுபவர் பலமாக பிரேக் செய்ய வேண்டியிருந்தது மற்றும் ஈரமான சாலையில் லேசாக சரிந்தது. யாருக்கும் காயம் ஏற்படவில்லை, ஆனால் இருவரும் நடுங்கினர். அவளுடைய பயிற்றுவிப்பாளர் பின்னர் அவளிடம் ஒரு கேள்வி கேட்டார்: என்ன அவசரம்?"
+      ],
+      "lesson": [
+        "When turning right, wait for a clear gap and give way to oncoming traffic. A few seconds of waiting is cheaper than a collision.",
+        "വലത്തോട്ട് തിരിയുമ്പോൾ വ്യക്തമായ വിടവിനായി കാത്ത് എതിരെ വരുന്നവർക്ക് വഴി കൊടുക്കുക. കൂട്ടിയിടിയേക്കാൾ എത്രയോ ചെലവു കുറവാണ് ഏതാനും സെക്കൻഡ് കാത്തിരിപ്പ്.",
+        "வலதுபுறம் திரும்பும்போது, ​​தெளிவான இடைவெளிக்காக காத்திருந்து, வரவிருக்கும் போக்குவரத்திற்கு வழிவிடவும். மோதலை விட சில நொடிகள் காத்திருப்பது மலிவானது."
+      ]
+    },
+    {
+      "t": [
+        "Making room for the siren",
+        "സൈറണിന് വഴിയൊരുക്കി",
+        "சைரனுக்கு இடமளித்தல்"
+      ],
+      "s": [
+        "Ravi was waiting in a queue at a signal when he heard a siren behind him. He checked his mirror, saw an ambulance, and signalled left. He moved his car a little to the left and the others did the same, leaving a narrow lane in the middle. He stayed at the red light and did not rush forward. The ambulance edged through slowly and the queue closed up again after it had passed.",
+        "രവി ഒരു സിഗ്നലിൽ വരിയിൽ കാത്തുനിൽക്കുമ്പോൾ പിന്നിൽ സൈറൺ കേട്ടു. മിററിൽ നോക്കി ആംബുലൻസ് കണ്ടു, ഇടത് സിഗ്നൽ നൽകി കാർ അൽപം ഇടത്തോട്ട് നീക്കി. മറ്റുള്ളവരും അങ്ങനെ ചെയ്തപ്പോൾ നടുവിൽ ഒരു ചെറിയ പാത തെളിഞ്ഞു. അയാൾ ചുവപ്പ് സിഗ്നലിൽ തന്നെ നിന്നു, മുന്നോട്ട് കുതിച്ചില്ല. ആംബുലൻസ് പതുക്കെ കടന്നുപോയി, പിന്നാലെ വരി വീണ്ടും ഒന്നായി.",
+        "ரவி ஒரு சிக்னலில் கியூவில் காத்திருந்தபோது பின்னால் சைரன் சத்தம் கேட்டது. அவர் கண்ணாடியை சரிபார்த்து, ஒரு ஆம்புலன்ஸைப் பார்த்தார், இடதுபுறம் சமிக்ஞை செய்தார். அவர் தனது காரை சிறிது இடதுபுறமாக நகர்த்தினார், மற்றவர்களும் அவ்வாறே செய்தனர், நடுவில் ஒரு குறுகிய பாதையை விட்டுவிட்டார். அவர் சிவப்பு விளக்கில் தங்கினார், முன்னோக்கி விரைந்து செல்லவில்லை. ஆம்புலன்ஸ் மெதுவாகச் சென்றது, அதைக் கடந்த பிறகு வரிசை மீண்டும் மூடப்பட்டது."
+      ],
+      "lesson": [
+        "Make room early and calmly, without jumping the signal. Small, shared actions clear the way.",
+        "നേരത്തേ, ശാന്തമായി, സിഗ്നൽ ലംഘിക്കാതെ സ്ഥലമൊരുക്കുക. എല്ലാവരും ചെയ്യുന്ന ചെറിയ പ്രവൃത്തികൾ വഴി തുറക്കുന്നു.",
+        "சிக்னலைத் தாண்டாமல், சீக்கிரமாகவும் அமைதியாகவும் அறையை உருவாக்கவும். சிறிய, பகிரப்பட்ட செயல்கள் வழியை தெளிவுபடுத்துகின்றன."
+      ]
+    }
+  ],
+  "recap": [
     [
-     "In India traffic goes round a roundabout clockwise, keeping the island on your left. The Roundabout Ahead sign and the Give Way line tell you to give way to vehicles already on the roundabout.",
-     "ഇന്ത്യയിൽ റൗണ്ടെബൗട്ടിൽ വാഹനങ്ങൾ ഘടികാരദിശയിൽ, ഐലൻഡ് ഇടതുവശത്തു വരുംവിധം സഞ്ചരിക്കുന്നു. റൗണ്ടെബൗട്ട് ചിഹ്നവും ഗിവ് വേ ലൈനും സൂചിപ്പിക്കുന്നത്, ഉള്ളിൽ ഇതിനകം ഉള്ള വാഹനങ്ങൾക്ക് വഴി കൊടുക്കണം എന്നാണ്."
+      "Right of way is an agreement, not a prize.",
+      "മുൻഗണന ഒരു ധാരണയാണ്, സമ്മാനമല്ല.",
+      "சரியான வழி ஒரு ஒப்பந்தம், ஒரு பரிசு அல்ல."
     ],
     [
-     "Why give way to those already inside? Because they are committed to the circle and cannot stop easily. Entering only when there is a gap keeps the circle moving; forcing in makes everyone stop and blocks all arms of the junction.",
-     "ഉള്ളിലുള്ളവർക്ക് വഴി കൊടുക്കുന്നത് എന്തിന്? അവർ വൃത്തത്തിനുള്ളിൽ കടന്നുകഴിഞ്ഞു, എളുപ്പം നിർത്താനാകില്ല. വിടവ് കണ്ടാൽ മാത്രം കയറിയാൽ വൃത്തം തടസ്സമില്ലാതെ നീങ്ങും; തള്ളിക്കയറിയാൽ എല്ലാവരും നിൽക്കുകയും ജംഗ്ഷന്റെ എല്ലാ വശങ്ങളും കുരുങ്ങുകയും ചെയ്യും."
+      "Main road first; the minor road and the Give Way line wait.",
+      "പ്രധാന റോഡിന് ആദ്യം; ചെറിയ റോഡും ഗിവ് വേ ലൈനും കാത്തിരിക്കണം.",
+      "முதன்மைச் சாலை முதலில்; சிறிய சாலை மற்றும் கிவ் வே லைன் காத்திருக்கிறது."
     ],
     [
-     "Choose your lane early. For a left exit stay on the left, and signal left before your exit. For going further round, keep to the lane that suits your exit and do not cut across other lanes at the last moment.",
-     "നേരത്തേ ലെയ്ൻ തിരഞ്ഞെടുക്കുക. ഇടത്തേക്കുള്ള എക്സിറ്റിന് ഇടതുവശത്തു തുടരുക, എക്സിറ്റിനു തൊട്ടുമുമ്പ് ഇടത് സിഗ്നൽ നൽകുക. കൂടുതൽ ചുറ്റാനുണ്ടെങ്കിൽ നിങ്ങളുടെ എക്സിറ്റിന് ചേരുന്ന ലെയ്നിൽ തുടരുക; അവസാന നിമിഷം മറ്റു ലെയ്നുകൾ മുറിച്ചുകടക്കരുത്."
+      "Roundabout: clockwise, give way to those already inside.",
+      "റൗണ്ടെബൗട്ട്: ഘടികാരദിശ, ഉള്ളിലുള്ളവർക്ക് വഴി കൊടുക്കുക.",
+      "ரவுண்டானா: கடிகார திசையில், ஏற்கனவே உள்ளே இருப்பவர்களுக்கு வழி கொடுங்கள்."
     ],
     [
-     "Watch two-wheelers and autos, which can appear beside you in your blind spot. Move at a steady, slow pace and never stop inside the circle unless traffic forces you.",
-     "നിങ്ങളുടെ ബ്ലൈൻഡ് സ്പോട്ടിൽ വശത്തുകൂടി വരുന്ന ഇരുചക്രവാഹനങ്ങളെയും ഓട്ടോകളെയും ശ്രദ്ധിക്കുക. സ്ഥിരമായ പതുക്കെയുള്ള വേഗത്തിൽ നീങ്ങുക; തടസ്സം നിർബന്ധിച്ചാലല്ലാതെ വൃത്തത്തിനുള്ളിൽ നിർത്തരുത്."
+      "Amber means prepare to stop; green means go only if clear.",
+      "മഞ്ഞ എന്നാൽ നിർത്താൻ തയ്യാറാകുക; പച്ച എന്നാൽ ഒഴിഞ്ഞെങ്കിൽ മാത്രം പോകുക.",
+      "ஆம்பர் என்றால் நிறுத்த தயார்; பச்சை என்பது தெளிவாக இருந்தால் மட்டுமே செல்ல வேண்டும்."
+    ],
+    [
+      "Police officer first, then signals, then signs and general rules.",
+      "ആദ്യം പോലീസുകാരൻ, പിന്നെ സിഗ്നൽ, പിന്നെ ചിഹ്നങ്ങളും പൊതു നിയമങ്ങളും.",
+      "போலீஸ் அதிகாரி முதலில், பின்னர் சமிக்ஞைகள், பின்னர் அறிகுறிகள் மற்றும் பொது விதிகள்."
+    ],
+    [
+      "Siren behind you: signal, move left, slow or stop, stay safe.",
+      "പിന്നിൽ സൈറൺ: സിഗ്നൽ, ഇടത്തേക്ക് മാറുക, വേഗം കുറയ്ക്കുക, സുരക്ഷിതമായിരിക്കുക.",
+      "உங்களுக்கு பின்னால் சைரன்: சிக்னல், இடதுபுறம் நகர்த்தவும், மெதுவாக அல்லது நிறுத்தவும், பாதுகாப்பாக இருங்கள்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Traffic lights and police signals",
-    "ട്രാഫിക് ലൈറ്റുകളും പോലീസ് സിഗ്നലുകളും"
-   ],
-   "p": [
-    [
-     "Red means stop behind the stop line. Amber means the signal is about to turn red: stop if you can do so safely, and do not speed up to beat it. Green means go, but only if the junction ahead is clear.",
-     "ചുവപ്പ് എന്നാൽ സ്റ്റോപ്പ് ലൈനിനു പിന്നിൽ നിർത്തുക. മഞ്ഞ എന്നാൽ സിഗ്നൽ ചുവപ്പാകാൻ പോകുന്നു; സുരക്ഷിതമായി നിർത്താൻ കഴിയുമെങ്കിൽ നിർത്തുക, കടന്നുപോകാൻ വേഗം കൂട്ടരുത്. പച്ച എന്നാൽ പോകാം, പക്ഷേ മുന്നിലെ ജംഗ്ഷൻ ഒഴിഞ്ഞിട്ടുണ്ടെങ്കിൽ മാത്രം."
-    ],
-    [
-     "Do not enter a junction if you cannot clear it, even on green. Blocking the box leaves cross traffic stuck when their turn comes and builds the very jam you wanted to avoid.",
-     "ജംഗ്ഷൻ കടന്നുപോകാൻ കഴിയില്ലെന്നുണ്ടെങ്കിൽ പച്ചയാണെങ്കിലും കയറരുത്. ജംഗ്ഷനിൽ കുരുങ്ങിക്കിടന്നാൽ മറ്റു ദിശകളിലെ വാഹനങ്ങളുടെ ഊഴം വരുമ്പോൾ അവർ കുടുങ്ങും; നിങ്ങൾ ഒഴിവാക്കാൻ ശ്രമിച്ച കുരുക്ക് തന്നെ ഉണ്ടാകും."
-    ],
-    [
-     "A flashing amber means proceed with care, giving way to others as the junction demands. If a signal is dark or faulty, treat the junction as uncontrolled, or follow the police officer if one is present.",
-     "മിന്നുന്ന മഞ്ഞ എന്നാൽ ജംഗ്ഷന്റെ ആവശ്യമനുസരിച്ച് മറ്റുള്ളവർക്ക് വഴി നൽകി ശ്രദ്ധയോടെ മുന്നോട്ടുപോകുക. സിഗ്നൽ കത്താതെയോ കേടായോ ഇരുന്നാൽ നിയന്ത്രണമില്ലാത്ത ജംഗ്ഷൻ പോലെ കരുതുക; പോലീസുകാരൻ ഉണ്ടെങ്കിൽ അദ്ദേഹത്തിന്റെ നിർദേശം പാലിക്കുക."
-    ],
-    [
-     "Green arrows, filter lanes and pedestrian signals add detail. Obey the one that applies to your lane, and remember that pedestrians on a green walk signal have priority over turning vehicles.",
-     "പച്ച അമ്പടയാളങ്ങളും ഫിൽട്ടർ ലെയ്നുകളും കാൽനടയാത്രക്കാർക്കുള്ള സിഗ്നലും കൂടുതൽ വിവരം നൽകുന്നു. നിങ്ങളുടെ ലെയ്നിന് ബാധകമായതു പാലിക്കുക; പച്ച കാൽനട സിഗ്നലിൽ റോഡ് മുറിച്ചുകടക്കുന്നവർക്ക് തിരിയുന്ന വാഹനങ്ങളെക്കാൾ മുൻഗണനയുണ്ടെന്ന് ഓർക്കുക."
-    ]
-   ]
-  },
-  {
-   "h": [
-    "Giving way to emergency vehicles",
-    "അടിയന്തര വാഹനങ്ങൾക്ക് വഴി കൊടുക്കൽ"
-   ],
-   "p": [
-    [
-     "Ambulances, fire engines and police vehicles with a siren or flashing lights are on an urgent job. Give them way promptly; a few seconds saved can matter to a patient.",
-     "സൈറണോ മിന്നുന്ന ലൈറ്റോ ഉള്ള ആംബുലൻസ്, ഫയർ എൻജിൻ, പോലീസ് വാഹനങ്ങൾ അടിയന്തര ആവശ്യത്തിനാണ് പോകുന്നത്. ഉടൻ വഴി കൊടുക്കുക; ഏതാനും സെക്കൻഡുകൾ രോഗിക്ക് നിർണായകമാകാം."
-    ],
-    [
-     "Check your mirrors, signal, and move to the left and slow or stop so that a clear path opens. Do not panic-brake in the middle of the road or swerve across lanes.",
-     "മിററിൽ നോക്കി സിഗ്നൽ നൽകി ഇടത്തോട്ട് മാറി വേഗം കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്ത് വഴി തുറക്കുക. റോഡിന്റെ നടുവിൽ പരിഭ്രമിച്ച് ബ്രേക്ക് ചവിട്ടുകയോ ലെയ്നുകൾ മുറിച്ച് വെട്ടിച്ചു മാറുകയോ ചെയ്യരുത്."
-    ],
-    [
-     "At a red light, do not jump the signal on your own. Move aside only as far as it is safe to make room, and let the emergency driver decide how to pass. Never follow closely behind an ambulance to get through traffic.",
-     "ചുവപ്പ് സിഗ്നലിൽ സ്വന്തമായി സിഗ്നൽ ലംഘിക്കരുത്. സുരക്ഷിതമായി സാധ്യമായത്ര മാത്രം ഒതുങ്ങി സ്ഥലം ഒരുക്കുക; കടന്നുപോകുന്ന രീതി അടിയന്തര വാഹനത്തിന്റെ ഡ്രൈവർ തീരുമാനിക്കട്ടെ. തിരക്കിലൂടെ കടക്കാൻ ആംബുലൻസിന് തൊട്ടുപിന്നാലെ പോകരുത്."
-    ]
-   ]
-  }
- ],
- "dos": [
-  [
-   "Slow down and look both ways at every junction.",
-   "ഓരോ ജംഗ്ഷനിലും വേഗം കുറച്ച് ഇരുവശവും നോക്കുക."
-  ],
-  [
-   "Give way to traffic already on the roundabout.",
-   "റൗണ്ടെബൗട്ടിൽ ഉള്ളിലുള്ള വാഹനങ്ങൾക്ക് വഴി കൊടുക്കുക."
-  ],
-  [
-   "Stop behind the stop line at red.",
-   "ചുവപ്പിൽ സ്റ്റോപ്പ് ലൈനിനു പിന്നിൽ നിർത്തുക."
-  ],
-  [
-   "Signal early before turning or exiting.",
-   "തിരിയുന്നതിനും എക്സിറ്റിനും മുമ്പ് നേരത്തേ സിഗ്നൽ നൽകുക."
-  ],
-  [
-   "Wait for a safe gap before turning right.",
-   "വലത്തോട്ട് തിരിയും മുമ്പ് സുരക്ഷിതമായ വിടവിനായി കാത്തിരിക്കുക."
-  ],
-  [
-   "Give way to pedestrians crossing at the junction.",
-   "ജംഗ്ഷനിൽ റോഡ് മുറിച്ചുകടക്കുന്ന കാൽനടക്കാർക്ക് വഴി കൊടുക്കുക."
-  ],
-  [
-   "Move left and slow down for sirens.",
-   "സൈറൺ കേട്ടാൽ ഇടത്തോട്ട് മാറി വേഗം കുറയ്ക്കുക."
-  ],
-  [
-   "Follow the police officer over the signal.",
-   "സിഗ്നലിനെക്കാൾ പോലീസുകാരന്റെ നിർദേശം പാലിക്കുക."
-  ],
-  [
-   "Enter a junction only if there is room to leave it.",
-   "ജംഗ്ഷൻ വിടാൻ സ്ഥലമുണ്ടെങ്കിൽ മാത്രം അതിൽ കയറുക."
-  ],
-  [
-   "Treat a dead signal as an uncontrolled junction.",
-   "കേടായ സിഗ്നലിനെ നിയന്ത്രണമില്ലാത്ത ജംഗ്ഷനായി കണക്കാക്കുക."
   ]
- ],
- "donts": [
-  [
-   "Do not speed up to beat amber.",
-   "മഞ്ഞ ലൈറ്റ് കടക്കാൻ വേഗം കൂട്ടരുത്."
-  ],
-  [
-   "Do not stop on the zebra crossing or inside the junction.",
-   "സീബ്ര ക്രോസിങ്ങിലോ ജംഗ്ഷനുള്ളിലോ നിർത്തരുത്."
-  ],
-  [
-   "Do not cut the corner when turning right.",
-   "വലത്തോട്ട് തിരിയുമ്പോൾ വളവ് മുറിക്കരുത്."
-  ],
-  [
-   "Do not force your way into a roundabout.",
-   "റൗണ്ടെബൗട്ടിലേക്ക് തള്ളിക്കയറരുത്."
-  ],
-  [
-   "Do not overtake near or inside a junction.",
-   "ജംഗ്ഷനടുത്തോ ഉള്ളിലോ ഓവർടേക്ക് ചെയ്യരുത്."
-  ],
-  [
-   "Do not assume the other driver will stop.",
-   "മറ്റേ ഡ്രൈവർ നിർത്തും എന്ന് കരുതരുത്."
-  ],
-  [
-   "Do not block the road for the sake of a few seconds.",
-   "ഏതാനും സെക്കൻഡ് ലാഭിക്കാൻ റോഡ് തടസ്സപ്പെടുത്തരുത്."
-  ],
-  [
-   "Do not follow an ambulance closely to skip traffic.",
-   "തിരക്ക് ഒഴിവാക്കാൻ ആംബുലൻസിന് പിന്നാലെ പോകരുത്."
-  ],
-  [
-   "Do not use the phone while waiting at a signal and miss the green.",
-   "സിഗ്നലിൽ കാത്തുനിൽക്കുമ്പോൾ ഫോൺ ഉപയോഗിച്ച് പച്ച കാണാതെ പോകരുത്."
-  ],
-  [
-   "Do not ignore a Give Way or Stop sign.",
-   "ഗിവ് വേ, സ്റ്റോപ്പ് ചിഹ്നങ്ങൾ അവഗണിക്കരുത്."
-  ]
- ],
- "myths": [
-  {
-   "m": [
-    "Whoever reaches the junction first has right of way.",
-    "ആദ്യം ജംഗ്ഷനിൽ എത്തുന്നയാൾക്കാണ് മുൻഗണന."
-   ],
-   "f": [
-    "Priority comes from the road, signs and signals, not from who is faster. A fast vehicle on a minor road still gives way.",
-    "മുൻഗണന നിശ്ചയിക്കുന്നത് റോഡ്, ചിഹ്നം, സിഗ്നൽ എന്നിവയാണ്, വേഗമല്ല. ചെറിയ റോഡിലെ വേഗമേറിയ വാഹനവും വഴി കൊടുക്കണം."
-   ]
-  },
-  {
-   "m": [
-    "Bigger vehicles always have right of way.",
-    "വലിയ വാഹനങ്ങൾക്ക് എപ്പോഴും മുൻഗണനയുണ്ട്."
-   ],
-   "f": [
-    "Size gives no priority. A bus is simply harder to stop, so smaller vehicles should be extra careful, but the rules apply to all.",
-    "വലുപ്പം മുൻഗണന നൽകുന്നില്ല. ബസ് നിർത്താൻ പ്രയാസമാണെന്നേയുള്ളൂ, അതിനാൽ ചെറിയ വാഹനങ്ങൾ കൂടുതൽ ശ്രദ്ധിക്കണം; നിയമം എല്ലാവർക്കും ബാധകമാണ്."
-   ]
-  },
-  {
-   "m": [
-    "On green I can go no matter what.",
-    "പച്ച കണ്ടാൽ എന്തായാലും പോകാം."
-   ],
-   "f": [
-    "Green only means you may go if it is safe. Vehicles still clearing the junction and pedestrians must be given time.",
-    "പച്ച എന്നാൽ സുരക്ഷിതമെങ്കിൽ പോകാം എന്നു മാത്രം. ജംഗ്ഷൻ ഒഴിയുന്ന വാഹനങ്ങൾക്കും കാൽനടക്കാർക്കും സമയം നൽകണം."
-   ]
-  },
-  {
-   "m": [
-    "The vehicle entering a roundabout has priority because it is moving.",
-    "റൗണ്ടെബൗട്ടിലേക്ക് കയറുന്ന വാഹനത്തിനാണ് മുൻഗണന."
-   ],
-   "f": [
-    "Vehicles already on the roundabout are given way to, as shown by the Roundabout and Give Way signs.",
-    "റൗണ്ടെബൗട്ടിലുള്ള വാഹനങ്ങൾക്കാണ് വഴി കൊടുക്കേണ്ടത്; ചിഹ്നങ്ങൾ ഇത് കാണിക്കുന്നു."
-   ]
-  },
-  {
-   "m": [
-    "If an ambulance is behind me, I can jump a red light for it.",
-    "പിന്നിൽ ആംബുലൻസ് ഉണ്ടെങ്കിൽ ചുവപ്പ് ലൈറ്റ് കടക്കാം."
-   ],
-   "f": [
-    "Make room safely, but do not enter cross traffic blindly. Stay safe so that you do not cause a second emergency.",
-    "സുരക്ഷിതമായി സ്ഥലം ഒരുക്കുക; കാണാതെ മറ്റു ദിശയിലെ വാഹനങ്ങൾക്കിടയിലേക്ക് കയറരുത്. മറ്റൊരു അപകടം ഉണ്ടാക്കാതിരിക്കുക."
-   ]
-  }
- ],
- "stories": [
-  {
-   "t": [
-    "The turn that was too early",
-    "വളവ് മുറിച്ച തിരിവ്"
-   ],
-   "s": [
-    "A learner called Anu was turning right at a small T-junction. She saw an oncoming scooter but felt she could make it, so she cut the corner and started turning early. The scooter rider had to brake hard and slid slightly on the wet road. Nobody was hurt, but both of them were shaking. Her instructor later asked her one question: what was the hurry?",
-    "അനു എന്ന പഠിതാവ് ഒരു ചെറിയ ടി-ജംഗ്ഷനിൽ വലത്തോട്ട് തിരിയുകയായിരുന്നു. എതിരെ ഒരു സ്കൂട്ടർ കണ്ടെങ്കിലും കടന്നുപോകാം എന്ന് തോന്നി, അവൾ വളവ് മുറിച്ച് നേരത്തേ തിരിഞ്ഞു. സ്കൂട്ടർ യാത്രക്കാരൻ ശക്തമായി ബ്രേക്ക് ചെയ്ത് നനഞ്ഞ റോഡിൽ ചെറുതായി തെന്നി. ആർക്കും പരിക്കില്ല, പക്ഷേ ഇരുവരും വിറച്ചുപോയി. പിന്നീട് ഇൻസ്ട്രക്ടർ ഒരു ചോദ്യമേ ചോദിച്ചുള്ളൂ: എന്തിനായിരുന്നു ഇത്ര ധൃതി?"
-   ],
-   "lesson": [
-    "When turning right, wait for a clear gap and give way to oncoming traffic. A few seconds of waiting is cheaper than a collision.",
-    "വലത്തോട്ട് തിരിയുമ്പോൾ വ്യക്തമായ വിടവിനായി കാത്ത് എതിരെ വരുന്നവർക്ക് വഴി കൊടുക്കുക. കൂട്ടിയിടിയേക്കാൾ എത്രയോ ചെലവു കുറവാണ് ഏതാനും സെക്കൻഡ് കാത്തിരിപ്പ്."
-   ]
-  },
-  {
-   "t": [
-    "Making room for the siren",
-    "സൈറണിന് വഴിയൊരുക്കി"
-   ],
-   "s": [
-    "Ravi was waiting in a queue at a signal when he heard a siren behind him. He checked his mirror, saw an ambulance, and signalled left. He moved his car a little to the left and the others did the same, leaving a narrow lane in the middle. He stayed at the red light and did not rush forward. The ambulance edged through slowly and the queue closed up again after it had passed.",
-    "രവി ഒരു സിഗ്നലിൽ വരിയിൽ കാത്തുനിൽക്കുമ്പോൾ പിന്നിൽ സൈറൺ കേട്ടു. മിററിൽ നോക്കി ആംബുലൻസ് കണ്ടു, ഇടത് സിഗ്നൽ നൽകി കാർ അൽപം ഇടത്തോട്ട് നീക്കി. മറ്റുള്ളവരും അങ്ങനെ ചെയ്തപ്പോൾ നടുവിൽ ഒരു ചെറിയ പാത തെളിഞ്ഞു. അയാൾ ചുവപ്പ് സിഗ്നലിൽ തന്നെ നിന്നു, മുന്നോട്ട് കുതിച്ചില്ല. ആംബുലൻസ് പതുക്കെ കടന്നുപോയി, പിന്നാലെ വരി വീണ്ടും ഒന്നായി."
-   ],
-   "lesson": [
-    "Make room early and calmly, without jumping the signal. Small, shared actions clear the way.",
-    "നേരത്തേ, ശാന്തമായി, സിഗ്നൽ ലംഘിക്കാതെ സ്ഥലമൊരുക്കുക. എല്ലാവരും ചെയ്യുന്ന ചെറിയ പ്രവൃത്തികൾ വഴി തുറക്കുന്നു."
-   ]
-  }
- ],
- "recap": [
-  [
-   "Right of way is an agreement, not a prize.",
-   "മുൻഗണന ഒരു ധാരണയാണ്, സമ്മാനമല്ല."
-  ],
-  [
-   "Main road first; the minor road and the Give Way line wait.",
-   "പ്രധാന റോഡിന് ആദ്യം; ചെറിയ റോഡും ഗിവ് വേ ലൈനും കാത്തിരിക്കണം."
-  ],
-  [
-   "Roundabout: clockwise, give way to those already inside.",
-   "റൗണ്ടെബൗട്ട്: ഘടികാരദിശ, ഉള്ളിലുള്ളവർക്ക് വഴി കൊടുക്കുക."
-  ],
-  [
-   "Amber means prepare to stop; green means go only if clear.",
-   "മഞ്ഞ എന്നാൽ നിർത്താൻ തയ്യാറാകുക; പച്ച എന്നാൽ ഒഴിഞ്ഞെങ്കിൽ മാത്രം പോകുക."
-  ],
-  [
-   "Police officer first, then signals, then signs and general rules.",
-   "ആദ്യം പോലീസുകാരൻ, പിന്നെ സിഗ്നൽ, പിന്നെ ചിഹ്നങ്ങളും പൊതു നിയമങ്ങളും."
-  ],
-  [
-   "Siren behind you: signal, move left, slow or stop, stay safe.",
-   "പിന്നിൽ സൈറൺ: സിഗ്നൽ, ഇടത്തേക്ക് മാറുക, വേഗം കുറയ്ക്കുക, സുരക്ഷിതമായിരിക്കുക."
-  ]
- ]
 }

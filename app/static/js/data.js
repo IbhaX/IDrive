@@ -65,8 +65,8 @@ const Data = {
   },
 
   catOf(id) { return Data.catById[id]; },
-  sm(d) { return d.ml || []; },        // Malayalam [name, meaning, action]
-  catMl(c, i) { return (c.ml || [])[i] || ""; },
+  sm(d) { return ["ta", "ta-en"].includes(I18n.lang()) ? (d.ta || d.ml || []) : (d.ml || []); },
+  catMl(c, i) { return ((["ta", "ta-en"].includes(I18n.lang()) ? c.ta : c.ml) || [])[i] || ""; },
 };
 window.Data = Data;
 })();

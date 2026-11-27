@@ -47,7 +47,7 @@ const TABS = [
 ];
 const DOCK = ["home", "course", "learn", "exam"];
 const TAB_OF = { lesson: "course", theory: "course", quiz: "exam", cards: "exam", limits: "learn" };
-const LANGS = [["en", "EN", "English"], ["ml", "മല", "മലയാളം"], ["both", "EN+മല", "English + മലയാളം"]];
+const LANGS = [["en", "EN", "English"], ["ml", "മല", "മലയാളം"], ["ta", "த", "தமிழ்"], ["both", "EN+மல", "English + മലയാളം"], ["ta-en", "EN+த", "English + தமிழ்"]];
 const curTab = () => TAB_OF[S.view] || S.view;
 
 const tabHtml = (ids) => TABS.filter(t => !ids || ids.includes(t.id)).map(t =>
@@ -77,7 +77,7 @@ window.toggleTheme = () => {
 };
 
 function applyStatic() {
-  document.documentElement.lang = I18n.lang() === "ml" ? "ml" : "en";
+  document.documentElement.lang = ["ta", "ta-en"].includes(I18n.lang()) ? "ta" : I18n.lang() === "ml" ? "ml" : "en";
   document.getElementById("subline").textContent = I18n.u("sub2");
   const play = document.querySelector('meta[name="play-url"]');
   document.getElementById("foot").innerHTML = `${esc(I18n.u("foot"))}<span class="footlinks"><a href="/about">${esc(I18n.u("ftAbout"))}</a><a href="/privacy">${esc(I18n.u("ftPrivacy"))}</a><a href="/terms">${esc(I18n.u("ftTerms"))}</a><a href="/install">${esc(I18n.u("ftInstall"))}</a>${play ? `<a href="${I18n.attr(play.content)}" rel="noopener" target="_blank">${esc(I18n.u("ftPlay"))}</a>` : ""}</span>`;
@@ -161,7 +161,7 @@ function applyRoute() {
 }
 /* address bar → clean path for the current route, keeping ?lang if present */
 function urlFor(r) {
-  const q = P.lang === "ml" ? "?lang=ml" : "";
+  const q = ["ml","ta","en","both","ta-en"].includes(P.lang) ? "?lang=" + P.lang : "";
   return routeToPath(r) + q;
 }
 function setHash(v) {
@@ -262,7 +262,7 @@ function setMeta(sel, attr, key, val) {
   el.setAttribute(sel.startsWith("link") ? "href" : "content", val);
 }
 async function syncHead() {
-  const lang = I18n.lang() === "ml" ? "ml" : "en", key = lang + location.pathname;
+  const lang = ["ml","ta","ta-en"].includes(I18n.lang()) ? (I18n.lang() === "ta-en" ? "ta" : I18n.lang()) : "en", key = lang + location.pathname;
   let h = headCache.get(key);
   if (!h) {
     try {
@@ -469,7 +469,7 @@ window.hideSplash = () => {
   // the server-rendered page for this URL; static pages reuse it as-is
   StaticPage.keep(location.pathname, app.innerHTML);
   const ql = new URLSearchParams(location.search).get("lang");
-  if (ql === "ml" || ql === "en") { P.lang = ql; save(); }
+  if (ql === "ml" || ql === "ta" || ql === "en" || ql === "ta-en" || ql === "both") { P.lang = ql; save(); }
   app.innerHTML = `<section class="panel"><div class="skel"><i style="height:26px;width:34%"></i><i style="height:16px"></i><i style="height:16px;width:80%"></i><i style="height:16px;width:60%"></i></div></section>`;
   try {
     await Data.loadIndex();

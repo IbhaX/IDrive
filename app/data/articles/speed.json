@@ -1,320 +1,388 @@
 {
- "intro": [
-  "Speed decides how much time you have to react and how hard any crash will be. A speed limit is the most you may do in good conditions, not a target. This article shows how stopping distance works, how to keep a safe gap, and how to overtake only when it is truly safe.",
-  "പ്രതികരിക്കാൻ എത്ര സമയം കിട്ടും, അപകടം എത്ര ഗുരുതരമാകും എന്ന് തീരുമാനിക്കുന്നത് വേഗമാണ്. വേഗപരിധി നല്ല സാഹചര്യത്തിൽ ഓടിക്കാവുന്ന പരമാവധിയാണ്, ലക്ഷ്യമല്ല. നിർത്താനുള്ള ദൂരം എങ്ങനെ പ്രവർത്തിക്കുന്നു, സുരക്ഷിത അകലം എങ്ങനെ പാലിക്കാം, സുരക്ഷിതമാകുമ്പോൾ മാത്രം എങ്ങനെ മറികടക്കാം എന്നിവ ഈ ലേഖനം വിശദീകരിക്കുന്നു."
- ],
- "sections": [
-  {
-   "h": [
-    "Reaction time and stopping distance",
-    "പ്രതികരണ സമയവും നിർത്താനുള്ള ദൂരവും"
-   ],
-   "p": [
+  "intro": [
+    "Speed decides how much time you have to react and how hard any crash will be. A speed limit is the most you may do in good conditions, not a target. This article shows how stopping distance works, how to keep a safe gap, and how to overtake only when it is truly safe.",
+    "പ്രതികരിക്കാൻ എത്ര സമയം കിട്ടും, അപകടം എത്ര ഗുരുതരമാകും എന്ന് തീരുമാനിക്കുന്നത് വേഗമാണ്. വേഗപരിധി നല്ല സാഹചര്യത്തിൽ ഓടിക്കാവുന്ന പരമാവധിയാണ്, ലക്ഷ്യമല്ല. നിർത്താനുള്ള ദൂരം എങ്ങനെ പ്രവർത്തിക്കുന്നു, സുരക്ഷിത അകലം എങ്ങനെ പാലിക്കാം, സുരക്ഷിതമാകുമ്പോൾ മാത്രം എങ്ങനെ മറികടക്കാം എന്നിവ ഈ ലേഖനം വിശദീകരിക്കുന്നു.",
+    "நீங்கள் எவ்வளவு நேரம் எதிர்வினையாற்ற வேண்டும் மற்றும் எந்த விபத்தை எவ்வளவு கடினமாக இருக்கும் என்பதை வேகம் தீர்மானிக்கிறது. வேக வரம்பு என்பது நல்ல நிலையில் நீங்கள் செய்யக்கூடியது, இலக்கு அல்ல. தூரத்தை நிறுத்துவது எப்படி, பாதுகாப்பான இடைவெளியை வைத்திருப்பது எப்படி, அது உண்மையிலேயே பாதுகாப்பாக இருக்கும்போது மட்டும் எப்படி முந்துவது என்பதை இந்தக் கட்டுரை காட்டுகிறது."
+  ],
+  "sections": [
+    {
+      "h": [
+        "Reaction time and stopping distance",
+        "പ്രതികരണ സമയവും നിർത്താനുള്ള ദൂരവും",
+        "எதிர்வினை நேரம் மற்றும் நிறுத்தும் தூரம்"
+      ],
+      "p": [
+        [
+          "Stopping distance has two parts. Reaction distance is how far you travel before your foot reaches the brake. Braking distance is how far the vehicle travels after the brake is applied.",
+          "നിർത്താനുള്ള ദൂരത്തിന് രണ്ട് ഭാഗങ്ങളുണ്ട്. കാൽ ബ്രേക്കിൽ എത്തുംവരെ നിങ്ങൾ സഞ്ചരിക്കുന്ന ദൂരമാണ് പ്രതികരണ ദൂരം. ബ്രേക്ക് ചവിട്ടിയ ശേഷം വാഹനം സഞ്ചരിക്കുന്ന ദൂരമാണ് ബ്രേക്കിങ് ദൂരം.",
+          "நிறுத்த தூரம் இரண்டு பகுதிகளைக் கொண்டுள்ளது. உங்கள் கால் பிரேக்கை அடையும் முன் நீங்கள் எவ்வளவு தூரம் பயணிக்கிறீர்கள் என்பது எதிர்வினை தூரம். பிரேக்கிங் தூரம் என்பது பிரேக் போட்ட பிறகு வாகனம் எவ்வளவு தூரம் பயணிக்கிறது."
+        ],
+        [
+          "Everyone needs time to see a danger, decide and act. Tiredness, phone use, alcohol and worry make this time longer, so you travel further before you even start braking.",
+          "അപകടം കാണാനും തീരുമാനിക്കാനും പ്രവർത്തിക്കാനും എല്ലാവർക്കും സമയം വേണം. ക്ഷീണം, ഫോൺ ഉപയോഗം, മദ്യം, ആധി എന്നിവ ഈ സമയം കൂട്ടും; അതിനാൽ ബ്രേക്ക് ചവിട്ടും മുമ്പേ നിങ്ങൾ കൂടുതൽ ദൂരം പോയിട്ടുണ്ടാകും.",
+          "ஒவ்வொருவருக்கும் ஆபத்தைக் காணவும், முடிவெடுத்து செயல்படவும் நேரம் தேவை. சோர்வு, ஃபோன் பயன்பாடு, மது மற்றும் கவலை ஆகியவை இந்த நேரத்தை அதிகமாக்குகின்றன, எனவே நீங்கள் பிரேக் செய்யத் தொடங்குவதற்கு முன்பே நீங்கள் மேலும் பயணிக்கிறீர்கள்."
+        ],
+        [
+          "Braking distance grows much faster than speed. As a rule of thumb, doubling the speed makes the braking distance about four times longer.",
+          "വേഗത്തേക്കാൾ വളരെ വേഗത്തിലാണ് ബ്രേക്കിങ് ദൂരം കൂടുന്നത്. ഒരു ഏകദേശ നിയമമായി, വേഗം ഇരട്ടിയായാൽ ബ്രേക്കിങ് ദൂരം ഏകദേശം നാലിരട്ടിയാകും.",
+          "பிரேக்கிங் தூரம் வேகத்தை விட மிக வேகமாக வளரும். கட்டைவிரல் விதியாக, வேகத்தை இரட்டிப்பாக்குவது பிரேக்கிங் தூரத்தை நான்கு மடங்கு அதிகமாக்குகிறது."
+        ],
+        [
+          "Wet roads, worn tyres, loose gravel, a heavy load and weak brakes all lengthen the distance. In the rain, plan to need much more room than on a dry day.",
+          "നനഞ്ഞ റോഡ്, തേഞ്ഞ ടയർ, ചരൽ, ഭാരമുള്ള ലോഡ്, ബലം കുറഞ്ഞ ബ്രേക്ക് എന്നിവ ദൂരം കൂട്ടും. മഴയിൽ ഉണങ്ങിയ ദിവസത്തേക്കാൾ വളരെ കൂടുതൽ സ്ഥലം വേണമെന്ന് കരുതി ഓടിക്കുക.",
+          "ஈரமான சாலைகள், தேய்ந்த டயர்கள், தளர்வான சரளை, அதிக சுமை மற்றும் பலவீனமான பிரேக்குகள் அனைத்தும் தூரத்தை நீட்டிக்கின்றன. மழையில், ஒரு உலர் நாள் விட அதிக அறை தேவை திட்டமிடுங்கள்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Matching speed to surroundings",
+        "വേഗം പരിസരത്തിന് ഇണങ്ങുന്നതാക്കൽ",
+        "சுற்றுப்புறங்களுக்கு வேகம் பொருந்துகிறது"
+      ],
+      "p": [
+        [
+          "The posted limit is a ceiling. If you cannot see far ahead, or the road is wet, foggy or crowded, the safe speed is lower than the limit.",
+          "പ്രദർശിപ്പിച്ച വേഗപരിധി ഒരു മേൽപ്പരിധിയാണ്. ദൂരെ കാണാൻ കഴിയുന്നില്ലെങ്കിലോ റോഡ് നനഞ്ഞതോ മൂടൽമഞ്ഞുള്ളതോ തിരക്കുള്ളതോ ആണെങ്കിലോ സുരക്ഷിത വേഗം പരിധിയേക്കാൾ കുറവാണ്.",
+          "இடுகையிடப்பட்ட வரம்பு உச்சவரம்பு. உங்களால் வெகுதூரம் பார்க்க முடியாவிட்டால், அல்லது சாலை ஈரமாகவோ, பனிமூட்டமாகவோ அல்லது கூட்டமாகவோ இருந்தால், பாதுகாப்பான வேகம் வரம்பை விட குறைவாக இருக்கும்."
+        ],
+        [
+          "Slow down near schools, markets, bus stops, temple and church areas and village roads where people and animals may step out suddenly.",
+          "സ്കൂൾ, ചന്ത, ബസ് സ്റ്റോപ്പ്, ആരാധനാലയ പരിസരം, ആളുകളും മൃഗങ്ങളും പെട്ടെന്ന് ഇറങ്ങാൻ സാധ്യതയുള്ള നാട്ടുവഴികൾ എന്നിവിടങ്ങളിൽ വേഗം കുറയ്ക്കുക.",
+          "பள்ளிகள், சந்தைகள், பேருந்து நிறுத்தங்கள், கோவில் மற்றும் தேவாலயப் பகுதிகள் மற்றும் மக்கள் மற்றும் விலங்குகள் திடீரென வெளியேறும் கிராம சாலைகளுக்கு அருகில் வேகத்தைக் குறைக்கவும்."
+        ],
+        [
+          "On ghat roads and sharp bends, slow down before the bend, not in the middle of it. In the monsoon, watch for wet leaves, mud and water on the surface.",
+          "ചുരം റോഡുകളിലും കടുത്ത വളവുകളിലും വളവിന് മുമ്പേ വേഗം കുറയ്ക്കുക, വളവിനുള്ളിൽ വച്ചല്ല. മഴക്കാലത്ത് നനഞ്ഞ ഇലകൾ, ചെളി, റോഡിലെ വെള്ളം എന്നിവ ശ്രദ്ധിക്കുക.",
+          "காட் சாலைகள் மற்றும் கூர்மையான வளைவுகளில், வளைவுக்கு முன் வேகத்தைக் குறைக்கவும், அதன் நடுவில் அல்ல. மழைக்காலத்தில், மேற்பரப்பில் ஈரமான இலைகள், சேறு மற்றும் நீர் ஆகியவற்றைக் கண்காணிக்கவும்."
+        ],
+        [
+          "At night, your headlights show only a limited distance. Drive at a speed that lets you stop within the distance you can see.",
+          "രാത്രിയിൽ ഹെഡ്ലൈറ്റ് കാണിക്കുന്നത് പരിമിതമായ ദൂരം മാത്രമാണ്. കാണാൻ കഴിയുന്ന ദൂരത്തിനുള്ളിൽ നിർത്താൻ പറ്റുന്ന വേഗത്തിൽ ഓടിക്കുക.",
+          "இரவில், உங்கள் ஹெட்லைட்கள் குறிப்பிட்ட தூரத்தை மட்டுமே காட்டுகின்றன. நீங்கள் பார்க்கக்கூடிய தூரத்தில் நிறுத்த அனுமதிக்கும் வேகத்தில் ஓட்டவும்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Keeping a safe following gap",
+        "മുന്നിലെ വാഹനവുമായി സുരക്ഷിത അകലം",
+        "பாதுகாப்பான பின்வரும் இடைவெளியை வைத்திருப்பது"
+      ],
+      "p": [
+        [
+          "Tailgating leaves you no time to react if the vehicle ahead brakes suddenly. Most rear-end crashes happen because the gap was too small for the speed.",
+          "മുന്നിലെ വാഹനം പെട്ടെന്ന് ബ്രേക്ക് ചെയ്താൽ പ്രതികരിക്കാൻ സമയം തരാത്തതാണ് തൊട്ടുപിന്നിൽ ഓടിക്കുന്നത്. വേഗത്തിന് ചേരാത്ത ചെറിയ അകലം കാരണമാണ് പിന്നിൽ ഇടിക്കുന്ന മിക്ക അപകടങ്ങളും.",
+          "டெயில்கேட்டிங் உங்களுக்கு முன்னால் செல்லும் வாகனம் திடீரென பிரேக் போட்டால் எதிர்வினையாற்ற நேரமில்லாமல் போகும். வேகத்திற்கு இடைவெளி மிகவும் சிறியதாக இருந்ததால் பெரும்பாலான பின்புற விபத்துக்கள் நிகழ்கின்றன."
+        ],
+        [
+          "A simple rule of thumb is the two-second gap. When the vehicle ahead passes a fixed point such as a pole, count two seconds. If you reach the point before you finish counting, drop back.",
+          "ലളിതമായ ഒരു ഏകദേശ നിയമം രണ്ട് സെക്കൻഡ് അകലമാണ്. മുന്നിലെ വാഹനം ഒരു തൂൺ പോലെ ഉറച്ച ഒരു സ്ഥലം കടന്നുപോയാൽ രണ്ട് സെക്കൻഡ് എണ്ണുക. എണ്ണിത്തീരും മുമ്പ് നിങ്ങൾ അവിടെ എത്തിയാൽ അകലം കൂട്ടുക.",
+          "ஒரு எளிய விதி இரண்டு-வினாடி இடைவெளி. முன்னால் செல்லும் வாகனம் ஒரு கம்பம் போன்ற ஒரு நிலையான புள்ளியைக் கடக்கும்போது, ​​இரண்டு வினாடிகள் எண்ணுங்கள். எண்ணி முடிப்பதற்குள் நீங்கள் புள்ளியை அடைந்தால், பின்வாங்கவும்."
+        ],
+        [
+          "Make the gap longer in rain, at night, behind large vehicles that block your view, and when you are tired. This is a rule of thumb, not a guarantee.",
+          "മഴയിലും രാത്രിയിലും കാഴ്ച മറയ്ക്കുന്ന വലിയ വാഹനങ്ങളുടെ പിന്നിലും ക്ഷീണമുള്ളപ്പോഴും അകലം കൂട്ടുക. ഇത് ഒരു ഏകദേശ നിയമം മാത്രമാണ്, ഉറപ്പല്ല.",
+          "மழை, இரவில், உங்கள் பார்வையைத் தடுக்கும் பெரிய வாகனங்களுக்குப் பின்னால், மற்றும் நீங்கள் சோர்வாக இருக்கும்போது இடைவெளியை அதிகமாக்குங்கள். இது கட்டைவிரல் விதி, உத்தரவாதம் அல்ல."
+        ],
+        [
+          "If someone tailgates you, do not brake to scare them. Keep left where possible and let them pass safely.",
+          "ആരെങ്കിലും തൊട്ടുപിന്നിൽ ഓടിച്ചാൽ പേടിപ്പിക്കാൻ ബ്രേക്ക് ചവിട്ടരുത്. കഴിയുമെങ്കിൽ ഇടതുവശം ചേർന്ന് അവരെ സുരക്ഷിതമായി കടത്തിവിടുക.",
+          "யாராவது உங்களைத் தாக்கினால், அவர்களைப் பயமுறுத்துவதற்கு பிரேக் போடாதீர்கள். முடிந்தவரை இடதுபுறமாக வைத்து, அவர்களைப் பாதுகாப்பாகக் கடந்து செல்ல அனுமதிக்கவும்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Overtaking safely",
+        "സുരക്ഷിതമായി മറികടക്കൽ",
+        "பாதுகாப்பாக முந்திச் செல்லுதல்"
+      ],
+      "p": [
+        [
+          "Overtake only when you have a clear view ahead, enough empty road to complete the move, and the vehicle behind is not already overtaking you. If in doubt, do not go.",
+          "മുന്നിൽ വ്യക്തമായ കാഴ്ചയും മറികടക്കൽ പൂർത്തിയാക്കാൻ വേണ്ടത്ര ഒഴിഞ്ഞ റോഡും പിന്നിലെ വാഹനം നിങ്ങളെ മറികടക്കുന്നില്ലെന്നും ഉറപ്പുണ്ടെങ്കിൽ മാത്രം മറികടക്കുക. സംശയമുണ്ടെങ്കിൽ പോകരുത്.",
+          "உங்களுக்கு முன்னால் தெளிவான பார்வை இருந்தால் மட்டுமே முந்திக்கொள்ளுங்கள், நகர்வை முடிக்க போதுமான வெற்று சாலை, பின்னால் வரும் வாகனம் ஏற்கனவே உங்களை முந்திச் செல்லவில்லை. சந்தேகம் இருந்தால், செல்ல வேண்டாம்."
+        ],
+        [
+          "Never overtake at a bend, hill crest, junction, bridge, pedestrian crossing, or where there is a solid centre line or a no-overtaking sign.",
+          "വളവ്, കയറ്റത്തിന്റെ മുകൾ, ജംഗ്ഷൻ, പാലം, കാൽനട ക്രോസിങ്, തുടർവര അല്ലെങ്കിൽ മറികടക്കൽ നിരോധന ചിഹ്നമുള്ള സ്ഥലം എന്നിവിടങ്ങളിൽ ഒരിക്കലും മറികടക്കരുത്.",
+          "ஒரு வளைவு, மலை முகடு, சந்திப்பு, பாலம், பாதசாரி கடக்கும் இடங்கள் அல்லது திடமான மையக் கோடு அல்லது முந்திச் செல்லக் கூடாது என்ற அடையாளம் உள்ள இடங்களில் ஒருபோதும் முந்திச் செல்ல வேண்டாம்."
+        ],
+        [
+          "The usual order is mirror, signal, move out, pass with enough side room, then return to the left once you can see the vehicle you passed in your mirror. Do not cut in sharply.",
+          "സാധാരണ ക്രമം: മിറർ, സിഗ്നൽ, വലത്തേക്ക് നീങ്ങൽ, വശത്ത് വേണ്ടത്ര സ്ഥലമിട്ട് കടക്കൽ, മറികടന്ന വാഹനം മിററിൽ കാണുമ്പോൾ ഇടത്തേക്ക് മടങ്ങൽ. ഒറ്റയടിക്ക് വെട്ടിച്ച് കയറരുത്.",
+          "வழக்கமான ஆர்டர் கண்ணாடி, சிக்னல், வெளியே நகர்த்தல், போதுமான பக்க அறையுடன் கடந்து செல்லுதல், பின்னர் உங்கள் கண்ணாடியில் நீங்கள் கடந்து சென்ற வாகனத்தைப் பார்த்தவுடன் இடதுபுறம் திரும்பவும். கூர்மையாக வெட்ட வேண்டாம்."
+        ],
+        [
+          "If the driver ahead signals right or is turning, do not overtake. If another driver is overtaking, let them complete it, and do not speed up.",
+          "മുന്നിലെ ഡ്രൈവർ വലത് സിഗ്നൽ നൽകുകയോ തിരിയുകയോ ചെയ്യുന്നുണ്ടെങ്കിൽ മറികടക്കരുത്. മറ്റൊരാൾ മറികടക്കുകയാണെങ്കിൽ അത് പൂർത്തിയാക്കാൻ അനുവദിക്കുക, വേഗം കൂട്ടരുത്.",
+          "முன்னால் உள்ள இயக்கி வலதுபுறம் சமிக்ஞை செய்தால் அல்லது திரும்பினால், முந்திச் செல்ல வேண்டாம். வேறொரு டிரைவர் முந்திச் சென்றால், அவர்கள் அதை முடிக்கட்டும், வேகத்தை அதிகரிக்க வேண்டாம்."
+        ],
+        [
+          "Overtaking is not a race. Waiting a little behind a slow vehicle costs seconds; a failed overtake can cost far more.",
+          "മറികടക്കൽ ഒരു മത്സരമല്ല. വേഗം കുറഞ്ഞ വാഹനത്തിന് പിന്നിൽ അൽപം കാത്തിരിക്കാൻ സെക്കൻഡുകൾ മാത്രം മതി; പരാജയപ്പെട്ട മറികടക്കലിന് വില വളരെ കൂടുതലാണ്.",
+          "ஓவர்டேக் செய்வது ஒரு பந்தயம் அல்ல. மெதுவான வாகனத்தின் பின்னால் சிறிது நேரம் காத்திருப்பது வினாடிகள் செலவாகும்; தோல்வியுற்ற முந்திக்கொள்வது அதிக செலவாகும்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Slowing smoothly and being seen",
+        "സാവധാനം വേഗം കുറയ്ക്കലും കാണപ്പെടലും",
+        "சீராக மெதுவாகவும் பார்க்கவும்"
+      ],
+      "p": [
+        [
+          "Look far ahead, not just at the bumper in front. Early eye movement lets you ease off the accelerator and brake gently instead of braking hard.",
+          "തൊട്ടുമുന്നിലെ ബമ്പർ മാത്രമല്ല, ദൂരെയും നോക്കുക. നേരത്തേ നോക്കുന്നത് ആക്സിലറേറ്റർ വിട്ട് കഠിനമായി ചവിട്ടാതെ മെല്ലെ ബ്രേക്ക് ചെയ്യാൻ സഹായിക്കും.",
+          "முன்னால் உள்ள பம்பரை மட்டும் பார்க்காமல், வெகு தொலைவில் பார்க்கவும். ஆரம்பகால கண் அசைவு முடுக்கியை எளிதாக்கவும், கடினமாக பிரேக் செய்வதற்கு பதிலாக மெதுவாக பிரேக் செய்யவும்."
+        ],
+        [
+          "Smooth braking keeps the vehicle stable, especially on two-wheelers and on wet or loose surfaces. Sudden hard braking can cause a skid or a rear-end hit from the vehicle behind.",
+          "മെല്ലെയുള്ള ബ്രേക്കിങ് വാഹനത്തെ സ്ഥിരമായി നിർത്തുന്നു, പ്രത്യേകിച്ച് ഇരുചക്രവാഹനങ്ങളിലും നനഞ്ഞതോ അയഞ്ഞതോ ആയ പ്രതലത്തിലും. പെട്ടെന്നുള്ള കഠിന ബ്രേക്ക് തെന്നലിനോ പിന്നിലെ വാഹനം ഇടിക്കാനോ കാരണമാകാം.",
+          "மென்மையான பிரேக்கிங் வாகனத்தை நிலையாக வைத்திருக்கும், குறிப்பாக இரு சக்கர வாகனங்கள் மற்றும் ஈரமான அல்லது தளர்வான பரப்புகளில். திடீர் கடின பிரேக்கிங் சறுக்கல் அல்லது பின்னால் வரும் வாகனத்தின் பின்பகுதியில் அடிபடலாம்."
+        ],
+        [
+          "Brake lights and indicators tell the vehicle behind what you are doing. Keep them clean and working, and use them early.",
+          "ബ്രേക്ക് ലൈറ്റും ഇൻഡിക്കേറ്ററും നിങ്ങൾ എന്താണ് ചെയ്യുന്നതെന്ന് പിന്നിലെ വാഹനത്തെ അറിയിക്കുന്നു. അവ വൃത്തിയായും പ്രവർത്തിക്കുന്ന നിലയിലും സൂക്ഷിക്കുകയും നേരത്തേ ഉപയോഗിക്കുകയും ചെയ്യുക.",
+          "பிரேக் விளக்குகள் மற்றும் குறிகாட்டிகள் நீங்கள் என்ன செய்கிறீர்கள் என்பதை பின்னால் இருக்கும் வாகனத்திற்கு தெரிவிக்கின்றன. அவற்றை சுத்தமாகவும், வேலை செய்யவும் வைத்து, அவற்றை முன்கூட்டியே பயன்படுத்தவும்."
+        ]
+      ]
+    }
+  ],
+  "dos": [
     [
-     "Stopping distance has two parts. Reaction distance is how far you travel before your foot reaches the brake. Braking distance is how far the vehicle travels after the brake is applied.",
-     "നിർത്താനുള്ള ദൂരത്തിന് രണ്ട് ഭാഗങ്ങളുണ്ട്. കാൽ ബ്രേക്കിൽ എത്തുംവരെ നിങ്ങൾ സഞ്ചരിക്കുന്ന ദൂരമാണ് പ്രതികരണ ദൂരം. ബ്രേക്ക് ചവിട്ടിയ ശേഷം വാഹനം സഞ്ചരിക്കുന്ന ദൂരമാണ് ബ്രേക്കിങ് ദൂരം."
+      "Treat the speed limit as a maximum, not a target.",
+      "വേഗപരിധി പരമാവധിയായി കരുതുക, ലക്ഷ്യമായല്ല.",
+      "வேக வரம்பை அதிகபட்சமாகக் கருதுங்கள், இலக்காக அல்ல."
     ],
     [
-     "Everyone needs time to see a danger, decide and act. Tiredness, phone use, alcohol and worry make this time longer, so you travel further before you even start braking.",
-     "അപകടം കാണാനും തീരുമാനിക്കാനും പ്രവർത്തിക്കാനും എല്ലാവർക്കും സമയം വേണം. ക്ഷീണം, ഫോൺ ഉപയോഗം, മദ്യം, ആധി എന്നിവ ഈ സമയം കൂട്ടും; അതിനാൽ ബ്രേക്ക് ചവിട്ടും മുമ്പേ നിങ്ങൾ കൂടുതൽ ദൂരം പോയിട്ടുണ്ടാകും."
+      "Slow down in rain, fog, crowds and near schools.",
+      "മഴ, മൂടൽമഞ്ഞ്, തിരക്ക്, സ്കൂൾ പരിസരം എന്നിവിടങ്ങളിൽ വേഗം കുറയ്ക്കുക.",
+      "மழை, மூடுபனி, கூட்டம் மற்றும் பள்ளிகளுக்கு அருகில் மெதுவாக."
     ],
     [
-     "Braking distance grows much faster than speed. As a rule of thumb, doubling the speed makes the braking distance about four times longer.",
-     "വേഗത്തേക്കാൾ വളരെ വേഗത്തിലാണ് ബ്രേക്കിങ് ദൂരം കൂടുന്നത്. ഒരു ഏകദേശ നിയമമായി, വേഗം ഇരട്ടിയായാൽ ബ്രേക്കിങ് ദൂരം ഏകദേശം നാലിരട്ടിയാകും."
+      "Keep at least a two-second gap as a rule of thumb.",
+      "ഏകദേശ നിയമമായി കുറഞ്ഞത് രണ്ട് സെക്കൻഡ് അകലം പാലിക്കുക.",
+      "கட்டைவிரல் விதியாக குறைந்தது இரண்டு வினாடி இடைவெளியை வைத்திருங்கள்."
     ],
     [
-     "Wet roads, worn tyres, loose gravel, a heavy load and weak brakes all lengthen the distance. In the rain, plan to need much more room than on a dry day.",
-     "നനഞ്ഞ റോഡ്, തേഞ്ഞ ടയർ, ചരൽ, ഭാരമുള്ള ലോഡ്, ബലം കുറഞ്ഞ ബ്രേക്ക് എന്നിവ ദൂരം കൂട്ടും. മഴയിൽ ഉണങ്ങിയ ദിവസത്തേക്കാൾ വളരെ കൂടുതൽ സ്ഥലം വേണമെന്ന് കരുതി ഓടിക്കുക."
+      "Increase the gap on wet roads and at night.",
+      "നനഞ്ഞ റോഡിലും രാത്രിയിലും അകലം കൂട്ടുക.",
+      "ஈரமான சாலைகள் மற்றும் இரவில் இடைவெளியை அதிகரிக்கவும்."
+    ],
+    [
+      "Slow down before a bend, not in it.",
+      "വളവിനുള്ളിലല്ല, വളവിന് മുമ്പേ വേഗം കുറയ്ക്കുക.",
+      "ஒரு வளைவுக்கு முன் மெதுவாக, அதில் இல்லை."
+    ],
+    [
+      "Look far ahead and brake early and smoothly.",
+      "ദൂരെ നോക്കി നേരത്തേ മെല്ലെ ബ്രേക്ക് ചെയ്യുക.",
+      "முன்னோக்கிப் பார்த்து, சீக்கிரம் மற்றும் சீராக பிரேக் செய்யுங்கள்."
+    ],
+    [
+      "Overtake only with a clear view and clear road.",
+      "വ്യക്തമായ കാഴ്ചയും ഒഴിഞ്ഞ റോഡും ഉള്ളപ്പോൾ മാത്രം മറികടക്കുക.",
+      "தெளிவான பார்வை மற்றும் தெளிவான சாலையுடன் மட்டுமே முந்தவும்."
+    ],
+    [
+      "Signal and check mirrors before overtaking.",
+      "മറികടക്കും മുമ്പ് സിഗ്നൽ നൽകി മിറർ നോക്കുക.",
+      "முந்திச் செல்வதற்கு முன் கண்ணாடிகளை சமிக்ஞை செய்து சரிபார்க்கவும்."
+    ],
+    [
+      "Return to the left when it is safe, with room to spare.",
+      "സുരക്ഷിതമായി, വേണ്ടത്ര സ്ഥലമിട്ട് ഇടത്തേക്ക് മടങ്ങുക.",
+      "இடமில்லாமல் பாதுகாப்பாக இருக்கும் போது இடது பக்கம் திரும்பவும்."
+    ],
+    [
+      "Keep tyres and brakes in good condition.",
+      "ടയറും ബ്രേക്കും നല്ല നിലയിൽ സൂക്ഷിക്കുക.",
+      "டயர்கள் மற்றும் பிரேக்குகளை நல்ல நிலையில் வைத்திருங்கள்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Matching speed to surroundings",
-    "വേഗം പരിസരത്തിന് ഇണങ്ങുന്നതാക്കൽ"
-   ],
-   "p": [
+  ],
+  "donts": [
     [
-     "The posted limit is a ceiling. If you cannot see far ahead, or the road is wet, foggy or crowded, the safe speed is lower than the limit.",
-     "പ്രദർശിപ്പിച്ച വേഗപരിധി ഒരു മേൽപ്പരിധിയാണ്. ദൂരെ കാണാൻ കഴിയുന്നില്ലെങ്കിലോ റോഡ് നനഞ്ഞതോ മൂടൽമഞ്ഞുള്ളതോ തിരക്കുള്ളതോ ആണെങ്കിലോ സുരക്ഷിത വേഗം പരിധിയേക്കാൾ കുറവാണ്."
+      "Do not drive at the limit when conditions are poor.",
+      "സാഹചര്യം മോശമാകുമ്പോൾ പരിധിയിൽ ഓടിക്കരുത്.",
+      "நிலைமை மோசமாக இருக்கும்போது வரம்பிற்குள் வாகனம் ஓட்ட வேண்டாம்."
     ],
     [
-     "Slow down near schools, markets, bus stops, temple and church areas and village roads where people and animals may step out suddenly.",
-     "സ്കൂൾ, ചന്ത, ബസ് സ്റ്റോപ്പ്, ആരാധനാലയ പരിസരം, ആളുകളും മൃഗങ്ങളും പെട്ടെന്ന് ഇറങ്ങാൻ സാധ്യതയുള്ള നാട്ടുവഴികൾ എന്നിവിടങ്ങളിൽ വേഗം കുറയ്ക്കുക."
+      "Do not tailgate.",
+      "തൊട്ടുപിന്നിൽ ഓടിക്കരുത്.",
+      "டெயில்கேட் வேண்டாம்."
     ],
     [
-     "On ghat roads and sharp bends, slow down before the bend, not in the middle of it. In the monsoon, watch for wet leaves, mud and water on the surface.",
-     "ചുരം റോഡുകളിലും കടുത്ത വളവുകളിലും വളവിന് മുമ്പേ വേഗം കുറയ്ക്കുക, വളവിനുള്ളിൽ വച്ചല്ല. മഴക്കാലത്ത് നനഞ്ഞ ഇലകൾ, ചെളി, റോഡിലെ വെള്ളം എന്നിവ ശ്രദ്ധിക്കുക."
+      "Do not overtake at bends, crests, bridges or junctions.",
+      "വളവ്, കയറ്റത്തിന്റെ മുകൾ, പാലം, ജംഗ്ഷൻ എന്നിവിടങ്ങളിൽ മറികടക്കരുത്.",
+      "வளைவுகள், முகடுகள், பாலங்கள் அல்லது சந்திப்புகளில் முந்திச் செல்ல வேண்டாம்."
     ],
     [
-     "At night, your headlights show only a limited distance. Drive at a speed that lets you stop within the distance you can see.",
-     "രാത്രിയിൽ ഹെഡ്ലൈറ്റ് കാണിക്കുന്നത് പരിമിതമായ ദൂരം മാത്രമാണ്. കാണാൻ കഴിയുന്ന ദൂരത്തിനുള്ളിൽ നിർത്താൻ പറ്റുന്ന വേഗത്തിൽ ഓടിക്കുക."
+      "Do not overtake across a solid centre line.",
+      "തുടർവര കടന്ന് മറികടക്കരുത്.",
+      "திடமான மையக் கோட்டின் குறுக்கே முந்திச் செல்ல வேண்டாம்."
+    ],
+    [
+      "Do not overtake when the vehicle ahead is turning or signalling right.",
+      "മുന്നിലെ വാഹനം തിരിയുമ്പോഴോ വലത് സിഗ്നൽ നൽകുമ്പോഴോ മറികടക്കരുത്.",
+      "முன்னால் செல்லும் வாகனம் வலதுபுறம் திரும்பும்போது அல்லது சமிக்ஞை செய்யும் போது முந்திச் செல்ல வேண்டாம்."
+    ],
+    [
+      "Do not speed up when someone is overtaking you.",
+      "ആരെങ്കിലും നിങ്ങളെ മറികടക്കുമ്പോൾ വേഗം കൂട്ടരുത്.",
+      "யாராவது உங்களை முந்திச் செல்லும்போது வேகத்தை அதிகரிக்காதீர்கள்."
+    ],
+    [
+      "Do not cut in sharply after passing.",
+      "മറികടന്ന ശേഷം പെട്ടെന്ന് വെട്ടിച്ച് കയറരുത്.",
+      "கடந்து சென்ற பிறகு கூர்மையாக வெட்ட வேண்டாம்."
+    ],
+    [
+      "Do not brake suddenly without a reason.",
+      "കാരണമില്ലാതെ പെട്ടെന്ന് ബ്രേക്ക് ചവിട്ടരുത്.",
+      "காரணம் இல்லாமல் திடீரென பிரேக் போடாதீர்கள்."
+    ],
+    [
+      "Do not rush to beat a signal or save seconds.",
+      "സിഗ്നൽ മറികടക്കാനോ സെക്കൻഡുകൾ ലാഭിക്കാനോ തിരക്കുകൂട്ടരുത്.",
+      "சிக்னலை அடிக்க அல்லது நொடிகளைச் சேமிக்க அவசரப்பட வேண்டாம்."
+    ],
+    [
+      "Do not outdrive your headlights at night.",
+      "രാത്രി ഹെഡ്ലൈറ്റ് കാണിക്കുന്നതിലും വേഗത്തിൽ ഓടിക്കരുത്.",
+      "இரவில் உங்கள் ஹெட்லைட்களை மிஞ்ச வேண்டாம்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Keeping a safe following gap",
-    "മുന്നിലെ വാഹനവുമായി സുരക്ഷിത അകലം"
-   ],
-   "p": [
+  ],
+  "myths": [
+    {
+      "m": [
+        "If I am under the speed limit, I am always safe.",
+        "വേഗപരിധിക്ക് താഴെയാണെങ്കിൽ ഞാൻ എപ്പോഴും സുരക്ഷിതനാണ്.",
+        "நான் வேக வரம்பின் கீழ் இருந்தால், நான் எப்போதும் பாதுகாப்பாக இருக்கிறேன்."
+      ],
+      "f": [
+        "The limit is for good conditions. In rain, fog or crowds, a lower speed is needed.",
+        "പരിധി നല്ല സാഹചര്യത്തിനുള്ളതാണ്. മഴ, മൂടൽമഞ്ഞ്, തിരക്ക് എന്നിവയിൽ അതിലും കുറഞ്ഞ വേഗം വേണം.",
+        "வரம்பு நல்ல நிலைமைகளுக்கானது. மழை, மூடுபனி அல்லது கூட்டங்களில், குறைந்த வேகம் தேவை."
+      ]
+    },
+    {
+      "m": [
+        "Good brakes mean I can stop instantly.",
+        "നല്ല ബ്രേക്ക് ഉണ്ടെങ്കിൽ ഉടൻ നിർത്താം.",
+        "நல்ல பிரேக்குகள் என்றால் என்னால் உடனடியாக நிறுத்த முடியும்."
+      ],
+      "f": [
+        "Reaction time and braking distance always add up. No vehicle stops at once.",
+        "പ്രതികരണ സമയവും ബ്രേക്കിങ് ദൂരവും എപ്പോഴും കൂടിച്ചേരും. ഒരു വാഹനവും ഉടൻ നിൽക്കില്ല.",
+        "எதிர்வினை நேரம் மற்றும் பிரேக்கிங் தூரம் எப்போதும் சேர்க்கப்படும். எந்த வாகனமும் ஒரே நேரத்தில் நிற்காது."
+      ]
+    },
+    {
+      "m": [
+        "A small gap stops others from cutting in.",
+        "ചെറിയ അകലം മറ്റുള്ളവർ കയറിവരുന്നത് തടയും.",
+        "ஒரு சிறிய இடைவெளி மற்றவர்களை வெட்டுவதைத் தடுக்கிறது."
+      ],
+      "f": [
+        "A small gap only removes your safety margin. If someone cuts in, simply ease back and rebuild the gap.",
+        "ചെറിയ അകലം നിങ്ങളുടെ സുരക്ഷാ അകലം ഇല്ലാതാക്കുക മാത്രം ചെയ്യും. ആരെങ്കിലും കയറിയാൽ മെല്ലെ പിന്നോട്ട് മാറി അകലം വീണ്ടെടുക്കുക.",
+        "சிறிய இடைவெளி உங்கள் பாதுகாப்பு விளிம்பை மட்டுமே நீக்குகிறது. யாராவது வெட்டினால், மீண்டும் எளிதாக்குங்கள் மற்றும் இடைவெளியை மீண்டும் உருவாக்குங்கள்."
+      ]
+    },
+    {
+      "m": [
+        "Overtaking is safe if I am quick.",
+        "വേഗത്തിൽ ചെയ്താൽ മറികടക്കൽ സുരക്ഷിതമാണ്.",
+        "நான் வேகமாக இருந்தால், முந்துவது பாதுகாப்பானது."
+      ],
+      "f": [
+        "A fast overtake still needs a clear road. Oncoming vehicles also approach fast, so the gap closes sooner than you think.",
+        "വേഗത്തിലാണെങ്കിലും മറികടക്കലിന് ഒഴിഞ്ഞ റോഡ് വേണം. എതിരെ വരുന്ന വാഹനങ്ങളും വേഗത്തിലാണ്, അതിനാൽ അകലം നിങ്ങൾ കരുതുന്നതിലും വേഗം കുറയും.",
+        "வேகமாக முந்திச் செல்ல இன்னும் தெளிவான சாலை தேவை. எதிரே வரும் வாகனங்களும் வேகமாக வருவதால், நீங்கள் நினைப்பதை விட விரைவில் இடைவெளி மூடப்படும்."
+      ]
+    },
+    {
+      "m": [
+        "Experienced drivers do not need extra gap.",
+        "പരിചയമുള്ള ഡ്രൈവർമാർക്ക് കൂടുതൽ അകലം വേണ്ട.",
+        "அனுபவம் வாய்ந்த ஓட்டுனர்களுக்கு கூடுதல் இடைவெளி தேவையில்லை."
+      ],
+      "f": [
+        "Experience helps, but reaction time and physics are the same for everyone.",
+        "പരിചയം സഹായിക്കും; പക്ഷേ പ്രതികരണ സമയവും ഭൗതികനിയമങ്ങളും എല്ലാവർക്കും ഒന്നുതന്നെയാണ്.",
+        "அனுபவம் உதவுகிறது, ஆனால் எதிர்வினை நேரம் மற்றும் இயற்பியல் அனைவருக்கும் ஒரே மாதிரியாக இருக்கும்."
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "t": [
+        "The wet-road gap",
+        "നനഞ്ഞ റോഡിലെ അകലം",
+        "ஈரமான சாலை இடைவெளி"
+      ],
+      "s": [
+        "On a rainy evening, Suresh followed a bus closely because he was late. When the bus braked for a person crossing, Suresh braked too, but his car slid forward and stopped just short of the bus. His heart was racing. He realised that on a dry day his usual gap might have been enough, but not on a wet road. From then on he dropped back in the rain and counted his gap.",
+        "മഴയുള്ള ഒരു വൈകുന്നേരം താമസിച്ചതിനാൽ സുരേഷ് ഒരു ബസ്സിന് തൊട്ടുപിന്നിൽ ഓടിച്ചു. ഒരാൾ റോഡ് കടക്കാൻ ബസ് ബ്രേക്ക് ചെയ്തപ്പോൾ സുരേഷും ചവിട്ടി; കാർ തെന്നി മുന്നോട്ടുപോയി ബസ്സിന് തൊട്ടുമുമ്പ് നിന്നു. നെഞ്ചിടിപ്പ് കൂടി. ഉണങ്ങിയ ദിവസമായിരുന്നെങ്കിൽ പതിവ് അകലം മതിയാകുമായിരുന്നു, പക്ഷേ നനഞ്ഞ റോഡിൽ പോരെന്ന് അയാൾ മനസ്സിലാക്കി. അതിനുശേഷം മഴയിൽ അകലം കൂട്ടുകയും എണ്ണിനോക്കുകയും ചെയ്യുന്നു.",
+        "ஒரு மழைக்கால மாலையில், சுரேஷ் தாமதமாக வந்ததால் ஒரு பேருந்தை நெருக்கமாகப் பின்தொடர்ந்தார். கடக்கும் நபருக்கு பேருந்து பிரேக் போட்டபோது, ​​சுரேஷும் பிரேக் போட்டார், ஆனால் அவரது கார் முன்னோக்கிச் சென்று பேருந்தின் குறுக்கே நின்றது. அவன் இதயம் துடித்துக் கொண்டிருந்தது. வறண்ட நாளில் தனது வழக்கமான இடைவெளி போதுமானதாக இருந்திருக்கலாம், ஆனால் ஈரமான சாலையில் இல்லை என்பதை அவர் உணர்ந்தார். அதிலிருந்து அவர் மீண்டும் மழையில் விழுந்து தனது இடைவெளியை எண்ணினார்."
+      ],
+      "lesson": [
+        "Add more gap in the rain; your usual gap may not be enough.",
+        "മഴയിൽ കൂടുതൽ അകലം വിടുക; പതിവ് അകലം മതിയാകണമെന്നില്ല.",
+        "மழையில் அதிக இடைவெளியைச் சேர்க்கவும்; உங்கள் வழக்கமான இடைவெளி போதுமானதாக இருக்காது."
+      ]
+    },
+    {
+      "t": [
+        "The patient overtake",
+        "ക്ഷമയോടെയുള്ള മറികടക്കൽ",
+        "நோயாளி முந்திச் சென்றார்"
+      ],
+      "s": [
+        "Meera was behind a slow lorry on a two-way road with gentle bends. She could see only a short stretch ahead, and the temptation to pull out was strong. She stayed back, kept her gap, and waited. A few minutes later, a long straight section with a clear view appeared. She checked her mirror, signalled, passed calmly and returned to the left. The wait had cost her very little time.",
+        "വളവുകളുള്ള ഇരുവശത്തേക്കും ഗതാഗതമുള്ള റോഡിൽ മീര ഒരു വേഗം കുറഞ്ഞ ലോറിക്ക് പിന്നിലായിരുന്നു. മുന്നിൽ കുറച്ച് ദൂരം മാത്രമേ കാണാനായുള്ളൂ; കയറിപ്പോകാൻ ഒരു പ്രലോഭനം ഉണ്ടായിരുന്നു. അവൾ പിന്നിൽ തന്നെ നിന്ന് അകലം പാലിച്ച് കാത്തിരുന്നു. കുറച്ച് മിനിറ്റ് കഴിഞ്ഞ് വ്യക്തമായ കാഴ്ചയുള്ള നീണ്ട നേർഭാഗം വന്നു. അവൾ മിറർ നോക്കി, സിഗ്നൽ നൽകി, ശാന്തമായി മറികടന്ന് ഇടത്തേക്ക് മടങ്ങി. ഈ കാത്തിരിപ്പ് വളരെ കുറച്ച് സമയം മാത്രമേ എടുത്തുള്ളൂ.",
+        "மீரா மெதுவாக வளைவுகள் கொண்ட இருவழி சாலையில் மெதுவாக லாரியின் பின்னால் இருந்தார். அவள் முன்னால் ஒரு குறுகிய நீட்டிப்பை மட்டுமே பார்க்க முடிந்தது, மேலும் வெளியே இழுக்க ஆசை வலுவாக இருந்தது. அவள் பின் தங்கி, இடைவெளியை வைத்து, காத்திருந்தாள். சில நிமிடங்களுக்குப் பிறகு, தெளிவான பார்வையுடன் ஒரு நீண்ட நேரான பகுதி தோன்றியது. அவள் கண்ணாடியை சரிபார்த்து, சமிக்ஞை செய்து, அமைதியாக கடந்து இடது பக்கம் திரும்பினாள். காத்திருப்பு அவளுக்கு மிகக் குறைந்த நேரத்தையே செலவழித்தது."
+      ],
+      "lesson": [
+        "Wait for a clear view. A short wait is cheaper than a bad overtake.",
+        "വ്യക്തമായ കാഴ്ചയ്ക്കായി കാത്തിരിക്കുക. മോശം മറികടക്കലിനേക്കാൾ വില കുറവാണ് ചെറിയ കാത്തിരിപ്പിന്.",
+        "தெளிவான பார்வைக்காக காத்திருங்கள். மோசமான முந்துவதை விட குறுகிய காத்திருப்பு மலிவானது."
+      ]
+    }
+  ],
+  "recap": [
     [
-     "Tailgating leaves you no time to react if the vehicle ahead brakes suddenly. Most rear-end crashes happen because the gap was too small for the speed.",
-     "മുന്നിലെ വാഹനം പെട്ടെന്ന് ബ്രേക്ക് ചെയ്താൽ പ്രതികരിക്കാൻ സമയം തരാത്തതാണ് തൊട്ടുപിന്നിൽ ഓടിക്കുന്നത്. വേഗത്തിന് ചേരാത്ത ചെറിയ അകലം കാരണമാണ് പിന്നിൽ ഇടിക്കുന്ന മിക്ക അപകടങ്ങളും."
+      "Stopping distance = reaction distance + braking distance.",
+      "നിർത്താനുള്ള ദൂരം = പ്രതികരണ ദൂരം + ബ്രേക്കിങ് ദൂരം.",
+      "நிறுத்தும் தூரம் = எதிர்வினை தூரம் + பிரேக்கிங் தூரம்."
     ],
     [
-     "A simple rule of thumb is the two-second gap. When the vehicle ahead passes a fixed point such as a pole, count two seconds. If you reach the point before you finish counting, drop back.",
-     "ലളിതമായ ഒരു ഏകദേശ നിയമം രണ്ട് സെക്കൻഡ് അകലമാണ്. മുന്നിലെ വാഹനം ഒരു തൂൺ പോലെ ഉറച്ച ഒരു സ്ഥലം കടന്നുപോയാൽ രണ്ട് സെക്കൻഡ് എണ്ണുക. എണ്ണിത്തീരും മുമ്പ് നിങ്ങൾ അവിടെ എത്തിയാൽ അകലം കൂട്ടുക."
+      "Double the speed, about four times the braking distance.",
+      "വേഗം ഇരട്ടി, ബ്രേക്കിങ് ദൂരം ഏകദേശം നാലിരട്ടി.",
+      "வேகத்தை இரட்டிப்பாக்குங்கள், பிரேக்கிங் தூரத்தை விட நான்கு மடங்கு அதிகம்."
     ],
     [
-     "Make the gap longer in rain, at night, behind large vehicles that block your view, and when you are tired. This is a rule of thumb, not a guarantee.",
-     "മഴയിലും രാത്രിയിലും കാഴ്ച മറയ്ക്കുന്ന വലിയ വാഹനങ്ങളുടെ പിന്നിലും ക്ഷീണമുള്ളപ്പോഴും അകലം കൂട്ടുക. ഇത് ഒരു ഏകദേശ നിയമം മാത്രമാണ്, ഉറപ്പല്ല."
+      "The posted limit is a maximum; conditions may demand less.",
+      "വേഗപരിധി പരമാവധിയാണ്; സാഹചര്യം അതിലും കുറവ് ആവശ്യപ്പെടാം.",
+      "இடுகையிடப்பட்ட வரம்பு அதிகபட்சம்; நிலைமைகள் குறைவாக கோரலாம்."
     ],
     [
-     "If someone tailgates you, do not brake to scare them. Keep left where possible and let them pass safely.",
-     "ആരെങ്കിലും തൊട്ടുപിന്നിൽ ഓടിച്ചാൽ പേടിപ്പിക്കാൻ ബ്രേക്ക് ചവിട്ടരുത്. കഴിയുമെങ്കിൽ ഇടതുവശം ചേർന്ന് അവരെ സുരക്ഷിതമായി കടത്തിവിടുക."
+      "Use a two-second gap as a rule of thumb; increase it in rain.",
+      "ഏകദേശ നിയമമായി രണ്ട് സെക്കൻഡ് അകലം; മഴയിൽ കൂട്ടുക.",
+      "கட்டைவிரல் விதியாக இரண்டு-வினாடி இடைவெளியைப் பயன்படுத்தவும்; மழையில் அதிகரிக்கும்."
+    ],
+    [
+      "Overtake only with clear view and clear road; if in doubt, wait.",
+      "വ്യക്തമായ കാഴ്ചയും ഒഴിഞ്ഞ റോഡും ഉണ്ടെങ്കിൽ മാത്രം മറികടക്കുക; സംശയമുണ്ടെങ്കിൽ കാത്തിരിക്കുക.",
+      "தெளிவான பார்வை மற்றும் தெளிவான சாலையுடன் மட்டுமே முந்திக்கொள்ளுங்கள்; சந்தேகம் இருந்தால், காத்திருக்கவும்."
+    ],
+    [
+      "Look far ahead and brake early and smoothly.",
+      "ദൂരെ നോക്കി നേരത്തേ മെല്ലെ ബ്രേക്ക് ചെയ്യുക.",
+      "முன்னோக்கிப் பார்த்து, சீக்கிரம் மற்றும் சீராக பிரேக் செய்யுங்கள்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Overtaking safely",
-    "സുരക്ഷിതമായി മറികടക്കൽ"
-   ],
-   "p": [
-    [
-     "Overtake only when you have a clear view ahead, enough empty road to complete the move, and the vehicle behind is not already overtaking you. If in doubt, do not go.",
-     "മുന്നിൽ വ്യക്തമായ കാഴ്ചയും മറികടക്കൽ പൂർത്തിയാക്കാൻ വേണ്ടത്ര ഒഴിഞ്ഞ റോഡും പിന്നിലെ വാഹനം നിങ്ങളെ മറികടക്കുന്നില്ലെന്നും ഉറപ്പുണ്ടെങ്കിൽ മാത്രം മറികടക്കുക. സംശയമുണ്ടെങ്കിൽ പോകരുത്."
-    ],
-    [
-     "Never overtake at a bend, hill crest, junction, bridge, pedestrian crossing, or where there is a solid centre line or a no-overtaking sign.",
-     "വളവ്, കയറ്റത്തിന്റെ മുകൾ, ജംഗ്ഷൻ, പാലം, കാൽനട ക്രോസിങ്, തുടർവര അല്ലെങ്കിൽ മറികടക്കൽ നിരോധന ചിഹ്നമുള്ള സ്ഥലം എന്നിവിടങ്ങളിൽ ഒരിക്കലും മറികടക്കരുത്."
-    ],
-    [
-     "The usual order is mirror, signal, move out, pass with enough side room, then return to the left once you can see the vehicle you passed in your mirror. Do not cut in sharply.",
-     "സാധാരണ ക്രമം: മിറർ, സിഗ്നൽ, വലത്തേക്ക് നീങ്ങൽ, വശത്ത് വേണ്ടത്ര സ്ഥലമിട്ട് കടക്കൽ, മറികടന്ന വാഹനം മിററിൽ കാണുമ്പോൾ ഇടത്തേക്ക് മടങ്ങൽ. ഒറ്റയടിക്ക് വെട്ടിച്ച് കയറരുത്."
-    ],
-    [
-     "If the driver ahead signals right or is turning, do not overtake. If another driver is overtaking, let them complete it, and do not speed up.",
-     "മുന്നിലെ ഡ്രൈവർ വലത് സിഗ്നൽ നൽകുകയോ തിരിയുകയോ ചെയ്യുന്നുണ്ടെങ്കിൽ മറികടക്കരുത്. മറ്റൊരാൾ മറികടക്കുകയാണെങ്കിൽ അത് പൂർത്തിയാക്കാൻ അനുവദിക്കുക, വേഗം കൂട്ടരുത്."
-    ],
-    [
-     "Overtaking is not a race. Waiting a little behind a slow vehicle costs seconds; a failed overtake can cost far more.",
-     "മറികടക്കൽ ഒരു മത്സരമല്ല. വേഗം കുറഞ്ഞ വാഹനത്തിന് പിന്നിൽ അൽപം കാത്തിരിക്കാൻ സെക്കൻഡുകൾ മാത്രം മതി; പരാജയപ്പെട്ട മറികടക്കലിന് വില വളരെ കൂടുതലാണ്."
-    ]
-   ]
-  },
-  {
-   "h": [
-    "Slowing smoothly and being seen",
-    "സാവധാനം വേഗം കുറയ്ക്കലും കാണപ്പെടലും"
-   ],
-   "p": [
-    [
-     "Look far ahead, not just at the bumper in front. Early eye movement lets you ease off the accelerator and brake gently instead of braking hard.",
-     "തൊട്ടുമുന്നിലെ ബമ്പർ മാത്രമല്ല, ദൂരെയും നോക്കുക. നേരത്തേ നോക്കുന്നത് ആക്സിലറേറ്റർ വിട്ട് കഠിനമായി ചവിട്ടാതെ മെല്ലെ ബ്രേക്ക് ചെയ്യാൻ സഹായിക്കും."
-    ],
-    [
-     "Smooth braking keeps the vehicle stable, especially on two-wheelers and on wet or loose surfaces. Sudden hard braking can cause a skid or a rear-end hit from the vehicle behind.",
-     "മെല്ലെയുള്ള ബ്രേക്കിങ് വാഹനത്തെ സ്ഥിരമായി നിർത്തുന്നു, പ്രത്യേകിച്ച് ഇരുചക്രവാഹനങ്ങളിലും നനഞ്ഞതോ അയഞ്ഞതോ ആയ പ്രതലത്തിലും. പെട്ടെന്നുള്ള കഠിന ബ്രേക്ക് തെന്നലിനോ പിന്നിലെ വാഹനം ഇടിക്കാനോ കാരണമാകാം."
-    ],
-    [
-     "Brake lights and indicators tell the vehicle behind what you are doing. Keep them clean and working, and use them early.",
-     "ബ്രേക്ക് ലൈറ്റും ഇൻഡിക്കേറ്ററും നിങ്ങൾ എന്താണ് ചെയ്യുന്നതെന്ന് പിന്നിലെ വാഹനത്തെ അറിയിക്കുന്നു. അവ വൃത്തിയായും പ്രവർത്തിക്കുന്ന നിലയിലും സൂക്ഷിക്കുകയും നേരത്തേ ഉപയോഗിക്കുകയും ചെയ്യുക."
-    ]
-   ]
-  }
- ],
- "dos": [
-  [
-   "Treat the speed limit as a maximum, not a target.",
-   "വേഗപരിധി പരമാവധിയായി കരുതുക, ലക്ഷ്യമായല്ല."
-  ],
-  [
-   "Slow down in rain, fog, crowds and near schools.",
-   "മഴ, മൂടൽമഞ്ഞ്, തിരക്ക്, സ്കൂൾ പരിസരം എന്നിവിടങ്ങളിൽ വേഗം കുറയ്ക്കുക."
-  ],
-  [
-   "Keep at least a two-second gap as a rule of thumb.",
-   "ഏകദേശ നിയമമായി കുറഞ്ഞത് രണ്ട് സെക്കൻഡ് അകലം പാലിക്കുക."
-  ],
-  [
-   "Increase the gap on wet roads and at night.",
-   "നനഞ്ഞ റോഡിലും രാത്രിയിലും അകലം കൂട്ടുക."
-  ],
-  [
-   "Slow down before a bend, not in it.",
-   "വളവിനുള്ളിലല്ല, വളവിന് മുമ്പേ വേഗം കുറയ്ക്കുക."
-  ],
-  [
-   "Look far ahead and brake early and smoothly.",
-   "ദൂരെ നോക്കി നേരത്തേ മെല്ലെ ബ്രേക്ക് ചെയ്യുക."
-  ],
-  [
-   "Overtake only with a clear view and clear road.",
-   "വ്യക്തമായ കാഴ്ചയും ഒഴിഞ്ഞ റോഡും ഉള്ളപ്പോൾ മാത്രം മറികടക്കുക."
-  ],
-  [
-   "Signal and check mirrors before overtaking.",
-   "മറികടക്കും മുമ്പ് സിഗ്നൽ നൽകി മിറർ നോക്കുക."
-  ],
-  [
-   "Return to the left when it is safe, with room to spare.",
-   "സുരക്ഷിതമായി, വേണ്ടത്ര സ്ഥലമിട്ട് ഇടത്തേക്ക് മടങ്ങുക."
-  ],
-  [
-   "Keep tyres and brakes in good condition.",
-   "ടയറും ബ്രേക്കും നല്ല നിലയിൽ സൂക്ഷിക്കുക."
   ]
- ],
- "donts": [
-  [
-   "Do not drive at the limit when conditions are poor.",
-   "സാഹചര്യം മോശമാകുമ്പോൾ പരിധിയിൽ ഓടിക്കരുത്."
-  ],
-  [
-   "Do not tailgate.",
-   "തൊട്ടുപിന്നിൽ ഓടിക്കരുത്."
-  ],
-  [
-   "Do not overtake at bends, crests, bridges or junctions.",
-   "വളവ്, കയറ്റത്തിന്റെ മുകൾ, പാലം, ജംഗ്ഷൻ എന്നിവിടങ്ങളിൽ മറികടക്കരുത്."
-  ],
-  [
-   "Do not overtake across a solid centre line.",
-   "തുടർവര കടന്ന് മറികടക്കരുത്."
-  ],
-  [
-   "Do not overtake when the vehicle ahead is turning or signalling right.",
-   "മുന്നിലെ വാഹനം തിരിയുമ്പോഴോ വലത് സിഗ്നൽ നൽകുമ്പോഴോ മറികടക്കരുത്."
-  ],
-  [
-   "Do not speed up when someone is overtaking you.",
-   "ആരെങ്കിലും നിങ്ങളെ മറികടക്കുമ്പോൾ വേഗം കൂട്ടരുത്."
-  ],
-  [
-   "Do not cut in sharply after passing.",
-   "മറികടന്ന ശേഷം പെട്ടെന്ന് വെട്ടിച്ച് കയറരുത്."
-  ],
-  [
-   "Do not brake suddenly without a reason.",
-   "കാരണമില്ലാതെ പെട്ടെന്ന് ബ്രേക്ക് ചവിട്ടരുത്."
-  ],
-  [
-   "Do not rush to beat a signal or save seconds.",
-   "സിഗ്നൽ മറികടക്കാനോ സെക്കൻഡുകൾ ലാഭിക്കാനോ തിരക്കുകൂട്ടരുത്."
-  ],
-  [
-   "Do not outdrive your headlights at night.",
-   "രാത്രി ഹെഡ്ലൈറ്റ് കാണിക്കുന്നതിലും വേഗത്തിൽ ഓടിക്കരുത്."
-  ]
- ],
- "myths": [
-  {
-   "m": [
-    "If I am under the speed limit, I am always safe.",
-    "വേഗപരിധിക്ക് താഴെയാണെങ്കിൽ ഞാൻ എപ്പോഴും സുരക്ഷിതനാണ്."
-   ],
-   "f": [
-    "The limit is for good conditions. In rain, fog or crowds, a lower speed is needed.",
-    "പരിധി നല്ല സാഹചര്യത്തിനുള്ളതാണ്. മഴ, മൂടൽമഞ്ഞ്, തിരക്ക് എന്നിവയിൽ അതിലും കുറഞ്ഞ വേഗം വേണം."
-   ]
-  },
-  {
-   "m": [
-    "Good brakes mean I can stop instantly.",
-    "നല്ല ബ്രേക്ക് ഉണ്ടെങ്കിൽ ഉടൻ നിർത്താം."
-   ],
-   "f": [
-    "Reaction time and braking distance always add up. No vehicle stops at once.",
-    "പ്രതികരണ സമയവും ബ്രേക്കിങ് ദൂരവും എപ്പോഴും കൂടിച്ചേരും. ഒരു വാഹനവും ഉടൻ നിൽക്കില്ല."
-   ]
-  },
-  {
-   "m": [
-    "A small gap stops others from cutting in.",
-    "ചെറിയ അകലം മറ്റുള്ളവർ കയറിവരുന്നത് തടയും."
-   ],
-   "f": [
-    "A small gap only removes your safety margin. If someone cuts in, simply ease back and rebuild the gap.",
-    "ചെറിയ അകലം നിങ്ങളുടെ സുരക്ഷാ അകലം ഇല്ലാതാക്കുക മാത്രം ചെയ്യും. ആരെങ്കിലും കയറിയാൽ മെല്ലെ പിന്നോട്ട് മാറി അകലം വീണ്ടെടുക്കുക."
-   ]
-  },
-  {
-   "m": [
-    "Overtaking is safe if I am quick.",
-    "വേഗത്തിൽ ചെയ്താൽ മറികടക്കൽ സുരക്ഷിതമാണ്."
-   ],
-   "f": [
-    "A fast overtake still needs a clear road. Oncoming vehicles also approach fast, so the gap closes sooner than you think.",
-    "വേഗത്തിലാണെങ്കിലും മറികടക്കലിന് ഒഴിഞ്ഞ റോഡ് വേണം. എതിരെ വരുന്ന വാഹനങ്ങളും വേഗത്തിലാണ്, അതിനാൽ അകലം നിങ്ങൾ കരുതുന്നതിലും വേഗം കുറയും."
-   ]
-  },
-  {
-   "m": [
-    "Experienced drivers do not need extra gap.",
-    "പരിചയമുള്ള ഡ്രൈവർമാർക്ക് കൂടുതൽ അകലം വേണ്ട."
-   ],
-   "f": [
-    "Experience helps, but reaction time and physics are the same for everyone.",
-    "പരിചയം സഹായിക്കും; പക്ഷേ പ്രതികരണ സമയവും ഭൗതികനിയമങ്ങളും എല്ലാവർക്കും ഒന്നുതന്നെയാണ്."
-   ]
-  }
- ],
- "stories": [
-  {
-   "t": [
-    "The wet-road gap",
-    "നനഞ്ഞ റോഡിലെ അകലം"
-   ],
-   "s": [
-    "On a rainy evening, Suresh followed a bus closely because he was late. When the bus braked for a person crossing, Suresh braked too, but his car slid forward and stopped just short of the bus. His heart was racing. He realised that on a dry day his usual gap might have been enough, but not on a wet road. From then on he dropped back in the rain and counted his gap.",
-    "മഴയുള്ള ഒരു വൈകുന്നേരം താമസിച്ചതിനാൽ സുരേഷ് ഒരു ബസ്സിന് തൊട്ടുപിന്നിൽ ഓടിച്ചു. ഒരാൾ റോഡ് കടക്കാൻ ബസ് ബ്രേക്ക് ചെയ്തപ്പോൾ സുരേഷും ചവിട്ടി; കാർ തെന്നി മുന്നോട്ടുപോയി ബസ്സിന് തൊട്ടുമുമ്പ് നിന്നു. നെഞ്ചിടിപ്പ് കൂടി. ഉണങ്ങിയ ദിവസമായിരുന്നെങ്കിൽ പതിവ് അകലം മതിയാകുമായിരുന്നു, പക്ഷേ നനഞ്ഞ റോഡിൽ പോരെന്ന് അയാൾ മനസ്സിലാക്കി. അതിനുശേഷം മഴയിൽ അകലം കൂട്ടുകയും എണ്ണിനോക്കുകയും ചെയ്യുന്നു."
-   ],
-   "lesson": [
-    "Add more gap in the rain; your usual gap may not be enough.",
-    "മഴയിൽ കൂടുതൽ അകലം വിടുക; പതിവ് അകലം മതിയാകണമെന്നില്ല."
-   ]
-  },
-  {
-   "t": [
-    "The patient overtake",
-    "ക്ഷമയോടെയുള്ള മറികടക്കൽ"
-   ],
-   "s": [
-    "Meera was behind a slow lorry on a two-way road with gentle bends. She could see only a short stretch ahead, and the temptation to pull out was strong. She stayed back, kept her gap, and waited. A few minutes later, a long straight section with a clear view appeared. She checked her mirror, signalled, passed calmly and returned to the left. The wait had cost her very little time.",
-    "വളവുകളുള്ള ഇരുവശത്തേക്കും ഗതാഗതമുള്ള റോഡിൽ മീര ഒരു വേഗം കുറഞ്ഞ ലോറിക്ക് പിന്നിലായിരുന്നു. മുന്നിൽ കുറച്ച് ദൂരം മാത്രമേ കാണാനായുള്ളൂ; കയറിപ്പോകാൻ ഒരു പ്രലോഭനം ഉണ്ടായിരുന്നു. അവൾ പിന്നിൽ തന്നെ നിന്ന് അകലം പാലിച്ച് കാത്തിരുന്നു. കുറച്ച് മിനിറ്റ് കഴിഞ്ഞ് വ്യക്തമായ കാഴ്ചയുള്ള നീണ്ട നേർഭാഗം വന്നു. അവൾ മിറർ നോക്കി, സിഗ്നൽ നൽകി, ശാന്തമായി മറികടന്ന് ഇടത്തേക്ക് മടങ്ങി. ഈ കാത്തിരിപ്പ് വളരെ കുറച്ച് സമയം മാത്രമേ എടുത്തുള്ളൂ."
-   ],
-   "lesson": [
-    "Wait for a clear view. A short wait is cheaper than a bad overtake.",
-    "വ്യക്തമായ കാഴ്ചയ്ക്കായി കാത്തിരിക്കുക. മോശം മറികടക്കലിനേക്കാൾ വില കുറവാണ് ചെറിയ കാത്തിരിപ്പിന്."
-   ]
-  }
- ],
- "recap": [
-  [
-   "Stopping distance = reaction distance + braking distance.",
-   "നിർത്താനുള്ള ദൂരം = പ്രതികരണ ദൂരം + ബ്രേക്കിങ് ദൂരം."
-  ],
-  [
-   "Double the speed, about four times the braking distance.",
-   "വേഗം ഇരട്ടി, ബ്രേക്കിങ് ദൂരം ഏകദേശം നാലിരട്ടി."
-  ],
-  [
-   "The posted limit is a maximum; conditions may demand less.",
-   "വേഗപരിധി പരമാവധിയാണ്; സാഹചര്യം അതിലും കുറവ് ആവശ്യപ്പെടാം."
-  ],
-  [
-   "Use a two-second gap as a rule of thumb; increase it in rain.",
-   "ഏകദേശ നിയമമായി രണ്ട് സെക്കൻഡ് അകലം; മഴയിൽ കൂട്ടുക."
-  ],
-  [
-   "Overtake only with clear view and clear road; if in doubt, wait.",
-   "വ്യക്തമായ കാഴ്ചയും ഒഴിഞ്ഞ റോഡും ഉണ്ടെങ്കിൽ മാത്രം മറികടക്കുക; സംശയമുണ്ടെങ്കിൽ കാത്തിരിക്കുക."
-  ],
-  [
-   "Look far ahead and brake early and smoothly.",
-   "ദൂരെ നോക്കി നേരത്തേ മെല്ലെ ബ്രേക്ക് ചെയ്യുക."
-  ]
- ]
 }

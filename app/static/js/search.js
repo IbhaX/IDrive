@@ -55,11 +55,11 @@ Q.local = async (q, limit = 30) => {
   if (!Q.idx) Q.idx = (await Api.get("/api/curriculum/search-index")).docs;
   const qn = q.toLowerCase().normalize("NFC").replace(/\s+/g, " ").trim();
   if (qn.length < 2) return [];
-  const words = (qn.match(/[a-z0-9\u0d00-\u0d7f]+/g) || []).filter((w) => w.length > 1 && !STOP.has(w));
+  const words = (qn.match(/[a-z0-9\u0d00-\u0d7f\u0b80-\u0bff]+/g) || []).filter((w) => w.length > 1 && !STOP.has(w));
   if (!words.length) return [];
-  const ml = /[\u0d00-\u0d7f]/.test(qn), out = [];
+  const ta = /[\u0b80-\u0bff]/.test(qn), ml = /[\u0d00-\u0d7f]/.test(qn), out = [];
   for (const d of Q.idx) {
-    const title = (ml ? d.title_ml : d.title).toLowerCase(), body = (ml ? d.body_ml : d.body).toLowerCase();
+    const title = (ta ? d.title_ta : ml ? d.title_ml : d.title).toLowerCase(), body = (ta ? d.body_ta : ml ? d.body_ml : d.body).toLowerCase();
     let score = 0, matched = 0;
     if (qn && title.includes(qn)) score += 10 + (title.startsWith(qn) ? 5 : 0);
     if (body.includes(qn)) score += 4;
@@ -71,10 +71,10 @@ Q.local = async (q, limit = 30) => {
     if (words.length > 1) score *= 0.4 + 0.6 * matched / words.length;
     if (score <= 0) continue;
     score *= KW[d.kind] || 1;
-    const src = ml ? d.body_ml : d.body, at = Math.max(0, src.toLowerCase().indexOf(words[0]));
+    const src = ta ? d.body_ta : ml ? d.body_ml : d.body, at = Math.max(0, src.toLowerCase().indexOf(words[0]));
     const snip = (at > 60 ? "…" : "") + src.slice(Math.max(0, at - 60), at + 120).trim() + "…";
-    out.push([score, { kind: d.kind, id: d.id, href: d.href, title: d.title_ml ? [d.title, d.title_ml] : d.title,
-      group: d.group_ml ? [d.group, d.group_ml] : d.group, snippet: snip }]);
+    out.push([score, { kind: d.kind, id: d.id, href: d.href, title: d.title_ta ? [d.title, d.title_ml || d.title, d.title_ta] : d.title_ml ? [d.title, d.title_ml] : d.title,
+      group: d.group_ta ? [d.group, d.group_ml || d.group, d.group_ta] : d.group_ml ? [d.group, d.group_ml] : d.group, snippet: snip }]);
   }
   return out.sort((a, b) => b[0] - a[0]).slice(0, limit).map((x) => x[1]);
 };

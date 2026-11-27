@@ -22,7 +22,7 @@ def test_sign_q_every_kind(rng) -> None:
         assert q["t"] == "signs"
         assert len(q["o"]) == 4
         assert 0 <= q["a"] < 4
-        assert len(q["r"]) == 2 and all(q["r"]), "reasoning must be bilingual"
+        assert len(q["r"]) >= 3 and all(q["r"]), "reasoning must be trilingual"
         if "svg" in q:  # "find" kind shows the name, not an image
             assert q["svg"].startswith("<svg")
         # option distinctness - by serialised form

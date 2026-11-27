@@ -10,8 +10,8 @@ L.dayIdx = () => {
 };
 
 L.haystack = (d) =>
-  (d.name + " " + d.meaning + " " + (d.ml || []).join(" ") + " " +
-    (Data.catOf(d.cat) || {}).name + " " + ((Data.catOf(d.cat) || {}).ml || [])[0]).toLowerCase();
+  (d.name + " " + d.meaning + " " + (d.ml || []).join(" ") + " " + (d.ta || []).join(" ") + " " +
+    (Data.catOf(d.cat) || {}).name + " " + ((Data.catOf(d.cat) || {}).ml || [])[0] + " " + (((Data.catOf(d.cat) || {}).ta || [])[0] || "")).toLowerCase();
 
 L.filtered = () => {
   const q = (S.q || "").trim().toLowerCase();

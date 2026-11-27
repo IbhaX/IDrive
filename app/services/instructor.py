@@ -35,7 +35,7 @@ Rules you must follow:
 4. Be a patient instructor: short paragraphs, plain language, define jargon, use a concrete Indian road example when helpful. Keep answers under about 220 words unless asked for more.
 5. When asked to quiz the learner, write 3 multiple-choice questions from the sources, then give the answers with one-line explanations at the end.
 6. Mark simplified physics as an educational model.
-7. Reply in the learner's language: if the question is in Malayalam, answer in clear, natural Malayalam (keep common technical words such as clutch, brake, RTO in the form Kerala learners use); otherwise answer in English. Sources may be given in either language."""
+7. Reply in the learner's language: if the question is in Tamil, answer in clear, natural Tamil; if it is in Malayalam, answer in clear, natural Malayalam (keep common technical words such as clutch, brake, RTO in the form learners use); otherwise answer in English. Sources may be given in any supported language."""
 
 
 def _clip(text: str, n: int = MAX_PASSAGE) -> str:
@@ -47,14 +47,15 @@ def _plain(x: Any) -> str:
     return x[0] if isinstance(x, list) else str(x)
 
 
-def retrieve(question: str, k: int = TOP_K) -> list[dict[str, Any]]:
+def retrieve(question: str, k: int = TOP_K, language: str = "auto") -> list[dict[str, Any]]:
     """Top-k passages for the question, from lessons, articles, lights, parts, signs, glossary.
     Malayalam questions retrieve over the Malayalam text and pass it as the source."""
-    is_ml = bool(re.search(r"[\u0d00-\u0d7f]", question))
+    is_ta = language == "ta" or bool(re.search(r"[\u0b80-\u0bff]", question))
+    is_ml = language == "ml" or bool(re.search(r"[\u0d00-\u0d7f]", question))
     hits = curriculum.search(question, limit=k * 3)
     if not hits:
         # fall back to single-word matches for long natural-language questions
-        words = sorted({w for w in re.findall(r"[a-zA-Z\u0d00-\u0d7f]{4,}", question.lower())}, key=len, reverse=True)[:4]
+        words = sorted({w for w in re.findall(r"[a-zA-Z\u0d00-\u0d7f\u0b80-\u0bff]{2,}", question.lower())}, key=len, reverse=True)[:4]
         seen: set[str] = set()
         hits = []
         for w in words:
@@ -69,7 +70,7 @@ def retrieve(question: str, k: int = TOP_K) -> list[dict[str, Any]]:
         d = docs.get(h["kind"] + ":" + h["id"])
         if not d:
             continue
-        text = d.get("body_ml") if is_ml and d.get("body_ml") else d["body"]
+        text = d.get("body_ta") if is_ta and d.get("body_ta") else d.get("body_ml") if is_ml and d.get("body_ml") else d["body"]
         out.append({
             "n": len(out) + 1, "kind": h["kind"], "id": h["id"], "title": h["title"],
             "group": h["group"], "href": h["href"], "text": _clip(text),
@@ -103,8 +104,9 @@ async def ask(
     site_url: str = "",
     timeout: float = 30.0,
     transport: Optional[httpx.AsyncBaseTransport] = None,
+    language: str = "auto",
 ) -> dict[str, Any]:
-    sources = retrieve(question)
+    sources = retrieve(question, language=language)
     if not allow_ai or not api_key:
         return {
             "mode": "search",
@@ -112,7 +114,12 @@ async def ask(
             "answer": None,
             "sources": _public(sources),
         }
-    messages: list[dict[str, str]] = [{"role": "system", "content": SYSTEM_PROMPT}]
+    language_instruction = {
+        "ta": "The learner selected Tamil in the app. Reply in clear, natural Tamil, even if their question is typed in English. Keep common driving terms such as clutch, brake and RTO in familiar usage.",
+        "ml": "The learner selected Malayalam in the app. Reply in clear, natural Malayalam, even if their question is typed in English.",
+        "en": "The learner selected English in the app. Reply in English.",
+    }.get(language, "")
+    messages: list[dict[str, str]] = [{"role": "system", "content": SYSTEM_PROMPT + ("\n\n" + language_instruction if language_instruction else "")}]
     for turn in history[-6:]:
         if turn.get("role") in ("user", "assistant") and turn.get("content"):
             messages.append({"role": turn["role"], "content": turn["content"][:1200]})

@@ -100,16 +100,17 @@ def test_malayalam_has_no_money_and_keeps_legal_numbers() -> None:
     assert "134A" in str(curriculum.ml_lesson("accident-scene"))
 
 
-def test_bilingual_payload_pairs() -> None:
+def test_trilingual_payload_pairs() -> None:
     p = curriculum.lesson_payload("engine-basics")
     assert p is not None
     title = p["lesson"]["title"]
-    assert isinstance(title, list) and title[0] == "How a combustion engine works" and title[1]
+    assert isinstance(title, list) and len(title) >= 3 and title[0] == "How a combustion engine works" and title[1] and title[2]
     q = p["lesson"]["check"][0]
     assert isinstance(q["a"], int) and all(isinstance(o, list) for o in q["o"])
     lights = curriculum.lights_payload()
     assert all(isinstance(w["name"], list) for w in lights)
     assert curriculum.search("ഹെൽമെറ്റ്"), "Malayalam search returns results"
+    assert curriculum.search("பாதுகாப்பு"), "Tamil search returns results"
 
 
 def test_offline_manifest_and_search_index() -> None:
@@ -136,3 +137,31 @@ def test_every_sign_has_rich_details() -> None:
     assert missing == []
     for k, v in details.items():
         assert len(v.where) >= 2 and len(v.when) >= 2, k
+
+
+def test_tamil_translation_is_complete() -> None:
+    missing = curriculum.ta_coverage()
+    assert missing == [], f"{len(missing)} untranslated: {missing[:15]}"
+    for region in curriculum.speed_limits().values():
+        for vehicle in region["vehicles"]:
+            assert len(vehicle["t"]) == 3 and len(vehicle["sub"]) == 3
+        assert all(len(road["t"]) == 3 for road in region["roads"])
+
+
+def test_tamil_lesson_payload_and_search() -> None:
+    payload = curriculum.lesson_payload("engine-basics")
+    assert payload is not None
+    title = payload["lesson"]["title"]
+    assert isinstance(title, list) and len(title) >= 3 and title[2]
+    assert curriculum.search("எண்ணெய் அழுத்தம்"), "Tamil search returns results"
+
+
+def test_tamil_sign_details_are_translated() -> None:
+    from app.services import content
+    p = curriculum.TA_DIR / "sign_details.json"
+    import json
+    tamil = json.loads(p.read_text(encoding="utf-8")) if p.is_file() else {}
+    assert set(tamil) == set(curriculum.sign_details())
+    assert all(v.get("more") and v.get("mistake") for v in tamil.values())
+    safety = curriculum.ta_lesson("safety-laws")
+    assert "30" in str(safety) and "134A" in str(curriculum.ta_lesson("accident-scene"))

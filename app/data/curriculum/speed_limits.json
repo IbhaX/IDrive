@@ -2,56 +2,64 @@
   "kerala": {
     "refs": [
       "kl-speed-2023",
-      "kl-speed-2024"
+      "kl-speed-2024",
+      "kl-speed-2023"
     ],
     "roads": [
       {
         "id": "nh6",
         "t": [
           "National highway, 6 lanes or more (divided)",
-          "ദേശീയപാത, 6 വരിയോ അതിലധികമോ (വിഭജിതം)"
+          "ദേശീയപാത, 6 വരിയോ അതിലധികമോ (വിഭജിതം)",
+          "National highway, 6 lanes or more (divided)"
         ]
       },
       {
         "id": "nh4",
         "t": [
           "National highway, 4 lanes (divided)",
-          "ദേശീയപാത, 4 വരി (വിഭജിതം)"
+          "ദേശീയപാത, 4 വരി (വിഭജിതം)",
+          "National highway, 4 lanes (divided)"
         ]
       },
       {
         "id": "nh",
         "t": [
           "Other national highways",
-          "മറ്റ് ദേശീയപാതകൾ"
+          "മറ്റ് ദേശീയപാതകൾ",
+          "Other national highways"
         ]
       },
       {
         "id": "sh4",
         "t": [
           "State highway, 4 lanes (divided)",
-          "സംസ്ഥാന പാത, 4 വരി (വിഭജിതം)"
+          "സംസ്ഥാന പാത, 4 വരി (വിഭജിതം)",
+          "State highway, 4 lanes (divided)"
         ]
       },
       {
         "id": "sh",
         "t": [
           "Other state highways and major district roads",
-          "മറ്റ് സംസ്ഥാന പാതകളും പ്രധാന ജില്ലാ റോഡുകളും"
+          "മറ്റ് സംസ്ഥാന പാതകളും പ്രധാന ജില്ലാ റോഡുകളും",
+          "Other state highways and major district roads"
         ]
       },
       {
         "id": "city",
         "t": [
           "Roads within city limits",
-          "നഗര പരിധിക്കുള്ളിലെ റോഡുകൾ"
+          "നഗര പരിധിക്കുള്ളിലെ റോഡുകൾ",
+          "Roads within city limits"
         ]
       },
       {
         "id": "other",
         "t": [
           "Other roads",
-          "മറ്റ് റോഡുകൾ"
+          "മറ്റ് റോഡുകൾ",
+          "Other roads"
         ]
       }
     ],
@@ -60,11 +68,13 @@
         "id": "m1",
         "t": [
           "Cars, jeeps and taxis",
-          "കാർ, ജീപ്പ്, ടാക്സി"
+          "കാർ, ജീപ്പ്, ടാക്സി",
+          "Cars, jeeps and taxis"
         ],
         "sub": [
           "Passenger vehicles with up to 8 seats besides the driver (M1)",
-          "ഡ്രൈവർക്ക് പുറമെ 8 സീറ്റ് വരെയുള്ള യാത്രാവാഹനങ്ങൾ (M1)"
+          "ഡ്രൈവർക്ക് പുറമെ 8 സീറ്റ് വരെയുള്ള യാത്രാവാഹനങ്ങൾ (M1)",
+          "Passenger vehicles with up to 8 seats besides the driver (M1)"
         ],
         "lim": [
           100,
@@ -80,11 +90,13 @@
         "id": "m23",
         "t": [
           "Buses and large passenger vehicles",
-          "ബസ്സുകളും വലിയ യാത്രാവാഹനങ്ങളും"
+          "ബസ്സുകളും വലിയ യാത്രാവാഹനങ്ങളും",
+          "Buses and large passenger vehicles"
         ],
         "sub": [
           "9 or more seats besides the driver (M2, M3)",
-          "ഡ്രൈവർക്ക് പുറമെ 9-ഓ അതിലധികമോ സീറ്റുകൾ (M2, M3)"
+          "ഡ്രൈവർക്ക് പുറമെ 9-ഓ അതിലധികമോ സീറ്റുകൾ (M2, M3)",
+          "9 or more seats besides the driver (M2, M3)"
         ],
         "lim": [
           90,
@@ -100,11 +112,13 @@
         "id": "n",
         "t": [
           "Goods vehicles",
-          "ചരക്കുവാഹനങ്ങൾ"
+          "ചരക്കുവാഹനങ്ങൾ",
+          "Goods vehicles"
         ],
         "sub": [
           "Lorries, pick-ups and other goods carriages (N)",
-          "ലോറികൾ, പിക്കപ്പുകൾ, മറ്റ് ചരക്കുവണ്ടികൾ (N)"
+          "ലോറികൾ, പിക്കപ്പുകൾ, മറ്റ് ചരക്കുവണ്ടികൾ (N)",
+          "Lorries, pick-ups and other goods carriages (N)"
         ],
         "lim": [
           80,
@@ -120,11 +134,13 @@
         "id": "two",
         "t": [
           "Two-wheelers",
-          "ഇരുചക്രവാഹനങ്ങൾ"
+          "ഇരുചക്രവാഹനങ്ങൾ",
+          "Two-wheelers"
         ],
         "sub": [
           "Scooters and motorcycles",
-          "സ്കൂട്ടറുകളും മോട്ടോർസൈക്കിളുകളും"
+          "സ്കൂട്ടറുകളും മോട്ടോർസൈക്കിളുകളും",
+          "Scooters and motorcycles"
         ],
         "lim": [
           60,
@@ -140,11 +156,13 @@
         "id": "three",
         "t": [
           "Three-wheelers and quadricycles",
-          "മുച്ചക്രവാഹനങ്ങളും ക്വാഡ്രിസൈക്കിളുകളും"
+          "മുച്ചക്രവാഹനങ്ങളും ക്വാഡ്രിസൈക്കിളുകളും",
+          "Three-wheelers and quadricycles"
         ],
         "sub": [
           "Autorickshaws and quadricycles",
-          "ഓട്ടോറിക്ഷകളും ക്വാഡ്രിസൈക്കിളുകളും"
+          "ഓട്ടോറിക്ഷകളും ക്വാഡ്രിസൈക്കിളുകളും",
+          "Autorickshaws and quadricycles"
         ],
         "lim": [
           50,
@@ -160,11 +178,13 @@
         "id": "edu",
         "t": [
           "School and college buses",
-          "സ്കൂൾ, കോളേജ് ബസ്സുകൾ"
+          "സ്കൂൾ, കോളേജ് ബസ്സുകൾ",
+          "School and college buses"
         ],
         "sub": [
           "Educational-institution buses",
-          "വിദ്യാഭ്യാസ സ്ഥാപന ബസ്സുകൾ"
+          "വിദ്യാഭ്യാസ സ്ഥാപന ബസ്സുകൾ",
+          "Educational-institution buses"
         ],
         "lim": [
           50,
@@ -187,28 +207,32 @@
         "id": "expy",
         "t": [
           "Expressway with access control",
-          "പ്രവേശന നിയന്ത്രണമുള്ള എക്സ്പ്രസ് വേ"
+          "പ്രവേശന നിയന്ത്രണമുള്ള എക്സ്പ്രസ് വേ",
+          "Expressway with access control"
         ]
       },
       {
         "id": "div4",
         "t": [
           "4 lanes or more, divided carriageway",
-          "4 വരിയോ അതിലധികമോ, വിഭജിത പാത"
+          "4 വരിയോ അതിലധികമോ, വിഭജിത പാത",
+          "4 lanes or more, divided carriageway"
         ]
       },
       {
         "id": "muni",
         "t": [
           "Roads within municipal limits",
-          "മുനിസിപ്പൽ പരിധിക്കുള്ളിലെ റോഡുകൾ"
+          "മുനിസിപ്പൽ പരിധിക്കുള്ളിലെ റോഡുകൾ",
+          "Roads within municipal limits"
         ]
       },
       {
         "id": "other",
         "t": [
           "Other roads",
-          "മറ്റ് റോഡുകൾ"
+          "മറ്റ് റോഡുകൾ",
+          "Other roads"
         ]
       }
     ],
@@ -217,11 +241,13 @@
         "id": "m1",
         "t": [
           "Cars, jeeps and taxis",
-          "കാർ, ജീപ്പ്, ടാക്സി"
+          "കാർ, ജീപ്പ്, ടാക്സി",
+          "Cars, jeeps and taxis"
         ],
         "sub": [
           "Passenger vehicles with up to 8 seats besides the driver (M1)",
-          "ഡ്രൈവർക്ക് പുറമെ 8 സീറ്റ് വരെയുള്ള യാത്രാവാഹനങ്ങൾ (M1)"
+          "ഡ്രൈവർക്ക് പുറമെ 8 സീറ്റ് വരെയുള്ള യാത്രാവാഹനങ്ങൾ (M1)",
+          "Passenger vehicles with up to 8 seats besides the driver (M1)"
         ],
         "lim": [
           120,
@@ -234,11 +260,13 @@
         "id": "m23",
         "t": [
           "Buses and large passenger vehicles",
-          "ബസ്സുകളും വലിയ യാത്രാവാഹനങ്ങളും"
+          "ബസ്സുകളും വലിയ യാത്രാവാഹനങ്ങളും",
+          "Buses and large passenger vehicles"
         ],
         "sub": [
           "9 or more seats besides the driver (M2, M3)",
-          "ഡ്രൈവർക്ക് പുറമെ 9-ഓ അതിലധികമോ സീറ്റുകൾ (M2, M3)"
+          "ഡ്രൈവർക്ക് പുറമെ 9-ഓ അതിലധികമോ സീറ്റുകൾ (M2, M3)",
+          "9 or more seats besides the driver (M2, M3)"
         ],
         "lim": [
           100,
@@ -251,11 +279,13 @@
         "id": "n",
         "t": [
           "Goods vehicles",
-          "ചരക്കുവാഹനങ്ങൾ"
+          "ചരക്കുവാഹനങ്ങൾ",
+          "Goods vehicles"
         ],
         "sub": [
           "All goods carriages (N)",
-          "എല്ലാ ചരക്കുവണ്ടികളും (N)"
+          "എല്ലാ ചരക്കുവണ്ടികളും (N)",
+          "All goods carriages (N)"
         ],
         "lim": [
           80,
@@ -268,11 +298,13 @@
         "id": "two",
         "t": [
           "Motorcycles",
-          "മോട്ടോർസൈക്കിളുകൾ"
+          "മോട്ടോർസൈക്കിളുകൾ",
+          "Motorcycles"
         ],
         "sub": [
           "On expressways only where they are allowed",
-          "എക്സ്പ്രസ് വേയിൽ അനുവദിച്ചിടത്ത് മാത്രം"
+          "എക്സ്പ്രസ് വേയിൽ അനുവദിച്ചിടത്ത് മാത്രം",
+          "On expressways only where they are allowed"
         ],
         "lim": [
           80,
@@ -285,11 +317,13 @@
         "id": "quad",
         "t": [
           "Quadricycles",
-          "ക്വാഡ്രിസൈക്കിളുകൾ"
+          "ക്വാഡ്രിസൈക്കിളുകൾ",
+          "Quadricycles"
         ],
         "sub": [
           "Not allowed on expressways",
-          "എക്സ്പ്രസ് വേയിൽ ബാധകമല്ല"
+          "എക്സ്പ്രസ് വേയിൽ ബാധകമല്ല",
+          "Not allowed on expressways"
         ],
         "lim": [
           null,
@@ -302,11 +336,13 @@
         "id": "three",
         "t": [
           "Three-wheelers",
-          "മുച്ചക്രവാഹനങ്ങൾ"
+          "മുച്ചക്രവാഹനങ്ങൾ",
+          "Three-wheelers"
         ],
         "sub": [
           "Not allowed on expressways",
-          "എക്സ്പ്രസ് വേയിൽ ബാധകമല്ല"
+          "എക്സ്പ്രസ് വേയിൽ ബാധകമല്ല",
+          "Not allowed on expressways"
         ],
         "lim": [
           null,

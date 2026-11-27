@@ -1,316 +1,383 @@
 {
- "intro": [
-  "Road signs, markings and signals are the language of the road. Once you know the simple grammar of shape and colour, you can understand even a sign you have never seen before. This article teaches that grammar, then covers road markings, traffic signals and police hand signals.",
-  "റോഡ് ചിഹ്നങ്ങളും അടയാളങ്ങളും സിഗ്നലുകളും റോഡിന്റെ ഭാഷയാണ്. ആകൃതിയുടെയും നിറത്തിന്റെയും ലളിതമായ വ്യാകരണം അറിഞ്ഞാൽ മുമ്പ് കണ്ടിട്ടില്ലാത്ത ചിഹ്നം പോലും മനസ്സിലാക്കാം. ഈ വ്യാകരണവും, തുടർന്ന് റോഡ് അടയാളങ്ങൾ, ട്രാഫിക് സിഗ്നലുകൾ, പോലീസിന്റെ കൈ സിഗ്നലുകൾ എന്നിവയും ഈ ലേഖനം പഠിപ്പിക്കുന്നു."
- ],
- "sections": [
-  {
-   "h": [
-    "Reading signs by shape and colour",
-    "ആകൃതിയും നിറവും നോക്കി ചിഹ്നം വായിക്കാം"
-   ],
-   "p": [
+  "intro": [
+    "Road signs, markings and signals are the language of the road. Once you know the simple grammar of shape and colour, you can understand even a sign you have never seen before. This article teaches that grammar, then covers road markings, traffic signals and police hand signals.",
+    "റോഡ് ചിഹ്നങ്ങളും അടയാളങ്ങളും സിഗ്നലുകളും റോഡിന്റെ ഭാഷയാണ്. ആകൃതിയുടെയും നിറത്തിന്റെയും ലളിതമായ വ്യാകരണം അറിഞ്ഞാൽ മുമ്പ് കണ്ടിട്ടില്ലാത്ത ചിഹ്നം പോലും മനസ്സിലാക്കാം. ഈ വ്യാകരണവും, തുടർന്ന് റോഡ് അടയാളങ്ങൾ, ട്രാഫിക് സിഗ്നലുകൾ, പോലീസിന്റെ കൈ സിഗ്നലുകൾ എന്നിവയും ഈ ലേഖനം പഠിപ്പിക്കുന്നു.",
+    "சாலை அடையாளங்கள், அடையாளங்கள் மற்றும் சமிக்ஞைகள் ஆகியவை சாலையின் மொழி. வடிவம் மற்றும் வண்ணத்தின் எளிய இலக்கணத்தை நீங்கள் அறிந்தவுடன், நீங்கள் இதுவரை பார்த்திராத ஒரு அடையாளத்தைக் கூட புரிந்து கொள்ளலாம். இந்த கட்டுரை இலக்கணம், பின்னர் சாலை அடையாளங்கள், போக்குவரத்து சமிக்ஞைகள் மற்றும் போலீஸ் கை சமிக்ஞைகளை உள்ளடக்கியது என்று கற்பிக்கிறது."
+  ],
+  "sections": [
+    {
+      "h": [
+        "Reading signs by shape and colour",
+        "ആകൃതിയും നിറവും നോക്കി ചിഹ്നം വായിക്കാം",
+        "வடிவம் மற்றும் நிறத்தின் படி அறிகுறிகள்"
+      ],
+      "p": [
+        [
+          "Signs fall into three main families. Mandatory or regulatory signs give orders, cautionary signs warn you about hazards, and informatory signs help you find your way and services.",
+          "ചിഹ്നങ്ങൾ പ്രധാനമായും മൂന്നു വിഭാഗമാണ്. നിർബന്ധിത/നിയന്ത്രണ ചിഹ്നങ്ങൾ ഉത്തരവ് നൽകുന്നു, മുന്നറിയിപ്പ് ചിഹ്നങ്ങൾ അപകടങ്ങളെക്കുറിച്ച് ജാഗ്രത പറയുന്നു, വിവര ചിഹ്നങ്ങൾ വഴിയും സേവനങ്ങളും കണ്ടെത്താൻ സഹായിക്കുന്നു.",
+          "அடையாளங்கள் மூன்று முக்கிய குடும்பங்களுக்குள் அடங்கும். கட்டாய அல்லது ஒழுங்குமுறை அறிகுறிகள் உத்தரவுகளை வழங்குகின்றன, எச்சரிக்கை அறிகுறிகள் உங்களுக்கு ஆபத்துகள் பற்றி எச்சரிக்கின்றன, மேலும் தகவல் அறிகுறிகள் உங்கள் வழி மற்றும் சேவைகளைக் கண்டறிய உதவுகின்றன."
+        ],
+        [
+          "A circle with a red border is usually prohibitory: it tells you what you must not do, such as no entry, no parking or no overtaking. A circle with a blue background is mandatory: it tells you what you must do, such as keep left or minimum speed.",
+          "ചുവന്ന അരികുള്ള വൃത്തം സാധാരണ നിരോധന ചിഹ്നമാണ്: പ്രവേശനമില്ല, പാർക്കിങ് ഇല്ല, ഓവർടേക്കിങ് ഇല്ല എന്നിങ്ങനെ ചെയ്യരുതാത്തത് പറയുന്നു. നീല പശ്ചാത്തലമുള്ള വൃത്തം നിർബന്ധിത നിർദേശമാണ്: ഇടത്തുകൂടി പോകുക, കുറഞ്ഞ വേഗം തുടങ്ങിയ ചെയ്യേണ്ടത് പറയുന്നു.",
+          "சிவப்பு நிற பார்டர் கொண்ட ஒரு வட்டம் பொதுவாக தடைசெய்யப்படுகிறது: நுழைய வேண்டாம், பார்க்கிங் இல்லை அல்லது முந்திச் செல்ல வேண்டாம் என நீங்கள் என்ன செய்யக்கூடாது என்பதை இது உங்களுக்குக் கூறுகிறது. நீலப் பின்புலத்தைக் கொண்ட வட்டம் கட்டாயம்: இடது அல்லது குறைந்தபட்ச வேகம் போன்ற நீங்கள் என்ன செய்ய வேண்டும் என்பதை இது உங்களுக்குக் கூறுகிறது."
+        ],
+        [
+          "A triangle with a red border warns you that something is ahead, such as a bend, a school or a slippery road. The point of a warning sign is to give you time to slow down before you see the hazard.",
+          "ചുവന്ന അരികുള്ള ത്രികോണം മുന്നിൽ എന്തോ ഉണ്ടെന്ന് മുന്നറിയിപ്പ് നൽകുന്നു: വളവ്, സ്കൂൾ, വഴുക്കുന്ന റോഡ് തുടങ്ങിയവ. അപകടം കാണും മുമ്പ് വേഗം കുറയ്ക്കാൻ സമയം തരികയാണ് മുന്നറിയിപ്പ് ചിഹ്നത്തിന്റെ ലക്ഷ്യം.",
+          "சிவப்பு எல்லையுடன் கூடிய முக்கோணம், வளைவு, பள்ளிக்கூடம் அல்லது வழுக்கும் சாலை போன்ற ஏதாவது முன்னால் இருப்பதாக எச்சரிக்கிறது. நீங்கள் அபாயத்தைக் காண்பதற்கு முன், வேகத்தைக் குறைக்க உங்களுக்கு நேரம் கொடுப்பதே எச்சரிக்கை அடையாளத்தின் முக்கிய அம்சமாகும்."
+        ],
+        [
+          "Rectangular signs are informatory. Blue ones usually give facilities like parking or hospitals, and green ones usually give direction and distance on highways. Two special shapes deserve care: the octagon means Stop and the inverted triangle means Give Way.",
+          "ചതുരം/ദീർഘചതുരം ചിഹ്നങ്ങൾ വിവര ചിഹ്നങ്ങളാണ്. നീലയിൽ സാധാരണ പാർക്കിങ്, ആശുപത്രി തുടങ്ങിയ സൗകര്യങ്ങൾ, പച്ചയിൽ ഹൈവേകളിലെ ദിശയും ദൂരവും കാണിക്കുന്നു. രണ്ട് പ്രത്യേക ആകൃതികൾ ശ്രദ്ധിക്കുക: അഷ്ടഭുജം സ്റ്റോപ്പും തലതിരിഞ്ഞ ത്രികോണം ഗിവ് വേയും ആണ്.",
+          "செவ்வக அடையாளங்கள் தகவல் தரும். நீல நிறங்கள் பொதுவாக பார்க்கிங் அல்லது மருத்துவமனைகள் போன்ற வசதிகளை வழங்குகின்றன, மேலும் பச்சை நிறங்கள் பொதுவாக நெடுஞ்சாலைகளில் திசையையும் தூரத்தையும் தருகின்றன. இரண்டு சிறப்பு வடிவங்கள் கவனிப்புக்கு தகுதியானவை: எண்கோணம் என்றால் நிறுத்து மற்றும் தலைகீழ் முக்கோணம் என்றால் வழி கொடு."
+        ],
+        [
+          "Remember the idea behind the colours: red calls for stop or caution, blue says do or use, and yellow or white backgrounds with black symbols are common on warning and direction signs. Always check the symbol inside as well, because a diagonal red bar can cancel it.",
+          "നിറങ്ങളുടെ ആശയം ഓർക്കുക: ചുവപ്പ് നിർത്തുക/ജാഗ്രത, നീല ചെയ്യുക/ഉപയോഗിക്കുക എന്നും സൂചിപ്പിക്കുന്നു. ഉള്ളിലെ ചിഹ്നവും നോക്കുക, കാരണം കുറുകെയുള്ള ചുവന്ന വര അതിന്റെ അർഥം റദ്ദാക്കുന്നു.",
+          "நிறங்களுக்குப் பின்னால் உள்ள யோசனையை நினைவில் கொள்ளுங்கள்: நிறுத்து அல்லது எச்சரிக்கைக்கான சிவப்பு அழைப்புகள், நீலம் செய் அல்லது பயன்படுத்தவும், மற்றும் மஞ்சள் அல்லது வெள்ளை பின்னணியில் கருப்பு சின்னங்கள் எச்சரிக்கை மற்றும் திசை அடையாளங்களில் பொதுவானவை. எப்பொழுதும் உள்ளே உள்ள சின்னத்தையும் சரிபார்க்கவும், ஏனெனில் ஒரு மூலைவிட்ட சிவப்பு பட்டை அதை ரத்து செய்யலாம்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Road markings",
+        "റോഡ് അടയാളങ്ങൾ",
+        "சாலை அடையாளங்கள்"
+      ],
+      "p": [
+        [
+          "Markings painted on the road work all the time and speak to you even when you cannot read signs. White lines generally separate traffic travelling in the same direction, and yellow lines are generally used for edges, the centre and no-parking areas, so check the markings of the stretch you are on.",
+          "റോഡിൽ വരച്ച അടയാളങ്ങൾ എല്ലാ സമയവും പ്രവർത്തിക്കുകയും ചിഹ്നം വായിക്കാനാകാത്തപ്പോഴും നിങ്ങളോട് സംസാരിക്കുകയും ചെയ്യുന്നു. വെള്ള വരകൾ സാധാരണ ഒരേ ദിശയിൽ പോകുന്ന ഗതാഗതത്തെ വേർതിരിക്കുന്നു; മഞ്ഞ വരകൾ സാധാരണ അരികുകൾ, മധ്യഭാഗം, പാർക്കിങ് ഇല്ലാത്ത ഇടങ്ങൾ എന്നിവയ്ക്ക് ഉപയോഗിക്കുന്നു. നിങ്ങൾ പോകുന്ന ഭാഗത്തെ അടയാളം നോക്കി ഉറപ്പാക്കുക.",
+          "சாலையில் வரையப்பட்ட அடையாளங்கள் எல்லா நேரத்திலும் வேலை செய்கின்றன மற்றும் உங்களால் அடையாளங்களைப் படிக்க முடியாவிட்டாலும் உங்களுடன் பேசுகின்றன. வெள்ளைக் கோடுகள் பொதுவாக ஒரே திசையில் பயணிக்கும் போக்குவரத்தைப் பிரிக்கின்றன, மேலும் மஞ்சள் கோடுகள் பொதுவாக விளிம்புகள், மையம் மற்றும் பார்க்கிங் இல்லாத பகுதிகளுக்குப் பயன்படுத்தப்படுகின்றன, எனவே நீங்கள் இருக்கும் நீட்டிப்பின் அடையாளங்களைச் சரிபார்க்கவும்."
+        ],
+        [
+          "A broken (dashed) line means you may cross it when it is safe, for example to overtake or change lane. A continuous line means do not cross it or straddle it, and a continuous line next to a broken line is a rule for each side, so the side with the broken line may cross while the other side may not.",
+          "മുറിഞ്ഞ (ഡാഷ്) വര സുരക്ഷിതമാണെങ്കിൽ മറികടക്കാൻ അനുവദിക്കുന്നു, ഉദാഹരണത്തിന് ഓവർടേക്കിനോ ലെയ്ൻ മാറ്റത്തിനോ. തുടർച്ചയായ വര കടക്കുകയോ അതിന് മുകളിലൂടെ ഓടിക്കുകയോ അരുത്. തുടർച്ചയായ വരയും മുറിഞ്ഞ വരയും അടുത്തടുത്തുണ്ടെങ്കിൽ ഓരോ വശത്തിനും പ്രത്യേക നിയമമാണ്: മുറിഞ്ഞ വരയുള്ള വശത്തുള്ളവർക്ക് കടക്കാം, മറുവശത്തുള്ളവർക്ക് പാടില്ല.",
+          "உடைந்த (கோடு போடப்பட்ட) கோடு என்றால், அது பாதுகாப்பாக இருக்கும்போது நீங்கள் அதைக் கடக்கலாம், எடுத்துக்காட்டாக, பாதையை முந்துவது அல்லது மாற்றுவது. ஒரு தொடர்ச்சியான கோடு என்பது அதைக் கடக்கவோ அல்லது அதைக் கடக்கவோ கூடாது என்பதாகும், மேலும் உடைந்த கோட்டிற்கு அடுத்ததாக ஒரு தொடர்ச்சியான கோடு ஒவ்வொரு பக்கத்திற்கும் ஒரு விதியாகும், எனவே உடைந்த கோடு உள்ள பக்கம் மற்றொரு பக்கம் கடக்காமல் போகலாம்."
+        ],
+        [
+          "Other markings include stop lines at signals, zebra crossings, arrows for lane use, hatched areas to keep clear, and edge lines that show where the carriageway ends, which is especially helpful at night and in rain.",
+          "സിഗ്നലുകളിലെ സ്റ്റോപ്പ് ലൈൻ, സീബ്ര ക്രോസിങ്, ലെയ്ൻ ഉപയോഗം കാണിക്കുന്ന അമ്പടയാളങ്ങൾ, ഒഴിച്ചിടേണ്ട വരയിട്ട ഭാഗങ്ങൾ, കാരിയേജ്‌വേ അവസാനിക്കുന്നത് കാണിക്കുന്ന അരിക് വരകൾ എന്നിവയും ഉണ്ട്; രാത്രിയിലും മഴയിലും ഇവ വലിയ സഹായമാണ്.",
+          "மற்ற அடையாளங்களில் சிக்னல்களில் நிறுத்தக் கோடுகள், வரிக்குதிரை கிராசிங்குகள், லேன் பயன்பாட்டிற்கான அம்புகள், தெளிவாக இருக்க குஞ்சு பொரித்த பகுதிகள் மற்றும் வண்டிப்பாதை எங்கு முடியும் என்பதைக் காட்டும் விளிம்பு கோடுகள் ஆகியவை அடங்கும், இது குறிப்பாக இரவு மற்றும் மழையின் போது பயனுள்ளதாக இருக்கும்."
+        ],
+        [
+          "When a sign and a marking appear to disagree, take the safer option and slow down, and report faded or confusing markings to the road authority.",
+          "ചിഹ്നവും അടയാളവും തമ്മിൽ യോജിക്കുന്നില്ലെന്നു തോന്നിയാൽ സുരക്ഷിതമായ വഴി തിരഞ്ഞെടുത്ത് വേഗം കുറയ്ക്കുക; മങ്ങിയതോ ആശയക്കുഴപ്പമുണ്ടാക്കുന്നതോ ആയ അടയാളങ്ങൾ റോഡ് അധികൃതരെ അറിയിക്കുക.",
+          "ஒரு அடையாளமும் குறியும் உடன்படவில்லை எனத் தோன்றினால், பாதுகாப்பான விருப்பத்தை எடுத்து வேகத்தைக் குறைத்து, மங்கலான அல்லது குழப்பமான அடையாளங்களை சாலை அதிகாரியிடம் தெரிவிக்கவும்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Traffic signals",
+        "ട്രാഫിക് സിഗ്നലുകൾ",
+        "போக்குவரத்து சமிக்ஞைகள்"
+      ],
+      "p": [
+        [
+          "The three lights have simple meanings. Red means stop, amber means the signal is changing and you should stop if it is safe, and green means go if the way is clear.",
+          "മൂന്നു ലൈറ്റുകൾക്കും ലളിതമായ അർഥമാണ്. ചുവപ്പ് നിർത്തുക, മഞ്ഞ സിഗ്നൽ മാറുകയാണ് സുരക്ഷിതമെങ്കിൽ നിർത്തുക, പച്ച വഴി ഒഴിഞ്ഞിട്ടുണ്ടെങ്കിൽ പോകാം.",
+          "மூன்று விளக்குகளுக்கு எளிய அர்த்தங்கள் உள்ளன. சிவப்பு என்றால் நிறுத்தம், அம்பர் என்றால் சிக்னல் மாறுகிறது, பாதுகாப்பாக இருந்தால் நிறுத்த வேண்டும், பச்சை என்றால் வழி தெளிவாக இருந்தால் செல்லுங்கள்."
+        ],
+        [
+          "Arrows and lane signals add detail. A green arrow lets traffic in that direction go, and a flashing amber asks for care and giving way as the junction demands. Pedestrian signals work the same way for walkers.",
+          "അമ്പടയാളങ്ങളും ലെയ്ൻ സിഗ്നലുകളും കൂടുതൽ വിശദാംശം നൽകുന്നു. പച്ച അമ്പ് ആ ദിശയിലെ വാഹനങ്ങൾക്ക് പോകാൻ അനുമതി നൽകുന്നു; മിന്നുന്ന മഞ്ഞ ജാഗ്രതയും ജംഗ്ഷന്റെ ആവശ്യമനുസരിച്ച് വഴി കൊടുക്കലും ആവശ്യപ്പെടുന്നു. കാൽനടക്കാർക്കുള്ള സിഗ്നലുകളും ഇതേ രീതിയിൽ പ്രവർത്തിക്കുന്നു.",
+          "அம்புகள் மற்றும் லேன் சிக்னல்கள் விவரங்களைச் சேர்க்கின்றன. ஒரு பச்சை அம்பு அந்தத் திசையில் போக்குவரத்தை அனுமதிக்கிறது, மேலும் ஒரு ஒளிரும் அம்பர், சந்திப்பின் தேவைக்கேற்ப கவனிப்பு மற்றும் வழியைக் கேட்கிறது. பாதசாரி சமிக்ஞைகள் நடப்பவர்களுக்கும் அதே வழியில் செயல்படுகின்றன."
+        ],
+        [
+          "Signals that are linked with timers or countdowns help you decide early whether to slow down. Do not use them as a reason to rush the last seconds.",
+          "ടൈമറോ കൗണ്ട്ഡൗണോ ഉള്ള സിഗ്നലുകൾ വേഗം കുറയ്ക്കണോ എന്ന് നേരത്തേ തീരുമാനിക്കാൻ സഹായിക്കുന്നു. അവസാന സെക്കൻഡുകളിൽ ധൃതി പിടിക്കാനുള്ള കാരണമാക്കരുത്.",
+          "டைமர்கள் அல்லது கவுண்டவுன்களுடன் இணைக்கப்பட்டுள்ள சிக்னல்கள் வேகத்தைக் குறைக்க வேண்டுமா என்பதை முன்கூட்டியே தீர்மானிக்க உதவுகின்றன. கடைசி வினாடிகளை அவசரப்படுத்த ஒரு காரணமாக அவற்றைப் பயன்படுத்த வேண்டாம்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Police hand signals and driver signals",
+        "പോലീസ് കൈ സിഗ്നലുകളും ഡ്രൈവർ സിഗ്നലുകളും",
+        "போலீஸ் கை சமிக்ஞைகள் மற்றும் இயக்கி சமிக்ஞைகள்"
+      ],
+      "p": [
+        [
+          "When a police officer or traffic warden directs traffic, their signal overrides lights and signs. Watch their body position and the raised hand: traffic facing an officer's raised hand or palm is generally being told to stop, and traffic is waved on when the officer motions it forward.",
+          "പോലീസുകാരനോ ട്രാഫിക് വാർഡനോ ഗതാഗതം നിയന്ത്രിക്കുമ്പോൾ അവരുടെ സിഗ്നൽ ലൈറ്റുകളെയും ചിഹ്നങ്ങളെയും മറികടക്കുന്നു. അവരുടെ നിൽപ്പും ഉയർത്തിയ കൈയും ശ്രദ്ധിക്കുക: ഉയർത്തിയ കൈയോ ഉള്ളംകൈയോ കാണുന്ന വാഹനങ്ങളോട് സാധാരണ നിർത്താനും, മുന്നോട്ട് ആംഗ്യം കാട്ടുമ്പോൾ പോകാനുമാണ് പറയുന്നത്.",
+          "ஒரு போலீஸ் அதிகாரி அல்லது போக்குவரத்து காவலர் போக்குவரத்தை வழிநடத்தும் போது, ​​அவர்களின் சமிக்ஞை விளக்குகள் மற்றும் அடையாளங்களை மீறுகிறது. அவர்களின் உடல் நிலை மற்றும் உயர்த்தப்பட்ட கையைப் பார்க்கவும்: ஒரு அதிகாரியின் உயர்த்தப்பட்ட கை அல்லது உள்ளங்கையை எதிர்கொள்ளும் போக்குவரத்தை பொதுவாக நிறுத்தச் சொல்லப்படுகிறது, மேலும் அதிகாரி அதை முன்னோக்கி நகர்த்தும்போது போக்குவரத்து அலைக்கழிக்கப்படுகிறது."
+        ],
+        [
+          "Learn the exact hand-signal diagrams from the official Rules of the Road Regulations and the driving manual, because positions of the arm differ for each instruction.",
+          "ഓരോ നിർദേശത്തിനും കൈയുടെ നിലയിൽ വ്യത്യാസമുള്ളതിനാൽ കൈ സിഗ്നലുകളുടെ കൃത്യമായ ചിത്രങ്ങൾ ഔദ്യോഗിക റോഡ് നിയമങ്ങളിൽ നിന്നും ഡ്രൈവിങ് മാന്വലിൽ നിന്നും പഠിക്കുക.",
+          "சாலை ஒழுங்குமுறைகளின் அதிகாரப்பூர்வ விதிகள் மற்றும் ஓட்டுநர் கையேட்டில் இருந்து சரியான கை-சமிக்ஞை வரைபடங்களைக் கற்றுக்கொள்ளுங்கள், ஏனெனில் ஒவ்வொரு அறிவுறுத்தலுக்கும் கையின் நிலைகள் வேறுபடும்."
+        ],
+        [
+          "Drivers also use hand signals when indicators fail or when they need to be clearer, for example to show a right turn, a left turn or slowing and stopping. Indicators come first, but you must know the hand signals for the licence test.",
+          "ഇൻഡിക്കേറ്റർ പ്രവർത്തിക്കാത്തപ്പോഴോ കൂടുതൽ വ്യക്തത വേണ്ടപ്പോഴോ ഡ്രൈവർമാർ കൈ സിഗ്നൽ ഉപയോഗിക്കുന്നു, ഉദാഹരണത്തിന് വലത്തോട്ടോ ഇടത്തോട്ടോ തിരിയാനും വേഗം കുറയ്ക്കാനും നിർത്താനും. ഇൻഡിക്കേറ്ററിന് ആദ്യ സ്ഥാനം; എന്നാൽ ലൈസൻസ് ടെസ്റ്റിന് കൈ സിഗ്നലുകൾ അറിഞ്ഞിരിക്കണം.",
+          "குறிகாட்டிகள் தோல்வியடையும் போது அல்லது அவை தெளிவாக இருக்க வேண்டிய போது இயக்கிகள் கை சமிக்ஞைகளைப் பயன்படுத்துகின்றன, உதாரணமாக வலதுபுறம் திரும்புதல், இடதுபுறம் திரும்புதல் அல்லது மெதுவாக மற்றும் நிறுத்துதல் ஆகியவற்றைக் காட்ட. குறிகாட்டிகள் முதலில் வருகின்றன, ஆனால் உரிம சோதனைக்கான கை சமிக்ஞைகளை நீங்கள் அறிந்திருக்க வேண்டும்."
+        ],
+        [
+          "Give every signal early, hold it long enough for others to notice, and cancel it once you have turned. A forgotten indicator misleads the very people it was meant to inform.",
+          "എല്ലാ സിഗ്നലും നേരത്തേ നൽകുക, മറ്റുള്ളവർ ശ്രദ്ധിക്കാൻ പാകത്തിന് നിലനിർത്തുക, തിരിഞ്ഞുകഴിഞ്ഞാൽ റദ്ദാക്കുക. മറന്നുവച്ച ഇൻഡിക്കേറ്റർ അത് അറിയിക്കേണ്ടവരെ തന്നെ തെറ്റിദ്ധരിപ്പിക്കും.",
+          "ஒவ்வொரு சிக்னலையும் முன்கூட்டியே கொடுங்கள், மற்றவர்கள் கவனிக்கும் அளவுக்கு நீண்ட நேரம் பிடித்து, நீங்கள் திரும்பியதும் அதை ரத்து செய்யவும். ஒரு மறந்துவிட்ட குறிகாட்டி, அது தெரிவிக்க விரும்பிய மக்களை தவறாக வழிநடத்துகிறது."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Using this knowledge on the road",
+        "റോഡിൽ ഈ അറിവ് ഉപയോഗിക്കൽ",
+        "சாலையில் இந்த அறிவைப் பயன்படுத்தி"
+      ],
+      "p": [
+        [
+          "Scan far ahead so that you read each sign early. A sign read late is a sign that cannot help you, especially at speed.",
+          "ഓരോ ചിഹ്നവും നേരത്തേ വായിക്കാൻ ദൂരേക്ക് നോക്കുക. വൈകി വായിക്കുന്ന ചിഹ്നം സഹായിക്കില്ല, വേഗത്തിൽ പോകുമ്പോൾ വിശേഷിച്ചും.",
+          "தூரத்தை ஸ்கேன் செய்யுங்கள், இதன் மூலம் நீங்கள் ஒவ்வொரு அடையாளத்தையும் முன்கூட்டியே படிக்கலாம். தாமதமாக வாசிக்கப்பட்ட ஒரு அடையாளம் உங்களுக்கு உதவ முடியாத அறிகுறியாகும், குறிப்பாக வேகத்தில்."
+        ],
+        [
+          "If a sign is hidden by a tree, damaged or missing, drive as if the hazard is there. Remember that temporary signs at road works may change the usual rule for a short stretch.",
+          "ചിഹ്നം മരത്തിന് പിന്നിലോ കേടായോ ഇല്ലാതെയോ ആണെങ്കിൽ അപകടം ഉണ്ടെന്ന മട്ടിൽ ഓടിക്കുക. റോഡ് പണി നടക്കുന്നിടത്തെ താൽക്കാലിക ചിഹ്നങ്ങൾ ചെറിയ ദൂരത്തേക്ക് സാധാരണ നിയമം മാറ്റാമെന്ന് ഓർക്കുക.",
+          "ஒரு மரத்தால் அடையாளம் மறைந்திருந்தால், சேதமடைந்தால் அல்லது காணாமல் போனால், ஆபத்து இருப்பதைப் போல ஓட்டவும். சாலைப் பணிகளில் தற்காலிக அறிகுறிகள் ஒரு குறுகிய நீட்டிக்க வழக்கமான விதியை மாற்றலாம் என்பதை நினைவில் கொள்ளுங்கள்."
+        ],
+        [
+          "Test yourself: the next time you are a passenger, name the shape, the colour and the message of every sign you pass. Check the latest sign details with your RTO or the official manual.",
+          "സ്വയം പരീക്ഷിക്കുക: അടുത്ത തവണ യാത്രക്കാരനായി പോകുമ്പോൾ കടന്നുപോകുന്ന ഓരോ ചിഹ്നത്തിന്റെയും ആകൃതിയും നിറവും സന്ദേശവും പറയാൻ ശ്രമിക്കുക. ചിഹ്നങ്ങളുടെ ഏറ്റവും പുതിയ വിശദാംശം RTO യിലോ ഔദ്യോഗിക മാന്വലിലോ പരിശോധിക്കുക.",
+          "உங்களை நீங்களே சோதித்து பாருங்கள்: அடுத்த முறை நீங்கள் பயணிக்கும் போது, ​​நீங்கள் கடந்து செல்லும் ஒவ்வொரு அடையாளத்தின் வடிவம், நிறம் மற்றும் செய்தியை பெயரிடுங்கள். உங்கள் RTO அல்லது அதிகாரப்பூர்வ கையேட்டில் சமீபத்திய அடையாள விவரங்களைச் சரிபார்க்கவும்."
+        ]
+      ]
+    }
+  ],
+  "dos": [
     [
-     "Signs fall into three main families. Mandatory or regulatory signs give orders, cautionary signs warn you about hazards, and informatory signs help you find your way and services.",
-     "ചിഹ്നങ്ങൾ പ്രധാനമായും മൂന്നു വിഭാഗമാണ്. നിർബന്ധിത/നിയന്ത്രണ ചിഹ്നങ്ങൾ ഉത്തരവ് നൽകുന്നു, മുന്നറിയിപ്പ് ചിഹ്നങ്ങൾ അപകടങ്ങളെക്കുറിച്ച് ജാഗ്രത പറയുന്നു, വിവര ചിഹ്നങ്ങൾ വഴിയും സേവനങ്ങളും കണ്ടെത്താൻ സഹായിക്കുന്നു."
+      "Learn the shape and colour rules first.",
+      "ആദ്യം ആകൃതി, നിറം നിയമങ്ങൾ പഠിക്കുക.",
+      "முதலில் வடிவம் மற்றும் வண்ண விதிகளைக் கற்றுக்கொள்ளுங்கள்."
     ],
     [
-     "A circle with a red border is usually prohibitory: it tells you what you must not do, such as no entry, no parking or no overtaking. A circle with a blue background is mandatory: it tells you what you must do, such as keep left or minimum speed.",
-     "ചുവന്ന അരികുള്ള വൃത്തം സാധാരണ നിരോധന ചിഹ്നമാണ്: പ്രവേശനമില്ല, പാർക്കിങ് ഇല്ല, ഓവർടേക്കിങ് ഇല്ല എന്നിങ്ങനെ ചെയ്യരുതാത്തത് പറയുന്നു. നീല പശ്ചാത്തലമുള്ള വൃത്തം നിർബന്ധിത നിർദേശമാണ്: ഇടത്തുകൂടി പോകുക, കുറഞ്ഞ വേഗം തുടങ്ങിയ ചെയ്യേണ്ടത് പറയുന്നു."
+      "Slow down when you see a warning triangle.",
+      "മുന്നറിയിപ്പ് ത്രികോണം കണ്ടാൽ വേഗം കുറയ്ക്കുക.",
+      "எச்சரிக்கை முக்கோணத்தைக் காணும்போது வேகத்தைக் குறைக்கவும்."
     ],
     [
-     "A triangle with a red border warns you that something is ahead, such as a bend, a school or a slippery road. The point of a warning sign is to give you time to slow down before you see the hazard.",
-     "ചുവന്ന അരികുള്ള ത്രികോണം മുന്നിൽ എന്തോ ഉണ്ടെന്ന് മുന്നറിയിപ്പ് നൽകുന്നു: വളവ്, സ്കൂൾ, വഴുക്കുന്ന റോഡ് തുടങ്ങിയവ. അപകടം കാണും മുമ്പ് വേഗം കുറയ്ക്കാൻ സമയം തരികയാണ് മുന്നറിയിപ്പ് ചിഹ്നത്തിന്റെ ലക്ഷ്യം."
+      "Stop fully at a Stop sign.",
+      "സ്റ്റോപ്പ് ചിഹ്നത്തിൽ പൂർണമായി നിർത്തുക.",
+      "ஒரு ஸ்டாப் அடையாளத்தில் முழுமையாக நிறுத்தவும்."
     ],
     [
-     "Rectangular signs are informatory. Blue ones usually give facilities like parking or hospitals, and green ones usually give direction and distance on highways. Two special shapes deserve care: the octagon means Stop and the inverted triangle means Give Way.",
-     "ചതുരം/ദീർഘചതുരം ചിഹ്നങ്ങൾ വിവര ചിഹ്നങ്ങളാണ്. നീലയിൽ സാധാരണ പാർക്കിങ്, ആശുപത്രി തുടങ്ങിയ സൗകര്യങ്ങൾ, പച്ചയിൽ ഹൈവേകളിലെ ദിശയും ദൂരവും കാണിക്കുന്നു. രണ്ട് പ്രത്യേക ആകൃതികൾ ശ്രദ്ധിക്കുക: അഷ്ടഭുജം സ്റ്റോപ്പും തലതിരിഞ്ഞ ത്രികോണം ഗിവ് വേയും ആണ്."
+      "Stay behind the stop line at red.",
+      "ചുവപ്പിൽ സ്റ്റോപ്പ് ലൈനിനു പിന്നിൽ നിൽക്കുക.",
+      "சிவப்பு நிறத்தில் நிறுத்தக் கோட்டின் பின்னால் இருங்கள்."
     ],
     [
-     "Remember the idea behind the colours: red calls for stop or caution, blue says do or use, and yellow or white backgrounds with black symbols are common on warning and direction signs. Always check the symbol inside as well, because a diagonal red bar can cancel it.",
-     "നിറങ്ങളുടെ ആശയം ഓർക്കുക: ചുവപ്പ് നിർത്തുക/ജാഗ്രത, നീല ചെയ്യുക/ഉപയോഗിക്കുക എന്നും സൂചിപ്പിക്കുന്നു. ഉള്ളിലെ ചിഹ്നവും നോക്കുക, കാരണം കുറുകെയുള്ള ചുവന്ന വര അതിന്റെ അർഥം റദ്ദാക്കുന്നു."
+      "Obey a police officer over signals and signs.",
+      "സിഗ്നലിനെയും ചിഹ്നത്തെയും അപേക്ഷിച്ച് പോലീസുകാരന്റെ നിർദേശം പാലിക്കുക.",
+      "சிக்னல்கள் மற்றும் அறிகுறிகளில் ஒரு போலீஸ் அதிகாரிக்குக் கீழ்ப்படியுங்கள்."
+    ],
+    [
+      "Keep to your lane by following the lane markings.",
+      "ലെയ്ൻ അടയാളങ്ങൾ പിന്തുടർന്ന് നിങ്ങളുടെ ലെയ്നിൽ തുടരുക.",
+      "லேன் அடையாளங்களைப் பின்பற்றி உங்கள் பாதையில் இருங்கள்."
+    ],
+    [
+      "Give signals early and cancel them after the turn.",
+      "സിഗ്നൽ നേരത്തേ നൽകുക, തിരിവിനു ശേഷം റദ്ദാക്കുക.",
+      "முன்னதாகவே சிக்னல்களை வழங்கவும், திருப்பத்திற்குப் பிறகு அவற்றை ரத்து செய்யவும்."
+    ],
+    [
+      "Look far ahead to read signs in time.",
+      "ചിഹ്നങ്ങൾ സമയത്തു വായിക്കാൻ ദൂരേക്ക് നോക്കുക.",
+      "சரியான நேரத்தில் அறிகுறிகளைப் படிக்க முன்னோக்கிப் பாருங்கள்."
+    ],
+    [
+      "Learn the official hand signals for the test.",
+      "ടെസ്റ്റിനായി ഔദ്യോഗിക കൈ സിഗ്നലുകൾ പഠിക്കുക.",
+      "சோதனைக்கான அதிகாரப்பூர்வ கை சமிக்ஞைகளைக் கற்றுக்கொள்ளுங்கள்."
+    ],
+    [
+      "Treat missing or faded signs with extra caution.",
+      "ഇല്ലാത്തതോ മങ്ങിയതോ ആയ ചിഹ്നങ്ങളിൽ കൂടുതൽ ജാഗ്രത പാലിക്കുക.",
+      "விடுபட்ட அல்லது மறைந்த அறிகுறிகளை கூடுதல் எச்சரிக்கையுடன் நடத்தவும்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Road markings",
-    "റോഡ് അടയാളങ്ങൾ"
-   ],
-   "p": [
+  ],
+  "donts": [
     [
-     "Markings painted on the road work all the time and speak to you even when you cannot read signs. White lines generally separate traffic travelling in the same direction, and yellow lines are generally used for edges, the centre and no-parking areas, so check the markings of the stretch you are on.",
-     "റോഡിൽ വരച്ച അടയാളങ്ങൾ എല്ലാ സമയവും പ്രവർത്തിക്കുകയും ചിഹ്നം വായിക്കാനാകാത്തപ്പോഴും നിങ്ങളോട് സംസാരിക്കുകയും ചെയ്യുന്നു. വെള്ള വരകൾ സാധാരണ ഒരേ ദിശയിൽ പോകുന്ന ഗതാഗതത്തെ വേർതിരിക്കുന്നു; മഞ്ഞ വരകൾ സാധാരണ അരികുകൾ, മധ്യഭാഗം, പാർക്കിങ് ഇല്ലാത്ത ഇടങ്ങൾ എന്നിവയ്ക്ക് ഉപയോഗിക്കുന്നു. നിങ്ങൾ പോകുന്ന ഭാഗത്തെ അടയാളം നോക്കി ഉറപ്പാക്കുക."
+      "Do not cross a continuous line.",
+      "തുടർച്ചയായ വര കടക്കരുത്.",
+      "தொடர்ச்சியான கோட்டைக் கடக்க வேண்டாம்."
     ],
     [
-     "A broken (dashed) line means you may cross it when it is safe, for example to overtake or change lane. A continuous line means do not cross it or straddle it, and a continuous line next to a broken line is a rule for each side, so the side with the broken line may cross while the other side may not.",
-     "മുറിഞ്ഞ (ഡാഷ്) വര സുരക്ഷിതമാണെങ്കിൽ മറികടക്കാൻ അനുവദിക്കുന്നു, ഉദാഹരണത്തിന് ഓവർടേക്കിനോ ലെയ്ൻ മാറ്റത്തിനോ. തുടർച്ചയായ വര കടക്കുകയോ അതിന് മുകളിലൂടെ ഓടിക്കുകയോ അരുത്. തുടർച്ചയായ വരയും മുറിഞ്ഞ വരയും അടുത്തടുത്തുണ്ടെങ്കിൽ ഓരോ വശത്തിനും പ്രത്യേക നിയമമാണ്: മുറിഞ്ഞ വരയുള്ള വശത്തുള്ളവർക്ക് കടക്കാം, മറുവശത്തുള്ളവർക്ക് പാടില്ല."
+      "Do not guess the meaning of a sign you cannot recognise; slow down.",
+      "തിരിച്ചറിയാത്ത ചിഹ്നത്തിന്റെ അർഥം ഊഹിക്കരുത്; വേഗം കുറയ്ക്കുക.",
+      "உங்களால் அடையாளம் காண முடியாத அடையாளத்தின் அர்த்தத்தை யூகிக்க வேண்டாம்; மெதுவாக."
     ],
     [
-     "Other markings include stop lines at signals, zebra crossings, arrows for lane use, hatched areas to keep clear, and edge lines that show where the carriageway ends, which is especially helpful at night and in rain.",
-     "സിഗ്നലുകളിലെ സ്റ്റോപ്പ് ലൈൻ, സീബ്ര ക്രോസിങ്, ലെയ്ൻ ഉപയോഗം കാണിക്കുന്ന അമ്പടയാളങ്ങൾ, ഒഴിച്ചിടേണ്ട വരയിട്ട ഭാഗങ്ങൾ, കാരിയേജ്‌വേ അവസാനിക്കുന്നത് കാണിക്കുന്ന അരിക് വരകൾ എന്നിവയും ഉണ്ട്; രാത്രിയിലും മഴയിലും ഇവ വലിയ സഹായമാണ്."
+      "Do not jump a red light.",
+      "ചുവപ്പ് ലൈറ്റ് കടക്കരുത്.",
+      "சிவப்பு விளக்கை குதிக்க வேண்டாம்."
     ],
     [
-     "When a sign and a marking appear to disagree, take the safer option and slow down, and report faded or confusing markings to the road authority.",
-     "ചിഹ്നവും അടയാളവും തമ്മിൽ യോജിക്കുന്നില്ലെന്നു തോന്നിയാൽ സുരക്ഷിതമായ വഴി തിരഞ്ഞെടുത്ത് വേഗം കുറയ്ക്കുക; മങ്ങിയതോ ആശയക്കുഴപ്പമുണ്ടാക്കുന്നതോ ആയ അടയാളങ്ങൾ റോഡ് അധികൃതരെ അറിയിക്കുക."
+      "Do not stop on a zebra crossing.",
+      "സീബ്ര ക്രോസിങ്ങിൽ നിർത്തരുത്.",
+      "வரிக்குதிரை கடக்கும்போது நிறுத்த வேண்டாம்."
+    ],
+    [
+      "Do not ignore a sign because you drive this road daily.",
+      "ദിവസവും പോകുന്ന റോഡാണെന്നു കരുതി ചിഹ്നം അവഗണിക്കരുത്.",
+      "நீங்கள் தினமும் இந்த சாலையை ஓட்டுவதால் ஒரு அடையாளத்தை புறக்கணிக்காதீர்கள்."
+    ],
+    [
+      "Do not leave an indicator on after turning.",
+      "തിരിഞ്ഞ ശേഷം ഇൻഡിക്കേറ്റർ ഓണാക്കി വിടരുത്.",
+      "திரும்பிய பிறகு ஒரு குறிகாட்டியை இயக்க வேண்டாம்."
+    ],
+    [
+      "Do not read signs only when you are close to them.",
+      "അടുത്തെത്തുമ്പോൾ മാത്രം ചിഹ്നം വായിക്കരുത്.",
+      "அடையாளங்களை நீங்கள் அருகில் இருக்கும்போது மட்டும் படிக்காதீர்கள்."
+    ],
+    [
+      "Do not park where yellow edge markings or no-parking signs apply.",
+      "നോ-പാർക്കിങ് ചിഹ്നമോ മഞ്ഞ അരിക് അടയാളമോ ഉള്ളിടത്ത് പാർക്ക് ചെയ്യരുത്.",
+      "மஞ்சள் விளிம்பு அடையாளங்கள் அல்லது நோ-பார்க்கிங் அறிகுறிகள் பொருந்தும் இடத்தில் நிறுத்த வேண்டாம்."
+    ],
+    [
+      "Do not treat amber as a signal to accelerate.",
+      "മഞ്ഞ ലൈറ്റ് വേഗം കൂട്ടാനുള്ള സിഗ്നലായി കരുതരുത്.",
+      "ஆம்பரை விரைவுபடுத்துவதற்கான சமிக்ஞையாகக் கருத வேண்டாம்."
+    ],
+    [
+      "Do not ignore signs at road works.",
+      "റോഡ് പണിസ്ഥലത്തെ ചിഹ്നങ്ങൾ അവഗണിക്കരുത്.",
+      "சாலைப் பணிகளில் அறிகுறிகளை புறக்கணிக்காதீர்கள்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Traffic signals",
-    "ട്രാഫിക് സിഗ്നലുകൾ"
-   ],
-   "p": [
+  ],
+  "myths": [
+    {
+      "m": [
+        "All red signs mean stop.",
+        "ചുവന്ന എല്ലാ ചിഹ്നങ്ങളും നിർത്തുക എന്നാണ്.",
+        "அனைத்து சிவப்பு அடையாளங்களும் நிறுத்தத்தைக் குறிக்கும்."
+      ],
+      "f": [
+        "Red marks prohibition or warning. Only the octagon means Stop, and the inverted triangle means Give Way.",
+        "ചുവപ്പ് നിരോധനത്തെയോ മുന്നറിയിപ്പിനെയോ സൂചിപ്പിക്കുന്നു. അഷ്ടഭുജം മാത്രമാണ് സ്റ്റോപ്പ്; തലതിരിഞ്ഞ ത്രികോണം ഗിവ് വേ ആണ്.",
+        "சிவப்பு குறிகள் தடை அல்லது எச்சரிக்கை. எண்கோணம் மட்டும் நிறுத்து, மற்றும் தலைகீழ் முக்கோணம் வழி வழி என்று பொருள்."
+      ]
+    },
+    {
+      "m": [
+        "A broken white line means I can overtake anywhere.",
+        "മുറിഞ്ഞ വെള്ള വര കണ്ടാൽ എവിടെയും ഓവർടേക്ക് ചെയ്യാം.",
+        "உடைந்த வெள்ளைக் கோடு என்றால் நான் எங்கு வேண்டுமானாலும் முந்த முடியும்."
+      ],
+      "f": [
+        "A broken line only allows crossing when it is safe, and not near bends, junctions or crests where you cannot see ahead.",
+        "സുരക്ഷിതമാണെങ്കിൽ മാത്രമേ മുറിഞ്ഞ വര കടക്കാൻ അനുവദിക്കൂ; വളവ്, ജംഗ്ഷൻ, കയറ്റത്തിന്റെ മുകൾ പോലെ മുന്നിൽ കാണാത്തിടത്ത് പാടില്ല.",
+        "உடைந்த கோடு பாதுகாப்பாக இருக்கும்போது மட்டுமே கடக்க அனுமதிக்கும், மேலும் நீங்கள் முன்னால் பார்க்க முடியாத வளைவுகள், சந்திப்புகள் அல்லது முகடுகளுக்கு அருகில் அல்ல."
+      ]
+    },
+    {
+      "m": [
+        "Informatory signs can be ignored.",
+        "വിവര ചിഹ്നങ്ങൾ അവഗണിക്കാം.",
+        "தகவல் தரும் அறிகுறிகள் புறக்கணிக்கப்படலாம்."
+      ],
+      "f": [
+        "They are not orders, but they help you choose the right lane and exit and avoid last-minute risky moves.",
+        "അവ ഉത്തരവുകളല്ല, പക്ഷേ ശരിയായ ലെയ്നും എക്സിറ്റും തിരഞ്ഞെടുക്കാനും അവസാന നിമിഷത്തെ അപകടകരമായ നീക്കങ്ങൾ ഒഴിവാക്കാനും സഹായിക്കും.",
+        "அவை ஆர்டர்கள் அல்ல, ஆனால் அவை சரியான பாதையைத் தேர்ந்தெடுத்து வெளியேறவும் கடைசி நிமிட ஆபத்தான நகர்வுகளைத் தவிர்க்கவும் உதவுகின்றன."
+      ]
+    },
+    {
+      "m": [
+        "If the signal is green I can ignore the police officer.",
+        "സിഗ്നൽ പച്ചയാണെങ്കിൽ പോലീസുകാരനെ അവഗണിക്കാം.",
+        "சிக்னல் பச்சை நிறத்தில் இருந்தால் நான் போலீஸ் அதிகாரியை புறக்கணிக்க முடியும்."
+      ],
+      "f": [
+        "A police officer's direction overrides the lights. Follow the officer.",
+        "പോലീസുകാരന്റെ നിർദേശം ലൈറ്റുകളെ മറികടക്കുന്നു. അദ്ദേഹത്തെ പിന്തുടരുക.",
+        "ஒரு போலீஸ் அதிகாரியின் திசை விளக்குகளை மீறுகிறது. அதிகாரியைப் பின்பற்றுங்கள்."
+      ]
+    },
+    {
+      "m": [
+        "Hand signals are outdated.",
+        "കൈ സിഗ്നലുകൾ കാലഹരണപ്പെട്ടതാണ്.",
+        "கை சமிக்ஞைகள் காலாவதியானவை."
+      ],
+      "f": [
+        "They are still tested and useful when indicators fail or are hard to see.",
+        "അവ ഇപ്പോഴും പരീക്ഷയിലുണ്ട്; ഇൻഡിക്കേറ്റർ കേടായാലോ കാണാൻ പ്രയാസമായാലോ ഉപകാരപ്പെടും.",
+        "குறிகாட்டிகள் தோல்வியடையும் போது அல்லது பார்க்க கடினமாக இருக்கும் போது அவை இன்னும் சோதிக்கப்பட்டு பயனுள்ளதாக இருக்கும்."
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "t": [
+        "The sign she had never seen",
+        "അവൾ മുമ്പ് കാണാത്ത ചിഹ്നം",
+        "அவள் பார்த்திராத அடையாளம்"
+      ],
+      "s": [
+        "A learner called Lekha saw a sign she did not recognise: a red-bordered triangle with a symbol. She could not read it at speed, but she knew the shape meant a warning. She lifted her foot off the accelerator and slowed down, and a moment later saw the road narrowing around a bend with a bus parked on the left. Because she had slowed down early, she had time to move around it safely.",
+        "ലേഖ എന്ന പഠിതാവ് തിരിച്ചറിയാത്ത ഒരു ചിഹ്നം കണ്ടു: ചുവന്ന അരികുള്ള, ഉള്ളിൽ ചിഹ്നമുള്ള ത്രികോണം. വേഗത്തിൽ പോകുന്നതിനാൽ ചിഹ്നം വായിക്കാനായില്ല, പക്ഷേ ആ ആകൃതി മുന്നറിയിപ്പാണെന്ന് അവൾക്ക് അറിയാമായിരുന്നു. അവൾ ആക്സിലറേറ്ററിൽ നിന്ന് കാൽ എടുത്ത് വേഗം കുറച്ചു; കുറച്ചു കഴിഞ്ഞപ്പോൾ വളവിൽ റോഡ് ഇടുങ്ങുന്നതും ഇടതുവശത്ത് ഒരു ബസ് നിർത്തിയിട്ടിരിക്കുന്നതും കണ്ടു. നേരത്തേ വേഗം കുറച്ചതിനാൽ സുരക്ഷിതമായി വെട്ടിച്ചുപോകാൻ സമയം കിട്ടി.",
+        "லேகா என்று அழைக்கப்படும் ஒரு பெண், அவர் அடையாளம் காணாத ஒரு அடையாளத்தைக் கண்டார்: ஒரு சிகப்பு-எல்லை கொண்ட முக்கோணம். அவளால் அதை வேகத்தில் படிக்க முடியவில்லை, ஆனால் அந்த வடிவம் ஒரு எச்சரிக்கை என்று அவளுக்குத் தெரியும். ஆக்சிலேட்டரில் இருந்து கால் தூக்கி வேகத்தைக் குறைத்தவள், சிறிது நேரம் கழித்து ஒரு வளைவைச் சுற்றி சாலை குறுகுவதைப் பார்த்தாள், இடதுபுறம் பேருந்து நிறுத்தப்பட்டது. அவள் ஆரம்பத்தில் வேகத்தைக் குறைத்ததால், அதைச் சுற்றிப் பாதுகாப்பாகச் செல்ல அவளுக்கு நேரம் கிடைத்தது."
+      ],
+      "lesson": [
+        "Shape and colour give you the meaning even when you cannot read the symbol. A triangle means slow down and be ready.",
+        "ചിഹ്നം വായിക്കാനായില്ലെങ്കിലും ആകൃതിയും നിറവും അർഥം പറഞ്ഞുതരും. ത്രികോണം എന്നാൽ വേഗം കുറച്ച് തയ്യാറാകുക.",
+        "உருவமும் வண்ணமும் நீங்கள் குறியீட்டைப் படிக்க முடியாவிட்டாலும் அர்த்தத்தைத் தருகிறது. முக்கோணம் என்றால் மெதுவாக இருங்கள் மற்றும் தயாராக இருங்கள்."
+      ]
+    },
+    {
+      "t": [
+        "The line at the bend",
+        "വളവിലെ വര",
+        "வளைவில் உள்ள கோடு"
+      ],
+      "s": [
+        "Nikhil was following a slow truck on a winding road and wanted to pass. The ahead lane looked clear for a moment, but the centre line was continuous. He thought for a second, then stayed behind. A few moments later, a bus came around the bend in the opposite lane, completely hidden until then. The line had been put there because of the bend.",
+        "വളഞ്ഞ റോഡിൽ പതുക്കെ പോകുന്ന ട്രക്കിന് പിന്നിൽ നിഖിൽ മറികടക്കാൻ ആഗ്രഹിച്ചു. മുന്നിലെ ലെയ്ൻ ഒരു നിമിഷം ഒഴിഞ്ഞതായി തോന്നിയെങ്കിലും മധ്യവര തുടർച്ചയായതായിരുന്നു. ഒരു നിമിഷം ആലോചിച്ച് അയാൾ പിന്നിൽ തന്നെ തുടർന്നു. അൽപസമയത്തിനകം എതിർ ലെയ്നിൽ വളവ് തിരിഞ്ഞ് ഒരു ബസ് വന്നു; അതുവരെ അത് പൂർണമായും മറഞ്ഞിരുന്നു. വളവ് കാരണമാണ് ആ വര അവിടെ വരച്ചിരുന്നത്.",
+        "நிகில் ஒரு வளைந்த சாலையில் மெதுவாக டிரக்கைப் பின்தொடர்ந்து கடந்து செல்ல விரும்பினார். முன்னே செல்லும் பாதை ஒரு கணம் தெளிவாகத் தெரிந்தது, ஆனால் மையக் கோடு தொடர்ச்சியாக இருந்தது. அவர் ஒரு வினாடி யோசித்தார், பின் தங்கினார். சில நிமிடங்களுக்குப் பிறகு, எதிரே இருந்த வளைவைச் சுற்றி ஒரு பேருந்து வந்தது, அதுவரை முற்றிலும் மறைந்திருந்தது. வளைவு காரணமாக கோடு போடப்பட்டது."
+      ],
+      "lesson": [
+        "A continuous line is a warning that you cannot see what is coming. Respect it even when the road looks empty.",
+        "തുടർച്ചയായ വര എന്നാൽ വരാനിരിക്കുന്നത് നിങ്ങൾക്ക് കാണാനാകില്ല എന്ന മുന്നറിയിപ്പാണ്. റോഡ് ഒഴിഞ്ഞതായി തോന്നിയാലും അത് മാനിക്കുക.",
+        "ஒரு தொடர்ச்சியான வரி என்பது என்ன வரப்போகிறது என்பதை நீங்கள் பார்க்க முடியாது என்ற எச்சரிக்கையாகும். சாலை காலியாகத் தெரிந்தாலும் அதை மதிக்கவும்."
+      ]
+    }
+  ],
+  "recap": [
     [
-     "The three lights have simple meanings. Red means stop, amber means the signal is changing and you should stop if it is safe, and green means go if the way is clear.",
-     "മൂന്നു ലൈറ്റുകൾക്കും ലളിതമായ അർഥമാണ്. ചുവപ്പ് നിർത്തുക, മഞ്ഞ സിഗ്നൽ മാറുകയാണ് സുരക്ഷിതമെങ്കിൽ നിർത്തുക, പച്ച വഴി ഒഴിഞ്ഞിട്ടുണ്ടെങ്കിൽ പോകാം."
+      "Red circle: do not. Blue circle: do. Triangle: be careful. Rectangle: information.",
+      "ചുവന്ന വൃത്തം: ചെയ്യരുത്. നീല വൃത്തം: ചെയ്യുക. ത്രികോണം: ശ്രദ്ധിക്കുക. ദീർഘചതുരം: വിവരം.",
+      "சிவப்பு வட்டம்: வேண்டாம். நீல வட்டம்: செய். முக்கோணம்: கவனமாக இருங்கள். செவ்வகம்: தகவல்."
     ],
     [
-     "Arrows and lane signals add detail. A green arrow lets traffic in that direction go, and a flashing amber asks for care and giving way as the junction demands. Pedestrian signals work the same way for walkers.",
-     "അമ്പടയാളങ്ങളും ലെയ്ൻ സിഗ്നലുകളും കൂടുതൽ വിശദാംശം നൽകുന്നു. പച്ച അമ്പ് ആ ദിശയിലെ വാഹനങ്ങൾക്ക് പോകാൻ അനുമതി നൽകുന്നു; മിന്നുന്ന മഞ്ഞ ജാഗ്രതയും ജംഗ്ഷന്റെ ആവശ്യമനുസരിച്ച് വഴി കൊടുക്കലും ആവശ്യപ്പെടുന്നു. കാൽനടക്കാർക്കുള്ള സിഗ്നലുകളും ഇതേ രീതിയിൽ പ്രവർത്തിക്കുന്നു."
+      "Octagon is Stop; inverted triangle is Give Way.",
+      "അഷ്ടഭുജം സ്റ്റോപ്പ്; തലതിരിഞ്ഞ ത്രികോണം ഗിവ് വേ.",
+      "எண்கோணம் ஸ்டாப்; தலைகீழ் முக்கோணம் என்பது கிவ் வே."
     ],
     [
-     "Signals that are linked with timers or countdowns help you decide early whether to slow down. Do not use them as a reason to rush the last seconds.",
-     "ടൈമറോ കൗണ്ട്ഡൗണോ ഉള്ള സിഗ്നലുകൾ വേഗം കുറയ്ക്കണോ എന്ന് നേരത്തേ തീരുമാനിക്കാൻ സഹായിക്കുന്നു. അവസാന സെക്കൻഡുകളിൽ ധൃതി പിടിക്കാനുള്ള കാരണമാക്കരുത്."
+      "Continuous line: do not cross. Broken line: cross only when safe.",
+      "തുടർച്ചയായ വര: കടക്കരുത്. മുറിഞ്ഞ വര: സുരക്ഷിതമെങ്കിൽ മാത്രം കടക്കുക.",
+      "தொடர்ச்சியான வரி: கடக்க வேண்டாம். உடைந்த கோடு: பாதுகாப்பாக இருக்கும்போது மட்டும் கடக்கவும்."
+    ],
+    [
+      "Red stop, amber prepare to stop, green go if clear.",
+      "ചുവപ്പ് നിർത്തുക, മഞ്ഞ നിർത്താൻ തയ്യാറാകുക, പച്ച ഒഴിഞ്ഞെങ്കിൽ പോകുക.",
+      "சிவப்பு நிறுத்தம், அம்பர் நிறுத்தத் தயாராகிறது, தெளிவாக இருந்தால் பச்சை நிறத்தில் செல்லுங்கள்."
+    ],
+    [
+      "Police officer's direction overrides signals and signs.",
+      "പോലീസുകാരന്റെ നിർദേശം സിഗ്നലുകളെയും ചിഹ്നങ്ങളെയും മറികടക്കുന്നു.",
+      "பொலிஸ் அதிகாரியின் திசையானது சமிக்ஞைகள் மற்றும் அடையாளங்களை மீறுகிறது."
+    ],
+    [
+      "Read signs early and signal early.",
+      "ചിഹ്നങ്ങൾ നേരത്തേ വായിക്കുക, സിഗ്നൽ നേരത്തേ നൽകുക.",
+      "அறிகுறிகளை முன்கூட்டியே படித்து, முன்கூட்டியே சமிக்ஞை செய்யுங்கள்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Police hand signals and driver signals",
-    "പോലീസ് കൈ സിഗ്നലുകളും ഡ്രൈവർ സിഗ്നലുകളും"
-   ],
-   "p": [
-    [
-     "When a police officer or traffic warden directs traffic, their signal overrides lights and signs. Watch their body position and the raised hand: traffic facing an officer's raised hand or palm is generally being told to stop, and traffic is waved on when the officer motions it forward.",
-     "പോലീസുകാരനോ ട്രാഫിക് വാർഡനോ ഗതാഗതം നിയന്ത്രിക്കുമ്പോൾ അവരുടെ സിഗ്നൽ ലൈറ്റുകളെയും ചിഹ്നങ്ങളെയും മറികടക്കുന്നു. അവരുടെ നിൽപ്പും ഉയർത്തിയ കൈയും ശ്രദ്ധിക്കുക: ഉയർത്തിയ കൈയോ ഉള്ളംകൈയോ കാണുന്ന വാഹനങ്ങളോട് സാധാരണ നിർത്താനും, മുന്നോട്ട് ആംഗ്യം കാട്ടുമ്പോൾ പോകാനുമാണ് പറയുന്നത്."
-    ],
-    [
-     "Learn the exact hand-signal diagrams from the official Rules of the Road Regulations and the driving manual, because positions of the arm differ for each instruction.",
-     "ഓരോ നിർദേശത്തിനും കൈയുടെ നിലയിൽ വ്യത്യാസമുള്ളതിനാൽ കൈ സിഗ്നലുകളുടെ കൃത്യമായ ചിത്രങ്ങൾ ഔദ്യോഗിക റോഡ് നിയമങ്ങളിൽ നിന്നും ഡ്രൈവിങ് മാന്വലിൽ നിന്നും പഠിക്കുക."
-    ],
-    [
-     "Drivers also use hand signals when indicators fail or when they need to be clearer, for example to show a right turn, a left turn or slowing and stopping. Indicators come first, but you must know the hand signals for the licence test.",
-     "ഇൻഡിക്കേറ്റർ പ്രവർത്തിക്കാത്തപ്പോഴോ കൂടുതൽ വ്യക്തത വേണ്ടപ്പോഴോ ഡ്രൈവർമാർ കൈ സിഗ്നൽ ഉപയോഗിക്കുന്നു, ഉദാഹരണത്തിന് വലത്തോട്ടോ ഇടത്തോട്ടോ തിരിയാനും വേഗം കുറയ്ക്കാനും നിർത്താനും. ഇൻഡിക്കേറ്ററിന് ആദ്യ സ്ഥാനം; എന്നാൽ ലൈസൻസ് ടെസ്റ്റിന് കൈ സിഗ്നലുകൾ അറിഞ്ഞിരിക്കണം."
-    ],
-    [
-     "Give every signal early, hold it long enough for others to notice, and cancel it once you have turned. A forgotten indicator misleads the very people it was meant to inform.",
-     "എല്ലാ സിഗ്നലും നേരത്തേ നൽകുക, മറ്റുള്ളവർ ശ്രദ്ധിക്കാൻ പാകത്തിന് നിലനിർത്തുക, തിരിഞ്ഞുകഴിഞ്ഞാൽ റദ്ദാക്കുക. മറന്നുവച്ച ഇൻഡിക്കേറ്റർ അത് അറിയിക്കേണ്ടവരെ തന്നെ തെറ്റിദ്ധരിപ്പിക്കും."
-    ]
-   ]
-  },
-  {
-   "h": [
-    "Using this knowledge on the road",
-    "റോഡിൽ ഈ അറിവ് ഉപയോഗിക്കൽ"
-   ],
-   "p": [
-    [
-     "Scan far ahead so that you read each sign early. A sign read late is a sign that cannot help you, especially at speed.",
-     "ഓരോ ചിഹ്നവും നേരത്തേ വായിക്കാൻ ദൂരേക്ക് നോക്കുക. വൈകി വായിക്കുന്ന ചിഹ്നം സഹായിക്കില്ല, വേഗത്തിൽ പോകുമ്പോൾ വിശേഷിച്ചും."
-    ],
-    [
-     "If a sign is hidden by a tree, damaged or missing, drive as if the hazard is there. Remember that temporary signs at road works may change the usual rule for a short stretch.",
-     "ചിഹ്നം മരത്തിന് പിന്നിലോ കേടായോ ഇല്ലാതെയോ ആണെങ്കിൽ അപകടം ഉണ്ടെന്ന മട്ടിൽ ഓടിക്കുക. റോഡ് പണി നടക്കുന്നിടത്തെ താൽക്കാലിക ചിഹ്നങ്ങൾ ചെറിയ ദൂരത്തേക്ക് സാധാരണ നിയമം മാറ്റാമെന്ന് ഓർക്കുക."
-    ],
-    [
-     "Test yourself: the next time you are a passenger, name the shape, the colour and the message of every sign you pass. Check the latest sign details with your RTO or the official manual.",
-     "സ്വയം പരീക്ഷിക്കുക: അടുത്ത തവണ യാത്രക്കാരനായി പോകുമ്പോൾ കടന്നുപോകുന്ന ഓരോ ചിഹ്നത്തിന്റെയും ആകൃതിയും നിറവും സന്ദേശവും പറയാൻ ശ്രമിക്കുക. ചിഹ്നങ്ങളുടെ ഏറ്റവും പുതിയ വിശദാംശം RTO യിലോ ഔദ്യോഗിക മാന്വലിലോ പരിശോധിക്കുക."
-    ]
-   ]
-  }
- ],
- "dos": [
-  [
-   "Learn the shape and colour rules first.",
-   "ആദ്യം ആകൃതി, നിറം നിയമങ്ങൾ പഠിക്കുക."
-  ],
-  [
-   "Slow down when you see a warning triangle.",
-   "മുന്നറിയിപ്പ് ത്രികോണം കണ്ടാൽ വേഗം കുറയ്ക്കുക."
-  ],
-  [
-   "Stop fully at a Stop sign.",
-   "സ്റ്റോപ്പ് ചിഹ്നത്തിൽ പൂർണമായി നിർത്തുക."
-  ],
-  [
-   "Stay behind the stop line at red.",
-   "ചുവപ്പിൽ സ്റ്റോപ്പ് ലൈനിനു പിന്നിൽ നിൽക്കുക."
-  ],
-  [
-   "Obey a police officer over signals and signs.",
-   "സിഗ്നലിനെയും ചിഹ്നത്തെയും അപേക്ഷിച്ച് പോലീസുകാരന്റെ നിർദേശം പാലിക്കുക."
-  ],
-  [
-   "Keep to your lane by following the lane markings.",
-   "ലെയ്ൻ അടയാളങ്ങൾ പിന്തുടർന്ന് നിങ്ങളുടെ ലെയ്നിൽ തുടരുക."
-  ],
-  [
-   "Give signals early and cancel them after the turn.",
-   "സിഗ്നൽ നേരത്തേ നൽകുക, തിരിവിനു ശേഷം റദ്ദാക്കുക."
-  ],
-  [
-   "Look far ahead to read signs in time.",
-   "ചിഹ്നങ്ങൾ സമയത്തു വായിക്കാൻ ദൂരേക്ക് നോക്കുക."
-  ],
-  [
-   "Learn the official hand signals for the test.",
-   "ടെസ്റ്റിനായി ഔദ്യോഗിക കൈ സിഗ്നലുകൾ പഠിക്കുക."
-  ],
-  [
-   "Treat missing or faded signs with extra caution.",
-   "ഇല്ലാത്തതോ മങ്ങിയതോ ആയ ചിഹ്നങ്ങളിൽ കൂടുതൽ ജാഗ്രത പാലിക്കുക."
   ]
- ],
- "donts": [
-  [
-   "Do not cross a continuous line.",
-   "തുടർച്ചയായ വര കടക്കരുത്."
-  ],
-  [
-   "Do not guess the meaning of a sign you cannot recognise; slow down.",
-   "തിരിച്ചറിയാത്ത ചിഹ്നത്തിന്റെ അർഥം ഊഹിക്കരുത്; വേഗം കുറയ്ക്കുക."
-  ],
-  [
-   "Do not jump a red light.",
-   "ചുവപ്പ് ലൈറ്റ് കടക്കരുത്."
-  ],
-  [
-   "Do not stop on a zebra crossing.",
-   "സീബ്ര ക്രോസിങ്ങിൽ നിർത്തരുത്."
-  ],
-  [
-   "Do not ignore a sign because you drive this road daily.",
-   "ദിവസവും പോകുന്ന റോഡാണെന്നു കരുതി ചിഹ്നം അവഗണിക്കരുത്."
-  ],
-  [
-   "Do not leave an indicator on after turning.",
-   "തിരിഞ്ഞ ശേഷം ഇൻഡിക്കേറ്റർ ഓണാക്കി വിടരുത്."
-  ],
-  [
-   "Do not read signs only when you are close to them.",
-   "അടുത്തെത്തുമ്പോൾ മാത്രം ചിഹ്നം വായിക്കരുത്."
-  ],
-  [
-   "Do not park where yellow edge markings or no-parking signs apply.",
-   "നോ-പാർക്കിങ് ചിഹ്നമോ മഞ്ഞ അരിക് അടയാളമോ ഉള്ളിടത്ത് പാർക്ക് ചെയ്യരുത്."
-  ],
-  [
-   "Do not treat amber as a signal to accelerate.",
-   "മഞ്ഞ ലൈറ്റ് വേഗം കൂട്ടാനുള്ള സിഗ്നലായി കരുതരുത്."
-  ],
-  [
-   "Do not ignore signs at road works.",
-   "റോഡ് പണിസ്ഥലത്തെ ചിഹ്നങ്ങൾ അവഗണിക്കരുത്."
-  ]
- ],
- "myths": [
-  {
-   "m": [
-    "All red signs mean stop.",
-    "ചുവന്ന എല്ലാ ചിഹ്നങ്ങളും നിർത്തുക എന്നാണ്."
-   ],
-   "f": [
-    "Red marks prohibition or warning. Only the octagon means Stop, and the inverted triangle means Give Way.",
-    "ചുവപ്പ് നിരോധനത്തെയോ മുന്നറിയിപ്പിനെയോ സൂചിപ്പിക്കുന്നു. അഷ്ടഭുജം മാത്രമാണ് സ്റ്റോപ്പ്; തലതിരിഞ്ഞ ത്രികോണം ഗിവ് വേ ആണ്."
-   ]
-  },
-  {
-   "m": [
-    "A broken white line means I can overtake anywhere.",
-    "മുറിഞ്ഞ വെള്ള വര കണ്ടാൽ എവിടെയും ഓവർടേക്ക് ചെയ്യാം."
-   ],
-   "f": [
-    "A broken line only allows crossing when it is safe, and not near bends, junctions or crests where you cannot see ahead.",
-    "സുരക്ഷിതമാണെങ്കിൽ മാത്രമേ മുറിഞ്ഞ വര കടക്കാൻ അനുവദിക്കൂ; വളവ്, ജംഗ്ഷൻ, കയറ്റത്തിന്റെ മുകൾ പോലെ മുന്നിൽ കാണാത്തിടത്ത് പാടില്ല."
-   ]
-  },
-  {
-   "m": [
-    "Informatory signs can be ignored.",
-    "വിവര ചിഹ്നങ്ങൾ അവഗണിക്കാം."
-   ],
-   "f": [
-    "They are not orders, but they help you choose the right lane and exit and avoid last-minute risky moves.",
-    "അവ ഉത്തരവുകളല്ല, പക്ഷേ ശരിയായ ലെയ്നും എക്സിറ്റും തിരഞ്ഞെടുക്കാനും അവസാന നിമിഷത്തെ അപകടകരമായ നീക്കങ്ങൾ ഒഴിവാക്കാനും സഹായിക്കും."
-   ]
-  },
-  {
-   "m": [
-    "If the signal is green I can ignore the police officer.",
-    "സിഗ്നൽ പച്ചയാണെങ്കിൽ പോലീസുകാരനെ അവഗണിക്കാം."
-   ],
-   "f": [
-    "A police officer's direction overrides the lights. Follow the officer.",
-    "പോലീസുകാരന്റെ നിർദേശം ലൈറ്റുകളെ മറികടക്കുന്നു. അദ്ദേഹത്തെ പിന്തുടരുക."
-   ]
-  },
-  {
-   "m": [
-    "Hand signals are outdated.",
-    "കൈ സിഗ്നലുകൾ കാലഹരണപ്പെട്ടതാണ്."
-   ],
-   "f": [
-    "They are still tested and useful when indicators fail or are hard to see.",
-    "അവ ഇപ്പോഴും പരീക്ഷയിലുണ്ട്; ഇൻഡിക്കേറ്റർ കേടായാലോ കാണാൻ പ്രയാസമായാലോ ഉപകാരപ്പെടും."
-   ]
-  }
- ],
- "stories": [
-  {
-   "t": [
-    "The sign she had never seen",
-    "അവൾ മുമ്പ് കാണാത്ത ചിഹ്നം"
-   ],
-   "s": [
-    "A learner called Lekha saw a sign she did not recognise: a red-bordered triangle with a symbol. She could not read it at speed, but she knew the shape meant a warning. She lifted her foot off the accelerator and slowed down, and a moment later saw the road narrowing around a bend with a bus parked on the left. Because she had slowed down early, she had time to move around it safely.",
-    "ലേഖ എന്ന പഠിതാവ് തിരിച്ചറിയാത്ത ഒരു ചിഹ്നം കണ്ടു: ചുവന്ന അരികുള്ള, ഉള്ളിൽ ചിഹ്നമുള്ള ത്രികോണം. വേഗത്തിൽ പോകുന്നതിനാൽ ചിഹ്നം വായിക്കാനായില്ല, പക്ഷേ ആ ആകൃതി മുന്നറിയിപ്പാണെന്ന് അവൾക്ക് അറിയാമായിരുന്നു. അവൾ ആക്സിലറേറ്ററിൽ നിന്ന് കാൽ എടുത്ത് വേഗം കുറച്ചു; കുറച്ചു കഴിഞ്ഞപ്പോൾ വളവിൽ റോഡ് ഇടുങ്ങുന്നതും ഇടതുവശത്ത് ഒരു ബസ് നിർത്തിയിട്ടിരിക്കുന്നതും കണ്ടു. നേരത്തേ വേഗം കുറച്ചതിനാൽ സുരക്ഷിതമായി വെട്ടിച്ചുപോകാൻ സമയം കിട്ടി."
-   ],
-   "lesson": [
-    "Shape and colour give you the meaning even when you cannot read the symbol. A triangle means slow down and be ready.",
-    "ചിഹ്നം വായിക്കാനായില്ലെങ്കിലും ആകൃതിയും നിറവും അർഥം പറഞ്ഞുതരും. ത്രികോണം എന്നാൽ വേഗം കുറച്ച് തയ്യാറാകുക."
-   ]
-  },
-  {
-   "t": [
-    "The line at the bend",
-    "വളവിലെ വര"
-   ],
-   "s": [
-    "Nikhil was following a slow truck on a winding road and wanted to pass. The ahead lane looked clear for a moment, but the centre line was continuous. He thought for a second, then stayed behind. A few moments later, a bus came around the bend in the opposite lane, completely hidden until then. The line had been put there because of the bend.",
-    "വളഞ്ഞ റോഡിൽ പതുക്കെ പോകുന്ന ട്രക്കിന് പിന്നിൽ നിഖിൽ മറികടക്കാൻ ആഗ്രഹിച്ചു. മുന്നിലെ ലെയ്ൻ ഒരു നിമിഷം ഒഴിഞ്ഞതായി തോന്നിയെങ്കിലും മധ്യവര തുടർച്ചയായതായിരുന്നു. ഒരു നിമിഷം ആലോചിച്ച് അയാൾ പിന്നിൽ തന്നെ തുടർന്നു. അൽപസമയത്തിനകം എതിർ ലെയ്നിൽ വളവ് തിരിഞ്ഞ് ഒരു ബസ് വന്നു; അതുവരെ അത് പൂർണമായും മറഞ്ഞിരുന്നു. വളവ് കാരണമാണ് ആ വര അവിടെ വരച്ചിരുന്നത്."
-   ],
-   "lesson": [
-    "A continuous line is a warning that you cannot see what is coming. Respect it even when the road looks empty.",
-    "തുടർച്ചയായ വര എന്നാൽ വരാനിരിക്കുന്നത് നിങ്ങൾക്ക് കാണാനാകില്ല എന്ന മുന്നറിയിപ്പാണ്. റോഡ് ഒഴിഞ്ഞതായി തോന്നിയാലും അത് മാനിക്കുക."
-   ]
-  }
- ],
- "recap": [
-  [
-   "Red circle: do not. Blue circle: do. Triangle: be careful. Rectangle: information.",
-   "ചുവന്ന വൃത്തം: ചെയ്യരുത്. നീല വൃത്തം: ചെയ്യുക. ത്രികോണം: ശ്രദ്ധിക്കുക. ദീർഘചതുരം: വിവരം."
-  ],
-  [
-   "Octagon is Stop; inverted triangle is Give Way.",
-   "അഷ്ടഭുജം സ്റ്റോപ്പ്; തലതിരിഞ്ഞ ത്രികോണം ഗിവ് വേ."
-  ],
-  [
-   "Continuous line: do not cross. Broken line: cross only when safe.",
-   "തുടർച്ചയായ വര: കടക്കരുത്. മുറിഞ്ഞ വര: സുരക്ഷിതമെങ്കിൽ മാത്രം കടക്കുക."
-  ],
-  [
-   "Red stop, amber prepare to stop, green go if clear.",
-   "ചുവപ്പ് നിർത്തുക, മഞ്ഞ നിർത്താൻ തയ്യാറാകുക, പച്ച ഒഴിഞ്ഞെങ്കിൽ പോകുക."
-  ],
-  [
-   "Police officer's direction overrides signals and signs.",
-   "പോലീസുകാരന്റെ നിർദേശം സിഗ്നലുകളെയും ചിഹ്നങ്ങളെയും മറികടക്കുന്നു."
-  ],
-  [
-   "Read signs early and signal early.",
-   "ചിഹ്നങ്ങൾ നേരത്തേ വായിക്കുക, സിഗ്നൽ നേരത്തേ നൽകുക."
-  ]
- ]
 }

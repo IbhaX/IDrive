@@ -1,7 +1,7 @@
 {
   "name": "iDrive - the interactive driving school",
   "short_name": "iDrive",
-  "description": "Driving theory for India and Kerala: vehicle science, road signs, traffic law, hazard perception, labs and mock tests. English and Malayalam.",
+  "description": "Driving theory for India and Kerala: vehicle science, road signs, traffic law, hazard perception, labs and mock tests. English, Malayalam and Tamil.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

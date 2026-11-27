@@ -1,318 +1,385 @@
 {
- "intro": [
-  "Getting a licence is a step-by-step process: first a learner licence (LLR), then practice, then the driving test. This guide explains the general flow, what examiners look for, and how to prepare and stay calm. Requirements and procedures change, so always check Parivahan or your RTO for the current rules.",
-  "ലൈസൻസ് നേടുന്നത് ഘട്ടം ഘട്ടമായുള്ള പ്രക്രിയയാണ്: ആദ്യം ലേണേഴ്സ് ലൈസൻസ് (എൽഎൽആർ), പിന്നെ പരിശീലനം, ശേഷം ഡ്രൈവിങ് ടെസ്റ്റ്. പൊതുവായ നടപടിക്രമം, പരീക്ഷകർ എന്തു ശ്രദ്ധിക്കുന്നു, എങ്ങനെ തയ്യാറെടുക്കാം, എങ്ങനെ ശാന്തമായിരിക്കാം എന്നിവ ഈ ഗൈഡ് വിശദീകരിക്കുന്നു. നിബന്ധനകളും നടപടിക്രമങ്ങളും മാറാം, അതിനാൽ നിലവിലെ ചട്ടങ്ങൾക്ക് പരിവാഹനോ നിങ്ങളുടെ ആർടിഒയോ പരിശോധിക്കുക."
- ],
- "sections": [
-  {
-   "h": [
-    "The general process",
-    "പൊതുവായ നടപടിക്രമം"
-   ],
-   "p": [
+  "intro": [
+    "Getting a licence is a step-by-step process: first a learner licence (LLR), then practice, then the driving test. This guide explains the general flow, what examiners look for, and how to prepare and stay calm. Requirements and procedures change, so always check Parivahan or your RTO for the current rules.",
+    "ലൈസൻസ് നേടുന്നത് ഘട്ടം ഘട്ടമായുള്ള പ്രക്രിയയാണ്: ആദ്യം ലേണേഴ്സ് ലൈസൻസ് (എൽഎൽആർ), പിന്നെ പരിശീലനം, ശേഷം ഡ്രൈവിങ് ടെസ്റ്റ്. പൊതുവായ നടപടിക്രമം, പരീക്ഷകർ എന്തു ശ്രദ്ധിക്കുന്നു, എങ്ങനെ തയ്യാറെടുക്കാം, എങ്ങനെ ശാന്തമായിരിക്കാം എന്നിവ ഈ ഗൈഡ് വിശദീകരിക്കുന്നു. നിബന്ധനകളും നടപടിക്രമങ്ങളും മാറാം, അതിനാൽ നിലവിലെ ചട്ടങ്ങൾക്ക് പരിവാഹനോ നിങ്ങളുടെ ആർടിഒയോ പരിശോധിക്കുക.",
+    "உரிமம் பெறுவது ஒரு படிப்படியான செயல்முறையாகும்: முதலில் ஒரு கற்றல் உரிமம் (LLR), பின்னர் பயிற்சி, பின்னர் ஓட்டுநர் சோதனை. இந்த வழிகாட்டி பொதுவான ஓட்டம், தேர்வாளர்கள் எதைப் பார்க்கிறார்கள், எப்படி தயார் செய்து அமைதியாக இருக்க வேண்டும் என்பதை விளக்குகிறது. தேவைகள் மற்றும் நடைமுறைகள் மாறுகின்றன, எனவே தற்போதைய விதிகளுக்கு பரிவஹன் அல்லது உங்கள் ஆர்டிஓவை எப்போதும் சரிபார்க்கவும்."
+  ],
+  "sections": [
+    {
+      "h": [
+        "The general process",
+        "പൊതുവായ നടപടിക്രമം",
+        "பொது செயல்முறை"
+      ],
+      "p": [
+        [
+          "In general you apply online through the Parivahan portal, upload or submit the required documents, and book a test slot. Check Parivahan or your RTO for current requirements such as documents, eligibility and fees.",
+          "പൊതുവെ പരിവാഹൻ പോർട്ടൽ വഴി ഓൺലൈനായി അപേക്ഷിക്കുകയും ആവശ്യമായ രേഖകൾ സമർപ്പിക്കുകയും ടെസ്റ്റ് സ്ലോട്ട് ബുക്ക് ചെയ്യുകയും ചെയ്യുന്നു. രേഖകൾ, യോഗ്യത, ഫീസ് തുടങ്ങിയ നിലവിലെ നിബന്ധനകൾ പരിവാഹനിലോ ആർടിഒയിലോ പരിശോധിക്കുക.",
+          "பொதுவாக நீங்கள் பரிவஹன் போர்ட்டல் மூலம் ஆன்லைனில் விண்ணப்பிக்கவும், தேவையான ஆவணங்களை பதிவேற்றவும் அல்லது சமர்ப்பிக்கவும் மற்றும் சோதனை ஸ்லாட்டை பதிவு செய்யவும். ஆவணங்கள், தகுதி மற்றும் கட்டணம் போன்ற தற்போதைய தேவைகளுக்கு பரிவஹன் அல்லது உங்கள் RTO ஐப் பார்க்கவும்."
+        ],
+        [
+          "The first test is usually a theory or computer-based test on road signs, rules and safe behaviour. Passing it leads to the learner licence (LLR), which lets you practise on public roads under the conditions set by law.",
+          "ആദ്യ പരീക്ഷ സാധാരണ റോഡ് ചിഹ്നങ്ങൾ, നിയമങ്ങൾ, സുരക്ഷിത പെരുമാറ്റം എന്നിവയെക്കുറിച്ചുള്ള തിയറി അല്ലെങ്കിൽ കമ്പ്യൂട്ടർ പരീക്ഷയാണ്. ജയിച്ചാൽ ലഭിക്കുന്ന ലേണേഴ്സ് ലൈസൻസ് (എൽഎൽആർ) നിയമം നിശ്ചയിച്ച നിബന്ധനകളോടെ പൊതുറോഡിൽ പരിശീലിക്കാൻ അനുവദിക്കുന്നു.",
+          "முதல் சோதனை பொதுவாக சாலை அடையாளங்கள், விதிகள் மற்றும் பாதுகாப்பான நடத்தை பற்றிய கோட்பாடு அல்லது கணினி அடிப்படையிலான சோதனை ஆகும். அதைக் கடந்து செல்வது கற்றல் உரிமத்திற்கு (LLR) வழிவகுக்கிறது, இது சட்டத்தால் நிர்ணயிக்கப்பட்ட நிபந்தனைகளின் கீழ் பொதுச் சாலைகளில் பயிற்சி செய்ய உங்களை அனுமதிக்கிறது."
+        ],
+        [
+          "After the required learning period, you book the driving test. Passing the ground or road test leads to the permanent driving licence. Learner conditions, such as displaying an L sign and being accompanied, apply while you practise.",
+          "നിശ്ചിത പഠനകാലത്തിനു ശേഷം ഡ്രൈവിങ് ടെസ്റ്റിന് ബുക്ക് ചെയ്യുന്നു. ഗ്രൗണ്ട് അല്ലെങ്കിൽ റോഡ് ടെസ്റ്റ് ജയിച്ചാൽ സ്ഥിരം ഡ്രൈവിങ് ലൈസൻസ് ലഭിക്കും. പരിശീലനകാലത്ത് എൽ ബോർഡ് പ്രദർശിപ്പിക്കൽ, കൂടെ യോഗ്യനായ ആൾ ഉണ്ടാകൽ തുടങ്ങിയ ലേണർ നിബന്ധനകൾ ബാധകമാണ്.",
+          "தேவையான கற்றல் காலத்திற்குப் பிறகு, நீங்கள் ஓட்டுநர் தேர்வை முன்பதிவு செய்கிறீர்கள். தரை அல்லது சாலை சோதனையில் தேர்ச்சி பெறுவது நிரந்தர ஓட்டுநர் உரிமத்திற்கு வழிவகுக்கிறது. எல் அடையாளத்தைக் காண்பித்தல் மற்றும் உடன் இருப்பது போன்ற கற்றல் நிபந்தனைகள் நீங்கள் பயிற்சி செய்யும் போது பொருந்தும்."
+        ],
+        [
+          "Slots can be limited, and rescheduling rules vary. Plan your dates early and keep your application details and documents consistent to avoid delays.",
+          "സ്ലോട്ടുകൾ പരിമിതമായിരിക്കാം, മാറ്റിവയ്ക്കാനുള്ള ചട്ടങ്ങളും വ്യത്യസ്തമാണ്. താമസം ഒഴിവാക്കാൻ തീയതികൾ നേരത്തേ ആസൂത്രണം ചെയ്യുകയും അപേക്ഷയിലെ വിവരങ്ങളും രേഖകളും ഒത്തുപോകുന്ന വിധം സൂക്ഷിക്കുകയും ചെയ്യുക.",
+          "ஸ்லாட்டுகள் வரம்புக்குட்படுத்தப்படலாம், மறு திட்டமிடல் விதிகள் மாறுபடும். உங்கள் தேதிகளை முன்கூட்டியே திட்டமிட்டு, தாமதங்களைத் தவிர்க்க உங்கள் விண்ணப்ப விவரங்கள் மற்றும் ஆவணங்களை சீராக வைத்திருக்கவும்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "The theory test",
+        "തിയറി ടെസ്റ്റ്",
+        "கோட்பாடு சோதனை"
+      ],
+      "p": [
+        [
+          "Questions are mostly about road signs, signals, right of way, safe distance, documents and basic law. Learn the meaning of signs by their shape and colour first, then the details.",
+          "ചോദ്യങ്ങൾ കൂടുതലും റോഡ് ചിഹ്നങ്ങൾ, സിഗ്നലുകൾ, മുൻഗണന, സുരക്ഷിത അകലം, രേഖകൾ, അടിസ്ഥാന നിയമം എന്നിവയെക്കുറിച്ചാണ്. ആദ്യം ചിഹ്നങ്ങളുടെ ആകൃതിയും നിറവും വച്ച് അർഥം പഠിക്കുക, പിന്നെ വിശദാംശങ്ങൾ.",
+          "கேள்விகள் பெரும்பாலும் சாலை அடையாளங்கள், சிக்னல்கள், சரியான பாதை, பாதுகாப்பான தூரம், ஆவணங்கள் மற்றும் அடிப்படைச் சட்டம் பற்றியவை. அறிகுறிகளின் பொருளை அவற்றின் வடிவம் மற்றும் நிறத்தின் மூலம் முதலில் அறிந்து கொள்ளுங்கள், பின்னர் விவரங்கள்."
+        ],
+        [
+          "Understand the reason behind each rule instead of memorising answers. When you know why, you can answer a question even if it is worded in a new way.",
+          "ഉത്തരങ്ങൾ കാണാതെ പഠിക്കുന്നതിനു പകരം ഓരോ നിയമത്തിന്റെയും കാരണം മനസ്സിലാക്കുക. കാരണം അറിയാമെങ്കിൽ ചോദ്യം പുതിയ രീതിയിൽ ചോദിച്ചാലും ഉത്തരം പറയാം.",
+          "பதில்களை மனப்பாடம் செய்வதற்குப் பதிலாக ஒவ்வொரு விதியின் பின்னணியிலும் உள்ள காரணத்தைப் புரிந்து கொள்ளுங்கள். ஏன் என்று உங்களுக்குத் தெரிந்தால், ஒரு கேள்விக்கு புதிய வழியில் சொல்லப்பட்டாலும் நீங்கள் பதிலளிக்கலாம்."
+        ],
+        [
+          "Read each question fully and each option before choosing. Questions often hide a word like 'not' or 'except'.",
+          "തിരഞ്ഞെടുക്കുന്നതിനു മുമ്പ് ഓരോ ചോദ്യവും ഓപ്ഷനും പൂർണമായി വായിക്കുക. 'അല്ല', 'ഒഴികെ' പോലുള്ള വാക്കുകൾ ചോദ്യങ്ങളിൽ ഒളിഞ്ഞിരിക്കാം.",
+          "தேர்ந்தெடுக்கும் முன் ஒவ்வொரு கேள்வியையும் முழுமையாக படிக்கவும். கேள்விகள் பெரும்பாலும் 'இல்லை' அல்லது 'தவிர' போன்ற வார்த்தையை மறைக்கின்றன."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "The ground and road test",
+        "ഗ്രൗണ്ട്, റോഡ് ടെസ്റ്റ്",
+        "தரை மற்றும் சாலை சோதனை"
+      ],
+      "p": [
+        [
+          "Many RTOs use a marked test track, often shaped like an H or an 8, to check clutch, steering and control at low speed. Your RTO's test track may differ, so ask your driving school or RTO what applies to you.",
+          "പല ആർടിഒകളും ക്ലച്ച്, സ്റ്റിയറിങ്, കുറഞ്ഞ വേഗത്തിലെ നിയന്ത്രണം എന്നിവ പരിശോധിക്കാൻ എച്ച് അല്ലെങ്കിൽ എട്ട് ആകൃതിയിൽ അടയാളപ്പെടുത്തിയ ടെസ്റ്റ് ട്രാക്ക് ഉപയോഗിക്കുന്നു. നിങ്ങളുടെ ആർടിഒയുടെ ട്രാക്ക് വ്യത്യസ്തമായിരിക്കാം; ബാധകമായത് ഡ്രൈവിങ് സ്കൂളിലോ ആർടിഒയിലോ ചോദിച്ച് ഉറപ്പാക്കുക.",
+          "பல ஆர்டிஓக்கள் குறைந்த வேகத்தில் கிளட்ச், ஸ்டீயரிங் மற்றும் கட்டுப்பாட்டை சரிபார்க்க, பெரும்பாலும் எச் அல்லது 8 போன்ற வடிவத்தில் குறிக்கப்பட்ட சோதனைத் தடத்தைப் பயன்படுத்துகின்றனர். உங்கள் RTO இன் சோதனைத் தடம் வேறுபட்டிருக்கலாம், எனவே உங்களுக்கு என்ன பொருந்தும் என்பதை உங்கள் ஓட்டுநர் பள்ளி அல்லது RTOவிடம் கேளுங்கள்."
+        ],
+        [
+          "The idea behind such tracks is simple: can you steer precisely, keep the vehicle under control at walking speed, and stop or reverse without touching the markers or poles?",
+          "ഇത്തരം ട്രാക്കുകളുടെ ആശയം ലളിതമാണ്: കൃത്യമായി സ്റ്റിയർ ചെയ്യാനും നടപ്പുവേഗത്തിൽ വാഹനം നിയന്ത്രിക്കാനും അടയാളങ്ങളിലോ പോളുകളിലോ തൊടാതെ നിർത്താനും റിവേഴ്സ് എടുക്കാനും കഴിയുമോ?",
+          "இத்தகைய தடங்களுக்குப் பின்னால் உள்ள யோசனை எளிமையானது: நீங்கள் துல்லியமாகத் திசைதிருப்ப முடியுமா, நடை வேகத்தில் வாகனத்தை கட்டுப்பாட்டில் வைத்திருக்க முடியுமா, மற்றும் குறிப்பான்கள் அல்லது துருவங்களைத் தொடாமல் நிறுத்தவோ அல்லது தலைகீழாக மாற்றவோ முடியுமா?"
+        ],
+        [
+          "On a road test, the examiner may watch how you start, use mirrors and signals, keep your lane, handle junctions, obey signs and park. Calm, steady, predictable driving scores better than fast or flashy driving.",
+          "റോഡ് ടെസ്റ്റിൽ നിങ്ങൾ എങ്ങനെ വാഹനം എടുക്കുന്നു, മിററും സിഗ്നലും ഉപയോഗിക്കുന്നു, ലെയ്നിൽ തുടരുന്നു, ജംഗ്ഷൻ കൈകാര്യം ചെയ്യുന്നു, ചിഹ്നങ്ങൾ പാലിക്കുന്നു, പാർക്ക് ചെയ്യുന്നു എന്നിവ പരീക്ഷകൻ ശ്രദ്ധിച്ചേക്കാം. വേഗത്തിലോ ഷോ കാണിച്ചോ ഉള്ള ഓട്ടത്തെക്കാൾ ശാന്തവും സ്ഥിരവും പ്രവചിക്കാവുന്നതുമായ ഡ്രൈവിങ്ങിനാണ് മാർക്ക്.",
+          "சாலைச் சோதனையில், தேர்வாளர் நீங்கள் எவ்வாறு தொடங்குகிறீர்கள், கண்ணாடிகள் மற்றும் சிக்னல்களைப் பயன்படுத்துவது, உங்கள் பாதையை வைத்திருத்தல், சந்திப்புகளைக் கையாளுதல், அடையாளங்களுக்குக் கீழ்ப்படிதல் மற்றும் பூங்கா ஆகியவற்றைப் பார்க்கலாம். வேகமான அல்லது பளிச்சென்று ஓட்டுவதை விட அமைதியான, நிலையான, யூகிக்கக்கூடிய ஓட்டுநர் மதிப்பெண்கள் சிறந்தவை."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "What examiners look for",
+        "പരീക്ഷകർ ശ്രദ്ധിക്കുന്നത്",
+        "தேர்வாளர்கள் எதைப் பார்க்கிறார்கள்"
+      ],
+      "p": [
+        [
+          "Observation: mirror checks before moving, turning or stopping, and a look over the shoulder where needed. Examiners want to see that your eyes are active, not only your hands.",
+          "നിരീക്ഷണം: വാഹനം എടുക്കുന്നതിനും തിരിയുന്നതിനും നിർത്തുന്നതിനും മുമ്പ് മിറർ നോക്കൽ, ആവശ്യമുള്ളിടത്ത് തോളിനു മുകളിലൂടെ നോക്കൽ. കൈകൾ മാത്രമല്ല, കണ്ണുകളും സജീവമാണെന്ന് പരീക്ഷകർ കാണാൻ ആഗ്രഹിക്കുന്നു.",
+          "கவனிப்பு: நகரும் முன், திரும்பும் அல்லது நிறுத்தும் முன் கண்ணாடியை சரிபார்த்து, தேவைப்படும் இடத்தில் தோள்பட்டைக்கு மேல் பார்க்கவும். உங்கள் கைகள் மட்டுமல்ல, உங்கள் கண்களும் சுறுசுறுப்பாக இருப்பதை பரிசோதகர்கள் பார்க்க வேண்டும்."
+        ],
+        [
+          "Signalling: correct, timely signals that match what you actually do. Cancel the indicator after the turn.",
+          "സിഗ്നൽ: നിങ്ങൾ ചെയ്യുന്നതിനോട് ചേരുന്ന, ശരിയായ സമയത്തുള്ള സിഗ്നൽ. തിരിഞ്ഞശേഷം ഇൻഡിക്കേറ്റർ ഓഫ് ചെയ്യുക.",
+          "சிக்னலிங்: நீங்கள் உண்மையில் என்ன செய்கிறீர்களோ அதைப் பொருத்த சரியான, சரியான நேரத்தில் சமிக்ஞைகள். திருப்பத்திற்குப் பிறகு காட்டி ரத்துசெய்யவும்."
+        ],
+        [
+          "Smooth control: gentle clutch, steady steering, no stalling or jerking, and sensible gear use. Smoothness shows you can be safe with passengers and traffic.",
+          "സുഗമമായ നിയന്ത്രണം: മൃദുവായ ക്ലച്ച്, സ്ഥിരമായ സ്റ്റിയറിങ്, വാഹനം ഓഫ് ആകുകയോ ഞെട്ടുകയോ ചെയ്യാതിരിക്കൽ, ഗിയറിന്റെ ശരിയായ ഉപയോഗം. യാത്രക്കാരോടും ഗതാഗതത്തോടും സുരക്ഷിതമായി പെരുമാറാൻ കഴിയുമെന്ന് ഈ സുഗമത കാണിക്കുന്നു.",
+          "மென்மையான கட்டுப்பாடு: மென்மையான கிளட்ச், நிலையான ஸ்டீயரிங், ஸ்டாலிங் அல்லது ஜெர்கிங் இல்லை, மற்றும் விவேகமான கியர் பயன்பாடு. பயணிகள் மற்றும் போக்குவரத்துடன் நீங்கள் பாதுகாப்பாக இருக்க முடியும் என்பதை மென்மை காட்டுகிறது."
+        ],
+        [
+          "Parking and reversing: stop parallel and close to the left kerb, reverse in a controlled line, and use mirrors and a look behind. Seat belt, correct seating and handbrake use also matter.",
+          "പാർക്കിങ്ങും റിവേഴ്സും: ഇടതുവശത്തെ കെർബിനോട് ചേർന്ന് സമാന്തരമായി നിർത്തുക, നിയന്ത്രിതമായി നേർരേഖയിൽ റിവേഴ്സ് എടുക്കുക, മിററും പിന്നിലേക്കുള്ള നോട്ടവും ഉപയോഗിക്കുക. സീറ്റ് ബെൽറ്റ്, ശരിയായ ഇരിപ്പ്, ഹാൻഡ് ബ്രേക്കിന്റെ ഉപയോഗം എന്നിവയും പ്രധാനമാണ്.",
+          "பார்க்கிங் மற்றும் ரிவர்சிங்: இணையாக மற்றும் இடது கர்பிற்கு அருகில் நிறுத்தவும், கட்டுப்படுத்தப்பட்ட கோட்டில் தலைகீழாகவும், கண்ணாடியைப் பயன்படுத்தவும் மற்றும் பின்னால் பார்க்கவும். சீட் பெல்ட், சரியான இருக்கை மற்றும் ஹேண்ட்பிரேக் பயன்பாடு ஆகியவையும் முக்கியம்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Preparing and common mistakes",
+        "തയ്യാറെടുപ്പും സാധാരണ തെറ്റുകളും",
+        "தயாரித்தல் மற்றும் பொதுவான தவறுகள்"
+      ],
+      "p": [
+        [
+          "Practise the same kinds of manoeuvres repeatedly with a qualified instructor or an experienced licensed driver. Short, regular sessions build muscle memory better than one long session.",
+          "യോഗ്യനായ ഇൻസ്ട്രക്ടറോടൊപ്പമോ പരിചയസമ്പന്നനായ ലൈസൻസുള്ള ഡ്രൈവറോടൊപ്പമോ ഒരേ തരം മാനുവറുകൾ ആവർത്തിച്ച് പരിശീലിക്കുക. ഒറ്റയടിക്കുള്ള നീണ്ട പരിശീലനത്തെക്കാൾ ചെറുതും സ്ഥിരവുമായ പരിശീലനം ശീലം ഉറപ്പിക്കും.",
+          "தகுதிவாய்ந்த பயிற்றுவிப்பாளர் அல்லது அனுபவம் வாய்ந்த உரிமம் பெற்ற ஓட்டுனருடன் ஒரே மாதிரியான சூழ்ச்சிகளை மீண்டும் மீண்டும் பயிற்சி செய்யுங்கள். குறுகிய, வழக்கமான அமர்வுகள் ஒரு நீண்ட அமர்வை விட தசை நினைவகத்தை சிறப்பாக உருவாக்குகின்றன."
+        ],
+        [
+          "Common mistakes: forgetting seat belt or mirror adjustment, stalling from a rushed clutch release, touching poles, forgetting the signal, rolling back on a slope and freezing after a small error.",
+          "സാധാരണ തെറ്റുകൾ: സീറ്റ് ബെൽറ്റോ മിറർ ക്രമീകരണമോ മറക്കൽ, ക്ലച്ച് വേഗത്തിൽ വിട്ട് വാഹനം ഓഫ് ആകൽ, പോളിൽ തൊടൽ, സിഗ്നൽ മറക്കൽ, കയറ്റത്തിൽ പിന്നോട്ട് ഉരുളൽ, ചെറിയ പിഴവിനു ശേഷം പരിഭ്രമിച്ച് നിൽക്കൽ.",
+          "பொதுவான தவறுகள்: சீட் பெல்ட் அல்லது கண்ணாடி சரிசெய்தலை மறத்தல், அவசரமாக கிளட்ச் ரிலீஸிலிருந்து ஸ்தம்பித்தல், துருவங்களைத் தொடுதல், சிக்னலை மறத்தல், சரிவில் திரும்பிச் செல்வது மற்றும் சிறிய பிழைக்குப் பிறகு உறைதல்."
+        ],
+        [
+          "Carry your original documents and appointment details, and arrive early. Check that the vehicle you use for the test is roadworthy and meets your RTO's requirements.",
+          "അസൽ രേഖകളും അപ്പോയിന്റ്മെന്റ് വിവരങ്ങളും കരുതുക, നേരത്തേ എത്തുക. ടെസ്റ്റിന് ഉപയോഗിക്കുന്ന വാഹനം റോഡിന് യോഗ്യമാണെന്നും നിങ്ങളുടെ ആർടിഒയുടെ നിബന്ധനകൾ പാലിക്കുന്നുവെന്നും ഉറപ്പാക്കുക.",
+          "உங்களின் அசல் ஆவணங்கள் மற்றும் சந்திப்பு விவரங்களை எடுத்துச் செல்லவும், சீக்கிரம் வந்து சேரவும். சோதனைக்கு நீங்கள் பயன்படுத்தும் வாகனம் சாலைக்கு ஏற்றதா மற்றும் உங்கள் RTO இன் தேவைகளைப் பூர்த்திசெய்கிறதா என்பதைச் சரிபார்க்கவும்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Handling nervousness",
+        "പരിഭ്രമം നേരിടാൻ",
+        "பதட்டத்தைக் கையாளுதல்"
+      ],
+      "p": [
+        [
+          "Nervousness is normal. Sleep well, eat lightly and do a few slow breaths before you start, with relaxed hands on the wheel.",
+          "പരിഭ്രമം സ്വാഭാവികമാണ്. നന്നായി ഉറങ്ങുക, ലഘുവായി കഴിക്കുക, തുടങ്ങുംമുമ്പ് കുറച്ച് സാവധാന ശ്വാസമെടുക്കുക, സ്റ്റിയറിങ്ങിൽ കൈകൾ അയച്ചുപിടിക്കുക.",
+          "நரம்புத் தளர்ச்சி இயல்பானது. நன்றாக உறங்கவும், லேசாக சாப்பிட்டு, சக்கரத்தின் மீது நிதானமாக கைகளை வைத்துக் கொண்டு, தொடங்கும் முன் சில மெதுவான சுவாசங்களைச் செய்யுங்கள்."
+        ],
+        [
+          "If you make a small mistake, do not panic. Correct it safely and carry on; examiners know small slips happen, and safety matters more than perfection.",
+          "ചെറിയ തെറ്റ് പറ്റിയാൽ പരിഭ്രമിക്കരുത്. സുരക്ഷിതമായി തിരുത്തി മുന്നോട്ടു പോകുക; ചെറിയ പിഴവുകൾ സംഭവിക്കുമെന്ന് പരീക്ഷകർക്ക് അറിയാം, പൂർണതയെക്കാൾ പ്രധാനം സുരക്ഷയാണ്.",
+          "நீங்கள் ஒரு சிறிய தவறு செய்தால், பீதி அடைய வேண்டாம். அதை பாதுகாப்பாக சரிசெய்து தொடரவும்; சிறிய சீட்டுகள் நடப்பதை பரிசோதகர்கள் அறிவார்கள், மேலும் சரியானதை விட பாதுகாப்பு முக்கியமானது."
+        ],
+        [
+          "If you do not pass, treat it as feedback, practise the weak area and book again as the rules allow. Many good drivers needed more than one try.",
+          "ജയിച്ചില്ലെങ്കിൽ അത് പ്രതികരണമായി കണ്ട്, ദൗർബല്യമുള്ള ഭാഗം പരിശീലിച്ച് ചട്ടം അനുവദിക്കുന്ന പ്രകാരം വീണ്ടും ബുക്ക് ചെയ്യുക. പല നല്ല ഡ്രൈവർമാർക്കും ഒന്നിലധികം ശ്രമം വേണ്ടിവന്നിട്ടുണ്ട്.",
+          "நீங்கள் தேர்ச்சி பெறவில்லை என்றால், அதை பின்னூட்டமாக கருதி, பலவீனமான பகுதியை பயிற்சி செய்து, விதிகள் அனுமதிக்கும் படி மீண்டும் முன்பதிவு செய்யவும். பல நல்ல ஓட்டுனர்களுக்கு ஒன்றுக்கு மேற்பட்ட முயற்சி தேவை."
+        ]
+      ]
+    }
+  ],
+  "dos": [
     [
-     "In general you apply online through the Parivahan portal, upload or submit the required documents, and book a test slot. Check Parivahan or your RTO for current requirements such as documents, eligibility and fees.",
-     "പൊതുവെ പരിവാഹൻ പോർട്ടൽ വഴി ഓൺലൈനായി അപേക്ഷിക്കുകയും ആവശ്യമായ രേഖകൾ സമർപ്പിക്കുകയും ടെസ്റ്റ് സ്ലോട്ട് ബുക്ക് ചെയ്യുകയും ചെയ്യുന്നു. രേഖകൾ, യോഗ്യത, ഫീസ് തുടങ്ങിയ നിലവിലെ നിബന്ധനകൾ പരിവാഹനിലോ ആർടിഒയിലോ പരിശോധിക്കുക."
+      "Check Parivahan or your RTO for current requirements.",
+      "നിലവിലെ നിബന്ധനകൾക്ക് പരിവാഹനോ ആർടിഒയോ പരിശോധിക്കുക.",
+      "தற்போதைய தேவைகளுக்கு பரிவாஹன் அல்லது உங்கள் ஆர்டிஓவைச் சரிபார்க்கவும்."
     ],
     [
-     "The first test is usually a theory or computer-based test on road signs, rules and safe behaviour. Passing it leads to the learner licence (LLR), which lets you practise on public roads under the conditions set by law.",
-     "ആദ്യ പരീക്ഷ സാധാരണ റോഡ് ചിഹ്നങ്ങൾ, നിയമങ്ങൾ, സുരക്ഷിത പെരുമാറ്റം എന്നിവയെക്കുറിച്ചുള്ള തിയറി അല്ലെങ്കിൽ കമ്പ്യൂട്ടർ പരീക്ഷയാണ്. ജയിച്ചാൽ ലഭിക്കുന്ന ലേണേഴ്സ് ലൈസൻസ് (എൽഎൽആർ) നിയമം നിശ്ചയിച്ച നിബന്ധനകളോടെ പൊതുറോഡിൽ പരിശീലിക്കാൻ അനുവദിക്കുന്നു."
+      "Learn signs by shape and colour, then meaning.",
+      "ചിഹ്നങ്ങൾ ആകൃതിയും നിറവും വച്ച് പഠിക്കുക, പിന്നെ അർഥം.",
+      "வடிவம் மற்றும் நிறத்தின் மூலம் அடையாளங்களைக் கற்றுக் கொள்ளுங்கள், பின்னர் அர்த்தம்."
     ],
     [
-     "After the required learning period, you book the driving test. Passing the ground or road test leads to the permanent driving licence. Learner conditions, such as displaying an L sign and being accompanied, apply while you practise.",
-     "നിശ്ചിത പഠനകാലത്തിനു ശേഷം ഡ്രൈവിങ് ടെസ്റ്റിന് ബുക്ക് ചെയ്യുന്നു. ഗ്രൗണ്ട് അല്ലെങ്കിൽ റോഡ് ടെസ്റ്റ് ജയിച്ചാൽ സ്ഥിരം ഡ്രൈവിങ് ലൈസൻസ് ലഭിക്കും. പരിശീലനകാലത്ത് എൽ ബോർഡ് പ്രദർശിപ്പിക്കൽ, കൂടെ യോഗ്യനായ ആൾ ഉണ്ടാകൽ തുടങ്ങിയ ലേണർ നിബന്ധനകൾ ബാധകമാണ്."
+      "Practise with a qualified instructor in short regular sessions.",
+      "യോഗ്യനായ ഇൻസ്ട്രക്ടറോടൊപ്പം ചെറിയ പതിവ് സെഷനുകളായി പരിശീലിക്കുക.",
+      "குறுகிய வழக்கமான அமர்வுகளில் தகுதிவாய்ந்த பயிற்றுவிப்பாளருடன் பயிற்சி செய்யுங்கள்."
     ],
     [
-     "Slots can be limited, and rescheduling rules vary. Plan your dates early and keep your application details and documents consistent to avoid delays.",
-     "സ്ലോട്ടുകൾ പരിമിതമായിരിക്കാം, മാറ്റിവയ്ക്കാനുള്ള ചട്ടങ്ങളും വ്യത്യസ്തമാണ്. താമസം ഒഴിവാക്കാൻ തീയതികൾ നേരത്തേ ആസൂത്രണം ചെയ്യുകയും അപേക്ഷയിലെ വിവരങ്ങളും രേഖകളും ഒത്തുപോകുന്ന വിധം സൂക്ഷിക്കുകയും ചെയ്യുക."
+      "Adjust seat and mirrors and fasten the seat belt before starting.",
+      "തുടങ്ങുംമുമ്പ് സീറ്റും മിററും ക്രമീകരിച്ച് സീറ്റ് ബെൽറ്റ് ഇടുക.",
+      "இருக்கை மற்றும் கண்ணாடிகளை சரிசெய்து, சீட் பெல்ட்டைத் தொடங்குவதற்கு முன் கட்டவும்."
+    ],
+    [
+      "Check mirrors and signal before every move.",
+      "ഓരോ നീക്കത്തിനും മുമ്പ് മിറർ നോക്കി സിഗ്നൽ നൽകുക.",
+      "ஒவ்வொரு அசைவிற்கும் முன் கண்ணாடிகள் மற்றும் சிக்னல்களை சரிபார்க்கவும்."
+    ],
+    [
+      "Use the clutch gently and keep steady control.",
+      "ക്ലച്ച് മൃദുവായി ഉപയോഗിച്ച് സ്ഥിരമായ നിയന്ത്രണം നിലനിർത്തുക.",
+      "கிளட்சை மெதுவாகப் பயன்படுத்தவும் மற்றும் நிலையான கட்டுப்பாட்டை வைத்திருக்கவும்."
+    ],
+    [
+      "Carry original documents and arrive early.",
+      "അസൽ രേഖകൾ കരുതി നേരത്തേ എത്തുക.",
+      "அசல் ஆவணங்களை எடுத்துக்கொண்டு சீக்கிரமாக வந்து சேருங்கள்."
+    ],
+    [
+      "Take slow breaths and stay calm.",
+      "സാവധാനം ശ്വാസമെടുത്ത് ശാന്തമായിരിക്കുക.",
+      "மெதுவாக சுவாசித்து அமைதியாக இருங்கள்."
+    ],
+    [
+      "Correct small errors safely and continue.",
+      "ചെറിയ പിഴവുകൾ സുരക്ഷിതമായി തിരുത്തി തുടരുക.",
+      "சிறிய பிழைகளை பாதுகாப்பாக சரிசெய்து தொடரவும்."
+    ],
+    [
+      "Follow the examiner's instructions carefully.",
+      "പരീക്ഷകന്റെ നിർദേശങ്ങൾ ശ്രദ്ധയോടെ പാലിക്കുക.",
+      "தேர்வாளரின் வழிமுறைகளை கவனமாகப் பின்பற்றவும்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "The theory test",
-    "തിയറി ടെസ്റ്റ്"
-   ],
-   "p": [
+  ],
+  "donts": [
     [
-     "Questions are mostly about road signs, signals, right of way, safe distance, documents and basic law. Learn the meaning of signs by their shape and colour first, then the details.",
-     "ചോദ്യങ്ങൾ കൂടുതലും റോഡ് ചിഹ്നങ്ങൾ, സിഗ്നലുകൾ, മുൻഗണന, സുരക്ഷിത അകലം, രേഖകൾ, അടിസ്ഥാന നിയമം എന്നിവയെക്കുറിച്ചാണ്. ആദ്യം ചിഹ്നങ്ങളുടെ ആകൃതിയും നിറവും വച്ച് അർഥം പഠിക്കുക, പിന്നെ വിശദാംശങ്ങൾ."
+      "Do not rely on rumours about the test track or rules.",
+      "ടെസ്റ്റ് ട്രാക്കിനെയോ നിയമത്തെയോ കുറിച്ചുള്ള കേട്ടുകേൾവിയെ ആശ്രയിക്കരുത്.",
+      "டெஸ்ட் டிராக் அல்லது விதிகள் பற்றிய வதந்திகளை நம்ப வேண்டாம்."
     ],
     [
-     "Understand the reason behind each rule instead of memorising answers. When you know why, you can answer a question even if it is worded in a new way.",
-     "ഉത്തരങ്ങൾ കാണാതെ പഠിക്കുന്നതിനു പകരം ഓരോ നിയമത്തിന്റെയും കാരണം മനസ്സിലാക്കുക. കാരണം അറിയാമെങ്കിൽ ചോദ്യം പുതിയ രീതിയിൽ ചോദിച്ചാലും ഉത്തരം പറയാം."
+      "Do not just memorise answers without understanding.",
+      "മനസ്സിലാക്കാതെ ഉത്തരങ്ങൾ കാണാതെ പഠിക്കരുത്.",
+      "புரியாமல் பதில்களை மட்டும் மனப்பாடம் செய்யாதீர்கள்."
     ],
     [
-     "Read each question fully and each option before choosing. Questions often hide a word like 'not' or 'except'.",
-     "തിരഞ്ഞെടുക്കുന്നതിനു മുമ്പ് ഓരോ ചോദ്യവും ഓപ്ഷനും പൂർണമായി വായിക്കുക. 'അല്ല', 'ഒഴികെ' പോലുള്ള വാക്കുകൾ ചോദ്യങ്ങളിൽ ഒളിഞ്ഞിരിക്കാം."
+      "Do not practise on public roads without the required learner conditions.",
+      "ആവശ്യമായ ലേണർ നിബന്ധനകൾ ഇല്ലാതെ പൊതുറോഡിൽ പരിശീലിക്കരുത്.",
+      "தேவையான கற்றல் நிபந்தனைகள் இல்லாமல் பொது சாலைகளில் பயிற்சி செய்ய வேண்டாம்."
+    ],
+    [
+      "Do not rush the clutch release.",
+      "ക്ലച്ച് തിടുക്കത്തിൽ വിടരുത്.",
+      "கிளட்ச் வெளியீட்டை அவசரப்படுத்த வேண்டாம்."
+    ],
+    [
+      "Do not forget to cancel the indicator.",
+      "ഇൻഡിക്കേറ്റർ ഓഫ് ചെയ്യാൻ മറക്കരുത്.",
+      "குறிகாட்டியை ரத்து செய்ய மறக்காதீர்கள்."
+    ],
+    [
+      "Do not touch poles or markers by careless steering.",
+      "അശ്രദ്ധമായ സ്റ്റിയറിങ് കാരണം പോളിലോ അടയാളത്തിലോ തൊടരുത്.",
+      "கவனக்குறைவான திசைமாற்றி மூலம் கம்பங்கள் அல்லது குறிப்பான்களைத் தொடாதீர்கள்."
+    ],
+    [
+      "Do not speed to look confident.",
+      "ആത്മവിശ്വാസം കാണിക്കാൻ വേഗം കൂട്ടരുത്.",
+      "நம்பிக்கையுடன் இருக்க வேக வேண்டாம்."
+    ],
+    [
+      "Do not use agents or shortcuts that break the rules.",
+      "നിയമം ലംഘിക്കുന്ന ഇടനിലക്കാരെയോ കുറുക്കുവഴികളെയോ ആശ്രയിക്കരുത്.",
+      "விதிகளை மீறும் முகவர்கள் அல்லது குறுக்குவழிகளைப் பயன்படுத்த வேண்டாம்."
+    ],
+    [
+      "Do not panic after a small mistake.",
+      "ചെറിയ തെറ്റിനു ശേഷം പരിഭ്രമിക്കരുത്.",
+      "ஒரு சிறிய தவறுக்குப் பிறகு பயப்பட வேண்டாம்."
+    ],
+    [
+      "Do not skip sleep or a light meal before the test.",
+      "ടെസ്റ്റിന് മുമ്പ് ഉറക്കമോ ലഘുഭക്ഷണമോ ഒഴിവാക്കരുത്.",
+      "சோதனைக்கு முன் தூக்கம் அல்லது லேசான உணவைத் தவிர்க்க வேண்டாம்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "The ground and road test",
-    "ഗ്രൗണ്ട്, റോഡ് ടെസ്റ്റ്"
-   ],
-   "p": [
+  ],
+  "myths": [
+    {
+      "m": [
+        "Passing the test means I am an expert driver.",
+        "ടെസ്റ്റ് ജയിച്ചാൽ ഞാൻ വിദഗ്ധ ഡ്രൈവറായി.",
+        "தேர்வில் தேர்ச்சி பெறுவது என்பது நான் ஒரு நிபுணத்துவம் வாய்ந்த ஓட்டுநர்."
+      ],
+      "f": [
+        "The test checks basic safe skills. Real skill grows with careful experience.",
+        "ടെസ്റ്റ് അടിസ്ഥാന സുരക്ഷിത കഴിവുകളാണ് പരിശോധിക്കുന്നത്. യഥാർഥ വൈദഗ്ധ്യം ശ്രദ്ധയോടെയുള്ള അനുഭവത്തിലൂടെ വളരുന്നു.",
+        "சோதனை அடிப்படை பாதுகாப்பான திறன்களை சரிபார்க்கிறது. உண்மையான திறமை கவனமாக அனுபவத்தால் வளரும்."
+      ]
+    },
+    {
+      "m": [
+        "Every RTO has exactly the same test track.",
+        "എല്ലാ ആർടിഒയിലും ഒരേ ടെസ്റ്റ് ട്രാക്ക് തന്നെയാണ്.",
+        "ஒவ்வொரு ஆர்டிஓவிலும் ஒரே மாதிரியான சோதனைப் பாதை உள்ளது."
+      ],
+      "f": [
+        "Layouts and procedures can differ. Ask your driving school or RTO what applies to you.",
+        "ലേഔട്ടും നടപടിക്രമവും വ്യത്യസ്തമാകാം. ബാധകമായത് ഡ്രൈവിങ് സ്കൂളിലോ ആർടിഒയിലോ ചോദിക്കുക.",
+        "தளவமைப்புகள் மற்றும் நடைமுறைகள் வேறுபடலாம். உங்களுக்கு என்ன பொருந்தும் என்று உங்கள் ஓட்டுநர் பள்ளி அல்லது RTOவிடம் கேளுங்கள்."
+      ]
+    },
+    {
+      "m": [
+        "Fast, confident driving impresses the examiner.",
+        "വേഗത്തിലുള്ള ആത്മവിശ്വാസ ഡ്രൈവിങ് പരീക്ഷകനെ ആകർഷിക്കും.",
+        "வேகமான, நம்பிக்கையுடன் வாகனம் ஓட்டுவது தேர்வாளரை ஈர்க்கிறது."
+      ],
+      "f": [
+        "Examiners prefer calm, smooth, observant and predictable driving.",
+        "ശാന്തവും സുഗമവും നിരീക്ഷണമുള്ളതും പ്രവചിക്കാവുന്നതുമായ ഡ്രൈവിങ്ങാണ് പരീക്ഷകർക്ക് ഇഷ്ടം.",
+        "தேர்வாளர்கள் அமைதியான, மென்மையான, கவனிக்கக்கூடிய மற்றும் கணிக்கக்கூடிய வாகனம் ஓட்டுவதை விரும்புகிறார்கள்."
+      ]
+    },
+    {
+      "m": [
+        "One small mistake means automatic failure.",
+        "ഒരു ചെറിയ തെറ്റ് പറ്റിയാൽ തനിയെ തോൽക്കും.",
+        "ஒரு சிறிய தவறு என்பது தானியங்கி தோல்வி."
+      ],
+      "f": [
+        "That depends on the mistake. A small slip corrected safely is different from a dangerous error. Keep going calmly.",
+        "തെറ്റിനെ ആശ്രയിച്ചിരിക്കും. സുരക്ഷിതമായി തിരുത്തിയ ചെറിയ പിഴവും അപകടകരമായ പിഴവും വ്യത്യസ്തമാണ്. ശാന്തമായി തുടരുക.",
+        "அது தவறைப் பொறுத்தது. ஒரு சிறிய சீட்டு பாதுகாப்பாக சரி செய்யப்பட்டது ஆபத்தான பிழையிலிருந்து வேறுபட்டது. நிதானமாக தொடருங்கள்."
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "t": [
+        "The stalled start",
+        "ഓഫായിപ്പോയ തുടക്കം",
+        "ஸ்தம்பித்த தொடக்கம்"
+      ],
+      "s": [
+        "Divya, an illustrative learner, stalled her car right at the start of the test and felt her face go hot. She remembered her instructor's advice: stop, breathe, handbrake on, restart. She checked her mirror, signalled and moved off smoothly. For the rest of the drive she stayed calm and observant. The examiner noted that she recovered safely instead of panicking, which showed good judgement.",
+        "ഉദാഹരണ കഥയിലെ പഠിതാവായ ദിവ്യയുടെ കാർ ടെസ്റ്റിന്റെ തുടക്കത്തിൽ തന്നെ ഓഫായി; അവൾക്ക് മുഖം ചൂടായി. ഇൻസ്ട്രക്ടറുടെ ഉപദേശം അവൾ ഓർത്തു: നിർത്തുക, ശ്വാസമെടുക്കുക, ഹാൻഡ് ബ്രേക്ക് ഇടുക, വീണ്ടും സ്റ്റാർട്ട് ചെയ്യുക. മിറർ നോക്കി സിഗ്നൽ നൽകി സുഗമമായി നീങ്ങി. ബാക്കി ഡ്രൈവിൽ അവൾ ശാന്തയും നിരീക്ഷണശീലയുമായിരുന്നു. പരിഭ്രമിക്കാതെ സുരക്ഷിതമായി തിരിച്ചുവന്നത് നല്ല വിവേചനമാണെന്ന് പരീക്ഷകൻ കണക്കാക്കി.",
+        "திவ்யா, ஒரு விளக்கக் கற்றல், சோதனையின் தொடக்கத்தில் தனது காரை நிறுத்தினார், மேலும் அவரது முகம் சூடாக இருப்பதை உணர்ந்தார். அவள் தன் பயிற்றுவிப்பாளரின் அறிவுரையை நினைவு கூர்ந்தாள்: நிறுத்து, சுவாசிக்க, ஹேண்ட்பிரேக் ஆன், மறுதொடக்கம். அவள் கண்ணாடியை சரிபார்த்து, சிக்னல் கொடுத்துவிட்டு சீராக நகர்ந்தாள். மீதமுள்ள ஓட்டத்தில் அவள் அமைதியாகவும் கவனத்துடனும் இருந்தாள். பீதிக்கு பதிலாக அவள் பத்திரமாக குணமடைந்துவிட்டதாக பரிசோதகர் குறிப்பிட்டார், இது நல்ல தீர்ப்பைக் காட்டியது."
+      ],
+      "lesson": [
+        "A calm recovery shows safe judgement; do not let one slip ruin the rest.",
+        "ശാന്തമായ തിരിച്ചുവരവ് സുരക്ഷിത വിവേചനം കാണിക്കുന്നു; ഒരു പിഴവ് ബാക്കി ടെസ്റ്റ് നശിപ്പിക്കാൻ അനുവദിക്കരുത്.",
+        "அமைதியான மீட்பு பாதுகாப்பான தீர்ப்பைக் காட்டுகிறது; ஒரு நழுவி மற்றதை அழிக்க விடாதே."
+      ]
+    },
+    {
+      "t": [
+        "Practice track surprise",
+        "പരിശീലന ട്രാക്കിലെ അമ്പരപ്പ്",
+        "பயிற்சி டிராக் ஆச்சரியம்"
+      ],
+      "s": [
+        "Joseph, in this made-up example, practised for weeks on his driving school's track and assumed the test would be identical. On test day, the layout at his RTO looked a little different and the markers were placed in another way. He felt thrown off. His friend Nisha had asked the school beforehand about possible differences and practised the basic skills, not only one layout. She adjusted easily.",
+        "ഈ ഭാവനാ ഉദാഹരണത്തിൽ, ജോസഫ് ആഴ്ചകളോളം ഡ്രൈവിങ് സ്കൂളിലെ ട്രാക്കിൽ പരിശീലിച്ച് ടെസ്റ്റും അതുപോലെ തന്നെയായിരിക്കുമെന്ന് കരുതി. ടെസ്റ്റ് ദിവസം ആർടിഒയിലെ ലേഔട്ട് അല്പം വ്യത്യസ്തമായി തോന്നി, അടയാളങ്ങൾ മറ്റൊരു രീതിയിലായിരുന്നു. അവൻ പതറിപ്പോയി. സുഹൃത്ത് നിഷ വ്യത്യാസങ്ങളെക്കുറിച്ച് സ്കൂളിൽ മുൻകൂട്ടി ചോദിക്കുകയും ഒരു ലേഔട്ട് മാത്രമല്ല, അടിസ്ഥാന കഴിവുകൾ പരിശീലിക്കുകയും ചെയ്തിരുന്നു. അവൾ എളുപ്പത്തിൽ പൊരുത്തപ്പെട്ടു.",
+        "ஜோசப், இந்த உருவாக்கப்பட்ட எடுத்துக்காட்டில், தனது ஓட்டுநர் பள்ளியின் பாதையில் வாரக்கணக்கில் பயிற்சி செய்தார் மற்றும் சோதனை ஒரே மாதிரியாக இருக்கும் என்று கருதினார். சோதனை நாளில், அவரது RTO இல் உள்ள தளவமைப்பு சற்று வித்தியாசமாகத் தெரிந்தது மற்றும் குறிப்பான்கள் வேறு வழியில் வைக்கப்பட்டன. தூக்கி எறியப்பட்டதாக உணர்ந்தான். அவரது தோழி நிஷா, சாத்தியமான வேறுபாடுகள் குறித்து பள்ளிக்கு முன்பே கேட்டறிந்து, அடிப்படைத் திறன்களைப் பயிற்சி செய்தார், ஒரு அமைப்பை மட்டும் அல்ல. அவள் எளிதாக சரிசெய்தாள்."
+      ],
+      "lesson": [
+        "Practise basic control skills and ask what your RTO's track looks like.",
+        "അടിസ്ഥാന നിയന്ത്രണ കഴിവുകൾ പരിശീലിക്കുക; നിങ്ങളുടെ ആർടിഒയിലെ ട്രാക്ക് എങ്ങനെയെന്ന് ചോദിച്ച് അറിയുക.",
+        "அடிப்படைக் கட்டுப்பாட்டுத் திறன்களைப் பயிற்சி செய்து, உங்கள் ஆர்டிஓவின் டிராக் எப்படி இருக்கிறது என்று கேட்கவும்."
+      ]
+    }
+  ],
+  "recap": [
     [
-     "Many RTOs use a marked test track, often shaped like an H or an 8, to check clutch, steering and control at low speed. Your RTO's test track may differ, so ask your driving school or RTO what applies to you.",
-     "പല ആർടിഒകളും ക്ലച്ച്, സ്റ്റിയറിങ്, കുറഞ്ഞ വേഗത്തിലെ നിയന്ത്രണം എന്നിവ പരിശോധിക്കാൻ എച്ച് അല്ലെങ്കിൽ എട്ട് ആകൃതിയിൽ അടയാളപ്പെടുത്തിയ ടെസ്റ്റ് ട്രാക്ക് ഉപയോഗിക്കുന്നു. നിങ്ങളുടെ ആർടിഒയുടെ ട്രാക്ക് വ്യത്യസ്തമായിരിക്കാം; ബാധകമായത് ഡ്രൈവിങ് സ്കൂളിലോ ആർടിഒയിലോ ചോദിച്ച് ഉറപ്പാക്കുക."
+      "The path is generally: online application, theory test, LLR, practice, driving test.",
+      "പൊതുവായ വഴി: ഓൺലൈൻ അപേക്ഷ, തിയറി ടെസ്റ്റ്, എൽഎൽആർ, പരിശീലനം, ഡ്രൈവിങ് ടെസ്റ്റ്.",
+      "பாதை பொதுவாக: ஆன்லைன் பயன்பாடு, கோட்பாடு சோதனை, LLR, பயிற்சி, ஓட்டுநர் சோதனை."
     ],
     [
-     "The idea behind such tracks is simple: can you steer precisely, keep the vehicle under control at walking speed, and stop or reverse without touching the markers or poles?",
-     "ഇത്തരം ട്രാക്കുകളുടെ ആശയം ലളിതമാണ്: കൃത്യമായി സ്റ്റിയർ ചെയ്യാനും നടപ്പുവേഗത്തിൽ വാഹനം നിയന്ത്രിക്കാനും അടയാളങ്ങളിലോ പോളുകളിലോ തൊടാതെ നിർത്താനും റിവേഴ്സ് എടുക്കാനും കഴിയുമോ?"
+      "Always check Parivahan or your RTO for current rules.",
+      "നിലവിലെ നിയമത്തിന് എപ്പോഴും പരിവാഹനോ ആർടിഒയോ പരിശോധിക്കുക.",
+      "தற்போதைய விதிகளுக்கு பரிவஹன் அல்லது உங்கள் RTO ஐ எப்போதும் சரிபார்க்கவும்."
     ],
     [
-     "On a road test, the examiner may watch how you start, use mirrors and signals, keep your lane, handle junctions, obey signs and park. Calm, steady, predictable driving scores better than fast or flashy driving.",
-     "റോഡ് ടെസ്റ്റിൽ നിങ്ങൾ എങ്ങനെ വാഹനം എടുക്കുന്നു, മിററും സിഗ്നലും ഉപയോഗിക്കുന്നു, ലെയ്നിൽ തുടരുന്നു, ജംഗ്ഷൻ കൈകാര്യം ചെയ്യുന്നു, ചിഹ്നങ്ങൾ പാലിക്കുന്നു, പാർക്ക് ചെയ്യുന്നു എന്നിവ പരീക്ഷകൻ ശ്രദ്ധിച്ചേക്കാം. വേഗത്തിലോ ഷോ കാണിച്ചോ ഉള്ള ഓട്ടത്തെക്കാൾ ശാന്തവും സ്ഥിരവും പ്രവചിക്കാവുന്നതുമായ ഡ്രൈവിങ്ങിനാണ് മാർക്ക്."
+      "Examiners watch mirrors, signals, smooth control, observation and parking.",
+      "മിറർ, സിഗ്നൽ, സുഗമ നിയന്ത്രണം, നിരീക്ഷണം, പാർക്കിങ് എന്നിവയാണ് പരീക്ഷകർ ശ്രദ്ധിക്കുന്നത്.",
+      "தேர்வாளர்கள் கண்ணாடிகள், சிக்னல்கள், மென்மையான கட்டுப்பாடு, கண்காணிப்பு மற்றும் பார்க்கிங் ஆகியவற்றைப் பார்க்கிறார்கள்."
+    ],
+    [
+      "Track shapes like H or 8 test low-speed control; your RTO's may differ.",
+      "എച്ച്, എട്ട് പോലുള്ള ട്രാക്കുകൾ കുറഞ്ഞ വേഗത്തിലെ നിയന്ത്രണം പരിശോധിക്കുന്നു; നിങ്ങളുടെ ആർടിഒയിലേത് വ്യത്യാസപ്പെടാം.",
+      "H அல்லது 8 சோதனை குறைந்த வேகக் கட்டுப்பாடு போன்ற வடிவங்களைக் கண்காணிக்கவும்; உங்கள் ஆர்டிஓக்கள் வேறுபடலாம்."
+    ],
+    [
+      "Calm and smooth beats fast and flashy.",
+      "വേഗവും ഷോയും അല്ല, ശാന്തതയും സുഗമതയുമാണ് ജയിപ്പിക്കുന്നത്.",
+      "அமைதியான மற்றும் மிருதுவான துடிக்கிறது."
+    ],
+    [
+      "A small slip is recoverable; stay calm and carry on safely.",
+      "ചെറിയ പിഴവ് തിരുത്താം; ശാന്തമായി സുരക്ഷിതമായി തുടരുക.",
+      "ஒரு சிறிய சீட்டு மீட்கக்கூடியது; அமைதியாக இருங்கள் மற்றும் பாதுகாப்பாக தொடரவும்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "What examiners look for",
-    "പരീക്ഷകർ ശ്രദ്ധിക്കുന്നത്"
-   ],
-   "p": [
-    [
-     "Observation: mirror checks before moving, turning or stopping, and a look over the shoulder where needed. Examiners want to see that your eyes are active, not only your hands.",
-     "നിരീക്ഷണം: വാഹനം എടുക്കുന്നതിനും തിരിയുന്നതിനും നിർത്തുന്നതിനും മുമ്പ് മിറർ നോക്കൽ, ആവശ്യമുള്ളിടത്ത് തോളിനു മുകളിലൂടെ നോക്കൽ. കൈകൾ മാത്രമല്ല, കണ്ണുകളും സജീവമാണെന്ന് പരീക്ഷകർ കാണാൻ ആഗ്രഹിക്കുന്നു."
-    ],
-    [
-     "Signalling: correct, timely signals that match what you actually do. Cancel the indicator after the turn.",
-     "സിഗ്നൽ: നിങ്ങൾ ചെയ്യുന്നതിനോട് ചേരുന്ന, ശരിയായ സമയത്തുള്ള സിഗ്നൽ. തിരിഞ്ഞശേഷം ഇൻഡിക്കേറ്റർ ഓഫ് ചെയ്യുക."
-    ],
-    [
-     "Smooth control: gentle clutch, steady steering, no stalling or jerking, and sensible gear use. Smoothness shows you can be safe with passengers and traffic.",
-     "സുഗമമായ നിയന്ത്രണം: മൃദുവായ ക്ലച്ച്, സ്ഥിരമായ സ്റ്റിയറിങ്, വാഹനം ഓഫ് ആകുകയോ ഞെട്ടുകയോ ചെയ്യാതിരിക്കൽ, ഗിയറിന്റെ ശരിയായ ഉപയോഗം. യാത്രക്കാരോടും ഗതാഗതത്തോടും സുരക്ഷിതമായി പെരുമാറാൻ കഴിയുമെന്ന് ഈ സുഗമത കാണിക്കുന്നു."
-    ],
-    [
-     "Parking and reversing: stop parallel and close to the left kerb, reverse in a controlled line, and use mirrors and a look behind. Seat belt, correct seating and handbrake use also matter.",
-     "പാർക്കിങ്ങും റിവേഴ്സും: ഇടതുവശത്തെ കെർബിനോട് ചേർന്ന് സമാന്തരമായി നിർത്തുക, നിയന്ത്രിതമായി നേർരേഖയിൽ റിവേഴ്സ് എടുക്കുക, മിററും പിന്നിലേക്കുള്ള നോട്ടവും ഉപയോഗിക്കുക. സീറ്റ് ബെൽറ്റ്, ശരിയായ ഇരിപ്പ്, ഹാൻഡ് ബ്രേക്കിന്റെ ഉപയോഗം എന്നിവയും പ്രധാനമാണ്."
-    ]
-   ]
-  },
-  {
-   "h": [
-    "Preparing and common mistakes",
-    "തയ്യാറെടുപ്പും സാധാരണ തെറ്റുകളും"
-   ],
-   "p": [
-    [
-     "Practise the same kinds of manoeuvres repeatedly with a qualified instructor or an experienced licensed driver. Short, regular sessions build muscle memory better than one long session.",
-     "യോഗ്യനായ ഇൻസ്ട്രക്ടറോടൊപ്പമോ പരിചയസമ്പന്നനായ ലൈസൻസുള്ള ഡ്രൈവറോടൊപ്പമോ ഒരേ തരം മാനുവറുകൾ ആവർത്തിച്ച് പരിശീലിക്കുക. ഒറ്റയടിക്കുള്ള നീണ്ട പരിശീലനത്തെക്കാൾ ചെറുതും സ്ഥിരവുമായ പരിശീലനം ശീലം ഉറപ്പിക്കും."
-    ],
-    [
-     "Common mistakes: forgetting seat belt or mirror adjustment, stalling from a rushed clutch release, touching poles, forgetting the signal, rolling back on a slope and freezing after a small error.",
-     "സാധാരണ തെറ്റുകൾ: സീറ്റ് ബെൽറ്റോ മിറർ ക്രമീകരണമോ മറക്കൽ, ക്ലച്ച് വേഗത്തിൽ വിട്ട് വാഹനം ഓഫ് ആകൽ, പോളിൽ തൊടൽ, സിഗ്നൽ മറക്കൽ, കയറ്റത്തിൽ പിന്നോട്ട് ഉരുളൽ, ചെറിയ പിഴവിനു ശേഷം പരിഭ്രമിച്ച് നിൽക്കൽ."
-    ],
-    [
-     "Carry your original documents and appointment details, and arrive early. Check that the vehicle you use for the test is roadworthy and meets your RTO's requirements.",
-     "അസൽ രേഖകളും അപ്പോയിന്റ്മെന്റ് വിവരങ്ങളും കരുതുക, നേരത്തേ എത്തുക. ടെസ്റ്റിന് ഉപയോഗിക്കുന്ന വാഹനം റോഡിന് യോഗ്യമാണെന്നും നിങ്ങളുടെ ആർടിഒയുടെ നിബന്ധനകൾ പാലിക്കുന്നുവെന്നും ഉറപ്പാക്കുക."
-    ]
-   ]
-  },
-  {
-   "h": [
-    "Handling nervousness",
-    "പരിഭ്രമം നേരിടാൻ"
-   ],
-   "p": [
-    [
-     "Nervousness is normal. Sleep well, eat lightly and do a few slow breaths before you start, with relaxed hands on the wheel.",
-     "പരിഭ്രമം സ്വാഭാവികമാണ്. നന്നായി ഉറങ്ങുക, ലഘുവായി കഴിക്കുക, തുടങ്ങുംമുമ്പ് കുറച്ച് സാവധാന ശ്വാസമെടുക്കുക, സ്റ്റിയറിങ്ങിൽ കൈകൾ അയച്ചുപിടിക്കുക."
-    ],
-    [
-     "If you make a small mistake, do not panic. Correct it safely and carry on; examiners know small slips happen, and safety matters more than perfection.",
-     "ചെറിയ തെറ്റ് പറ്റിയാൽ പരിഭ്രമിക്കരുത്. സുരക്ഷിതമായി തിരുത്തി മുന്നോട്ടു പോകുക; ചെറിയ പിഴവുകൾ സംഭവിക്കുമെന്ന് പരീക്ഷകർക്ക് അറിയാം, പൂർണതയെക്കാൾ പ്രധാനം സുരക്ഷയാണ്."
-    ],
-    [
-     "If you do not pass, treat it as feedback, practise the weak area and book again as the rules allow. Many good drivers needed more than one try.",
-     "ജയിച്ചില്ലെങ്കിൽ അത് പ്രതികരണമായി കണ്ട്, ദൗർബല്യമുള്ള ഭാഗം പരിശീലിച്ച് ചട്ടം അനുവദിക്കുന്ന പ്രകാരം വീണ്ടും ബുക്ക് ചെയ്യുക. പല നല്ല ഡ്രൈവർമാർക്കും ഒന്നിലധികം ശ്രമം വേണ്ടിവന്നിട്ടുണ്ട്."
-    ]
-   ]
-  }
- ],
- "dos": [
-  [
-   "Check Parivahan or your RTO for current requirements.",
-   "നിലവിലെ നിബന്ധനകൾക്ക് പരിവാഹനോ ആർടിഒയോ പരിശോധിക്കുക."
-  ],
-  [
-   "Learn signs by shape and colour, then meaning.",
-   "ചിഹ്നങ്ങൾ ആകൃതിയും നിറവും വച്ച് പഠിക്കുക, പിന്നെ അർഥം."
-  ],
-  [
-   "Practise with a qualified instructor in short regular sessions.",
-   "യോഗ്യനായ ഇൻസ്ട്രക്ടറോടൊപ്പം ചെറിയ പതിവ് സെഷനുകളായി പരിശീലിക്കുക."
-  ],
-  [
-   "Adjust seat and mirrors and fasten the seat belt before starting.",
-   "തുടങ്ങുംമുമ്പ് സീറ്റും മിററും ക്രമീകരിച്ച് സീറ്റ് ബെൽറ്റ് ഇടുക."
-  ],
-  [
-   "Check mirrors and signal before every move.",
-   "ഓരോ നീക്കത്തിനും മുമ്പ് മിറർ നോക്കി സിഗ്നൽ നൽകുക."
-  ],
-  [
-   "Use the clutch gently and keep steady control.",
-   "ക്ലച്ച് മൃദുവായി ഉപയോഗിച്ച് സ്ഥിരമായ നിയന്ത്രണം നിലനിർത്തുക."
-  ],
-  [
-   "Carry original documents and arrive early.",
-   "അസൽ രേഖകൾ കരുതി നേരത്തേ എത്തുക."
-  ],
-  [
-   "Take slow breaths and stay calm.",
-   "സാവധാനം ശ്വാസമെടുത്ത് ശാന്തമായിരിക്കുക."
-  ],
-  [
-   "Correct small errors safely and continue.",
-   "ചെറിയ പിഴവുകൾ സുരക്ഷിതമായി തിരുത്തി തുടരുക."
-  ],
-  [
-   "Follow the examiner's instructions carefully.",
-   "പരീക്ഷകന്റെ നിർദേശങ്ങൾ ശ്രദ്ധയോടെ പാലിക്കുക."
   ]
- ],
- "donts": [
-  [
-   "Do not rely on rumours about the test track or rules.",
-   "ടെസ്റ്റ് ട്രാക്കിനെയോ നിയമത്തെയോ കുറിച്ചുള്ള കേട്ടുകേൾവിയെ ആശ്രയിക്കരുത്."
-  ],
-  [
-   "Do not just memorise answers without understanding.",
-   "മനസ്സിലാക്കാതെ ഉത്തരങ്ങൾ കാണാതെ പഠിക്കരുത്."
-  ],
-  [
-   "Do not practise on public roads without the required learner conditions.",
-   "ആവശ്യമായ ലേണർ നിബന്ധനകൾ ഇല്ലാതെ പൊതുറോഡിൽ പരിശീലിക്കരുത്."
-  ],
-  [
-   "Do not rush the clutch release.",
-   "ക്ലച്ച് തിടുക്കത്തിൽ വിടരുത്."
-  ],
-  [
-   "Do not forget to cancel the indicator.",
-   "ഇൻഡിക്കേറ്റർ ഓഫ് ചെയ്യാൻ മറക്കരുത്."
-  ],
-  [
-   "Do not touch poles or markers by careless steering.",
-   "അശ്രദ്ധമായ സ്റ്റിയറിങ് കാരണം പോളിലോ അടയാളത്തിലോ തൊടരുത്."
-  ],
-  [
-   "Do not speed to look confident.",
-   "ആത്മവിശ്വാസം കാണിക്കാൻ വേഗം കൂട്ടരുത്."
-  ],
-  [
-   "Do not use agents or shortcuts that break the rules.",
-   "നിയമം ലംഘിക്കുന്ന ഇടനിലക്കാരെയോ കുറുക്കുവഴികളെയോ ആശ്രയിക്കരുത്."
-  ],
-  [
-   "Do not panic after a small mistake.",
-   "ചെറിയ തെറ്റിനു ശേഷം പരിഭ്രമിക്കരുത്."
-  ],
-  [
-   "Do not skip sleep or a light meal before the test.",
-   "ടെസ്റ്റിന് മുമ്പ് ഉറക്കമോ ലഘുഭക്ഷണമോ ഒഴിവാക്കരുത്."
-  ]
- ],
- "myths": [
-  {
-   "m": [
-    "Passing the test means I am an expert driver.",
-    "ടെസ്റ്റ് ജയിച്ചാൽ ഞാൻ വിദഗ്ധ ഡ്രൈവറായി."
-   ],
-   "f": [
-    "The test checks basic safe skills. Real skill grows with careful experience.",
-    "ടെസ്റ്റ് അടിസ്ഥാന സുരക്ഷിത കഴിവുകളാണ് പരിശോധിക്കുന്നത്. യഥാർഥ വൈദഗ്ധ്യം ശ്രദ്ധയോടെയുള്ള അനുഭവത്തിലൂടെ വളരുന്നു."
-   ]
-  },
-  {
-   "m": [
-    "Every RTO has exactly the same test track.",
-    "എല്ലാ ആർടിഒയിലും ഒരേ ടെസ്റ്റ് ട്രാക്ക് തന്നെയാണ്."
-   ],
-   "f": [
-    "Layouts and procedures can differ. Ask your driving school or RTO what applies to you.",
-    "ലേഔട്ടും നടപടിക്രമവും വ്യത്യസ്തമാകാം. ബാധകമായത് ഡ്രൈവിങ് സ്കൂളിലോ ആർടിഒയിലോ ചോദിക്കുക."
-   ]
-  },
-  {
-   "m": [
-    "Fast, confident driving impresses the examiner.",
-    "വേഗത്തിലുള്ള ആത്മവിശ്വാസ ഡ്രൈവിങ് പരീക്ഷകനെ ആകർഷിക്കും."
-   ],
-   "f": [
-    "Examiners prefer calm, smooth, observant and predictable driving.",
-    "ശാന്തവും സുഗമവും നിരീക്ഷണമുള്ളതും പ്രവചിക്കാവുന്നതുമായ ഡ്രൈവിങ്ങാണ് പരീക്ഷകർക്ക് ഇഷ്ടം."
-   ]
-  },
-  {
-   "m": [
-    "One small mistake means automatic failure.",
-    "ഒരു ചെറിയ തെറ്റ് പറ്റിയാൽ തനിയെ തോൽക്കും."
-   ],
-   "f": [
-    "That depends on the mistake. A small slip corrected safely is different from a dangerous error. Keep going calmly.",
-    "തെറ്റിനെ ആശ്രയിച്ചിരിക്കും. സുരക്ഷിതമായി തിരുത്തിയ ചെറിയ പിഴവും അപകടകരമായ പിഴവും വ്യത്യസ്തമാണ്. ശാന്തമായി തുടരുക."
-   ]
-  }
- ],
- "stories": [
-  {
-   "t": [
-    "The stalled start",
-    "ഓഫായിപ്പോയ തുടക്കം"
-   ],
-   "s": [
-    "Divya, an illustrative learner, stalled her car right at the start of the test and felt her face go hot. She remembered her instructor's advice: stop, breathe, handbrake on, restart. She checked her mirror, signalled and moved off smoothly. For the rest of the drive she stayed calm and observant. The examiner noted that she recovered safely instead of panicking, which showed good judgement.",
-    "ഉദാഹരണ കഥയിലെ പഠിതാവായ ദിവ്യയുടെ കാർ ടെസ്റ്റിന്റെ തുടക്കത്തിൽ തന്നെ ഓഫായി; അവൾക്ക് മുഖം ചൂടായി. ഇൻസ്ട്രക്ടറുടെ ഉപദേശം അവൾ ഓർത്തു: നിർത്തുക, ശ്വാസമെടുക്കുക, ഹാൻഡ് ബ്രേക്ക് ഇടുക, വീണ്ടും സ്റ്റാർട്ട് ചെയ്യുക. മിറർ നോക്കി സിഗ്നൽ നൽകി സുഗമമായി നീങ്ങി. ബാക്കി ഡ്രൈവിൽ അവൾ ശാന്തയും നിരീക്ഷണശീലയുമായിരുന്നു. പരിഭ്രമിക്കാതെ സുരക്ഷിതമായി തിരിച്ചുവന്നത് നല്ല വിവേചനമാണെന്ന് പരീക്ഷകൻ കണക്കാക്കി."
-   ],
-   "lesson": [
-    "A calm recovery shows safe judgement; do not let one slip ruin the rest.",
-    "ശാന്തമായ തിരിച്ചുവരവ് സുരക്ഷിത വിവേചനം കാണിക്കുന്നു; ഒരു പിഴവ് ബാക്കി ടെസ്റ്റ് നശിപ്പിക്കാൻ അനുവദിക്കരുത്."
-   ]
-  },
-  {
-   "t": [
-    "Practice track surprise",
-    "പരിശീലന ട്രാക്കിലെ അമ്പരപ്പ്"
-   ],
-   "s": [
-    "Joseph, in this made-up example, practised for weeks on his driving school's track and assumed the test would be identical. On test day, the layout at his RTO looked a little different and the markers were placed in another way. He felt thrown off. His friend Nisha had asked the school beforehand about possible differences and practised the basic skills, not only one layout. She adjusted easily.",
-    "ഈ ഭാവനാ ഉദാഹരണത്തിൽ, ജോസഫ് ആഴ്ചകളോളം ഡ്രൈവിങ് സ്കൂളിലെ ട്രാക്കിൽ പരിശീലിച്ച് ടെസ്റ്റും അതുപോലെ തന്നെയായിരിക്കുമെന്ന് കരുതി. ടെസ്റ്റ് ദിവസം ആർടിഒയിലെ ലേഔട്ട് അല്പം വ്യത്യസ്തമായി തോന്നി, അടയാളങ്ങൾ മറ്റൊരു രീതിയിലായിരുന്നു. അവൻ പതറിപ്പോയി. സുഹൃത്ത് നിഷ വ്യത്യാസങ്ങളെക്കുറിച്ച് സ്കൂളിൽ മുൻകൂട്ടി ചോദിക്കുകയും ഒരു ലേഔട്ട് മാത്രമല്ല, അടിസ്ഥാന കഴിവുകൾ പരിശീലിക്കുകയും ചെയ്തിരുന്നു. അവൾ എളുപ്പത്തിൽ പൊരുത്തപ്പെട്ടു."
-   ],
-   "lesson": [
-    "Practise basic control skills and ask what your RTO's track looks like.",
-    "അടിസ്ഥാന നിയന്ത്രണ കഴിവുകൾ പരിശീലിക്കുക; നിങ്ങളുടെ ആർടിഒയിലെ ട്രാക്ക് എങ്ങനെയെന്ന് ചോദിച്ച് അറിയുക."
-   ]
-  }
- ],
- "recap": [
-  [
-   "The path is generally: online application, theory test, LLR, practice, driving test.",
-   "പൊതുവായ വഴി: ഓൺലൈൻ അപേക്ഷ, തിയറി ടെസ്റ്റ്, എൽഎൽആർ, പരിശീലനം, ഡ്രൈവിങ് ടെസ്റ്റ്."
-  ],
-  [
-   "Always check Parivahan or your RTO for current rules.",
-   "നിലവിലെ നിയമത്തിന് എപ്പോഴും പരിവാഹനോ ആർടിഒയോ പരിശോധിക്കുക."
-  ],
-  [
-   "Examiners watch mirrors, signals, smooth control, observation and parking.",
-   "മിറർ, സിഗ്നൽ, സുഗമ നിയന്ത്രണം, നിരീക്ഷണം, പാർക്കിങ് എന്നിവയാണ് പരീക്ഷകർ ശ്രദ്ധിക്കുന്നത്."
-  ],
-  [
-   "Track shapes like H or 8 test low-speed control; your RTO's may differ.",
-   "എച്ച്, എട്ട് പോലുള്ള ട്രാക്കുകൾ കുറഞ്ഞ വേഗത്തിലെ നിയന്ത്രണം പരിശോധിക്കുന്നു; നിങ്ങളുടെ ആർടിഒയിലേത് വ്യത്യാസപ്പെടാം."
-  ],
-  [
-   "Calm and smooth beats fast and flashy.",
-   "വേഗവും ഷോയും അല്ല, ശാന്തതയും സുഗമതയുമാണ് ജയിപ്പിക്കുന്നത്."
-  ],
-  [
-   "A small slip is recoverable; stay calm and carry on safely.",
-   "ചെറിയ പിഴവ് തിരുത്താം; ശാന്തമായി സുരക്ഷിതമായി തുടരുക."
-  ]
- ]
 }

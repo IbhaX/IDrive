@@ -1,332 +1,402 @@
 {
- "intro": [
-  "Rules of the road exist so that thousands of strangers can share one road without talking to each other. When everyone keeps left, signals early and holds their lane, other road users can predict what you will do. This article explains the habits behind the basic rules, so you follow them for the right reason and not only to pass the test.",
-  "ഒന്നും സംസാരിക്കാതെ തന്നെ ആയിരക്കണക്കിന് അപരിചിതർക്ക് ഒരു റോഡ് പങ്കിടാൻ കഴിയുന്നത് റോഡ് നിയമങ്ങൾ ഉള്ളതുകൊണ്ടാണ്. എല്ലാവരും ഇടതുവശം പാലിക്കുകയും നേരത്തേ സിഗ്നൽ നൽകുകയും ലെയ്നിൽ തന്നെ ഓടിക്കുകയും ചെയ്താൽ നിങ്ങൾ എന്തു ചെയ്യുമെന്ന് മറ്റുള്ളവർക്ക് മുൻകൂട്ടി അറിയാം. ടെസ്റ്റ് ജയിക്കാൻ മാത്രമല്ല, ശരിയായ കാരണത്തോടെ നിയമങ്ങൾ പാലിക്കാൻ ഈ ലേഖനം സഹായിക്കും."
- ],
- "sections": [
-  {
-   "h": [
-    "Keeping left and using the right side",
-    "ഇടതുവശം പാലിക്കലും വലതുവശത്തിന്റെ ഉപയോഗവും"
-   ],
-   "p": [
+  "intro": [
+    "Rules of the road exist so that thousands of strangers can share one road without talking to each other. When everyone keeps left, signals early and holds their lane, other road users can predict what you will do. This article explains the habits behind the basic rules, so you follow them for the right reason and not only to pass the test.",
+    "ഒന്നും സംസാരിക്കാതെ തന്നെ ആയിരക്കണക്കിന് അപരിചിതർക്ക് ഒരു റോഡ് പങ്കിടാൻ കഴിയുന്നത് റോഡ് നിയമങ്ങൾ ഉള്ളതുകൊണ്ടാണ്. എല്ലാവരും ഇടതുവശം പാലിക്കുകയും നേരത്തേ സിഗ്നൽ നൽകുകയും ലെയ്നിൽ തന്നെ ഓടിക്കുകയും ചെയ്താൽ നിങ്ങൾ എന്തു ചെയ്യുമെന്ന് മറ്റുള്ളവർക്ക് മുൻകൂട്ടി അറിയാം. ടെസ്റ്റ് ജയിക്കാൻ മാത്രമല്ല, ശരിയായ കാരണത്തോടെ നിയമങ്ങൾ പാലിക്കാൻ ഈ ലേഖനം സഹായിക്കും.",
+    "சாலை விதிகள் உள்ளன, இதனால் ஆயிரக்கணக்கான அந்நியர்கள் ஒருவருக்கொருவர் பேசாமல் ஒரு சாலையைப் பகிர்ந்து கொள்ளலாம். அனைவரும் வெளியேறி, சீக்கிரம் சிக்னல் கொடுத்து, தங்கள் பாதையைப் பிடித்தால், நீங்கள் என்ன செய்வீர்கள் என்பதை மற்ற சாலைப் பயனர்கள் கணிக்க முடியும். இந்தக் கட்டுரை அடிப்படை விதிகளுக்குப் பின்னால் உள்ள பழக்கவழக்கங்களை விளக்குகிறது, எனவே நீங்கள் சரியான காரணத்திற்காக அவற்றைப் பின்பற்றுகிறீர்கள், தேர்வில் தேர்ச்சி பெறுவது மட்டுமல்ல."
+  ],
+  "sections": [
+    {
+      "h": [
+        "Keeping left and using the right side",
+        "ഇടതുവശം പാലിക്കലും വലതുവശത്തിന്റെ ഉപയോഗവും",
+        "இடதுபுறம் வைத்து வலது பக்கத்தைப் பயன்படுத்துதல்"
+      ],
+      "p": [
+        [
+          "India has left-hand traffic. Your vehicle stays on the left part of the carriageway, and oncoming vehicles pass on your right.",
+          "ഇന്ത്യയിൽ ഇടതുവശത്തുകൂടിയാണ് ഗതാഗതം. നിങ്ങളുടെ വാഹനം റോഡിന്റെ ഇടതുഭാഗത്ത് തന്നെ നിൽക്കണം; എതിരെ വരുന്ന വാഹനങ്ങൾ നിങ്ങളുടെ വലതുവശത്തുകൂടി കടന്നുപോകും.",
+          "இந்தியாவில் இடது கை போக்குவரத்து உள்ளது. உங்கள் வாகனம் வண்டிப்பாதையின் இடதுபுறத்தில் நிற்கிறது, மேலும் எதிரே வரும் வாகனங்கள் உங்கள் வலதுபுறம் செல்கின்றன."
+        ],
+        [
+          "Keeping left is not just a rule for narrow roads. It leaves room on the right for faster vehicles to overtake and for oncoming traffic to pass safely.",
+          "ഇടതുവശം പാലിക്കുന്നത് ഇടുങ്ങിയ റോഡുകളിൽ മാത്രമുള്ള നിയമമല്ല. വേഗമുള്ള വാഹനങ്ങൾക്ക് മറികടക്കാനും എതിരെ വരുന്നവർക്ക് സുരക്ഷിതമായി കടന്നുപോകാനും വലതുഭാഗത്ത് സ്ഥലം കിട്ടാൻ ഇത് സഹായിക്കുന്നു.",
+          "இடப்புறம் வைத்திருப்பது குறுகிய சாலைகளுக்கு மட்டும் விதி அல்ல. வேகமான வாகனங்கள் முந்திச் செல்வதற்கும், எதிரே வரும் போக்குவரத்தை பாதுகாப்பாகக் கடந்து செல்வதற்கும் வலதுபுறத்தில் இடமளிக்கிறது."
+        ],
+        [
+          "Use the right side only to overtake, to turn right, or where a sign or a police signal tells you to. Return to the left as soon as it is safe.",
+          "മറികടക്കാനും വലത്തോട്ട് തിരിയാനും, അല്ലെങ്കിൽ ചിഹ്നമോ പോലീസ് സൂചനയോ പറയുന്നിടത്തും മാത്രം വലതുവശം ഉപയോഗിക്കുക. സുരക്ഷിതമാകുന്ന ഉടൻ ഇടതുവശത്തേക്ക് മടങ്ങുക.",
+          "முந்திச் செல்ல, வலதுபுறம் திரும்ப, அல்லது ஒரு அடையாளம் அல்லது போலீஸ் சிக்னல் உங்களுக்குச் சொல்லும் இடத்தில் மட்டுமே வலது பக்கத்தைப் பயன்படுத்தவும். பாதுகாப்பாக இருந்தவுடன் இடது பக்கம் திரும்பவும்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Lanes and lane discipline",
+        "ലെയ്നുകളും ലെയ്ൻ അച്ചടക്കവും",
+        "பாதைகள் மற்றும் பாதை ஒழுக்கம்"
+      ],
+      "p": [
+        [
+          "On a road with marked lanes, choose a lane and stay in it. Zig-zagging between lanes to gain a few seconds surprises others and often causes crashes.",
+          "ലെയ്ൻ വരകളുള്ള റോഡിൽ ഒരു ലെയ്ൻ തിരഞ്ഞെടുത്ത് അതിൽ തന്നെ തുടരുക. കുറച്ച് സെക്കൻഡ് ലാഭിക്കാൻ ലെയ്നുകൾ മാറിമാറി ഓടിക്കുന്നത് മറ്റുള്ളവരെ ഞെട്ടിക്കുകയും പലപ്പോഴും അപകടത്തിന് ഇടയാക്കുകയും ചെയ്യും.",
+          "குறிக்கப்பட்ட பாதைகளைக் கொண்ட சாலையில், ஒரு பாதையைத் தேர்ந்தெடுத்து அதில் தங்கவும். சில நொடிகளைப் பெறுவதற்காக பாதைகளுக்கு இடையில் ஜிக்-ஜாகிங் செய்வது மற்றவர்களை ஆச்சரியப்படுத்துகிறது மற்றும் அடிக்கடி விபத்துகளை ஏற்படுத்துகிறது."
+        ],
+        [
+          "Do not straddle a lane line. A vehicle that sits half in one lane and half in another leaves no one sure where it will go next.",
+          "ലെയ്ൻ വരയിൽ കയറി ഓടിക്കരുത്. പകുതി ഒരു ലെയ്നിലും പകുതി മറ്റൊന്നിലും ആയി പോകുന്ന വാഹനം അടുത്തതായി എങ്ങോട്ട് പോകുമെന്ന് ആർക്കും ഉറപ്പിക്കാൻ കഴിയില്ല.",
+          "ஒரு லேன் லைனில் செல்ல வேண்டாம். ஒரு பாதையில் பாதியும், மற்றொரு பாதையில் பாதியும் அமர்ந்து செல்லும் வாகனம், அடுத்து எங்கு செல்லும் என்பது யாருக்கும் தெரியாது."
+        ],
+        [
+          "Where there are several lanes, the left lane is usually for slower traffic and the lanes to its right for faster or overtaking traffic. Follow the lane markings and signs of the road you are on.",
+          "ഒന്നിലധികം ലെയ്നുകൾ ഉള്ളിടത്ത് ഇടതുലെയ്ൻ സാധാരണയായി വേഗം കുറഞ്ഞ വാഹനങ്ങൾക്കും വലതുവശത്തുള്ളവ വേഗമുള്ളവയ്ക്കും മറികടക്കുന്നവയ്ക്കും ആണ്. ആ റോഡിലെ ലെയ്ൻ വരകളും ചിഹ്നങ്ങളും പിന്തുടരുക.",
+          "பல பாதைகள் உள்ள இடங்களில், இடது பாதை பொதுவாக மெதுவான போக்குவரத்திற்காகவும், அதன் வலதுபுறத்தில் உள்ள பாதைகள் வேகமாக அல்லது போக்குவரத்தை முந்திச் செல்வதற்காகவும் இருக்கும். நீங்கள் செல்லும் பாதையின் லேன் அடையாளங்கள் மற்றும் அடையாளங்களைப் பின்பற்றவும்."
+        ],
+        [
+          "Get into the correct lane early for a turn. Cutting across lanes at the last moment is a common cause of side collisions.",
+          "തിരിയേണ്ട സ്ഥലത്തിന് മുമ്പേ ശരിയായ ലെയ്നിൽ എത്തുക. അവസാന നിമിഷം ലെയ്നുകൾ മുറിച്ചുകടക്കുന്നത് വശത്തുനിന്നുള്ള ഇടിയുടെ സാധാരണ കാരണമാണ്.",
+          "ஒரு திருப்பத்திற்கு சரியான பாதையில் செல்லவும். கடைசி நேரத்தில் பாதைகளை வெட்டுவது பக்கவாட்டு மோதல்களுக்கு ஒரு பொதுவான காரணமாகும்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Mirrors, signals and the habit of looking",
+        "മിററുകൾ, സിഗ്നലുകൾ, നോക്കുന്ന ശീലം",
+        "கண்ணாடிகள், சமிக்ஞைகள் மற்றும் பார்க்கும் பழக்கம்"
+      ],
+      "p": [
+        [
+          "Before any change of direction, follow the order: mirror, signal, then move. Looking first tells you if it is safe; signalling tells others what you plan.",
+          "ദിശ മാറുന്നതിന് മുമ്പ് മിറർ, സിഗ്നൽ, പിന്നെ നീക്കം എന്ന ക്രമം പാലിക്കുക. ആദ്യം നോക്കുന്നത് സുരക്ഷിതമാണോ എന്നറിയിക്കുന്നു; സിഗ്നൽ നിങ്ങളുടെ ഉദ്ദേശ്യം മറ്റുള്ളവരെ അറിയിക്കുന്നു.",
+          "திசையை மாற்றுவதற்கு முன், வரிசையைப் பின்பற்றவும்: கண்ணாடி, சமிக்ஞை, பின்னர் நகர்த்தவும். முதலில் பார்ப்பது பாதுகாப்பானதா என்பதைச் சொல்கிறது; நீங்கள் என்ன திட்டமிடுகிறீர்கள் என்பதை மற்றவர்களுக்கு சமிக்ஞை செய்கிறது."
+        ],
+        [
+          "Mirrors have blind spots, especially on two-wheelers and autos beside you. Glance over your shoulder before moving sideways.",
+          "മിററുകൾക്ക് കാണാത്ത ഭാഗങ്ങളുണ്ട്, പ്രത്യേകിച്ച് വശത്തുള്ള ഇരുചക്രവാഹനങ്ങളും ഓട്ടോകളും. വശത്തേക്ക് നീങ്ങും മുമ്പ് തോളിനു മുകളിലൂടെ ഒന്ന് തിരിഞ്ഞുനോക്കുക.",
+          "கண்ணாடிகளில் குருட்டுப் புள்ளிகள் உள்ளன, குறிப்பாக இரு சக்கர வாகனங்கள் மற்றும் ஆட்டோக்களில் உங்கள் அருகில். பக்கவாட்டாக நகரும் முன் உங்கள் தோள்பட்டையை பார்க்கவும்."
+        ],
+        [
+          "Signal in good time and cancel it after the manoeuvre. A signal left blinking after you have turned misleads the next driver.",
+          "നേരത്തേ സിഗ്നൽ നൽകുക, തിരിഞ്ഞ ശേഷം അത് ഓഫ് ചെയ്യുക. തിരിഞ്ഞ ശേഷവും മിന്നിക്കൊണ്ടിരിക്കുന്ന സിഗ്നൽ അടുത്ത ഡ്രൈവറെ തെറ്റിദ്ധരിപ്പിക്കും.",
+          "நல்ல நேரத்தில் சமிக்ஞை செய்து, சூழ்ச்சிக்குப் பிறகு அதை ரத்துசெய்யவும். நீங்கள் திரும்பிய பிறகு சிமிட்டும் ஒரு சமிக்ஞை அடுத்த டிரைவரை தவறாக வழிநடத்துகிறது."
+        ],
+        [
+          "A signal is a request to tell others your plan, not a permission. You must still check that the move is safe.",
+          "സിഗ്നൽ നിങ്ങളുടെ പദ്ധതി അറിയിക്കാനുള്ളതാണ്, അനുമതിയല്ല. നീക്കം സുരക്ഷിതമാണോ എന്ന് നിങ്ങൾ തന്നെ ഉറപ്പാക്കണം.",
+          "சிக்னல் என்பது உங்கள் திட்டத்தை மற்றவர்களுக்கு தெரிவிப்பதற்கான வேண்டுகோள், அனுமதி அல்ல. நகர்வு பாதுகாப்பானதா என்பதை நீங்கள் இன்னும் சரிபார்க்க வேண்டும்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Using the horn properly",
+        "ഹോൺ ശരിയായി ഉപയോഗിക്കൽ",
+        "ஹார்னை சரியாகப் பயன்படுத்துதல்"
+      ],
+      "p": [
+        [
+          "The horn is a warning device. Use it briefly to tell others you are there, for example at a blind bend or when someone is about to step out.",
+          "ഹോൺ ഒരു മുന്നറിയിപ്പ് ഉപകരണമാണ്. മറവുള്ള വളവിലോ ആരെങ്കിലും ഇറങ്ങാൻ പോകുമ്പോഴോ നിങ്ങൾ അവിടെയുണ്ടെന്ന് അറിയിക്കാൻ ചുരുക്കി ഉപയോഗിക്കുക.",
+          "கொம்பு ஒரு எச்சரிக்கை சாதனம். நீங்கள் அங்கு இருப்பதை மற்றவர்களுக்குச் சொல்ல சுருக்கமாகப் பயன்படுத்தவும், உதாரணமாக ஒரு குருட்டு வளைவில் அல்லது யாராவது வெளியேறப் போகும்போது."
+        ],
+        [
+          "Do not use the horn out of impatience or in silence zones such as near hospitals and schools, where signs ask for quiet. Pressure horns and loud modified horns are not permitted.",
+          "അക്ഷമകൊണ്ടോ ആശുപത്രി, സ്കൂൾ പോലെ നിശ്ശബ്ദ മേഖലയെന്ന് ചിഹ്നം പറയുന്നിടത്തോ ഹോൺ അടിക്കരുത്. ഉച്ചത്തിലുള്ള പ്രഷർ ഹോണുകളും മാറ്റം വരുത്തിയ ഹോണുകളും അനുവദനീയമല്ല.",
+          "பொறுமையின்மையால் ஹார்னைப் பயன்படுத்த வேண்டாம் அல்லது மருத்துவமனைகள் மற்றும் பள்ளிகளுக்கு அருகில் உள்ள அமைதியான இடங்களில், அமைதிக்கான அறிகுறிகள் கேட்கப்படும். அழுத்தம் கொம்புகள் மற்றும் உரத்த மாற்றப்பட்ட ஹாரன்கள் அனுமதிக்கப்படாது."
+        ],
+        [
+          "A horn does not give you right of way. Even if you have sounded it, be ready to slow down or stop.",
+          "ഹോൺ അടിച്ചതുകൊണ്ട് വഴി അവകാശം കിട്ടുന്നില്ല. ഹോൺ മുഴക്കിയാലും വേഗം കുറയ്ക്കാനോ നിർത്താനോ തയ്യാറായിരിക്കുക.",
+          "ஒரு கொம்பு உங்களுக்கு சரியான வழியைக் கொடுக்காது. நீங்கள் அதை ஒலித்திருந்தாலும், மெதுவாக அல்லது நிறுத்த தயாராக இருங்கள்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Reversing and U-turns",
+        "റിവേഴ്സ് എടുക്കലും യു-ടേണും",
+        "தலைகீழ் மற்றும் U-திருப்பல்கள்"
+      ],
+      "p": [
+        [
+          "Reverse only when you must, only for as long as needed, and only after checking all around. Check behind you directly; mirrors and cameras do not show small children or low objects well.",
+          "നിർബന്ധമെങ്കിൽ മാത്രം, ആവശ്യമുള്ളത്ര ദൂരം മാത്രം, ചുറ്റും നോക്കിയ ശേഷം മാത്രം റിവേഴ്സ് എടുക്കുക. പിന്നിലേക്ക് നേരിട്ട് നോക്കുക; കുട്ടികളെയും ഉയരം കുറഞ്ഞ വസ്തുക്കളെയും മിററിലും ക്യാമറയിലും വ്യക്തമായി കാണില്ല.",
+          "தேவைப்படும் போது மட்டும், தேவைப்படும் வரை மட்டுமே, மற்றும் சுற்றிலும் சரிபார்த்த பின்னரே திரும்பவும். உங்கள் பின்னால் நேரடியாகச் சரிபார்க்கவும்; கண்ணாடிகள் மற்றும் கேமராக்கள் சிறிய குழந்தைகளையோ அல்லது குறைந்த பொருட்களையோ நன்றாகக் காட்டுவதில்லை."
+        ],
+        [
+          "Do not reverse on a busy main road, at a junction, or on a one-way road. If the way is not clear, ask a helper to guide you or find a safer spot.",
+          "തിരക്കുള്ള പ്രധാന റോഡിലോ ജംഗ്ഷനിലോ വൺവേയിലോ റിവേഴ്സ് എടുക്കരുത്. വഴി ഒഴിഞ്ഞതല്ലെങ്കിൽ ഒരാളെ സഹായത്തിന് നിർത്തുകയോ കൂടുതൽ സുരക്ഷിതമായ സ്ഥലം കണ്ടെത്തുകയോ ചെയ്യുക.",
+          "பரபரப்பான பிரதான சாலையில், சந்திப்பில் அல்லது ஒருவழிச் சாலையில் திரும்ப வேண்டாம். வழி தெளிவாக இல்லை என்றால், உங்களுக்கு வழிகாட்ட அல்லது பாதுகாப்பான இடத்தைக் கண்டறிய உதவியாளரிடம் கேளுங்கள்."
+        ],
+        [
+          "Take a U-turn only where it is allowed and you can see far enough in both directions. Never attempt one at a bend, on a crest, on a bridge or where a sign or line forbids it.",
+          "യു-ടേൺ അനുവദിച്ചിട്ടുള്ളതും ഇരുവശത്തും വേണ്ടത്ര ദൂരം കാണാവുന്നതുമായ സ്ഥലത്തേ എടുക്കാവൂ. വളവിലോ കയറ്റത്തിന്റെ മുകളിലോ പാലത്തിലോ ചിഹ്നമോ വരയോ വിലക്കുന്നിടത്തോ ഒരിക്കലും എടുക്കരുത്.",
+          "அனுமதிக்கப்படும் இடத்தில் மட்டும் U-டர்ன் எடுக்கவும், இரு திசைகளிலும் போதுமான தூரம் பார்க்க முடியும். ஒரு வளைவில், ஒரு முகடு, ஒரு பாலம் அல்லது ஒரு அடையாளம் அல்லது கோடு அதை தடை செய்யும் இடத்தில் ஒருபோதும் முயற்சிக்காதீர்கள்."
+        ],
+        [
+          "A U-turn blocks the whole road for a moment. Give way to traffic from both directions and wait for a clear gap.",
+          "യു-ടേൺ ഒരു നിമിഷത്തേക്ക് റോഡ് മുഴുവൻ തടയും. ഇരുവശത്തുനിന്നുമുള്ള വാഹനങ്ങൾക്ക് വഴി കൊടുത്ത് വ്യക്തമായ ഇടവേളയ്ക്കായി കാത്തിരിക്കുക.",
+          "U-டர்ன் ஒரு கணம் முழு சாலையையும் தடுக்கிறது. இரு திசைகளிலிருந்தும் போக்குவரத்திற்கு வழிவகுத்து, தெளிவான இடைவெளிக்காக காத்திருக்கவும்."
+        ]
+      ]
+    },
+    {
+      "h": [
+        "Giving way and sharing the road",
+        "വഴി കൊടുക്കലും റോഡ് പങ്കിടലും",
+        "வழி கொடுப்பது மற்றும் சாலையைப் பகிர்தல்"
+      ],
+      "p": [
+        [
+          "Give way to pedestrians at zebra crossings, to emergency vehicles with a siren, and as the rules or signs direct. Giving way early is safer than insisting on your right.",
+          "സീബ്ര ക്രോസിങ്ങിൽ കാൽനടയാത്രക്കാർക്കും സൈറൺ മുഴക്കുന്ന അടിയന്തര വാഹനങ്ങൾക്കും നിയമമോ ചിഹ്നമോ പറയുന്നിടത്തും വഴി കൊടുക്കുക. അവകാശം ഉറപ്പിക്കുന്നതിനേക്കാൾ സുരക്ഷിതം നേരത്തേ വഴി കൊടുക്കുന്നതാണ്.",
+          "ஜீப்ரா கிராசிங்குகளில் பாதசாரிகளுக்கு, சைரனைக் கொண்ட அவசரகால வாகனங்களுக்கு, மற்றும் விதிகள் அல்லது அறிகுறிகளின்படி வழி கொடுங்கள். உங்கள் உரிமையை வலியுறுத்துவதை விட முன்கூட்டியே வழி கொடுப்பது பாதுகாப்பானது."
+        ],
+        [
+          "On a hill road, the downhill vehicle gives way to the uphill one, because it is easier for the downhill driver to hold position and a climbing vehicle may lose momentum.",
+          "മലമ്പാതയിൽ ഇറങ്ങുന്ന വാഹനം കയറുന്ന വാഹനത്തിന് വഴി കൊടുക്കണം; കാരണം കയറുന്ന വാഹനം നിർത്തിയാൽ വീണ്ടും നീങ്ങാൻ ബുദ്ധിമുട്ടാണ്, ഇറങ്ങുന്ന വാഹനത്തിന് നിൽക്കാൻ എളുപ്പവുമാണ്.",
+          "ஒரு மலைப்பாதையில், கீழ்நோக்கி செல்லும் வாகனம் மேல்நோக்கி செல்லும் வாகனத்திற்கு வழி வகுக்கும், ஏனெனில் கீழ்நோக்கிச் செல்லும் ஓட்டுனர் நிலைப்பாட்டை வைத்திருப்பது எளிதாகும் மற்றும் ஏறும் வாகனம் வேகத்தை இழக்கக்கூடும்."
+        ],
+        [
+          "Follow the instructions of a traffic police officer even if they differ from the signal or sign. The officer can see the whole situation.",
+          "ട്രാഫിക് പോലീസ് ഉദ്യോഗസ്ഥന്റെ നിർദേശം സിഗ്നലിൽനിന്നോ ചിഹ്നത്തിൽനിന്നോ വ്യത്യസ്തമാണെങ്കിലും പാലിക്കുക. സ്ഥിതി മുഴുവൻ അദ്ദേഹത്തിന് കാണാം.",
+          "சிக்னல் அல்லது அடையாளத்திலிருந்து வேறுபட்டாலும், போக்குவரத்து போலீஸ் அதிகாரியின் வழிமுறைகளைப் பின்பற்றவும். அதிகாரியால் முழு நிலவரத்தையும் பார்க்க முடியும்."
+        ]
+      ]
+    }
+  ],
+  "dos": [
     [
-     "India has left-hand traffic. Your vehicle stays on the left part of the carriageway, and oncoming vehicles pass on your right.",
-     "ഇന്ത്യയിൽ ഇടതുവശത്തുകൂടിയാണ് ഗതാഗതം. നിങ്ങളുടെ വാഹനം റോഡിന്റെ ഇടതുഭാഗത്ത് തന്നെ നിൽക്കണം; എതിരെ വരുന്ന വാഹനങ്ങൾ നിങ്ങളുടെ വലതുവശത്തുകൂടി കടന്നുപോകും."
+      "Keep to the left of the road.",
+      "റോഡിന്റെ ഇടതുവശം പാലിക്കുക.",
+      "சாலையின் இடதுபுறம் வைக்கவும்."
     ],
     [
-     "Keeping left is not just a rule for narrow roads. It leaves room on the right for faster vehicles to overtake and for oncoming traffic to pass safely.",
-     "ഇടതുവശം പാലിക്കുന്നത് ഇടുങ്ങിയ റോഡുകളിൽ മാത്രമുള്ള നിയമമല്ല. വേഗമുള്ള വാഹനങ്ങൾക്ക് മറികടക്കാനും എതിരെ വരുന്നവർക്ക് സുരക്ഷിതമായി കടന്നുപോകാനും വലതുഭാഗത്ത് സ്ഥലം കിട്ടാൻ ഇത് സഹായിക്കുന്നു."
+      "Check mirrors, signal, then move.",
+      "മിറർ നോക്കുക, സിഗ്നൽ നൽകുക, പിന്നെ നീങ്ങുക.",
+      "கண்ணாடிகளை சரிபார்த்து, சிக்னல், பின்னர் நகர்த்தவும்."
     ],
     [
-     "Use the right side only to overtake, to turn right, or where a sign or a police signal tells you to. Return to the left as soon as it is safe.",
-     "മറികടക്കാനും വലത്തോട്ട് തിരിയാനും, അല്ലെങ്കിൽ ചിഹ്നമോ പോലീസ് സൂചനയോ പറയുന്നിടത്തും മാത്രം വലതുവശം ഉപയോഗിക്കുക. സുരക്ഷിതമാകുന്ന ഉടൻ ഇടതുവശത്തേക്ക് മടങ്ങുക."
+      "Stay in one lane unless you need to change.",
+      "മാറേണ്ടതില്ലെങ്കിൽ ഒരു ലെയ്നിൽ തന്നെ തുടരുക.",
+      "நீங்கள் மாற்ற வேண்டிய அவசியம் இல்லாவிட்டால் ஒரே பாதையில் இருங்கள்."
+    ],
+    [
+      "Glance over your shoulder for blind spots.",
+      "ബ്ലൈൻഡ് സ്പോട്ടുകൾക്കായി തോളിനു മുകളിലൂടെ നോക്കുക.",
+      "குருட்டுப் புள்ளிகளுக்கு உங்கள் தோள்பட்டை மீது ஒரு பார்வை."
+    ],
+    [
+      "Cancel your signal after turning.",
+      "തിരിഞ്ഞ ശേഷം സിഗ്നൽ ഓഫ് ചെയ്യുക.",
+      "திரும்பிய பிறகு உங்கள் சிக்னலை ரத்து செய்யவும்."
+    ],
+    [
+      "Sound the horn briefly at blind bends.",
+      "മറവുള്ള വളവുകളിൽ ചുരുക്കി ഹോൺ അടിക്കുക.",
+      "குருட்டு வளைவுகளில் ஹார்னை சுருக்கமாக ஒலிக்கவும்."
+    ],
+    [
+      "Look directly behind before reversing.",
+      "റിവേഴ്സ് എടുക്കും മുമ്പ് പിന്നിലേക്ക് നേരിട്ട് നോക്കുക.",
+      "தலைகீழாக மாற்றும் முன் நேரடியாக பின்னால் பார்க்கவும்."
+    ],
+    [
+      "Give way to pedestrians and emergency vehicles.",
+      "കാൽനടയാത്രക്കാർക്കും അടിയന്തര വാഹനങ്ങൾക്കും വഴി കൊടുക്കുക.",
+      "பாதசாரிகள் மற்றும் அவசரகால வாகனங்களுக்கு வழி கொடுங்கள்."
+    ],
+    [
+      "Take U-turns only where permitted and visible.",
+      "അനുവദനീയവും കാഴ്ചയുള്ളതുമായ സ്ഥലത്ത് മാത്രം യു-ടേൺ എടുക്കുക.",
+      "அனுமதிக்கப்பட்ட மற்றும் தெரியும் இடங்களில் மட்டும் U-டர்ன்களை எடுக்கவும்."
+    ],
+    [
+      "Obey the traffic police over signs and lights.",
+      "ചിഹ്നങ്ങളേക്കാളും ലൈറ്റുകളേക്കാളും ട്രാഫിക് പോലീസിനെ അനുസരിക്കുക.",
+      "அடையாளங்கள் மற்றும் விளக்குகளின் மீது போக்குவரத்து காவல்துறைக்குக் கீழ்ப்படியுங்கள்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Lanes and lane discipline",
-    "ലെയ്നുകളും ലെയ്ൻ അച്ചടക്കവും"
-   ],
-   "p": [
+  ],
+  "donts": [
     [
-     "On a road with marked lanes, choose a lane and stay in it. Zig-zagging between lanes to gain a few seconds surprises others and often causes crashes.",
-     "ലെയ്ൻ വരകളുള്ള റോഡിൽ ഒരു ലെയ്ൻ തിരഞ്ഞെടുത്ത് അതിൽ തന്നെ തുടരുക. കുറച്ച് സെക്കൻഡ് ലാഭിക്കാൻ ലെയ്നുകൾ മാറിമാറി ഓടിക്കുന്നത് മറ്റുള്ളവരെ ഞെട്ടിക്കുകയും പലപ്പോഴും അപകടത്തിന് ഇടയാക്കുകയും ചെയ്യും."
+      "Do not drive on the right side except to overtake or turn.",
+      "മറികടക്കാനോ തിരിയാനോ അല്ലാതെ വലതുവശത്തുകൂടി ഓടിക്കരുത്.",
+      "ஓவர்டேக் அல்லது திரும்புவதைத் தவிர வலது பக்கம் ஓட்ட வேண்டாம்."
     ],
     [
-     "Do not straddle a lane line. A vehicle that sits half in one lane and half in another leaves no one sure where it will go next.",
-     "ലെയ്ൻ വരയിൽ കയറി ഓടിക്കരുത്. പകുതി ഒരു ലെയ്നിലും പകുതി മറ്റൊന്നിലും ആയി പോകുന്ന വാഹനം അടുത്തതായി എങ്ങോട്ട് പോകുമെന്ന് ആർക്കും ഉറപ്പിക്കാൻ കഴിയില്ല."
+      "Do not straddle lane lines.",
+      "ലെയ്ൻ വരയിൽ കയറി ഓടിക്കരുത്.",
+      "லேன் லைன்களில் தடுமாற வேண்டாம்."
     ],
     [
-     "Where there are several lanes, the left lane is usually for slower traffic and the lanes to its right for faster or overtaking traffic. Follow the lane markings and signs of the road you are on.",
-     "ഒന്നിലധികം ലെയ്നുകൾ ഉള്ളിടത്ത് ഇടതുലെയ്ൻ സാധാരണയായി വേഗം കുറഞ്ഞ വാഹനങ്ങൾക്കും വലതുവശത്തുള്ളവ വേഗമുള്ളവയ്ക്കും മറികടക്കുന്നവയ്ക്കും ആണ്. ആ റോഡിലെ ലെയ്ൻ വരകളും ചിഹ്നങ്ങളും പിന്തുടരുക."
+      "Do not change lanes at the last moment.",
+      "അവസാന നിമിഷം ലെയ്ൻ മാറരുത്.",
+      "கடைசி நேரத்தில் பாதைகளை மாற்ற வேண்டாம்."
     ],
     [
-     "Get into the correct lane early for a turn. Cutting across lanes at the last moment is a common cause of side collisions.",
-     "തിരിയേണ്ട സ്ഥലത്തിന് മുമ്പേ ശരിയായ ലെയ്നിൽ എത്തുക. അവസാന നിമിഷം ലെയ്നുകൾ മുറിച്ചുകടക്കുന്നത് വശത്തുനിന്നുള്ള ഇടിയുടെ സാധാരണ കാരണമാണ്."
+      "Do not leave a signal blinking by mistake.",
+      "സിഗ്നൽ അബദ്ധത്തിൽ മിന്നിക്കൊണ്ടിരിക്കാൻ വിടരുത്.",
+      "சிக்னலை தவறுதலாக ஒளிர விடாதீர்கள்."
+    ],
+    [
+      "Do not blow the horn in silence zones.",
+      "നിശ്ശബ്ദ മേഖലകളിൽ ഹോൺ അടിക്കരുത്.",
+      "அமைதி மண்டலங்களில் ஹார்ன் அடிக்க வேண்டாம்."
+    ],
+    [
+      "Do not use the horn to demand way.",
+      "വഴി ആവശ്യപ്പെടാൻ ഹോൺ ഉപയോഗിക്കരുത്.",
+      "வழியைக் கோர ஹார்னைப் பயன்படுத்த வேண்டாம்."
+    ],
+    [
+      "Do not reverse on a busy road or junction.",
+      "തിരക്കുള്ള റോഡിലോ ജംഗ്ഷനിലോ റിവേഴ്സ് എടുക്കരുത്.",
+      "பரபரப்பான சாலை அல்லது சந்திப்பில் திரும்ப வேண்டாம்."
+    ],
+    [
+      "Do not U-turn at bends, crests or bridges.",
+      "വളവിലോ കയറ്റത്തിന്റെ മുകളിലോ പാലത്തിലോ യു-ടേൺ എടുക്കരുത്.",
+      "வளைவுகள், முகடுகள் அல்லது பாலங்களில் U- திரும்ப வேண்டாம்."
+    ],
+    [
+      "Do not rely only on mirrors or a camera.",
+      "മിററിനെയോ ക്യാമറയെയോ മാത്രം ആശ്രയിക്കരുത്.",
+      "கண்ணாடிகள் அல்லது கேமராவில் மட்டும் தங்கியிருக்க வேண்டாம்."
+    ],
+    [
+      "Do not stop on a zebra crossing.",
+      "സീബ്ര ക്രോസിങ്ങിൽ നിർത്തരുത്.",
+      "வரிக்குதிரை கடக்கும்போது நிறுத்த வேண்டாம்."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Mirrors, signals and the habit of looking",
-    "മിററുകൾ, സിഗ്നലുകൾ, നോക്കുന്ന ശീലം"
-   ],
-   "p": [
+  ],
+  "myths": [
+    {
+      "m": [
+        "If I signal, the others must give me way.",
+        "ഞാൻ സിഗ്നൽ നൽകിയാൽ മറ്റുള്ളവർ വഴി തരണം.",
+        "நான் சமிக்ஞை செய்தால், மற்றவர்கள் எனக்கு வழி கொடுக்க வேண்டும்."
+      ],
+      "f": [
+        "A signal only informs. You must still check that it is safe before moving.",
+        "സിഗ്നൽ അറിയിക്കാൻ മാത്രമാണ്. നീങ്ങും മുമ്പ് സുരക്ഷിതമാണോ എന്ന് നിങ്ങൾ തന്നെ നോക്കണം.",
+        "ஒரு சமிக்ஞை மட்டுமே தெரிவிக்கிறது. நகரும் முன் அது பாதுகாப்பானதா என்பதை நீங்கள் சரிபார்க்க வேண்டும்."
+      ]
+    },
+    {
+      "m": [
+        "The horn gives me the right of way.",
+        "ഹോൺ അടിച്ചാൽ എനിക്ക് വഴി അവകാശം കിട്ടും.",
+        "கொம்பு எனக்கு வழியை வழங்குகிறது."
+      ],
+      "f": [
+        "A horn is only a warning. Right of way comes from the rules and signs.",
+        "ഹോൺ മുന്നറിയിപ്പ് മാത്രമാണ്. വഴി അവകാശം നിയമങ്ങളിൽനിന്നും ചിഹ്നങ്ങളിൽനിന്നുമാണ്.",
+        "ஒரு கொம்பு ஒரு எச்சரிக்கை மட்டுமே. வழிக்கான உரிமை என்பது விதிகள் மற்றும் அடையாளங்களிலிருந்து வருகிறது."
+      ]
+    },
+    {
+      "m": [
+        "Mirrors show everything, so I need not look back.",
+        "മിററുകൾ എല്ലാം കാണിക്കും, അതുകൊണ്ട് തിരിഞ്ഞു നോക്കേണ്ടതില്ല.",
+        "கண்ணாடிகள் எல்லாவற்றையும் காட்டுகின்றன, அதனால் நான் திரும்பிப் பார்க்க வேண்டியதில்லை."
+      ],
+      "f": [
+        "Every mirror has blind spots. A quick head check covers them.",
+        "എല്ലാ മിററിനും കാണാത്ത ഭാഗങ്ങളുണ്ട്. തല തിരിച്ചൊരു നോട്ടം അവ ഒഴിവാക്കും.",
+        "ஒவ்வொரு கண்ணாடியிலும் குருட்டுப் புள்ளிகள் உள்ளன. விரைவான தலைச் சரிபார்ப்பு அவர்களை உள்ளடக்கியது."
+      ]
+    },
+    {
+      "m": [
+        "Lane lines matter only on highways.",
+        "ലെയ്ൻ വരകൾ ഹൈവേയിൽ മാത്രമേ പ്രധാനമുള്ളൂ.",
+        "லேன் கோடுகள் நெடுஞ்சாலைகளில் மட்டுமே முக்கியம்."
+      ],
+      "f": [
+        "Wherever lines are painted, they tell everyone how to share the road, including city roads.",
+        "വര വരച്ചിടത്തെല്ലാം, നഗരറോഡുകളിലും, റോഡ് എങ്ങനെ പങ്കിടണമെന്ന് അവ എല്ലാവരെയും അറിയിക്കുന്നു.",
+        "கோடுகள் எங்கு வரையப்பட்டாலும், நகரச் சாலைகள் உட்பட, சாலையை எப்படிப் பகிர்ந்து கொள்வது என்று அனைவருக்கும் அவை கூறுகின்றன."
+      ]
+    },
+    {
+      "m": [
+        "A U-turn is fine anywhere if the road looks empty.",
+        "റോഡ് ഒഴിഞ്ഞതായി തോന്നിയാൽ എവിടെയും യു-ടേൺ എടുക്കാം.",
+        "சாலை காலியாகத் தோன்றினால் U-டர்ன் எங்கும் நன்றாக இருக்கும்."
+      ],
+      "f": [
+        "Sight distance and signs decide, not how empty it looks. A fast vehicle can appear suddenly.",
+        "ഒഴിഞ്ഞതായി തോന്നുന്നതല്ല, കാഴ്ചദൂരവും ചിഹ്നങ്ങളുമാണ് തീരുമാനിക്കേണ്ടത്. വേഗമുള്ള വാഹനം പെട്ടെന്ന് പ്രത്യക്ഷപ്പെടാം.",
+        "பார்வை தூரம் மற்றும் அடையாளங்கள் தீர்மானிக்கின்றன, அது எவ்வளவு காலியாக இருக்கிறது என்பதை அல்ல. ஒரு வேகமான வாகனம் திடீரென்று தோன்றும்."
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "t": [
+        "The late lane change",
+        "വൈകിയ ലെയ്ൻ മാറ്റം",
+        "தாமதமான பாதை மாற்றம்"
+      ],
+      "s": [
+        "Anu, a learner, was driving on a three-lane road when she noticed her turn was only a short way ahead. She was in the middle lane. In a hurry, she swung left without a mirror check, and a two-wheeler in her blind spot braked hard and wobbled. Nobody was hurt, but both were shaken. Her instructor explained that the turn was not the problem. Looking at the signs earlier would have given her time to check, signal and move calmly.",
+        "പഠിതാവായ അനു മൂന്ന് ലെയ്നുള്ള റോഡിൽ ഓടിക്കുമ്പോൾ തിരിയേണ്ട സ്ഥലം തൊട്ടടുത്താണെന്ന് ശ്രദ്ധിച്ചു. അപ്പോൾ അവൾ നടുവിലെ ലെയ്നിലായിരുന്നു. തിടുക്കത്തിൽ മിറർ നോക്കാതെ ഇടത്തോട്ട് വെട്ടിച്ചപ്പോൾ ബ്ലൈൻഡ് സ്പോട്ടിലുണ്ടായിരുന്ന ഒരു ഇരുചക്രവാഹനം ശക്തമായി ബ്രേക്ക് ചെയ്ത് ഉലഞ്ഞു. ആർക്കും പരിക്കില്ല, പക്ഷേ രണ്ടുപേരും ഭയന്നുപോയി. തിരിയേണ്ട സ്ഥലമല്ല പ്രശ്നമെന്ന് ഇൻസ്ട്രക്ടർ വിശദീകരിച്ചു. ചിഹ്നങ്ങൾ നേരത്തേ നോക്കിയിരുന്നെങ്കിൽ ശാന്തമായി നോക്കാനും സിഗ്നൽ നൽകാനും നീങ്ങാനും സമയം കിട്ടുമായിരുന്നു.",
+        "அனு, ஒரு கற்றல், மூன்று வழிச் சாலையில் வாகனம் ஓட்டிக்கொண்டிருந்தபோது, ​​அவள் திருப்பத்தை சிறிது தூரம் முன்னால் கவனித்தாள். அவள் நடுப் பாதையில் இருந்தாள். அவசரத்தில், அவள் கண்ணாடியைப் பார்க்காமல் இடதுபுறமாகச் சென்றாள், அவளுடைய கண்மூடித்தனமான இடத்தில் ஒரு இரு சக்கர வாகனம் பலமாக பிரேக் போட்டு தள்ளாடியது. யாருக்கும் காயம் ஏற்படவில்லை, ஆனால் இருவரும் அதிர்ந்தனர். அவரது பயிற்றுவிப்பாளர் திருப்பம் பிரச்சனை இல்லை என்று விளக்கினார். முந்தைய அறிகுறிகளைப் பார்த்தால், சரிபார்க்கவும், சமிக்ஞை செய்யவும், அமைதியாக நகர்த்தவும் அவளுக்கு நேரம் கிடைத்திருக்கும்."
+      ],
+      "lesson": [
+        "Plan your lane early, then mirror, signal and move.",
+        "ലെയ്ൻ നേരത്തേ തീരുമാനിക്കുക; പിന്നെ മിറർ, സിഗ്നൽ, നീക്കം.",
+        "உங்கள் பாதையை முன்கூட்டியே திட்டமிடுங்கள், பின்னர் கண்ணாடி, சமிக்ஞை செய்து நகர்த்தவும்."
+      ]
+    },
+    {
+      "t": [
+        "Reversing out of a gate",
+        "ഗേറ്റിൽനിന്ന് റിവേഴ്സ് എടുത്തപ്പോൾ",
+        "ஒரு வாயிலில் இருந்து வெளியே திரும்பி"
+      ],
+      "s": [
+        "Ravi was reversing his car out of a narrow lane onto a busy road, trusting his mirrors alone. A child on a bicycle was riding close behind the car, below the mirror view. A neighbour shouted, and Ravi stopped in time. After that, he made it a habit to get out and look, or to ask someone to guide him, and to reverse slowly with the window down.",
+        "ഇടുങ്ങിയ വഴിയിൽനിന്ന് തിരക്കുള്ള റോഡിലേക്ക് രവി കാർ റിവേഴ്സ് എടുക്കുകയായിരുന്നു; അയാൾ മിററുകളെ മാത്രമാണ് വിശ്വസിച്ചത്. മിററിൽ കാണാത്തവിധം താഴെ, ഒരു കുട്ടി സൈക്കിളിൽ കാറിന്റെ തൊട്ടുപിന്നിൽ ഉണ്ടായിരുന്നു. അയൽക്കാരൻ വിളിച്ചുപറഞ്ഞപ്പോൾ രവി തക്കസമയത്ത് നിർത്തി. അതിനുശേഷം ഇറങ്ങിനോക്കുകയോ ഒരാളെ വഴികാട്ടാൻ നിർത്തുകയോ ചെയ്യുന്നതും ഗ്ലാസ് താഴ്ത്തി പതുക്കെ റിവേഴ്സ് എടുക്കുന്നതും അയാൾ ശീലമാക്കി.",
+        "ரவி தனது காரை ஒரு குறுகிய பாதையில் இருந்து ஒரு பரபரப்பான சாலையில், தனது கண்ணாடியை மட்டும் நம்பித் திருப்பிக் கொண்டிருந்தார். மிதிவண்டியில் ஒரு குழந்தை காரின் பின்னால், கண்ணாடிக் காட்சிக்குக் கீழே சென்று கொண்டிருந்தது. பக்கத்து வீட்டுக்காரர் கத்த, ரவி சரியான நேரத்தில் நிறுத்தினான். அதன்பிறகு, வெளியே சென்று பார்ப்பதையோ அல்லது யாரையாவது வழிகாட்டச் சொல்லிக் கேட்பதையோ, ஜன்னலைக் கீழே வைத்து மெதுவாகப் பின்னோக்கிச் செல்வதையோ வழக்கமாகக் கொண்டான்."
+      ],
+      "lesson": [
+        "Mirrors miss small things. Look directly, go slowly, use a helper.",
+        "മിററുകൾ ചെറിയ കാര്യങ്ങൾ കാണില്ല. നേരിട്ട് നോക്കുക, പതുക്കെ പോകുക, സഹായിയെ ഉപയോഗിക്കുക.",
+        "கண்ணாடிகள் சிறிய விஷயங்களை இழக்கின்றன. நேரடியாகப் பாருங்கள், மெதுவாகச் செல்லுங்கள், உதவியாளரைப் பயன்படுத்துங்கள்."
+      ]
+    }
+  ],
+  "recap": [
     [
-     "Before any change of direction, follow the order: mirror, signal, then move. Looking first tells you if it is safe; signalling tells others what you plan.",
-     "ദിശ മാറുന്നതിന് മുമ്പ് മിറർ, സിഗ്നൽ, പിന്നെ നീക്കം എന്ന ക്രമം പാലിക്കുക. ആദ്യം നോക്കുന്നത് സുരക്ഷിതമാണോ എന്നറിയിക്കുന്നു; സിഗ്നൽ നിങ്ങളുടെ ഉദ്ദേശ്യം മറ്റുള്ളവരെ അറിയിക്കുന്നു."
+      "Keep left; use the right only to overtake or turn.",
+      "ഇടതുവശം പാലിക്കുക; മറികടക്കാനോ തിരിയാനോ മാത്രം വലതുവശം.",
+      "இடதுபுறமாக வைத்திருங்கள்; முந்துவதற்கு அல்லது திரும்புவதற்கு மட்டுமே உரிமையைப் பயன்படுத்தவும்."
     ],
     [
-     "Mirrors have blind spots, especially on two-wheelers and autos beside you. Glance over your shoulder before moving sideways.",
-     "മിററുകൾക്ക് കാണാത്ത ഭാഗങ്ങളുണ്ട്, പ്രത്യേകിച്ച് വശത്തുള്ള ഇരുചക്രവാഹനങ്ങളും ഓട്ടോകളും. വശത്തേക്ക് നീങ്ങും മുമ്പ് തോളിനു മുകളിലൂടെ ഒന്ന് തിരിഞ്ഞുനോക്കുക."
+      "Mirror, signal, move, and cancel the signal.",
+      "മിറർ, സിഗ്നൽ, നീക്കം, പിന്നെ സിഗ്നൽ ഓഫ്.",
+      "மிரர், சிக்னல், நகர்த்தல் மற்றும் சிக்னலை ரத்துசெய்."
     ],
     [
-     "Signal in good time and cancel it after the manoeuvre. A signal left blinking after you have turned misleads the next driver.",
-     "നേരത്തേ സിഗ്നൽ നൽകുക, തിരിഞ്ഞ ശേഷം അത് ഓഫ് ചെയ്യുക. തിരിഞ്ഞ ശേഷവും മിന്നിക്കൊണ്ടിരിക്കുന്ന സിഗ്നൽ അടുത്ത ഡ്രൈവറെ തെറ്റിദ്ധരിപ്പിക്കും."
+      "Pick a lane and hold it; do not straddle lines.",
+      "ലെയ്ൻ തിരഞ്ഞെടുത്ത് പാലിക്കുക; വരയിൽ കയറരുത്.",
+      "ஒரு பாதையைத் தேர்ந்தெடுத்து அதைப் பிடிக்கவும்; கோடுகளை கடக்க வேண்டாம்."
     ],
     [
-     "A signal is a request to tell others your plan, not a permission. You must still check that the move is safe.",
-     "സിഗ്നൽ നിങ്ങളുടെ പദ്ധതി അറിയിക്കാനുള്ളതാണ്, അനുമതിയല്ല. നീക്കം സുരക്ഷിതമാണോ എന്ന് നിങ്ങൾ തന്നെ ഉറപ്പാക്കണം."
+      "The horn warns; it does not give right of way.",
+      "ഹോൺ മുന്നറിയിപ്പാണ്; വഴി അവകാശം തരില്ല.",
+      "கொம்பு எச்சரிக்கிறது; அது சரியான வழியைக் கொடுக்காது."
+    ],
+    [
+      "Reverse and U-turn only where safe and visible.",
+      "സുരക്ഷിതവും കാഴ്ചയുള്ളതുമായ ഇടത്ത് മാത്രം റിവേഴ്സും യു-ടേണും.",
+      "பாதுகாப்பான மற்றும் தெரியும் இடத்தில் மட்டும் தலைகீழ் மற்றும் U- திருப்பம்."
+    ],
+    [
+      "Giving way early is safer than insisting on your right.",
+      "അവകാശം ഉറപ്പിക്കുന്നതിനേക്കാൾ സുരക്ഷിതം നേരത്തേ വഴി കൊടുക്കലാണ്.",
+      "உங்கள் உரிமையை வலியுறுத்துவதை விட முன்கூட்டியே வழி கொடுப்பது பாதுகாப்பானது."
     ]
-   ]
-  },
-  {
-   "h": [
-    "Using the horn properly",
-    "ഹോൺ ശരിയായി ഉപയോഗിക്കൽ"
-   ],
-   "p": [
-    [
-     "The horn is a warning device. Use it briefly to tell others you are there, for example at a blind bend or when someone is about to step out.",
-     "ഹോൺ ഒരു മുന്നറിയിപ്പ് ഉപകരണമാണ്. മറവുള്ള വളവിലോ ആരെങ്കിലും ഇറങ്ങാൻ പോകുമ്പോഴോ നിങ്ങൾ അവിടെയുണ്ടെന്ന് അറിയിക്കാൻ ചുരുക്കി ഉപയോഗിക്കുക."
-    ],
-    [
-     "Do not use the horn out of impatience or in silence zones such as near hospitals and schools, where signs ask for quiet. Pressure horns and loud modified horns are not permitted.",
-     "അക്ഷമകൊണ്ടോ ആശുപത്രി, സ്കൂൾ പോലെ നിശ്ശബ്ദ മേഖലയെന്ന് ചിഹ്നം പറയുന്നിടത്തോ ഹോൺ അടിക്കരുത്. ഉച്ചത്തിലുള്ള പ്രഷർ ഹോണുകളും മാറ്റം വരുത്തിയ ഹോണുകളും അനുവദനീയമല്ല."
-    ],
-    [
-     "A horn does not give you right of way. Even if you have sounded it, be ready to slow down or stop.",
-     "ഹോൺ അടിച്ചതുകൊണ്ട് വഴി അവകാശം കിട്ടുന്നില്ല. ഹോൺ മുഴക്കിയാലും വേഗം കുറയ്ക്കാനോ നിർത്താനോ തയ്യാറായിരിക്കുക."
-    ]
-   ]
-  },
-  {
-   "h": [
-    "Reversing and U-turns",
-    "റിവേഴ്സ് എടുക്കലും യു-ടേണും"
-   ],
-   "p": [
-    [
-     "Reverse only when you must, only for as long as needed, and only after checking all around. Check behind you directly; mirrors and cameras do not show small children or low objects well.",
-     "നിർബന്ധമെങ്കിൽ മാത്രം, ആവശ്യമുള്ളത്ര ദൂരം മാത്രം, ചുറ്റും നോക്കിയ ശേഷം മാത്രം റിവേഴ്സ് എടുക്കുക. പിന്നിലേക്ക് നേരിട്ട് നോക്കുക; കുട്ടികളെയും ഉയരം കുറഞ്ഞ വസ്തുക്കളെയും മിററിലും ക്യാമറയിലും വ്യക്തമായി കാണില്ല."
-    ],
-    [
-     "Do not reverse on a busy main road, at a junction, or on a one-way road. If the way is not clear, ask a helper to guide you or find a safer spot.",
-     "തിരക്കുള്ള പ്രധാന റോഡിലോ ജംഗ്ഷനിലോ വൺവേയിലോ റിവേഴ്സ് എടുക്കരുത്. വഴി ഒഴിഞ്ഞതല്ലെങ്കിൽ ഒരാളെ സഹായത്തിന് നിർത്തുകയോ കൂടുതൽ സുരക്ഷിതമായ സ്ഥലം കണ്ടെത്തുകയോ ചെയ്യുക."
-    ],
-    [
-     "Take a U-turn only where it is allowed and you can see far enough in both directions. Never attempt one at a bend, on a crest, on a bridge or where a sign or line forbids it.",
-     "യു-ടേൺ അനുവദിച്ചിട്ടുള്ളതും ഇരുവശത്തും വേണ്ടത്ര ദൂരം കാണാവുന്നതുമായ സ്ഥലത്തേ എടുക്കാവൂ. വളവിലോ കയറ്റത്തിന്റെ മുകളിലോ പാലത്തിലോ ചിഹ്നമോ വരയോ വിലക്കുന്നിടത്തോ ഒരിക്കലും എടുക്കരുത്."
-    ],
-    [
-     "A U-turn blocks the whole road for a moment. Give way to traffic from both directions and wait for a clear gap.",
-     "യു-ടേൺ ഒരു നിമിഷത്തേക്ക് റോഡ് മുഴുവൻ തടയും. ഇരുവശത്തുനിന്നുമുള്ള വാഹനങ്ങൾക്ക് വഴി കൊടുത്ത് വ്യക്തമായ ഇടവേളയ്ക്കായി കാത്തിരിക്കുക."
-    ]
-   ]
-  },
-  {
-   "h": [
-    "Giving way and sharing the road",
-    "വഴി കൊടുക്കലും റോഡ് പങ്കിടലും"
-   ],
-   "p": [
-    [
-     "Give way to pedestrians at zebra crossings, to emergency vehicles with a siren, and as the rules or signs direct. Giving way early is safer than insisting on your right.",
-     "സീബ്ര ക്രോസിങ്ങിൽ കാൽനടയാത്രക്കാർക്കും സൈറൺ മുഴക്കുന്ന അടിയന്തര വാഹനങ്ങൾക്കും നിയമമോ ചിഹ്നമോ പറയുന്നിടത്തും വഴി കൊടുക്കുക. അവകാശം ഉറപ്പിക്കുന്നതിനേക്കാൾ സുരക്ഷിതം നേരത്തേ വഴി കൊടുക്കുന്നതാണ്."
-    ],
-    [
-     "On a hill road, the downhill vehicle gives way to the uphill one, because it is easier for the downhill driver to hold position and a climbing vehicle may lose momentum.",
-     "മലമ്പാതയിൽ ഇറങ്ങുന്ന വാഹനം കയറുന്ന വാഹനത്തിന് വഴി കൊടുക്കണം; കാരണം കയറുന്ന വാഹനം നിർത്തിയാൽ വീണ്ടും നീങ്ങാൻ ബുദ്ധിമുട്ടാണ്, ഇറങ്ങുന്ന വാഹനത്തിന് നിൽക്കാൻ എളുപ്പവുമാണ്."
-    ],
-    [
-     "Follow the instructions of a traffic police officer even if they differ from the signal or sign. The officer can see the whole situation.",
-     "ട്രാഫിക് പോലീസ് ഉദ്യോഗസ്ഥന്റെ നിർദേശം സിഗ്നലിൽനിന്നോ ചിഹ്നത്തിൽനിന്നോ വ്യത്യസ്തമാണെങ്കിലും പാലിക്കുക. സ്ഥിതി മുഴുവൻ അദ്ദേഹത്തിന് കാണാം."
-    ]
-   ]
-  }
- ],
- "dos": [
-  [
-   "Keep to the left of the road.",
-   "റോഡിന്റെ ഇടതുവശം പാലിക്കുക."
-  ],
-  [
-   "Check mirrors, signal, then move.",
-   "മിറർ നോക്കുക, സിഗ്നൽ നൽകുക, പിന്നെ നീങ്ങുക."
-  ],
-  [
-   "Stay in one lane unless you need to change.",
-   "മാറേണ്ടതില്ലെങ്കിൽ ഒരു ലെയ്നിൽ തന്നെ തുടരുക."
-  ],
-  [
-   "Glance over your shoulder for blind spots.",
-   "ബ്ലൈൻഡ് സ്പോട്ടുകൾക്കായി തോളിനു മുകളിലൂടെ നോക്കുക."
-  ],
-  [
-   "Cancel your signal after turning.",
-   "തിരിഞ്ഞ ശേഷം സിഗ്നൽ ഓഫ് ചെയ്യുക."
-  ],
-  [
-   "Sound the horn briefly at blind bends.",
-   "മറവുള്ള വളവുകളിൽ ചുരുക്കി ഹോൺ അടിക്കുക."
-  ],
-  [
-   "Look directly behind before reversing.",
-   "റിവേഴ്സ് എടുക്കും മുമ്പ് പിന്നിലേക്ക് നേരിട്ട് നോക്കുക."
-  ],
-  [
-   "Give way to pedestrians and emergency vehicles.",
-   "കാൽനടയാത്രക്കാർക്കും അടിയന്തര വാഹനങ്ങൾക്കും വഴി കൊടുക്കുക."
-  ],
-  [
-   "Take U-turns only where permitted and visible.",
-   "അനുവദനീയവും കാഴ്ചയുള്ളതുമായ സ്ഥലത്ത് മാത്രം യു-ടേൺ എടുക്കുക."
-  ],
-  [
-   "Obey the traffic police over signs and lights.",
-   "ചിഹ്നങ്ങളേക്കാളും ലൈറ്റുകളേക്കാളും ട്രാഫിക് പോലീസിനെ അനുസരിക്കുക."
   ]
- ],
- "donts": [
-  [
-   "Do not drive on the right side except to overtake or turn.",
-   "മറികടക്കാനോ തിരിയാനോ അല്ലാതെ വലതുവശത്തുകൂടി ഓടിക്കരുത്."
-  ],
-  [
-   "Do not straddle lane lines.",
-   "ലെയ്ൻ വരയിൽ കയറി ഓടിക്കരുത്."
-  ],
-  [
-   "Do not change lanes at the last moment.",
-   "അവസാന നിമിഷം ലെയ്ൻ മാറരുത്."
-  ],
-  [
-   "Do not leave a signal blinking by mistake.",
-   "സിഗ്നൽ അബദ്ധത്തിൽ മിന്നിക്കൊണ്ടിരിക്കാൻ വിടരുത്."
-  ],
-  [
-   "Do not blow the horn in silence zones.",
-   "നിശ്ശബ്ദ മേഖലകളിൽ ഹോൺ അടിക്കരുത്."
-  ],
-  [
-   "Do not use the horn to demand way.",
-   "വഴി ആവശ്യപ്പെടാൻ ഹോൺ ഉപയോഗിക്കരുത്."
-  ],
-  [
-   "Do not reverse on a busy road or junction.",
-   "തിരക്കുള്ള റോഡിലോ ജംഗ്ഷനിലോ റിവേഴ്സ് എടുക്കരുത്."
-  ],
-  [
-   "Do not U-turn at bends, crests or bridges.",
-   "വളവിലോ കയറ്റത്തിന്റെ മുകളിലോ പാലത്തിലോ യു-ടേൺ എടുക്കരുത്."
-  ],
-  [
-   "Do not rely only on mirrors or a camera.",
-   "മിററിനെയോ ക്യാമറയെയോ മാത്രം ആശ്രയിക്കരുത്."
-  ],
-  [
-   "Do not stop on a zebra crossing.",
-   "സീബ്ര ക്രോസിങ്ങിൽ നിർത്തരുത്."
-  ]
- ],
- "myths": [
-  {
-   "m": [
-    "If I signal, the others must give me way.",
-    "ഞാൻ സിഗ്നൽ നൽകിയാൽ മറ്റുള്ളവർ വഴി തരണം."
-   ],
-   "f": [
-    "A signal only informs. You must still check that it is safe before moving.",
-    "സിഗ്നൽ അറിയിക്കാൻ മാത്രമാണ്. നീങ്ങും മുമ്പ് സുരക്ഷിതമാണോ എന്ന് നിങ്ങൾ തന്നെ നോക്കണം."
-   ]
-  },
-  {
-   "m": [
-    "The horn gives me the right of way.",
-    "ഹോൺ അടിച്ചാൽ എനിക്ക് വഴി അവകാശം കിട്ടും."
-   ],
-   "f": [
-    "A horn is only a warning. Right of way comes from the rules and signs.",
-    "ഹോൺ മുന്നറിയിപ്പ് മാത്രമാണ്. വഴി അവകാശം നിയമങ്ങളിൽനിന്നും ചിഹ്നങ്ങളിൽനിന്നുമാണ്."
-   ]
-  },
-  {
-   "m": [
-    "Mirrors show everything, so I need not look back.",
-    "മിററുകൾ എല്ലാം കാണിക്കും, അതുകൊണ്ട് തിരിഞ്ഞു നോക്കേണ്ടതില്ല."
-   ],
-   "f": [
-    "Every mirror has blind spots. A quick head check covers them.",
-    "എല്ലാ മിററിനും കാണാത്ത ഭാഗങ്ങളുണ്ട്. തല തിരിച്ചൊരു നോട്ടം അവ ഒഴിവാക്കും."
-   ]
-  },
-  {
-   "m": [
-    "Lane lines matter only on highways.",
-    "ലെയ്ൻ വരകൾ ഹൈവേയിൽ മാത്രമേ പ്രധാനമുള്ളൂ."
-   ],
-   "f": [
-    "Wherever lines are painted, they tell everyone how to share the road, including city roads.",
-    "വര വരച്ചിടത്തെല്ലാം, നഗരറോഡുകളിലും, റോഡ് എങ്ങനെ പങ്കിടണമെന്ന് അവ എല്ലാവരെയും അറിയിക്കുന്നു."
-   ]
-  },
-  {
-   "m": [
-    "A U-turn is fine anywhere if the road looks empty.",
-    "റോഡ് ഒഴിഞ്ഞതായി തോന്നിയാൽ എവിടെയും യു-ടേൺ എടുക്കാം."
-   ],
-   "f": [
-    "Sight distance and signs decide, not how empty it looks. A fast vehicle can appear suddenly.",
-    "ഒഴിഞ്ഞതായി തോന്നുന്നതല്ല, കാഴ്ചദൂരവും ചിഹ്നങ്ങളുമാണ് തീരുമാനിക്കേണ്ടത്. വേഗമുള്ള വാഹനം പെട്ടെന്ന് പ്രത്യക്ഷപ്പെടാം."
-   ]
-  }
- ],
- "stories": [
-  {
-   "t": [
-    "The late lane change",
-    "വൈകിയ ലെയ്ൻ മാറ്റം"
-   ],
-   "s": [
-    "Anu, a learner, was driving on a three-lane road when she noticed her turn was only a short way ahead. She was in the middle lane. In a hurry, she swung left without a mirror check, and a two-wheeler in her blind spot braked hard and wobbled. Nobody was hurt, but both were shaken. Her instructor explained that the turn was not the problem. Looking at the signs earlier would have given her time to check, signal and move calmly.",
-    "പഠിതാവായ അനു മൂന്ന് ലെയ്നുള്ള റോഡിൽ ഓടിക്കുമ്പോൾ തിരിയേണ്ട സ്ഥലം തൊട്ടടുത്താണെന്ന് ശ്രദ്ധിച്ചു. അപ്പോൾ അവൾ നടുവിലെ ലെയ്നിലായിരുന്നു. തിടുക്കത്തിൽ മിറർ നോക്കാതെ ഇടത്തോട്ട് വെട്ടിച്ചപ്പോൾ ബ്ലൈൻഡ് സ്പോട്ടിലുണ്ടായിരുന്ന ഒരു ഇരുചക്രവാഹനം ശക്തമായി ബ്രേക്ക് ചെയ്ത് ഉലഞ്ഞു. ആർക്കും പരിക്കില്ല, പക്ഷേ രണ്ടുപേരും ഭയന്നുപോയി. തിരിയേണ്ട സ്ഥലമല്ല പ്രശ്നമെന്ന് ഇൻസ്ട്രക്ടർ വിശദീകരിച്ചു. ചിഹ്നങ്ങൾ നേരത്തേ നോക്കിയിരുന്നെങ്കിൽ ശാന്തമായി നോക്കാനും സിഗ്നൽ നൽകാനും നീങ്ങാനും സമയം കിട്ടുമായിരുന്നു."
-   ],
-   "lesson": [
-    "Plan your lane early, then mirror, signal and move.",
-    "ലെയ്ൻ നേരത്തേ തീരുമാനിക്കുക; പിന്നെ മിറർ, സിഗ്നൽ, നീക്കം."
-   ]
-  },
-  {
-   "t": [
-    "Reversing out of a gate",
-    "ഗേറ്റിൽനിന്ന് റിവേഴ്സ് എടുത്തപ്പോൾ"
-   ],
-   "s": [
-    "Ravi was reversing his car out of a narrow lane onto a busy road, trusting his mirrors alone. A child on a bicycle was riding close behind the car, below the mirror view. A neighbour shouted, and Ravi stopped in time. After that, he made it a habit to get out and look, or to ask someone to guide him, and to reverse slowly with the window down.",
-    "ഇടുങ്ങിയ വഴിയിൽനിന്ന് തിരക്കുള്ള റോഡിലേക്ക് രവി കാർ റിവേഴ്സ് എടുക്കുകയായിരുന്നു; അയാൾ മിററുകളെ മാത്രമാണ് വിശ്വസിച്ചത്. മിററിൽ കാണാത്തവിധം താഴെ, ഒരു കുട്ടി സൈക്കിളിൽ കാറിന്റെ തൊട്ടുപിന്നിൽ ഉണ്ടായിരുന്നു. അയൽക്കാരൻ വിളിച്ചുപറഞ്ഞപ്പോൾ രവി തക്കസമയത്ത് നിർത്തി. അതിനുശേഷം ഇറങ്ങിനോക്കുകയോ ഒരാളെ വഴികാട്ടാൻ നിർത്തുകയോ ചെയ്യുന്നതും ഗ്ലാസ് താഴ്ത്തി പതുക്കെ റിവേഴ്സ് എടുക്കുന്നതും അയാൾ ശീലമാക്കി."
-   ],
-   "lesson": [
-    "Mirrors miss small things. Look directly, go slowly, use a helper.",
-    "മിററുകൾ ചെറിയ കാര്യങ്ങൾ കാണില്ല. നേരിട്ട് നോക്കുക, പതുക്കെ പോകുക, സഹായിയെ ഉപയോഗിക്കുക."
-   ]
-  }
- ],
- "recap": [
-  [
-   "Keep left; use the right only to overtake or turn.",
-   "ഇടതുവശം പാലിക്കുക; മറികടക്കാനോ തിരിയാനോ മാത്രം വലതുവശം."
-  ],
-  [
-   "Mirror, signal, move, and cancel the signal.",
-   "മിറർ, സിഗ്നൽ, നീക്കം, പിന്നെ സിഗ്നൽ ഓഫ്."
-  ],
-  [
-   "Pick a lane and hold it; do not straddle lines.",
-   "ലെയ്ൻ തിരഞ്ഞെടുത്ത് പാലിക്കുക; വരയിൽ കയറരുത്."
-  ],
-  [
-   "The horn warns; it does not give right of way.",
-   "ഹോൺ മുന്നറിയിപ്പാണ്; വഴി അവകാശം തരില്ല."
-  ],
-  [
-   "Reverse and U-turn only where safe and visible.",
-   "സുരക്ഷിതവും കാഴ്ചയുള്ളതുമായ ഇടത്ത് മാത്രം റിവേഴ്സും യു-ടേണും."
-  ],
-  [
-   "Giving way early is safer than insisting on your right.",
-   "അവകാശം ഉറപ്പിക്കുന്നതിനേക്കാൾ സുരക്ഷിതം നേരത്തേ വഴി കൊടുക്കലാണ്."
-  ]
- ]
 }

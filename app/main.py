@@ -222,6 +222,7 @@ async def sitemap_part(name: str) -> Response:
     return Response(body, media_type=_XML, headers={"Cache-Control": "public, max-age=3600"})
 
 
+@app.get("/llm.txt", include_in_schema=False)
 @app.get("/llms.txt", include_in_schema=False)
 async def llms() -> Response:
     return PlainTextResponse(seo.llms_txt(), headers={"Cache-Control": "public, max-age=3600"})
@@ -235,7 +236,7 @@ async def llms_full() -> Response:
 @app.get("/api/seo/head", include_in_schema=False)
 async def seo_head(path: str = "/", lang: str = "en") -> Response:
     """Head tags for a path - the app applies them after in-app navigation."""
-    data = seo.head_json(path[:300], "ml" if lang == "ml" else "en")
+    data = seo.head_json(path[:300], "ta" if lang == "ta-en" else lang if lang in ("ml", "ta") else "en")
     return JSONResponse(data, headers={"Cache-Control": "public, max-age=3600"})
 
 
@@ -254,7 +255,7 @@ async def shell() -> Response:
 async def page(path: str, request: Request) -> Response:
     if path.startswith(("api/", "static/", "models/")):
         return JSONResponse({"detail": "Not Found"}, status_code=404)
-    lang = "ml" if request.query_params.get("lang") == "ml" else "en"
+    lang = "ta" if request.query_params.get("lang") == "ta-en" else request.query_params.get("lang") if request.query_params.get("lang") in ("ml", "ta") else "en"
     clean = "/" + path.strip("/")
     if path.endswith("/") and clean != "/":
         q = f"?{request.url.query}" if request.url.query else ""
